@@ -1,7 +1,6 @@
 package com.gmoqa.diariogamer.data
 
 import io.ktor.client.HttpClient
-import io.ktor.client.engine.okhttp.OkHttp
 import io.ktor.client.request.head
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.encodeURLPath
@@ -12,7 +11,7 @@ import io.ktor.http.encodeURLPath
  * Como la región varía (sobre todo en Genesis), se prueban varios sufijos.
  *
  * KMP-ready: usa Ktor (no HttpURLConnection) y codificación de URL propia (no android.net.Uri).
- * El engine OkHttp es lo único específico de plataforma; en iOS sería Darwin (expect/actual).
+ * El engine HTTP se inyecta con expect/actual (createHttpClient): OkHttp en Android, Darwin en iOS.
  */
 object CoverArt {
 
@@ -38,7 +37,7 @@ object CoverArt {
     // Caracteres que Libretro reemplaza por '_' en los nombres de archivo.
     private val ILLEGAL = Regex("[&*/:`<>?\\\\|\"]")
 
-    private val client by lazy { HttpClient(OkHttp) }
+    private val client by lazy { createHttpClient() }
 
     private fun normalize(title: String): String = ILLEGAL.replace(title, "_").trim()
 

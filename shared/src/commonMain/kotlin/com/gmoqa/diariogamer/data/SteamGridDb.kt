@@ -1,13 +1,10 @@
 package com.gmoqa.diariogamer.data
 
 import io.ktor.client.HttpClient
-import io.ktor.client.engine.okhttp.OkHttp
 import io.ktor.client.request.get
 import io.ktor.client.request.header
 import io.ktor.client.statement.bodyAsText
 import io.ktor.http.encodeURLPathPart
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
 
 /** Un juego encontrado en SteamGridDB, para elegir de la lista antes de ver sus carátulas. */
@@ -25,15 +22,15 @@ data class SteamGridGame(val id: Int, val name: String)
 class SteamGridDb(
     private val apiKey: String,
 ) {
-    private val client by lazy { HttpClient(OkHttp) }
+    private val client by lazy { createHttpClient() }
 
     /** Hay key configurada: sin esto, la UI no ofrece el buscador. */
     val isEnabled: Boolean get() = apiKey.isNotBlank()
 
     /** Juegos que coinciden con [title] (autocomplete). Vacío si no hay match o falla la red. */
     suspend fun searchGames(title: String, limit: Int = 20): List<SteamGridGame> =
-        withContext(Dispatchers.IO) {
-            if (!isEnabled || title.isBlank()) return@withContext emptyList()
+        run {
+            if (!isEnabled || title.isBlank()) return@run emptyList()
             runCatching {
                 val body = getAuthed("$BASE/search/autocomplete/${title.encodeURLPathPart()}")
                 AppJson.decodeFromString<Response<Game>>(body).data
@@ -45,8 +42,8 @@ class SteamGridDb(
 
     /** Carátulas (URLs 600×900) del juego [gameId]. Vacío si no tiene o falla la red. */
     suspend fun coversForGame(gameId: Int, limit: Int = 16): List<String> =
-        withContext(Dispatchers.IO) {
-            if (!isEnabled) return@withContext emptyList()
+        run {
+            if (!isEnabled) return@run emptyList()
             runCatching {
                 // Solo verticales estáticas (formato carátula), sin NSFW/humor.
                 val url = "$BASE/grids/game/$gameId?dimensions=600x900&types=static&nsfw=false&humor=false"

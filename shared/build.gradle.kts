@@ -21,6 +21,14 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
+            implementation("io.ktor:ktor-client-core:3.0.3")
+        }
+        // Engine HTTP por plataforma (expect/actual createHttpClient): OkHttp en Android, Darwin en iOS.
+        androidMain.dependencies {
+            implementation("io.ktor:ktor-client-okhttp:3.0.3")
+        }
+        iosMain.dependencies {
+            implementation("io.ktor:ktor-client-darwin:3.0.3")
         }
     }
 }
