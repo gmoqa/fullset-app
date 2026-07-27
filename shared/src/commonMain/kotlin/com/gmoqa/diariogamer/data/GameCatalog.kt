@@ -1,10 +1,6 @@
 package com.gmoqa.diariogamer.data
 
-import android.content.Context
 import kotlinx.serialization.Serializable
-
-// `CatalogEntry` vive en el módulo `:shared` (commonMain). Acá quedan la lectura de assets (Android)
-// y el DTO de deserialización.
 
 /** DTO del catálogo JSON. Esquema estándar: title/platform/region/year/publisher/genre/slug/serial/coverUrl. */
 @Serializable
@@ -21,20 +17,18 @@ private data class CatalogEntryDto(
 )
 
 /**
- * Lee los catálogos JSON empaquetados en assets y permite buscarlos.
- * Las plataformas se declaran en `config/platforms.json` (ver [PlatformRegistry]); agregar una
- * consola es solo config + su JSON de catálogo.
+ * Lee los catálogos JSON empaquetados en assets y permite buscarlos. Las plataformas se declaran en
+ * `config/platforms.json` (ver [PlatformRegistry]); agregar una consola es solo config + su JSON de
+ * catálogo. Multiplataforma: los assets se leen con [readTextAsset] (expect/actual).
  */
-class GameCatalog(context: Context) {
+class GameCatalog {
 
-    private val appContext = context.applicationContext
     private val cache = mutableMapOf<String, List<CatalogEntry>>()
 
     fun entries(platform: Platform): List<CatalogEntry> = cache.getOrPut(platform.id) {
         // Plataformas modernas (PS5…) no traen catálogo: se cargan a mano, sin lista que buscar.
         if (platform.catalogFile.isBlank()) return@getOrPut emptyList()
-        val text = appContext.assets.open(platform.catalogFile)
-            .bufferedReader().use { it.readText() }
+        val text = readTextAsset(platform.catalogFile) ?: return@getOrPut emptyList()
         AppJson.decodeFromString<List<CatalogEntryDto>>(text)
             .mapNotNull { dto ->
                 val title = dto.title.trim()

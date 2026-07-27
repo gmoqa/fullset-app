@@ -74,8 +74,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        catalog = GameCatalog(applicationContext)
-        registry = PlatformRegistry(applicationContext)
+        // GameCatalog/PlatformRegistry viven en :shared y leen assets vía AndroidApp (inicializado
+        // en FullsetApp.onCreate); ya no reciben Context.
+        catalog = GameCatalog()
+        registry = PlatformRegistry()
 
         setContent {
             // El ViewModel sobrevive rotaciones: no re-siembra ni re-consulta al girar la pantalla.
