@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "fullset"
 include(":app")
+include(":shared")

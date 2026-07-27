@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/gmoqa/vg-assist/fullset/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6525506019402666012.xml:2:13-83
+INJECTED from /home/gmoqa/vg-assist/fullset/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6525506019402666012.xml:2:13-83
+	package
+		INJECTED from /home/gmoqa/vg-assist/fullset/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6525506019402666012.xml
+	xmlns:android
+		ADDED from /home/gmoqa/vg-assist/fullset/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6525506019402666012.xml:2:23-81
+uses-sdk
+INJECTED from /home/gmoqa/vg-assist/fullset/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6525506019402666012.xml reason: use-sdk injection requested
+INJECTED from /home/gmoqa/vg-assist/fullset/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6525506019402666012.xml
+INJECTED from /home/gmoqa/vg-assist/fullset/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6525506019402666012.xml
+	android:targetSdkVersion
+		INJECTED from /home/gmoqa/vg-assist/fullset/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6525506019402666012.xml
+	android:minSdkVersion
+		INJECTED from /home/gmoqa/vg-assist/fullset/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest6525506019402666012.xml

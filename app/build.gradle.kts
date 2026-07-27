@@ -75,6 +75,9 @@ android {
 }
 
 dependencies {
+    // Módulo multiplataforma: dominio/lógica portable compartida con iOS.
+    implementation(project(":shared"))
+
     val composeBom = platform("androidx.compose:compose-bom:2024.09.03")
     implementation(composeBom)
 
