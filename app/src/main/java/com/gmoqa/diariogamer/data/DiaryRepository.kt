@@ -2,15 +2,12 @@ package com.gmoqa.diariogamer.data
 
 import android.content.Context
 import android.net.Uri
-import androidx.sqlite.db.SupportSQLiteDatabase
 import app.cash.sqldelight.coroutines.asFlow
 import app.cash.sqldelight.coroutines.mapToList
 import app.cash.sqldelight.coroutines.mapToOneOrNull
 import app.cash.sqldelight.db.SqlDriver
-import app.cash.sqldelight.driver.android.AndroidSqliteDriver
 import com.gmoqa.diariogamer.db.FullsetDatabase
 import com.russhwolf.settings.Settings
-import com.russhwolf.settings.SharedPreferencesSettings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
@@ -32,16 +29,8 @@ class DiaryRepository(context: Context) {
 
     private val appContext = context.applicationContext
 
-    private val driver: SqlDriver = AndroidSqliteDriver(
-        schema = FullsetDatabase.Schema,
-        context = appContext,
-        name = "diario_gamer.db",
-        callback = object : AndroidSqliteDriver.Callback(FullsetDatabase.Schema) {
-            override fun onOpen(db: SupportSQLiteDatabase) {
-                db.setForeignKeyConstraintsEnabled(true) // conserva ON DELETE CASCADE
-            }
-        },
-    )
+    // Driver del módulo :shared (expect/actual): AndroidSqliteDriver acá, NativeSqliteDriver en iOS.
+    private val driver: SqlDriver = createSqlDriver()
 
     // `internal` para que [DiarySeeder] (mismo módulo) reutilice la BD durante la siembra.
     internal val database = FullsetDatabase(driver)
@@ -66,10 +55,8 @@ class DiaryRepository(context: Context) {
     fun newVoiceNoteFile(gameId: Long): File =
         File(audioDir, "note_${gameId}_${System.currentTimeMillis()}.wav")
 
-    // multiplatform-settings (KMP-ready): en iOS será NSUserDefaultsSettings vía expect/actual.
-    private val settings: Settings = SharedPreferencesSettings(
-        appContext.getSharedPreferences("diario_gamer_prefs", Context.MODE_PRIVATE)
-    )
+    // Settings del módulo :shared (expect/actual): SharedPreferences acá, NSUserDefaults en iOS.
+    private val settings: Settings = createSettings()
 
     /** Siembra + migraciones puntuales, fuera del hilo principal. Idempotente (banderas en prefs). */
     suspend fun seed() = withContext(Dispatchers.IO) {

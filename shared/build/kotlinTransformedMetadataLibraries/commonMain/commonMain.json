@@ -1,5 +1,15 @@
 [
   {
+    "moduleId": "module app.cash.sqldelight:runtime:2.0.2",
+    "file": "/home/gmoqa/vg-assist/fullset/shared/build/kotlinTransformedMetadataLibraries/commonMain/app.cash.sqldelight-runtime-2.0.2-commonMain-asQ-DQ.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module com.russhwolf:multiplatform-settings:1.2.0",
+    "file": "/home/gmoqa/vg-assist/fullset/shared/build/kotlinTransformedMetadataLibraries/commonMain/com.russhwolf-multiplatform-settings-1.2.0-commonMain-bVdRsg.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
     "moduleId": "module org.jetbrains.kotlin:kotlin-stdlib:2.0.21",
     "file": "/home/gmoqa/vg-assist/fullset/shared/build/kotlinTransformedMetadataLibraries/commonMain/org.jetbrains.kotlin-kotlin-stdlib-2.0.21-commonMain-WPEnbA.klib",
     "sourceSetName": "commonMain"

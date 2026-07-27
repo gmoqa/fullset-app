@@ -5,7 +5,6 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
     id("org.jetbrains.kotlin.plugin.serialization")
-    id("app.cash.sqldelight")
 }
 
 // La API key de SteamGridDB (carátulas de plataformas modernas) vive en local.properties,
@@ -15,13 +14,7 @@ val steamGridDbKey: String = Properties().apply {
     if (f.exists()) f.inputStream().use { load(it) }
 }.getProperty("STEAMGRIDDB_API_KEY", "")
 
-sqldelight {
-    databases {
-        create("FullsetDatabase") {
-            packageName.set("com.gmoqa.diariogamer.db")
-        }
-    }
-}
+// El esquema SQLDelight y el driver viven en :shared (multiplataforma). Acá solo se consumen.
 
 android {
     namespace = "com.gmoqa.diariogamer"
@@ -104,15 +97,12 @@ dependencies {
     // Multiplataforma (KMP-ready): JSON, fechas y preferencias sin APIs Android/JVM.
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.1")
-    implementation("com.russhwolf:multiplatform-settings:1.2.0")
-
-    // HTTP multiplataforma (KMP-ready). En iOS el engine sería ktor-client-darwin.
+    // HTTP para WhisperModelStore (descarga del modelo). SteamGridDb/CoverArt ya usan el de :shared.
     implementation("io.ktor:ktor-client-core:3.0.3")
     implementation("io.ktor:ktor-client-okhttp:3.0.3")
 
-    // Base de datos multiplataforma (KMP-ready). En iOS el driver sería native-driver.
-    implementation("app.cash.sqldelight:android-driver:2.0.2")
-    // Lecturas reactivas: Query.asFlow() + mapToList/mapToOneOrNull (re-emiten al cambiar la tabla).
+    // Lecturas reactivas de SQLDelight: Query.asFlow() + mapToList/mapToOneOrNull. La BD y el driver
+    // vienen de :shared; settings y android-driver también.
     implementation("app.cash.sqldelight:coroutines-extensions:2.0.2")
 
     debugImplementation("androidx.compose.ui:ui-tooling")
