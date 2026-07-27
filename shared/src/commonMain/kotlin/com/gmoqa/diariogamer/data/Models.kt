@@ -1,6 +1,10 @@
 package com.gmoqa.diariogamer.data
 
-/** Un juego del que llevamos diario. */
+/**
+ * Un juego del que llevamos diario. Datos puros (multiplataforma). La carátula a mostrar
+ * (`coverModel`, que en Android es un `java.io.File`/URL para Coil) vive como extensión por
+ * plataforma.
+ */
 data class Game(
     val id: Long,
     val name: String,
@@ -24,14 +28,6 @@ data class Game(
     val noteCount: Int = 0,
     val photoCount: Int = 0,
 ) {
-    /** Carátula a mostrar: personalizada local (File) > URL automática (String) > null. */
-    val coverModel: Any?
-        get() = when {
-            coverPath.isNotBlank() -> java.io.File(coverPath)
-            coverUrl.isNotBlank() -> coverUrl
-            else -> null
-        }
-
     /** Estado de conservación normalizado (o null si no está cargado). */
     val conditionState: Condition? get() = Condition.fromRaw(condition)
 }
@@ -39,7 +35,7 @@ data class Game(
 /**
  * Estado de conservación de una copia física, en 4 niveles. En la BD se guarda la [key] canónica;
  * [fromRaw] es tolerante para leer también lo legacy/Excel ("CIB", "Suelto", "Con caja y manual"…),
- * así el badge funciona aunque el dato todavía no esté normalizado. [dot] = color del punto.
+ * así el badge funciona aunque el dato todavía no esté normalizado. [dot] = color del punto (ARGB).
  */
 enum class Condition(val key: String, val label: String, val dot: Long) {
     LOOSE("loose", "Loose", 0xFF9E9E9E),                        // gris   — solo el juego

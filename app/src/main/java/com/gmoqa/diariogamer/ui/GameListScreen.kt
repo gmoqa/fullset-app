@@ -45,6 +45,7 @@ import coil3.compose.SubcomposeAsyncImage
 import coil3.compose.SubcomposeAsyncImageContent
 import com.gmoqa.diariogamer.data.Condition
 import com.gmoqa.diariogamer.data.Game
+import com.gmoqa.diariogamer.data.coverModel
 import kotlinx.coroutines.delay
 
 @Composable

@@ -3,18 +3,8 @@ package com.gmoqa.diariogamer.data
 import android.content.Context
 import kotlinx.serialization.Serializable
 
-/** Una entrada del catálogo de una plataforma. */
-data class CatalogEntry(
-    val title: String,
-    val subtitle: String,
-    val slug: String,
-    val region: String = "",
-    val year: Int? = null,
-    val publisher: String = "",
-    val genre: String = "",
-    /** URL de carátula horneada en el catálogo (Libretro). Vacío → se deriva del título. */
-    val coverUrl: String = "",
-)
+// `CatalogEntry` vive en el módulo `:shared` (commonMain). Acá quedan la lectura de assets (Android)
+// y el DTO de deserialización.
 
 /** DTO del catálogo JSON. Esquema estándar: title/platform/region/year/publisher/genre/slug/serial/coverUrl. */
 @Serializable

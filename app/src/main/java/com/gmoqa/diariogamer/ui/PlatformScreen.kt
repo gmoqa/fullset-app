@@ -27,6 +27,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.gmoqa.diariogamer.data.Game
+import com.gmoqa.diariogamer.data.coverModel
 import com.gmoqa.diariogamer.data.PlatformInfo
 import com.gmoqa.diariogamer.data.RegionFilter
 

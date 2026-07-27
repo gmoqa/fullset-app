@@ -172,10 +172,12 @@ fun AddGameScreen(
             }
         }
 
-        if (showInfo && platform?.info != null) {
+        // `info` en un val local: `platform.info` es de otro módulo (:shared) y no admite smart-cast.
+        val info = platform?.info
+        if (showInfo && info != null) {
             PlatformInfoSheet(
                 platform = platform.name,
-                info = platform.info,
+                info = info,
                 region = region,
                 onDismiss = { showInfo = false },
             )

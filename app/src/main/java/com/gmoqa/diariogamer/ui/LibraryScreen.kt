@@ -47,6 +47,7 @@ import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.gmoqa.diariogamer.data.Game
+import com.gmoqa.diariogamer.data.coverModel
 import com.gmoqa.diariogamer.data.GameSearch
 
 /** La colección: estanterías de carátulas por plataforma, con buscador difuso. */

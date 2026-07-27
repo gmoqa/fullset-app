@@ -74,6 +74,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
 import com.gmoqa.diariogamer.DiaryViewModel
 import com.gmoqa.diariogamer.data.Game
+import com.gmoqa.diariogamer.data.coverModel
 import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
