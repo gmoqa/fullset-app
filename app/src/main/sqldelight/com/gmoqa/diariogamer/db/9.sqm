@@ -1,0 +1,5 @@
+-- Migración v9 -> v10. Guarda el `serial`: el código de producto impreso en el cartucho o el
+-- lomo del disco (SCUS-94163 en el FF7 americano, MK-01077-00 en Gunstar Heroes). Es el
+-- identificador real de una copia física; No-Intro/Redump lo traen para Genesis, PSX, N64 y
+-- Sega CD, pero no para SNES.
+ALTER TABLE games ADD COLUMN serial TEXT NOT NULL DEFAULT '';

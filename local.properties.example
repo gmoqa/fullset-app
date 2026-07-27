@@ -1,0 +1,10 @@
+# Copiá este archivo a `local.properties` y completá los valores.
+# `local.properties` está en .gitignore: nunca se versiona (secretos + ruta local del SDK).
+
+# Ruta del Android SDK (la escribe Android Studio sola al abrir el proyecto).
+sdk.dir=/path/to/Android/Sdk
+
+# API key de SteamGridDB, opcional. Solo habilita el buscador de carátulas de plataformas
+# modernas (PlayStation 5). Sin ella la app funciona igual; ese buscador queda inactivo.
+# Sacá una gratis en https://www.steamgriddb.com/profile/preferences/api
+STEAMGRIDDB_API_KEY=

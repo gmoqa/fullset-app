@@ -1,0 +1,24 @@
+# --- Gradle / Android ---
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+/app/.cxx
+.kotlin/
+
+# --- Secretos / config local ---
+# local.properties lleva la API key y la ruta del SDK. Usá local.properties.example de plantilla.
+
+# --- Python (scripts de tools/) ---
+__pycache__/
+*.pyc
+
+# --- Datos personales de prueba ---
+# Si te armas un seed con tu coleccion real para tu build local, dejalo fuera del repo.
+/app/src/main/assets/seed/collection.local.json

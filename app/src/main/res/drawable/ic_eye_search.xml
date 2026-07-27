@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ojo con lupa. El color lo aplica el tint del Icon. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- contorno del ojo -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#000000"
+        android:strokeWidth="1.7"
+        android:strokeLineJoin="round"
+        android:pathData="M2.5,10.5 C5.5,6.5 12.5,6.5 15.5,10.5 C12.5,14.5 5.5,14.5 2.5,10.5 Z" />
+    <!-- pupila -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M7.1,10.5 a1.9,1.9 0 1,0 3.8,0 a1.9,1.9 0 1,0 -3.8,0 z" />
+    <!-- aro de la lupa -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#000000"
+        android:strokeWidth="1.7"
+        android:pathData="M11.5,15.5 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <!-- mango de la lupa -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#000000"
+        android:strokeWidth="1.7"
+        android:strokeLineCap="round"
+        android:pathData="M16.7,17.7 L20.6,21.6" />
+</vector>

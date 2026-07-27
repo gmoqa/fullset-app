@@ -1,0 +1,6 @@
+-- Migración v6 -> v7. Añade columnas normalizadas a `games` para el export CSV rico
+-- (esquema estándar: region / año / género / estado). ALTER ADD COLUMN conserva los datos.
+ALTER TABLE games ADD COLUMN region TEXT NOT NULL DEFAULT '';
+ALTER TABLE games ADD COLUMN release_year INTEGER;
+ALTER TABLE games ADD COLUMN genre TEXT NOT NULL DEFAULT '';
+ALTER TABLE games ADD COLUMN condition TEXT NOT NULL DEFAULT '';

@@ -1,0 +1,7 @@
+-- Migración v8 -> v9. Asocia cada juego con su entrada del catálogo oficial:
+--   `slug`      = identificador del catálogo (el "SKU" del juego, p. ej. "super-metroid")
+--   `publisher` = editora, que el Excel no anota y sí trae el catálogo
+-- Con esto un juego importado de la planilla queda con los mismos datos que uno agregado
+-- desde la app eligiéndolo de la plataforma.
+ALTER TABLE games ADD COLUMN slug TEXT NOT NULL DEFAULT '';
+ALTER TABLE games ADD COLUMN publisher TEXT NOT NULL DEFAULT '';

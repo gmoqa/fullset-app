@@ -1,0 +1,5 @@
+-- Migración v7 -> v8. Notas de voz: el audio queda adjunto a la nota y la transcripción se
+-- guarda en el `text` de siempre (así aparece en la lista de notas y en el export CSV sin
+-- duplicar modelo). `audio_path` vacío = nota escrita a mano, como todas las anteriores.
+ALTER TABLE notes ADD COLUMN audio_path TEXT NOT NULL DEFAULT '';
+ALTER TABLE notes ADD COLUMN duration_ms INTEGER NOT NULL DEFAULT 0;

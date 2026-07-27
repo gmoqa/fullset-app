@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+"""Catálogo Nintendo 64 USA (NTSC-U). Ver tools/catalog_common.py para el método.
+
+Las carátulas con nombre idiosincrático en libretro (prefijos "007 - ", "RR64 - ", artículo al
+final, "&"→"_") viven en tools/overrides/n64-usa.json y se aplican solas al generar/normalizar."""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from catalog_common import build
+
+OUT = os.path.join(os.path.dirname(__file__), "..", "app", "src", "main", "assets", "catalogs", "n64-usa.json")
+
+if __name__ == "__main__":
+    # Columnas: Title(0) Developer(1) Publisher(2) First released(3) JP(4) NA(5) PAL(6).
+    build(page="List of Nintendo 64 games", platform="Nintendo 64", out=OUT,
+          dat_name="Nintendo - Nintendo 64", repo="Nintendo_-_Nintendo_64",
+          na_col=5, year=(1996, 2002))

@@ -1,0 +1,3 @@
+-- Migración v4 -> v5. Vacía a propósito: fija la versión de esquema en 6 para que
+-- SQLDelight abra la BD existente (creada en v6 por el antiguo helper) sin recrearla.
+-- Las BD reales son o nuevas (create() en v6) o ya v6; estas migraciones nunca se ejecutan.

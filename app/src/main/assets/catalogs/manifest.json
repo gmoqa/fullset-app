@@ -1,0 +1,68 @@
+[
+  {
+    "file": "genesis-usa.json",
+    "platform": "Sega Genesis",
+    "games": 711,
+    "coverage": {
+      "year": 90,
+      "publisher": 0,
+      "serial": 49,
+      "coverUrl": 91
+    }
+  },
+  {
+    "file": "master-system-usa.json",
+    "platform": "Sega Master System",
+    "games": 114,
+    "coverage": {
+      "year": 100,
+      "publisher": 100,
+      "serial": 40,
+      "coverUrl": 92
+    }
+  },
+  {
+    "file": "n64-usa.json",
+    "platform": "Nintendo 64",
+    "games": 296,
+    "coverage": {
+      "year": 100,
+      "publisher": 100,
+      "serial": 96,
+      "coverUrl": 100
+    }
+  },
+  {
+    "file": "nes-usa.json",
+    "platform": "NES",
+    "games": 668,
+    "coverage": {
+      "year": 100,
+      "publisher": 100,
+      "serial": 93,
+      "coverUrl": 95
+    }
+  },
+  {
+    "file": "psx-usa.json",
+    "platform": "PlayStation",
+    "games": 1344,
+    "coverage": {
+      "year": 100,
+      "publisher": 100,
+      "serial": 0,
+      "coverUrl": 87
+    }
+  },
+  {
+    "file": "snes-usa.json",
+    "platform": "Super Nintendo",
+    "games": 722,
+    "coverage": {
+      "year": 100,
+      "publisher": 100,
+      "serial": 95,
+      "coverUrl": 92
+    }
+  }
+]

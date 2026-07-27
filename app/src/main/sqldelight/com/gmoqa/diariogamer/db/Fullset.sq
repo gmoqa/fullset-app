@@ -1,0 +1,178 @@
+-- Esquema actual (v6). Coincide con la BD existente creada por el antiguo SQLiteOpenHelper.
+
+CREATE TABLE games (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    platform TEXT NOT NULL DEFAULT '',
+    cover_url TEXT NOT NULL DEFAULT '',
+    cover_path TEXT NOT NULL DEFAULT '',
+    playing INTEGER NOT NULL DEFAULT 0,
+    backlog INTEGER NOT NULL DEFAULT 0,
+    created_at INTEGER NOT NULL,
+    region TEXT NOT NULL DEFAULT '',
+    release_year INTEGER,
+    genre TEXT NOT NULL DEFAULT '',
+    condition TEXT NOT NULL DEFAULT '',
+    -- Vínculo con el catálogo oficial: `slug` es el identificador del juego ahí.
+    slug TEXT NOT NULL DEFAULT '',
+    publisher TEXT NOT NULL DEFAULT '',
+    -- Código de producto de la copia física (SCUS-94163, MK-01077-00…).
+    serial TEXT NOT NULL DEFAULT '',
+    -- 1 = juego digital (no lo poseés): no cuenta como colección física. Ver 10.sqm.
+    digital INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE notes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    game_id INTEGER NOT NULL,
+    text TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    -- Nota de voz: ruta del WAV grabado y su duración. Vacío/0 = nota escrita a mano.
+    -- La transcripción (cuando exista) se guarda en `text`, como cualquier otra nota.
+    audio_path TEXT NOT NULL DEFAULT '',
+    duration_ms INTEGER NOT NULL DEFAULT 0,
+    FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE
+);
+
+CREATE TABLE photos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    game_id INTEGER NOT NULL,
+    path TEXT NOT NULL,
+    caption TEXT NOT NULL DEFAULT '',
+    created_at INTEGER NOT NULL,
+    FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE
+);
+
+CREATE TABLE wishlist (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    platform TEXT NOT NULL,
+    game TEXT NOT NULL,
+    slug TEXT NOT NULL DEFAULT '',
+    cover_url TEXT NOT NULL DEFAULT '',
+    added_at INTEGER NOT NULL,
+    UNIQUE(platform, game)
+);
+
+CREATE INDEX idx_notes_game ON notes(game_id);
+CREATE INDEX idx_photos_game ON photos(game_id);
+
+-- ----------------------------------------------------------------- Juegos
+
+selectAllGames:
+SELECT g.id, g.name, g.platform, g.cover_url, g.cover_path, g.playing, g.backlog, g.created_at,
+    g.region, g.release_year, g.genre, g.condition, g.slug, g.publisher, g.serial, g.digital,
+    (SELECT COUNT(*) FROM notes n WHERE n.game_id = g.id) AS note_count,
+    (SELECT COUNT(*) FROM photos p WHERE p.game_id = g.id) AS photo_count
+FROM games g
+ORDER BY g.created_at DESC;
+
+selectGameById:
+SELECT g.id, g.name, g.platform, g.cover_url, g.cover_path, g.playing, g.backlog, g.created_at,
+    g.region, g.release_year, g.genre, g.condition, g.slug, g.publisher, g.serial, g.digital,
+    (SELECT COUNT(*) FROM notes n WHERE n.game_id = g.id) AS note_count,
+    (SELECT COUNT(*) FROM photos p WHERE p.game_id = g.id) AS photo_count
+FROM games g
+WHERE g.id = ?;
+
+insertGame:
+INSERT INTO games(name, platform, cover_url, created_at, region, release_year, genre, condition,
+    slug, publisher, serial, digital)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+-- Asocia un juego ya cargado con su entrada del catálogo. El año solo se completa si falta,
+-- para no pisar lo que hayas anotado a mano.
+linkCatalogByName:
+UPDATE games SET slug = ?, publisher = ?, serial = ?, release_year = COALESCE(release_year, ?)
+WHERE name = ? AND platform = ?;
+
+updateMetadataByName:
+UPDATE games SET region = ?, release_year = ?, genre = ?, condition = ? WHERE name = ?;
+
+-- Normaliza la condición: reemplaza un valor legacy por su key canónica (CIB -> complete…).
+normalizeCondition:
+UPDATE games SET condition = :new WHERE condition = :old;
+
+-- Fija la condición de un juego puntual (nombre + plataforma, para no pisar homónimos de otra consola).
+setConditionByPlatform:
+UPDATE games SET condition = ? WHERE name = ? AND platform = ?;
+
+lastInsertRowId:
+SELECT last_insert_rowid();
+
+setPlaying:
+UPDATE games SET playing = ? WHERE id = ?;
+
+setBacklog:
+UPDATE games SET backlog = ? WHERE id = ?;
+
+updateCoverPath:
+UPDATE games SET cover_path = ? WHERE id = ?;
+
+updateCoverPathByName:
+UPDATE games SET cover_path = ? WHERE name = ?;
+
+updateCoverUrlByName:
+UPDATE games SET cover_url = ? WHERE name = ?;
+
+renameGameByName:
+UPDATE games SET name = ? WHERE name = ?;
+
+setPlayingByName:
+UPDATE games SET playing = 1 WHERE name = ?;
+
+selectCoverPath:
+SELECT cover_path FROM games WHERE id = ?;
+
+deleteGame:
+DELETE FROM games WHERE id = ?;
+
+-- ------------------------------------------------------------------ Notas
+
+selectNotes:
+SELECT id, game_id, text, created_at, audio_path, duration_ms
+FROM notes WHERE game_id = ? ORDER BY created_at DESC;
+
+insertNote:
+INSERT INTO notes(game_id, text, created_at, audio_path, duration_ms) VALUES (?, ?, ?, ?, ?);
+
+-- Rellena la transcripción de una nota de voz ya guardada (Whisper corre en segundo plano).
+updateNoteText:
+UPDATE notes SET text = ? WHERE id = ?;
+
+selectNoteAudioPath:
+SELECT audio_path FROM notes WHERE id = ?;
+
+-- Todos los audios referenciados, para detectar archivos huérfanos en disco.
+selectAllNoteAudioPaths:
+SELECT audio_path FROM notes WHERE audio_path != '';
+
+deleteNote:
+DELETE FROM notes WHERE id = ?;
+
+-- ------------------------------------------------------------------ Fotos
+
+selectPhotos:
+SELECT id, game_id, path, caption, created_at FROM photos WHERE game_id = ? ORDER BY created_at DESC;
+
+insertPhoto:
+INSERT INTO photos(game_id, path, caption, created_at) VALUES (?, ?, ?, ?);
+
+selectPhotoPath:
+SELECT path FROM photos WHERE id = ?;
+
+deletePhoto:
+DELETE FROM photos WHERE id = ?;
+
+-- --------------------------------------------------------------- Wishlist
+
+selectWishlist:
+SELECT id, platform, game, slug, cover_url, added_at FROM wishlist ORDER BY added_at DESC;
+
+insertWishlist:
+INSERT OR IGNORE INTO wishlist(platform, game, slug, cover_url, added_at) VALUES (?, ?, ?, ?, ?);
+
+deleteWishlist:
+DELETE FROM wishlist WHERE id = ?;
+
+clearWishlist:
+DELETE FROM wishlist;

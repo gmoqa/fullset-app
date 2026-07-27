@@ -1,0 +1,4 @@
+-- Migración v10 -> v11. Marca si un juego es digital (1) o físico (0, por defecto).
+-- Digital = no lo poseés: no aparece en Collection (que es tu colección física). Se usa para
+-- registrar juegos digitales de consolas modernas (PS5…) que jugás sin tener una copia.
+ALTER TABLE games ADD COLUMN digital INTEGER NOT NULL DEFAULT 0;
