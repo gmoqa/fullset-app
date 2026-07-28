@@ -1,5 +1,16 @@
 [
   {
+    "file": "dreamcast-usa.json",
+    "platform": "Dreamcast",
+    "games": 248,
+    "coverage": {
+      "year": 100,
+      "publisher": 100,
+      "serial": 0,
+      "coverUrl": 99
+    }
+  },
+  {
     "file": "genesis-usa.json",
     "platform": "Sega Genesis",
     "games": 711,

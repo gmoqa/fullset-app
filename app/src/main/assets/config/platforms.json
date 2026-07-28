@@ -170,7 +170,7 @@
     "name": "Dreamcast",
     "catalog": "catalogs/dreamcast-usa.json",
     "libretroRepo": "Sega_-_Dreamcast",
-    "enabled": false,
+    "enabled": true,
     "info": {
       "manufacturer": "Sega",
       "generation": 6,
