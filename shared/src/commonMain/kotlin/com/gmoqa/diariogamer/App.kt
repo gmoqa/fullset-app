@@ -244,16 +244,29 @@ private fun AppRoot(
                 val platformGames = remember(allGames, current.platform) {
                     allGames.filter { !it.digital && it.platform == current.platform }
                 }
-                val info = remember(current.platform) {
-                    platforms.firstOrNull { it.name == current.platform }?.info
+                val platformObj = remember(current.platform) {
+                    platforms.firstOrNull { it.name == current.platform }
+                }
+                // Catálogo completo de la consola: la vista marca cuáles tenés y cuáles faltan.
+                val catalogEntries = remember(platformObj) {
+                    platformObj?.let { catalog.entries(it) } ?: emptyList()
                 }
                 PlatformScreen(
                     platform = current.platform,
-                    info = info,
+                    info = platformObj?.info,
                     region = regionFilter,
                     games = platformGames,
+                    catalog = catalogEntries,
                     onOpenGame = { screen = Screen.Detail(it) },
                     onBack = { screen = Screen.Home },
+                    // Agregar directo desde el timeline: mismo alta que el flujo de "Add game".
+                    onAddGame = { entry ->
+                        vm.addGame(
+                            entry.title, current.platform, entry.coverUrl,
+                            region = entry.region, releaseYear = entry.year,
+                            genre = entry.genre, slug = entry.slug, publisher = entry.publisher,
+                        )
+                    },
                 )
             }
 

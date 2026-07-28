@@ -1,7 +1,9 @@
 package com.gmoqa.diariogamer.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -10,11 +12,15 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.AddCircle
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -23,9 +29,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.gmoqa.diariogamer.data.CatalogEntry
 import com.gmoqa.diariogamer.data.Game
 import com.gmoqa.diariogamer.data.coverModel
 import com.gmoqa.diariogamer.data.PlatformInfo
@@ -33,8 +41,9 @@ import com.gmoqa.diariogamer.data.RegionFilter
 
 /**
  * Vista propia de una plataforma: la **ficha técnica como header** ([PlatformInfoContent]) y, debajo,
- * **tus juegos de esa plataforma ordenados por año de lanzamiento** (no alfabético). Reemplaza al
- * modal de ficha cuando entrás desde una franja de Collection.
+ * el **catálogo completo de la consola ordenado por año de lanzamiento** (no alfabético), marcando
+ * cuáles tenés (a color, con ✓) y cuáles no (en gris). Reemplaza al modal de ficha cuando entrás
+ * desde una franja de Collection. Si la plataforma no trae catálogo (PS5…), lista solo tus juegos.
  */
 @Composable
 fun PlatformScreen(
@@ -44,11 +53,46 @@ fun PlatformScreen(
     games: List<Game>,
     onOpenGame: (Long) -> Unit,
     onBack: () -> Unit,
+    catalog: List<CatalogEntry> = emptyList(),
+    onAddGame: (CatalogEntry) -> Unit = {},
 ) {
-    // Orden cronológico ascendente (más antiguo primero); sin año va al final; desempate por título.
-    val sorted = remember(games) {
-        games.sortedWith(compareBy<Game>({ it.releaseYear ?: Int.MAX_VALUE }, { it.name.lowercase() }))
+    // Fusiona el catálogo con tu colección: cada entrada del catálogo sabe si la tenés (match por
+    // slug); tus juegos que no están en el catálogo (altas a mano, slug que no matchea) se agregan
+    // igual. Orden cronológico ascendente; sin año va al final; desempate por título.
+    val rows = remember(games, catalog) {
+        val ownedBySlug = games.filter { it.slug.isNotBlank() }.associateBy { it.slug }
+        val fromCatalog = catalog.map { e ->
+            val owned = ownedBySlug[e.slug]
+            PlatformRow(
+                key = "cat:${e.slug.ifBlank { e.title }}",
+                title = owned?.name ?: e.title,
+                year = e.year ?: owned?.releaseYear,
+                subtitle = listOfNotNull(e.genre.ifBlank { null }, e.publisher.ifBlank { null })
+                    .joinToString(" · "),
+                coverModel = owned?.coverModel ?: e.coverUrl.ifBlank { null },
+                ownedId = owned?.id,
+                entry = e,
+            )
+        }
+        val catalogSlugs = catalog.mapNotNull { it.slug.ifBlank { null } }.toSet()
+        val extras = games.filter { it.slug.isBlank() || it.slug !in catalogSlugs }.map { g ->
+            PlatformRow(
+                key = "own:${g.id}",
+                title = g.name,
+                year = g.releaseYear,
+                subtitle = listOfNotNull(g.genre.ifBlank { null }, g.publisher.ifBlank { null })
+                    .joinToString(" · "),
+                coverModel = g.coverModel,
+                ownedId = g.id,
+            )
+        }
+        (fromCatalog + extras)
+            .sortedWith(compareBy({ it.year ?: Int.MAX_VALUE }, { it.title.lowercase() }))
     }
+    val ownedCount = rows.count { it.ownedId != null }
+    // Con catálogo: "X de Y" (completitud). Sin catálogo (PS5…): solo el conteo de los que tenés.
+    val countLabel = if (catalog.isEmpty()) "${rows.size} · by release"
+    else "$ownedCount of ${rows.size} · by release"
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -87,7 +131,7 @@ fun PlatformScreen(
                         fontWeight = FontWeight.Bold,
                     )
                     Text(
-                        "${sorted.size} · by release",
+                        countLabel,
                         style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
@@ -95,7 +139,7 @@ fun PlatformScreen(
             }
         }
 
-        if (sorted.isEmpty()) {
+        if (rows.isEmpty()) {
             item {
                 Text(
                     "No games from this platform yet.",
@@ -105,42 +149,90 @@ fun PlatformScreen(
                 )
             }
         } else {
-            items(sorted, key = { it.id }) { game ->
-                PlatformGameRow(game = game, onClick = { onOpenGame(game.id) })
+            items(rows, key = { it.key }) { row ->
+                PlatformGameRow(
+                    row = row,
+                    platform = platform,
+                    onOpenGame = onOpenGame,
+                    onAddGame = onAddGame,
+                )
             }
         }
     }
 }
 
-/** Fila de juego: carátula + título/subtítulo, con el **año destacado a la derecha** (el criterio de orden). */
+/** Una fila del catálogo de la consola, ya resuelta a "poseído o no". */
+private data class PlatformRow(
+    val key: String,
+    val title: String,
+    val year: Int?,
+    val subtitle: String,
+    val coverModel: Any?,
+    /** Non-null → lo tenés (abre su detalle). Null → falta (en gris, con botón para agregar). */
+    val ownedId: Long?,
+    /** La entrada del catálogo, para poder agregarla si falta. Null en juegos fuera del catálogo. */
+    val entry: CatalogEntry? = null,
+)
+
+/**
+ * Fila de juego: carátula + título/subtítulo, con el **año destacado a la derecha** (el criterio de
+ * orden). Los que tenés van a color con un ✓ en la carátula y son clickeables; los que faltan van en
+ * gris (grayscale) y atenuados, sin acción.
+ */
 @Composable
-private fun PlatformGameRow(game: Game, onClick: () -> Unit) {
+private fun PlatformGameRow(
+    row: PlatformRow,
+    platform: String,
+    onOpenGame: (Long) -> Unit,
+    onAddGame: (CatalogEntry) -> Unit,
+) {
+    val owned = row.ownedId != null
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick)
+            .then(if (owned) Modifier.clickable { onOpenGame(row.ownedId!!) } else Modifier)
             .padding(horizontal = 20.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        CoverThumb(
-            model = game.coverModel,
-            contentDescription = game.name,
-            modifier = Modifier.height(56.dp).aspectRatio(coverAspectRatio(game.platform)),
-        )
+        Box {
+            CoverThumb(
+                model = row.coverModel,
+                contentDescription = row.title,
+                grayscale = !owned,
+                modifier = Modifier.height(56.dp).aspectRatio(coverAspectRatio(platform)),
+            )
+            if (owned) {
+                // ✓ en la esquina para los que tenés (disco de color con halo para leerse siempre).
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomEnd)
+                        .padding(3.dp)
+                        .size(16.dp)
+                        .clip(CircleShape)
+                        .background(MaterialTheme.colorScheme.primary),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(
+                        Icons.Filled.Check,
+                        contentDescription = "In your collection",
+                        tint = MaterialTheme.colorScheme.onPrimary,
+                        modifier = Modifier.size(11.dp),
+                    )
+                }
+            }
+        }
         Column(modifier = Modifier.weight(1f).padding(start = 14.dp)) {
             Text(
-                game.name,
+                row.title,
                 style = MaterialTheme.typography.bodyLarge,
+                color = if (owned) MaterialTheme.colorScheme.onSurface
+                else MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
             )
-            val sub = listOfNotNull(
-                game.genre.takeIf { it.isNotBlank() },
-                game.publisher.takeIf { it.isNotBlank() },
-            ).joinToString(" · ")
-            if (sub.isNotBlank()) {
+            if (row.subtitle.isNotBlank()) {
                 Text(
-                    sub,
+                    row.subtitle,
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,
@@ -149,12 +241,26 @@ private fun PlatformGameRow(game: Game, onClick: () -> Unit) {
             }
         }
         Text(
-            game.releaseYear?.toString() ?: "—",
+            row.year?.toString() ?: "—",
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.SemiBold,
-            color = if (game.releaseYear == null) MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
-            else MaterialTheme.colorScheme.onSurface,
+            color = when {
+                row.year == null -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
+                owned -> MaterialTheme.colorScheme.onSurface
+                else -> MaterialTheme.colorScheme.onSurfaceVariant
+            },
             modifier = Modifier.padding(start = 12.dp),
         )
+        // Los que faltan se agregan directo a la colección desde acá; al agregarlo, la fila pasa
+        // sola a "poseído" (✓) porque la lista es reactiva.
+        if (!owned && row.entry != null) {
+            IconButton(onClick = { onAddGame(row.entry) }) {
+                Icon(
+                    Icons.Filled.AddCircle,
+                    contentDescription = "Add to collection",
+                    tint = MaterialTheme.colorScheme.primary,
+                )
+            }
+        }
     }
 }

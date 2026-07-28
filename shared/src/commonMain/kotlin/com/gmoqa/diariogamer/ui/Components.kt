@@ -188,7 +188,11 @@ fun CoverThumb(
     model: Any?,
     contentDescription: String?,
     modifier: Modifier = Modifier,
+    grayscale: Boolean = false,
 ) {
+    val filter = if (grayscale) {
+        remember { ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0f) }) }
+    } else null
     Box(
         modifier = modifier.background(MaterialTheme.colorScheme.surfaceVariant),
         contentAlignment = Alignment.Center,
@@ -203,6 +207,7 @@ fun CoverThumb(
                 model = model,
                 contentDescription = contentDescription,
                 contentScale = ContentScale.Crop,
+                colorFilter = filter,
                 modifier = Modifier.fillMaxSize(),
             )
         }
