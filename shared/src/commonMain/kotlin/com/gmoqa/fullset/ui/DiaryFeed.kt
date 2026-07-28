@@ -15,6 +15,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AddPhotoAlternate
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
@@ -76,6 +77,9 @@ internal fun DiaryEntryCard(
     onDelete: () -> Unit,
     onTranscribe: () -> Unit,
     modifier: Modifier = Modifier,
+    /** Editar el texto (notas escritas y de voz; null en fotos). También sirve para escribir a mano
+     *  la transcripción de una nota de voz. */
+    onEdit: (() -> Unit)? = null,
 ) {
     Card(modifier = modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(start = 16.dp, end = 4.dp, top = 10.dp, bottom = 14.dp)) {
@@ -86,6 +90,16 @@ internal fun DiaryEntryCard(
                     color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.weight(1f),
                 )
+                if (onEdit != null) {
+                    IconButton(onClick = onEdit, modifier = Modifier.size(36.dp)) {
+                        Icon(
+                            Icons.Filled.Edit,
+                            contentDescription = "Edit note",
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.size(18.dp),
+                        )
+                    }
+                }
                 IconButton(onClick = onDelete, modifier = Modifier.size(36.dp)) {
                     Icon(
                         Icons.Filled.Delete,

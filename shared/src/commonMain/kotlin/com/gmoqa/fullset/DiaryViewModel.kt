@@ -152,6 +152,7 @@ class DiaryViewModel(
     fun deleteGame(id: Long) = io { repo.deleteGame(id) }
 
     fun addNote(gameId: Long, text: String) = io { repo.addNote(gameId, text) }
+    fun editNote(id: Long, text: String) = io { repo.setNoteText(id, text) }
     fun deleteNote(id: Long) = io { repo.deleteNote(id) }
 
     // ---- Notas de voz (Fase 1: grabar y guardar; la transcripción llega después) ----

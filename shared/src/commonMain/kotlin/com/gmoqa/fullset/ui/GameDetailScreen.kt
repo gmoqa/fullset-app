@@ -67,6 +67,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
 import com.gmoqa.fullset.DiaryViewModel
 import com.gmoqa.fullset.data.Game
+import com.gmoqa.fullset.data.Note
 import com.gmoqa.fullset.data.coverModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -93,6 +94,8 @@ fun GameDetailScreen(
 
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showAddNote by remember { mutableStateOf(false) }
+    // Nota en edición (texto): notas escritas y de voz. Sirve para corregir una transcripción.
+    var editingNote by remember { mutableStateOf<Note?>(null) }
 
     val startRecording = rememberMicPermission { vm.startVoiceNote(gameId) }
 
@@ -147,6 +150,11 @@ fun GameDetailScreen(
                                         vm.transcribeNote(entry.note.id, entry.note.audioPath)
                                     }
                                 },
+                                onEdit = when (entry) {
+                                    is DiaryEntry.Written -> ({ editingNote = entry.note })
+                                    is DiaryEntry.Voice -> ({ editingNote = entry.note })
+                                    is DiaryEntry.Snapshot -> null
+                                },
                             )
                         }
                     }
@@ -173,11 +181,23 @@ fun GameDetailScreen(
     }
 
     if (showAddNote) {
-        AddNoteDialog(
+        NoteDialog(
+            title = "New note",
             onDismiss = { showAddNote = false },
             onConfirm = { text ->
                 vm.addNote(gameId, text)
                 showAddNote = false
+            },
+        )
+    }
+    editingNote?.let { note ->
+        NoteDialog(
+            title = "Edit note",
+            initialText = note.text,
+            onDismiss = { editingNote = null },
+            onConfirm = { text ->
+                vm.editNote(note.id, text)
+                editingNote = null
             },
         )
     }
@@ -404,14 +424,16 @@ private fun HeroToggle(label: String, icon: ImageVector, selected: Boolean, onCl
 }
 
 @Composable
-private fun AddNoteDialog(
+private fun NoteDialog(
+    title: String,
     onDismiss: () -> Unit,
     onConfirm: (String) -> Unit,
+    initialText: String = "",
 ) {
-    var text by remember { mutableStateOf("") }
+    var text by remember(initialText) { mutableStateOf(initialText) }
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("New note") },
+        title = { Text(title) },
         text = {
             OutlinedTextField(
                 value = text,
