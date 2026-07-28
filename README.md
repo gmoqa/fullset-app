@@ -17,8 +17,7 @@ UI en **inglés**. Licencia **MIT**.
 - Fotos/carátulas: la imagen se cachea local; en la BD se guarda solo la ruta/URL
 - Selección de fotos vía **Photo Picker** (sin permisos runtime)
 
-El paquete Java es `com.gmoqa.diariogamer` por razones históricas; el nombre del producto es
-**fullset**.
+El paquete y el nombre del producto son **fullset** (`com.gmoqa.fullset`).
 
 ## Secciones (bottom nav: Collection · Backlog · Playing · Wishlist · Settings)
 - **Collection**: tu colección **física**, en estanterías por plataforma, con buscador y un punto

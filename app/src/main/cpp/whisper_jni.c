@@ -1,7 +1,7 @@
 // Binding JNI mínimo sobre whisper.cpp para transcribir notas de voz en el dispositivo.
 //
 // Adaptado del ejemplo oficial (examples/whisper.android) con dos cambios propios:
-//  - el paquete apunta a com.gmoqa.diariogamer.data.WhisperLib
+//  - el paquete apunta a com.gmoqa.fullset.data.WhisperLib
 //  - `fullTranscribe` recibe el **idioma** como parámetro (el oficial lo dejaba fijo en "en"),
 //    que es lo que permite dictar las notas en español desde Settings.
 
@@ -17,7 +17,7 @@
 #define LOGW(...) __android_log_print(ANDROID_LOG_WARN, TAG, __VA_ARGS__)
 
 JNIEXPORT jlong JNICALL
-Java_com_gmoqa_diariogamer_data_WhisperLib_00024Companion_initContext(
+Java_com_gmoqa_fullset_data_WhisperLib_00024Companion_initContext(
         JNIEnv *env, jobject thiz, jstring model_path_str) {
     UNUSED(thiz);
     const char *model_path = (*env)->GetStringUTFChars(env, model_path_str, NULL);
@@ -34,7 +34,7 @@ Java_com_gmoqa_diariogamer_data_WhisperLib_00024Companion_initContext(
 }
 
 JNIEXPORT void JNICALL
-Java_com_gmoqa_diariogamer_data_WhisperLib_00024Companion_freeContext(
+Java_com_gmoqa_fullset_data_WhisperLib_00024Companion_freeContext(
         JNIEnv *env, jobject thiz, jlong context_ptr) {
     UNUSED(env);
     UNUSED(thiz);
@@ -50,7 +50,7 @@ Java_com_gmoqa_diariogamer_data_WhisperLib_00024Companion_freeContext(
  * Devuelve 0 si salió bien.
  */
 JNIEXPORT jint JNICALL
-Java_com_gmoqa_diariogamer_data_WhisperLib_00024Companion_fullTranscribe(
+Java_com_gmoqa_fullset_data_WhisperLib_00024Companion_fullTranscribe(
         JNIEnv *env, jobject thiz, jlong context_ptr, jint num_threads,
         jfloatArray audio_data, jstring language_str) {
     UNUSED(thiz);
@@ -87,7 +87,7 @@ Java_com_gmoqa_diariogamer_data_WhisperLib_00024Companion_fullTranscribe(
 }
 
 JNIEXPORT jint JNICALL
-Java_com_gmoqa_diariogamer_data_WhisperLib_00024Companion_getTextSegmentCount(
+Java_com_gmoqa_fullset_data_WhisperLib_00024Companion_getTextSegmentCount(
         JNIEnv *env, jobject thiz, jlong context_ptr) {
     UNUSED(env);
     UNUSED(thiz);
@@ -99,7 +99,7 @@ Java_com_gmoqa_diariogamer_data_WhisperLib_00024Companion_getTextSegmentCount(
 }
 
 JNIEXPORT jstring JNICALL
-Java_com_gmoqa_diariogamer_data_WhisperLib_00024Companion_getTextSegment(
+Java_com_gmoqa_fullset_data_WhisperLib_00024Companion_getTextSegment(
         JNIEnv *env, jobject thiz, jlong context_ptr, jint index) {
     UNUSED(thiz);
     struct whisper_context *context = (struct whisper_context *) context_ptr;

@@ -26,7 +26,7 @@ targets:
         buildPhase: resources
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.gmoqa.diariogamer
+        PRODUCT_BUNDLE_IDENTIFIER: com.gmoqa.fullset
         INFOPLIST_FILE: iosApp/Info.plist
         ASSETCATALOG_COMPILER_APPICON_NAME: ""
         # El framework Kotlin lo compila/copia el script de pre-build (embedAndSign) por config/SDK.

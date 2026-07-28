@@ -17,11 +17,11 @@ val steamGridDbKey: String = Properties().apply {
 // El esquema SQLDelight y el driver viven en :shared (multiplataforma). Acá solo se consumen.
 
 android {
-    namespace = "com.gmoqa.diariogamer"
+    namespace = "com.gmoqa.fullset"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.gmoqa.diariogamer"
+        applicationId = "com.gmoqa.fullset"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

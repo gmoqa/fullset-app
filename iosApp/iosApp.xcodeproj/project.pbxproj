@@ -335,7 +335,7 @@
 					Shared,
 					"-lsqlite3",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmoqa.diariogamer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmoqa.fullset;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -362,7 +362,7 @@
 					Shared,
 					"-lsqlite3",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmoqa.diariogamer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmoqa.fullset;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

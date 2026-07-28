@@ -12,7 +12,7 @@ plugins {
 sqldelight {
     databases {
         create("FullsetDatabase") {
-            packageName.set("com.gmoqa.diariogamer.db")
+            packageName.set("com.gmoqa.fullset.db")
         }
     }
 }
@@ -92,12 +92,12 @@ kotlin {
 // paquete estable para que :app también la consuma.
 compose.resources {
     publicResClass = true
-    packageOfResClass = "com.gmoqa.diariogamer.resources"
+    packageOfResClass = "com.gmoqa.fullset.resources"
     generateResClass = always
 }
 
 android {
-    namespace = "com.gmoqa.diariogamer.shared"
+    namespace = "com.gmoqa.fullset.shared"
     compileSdk = 35
     defaultConfig {
         minSdk = 26
