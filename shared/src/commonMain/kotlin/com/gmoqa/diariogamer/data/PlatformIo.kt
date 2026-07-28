@@ -24,6 +24,7 @@ expect object FileStore {
     val photosDir: String
     val coversDir: String
     val audioDir: String
+    fun exists(path: String): Boolean
     fun delete(path: String)
     fun listFilePaths(dir: String): List<String>
     fun copyImage(source: PlatformImage, destPath: String): Boolean

@@ -19,9 +19,10 @@ import kotlinx.coroutines.withContext
  * modelo a medias o corrupto que después haga fallar la transcripción. Si se cancela o falla,
  * el parcial se borra.
  *
- * KMP-ready: usa Ktor (no HttpURLConnection); solo el Context es de Android.
+ * Implementación Android de la frontera común [WhisperModelStore]. Usa Ktor (no HttpURLConnection);
+ * solo el Context es de Android.
  */
-class WhisperModelStore(context: Context) {
+class AndroidWhisperModelStore(context: Context) : WhisperModelStore {
 
     private val appContext = context.applicationContext
 
@@ -34,13 +35,13 @@ class WhisperModelStore(context: Context) {
     fun fileFor(model: WhisperModel): File = File(modelsDir, model.fileName)
 
     /** Instalado = el archivo existe y pesa exactamente lo esperado. */
-    fun isInstalled(model: WhisperModel): Boolean =
+    override fun isInstalled(model: WhisperModel): Boolean =
         fileFor(model).let { it.exists() && it.length() == model.sizeBytes }
 
     /** El modelo instalado, si hay alguno. */
-    fun installed(): WhisperModel? = WhisperModel.entries.firstOrNull { isInstalled(it) }
+    override fun installed(): WhisperModel? = WhisperModel.entries.firstOrNull { isInstalled(it) }
 
-    fun delete(model: WhisperModel) {
+    override fun delete(model: WhisperModel) {
         runCatching { fileFor(model).delete() }
     }
 
@@ -48,7 +49,7 @@ class WhisperModelStore(context: Context) {
      * Descarga [model] informando el avance (0..1) y verifica su integridad.
      * Lanza si la descarga falla o el checksum no coincide; el llamador decide cómo mostrarlo.
      */
-    suspend fun download(model: WhisperModel, onProgress: (Float) -> Unit) =
+    override suspend fun download(model: WhisperModel, onProgress: (Float) -> Unit) =
         withContext(Dispatchers.IO) {
             if (isInstalled(model)) return@withContext
 

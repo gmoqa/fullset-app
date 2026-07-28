@@ -30,6 +30,9 @@ actual object FileStore {
     actual val coversDir: String get() = dir("covers")
     actual val audioDir: String get() = dir("audio")
 
+    actual fun exists(path: String): Boolean =
+        NSFileManager.defaultManager.fileExistsAtPath(path)
+
     actual fun delete(path: String) {
         NSFileManager.defaultManager.removeItemAtPath(path, null)
     }

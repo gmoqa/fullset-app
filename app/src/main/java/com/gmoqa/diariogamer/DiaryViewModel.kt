@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.gmoqa.diariogamer.data.DiaryRepository
 import com.gmoqa.diariogamer.data.Game
 import com.gmoqa.diariogamer.data.Note
+import com.gmoqa.diariogamer.data.ModelDownloadState
 import com.gmoqa.diariogamer.data.Photo
 import com.gmoqa.diariogamer.data.PlatformImage
 import com.gmoqa.diariogamer.data.RegionFilter
@@ -14,10 +15,10 @@ import com.gmoqa.diariogamer.data.SteamGridDb
 import com.gmoqa.diariogamer.data.SteamGridGame
 import com.gmoqa.diariogamer.data.ThemeMode
 import com.gmoqa.diariogamer.data.TranscriptionLanguage
-import com.gmoqa.diariogamer.data.VoiceRecorder
+import com.gmoqa.diariogamer.data.AndroidVoiceRecorder
 import com.gmoqa.diariogamer.data.WhisperTranscriber
 import com.gmoqa.diariogamer.data.WhisperModel
-import com.gmoqa.diariogamer.data.WhisperModelStore
+import com.gmoqa.diariogamer.data.AndroidWhisperModelStore
 import com.gmoqa.diariogamer.data.WishlistItem
 import com.gmoqa.diariogamer.data.collectionCsv
 import kotlinx.coroutines.CancellationException
@@ -147,7 +148,7 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
 
     // ---- Notas de voz (Fase 1: grabar y guardar; la transcripción llega después) ----
 
-    private val recorder = VoiceRecorder()
+    private val recorder = AndroidVoiceRecorder()
 
     /** Id del juego que se está grabando ahora, o null si no hay grabación en curso. */
     private val _recordingFor = MutableStateFlow<Long?>(null)
@@ -162,7 +163,7 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
     fun startVoiceNote(gameId: Long): Boolean {
         if (_recordingFor.value != null) return false
         val file = File(repo.newVoiceNoteFile(gameId))
-        if (!recorder.start(file)) return false
+        if (!recorder.start(file.absolutePath)) return false
         pendingAudio = file
         _recordingFor.value = gameId
         return true
@@ -189,7 +190,7 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
 
     // ---- Transcripción (Whisper local) ----
 
-    private val modelStore = WhisperModelStore(app)
+    private val modelStore = AndroidWhisperModelStore(app)
     private val transcriber = WhisperTranscriber(modelStore)
 
     private val _transcriptionLanguage = MutableStateFlow(repo.transcriptionLanguage())
@@ -213,7 +214,7 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch(Dispatchers.Default) {
             _transcribing.value = _transcribing.value + noteId
             try {
-                val text = transcriber.transcribe(File(audioPath), _transcriptionLanguage.value)
+                val text = transcriber.transcribe(audioPath, _transcriptionLanguage.value)
                 if (!text.isNullOrBlank()) {
                     withContext(Dispatchers.IO) { repo.setNoteText(noteId, text) }
                 }
@@ -328,14 +329,4 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
         /** Por debajo de esto fue un toque accidental, no una nota. */
         private const val MIN_VOICE_NOTE_MS = 700L
     }
-}
-
-/** Estado de la descarga del modelo de transcripción, para la sección de Settings. */
-sealed interface ModelDownloadState {
-    data object Idle : ModelDownloadState
-
-    /** `progress` 1.0 significa que ya bajó todo y está verificando el checksum. */
-    data class Downloading(val model: WhisperModel, val progress: Float) : ModelDownloadState
-
-    data class Failed(val message: String) : ModelDownloadState
 }

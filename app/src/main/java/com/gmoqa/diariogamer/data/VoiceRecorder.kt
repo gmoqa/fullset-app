@@ -24,10 +24,10 @@ import kotlin.math.abs
  * Whisper: así no hay que transcodificar antes de transcribir. Escribe un WAV (header + PCM) para
  * poder reproducir la nota después.
  *
- * KMP-ready: la UI habla con esta clase por [recording]/[elapsedMs]/[amplitude]; en iOS el actual
- * equivalente sería AVAudioEngine escribiendo el mismo WAV.
+ * Implementación Android de la frontera común [VoiceRecorder]; en iOS el equivalente sería
+ * AVAudioEngine escribiendo el mismo WAV (Fase 5).
  */
-class VoiceRecorder {
+class AndroidVoiceRecorder : VoiceRecorder {
 
     private val scope = CoroutineScope(Dispatchers.IO + SupervisorJob())
     private var recorder: AudioRecord? = null
@@ -37,22 +37,23 @@ class VoiceRecorder {
     private var stopRequested = false
 
     private val _recording = MutableStateFlow(false)
-    val recording: StateFlow<Boolean> = _recording.asStateFlow()
+    override val recording: StateFlow<Boolean> = _recording.asStateFlow()
 
     private val _elapsedMs = MutableStateFlow(0L)
-    val elapsedMs: StateFlow<Long> = _elapsedMs.asStateFlow()
+    override val elapsedMs: StateFlow<Long> = _elapsedMs.asStateFlow()
 
     /** Nivel de entrada 0..1, para el indicador visual mientras grabás. */
     private val _amplitude = MutableStateFlow(0f)
-    val amplitude: StateFlow<Float> = _amplitude.asStateFlow()
+    override val amplitude: StateFlow<Float> = _amplitude.asStateFlow()
 
     /**
-     * Empieza a grabar en [output]. El llamador debe tener concedido RECORD_AUDIO.
+     * Empieza a grabar en [path]. El llamador debe tener concedido RECORD_AUDIO.
      * Devuelve false si el micrófono no pudo inicializarse.
      */
     @SuppressLint("MissingPermission")
-    fun start(output: File): Boolean {
+    override fun start(path: String): Boolean {
         if (_recording.value) return false
+        val output = File(path)
 
         val minBuf = AudioRecord.getMinBufferSize(SAMPLE_RATE, CHANNEL, ENCODING)
         if (minBuf <= 0) return false
@@ -98,7 +99,7 @@ class VoiceRecorder {
     }
 
     /** Detiene la grabación y devuelve la duración final en ms (0 si no se grabó nada). */
-    suspend fun stop(): Long {
+    override suspend fun stop(): Long {
         if (!_recording.value) return 0L
         stopRequested = true
         runCatching { recorder?.stop() }
@@ -112,9 +113,9 @@ class VoiceRecorder {
     }
 
     /** Detiene y descarta el archivo (el usuario canceló). */
-    suspend fun cancel(output: File) {
+    override suspend fun cancel(path: String) {
         stop()
-        runCatching { output.delete() }
+        runCatching { File(path).delete() }
         _elapsedMs.value = 0L
     }
 

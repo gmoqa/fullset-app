@@ -11,22 +11,22 @@ import java.nio.ByteOrder
  * Mantiene el modelo cargado entre notas porque abrirlo cuesta bastante; [release] lo libera.
  * Las llamadas están sincronizadas: whisper_full no es reentrante sobre el mismo contexto.
  */
-class WhisperTranscriber(private val store: WhisperModelStore) {
+class WhisperTranscriber(private val store: AndroidWhisperModelStore) : Transcriber {
 
     private var contextPtr = 0L
     private var loadedModel: WhisperModel? = null
 
     /**
-     * Transcribe [wav] (PCM 16 kHz mono, tal como lo graba [VoiceRecorder]).
+     * Transcribe el WAV en [wavPath] (PCM 16 kHz mono, tal como lo graba [AndroidVoiceRecorder]).
      * Devuelve null si no hay modelo instalado, el .so no cargó, o la inferencia falló.
      */
     @Synchronized
-    fun transcribe(wav: File, language: TranscriptionLanguage): String? {
+    override fun transcribe(wavPath: String, language: TranscriptionLanguage): String? {
         if (!WhisperLib.available) return null
         val model = store.installed() ?: return null
         if (!ensureLoaded(model)) return null
 
-        val audio = readWavAsFloats(wav)
+        val audio = readWavAsFloats(File(wavPath))
         if (audio.isEmpty()) return null
 
         // Dejamos un par de núcleos libres para que la UI siga fluida mientras transcribe.
@@ -37,7 +37,7 @@ class WhisperTranscriber(private val store: WhisperModelStore) {
         }.getOrElse { return null }
 
         // Queda en logcat para poder comparar rendimiento sin adivinar (audio vs. tiempo real).
-        val audioSeconds = audio.size / VoiceRecorder.SAMPLE_RATE.toFloat()
+        val audioSeconds = audio.size / AndroidVoiceRecorder.SAMPLE_RATE.toFloat()
         val elapsedSeconds = (System.currentTimeMillis() - startedAt) / 1000f
         Log.i(
             TAG,
@@ -68,7 +68,7 @@ class WhisperTranscriber(private val store: WhisperModelStore) {
 
     /** Libera el modelo de memoria (p. ej. al borrarlo o al cerrar la app). */
     @Synchronized
-    fun release() = freeContext()
+    override fun release() = freeContext()
 
     private fun freeContext() {
         if (contextPtr != 0L) {

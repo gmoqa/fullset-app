@@ -39,7 +39,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.gmoqa.diariogamer.ModelDownloadState
+import com.gmoqa.diariogamer.data.ModelDownloadState
 import com.gmoqa.diariogamer.data.RegionFilter
 import com.gmoqa.diariogamer.data.ThemeMode
 import com.gmoqa.diariogamer.data.TranscriptionLanguage

@@ -17,6 +17,8 @@ actual object FileStore {
     actual val coversDir: String get() = dir("covers").absolutePath
     actual val audioDir: String get() = dir("audio").absolutePath
 
+    actual fun exists(path: String): Boolean = File(path).exists()
+
     actual fun delete(path: String) {
         runCatching { File(path).delete() }
     }
