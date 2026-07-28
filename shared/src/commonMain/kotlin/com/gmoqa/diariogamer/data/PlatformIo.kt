@@ -4,10 +4,13 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.datetime.Clock
 
 /**
- * Handle opaco de una imagen elegida por el usuario (Photo Picker). El contenido lo resuelve cada
- * plataforma (Android: `Uri`; iOS: pendiente — todavía no hay picker nativo).
+ * Handle de una imagen elegida por el usuario (Photo Picker). El contenido lo resuelve cada
+ * plataforma (Android: `Uri`; iOS: pendiente — todavía no hay picker nativo). [model] es la
+ * representación que Coil puede pintar para la vista previa (antes de copiarla a disco).
  */
-expect class PlatformImage
+expect class PlatformImage {
+    val model: Any?
+}
 
 /** Milisegundos desde epoch. Reemplaza a `System.currentTimeMillis()`, que es solo de la JVM. */
 internal fun nowMillis(): Long = Clock.System.now().toEpochMilliseconds()

@@ -1,6 +1,5 @@
 package com.gmoqa.diariogamer.ui
 
-import android.net.Uri
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -28,6 +27,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.gmoqa.diariogamer.data.PlatformImage
 import com.gmoqa.diariogamer.data.SteamGridGame
 
 /**
@@ -42,11 +42,11 @@ fun AddDigitalGameScreen(
     onSearchGames: suspend (String) -> List<SteamGridGame>,
     onCoversFor: suspend (Int) -> List<String>,
     onCancel: () -> Unit,
-    onAdd: (platform: String, title: String, coverUrl: String, coverUri: Uri?) -> Unit,
+    onAdd: (platform: String, title: String, coverUrl: String, cover: PlatformImage?) -> Unit,
 ) {
     var title by remember { mutableStateOf("") }
     var platform by remember { mutableStateOf("PlayStation 5") }
-    var coverUri by remember { mutableStateOf<Uri?>(null) }
+    var cover by remember { mutableStateOf<PlatformImage?>(null) }
     var coverUrl by remember { mutableStateOf("") }
 
     Scaffold(
@@ -93,15 +93,15 @@ fun AddDigitalGameScreen(
                 onSearchGames = onSearchGames,
                 onCoversFor = onCoversFor,
                 onGamePicked = { title = it },
-                coverUri = coverUri,
+                cover = cover,
                 coverUrl = coverUrl,
-                onChange = { url, uri -> coverUrl = url; coverUri = uri },
+                onChange = { url, image -> coverUrl = url; cover = image },
             )
 
             Spacer(Modifier.weight(1f))
 
             Button(
-                onClick = { onAdd(platform.trim(), title.trim(), coverUrl, coverUri) },
+                onClick = { onAdd(platform.trim(), title.trim(), coverUrl, cover) },
                 enabled = title.isNotBlank() && platform.isNotBlank(),
                 modifier = Modifier.fillMaxWidth(),
             ) {

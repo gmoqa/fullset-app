@@ -1,10 +1,5 @@
 package com.gmoqa.diariogamer.ui
 
-import android.net.Uri
-import androidx.activity.compose.BackHandler
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.PickVisualMediaRequest
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -76,6 +71,7 @@ import com.gmoqa.diariogamer.data.CoverArt
 import com.gmoqa.diariogamer.data.Game
 import com.gmoqa.diariogamer.data.GameCatalog
 import com.gmoqa.diariogamer.data.Platform
+import com.gmoqa.diariogamer.data.PlatformImage
 import com.gmoqa.diariogamer.data.RegionFilter
 import com.gmoqa.diariogamer.data.SteamGridGame
 import kotlinx.coroutines.delay
@@ -112,7 +108,7 @@ fun AddGameScreen(
     onPicked: (platform: Platform, entry: CatalogEntry, coverUrl: String) -> Unit,
     /** Lo ya registrado: se marca en la lista del catálogo (punto + etiqueta). */
     marks: List<CatalogMark> = emptyList(),
-    onAddManual: (platform: Platform, title: String, coverUrl: String, coverUri: Uri?) -> Unit,
+    onAddManual: (platform: Platform, title: String, coverUrl: String, cover: PlatformImage?) -> Unit,
     coverSearchEnabled: Boolean = false,
     onSearchGames: suspend (title: String) -> List<SteamGridGame> = { emptyList() },
     onCoversFor: suspend (gameId: Int) -> List<String> = { emptyList() },
@@ -435,7 +431,7 @@ private fun ManualEntryStep(
     coverSearchEnabled: Boolean,
     onSearchGames: suspend (String) -> List<SteamGridGame>,
     onCoversFor: suspend (Int) -> List<String>,
-    onAdd: (title: String, coverUrl: String, coverUri: Uri?) -> Unit,
+    onAdd: (title: String, coverUrl: String, cover: PlatformImage?) -> Unit,
 ) {
     var query by remember { mutableStateOf("") }
     var games by remember { mutableStateOf<List<SteamGridGame>>(emptyList()) }
@@ -615,22 +611,22 @@ fun CoverPickerField(
     onSearchGames: suspend (String) -> List<SteamGridGame>,
     onCoversFor: suspend (Int) -> List<String>,
     onGamePicked: (name: String) -> Unit,
-    coverUri: Uri?,
+    cover: PlatformImage?,
     coverUrl: String,
-    onChange: (coverUrl: String, coverUri: Uri?) -> Unit,
+    onChange: (coverUrl: String, cover: PlatformImage?) -> Unit,
 ) {
     var gameHits by remember { mutableStateOf<List<SteamGridGame>>(emptyList()) }
     var covers by remember { mutableStateOf<List<String>>(emptyList()) }
     var searching by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
-    val picker = rememberLauncherForActivityResult(
-        ActivityResultContracts.PickVisualMedia(),
-    ) { uri -> if (uri != null) { onChange("", uri); gameHits = emptyList(); covers = emptyList() } }
+    val pickImage = rememberImagePicker { image ->
+        if (image != null) { onChange("", image); gameHits = emptyList(); covers = emptyList() }
+    }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text("Cover (optional)", style = MaterialTheme.typography.bodyMedium)
         Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-            CoverBox(model = coverUri ?: coverUrl.ifBlank { null }, aspect = aspect)
+            CoverBox(model = cover?.model ?: coverUrl.ifBlank { null }, aspect = aspect)
             Column(
                 modifier = Modifier.weight(1f),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -654,9 +650,7 @@ fun CoverPickerField(
                     }
                 }
                 OutlinedButton(
-                    onClick = {
-                        picker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
-                    },
+                    onClick = { pickImage() },
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Icon(Icons.Filled.PhotoLibrary, contentDescription = null, modifier = Modifier.size(18.dp))

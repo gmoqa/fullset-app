@@ -9,7 +9,9 @@ import platform.Foundation.NSSearchPathForDirectoriesInDomains
 import platform.Foundation.NSUserDomainMask
 
 // Stub: iOS todavía no tiene Photo Picker; no se construye desde código común (Fase 4/5).
-actual class PlatformImage
+actual class PlatformImage {
+    actual val model: Any? get() = null
+}
 
 actual val ioDispatcher: CoroutineDispatcher = Dispatchers.Default
 

@@ -47,7 +47,6 @@ import com.gmoqa.diariogamer.data.AndroidVoiceRecorder
 import com.gmoqa.diariogamer.data.AndroidWhisperModelStore
 import com.gmoqa.diariogamer.data.GameCatalog
 import com.gmoqa.diariogamer.data.Platform
-import com.gmoqa.diariogamer.data.PlatformImage
 import com.gmoqa.diariogamer.data.WhisperTranscriber
 import com.gmoqa.diariogamer.data.PlatformRegistry
 import com.gmoqa.diariogamer.data.RegionFilter
@@ -217,14 +216,11 @@ private fun AppRoot(
                         // No cerramos: quedás en la lista, el juego pasa a "Added" y podés seguir.
                     },
                     marks = marks,
-                    onAddManual = { platform, gameTitle, coverUrl, coverUri ->
+                    onAddManual = { platform, gameTitle, coverUrl, cover ->
                         // Alta a mano (PS5…): físico → Collection. El digital va aparte, por Playing.
                         when (current.target) {
                             AddTarget.LIBRARY ->
-                                vm.addManualGame(
-                                    gameTitle, platform.name, coverUrl,
-                                    coverUri?.let { PlatformImage(it) }, digital = false,
-                                )
+                                vm.addManualGame(gameTitle, platform.name, coverUrl, cover, digital = false)
                             AddTarget.WISHLIST -> {
                                 vm.addToWishlist(platform.name, gameTitle, "", coverUrl)
                                 // Volver a Collection dejaría la sensación de que no pasó nada:
@@ -248,8 +244,8 @@ private fun AppRoot(
                     onSearchGames = { vm.searchGames(it) },
                     onCoversFor = { vm.coversFor(it) },
                     onCancel = { screen = Screen.Home },
-                    onAdd = { platform, gameTitle, coverUrl, coverUri ->
-                        vm.addDigitalGame(gameTitle, platform, coverUrl, coverUri?.let { PlatformImage(it) })
+                    onAdd = { platform, gameTitle, coverUrl, cover ->
+                        vm.addDigitalGame(gameTitle, platform, coverUrl, cover)
                         screen = Screen.Home
                     },
                 )

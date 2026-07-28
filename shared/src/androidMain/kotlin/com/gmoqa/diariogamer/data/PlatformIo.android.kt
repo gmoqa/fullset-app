@@ -5,7 +5,10 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import java.io.File
 
-actual class PlatformImage(val uri: Uri)
+actual class PlatformImage(val uri: Uri) {
+    // Coil pinta un Uri directamente para la vista previa.
+    actual val model: Any? get() = uri
+}
 
 actual val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 
