@@ -28,11 +28,14 @@ kotlin {
             kotlinOptions.jvmTarget = "17"
         }
     }
-    // Targets iOS (device + simulador). Solo compilan en macOS; en Linux se declaran y el build de
-    // Android igual funciona.
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
+    // Targets iOS (device + simulador). Cada uno exporta un framework estático `Shared` que el
+    // proyecto Xcode (iosApp) linkea; `MainViewController` es el entry point de la UI compartida.
+    listOf(iosX64(), iosArm64(), iosSimulatorArm64()).forEach { target ->
+        target.binaries.framework {
+            baseName = "Shared"
+            isStatic = true
+        }
+    }
 
     sourceSets {
         commonMain.dependencies {
@@ -77,6 +80,8 @@ kotlin {
         iosMain.dependencies {
             implementation("io.ktor:ktor-client-darwin:3.0.3")
             implementation("app.cash.sqldelight:native-driver:2.0.2")
+            // viewModel { } multiplataforma para crear el DiaryViewModel en MainViewController.
+            implementation("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
         }
     }
 }

@@ -1,0 +1,51 @@
+name: iosApp
+options:
+  bundleIdPrefix: com.gmoqa
+  deploymentTarget:
+    iOS: "15.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+targets:
+  iosApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: iosApp
+      # Assets del dominio (catálogos/config/seed) como referencias de carpeta: conservan la
+      # estructura en el bundle (catalogs/…, config/…, seed/…), que es lo que lee readTextAsset.
+      - path: ../app/src/main/assets/catalogs
+        type: folder
+        buildPhase: resources
+      - path: ../app/src/main/assets/config
+        type: folder
+        buildPhase: resources
+      - path: ../app/src/main/assets/seed
+        type: folder
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.gmoqa.diariogamer
+        INFOPLIST_FILE: iosApp/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: ""
+        # El framework Kotlin lo compila/copia el script de pre-build (embedAndSign) por config/SDK.
+        FRAMEWORK_SEARCH_PATHS:
+          - $(inherited)
+          - $(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)
+        OTHER_LDFLAGS:
+          - $(inherited)
+          - -framework
+          - Shared
+          # El framework es estático: la app linkea SQLite del sistema (lo usa el driver nativo de
+          # SQLDelight/sqliter).
+          - -lsqlite3
+        # Necesario para que el script de pre-build pueda ejecutar Gradle (escribe fuera del sandbox).
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
+    preBuildScripts:
+      - name: Compile Kotlin Framework
+        basedOnDependencyAnalysis: false
+        script: |
+          export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+          cd "$SRCROOT/.."
+          ./gradlew :shared:embedAndSignAppleFrameworkForXcode
