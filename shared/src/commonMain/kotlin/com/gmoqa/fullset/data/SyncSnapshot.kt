@@ -5,8 +5,9 @@ import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 
 /**
- * Instantánea **portable** de las listas, para respaldo/sync en el Google Drive del usuario. Es solo
- * texto: juegos, wishlist y notas (transcripciones incluidas). **No** lleva audios ni fotos (binarios)
+ * Instantánea **portable** de las listas, para respaldo y portabilidad — el usuario la guarda donde
+ * quiera (un archivo, la nube que elija, lo que sea). Es solo texto: juegos, wishlist y notas
+ * (transcripciones incluidas). **No** lleva audios ni fotos (binarios)
  * ni carátulas personalizadas locales (`cover_path`) — solo `coverUrl`, que es una URL portable.
  *
  * El merge al importar ([DiaryRepository.importSnapshot]) es una **unión por clave natural**: agrega
