@@ -35,5 +35,7 @@ fun formatDate(epochMillis: Long): String = datePart.format(localDateTime(epochM
 /** Duración de una nota de voz como "m:ss" (p. ej. 1:07). */
 fun formatDuration(millis: Long): String {
     val totalSeconds = millis / 1000
-    return "%d:%02d".format(totalSeconds / 60, totalSeconds % 60)
+    val minutes = totalSeconds / 60
+    val seconds = totalSeconds % 60
+    return "$minutes:${seconds.toString().padStart(2, '0')}"
 }
