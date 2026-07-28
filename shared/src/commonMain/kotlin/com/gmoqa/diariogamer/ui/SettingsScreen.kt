@@ -1,8 +1,5 @@
 package com.gmoqa.diariogamer.ui
 
-import android.widget.Toast
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -37,7 +34,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.gmoqa.diariogamer.data.ModelDownloadState
 import com.gmoqa.diariogamer.data.RegionFilter
@@ -69,24 +65,7 @@ fun SettingsScreen(
     // Solo en builds debug: si es null, la sección Developer no se muestra.
     onPreviewEmptyChange: ((Boolean) -> Unit)? = null,
 ) {
-    val context = LocalContext.current
-    // "Guardar como" del sistema (SAF): el usuario elige carpeta/nombre; escribimos el CSV ahí.
-    val csvSaver = rememberLauncherForActivityResult(
-        ActivityResultContracts.CreateDocument("text/csv"),
-    ) { uri ->
-        if (uri != null) {
-            val ok = runCatching {
-                context.contentResolver.openOutputStream(uri)?.use { out ->
-                    out.write(exportCsv().toByteArray(Charsets.UTF_8))
-                } ?: error("no output stream")
-            }.isSuccess
-            Toast.makeText(
-                context,
-                if (ok) "Collection exported" else "Export failed",
-                Toast.LENGTH_SHORT,
-            ).show()
-        }
-    }
+    val exportCollection = rememberCollectionExporter(exportCsv)
 
     Column(
         modifier = Modifier
@@ -145,7 +124,7 @@ fun SettingsScreen(
             icon = Icons.Filled.FileDownload,
             title = "Export collection",
             subtitle = "Save as CSV.",
-            onClick = { csvSaver.launch("fullset-collection.csv") },
+            onClick = { exportCollection() },
         )
 
         if (onPreviewEmptyChange != null) {
