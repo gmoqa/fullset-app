@@ -82,6 +82,8 @@ kotlin {
             implementation("app.cash.sqldelight:native-driver:2.0.2")
             // viewModel { } multiplataforma para crear el DiaryViewModel en MainViewController.
             implementation("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
+            // Fetcher de red de Coil (vía Ktor/Darwin) para cargar carátulas remotas en iOS.
+            implementation("io.coil-kt.coil3:coil-network-ktor3:3.0.4")
         }
     }
 }

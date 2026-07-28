@@ -8,9 +8,10 @@ import platform.Foundation.NSFileManager
 import platform.Foundation.NSSearchPathForDirectoriesInDomains
 import platform.Foundation.NSUserDomainMask
 
-// Stub: iOS todavía no tiene Photo Picker; no se construye desde código común (Fase 4/5).
-actual class PlatformImage {
-    actual val model: Any? get() = null
+// El Photo Picker (PHPicker) guarda la imagen elegida en un archivo temporal y pasa su ruta acá.
+// [model] es una URL file:// que Coil puede pintar para la vista previa.
+actual class PlatformImage(val path: String) {
+    actual val model: Any? get() = "file://$path"
 }
 
 actual val ioDispatcher: CoroutineDispatcher = Dispatchers.Default
@@ -44,6 +45,9 @@ actual object FileStore {
         return names.filterIsInstance<String>().map { "$dir/$it" }
     }
 
-    // Sin picker en iOS aún: no hay imagen que copiar (Fase 4/5).
-    actual fun copyImage(source: PlatformImage, destPath: String): Boolean = false
+    // Copia el temporal del picker a almacenamiento interno (covers/photos).
+    actual fun copyImage(source: PlatformImage, destPath: String): Boolean {
+        NSFileManager.defaultManager.removeItemAtPath(destPath, null) // copyItem falla si ya existe
+        return NSFileManager.defaultManager.copyItemAtPath(source.path, destPath, null)
+    }
 }
