@@ -6,10 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
@@ -32,46 +29,53 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.gmoqa.diariogamer.resources.Res
+import com.gmoqa.diariogamer.resources.allDrawableResources
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.painterResource
 
 /**
  * Metadatos visuales por plataforma, en UN solo lugar (editable acá).
- * - `padIcon`: **nombre** del drawable del **ícono del control** de la consola (Controllercons, SIL
- *   OFL 1.1 — ver Settings → Credits). Reemplazan a los logos de marca (que eran marca registrada).
- *   `null` → la plataforma se muestra solo con su nombre en texto.
+ * - `padIcon`: drawable del **ícono del control** de la consola (Controllercons, SIL OFL 1.1 — ver
+ *   Settings → Credits). Reemplazan a los logos de marca (que eran marca registrada). `null` → la
+ *   plataforma se muestra solo con su nombre en texto.
  * - `bandColor`: color de la franja del header de estantería.
  */
 private data class PlatformStyle(
-    val padIcon: String?,
+    val padIcon: DrawableResource?,
     val bandColor: Color,
     val coverAspect: Float,
 )
+
+// Los íconos de control viven como recursos de Compose Multiplatform (composeResources/drawable);
+// se resuelven por nombre desde el mapa generado, igual para Android e iOS.
+@OptIn(ExperimentalResourceApi::class)
+private fun pad(name: String): DrawableResource? = Res.allDrawableResources[name]
 
 // `coverAspect` = ancho/alto típico de las carátulas de la plataforma (medido de Libretro; es muy
 // consistente dentro de cada una). Reserva un alto estable en las listas para que el tile no salte
 // al pasar del placeholder a la imagen cargada, sin bandas negras (el aspecto coincide con el real).
 private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
-    "NES" to PlatformStyle("ic_pad_nes", Color(0xFF472A28), 0.70f),                       // rojo ladrillo
-    "Sega Master System" to PlatformStyle("ic_pad_master_system", Color(0xFF3A2530), 0.70f), // granate
-    "Super Nintendo" to PlatformStyle("ic_pad_snes", Color(0xFF302C48), 1.41f),          // índigo
-    "Nintendo 64" to PlatformStyle("ic_pad_n64", Color(0xFF243A2A), 1.40f),              // verde
-    "PlayStation" to PlatformStyle("ic_pad_playstation", Color(0xFF26262E), 1.00f),      // gris
-    "Sega Genesis" to PlatformStyle("ic_pad_genesis", Color(0xFF383840), 0.71f),         // gris
-    "Sega CD" to PlatformStyle("ic_pad_genesis", Color(0xFF1B3A6B), 0.59f),              // azul (usa pad de Genesis)
-    "PlayStation 5" to PlatformStyle("ic_pad_playstation5", Color(0xFF1E2C5C), 0.80f),   // azul marino
-    "Sega Saturn" to PlatformStyle("ic_pad_saturn", Color(0xFF2A2E45), 0.72f),           // slate
-    "Dreamcast" to PlatformStyle("ic_pad_dreamcast", Color(0xFF24384A), 0.72f),          // steel blue
-    "PlayStation 2" to PlatformStyle("ic_pad_playstation2", Color(0xFF1E2038), 0.70f),   // azul oscuro
+    "NES" to PlatformStyle(pad("ic_pad_nes"), Color(0xFF472A28), 0.70f),                       // rojo ladrillo
+    "Sega Master System" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF3A2530), 0.70f), // granate
+    "Super Nintendo" to PlatformStyle(pad("ic_pad_snes"), Color(0xFF302C48), 1.41f),          // índigo
+    "Nintendo 64" to PlatformStyle(pad("ic_pad_n64"), Color(0xFF243A2A), 1.40f),              // verde
+    "PlayStation" to PlatformStyle(pad("ic_pad_playstation"), Color(0xFF26262E), 1.00f),      // gris
+    "Sega Genesis" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF383840), 0.71f),         // gris
+    "Sega CD" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1B3A6B), 0.59f),              // azul (usa pad de Genesis)
+    "PlayStation 5" to PlatformStyle(pad("ic_pad_playstation5"), Color(0xFF1E2C5C), 0.80f),   // azul marino
+    "Sega Saturn" to PlatformStyle(pad("ic_pad_saturn"), Color(0xFF2A2E45), 0.72f),           // slate
+    "Dreamcast" to PlatformStyle(pad("ic_pad_dreamcast"), Color(0xFF24384A), 0.72f),          // steel blue
+    "PlayStation 2" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1E2038), 0.70f),   // azul oscuro
 )
 
 /** Color de la franja del header de cada plataforma (o `null` → color neutro del tema). */
@@ -110,16 +114,11 @@ fun PlatformBandHeader(
 ) {
     val band = platformBandColor(platform) ?: MaterialTheme.colorScheme.surfaceVariant
     val header = onBack != null
-    val bleed = bleedIcon && PLATFORM_STYLES[platform]?.padIcon != null
+    val padIcon = PLATFORM_STYLES[platform]?.padIcon
 
     // Modo "comienzo" (franjas de Collection): el control asoma su parte derecha desde el borde
     // izquierdo como **watermark tenue de fondo**, y el nombre/contador van ENCIMA.
-    if (bleed) {
-        val context = LocalContext.current
-        val res = remember(platform) {
-            PLATFORM_STYLES[platform]?.padIcon
-                ?.let { context.resources.getIdentifier(it, "drawable", context.packageName) } ?: 0
-        }
+    if (bleedIcon && padIcon != null) {
         Box(
             modifier = modifier
                 .fillMaxWidth()
@@ -130,9 +129,7 @@ fun PlatformBandHeader(
         ) {
             // Patrón repetido del control (tenue) como textura de fondo. `matchParentSize` no agranda
             // la franja: la altura la fija la fila del texto.
-            if (res != 0) {
-                ControllerPattern(res = res, modifier = Modifier.matchParentSize())
-            }
+            ControllerPattern(icon = padIcon, modifier = Modifier.matchParentSize())
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -242,8 +239,8 @@ fun PlatformBandHeader(
  * con [drawBehind] (no crea nodos por baldosa). [tile] = tamaño de cada control; alpha bajo = sutil.
  */
 @Composable
-private fun ControllerPattern(res: Int, modifier: Modifier) {
-    val painter = painterResource(res)
+private fun ControllerPattern(icon: DrawableResource, modifier: Modifier) {
+    val painter = painterResource(icon)
     val tint = ColorFilter.tint(Color.White.copy(alpha = 0.10f))
     // Control chico: así entran 2-3 filas en el alto de la franja y el half-drop se ve.
     val tile = with(LocalDensity.current) { 20.dp.toPx() }
@@ -302,8 +299,8 @@ fun PlatformLabel(
 
 /**
  * Solo el **ícono del control** de la plataforma, tintado con [tint]. Si la plataforma no tiene
- * ícono asignado (o el drawable no está en el build), renderiza [fallback]. Usado por los cubos del
- * paso 1 de Add game (que ya muestran el nombre en su caption) y por [PlatformLabel].
+ * ícono asignado, renderiza [fallback]. Usado por los cubos del paso 1 de Add game (que ya muestran
+ * el nombre en su caption) y por [PlatformLabel].
  */
 @Composable
 fun PlatformGlyph(
@@ -313,17 +310,13 @@ fun PlatformGlyph(
     fallback: @Composable () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val name = PLATFORM_STYLES[platform]?.padIcon
-    val context = LocalContext.current
-    val res = remember(name) {
-        name?.let { context.resources.getIdentifier(it, "drawable", context.packageName) } ?: 0
-    }
-    if (res == 0) {
+    val icon = PLATFORM_STYLES[platform]?.padIcon
+    if (icon == null) {
         fallback()
         return
     }
     Icon(
-        painter = painterResource(res),
+        painter = painterResource(icon),
         contentDescription = platform,
         tint = tint,
         modifier = modifier.size(size),

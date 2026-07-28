@@ -41,7 +41,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.gmoqa.diariogamer.data.GameCatalog
@@ -49,6 +48,10 @@ import com.gmoqa.diariogamer.data.Platform
 import com.gmoqa.diariogamer.data.PlatformRegistry
 import com.gmoqa.diariogamer.data.RegionFilter
 import com.gmoqa.diariogamer.data.ThemeMode
+import com.gmoqa.diariogamer.resources.Res
+import com.gmoqa.diariogamer.resources.ic_eye_search
+import com.gmoqa.diariogamer.resources.ic_shelf
+import org.jetbrains.compose.resources.painterResource
 import com.gmoqa.diariogamer.ui.AddDigitalGameScreen
 import com.gmoqa.diariogamer.ui.AddGameScreen
 import com.gmoqa.diariogamer.ui.CatalogMark
@@ -282,10 +285,10 @@ private class HomeTab(val label: String, val icon: @Composable (contentDescripti
 private const val HOME_TAB_WISHLIST = 3
 
 private val HOME_TABS = listOf(
-    HomeTab("Collection") { Icon(painterResource(R.drawable.ic_shelf), it) },
+    HomeTab("Collection") { Icon(painterResource(Res.drawable.ic_shelf), it) },
     HomeTab("Backlog") { Icon(Icons.AutoMirrored.Filled.PlaylistPlay, it) },
     HomeTab("Playing") { Icon(Icons.Filled.SportsEsports, it) },
-    HomeTab("Wishlist") { Icon(painterResource(R.drawable.ic_eye_search), it) },
+    HomeTab("Wishlist") { Icon(painterResource(Res.drawable.ic_eye_search), it) },
     HomeTab("Settings") { Icon(Icons.Filled.Settings, it) },
 )
 

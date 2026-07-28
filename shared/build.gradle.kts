@@ -41,6 +41,11 @@ kotlin {
             implementation(compose.foundation)
             implementation(compose.material3)
             implementation(compose.ui)
+            // Íconos de Material usados por la UI (SportsEsports, Bookmarks, Info, flechas…).
+            implementation(compose.materialIconsExtended)
+            // Recursos multiplataforma (drawables): genera la clase `Res` y `painterResource`.
+            // `api`: :app usa la `Res` generada y `painterResource` (necesita el runtime en su classpath).
+            api(compose.components.resources)
             // `api`: la app (que aún tiene DiaryRepository) ve los tipos SqlDriver/Settings/FullsetDatabase.
             api("app.cash.sqldelight:runtime:2.0.2")
             api("com.russhwolf:multiplatform-settings:1.2.0")
@@ -57,6 +62,14 @@ kotlin {
             implementation("app.cash.sqldelight:native-driver:2.0.2")
         }
     }
+}
+
+// Recursos de Compose Multiplatform: la clase generada `Res` (drawables) queda pública y en un
+// paquete estable para que :app también la consuma.
+compose.resources {
+    publicResClass = true
+    packageOfResClass = "com.gmoqa.diariogamer.resources"
+    generateResClass = always
 }
 
 android {
