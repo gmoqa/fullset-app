@@ -14,10 +14,12 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Backup
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.CloudDownload
 import androidx.compose.material.icons.filled.FileDownload
 import androidx.compose.material.icons.filled.MicOff
+import androidx.compose.material.icons.filled.Restore
 import androidx.compose.material.icons.filled.Title
 import androidx.compose.material.icons.filled.ViewAgenda
 import androidx.compose.material.icons.filled.VisibilityOff
@@ -66,6 +68,10 @@ fun SettingsScreen(
     deleteAudioAfterTranscription: Boolean,
     onDeleteAudioChange: (Boolean) -> Unit,
     exportCsv: () -> String,
+    backupJson: () -> String,
+    onRestoreJson: (String) -> Unit,
+    syncStatus: String?,
+    onClearSyncStatus: () -> Unit,
     installedModel: WhisperModel?,
     modelDownload: ModelDownloadState,
     onDownloadModel: (WhisperModel) -> Unit,
@@ -79,6 +85,8 @@ fun SettingsScreen(
     onPreviewEmptyChange: ((Boolean) -> Unit)? = null,
 ) {
     val exportCollection = rememberCollectionExporter(exportCsv)
+    val backup = rememberBackupExporter(backupJson)
+    val restore = rememberBackupImporter(onRestoreJson)
     var deleteAudio by remember { mutableStateOf(deleteAudioAfterTranscription) }
 
     Column(
@@ -170,6 +178,25 @@ fun SettingsScreen(
             subtitle = "Save as CSV.",
             onClick = { exportCollection() },
         )
+        SettingsRow(
+            icon = Icons.Filled.Backup,
+            title = "Back up to a file",
+            subtitle = "Save your lists + notes as a .json to restore later.",
+            onClick = { backup() },
+        )
+        SettingsRow(
+            icon = Icons.Filled.Restore,
+            title = "Restore from a file",
+            subtitle = "Merge a backup into your collection (never deletes).",
+            onClick = { restore() },
+        )
+        if (syncStatus != null) {
+            SettingsRow(
+                title = syncStatus,
+                onClick = onClearSyncStatus,
+                trailing = { TextButton(onClick = onClearSyncStatus) { Text("OK") } },
+            )
+        }
 
         if (onPreviewEmptyChange != null) {
             SectionDivider()

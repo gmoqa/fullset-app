@@ -355,6 +355,7 @@ private fun HomeContent(
     val installedModel by vm.installedModel.collectAsStateWithLifecycle()
     val modelDownload by vm.modelDownload.collectAsStateWithLifecycle()
     val transcriptionLanguage by vm.transcriptionLanguage.collectAsStateWithLifecycle()
+    val syncStatus by vm.syncStatus.collectAsStateWithLifecycle()
 
     val compact = isCompactWidth()
 
@@ -434,6 +435,10 @@ private fun HomeContent(
                     deleteAudioAfterTranscription = vm.deleteAudioAfterTranscription(),
                     onDeleteAudioChange = { vm.setDeleteAudioAfterTranscription(it) },
                     exportCsv = { vm.exportCsv() },
+                    backupJson = { vm.exportSnapshotJson() },
+                    onRestoreJson = { vm.importSnapshotJson(it) },
+                    syncStatus = syncStatus,
+                    onClearSyncStatus = { vm.clearSyncStatus() },
                     installedModel = installedModel,
                     modelDownload = modelDownload,
                     onDownloadModel = { vm.downloadModel(it) },

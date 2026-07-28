@@ -4,6 +4,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.gmoqa.fullset.data.DiaryRepository
 import com.gmoqa.fullset.data.FileStore
+import com.gmoqa.fullset.data.exportSnapshot
+import com.gmoqa.fullset.data.gameNotesJson
+import com.gmoqa.fullset.data.importSnapshot
+import com.gmoqa.fullset.data.syncSnapshotFromJson
+import com.gmoqa.fullset.data.toJson
 import com.gmoqa.fullset.data.Game
 import com.gmoqa.fullset.data.ModelDownloadState
 import com.gmoqa.fullset.data.Note
@@ -153,6 +158,9 @@ class DiaryViewModel(
 
     fun addNote(gameId: Long, text: String) = io { repo.addNote(gameId, text) }
     fun editNote(id: Long, text: String) = io { repo.setNoteText(id, text) }
+
+    /** JSON de las notas de un juego, para compartir (p. ej. pegarlo en un LLM). */
+    fun gameNotesJson(gameId: Long): String = repo.gameNotesJson(gameId)
     fun deleteNote(id: Long) = io { repo.deleteNote(id) }
 
     // ---- Notas de voz (Fase 1: grabar y guardar; la transcripción llega después) ----
@@ -325,6 +333,27 @@ class DiaryViewModel(
     fun setShowConsoleTitles(show: Boolean) = repo.setShowConsoleTitles(show)
     fun deleteAudioAfterTranscription(): Boolean = repo.deleteAudioAfterTranscription()
     fun setDeleteAudioAfterTranscription(on: Boolean) = repo.setDeleteAudioAfterTranscription(on)
+
+    // ---- Respaldo / sync a archivo ----
+
+    /** Resultado del último restore, para mostrarlo en Settings; null = nada que mostrar. */
+    private val _syncStatus = MutableStateFlow<String?>(null)
+    val syncStatus: StateFlow<String?> = _syncStatus.asStateFlow()
+    fun clearSyncStatus() { _syncStatus.value = null }
+
+    /** Serializa la colección (listas + transcripciones) a JSON para respaldar. */
+    fun exportSnapshotJson(): String = repo.exportSnapshot().toJson()
+
+    /** Une un respaldo JSON a la colección (nunca borra) y reporta cuántos ítems nuevos entraron. */
+    fun importSnapshotJson(json: String) = io {
+        _syncStatus.value = runCatching { repo.importSnapshot(syncSnapshotFromJson(json)) }.fold(
+            onSuccess = { r ->
+                if (r.nothingNew) "Backup already in sync — nothing new."
+                else "Restored: +${r.newGames} games, +${r.newNotes} notes, +${r.newWishlist} wishlist."
+            },
+            onFailure = { "Couldn't read that file — is it a fullset backup?" },
+        )
+    }
 
     // Solo para probar los estados vacíos (Settings → Developer, visible únicamente en debug): vive
     // en memoria y no toca la BD; al reiniciar vuelve a false para no dejar la app "vacía" por error.

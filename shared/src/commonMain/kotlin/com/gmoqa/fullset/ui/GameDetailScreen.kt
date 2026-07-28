@@ -32,6 +32,7 @@ import androidx.compose.material.icons.filled.EditNote
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
@@ -94,6 +95,8 @@ fun GameDetailScreen(
 
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showAddNote by remember { mutableStateOf(false) }
+    // Compartir las notas del juego como JSON (para pegarlas en un LLM, guardarlas, etc.).
+    val shareText = rememberTextSharer()
     // Nota en edición (texto): notas escritas y de voz. Sirve para corregir una transcripción.
     var editingNote by remember { mutableStateOf<Note?>(null) }
 
@@ -113,6 +116,7 @@ fun GameDetailScreen(
                 onToggleBacklog = { vm.setBacklog(gameId, game?.backlog != true) },
                 onChangeCover = { pickCover() },
                 onResetCover = { vm.clearCustomCover(gameId) },
+                onShare = { shareText(vm.gameNotesJson(gameId)) },
             )
 
             // Notas escritas, de voz y fotos en una sola línea de tiempo.
@@ -232,6 +236,7 @@ private fun HeroHeader(
     onToggleBacklog: () -> Unit,
     onChangeCover: () -> Unit,
     onResetCover: () -> Unit,
+    onShare: () -> Unit,
 ) {
     val model = game?.coverModel
     val hasCustomCover = game?.coverPath?.isNotBlank() == true
@@ -278,6 +283,9 @@ private fun HeroHeader(
                     Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = Color.White)
                 }
                 Spacer(Modifier.weight(1f))
+                IconButton(onClick = onShare) {
+                    Icon(Icons.Filled.Share, contentDescription = "Share notes", tint = Color.White)
+                }
                 if (hasCustomCover) {
                     IconButton(onClick = onResetCover) {
                         Icon(Icons.Filled.Refresh, contentDescription = "Reset cover", tint = Color.White)
