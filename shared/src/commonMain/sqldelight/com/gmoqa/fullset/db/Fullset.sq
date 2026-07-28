@@ -139,6 +139,9 @@ INSERT INTO notes(game_id, text, created_at, audio_path, duration_ms) VALUES (?,
 updateNoteText:
 UPDATE notes SET text = ? WHERE id = ?;
 
+clearNoteAudio:
+UPDATE notes SET audio_path = '', duration_ms = 0 WHERE id = ?;
+
 selectNoteAudioPath:
 SELECT audio_path FROM notes WHERE id = ?;
 

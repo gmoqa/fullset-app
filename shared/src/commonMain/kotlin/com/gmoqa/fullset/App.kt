@@ -431,6 +431,8 @@ private fun HomeContent(
                     onShowLabelsChange = onShowLabelsChange,
                     showConsoleTitles = showConsoleTitles,
                     onShowConsoleTitlesChange = onShowConsoleTitlesChange,
+                    deleteAudioAfterTranscription = vm.deleteAudioAfterTranscription(),
+                    onDeleteAudioChange = { vm.setDeleteAudioAfterTranscription(it) },
                     exportCsv = { vm.exportCsv() },
                     installedModel = installedModel,
                     modelDownload = modelDownload,

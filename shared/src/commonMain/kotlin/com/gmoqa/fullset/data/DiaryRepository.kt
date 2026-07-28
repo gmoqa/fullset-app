@@ -209,6 +209,16 @@ class DiaryRepository {
     /** Rellena la transcripción de una nota de voz (Whisper corre en segundo plano). */
     fun setNoteText(id: Long, text: String) = q.updateNoteText(text.trim(), id)
 
+    /**
+     * Borra el audio de una nota pero conserva su texto: elimina el WAV del disco y limpia
+     * `audio_path`/`duration_ms`, así la nota queda como texto. Se usa tras transcribir cuando el
+     * usuario activó "borrar grabación al transcribir".
+     */
+    fun clearNoteAudio(id: Long, audioPath: String) {
+        if (audioPath.isNotBlank()) FileStore.delete(audioPath)
+        q.clearNoteAudio(id)
+    }
+
     /** Borra la nota y, si era de voz, su archivo de audio. */
     fun deleteNote(id: Long) {
         q.selectNoteAudioPath(id).executeAsOneOrNull()?.takeIf { it.isNotBlank() }
@@ -297,6 +307,13 @@ class DiaryRepository {
         settings.putBoolean(SHOW_CONSOLE_TITLES_KEY, show)
     }
 
+    /** Notas de voz: borrar el WAV al terminar de transcribir (deja solo el texto). Default off. */
+    fun deleteAudioAfterTranscription(): Boolean = settings.getBoolean(DELETE_AUDIO_KEY, false)
+
+    fun setDeleteAudioAfterTranscription(on: Boolean) {
+        settings.putBoolean(DELETE_AUDIO_KEY, on)
+    }
+
     /** Idioma en el que se dictan las notas de voz (se le pasa a Whisper). */
     fun transcriptionLanguage(): TranscriptionLanguage =
         TranscriptionLanguage.fromCode(settings.getStringOrNull(LANGUAGE_KEY))
@@ -311,5 +328,6 @@ class DiaryRepository {
         private const val LANGUAGE_KEY = "transcription_language"
         private const val SHOW_LABELS_KEY = "collection_show_labels"
         private const val SHOW_CONSOLE_TITLES_KEY = "collection_show_console_titles"
+        private const val DELETE_AUDIO_KEY = "delete_audio_after_transcription"
     }
 }

@@ -17,6 +17,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.CloudDownload
 import androidx.compose.material.icons.filled.FileDownload
+import androidx.compose.material.icons.filled.MicOff
 import androidx.compose.material.icons.filled.Title
 import androidx.compose.material.icons.filled.ViewAgenda
 import androidx.compose.material.icons.filled.VisibilityOff
@@ -33,6 +34,10 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -58,6 +63,8 @@ fun SettingsScreen(
     onShowLabelsChange: (Boolean) -> Unit,
     showConsoleTitles: Boolean,
     onShowConsoleTitlesChange: (Boolean) -> Unit,
+    deleteAudioAfterTranscription: Boolean,
+    onDeleteAudioChange: (Boolean) -> Unit,
     exportCsv: () -> String,
     installedModel: WhisperModel?,
     modelDownload: ModelDownloadState,
@@ -72,6 +79,7 @@ fun SettingsScreen(
     onPreviewEmptyChange: ((Boolean) -> Unit)? = null,
 ) {
     val exportCollection = rememberCollectionExporter(exportCsv)
+    var deleteAudio by remember { mutableStateOf(deleteAudioAfterTranscription) }
 
     Column(
         modifier = Modifier
@@ -139,6 +147,18 @@ fun SettingsScreen(
             options = TranscriptionLanguage.entries.map { it to it.label },
             selected = transcriptionLanguage,
             onSelect = onLanguageChange,
+        )
+        SettingsRow(
+            icon = Icons.Filled.MicOff,
+            title = "Delete recording after transcribing",
+            subtitle = "Keep only the text — frees space and keeps recordings off any sync.",
+            onClick = { deleteAudio = !deleteAudio; onDeleteAudioChange(deleteAudio) },
+            trailing = {
+                Switch(
+                    checked = deleteAudio,
+                    onCheckedChange = { deleteAudio = it; onDeleteAudioChange(it) },
+                )
+            },
         )
 
         SectionDivider()

@@ -219,7 +219,11 @@ class DiaryViewModel(
             try {
                 val text = transcriber.transcribe(audioPath, _transcriptionLanguage.value)
                 if (!text.isNullOrBlank()) {
-                    withContext(ioDispatcher) { repo.setNoteText(noteId, text) }
+                    withContext(ioDispatcher) {
+                        repo.setNoteText(noteId, text)
+                        // Si está activado, borra el WAV y deja la nota solo como texto.
+                        if (repo.deleteAudioAfterTranscription()) repo.clearNoteAudio(noteId, audioPath)
+                    }
                 }
             } finally {
                 _transcribing.value = _transcribing.value - noteId
@@ -318,6 +322,8 @@ class DiaryViewModel(
     fun setShowCollectionLabels(show: Boolean) = repo.setShowCollectionLabels(show)
     fun showConsoleTitles(): Boolean = repo.showConsoleTitles()
     fun setShowConsoleTitles(show: Boolean) = repo.setShowConsoleTitles(show)
+    fun deleteAudioAfterTranscription(): Boolean = repo.deleteAudioAfterTranscription()
+    fun setDeleteAudioAfterTranscription(on: Boolean) = repo.setDeleteAudioAfterTranscription(on)
 
     // Solo para probar los estados vacíos (Settings → Developer, visible únicamente en debug): vive
     // en memoria y no toca la BD; al reiniciar vuelve a false para no dejar la app "vacía" por error.
