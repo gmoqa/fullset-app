@@ -74,6 +74,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
 import com.gmoqa.diariogamer.DiaryViewModel
 import com.gmoqa.diariogamer.data.Game
+import com.gmoqa.diariogamer.data.PlatformImage
 import com.gmoqa.diariogamer.data.coverModel
 import java.io.File
 
@@ -116,11 +117,11 @@ fun GameDetailScreen(
 
     val coverPicker = rememberLauncherForActivityResult(
         ActivityResultContracts.PickVisualMedia()
-    ) { uri -> if (uri != null) vm.setCoverFromUri(gameId, uri) }
+    ) { uri -> if (uri != null) vm.setCover(gameId, PlatformImage(uri)) }
 
     val photoPicker = rememberLauncherForActivityResult(
         ActivityResultContracts.PickVisualMedia()
-    ) { uri -> if (uri != null) vm.addPhoto(gameId, uri) }
+    ) { uri -> if (uri != null) vm.addPhoto(gameId, PlatformImage(uri)) }
 
     Scaffold { _ ->
         // El hero va a sangre por arriba (detrás del status bar).

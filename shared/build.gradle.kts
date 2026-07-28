@@ -59,6 +59,9 @@ kotlin {
             api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
             // Lecturas reactivas de SQLDelight (asFlow/mapToList) usadas por DiaryRepository.
             implementation("app.cash.sqldelight:coroutines-extensions:2.0.2")
+            // ViewModel + viewModelScope multiplataforma (DiaryViewModel común). `api`: :app usa el
+            // tipo con viewModel().
+            api("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel:2.8.4")
         }
         // Fronteras por plataforma (expect/actual): engine HTTP, driver SQLDelight, settings.
         androidMain.dependencies {

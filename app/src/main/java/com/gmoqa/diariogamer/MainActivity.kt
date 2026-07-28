@@ -43,8 +43,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.gmoqa.diariogamer.data.AndroidVoiceRecorder
+import com.gmoqa.diariogamer.data.AndroidWhisperModelStore
 import com.gmoqa.diariogamer.data.GameCatalog
 import com.gmoqa.diariogamer.data.Platform
+import com.gmoqa.diariogamer.data.PlatformImage
+import com.gmoqa.diariogamer.data.WhisperTranscriber
 import com.gmoqa.diariogamer.data.PlatformRegistry
 import com.gmoqa.diariogamer.data.RegionFilter
 import com.gmoqa.diariogamer.data.ThemeMode
@@ -84,7 +88,16 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             // El ViewModel sobrevive rotaciones: no re-siembra ni re-consulta al girar la pantalla.
-            val vm: DiaryViewModel = viewModel()
+            // Se le inyectan las piezas Android (grabador/whisper) y la API key de SteamGridDB.
+            val vm: DiaryViewModel = viewModel {
+                val store = AndroidWhisperModelStore(applicationContext)
+                DiaryViewModel(
+                    recorder = AndroidVoiceRecorder(),
+                    modelStore = store,
+                    transcriber = WhisperTranscriber(store),
+                    steamGridKey = BuildConfig.STEAMGRIDDB_API_KEY,
+                )
+            }
             // `remember` (no saveable): en recreación se re-lee el valor persistido en prefs.
             var themeMode by remember { mutableStateOf(vm.themeMode()) }
             var region by remember { mutableStateOf(vm.regionFilter()) }
@@ -208,7 +221,10 @@ private fun AppRoot(
                         // Alta a mano (PS5…): físico → Collection. El digital va aparte, por Playing.
                         when (current.target) {
                             AddTarget.LIBRARY ->
-                                vm.addManualGame(gameTitle, platform.name, coverUrl, coverUri, digital = false)
+                                vm.addManualGame(
+                                    gameTitle, platform.name, coverUrl,
+                                    coverUri?.let { PlatformImage(it) }, digital = false,
+                                )
                             AddTarget.WISHLIST -> {
                                 vm.addToWishlist(platform.name, gameTitle, "", coverUrl)
                                 // Volver a Collection dejaría la sensación de que no pasó nada:
@@ -233,7 +249,7 @@ private fun AppRoot(
                     onCoversFor = { vm.coversFor(it) },
                     onCancel = { screen = Screen.Home },
                     onAdd = { platform, gameTitle, coverUrl, coverUri ->
-                        vm.addDigitalGame(gameTitle, platform, coverUrl, coverUri)
+                        vm.addDigitalGame(gameTitle, platform, coverUrl, coverUri?.let { PlatformImage(it) })
                         screen = Screen.Home
                     },
                 )

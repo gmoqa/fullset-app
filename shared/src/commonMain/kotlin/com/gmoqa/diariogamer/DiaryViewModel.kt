@@ -1,26 +1,26 @@
 package com.gmoqa.diariogamer
 
-import android.app.Application
-import android.net.Uri
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.gmoqa.diariogamer.data.DiaryRepository
+import com.gmoqa.diariogamer.data.FileStore
 import com.gmoqa.diariogamer.data.Game
-import com.gmoqa.diariogamer.data.Note
 import com.gmoqa.diariogamer.data.ModelDownloadState
+import com.gmoqa.diariogamer.data.Note
 import com.gmoqa.diariogamer.data.Photo
 import com.gmoqa.diariogamer.data.PlatformImage
 import com.gmoqa.diariogamer.data.RegionFilter
 import com.gmoqa.diariogamer.data.SteamGridDb
 import com.gmoqa.diariogamer.data.SteamGridGame
 import com.gmoqa.diariogamer.data.ThemeMode
+import com.gmoqa.diariogamer.data.Transcriber
 import com.gmoqa.diariogamer.data.TranscriptionLanguage
-import com.gmoqa.diariogamer.data.AndroidVoiceRecorder
-import com.gmoqa.diariogamer.data.WhisperTranscriber
+import com.gmoqa.diariogamer.data.VoiceRecorder
 import com.gmoqa.diariogamer.data.WhisperModel
-import com.gmoqa.diariogamer.data.AndroidWhisperModelStore
+import com.gmoqa.diariogamer.data.WhisperModelStore
 import com.gmoqa.diariogamer.data.WishlistItem
 import com.gmoqa.diariogamer.data.collectionCsv
+import com.gmoqa.diariogamer.data.ioDispatcher
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -32,17 +32,25 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.io.File
 
 /**
  * Única fuente de verdad de la UI. Es dueño del [DiaryRepository], expone las listas como
  * [StateFlow] reactivos (la UI se refresca sola tras cualquier cambio, sin trucos de navegación)
  * y corre siembra y escrituras **fuera del hilo principal**.
  *
+ * Multiplataforma: las fronteras de plataforma llegan por constructor —el grabador de voz, el store
+ * y el transcriber de Whisper, y la API key de SteamGridDB— para que el ViewModel quede sin
+ * dependencias de Android. En iOS estas piezas son stubs hasta la Fase 5.
+ *
  * [ready] pasa a `true` cuando termina la siembra; la UI muestra una carga breve hasta entonces
  * (relevante solo en la primera instalación; ya sembrada, la siembra es casi instantánea).
  */
-class DiaryViewModel(app: Application) : AndroidViewModel(app) {
+class DiaryViewModel(
+    private val recorder: VoiceRecorder,
+    private val modelStore: WhisperModelStore,
+    private val transcriber: Transcriber,
+    steamGridKey: String,
+) : ViewModel() {
 
     private val repo = DiaryRepository()
 
@@ -99,36 +107,36 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
     /**
      * Agrega un juego cargado a mano (plataformas sin catálogo, como PS5). [digital] decide si es
      * físico (va a Collection) o digital (no lo poseés). La carátula puede venir de una URL elegida
-     * en el buscador ([coverUrl], p. ej. SteamGridDB) o de una imagen de la galería ([coverUri]).
+     * en el buscador ([coverUrl], p. ej. SteamGridDB) o de una imagen de la galería ([cover]).
      * Corre entero en IO para tener el id antes de asociar la imagen local.
      */
     fun addManualGame(
         title: String,
         platform: String,
         coverUrl: String,
-        coverUri: Uri?,
+        cover: PlatformImage?,
         digital: Boolean,
     ) = io {
         val id = repo.addGame(title, platform, coverUrl = coverUrl, digital = digital)
-        if (coverUri != null) repo.setCoverFromImage(id, PlatformImage(coverUri))
+        if (cover != null) repo.setCoverFromImage(id, cover)
         _lastAdded.value = id
     }
 
     /**
      * Agrega un juego **digital** (no lo poseés). Entra directo a **Playing** (`digital=true`,
      * `playing=true`) y **no** aparece en Collection, que es tu colección física. La carátula puede
-     * venir del buscador ([coverUrl]) o de la galería ([coverUri]).
+     * venir del buscador ([coverUrl]) o de la galería ([cover]).
      */
-    fun addDigitalGame(title: String, platform: String, coverUrl: String, coverUri: Uri?) = io {
+    fun addDigitalGame(title: String, platform: String, coverUrl: String, cover: PlatformImage?) = io {
         val id = repo.addGame(title, platform, coverUrl = coverUrl, digital = true)
         repo.setPlaying(id, true)
-        if (coverUri != null) repo.setCoverFromImage(id, PlatformImage(coverUri))
+        if (cover != null) repo.setCoverFromImage(id, cover)
     }
 
     // ---- Buscador de carátulas (SteamGridDB, para plataformas sin catálogo) ----
 
-    // La key (Android/BuildConfig) se inyecta acá para que SteamGridDb quede sin dependencias de Android.
-    private val coverSource = SteamGridDb(BuildConfig.STEAMGRIDDB_API_KEY)
+    // La key se inyecta por constructor para que SteamGridDb quede sin dependencias de plataforma.
+    private val coverSource = SteamGridDb(steamGridKey)
 
     /** Hay API key configurada: si no, el formulario manual no ofrece el buscador. */
     val coverSearchEnabled: Boolean get() = coverSource.isEnabled
@@ -148,8 +156,6 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
 
     // ---- Notas de voz (Fase 1: grabar y guardar; la transcripción llega después) ----
 
-    private val recorder = AndroidVoiceRecorder()
-
     /** Id del juego que se está grabando ahora, o null si no hay grabación en curso. */
     private val _recordingFor = MutableStateFlow<Long?>(null)
     val recordingFor: StateFlow<Long?> = _recordingFor.asStateFlow()
@@ -157,14 +163,14 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
     val recordElapsedMs: StateFlow<Long> = recorder.elapsedMs
     val recordAmplitude: StateFlow<Float> = recorder.amplitude
 
-    private var pendingAudio: File? = null
+    private var pendingAudioPath: String? = null
 
     /** Empieza a grabar una nota para [gameId]. false si el micrófono no pudo abrirse. */
     fun startVoiceNote(gameId: Long): Boolean {
         if (_recordingFor.value != null) return false
-        val file = File(repo.newVoiceNoteFile(gameId))
-        if (!recorder.start(file.absolutePath)) return false
-        pendingAudio = file
+        val path = repo.newVoiceNoteFile(gameId)
+        if (!recorder.start(path)) return false
+        pendingAudioPath = path
         _recordingFor.value = gameId
         return true
     }
@@ -172,26 +178,23 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
     /** Detiene y guarda la nota. Descarta grabaciones demasiado cortas. */
     fun stopVoiceNote() = viewModelScope.launch {
         val gameId = _recordingFor.value ?: return@launch
-        val file = pendingAudio
+        val path = pendingAudioPath
         val durationMs = recorder.stop()
         _recordingFor.value = null
-        pendingAudio = null
-        if (file == null) return@launch
-        if (durationMs < MIN_VOICE_NOTE_MS || !file.exists()) {
-            withContext(Dispatchers.IO) { runCatching { file.delete() } }
+        pendingAudioPath = null
+        if (path == null) return@launch
+        if (durationMs < MIN_VOICE_NOTE_MS || !FileStore.exists(path)) {
+            withContext(ioDispatcher) { FileStore.delete(path) }
             return@launch
         }
         // Sin texto todavía: si hay modelo, la transcripción lo rellena en segundo plano.
-        val noteId = withContext(Dispatchers.IO) {
-            repo.addNote(gameId, text = "", audioPath = file.absolutePath, durationMs = durationMs)
+        val noteId = withContext(ioDispatcher) {
+            repo.addNote(gameId, text = "", audioPath = path, durationMs = durationMs)
         }
-        transcribeNote(noteId, file.absolutePath)
+        transcribeNote(noteId, path)
     }
 
     // ---- Transcripción (Whisper local) ----
-
-    private val modelStore = AndroidWhisperModelStore(app)
-    private val transcriber = WhisperTranscriber(modelStore)
 
     private val _transcriptionLanguage = MutableStateFlow(repo.transcriptionLanguage())
     val transcriptionLanguage: StateFlow<TranscriptionLanguage> = _transcriptionLanguage.asStateFlow()
@@ -216,7 +219,7 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
             try {
                 val text = transcriber.transcribe(audioPath, _transcriptionLanguage.value)
                 if (!text.isNullOrBlank()) {
-                    withContext(Dispatchers.IO) { repo.setNoteText(noteId, text) }
+                    withContext(ioDispatcher) { repo.setNoteText(noteId, text) }
                 }
             } finally {
                 _transcribing.value = _transcribing.value - noteId
@@ -233,9 +236,9 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
     val installedModel: StateFlow<WhisperModel?> = _installedModel.asStateFlow()
 
     // Este init va acá abajo a propósito: Kotlin inicializa en orden de declaración, así que
-    // puesto junto al init de arriba, `modelStore` y `_installedModel` todavía serían null.
+    // puesto junto al init de arriba, `_installedModel` todavía sería null.
     init {
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch(ioDispatcher) {
             _installedModel.value = modelStore.installed()
         }
     }
@@ -253,7 +256,7 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
                 modelStore.download(model) { progress ->
                     _modelDownload.value = ModelDownloadState.Downloading(model, progress)
                 }
-                _installedModel.value = withContext(Dispatchers.IO) {
+                _installedModel.value = withContext(ioDispatcher) {
                     // Se usa un solo modelo a la vez: al cambiar, se libera el anterior en vez de
                     // dejar 59 MB + 190 MB ocupados y que "el instalado" quede ambiguo.
                     WhisperModel.entries.filter { it != model }.forEach { modelStore.delete(it) }
@@ -286,17 +289,17 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Cancela la grabación en curso y descarta el audio. */
     fun cancelVoiceNote() = viewModelScope.launch {
-        val file = pendingAudio
+        val path = pendingAudioPath
         recorder.stop()
         _recordingFor.value = null
-        pendingAudio = null
-        withContext(Dispatchers.IO) { file?.let { runCatching { it.delete() } } }
+        pendingAudioPath = null
+        withContext(ioDispatcher) { path?.let { FileStore.delete(it) } }
     }
 
-    fun addPhoto(gameId: Long, uri: Uri) = io { repo.addPhoto(gameId, PlatformImage(uri)) }
+    fun addPhoto(gameId: Long, image: PlatformImage) = io { repo.addPhoto(gameId, image) }
     fun deletePhoto(id: Long) = io { repo.deletePhoto(id) }
 
-    fun setCoverFromUri(gameId: Long, uri: Uri) = io { repo.setCoverFromImage(gameId, PlatformImage(uri)) }
+    fun setCover(gameId: Long, image: PlatformImage) = io { repo.setCoverFromImage(gameId, image) }
     fun clearCustomCover(gameId: Long) = io { repo.clearCustomCover(gameId) }
 
     fun addToWishlist(platform: String, game: String, slug: String, coverUrl: String) =
@@ -322,7 +325,7 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
     fun exportCsv(): String = repo.collectionCsv()
 
     private inline fun io(crossinline block: () -> Unit) {
-        viewModelScope.launch(Dispatchers.IO) { block() }
+        viewModelScope.launch(ioDispatcher) { block() }
     }
 
     companion object {
