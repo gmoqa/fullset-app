@@ -266,6 +266,12 @@ class DiaryRepository {
             WishlistItem(id, platform, game, slug, coverUrl, addedAt)
         }.asFlow().mapToList(ioDispatcher)
 
+    /** Lectura síncrona de la wishlist (para armar el snapshot de sync). */
+    fun wishlist(): List<WishlistItem> =
+        q.selectWishlist { id, platform, game, slug, coverUrl, addedAt ->
+            WishlistItem(id, platform, game, slug, coverUrl, addedAt)
+        }.executeAsList()
+
     /** Agrega a la wishlist (INSERT OR IGNORE: dedup por plataforma+juego). */
     fun addToWishlist(
         platform: String,
