@@ -58,6 +58,8 @@ kotlin {
             implementation("app.cash.sqldelight:android-driver:2.0.2")
             // Para el actual de SystemBarsEffect (WindowCompat: color e íconos del status bar).
             implementation("androidx.core:core-ktx:1.13.1")
+            // Para el actual de BackHandler (botón de retroceso del sistema en Android).
+            implementation("androidx.activity:activity-compose:1.9.3")
         }
         iosMain.dependencies {
             implementation("io.ktor:ktor-client-darwin:3.0.3")
