@@ -18,6 +18,11 @@ sqldelight {
 }
 
 kotlin {
+    // Silencia el warning "expect/actual classes are in Beta": usamos expect class/object a propósito
+    // en las fronteras de plataforma (PlatformImage, FileStore).
+    compilerOptions {
+        freeCompilerArgs.add("-Xexpect-actual-classes")
+    }
     androidTarget {
         compilations.all {
             kotlinOptions.jvmTarget = "17"
@@ -48,9 +53,12 @@ kotlin {
             api(compose.components.resources)
             // Carga de imágenes multiplataforma (carátulas): Coil 3, mismo que ya usa :app.
             implementation("io.coil-kt.coil3:coil-compose:3.0.4")
-            // `api`: la app (que aún tiene DiaryRepository) ve los tipos SqlDriver/Settings/FullsetDatabase.
+            // `api`: la app ve los tipos SqlDriver/Settings/FullsetDatabase y los Flow del repo.
             api("app.cash.sqldelight:runtime:2.0.2")
             api("com.russhwolf:multiplatform-settings:1.2.0")
+            api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+            // Lecturas reactivas de SQLDelight (asFlow/mapToList) usadas por DiaryRepository.
+            implementation("app.cash.sqldelight:coroutines-extensions:2.0.2")
         }
         // Fronteras por plataforma (expect/actual): engine HTTP, driver SQLDelight, settings.
         androidMain.dependencies {

@@ -1,66 +1,44 @@
 package com.gmoqa.diariogamer.data
 
-import android.content.Context
-import android.net.Uri
 import app.cash.sqldelight.coroutines.asFlow
 import app.cash.sqldelight.coroutines.mapToList
 import app.cash.sqldelight.coroutines.mapToOneOrNull
 import app.cash.sqldelight.db.SqlDriver
 import com.gmoqa.diariogamer.db.FullsetDatabase
 import com.russhwolf.settings.Settings
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
-import java.io.File
 
 /**
  * Acceso a datos (CRUD) sobre SQLDelight (multiplataforma) + manejo de archivos de foto/carátula.
- * La siembra inicial y los ajustes puntuales de FF7 viven en [DiarySeeder], lanzados por el
- * [DiaryViewModel] fuera del hilo principal vía [seed] (antes corrían en el constructor).
+ * La siembra inicial vive en [DiarySeeder], lanzada por el ViewModel fuera del hilo principal vía
+ * [seed]. Multiplataforma: la BD, los settings, el reloj y el IO de archivos salen de fronteras
+ * `expect/actual` ([createSqlDriver], [createSettings], [nowMillis], [FileStore], [PlatformImage]).
  *
  * Dos estilos de lectura:
  *  - `*Flow()` → reactivas ([Flow]): la UI se refresca sola cuando cambia la tabla. Lo normal.
  *  - síncronas (`games()`, `game()`…) → una sola lectura; las usan la siembra y el export CSV.
- * Las escrituras son síncronas; el ViewModel las corre en [Dispatchers.IO].
- *
- * KMP-ready: la BD es SQLDelight (en iOS el driver sería NativeSqliteDriver, expect/actual).
+ * Las escrituras son síncronas; el ViewModel las corre en [ioDispatcher].
  */
-class DiaryRepository(context: Context) {
+class DiaryRepository {
 
-    private val appContext = context.applicationContext
-
-    // Driver del módulo :shared (expect/actual): AndroidSqliteDriver acá, NativeSqliteDriver en iOS.
+    // Driver del módulo :shared (expect/actual): AndroidSqliteDriver en Android, NativeSqliteDriver en iOS.
     private val driver: SqlDriver = createSqlDriver()
 
     // `internal` para que [DiarySeeder] (mismo módulo) reutilice la BD durante la siembra.
     internal val database = FullsetDatabase(driver)
     private val q get() = database.fullsetQueries
 
-    /** Carpeta interna donde se copian las fotos. */
-    internal val photosDir: File by lazy {
-        File(appContext.filesDir, "photos").apply { if (!exists()) mkdirs() }
-    }
+    /** Ruta destino para una nueva nota de voz (aún no insertada en la BD). */
+    fun newVoiceNoteFile(gameId: Long): String =
+        "${FileStore.audioDir}/note_${gameId}_${nowMillis()}.wav"
 
-    /** Carpeta interna para carátulas personalizadas. */
-    internal val coversDir: File by lazy {
-        File(appContext.filesDir, "covers").apply { if (!exists()) mkdirs() }
-    }
-
-    /** Carpeta interna con los WAV de las notas de voz. */
-    internal val audioDir: File by lazy {
-        File(appContext.filesDir, "audio").apply { if (!exists()) mkdirs() }
-    }
-
-    /** Archivo destino para una nueva nota de voz (aún no insertada en la BD). */
-    fun newVoiceNoteFile(gameId: Long): File =
-        File(audioDir, "note_${gameId}_${System.currentTimeMillis()}.wav")
-
-    // Settings del módulo :shared (expect/actual): SharedPreferences acá, NSUserDefaults en iOS.
+    // Settings del módulo :shared (expect/actual): SharedPreferences en Android, NSUserDefaults en iOS.
     private val settings: Settings = createSettings()
 
     /** Siembra + migraciones puntuales, fuera del hilo principal. Idempotente (banderas en prefs). */
-    suspend fun seed() = withContext(Dispatchers.IO) {
-        DiarySeeder(appContext, this@DiaryRepository, settings).run()
+    suspend fun seed() = withContext(ioDispatcher) {
+        DiarySeeder(this@DiaryRepository, settings).run()
         pruneOrphanAudio()
     }
 
@@ -70,8 +48,8 @@ class DiaryRepository(context: Context) {
      */
     private fun pruneOrphanAudio() {
         val referenced = q.selectAllNoteAudioPaths().executeAsList().toSet()
-        audioDir.listFiles()?.forEach { file ->
-            if (file.absolutePath !in referenced) runCatching { file.delete() }
+        FileStore.listFilePaths(FileStore.audioDir).forEach { path ->
+            if (path !in referenced) FileStore.delete(path)
         }
     }
 
@@ -79,11 +57,11 @@ class DiaryRepository(context: Context) {
 
     /** Lista reactiva de todos los juegos: re-emite ante cualquier alta/baja/cambio en `games`. */
     fun gamesFlow(): Flow<List<Game>> =
-        q.selectAllGames(::mapGame).asFlow().mapToList(Dispatchers.IO)
+        q.selectAllGames(::mapGame).asFlow().mapToList(ioDispatcher)
 
     /** Un juego reactivo (o null si se borra). */
     fun gameFlow(id: Long): Flow<Game?> =
-        q.selectGameById(id, ::mapGame).asFlow().mapToOneOrNull(Dispatchers.IO)
+        q.selectGameById(id, ::mapGame).asFlow().mapToOneOrNull(ioDispatcher)
 
     fun games(): List<Game> = q.selectAllGames(::mapGame).executeAsList()
 
@@ -131,7 +109,7 @@ class DiaryRepository(context: Context) {
         name: String,
         platform: String,
         coverUrl: String = "",
-        createdAt: Long = System.currentTimeMillis(),
+        createdAt: Long = nowMillis(),
         region: String = "",
         releaseYear: Int? = null,
         genre: String = "",
@@ -171,34 +149,29 @@ class DiaryRepository(context: Context) {
 
     /** Borra el juego, sus notas y sus fotos (filas por CASCADE + archivos en disco). */
     fun deleteGame(id: Long) {
-        photos(id).forEach { runCatching { File(it.path).delete() } }
+        photos(id).forEach { FileStore.delete(it.path) }
         // Las filas se borran por CASCADE, pero los archivos en disco hay que limpiarlos a mano.
-        notes(id).filter { it.isVoice }.forEach { runCatching { File(it.audioPath).delete() } }
-        currentCoverPath(id)?.takeIf { it.isNotBlank() }?.let { runCatching { File(it).delete() } }
+        notes(id).filter { it.isVoice }.forEach { FileStore.delete(it.audioPath) }
+        currentCoverPath(id)?.takeIf { it.isNotBlank() }?.let { FileStore.delete(it) }
         q.deleteGame(id)
     }
 
     // ------------------------------------------------------------- Carátulas
 
     /** Fija una carátula personalizada copiando la imagen elegida a almacenamiento interno. */
-    fun setCoverFromUri(gameId: Long, sourceUri: Uri): Boolean {
-        val dest = File(coversDir, "cover_${gameId}_${System.currentTimeMillis()}.jpg")
-        val ok = runCatching {
-            appContext.contentResolver.openInputStream(sourceUri)?.use { input ->
-                dest.outputStream().use { output -> input.copyTo(output) }
-            } ?: return false
-        }.isSuccess
-        if (!ok) return false
+    fun setCoverFromImage(gameId: Long, source: PlatformImage): Boolean {
+        val dest = "${FileStore.coversDir}/cover_${gameId}_${nowMillis()}.jpg"
+        if (!FileStore.copyImage(source, dest)) return false
 
-        currentCoverPath(gameId)?.takeIf { it.isNotBlank() && it != dest.absolutePath }
-            ?.let { runCatching { File(it).delete() } }
-        q.updateCoverPath(dest.absolutePath, gameId)
+        currentCoverPath(gameId)?.takeIf { it.isNotBlank() && it != dest }
+            ?.let { FileStore.delete(it) }
+        q.updateCoverPath(dest, gameId)
         return true
     }
 
     /** Quita la carátula personalizada (vuelve a la automática). */
     fun clearCustomCover(gameId: Long) {
-        currentCoverPath(gameId)?.takeIf { it.isNotBlank() }?.let { runCatching { File(it).delete() } }
+        currentCoverPath(gameId)?.takeIf { it.isNotBlank() }?.let { FileStore.delete(it) }
         q.updateCoverPath("", gameId)
     }
 
@@ -218,14 +191,14 @@ class DiaryRepository(context: Context) {
 
     /** Notas reactivas de un juego (re-emiten al agregar/borrar y al llegar la transcripción). */
     fun notesFlow(gameId: Long): Flow<List<Note>> =
-        q.selectNotes(gameId, ::mapNote).asFlow().mapToList(Dispatchers.IO)
+        q.selectNotes(gameId, ::mapNote).asFlow().mapToList(ioDispatcher)
 
     fun notes(gameId: Long): List<Note> = q.selectNotes(gameId, ::mapNote).executeAsList()
 
     fun addNote(
         gameId: Long,
         text: String,
-        createdAt: Long = System.currentTimeMillis(),
+        createdAt: Long = nowMillis(),
         audioPath: String = "",
         durationMs: Long = 0,
     ): Long = database.transactionWithResult {
@@ -239,7 +212,7 @@ class DiaryRepository(context: Context) {
     /** Borra la nota y, si era de voz, su archivo de audio. */
     fun deleteNote(id: Long) {
         q.selectNoteAudioPath(id).executeAsOneOrNull()?.takeIf { it.isNotBlank() }
-            ?.let { runCatching { File(it).delete() } }
+            ?.let { FileStore.delete(it) }
         q.deleteNote(id)
     }
 
@@ -248,35 +221,30 @@ class DiaryRepository(context: Context) {
     /** Fotos reactivas de un juego (re-emiten al agregar/borrar). */
     fun photosFlow(gameId: Long): Flow<List<Photo>> =
         q.selectPhotos(gameId) { id, gid, path, caption, createdAt -> Photo(id, gid, path, caption, createdAt) }
-            .asFlow().mapToList(Dispatchers.IO)
+            .asFlow().mapToList(ioDispatcher)
 
     fun photos(gameId: Long): List<Photo> =
         q.selectPhotos(gameId) { id, gid, path, caption, createdAt -> Photo(id, gid, path, caption, createdAt) }
             .executeAsList()
 
     /**
-     * Copia la imagen apuntada por [sourceUri] (del Photo Picker) a almacenamiento interno
-     * y guarda la ruta. Devuelve la fila creada, o null si la copia falla.
+     * Copia la imagen elegida ([source], del Photo Picker) a almacenamiento interno y guarda la ruta.
+     * Devuelve la fila creada, o null si la copia falla.
      */
-    fun addPhoto(gameId: Long, sourceUri: Uri, caption: String = ""): Photo? {
-        val now = System.currentTimeMillis()
-        val dest = File(photosDir, "photo_${gameId}_$now.jpg")
-        val copied = runCatching {
-            appContext.contentResolver.openInputStream(sourceUri)?.use { input ->
-                dest.outputStream().use { output -> input.copyTo(output) }
-            } ?: return null
-        }
-        if (copied.isFailure) return null
+    fun addPhoto(gameId: Long, source: PlatformImage, caption: String = ""): Photo? {
+        val now = nowMillis()
+        val dest = "${FileStore.photosDir}/photo_${gameId}_$now.jpg"
+        if (!FileStore.copyImage(source, dest)) return null
 
         val id = database.transactionWithResult {
-            q.insertPhoto(gameId, dest.absolutePath, caption.trim(), now)
+            q.insertPhoto(gameId, dest, caption.trim(), now)
             q.lastInsertRowId().executeAsOne()
         }
-        return Photo(id, gameId, dest.absolutePath, caption.trim(), now)
+        return Photo(id, gameId, dest, caption.trim(), now)
     }
 
     fun deletePhoto(id: Long) {
-        q.selectPhotoPath(id).executeAsOneOrNull()?.let { runCatching { File(it).delete() } }
+        q.selectPhotoPath(id).executeAsOneOrNull()?.let { FileStore.delete(it) }
         q.deletePhoto(id)
     }
 
@@ -286,7 +254,7 @@ class DiaryRepository(context: Context) {
     fun wishlistFlow(): Flow<List<WishlistItem>> =
         q.selectWishlist { id, platform, game, slug, coverUrl, addedAt ->
             WishlistItem(id, platform, game, slug, coverUrl, addedAt)
-        }.asFlow().mapToList(Dispatchers.IO)
+        }.asFlow().mapToList(ioDispatcher)
 
     /** Agrega a la wishlist (INSERT OR IGNORE: dedup por plataforma+juego). */
     fun addToWishlist(
@@ -294,7 +262,7 @@ class DiaryRepository(context: Context) {
         game: String,
         slug: String,
         coverUrl: String,
-        addedAt: Long = System.currentTimeMillis(),
+        addedAt: Long = nowMillis(),
     ) = q.insertWishlist(platform.trim(), game.trim(), slug.trim(), coverUrl.trim(), addedAt)
 
     fun removeFromWishlist(id: Long) = q.deleteWishlist(id)

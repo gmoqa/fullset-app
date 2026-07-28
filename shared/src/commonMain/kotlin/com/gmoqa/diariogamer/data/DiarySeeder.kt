@@ -1,21 +1,18 @@
 package com.gmoqa.diariogamer.data
 
-import android.content.Context
 import com.russhwolf.settings.Settings
 import kotlinx.serialization.Serializable
 
 /**
- * Siembra la colección inicial desde `assets/seed/collection.json` la primera vez, y en
- * actualizaciones posteriores incorpora los juegos que se hayan agregado a ese seed. Cada paso
- * corre una sola vez (bandera en prefs) vía [migration]. Separado de [DiaryRepository] para que
- * ese quede enfocado en CRUD.
+ * Siembra la colección inicial desde `seed/collection.json` la primera vez, y en actualizaciones
+ * posteriores incorpora los juegos que se hayan agregado a ese seed. Cada paso corre una sola vez
+ * (bandera en prefs) vía [migration]. Separado de [DiaryRepository] para que ese quede enfocado en CRUD.
  *
  * El `collection.json` versionado en este repo viene **vacío**: la app arranca sin juegos y cada
  * quien arma su colección desde la app. Si querés precargar títulos, completá ese JSON con el
  * esquema de [LibraryEntryDto] / [WishlistEntryDto].
  */
 class DiarySeeder(
-    private val context: Context,
     private val repo: DiaryRepository,
     private val settings: Settings,
 ) {
@@ -35,7 +32,7 @@ class DiarySeeder(
     private fun seedCollectionIfNeeded() = migration(SEED_FLAG) {
         val collection = loadCollection() ?: return@migration
         repo.database.transaction {
-            val base = System.currentTimeMillis()
+            val base = nowMillis()
             collection.library.forEachIndexed { i, o -> insertLibraryEntry(o, base - i) }
             collection.wishlist.forEachIndexed { j, w ->
                 repo.addToWishlist(w.platform, w.title, "", w.cover, base - j)
@@ -53,7 +50,7 @@ class DiarySeeder(
     private fun insertMissingSeedGames() {
         val collection = loadCollection() ?: return
         val existing = repo.games().map { it.name to it.platform }.toSet()
-        val base = System.currentTimeMillis()
+        val base = nowMillis()
         repo.database.transaction {
             var i = 0
             collection.library.forEach { entry ->
@@ -76,9 +73,8 @@ class DiarySeeder(
         return id
     }
 
-    private fun loadCollection(): CollectionDto? = runCatching {
-        context.assets.open("seed/collection.json").bufferedReader().use { it.readText() }
-    }.getOrNull()?.let { AppJson.decodeFromString<CollectionDto>(it) }
+    private fun loadCollection(): CollectionDto? =
+        readTextAsset("seed/collection.json")?.let { AppJson.decodeFromString<CollectionDto>(it) }
 
     companion object {
         private const val SEED_FLAG = "seed_v1"
@@ -86,7 +82,7 @@ class DiarySeeder(
     }
 }
 
-/** DTOs de `assets/seed/collection.json`. */
+/** DTOs de `seed/collection.json`. */
 @Serializable
 private data class CollectionDto(
     val library: List<LibraryEntryDto> = emptyList(),

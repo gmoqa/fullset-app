@@ -8,6 +8,7 @@ import com.gmoqa.diariogamer.data.DiaryRepository
 import com.gmoqa.diariogamer.data.Game
 import com.gmoqa.diariogamer.data.Note
 import com.gmoqa.diariogamer.data.Photo
+import com.gmoqa.diariogamer.data.PlatformImage
 import com.gmoqa.diariogamer.data.RegionFilter
 import com.gmoqa.diariogamer.data.SteamGridDb
 import com.gmoqa.diariogamer.data.SteamGridGame
@@ -42,7 +43,7 @@ import java.io.File
  */
 class DiaryViewModel(app: Application) : AndroidViewModel(app) {
 
-    private val repo = DiaryRepository(app)
+    private val repo = DiaryRepository()
 
     private val _ready = MutableStateFlow(false)
     val ready: StateFlow<Boolean> = _ready.asStateFlow()
@@ -108,7 +109,7 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
         digital: Boolean,
     ) = io {
         val id = repo.addGame(title, platform, coverUrl = coverUrl, digital = digital)
-        if (coverUri != null) repo.setCoverFromUri(id, coverUri)
+        if (coverUri != null) repo.setCoverFromImage(id, PlatformImage(coverUri))
         _lastAdded.value = id
     }
 
@@ -120,7 +121,7 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
     fun addDigitalGame(title: String, platform: String, coverUrl: String, coverUri: Uri?) = io {
         val id = repo.addGame(title, platform, coverUrl = coverUrl, digital = true)
         repo.setPlaying(id, true)
-        if (coverUri != null) repo.setCoverFromUri(id, coverUri)
+        if (coverUri != null) repo.setCoverFromImage(id, PlatformImage(coverUri))
     }
 
     // ---- Buscador de carátulas (SteamGridDB, para plataformas sin catálogo) ----
@@ -160,7 +161,7 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
     /** Empieza a grabar una nota para [gameId]. false si el micrófono no pudo abrirse. */
     fun startVoiceNote(gameId: Long): Boolean {
         if (_recordingFor.value != null) return false
-        val file = repo.newVoiceNoteFile(gameId)
+        val file = File(repo.newVoiceNoteFile(gameId))
         if (!recorder.start(file)) return false
         pendingAudio = file
         _recordingFor.value = gameId
@@ -291,10 +292,10 @@ class DiaryViewModel(app: Application) : AndroidViewModel(app) {
         withContext(Dispatchers.IO) { file?.let { runCatching { it.delete() } } }
     }
 
-    fun addPhoto(gameId: Long, uri: Uri) = io { repo.addPhoto(gameId, uri) }
+    fun addPhoto(gameId: Long, uri: Uri) = io { repo.addPhoto(gameId, PlatformImage(uri)) }
     fun deletePhoto(id: Long) = io { repo.deletePhoto(id) }
 
-    fun setCoverFromUri(gameId: Long, uri: Uri) = io { repo.setCoverFromUri(gameId, uri) }
+    fun setCoverFromUri(gameId: Long, uri: Uri) = io { repo.setCoverFromImage(gameId, PlatformImage(uri)) }
     fun clearCustomCover(gameId: Long) = io { repo.clearCustomCover(gameId) }
 
     fun addToWishlist(platform: String, game: String, slug: String, coverUrl: String) =
