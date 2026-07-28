@@ -58,6 +58,8 @@ fun LibraryScreen(
     focusGameId: Long? = null,
     onFocusConsumed: () -> Unit = {},
     onOpenPlatform: (String) -> Unit = {},
+    showLabels: Boolean = true,
+    showConsoleTitles: Boolean = true,
 ) {
     // La búsqueda vive detrás de la lupa: mientras no la abrís no ocupa nada de pantalla.
     var searchOpen by rememberSaveable { mutableStateOf(false) }
@@ -146,6 +148,8 @@ fun LibraryScreen(
                 onFocusConsumed = onFocusConsumed,
                 onOpenPlatform = onOpenPlatform,
                 bleedHeaderIcon = true,
+                showGameLabels = showLabels,
+                showPlatformTitles = showConsoleTitles,
             )
         }
     }

@@ -102,6 +102,10 @@ fun GameShelves(
     onOpenPlatform: (String) -> Unit = {},
     /** Motivo de "comienzo": la franja muestra la mitad derecha del control a sangre (ver Collection). */
     bleedHeaderIcon: Boolean = false,
+    /** Mostrar el título bajo cada carátula (Collection lo hace opcional desde Settings). */
+    showGameLabels: Boolean = true,
+    /** Mostrar la franja con el nombre de cada consola (Collection lo hace opcional desde Settings). */
+    showPlatformTitles: Boolean = true,
 ) {
     val shelves = games.groupBy { it.platform }
     // En teléfonos angostos achicamos el tile: con 140dp apenas entraban dos carátulas y media.
@@ -119,8 +123,8 @@ fun GameShelves(
         val game = games.firstOrNull { it.id == id } ?: return@LaunchedEffect
         val shelfIndex = shelves.keys.indexOf(game.platform)
         if (shelfIndex < 0) return@LaunchedEffect
-        // Cada franja ocupa 2 items del LazyColumn (banda + fila).
-        columnState.animateScrollToItem(shelfIndex * 2)
+        // Cada franja ocupa 2 items del LazyColumn (banda + fila), o 1 si se ocultan las franjas.
+        columnState.animateScrollToItem(shelfIndex * if (showPlatformTitles) 2 else 1)
         // La fila recién tiene estado cuando su franja entró en composición.
         delay(80)
         val gameIndex = shelves[game.platform]?.indexOfFirst { it.id == id } ?: 0
@@ -135,23 +139,27 @@ fun GameShelves(
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
         shelves.forEach { (platform, platformGames) ->
-            item(key = "header::$platform") {
-                // Franja a todo el ancho pintada con el color de la plataforma + logo blanco
-                // + badge contador a la derecha. Padding simétrico (+ spacedBy 4) para que la
-                // franja quede centrada en su aire, con el mismo espacio arriba y abajo.
-                PlatformBandHeader(
-                    platform = platform,
-                    count = platformGames.size,
-                    modifier = Modifier.padding(vertical = 8.dp),
-                    onClick = { onOpenPlatform(platform) },
-                    bleedIcon = bleedHeaderIcon,
-                )
+            if (showPlatformTitles) {
+                item(key = "header::$platform") {
+                    // Franja a todo el ancho pintada con el color de la plataforma + logo blanco
+                    // + badge contador a la derecha. Padding simétrico (+ spacedBy 4) para que la
+                    // franja quede centrada en su aire, con el mismo espacio arriba y abajo.
+                    PlatformBandHeader(
+                        platform = platform,
+                        count = platformGames.size,
+                        modifier = Modifier.padding(vertical = 8.dp),
+                        onClick = { onOpenPlatform(platform) },
+                        bleedIcon = bleedHeaderIcon,
+                    )
+                }
             }
             item(key = "row::$platform") {
                 val rowState = rowStates.getOrPut(platform) { LazyListState() }
                 LazyRow(
                     state = rowState,
-                    modifier = Modifier.fillMaxWidth(),
+                    // Sin franja de consola, un aire extra separa una plataforma de la siguiente.
+                    modifier = Modifier.fillMaxWidth()
+                        .padding(top = if (showPlatformTitles) 0.dp else 8.dp),
                     contentPadding = PaddingValues(horizontal = 16.dp),
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
@@ -160,6 +168,7 @@ fun GameShelves(
                             game = game,
                             modifier = Modifier.width(tileWidth),
                             onClick = { onOpenGame(game.id) },
+                            showLabel = showGameLabels,
                         )
                     }
                 }
@@ -173,6 +182,7 @@ private fun CoverTile(
     game: Game,
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
+    showLabel: Boolean = true,
 ) {
     Column(modifier = modifier.clickable(onClick = onClick)) {
         // Alto reservado según el aspecto típico de la plataforma: el tile mide lo mismo con o sin
@@ -200,13 +210,15 @@ private fun CoverTile(
                 ConditionDot(cond, modifier = Modifier.align(Alignment.TopStart).padding(6.dp))
             }
         }
-        Text(
-            game.name,
-            style = MaterialTheme.typography.titleSmall,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-            modifier = Modifier.padding(top = 6.dp, start = 2.dp, end = 2.dp),
-        )
+        if (showLabel) {
+            Text(
+                game.name,
+                style = MaterialTheme.typography.titleSmall,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.padding(top = 6.dp, start = 2.dp, end = 2.dp),
+            )
+        }
     }
 }
 

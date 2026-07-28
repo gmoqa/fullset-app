@@ -17,6 +17,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.CloudDownload
 import androidx.compose.material.icons.filled.FileDownload
+import androidx.compose.material.icons.filled.Title
+import androidx.compose.material.icons.filled.ViewAgenda
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
@@ -52,6 +54,10 @@ fun SettingsScreen(
     onThemeChange: (ThemeMode) -> Unit,
     regionFilter: RegionFilter,
     onRegionChange: (RegionFilter) -> Unit,
+    showLabels: Boolean,
+    onShowLabelsChange: (Boolean) -> Unit,
+    showConsoleTitles: Boolean,
+    onShowConsoleTitlesChange: (Boolean) -> Unit,
     exportCsv: () -> String,
     installedModel: WhisperModel?,
     modelDownload: ModelDownloadState,
@@ -84,6 +90,24 @@ fun SettingsScreen(
             ),
             selected = themeMode,
             onSelect = onThemeChange,
+        )
+
+        SectionDivider()
+
+        SettingsSection("Collection")
+        SettingsRow(
+            icon = Icons.Filled.Title,
+            title = "Show game titles",
+            subtitle = "Names under each cover.",
+            onClick = { onShowLabelsChange(!showLabels) },
+            trailing = { Switch(checked = showLabels, onCheckedChange = onShowLabelsChange) },
+        )
+        SettingsRow(
+            icon = Icons.Filled.ViewAgenda,
+            title = "Show console headers",
+            subtitle = "Platform name bands between shelves.",
+            onClick = { onShowConsoleTitlesChange(!showConsoleTitles) },
+            trailing = { Switch(checked = showConsoleTitles, onCheckedChange = onShowConsoleTitlesChange) },
         )
 
         SectionDivider()

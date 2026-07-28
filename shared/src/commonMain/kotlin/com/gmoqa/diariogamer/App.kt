@@ -76,6 +76,8 @@ fun App(vm: DiaryViewModel, isDebug: Boolean = false) {
     // `remember` (no saveable): en recreación se re-lee el valor persistido en prefs.
     var themeMode by remember { mutableStateOf(vm.themeMode()) }
     var region by remember { mutableStateOf(vm.regionFilter()) }
+    var showLabels by remember { mutableStateOf(vm.showCollectionLabels()) }
+    var showConsoleTitles by remember { mutableStateOf(vm.showConsoleTitles()) }
     val darkTheme = when (themeMode) {
         ThemeMode.LIGHT -> false
         ThemeMode.DARK -> true
@@ -102,6 +104,10 @@ fun App(vm: DiaryViewModel, isDebug: Boolean = false) {
                     onThemeChange = { themeMode = it; vm.setThemeMode(it) },
                     regionFilter = region,
                     onRegionChange = { region = it; vm.setRegionFilter(it) },
+                    showLabels = showLabels,
+                    onShowLabelsChange = { showLabels = it; vm.setShowCollectionLabels(it) },
+                    showConsoleTitles = showConsoleTitles,
+                    onShowConsoleTitlesChange = { showConsoleTitles = it; vm.setShowConsoleTitles(it) },
                     isDebug = isDebug,
                 )
             }
@@ -118,6 +124,10 @@ private fun AppRoot(
     onThemeChange: (ThemeMode) -> Unit,
     regionFilter: RegionFilter,
     onRegionChange: (RegionFilter) -> Unit,
+    showLabels: Boolean,
+    onShowLabelsChange: (Boolean) -> Unit,
+    showConsoleTitles: Boolean,
+    onShowConsoleTitlesChange: (Boolean) -> Unit,
     isDebug: Boolean,
 ) {
     var tab by rememberSaveable { mutableStateOf(0) }
@@ -256,6 +266,10 @@ private fun AppRoot(
                 onThemeChange = onThemeChange,
                 regionFilter = regionFilter,
                 onRegionChange = onRegionChange,
+                showLabels = showLabels,
+                onShowLabelsChange = onShowLabelsChange,
+                showConsoleTitles = showConsoleTitles,
+                onShowConsoleTitlesChange = onShowConsoleTitlesChange,
                 onOpenGame = { screen = Screen.Detail(it) },
                 onOpenPlatform = { screen = Screen.Platform(it) },
                 onAddLibrary = { screen = Screen.Add(AddTarget.LIBRARY) },
@@ -301,6 +315,10 @@ private fun HomeContent(
     onThemeChange: (ThemeMode) -> Unit,
     regionFilter: RegionFilter,
     onRegionChange: (RegionFilter) -> Unit,
+    showLabels: Boolean,
+    onShowLabelsChange: (Boolean) -> Unit,
+    showConsoleTitles: Boolean,
+    onShowConsoleTitlesChange: (Boolean) -> Unit,
     onOpenGame: (Long) -> Unit,
     onOpenPlatform: (String) -> Unit,
     onAddLibrary: () -> Unit,
@@ -366,6 +384,9 @@ private fun HomeContent(
                     onFocusConsumed = { vm.consumeLastAdded() },
                     // Tocar una franja abre la vista propia de esa plataforma.
                     onOpenPlatform = onOpenPlatform,
+                    // Opciones de vista (Settings → Collection): ocultar labels y/o franjas de consola.
+                    showLabels = showLabels,
+                    showConsoleTitles = showConsoleTitles,
                 )
                 1 -> GameListScreen(
                     title = "Backlog",
@@ -393,6 +414,10 @@ private fun HomeContent(
                     onThemeChange = onThemeChange,
                     regionFilter = regionFilter,
                     onRegionChange = onRegionChange,
+                    showLabels = showLabels,
+                    onShowLabelsChange = onShowLabelsChange,
+                    showConsoleTitles = showConsoleTitles,
+                    onShowConsoleTitlesChange = onShowConsoleTitlesChange,
                     exportCsv = { vm.exportCsv() },
                     installedModel = installedModel,
                     modelDownload = modelDownload,

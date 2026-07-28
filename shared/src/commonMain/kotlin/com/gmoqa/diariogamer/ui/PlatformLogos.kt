@@ -74,7 +74,7 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     "Sega CD" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1B3A6B), 0.59f),              // azul (usa pad de Genesis)
     "PlayStation 5" to PlatformStyle(pad("ic_pad_playstation5"), Color(0xFF1E2C5C), 0.80f),   // azul marino
     "Sega Saturn" to PlatformStyle(pad("ic_pad_saturn"), Color(0xFF2A2E45), 0.72f),           // slate
-    "Dreamcast" to PlatformStyle(pad("ic_pad_dreamcast"), Color(0xFF24384A), 0.72f),          // steel blue
+    "Dreamcast" to PlatformStyle(pad("ic_pad_dreamcast"), Color(0xFF24384A), 1.00f),          // steel blue (jewel case cuadrada, medido en Libretro = 1.00)
     "PlayStation 2" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1E2038), 0.70f),   // azul oscuro
 )
 

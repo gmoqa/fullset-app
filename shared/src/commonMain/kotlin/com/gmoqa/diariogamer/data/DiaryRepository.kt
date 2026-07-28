@@ -283,6 +283,20 @@ class DiaryRepository {
         settings.putString(REGION_KEY, region.key)
     }
 
+    /** Collection: mostrar el título bajo cada carátula (se puede ocultar para una grilla más limpia). */
+    fun showCollectionLabels(): Boolean = settings.getBoolean(SHOW_LABELS_KEY, true)
+
+    fun setShowCollectionLabels(show: Boolean) {
+        settings.putBoolean(SHOW_LABELS_KEY, show)
+    }
+
+    /** Collection: mostrar la franja con el nombre de cada consola. */
+    fun showConsoleTitles(): Boolean = settings.getBoolean(SHOW_CONSOLE_TITLES_KEY, true)
+
+    fun setShowConsoleTitles(show: Boolean) {
+        settings.putBoolean(SHOW_CONSOLE_TITLES_KEY, show)
+    }
+
     /** Idioma en el que se dictan las notas de voz (se le pasa a Whisper). */
     fun transcriptionLanguage(): TranscriptionLanguage =
         TranscriptionLanguage.fromCode(settings.getStringOrNull(LANGUAGE_KEY))
@@ -295,5 +309,7 @@ class DiaryRepository {
         private const val THEME_KEY = "theme_mode"
         private const val REGION_KEY = "region_filter"
         private const val LANGUAGE_KEY = "transcription_language"
+        private const val SHOW_LABELS_KEY = "collection_show_labels"
+        private const val SHOW_CONSOLE_TITLES_KEY = "collection_show_console_titles"
     }
 }

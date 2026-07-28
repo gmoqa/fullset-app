@@ -314,6 +314,10 @@ class DiaryViewModel(
     fun setThemeMode(mode: ThemeMode) = repo.setThemeMode(mode)
     fun regionFilter(): RegionFilter = repo.regionFilter()
     fun setRegionFilter(region: RegionFilter) = repo.setRegionFilter(region)
+    fun showCollectionLabels(): Boolean = repo.showCollectionLabels()
+    fun setShowCollectionLabels(show: Boolean) = repo.setShowCollectionLabels(show)
+    fun showConsoleTitles(): Boolean = repo.showConsoleTitles()
+    fun setShowConsoleTitles(show: Boolean) = repo.setShowConsoleTitles(show)
 
     // Solo para probar los estados vacíos (Settings → Developer, visible únicamente en debug): vive
     // en memoria y no toca la BD; al reiniciar vuelve a false para no dejar la app "vacía" por error.
