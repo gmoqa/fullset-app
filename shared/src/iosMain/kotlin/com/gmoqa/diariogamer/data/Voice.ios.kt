@@ -6,7 +6,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import platform.AVFAudio.AVAudioRecorder
 import platform.AVFAudio.AVAudioSession
-import platform.AVFAudio.AVAudioSessionCategoryRecord
+import platform.AVFAudio.AVAudioSessionCategoryOptionDefaultToSpeaker
+import platform.AVFAudio.AVAudioSessionCategoryPlayAndRecord
+import platform.AVFAudio.AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation
 import platform.AVFAudio.AVFormatIDKey
 import platform.AVFAudio.AVLinearPCMBitDepthKey
 import platform.AVFAudio.AVLinearPCMIsBigEndianKey
@@ -41,8 +43,14 @@ class IosVoiceRecorder : VoiceRecorder {
     override fun start(path: String): Boolean {
         if (_recording.value) return false
 
+        // PlayAndRecord (no solo Record) para poder reproducir la nota justo después de grabarla;
+        // DefaultToSpeaker evita que la salida quede ruteada al auricular.
         val session = AVAudioSession.sharedInstance()
-        session.setCategory(AVAudioSessionCategoryRecord, null)
+        session.setCategory(
+            AVAudioSessionCategoryPlayAndRecord,
+            AVAudioSessionCategoryOptionDefaultToSpeaker,
+            null,
+        )
         session.setActive(true, null)
 
         val settings: Map<Any?, *> = mapOf(
@@ -78,6 +86,9 @@ class IosVoiceRecorder : VoiceRecorder {
         recorder = null
         _recording.value = false
         _amplitude.value = 0f
+        // Libera la sesión: corta el ducking a otras apps y limpia el ruteo antes de reproducir.
+        AVAudioSession.sharedInstance()
+            .setActive(false, AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation, null)
         return _elapsedMs.value
     }
 

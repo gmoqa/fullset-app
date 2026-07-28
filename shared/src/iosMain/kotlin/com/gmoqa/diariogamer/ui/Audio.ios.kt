@@ -3,6 +3,9 @@ package com.gmoqa.diariogamer.ui
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.AVFAudio.AVAudioPlayer
 import platform.AVFAudio.AVAudioPlayerDelegateProtocol
+import platform.AVFAudio.AVAudioSession
+import platform.AVFAudio.AVAudioSessionCategoryPlayback
+import platform.AVFAudio.setActive
 import platform.Foundation.NSURL
 import platform.darwin.NSObject
 
@@ -20,6 +23,9 @@ actual class AudioClip actual constructor(private val path: String) {
 
     @OptIn(ExperimentalForeignApi::class)
     actual fun prepare() {
+        // Asegura salida por parlante aunque venga de una sesión de grabación (Record es solo-entrada).
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, null)
+        AVAudioSession.sharedInstance().setActive(true, null)
         val url = NSURL.fileURLWithPath(path)
         val p = AVAudioPlayer(contentsOfURL = url, error = null)
         p.setDelegate(delegate)
