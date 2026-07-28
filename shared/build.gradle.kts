@@ -46,6 +46,8 @@ kotlin {
             // Recursos multiplataforma (drawables): genera la clase `Res` y `painterResource`.
             // `api`: :app usa la `Res` generada y `painterResource` (necesita el runtime en su classpath).
             api(compose.components.resources)
+            // Carga de imágenes multiplataforma (carátulas): Coil 3, mismo que ya usa :app.
+            implementation("io.coil-kt.coil3:coil-compose:3.0.4")
             // `api`: la app (que aún tiene DiaryRepository) ve los tipos SqlDriver/Settings/FullsetDatabase.
             api("app.cash.sqldelight:runtime:2.0.2")
             api("com.russhwolf:multiplatform-settings:1.2.0")

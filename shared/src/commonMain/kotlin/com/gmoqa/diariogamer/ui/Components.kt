@@ -30,12 +30,10 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.compose.AsyncImagePainter
 import coil3.compose.SubcomposeAsyncImage
@@ -46,10 +44,15 @@ import coil3.compose.SubcomposeAsyncImageContent
  * solo iconos y los botones con texto pasan a ser de icono. La tablet (~418dp) queda por encima y
  * conserva las etiquetas.
  */
-private const val COMPACT_WIDTH_DP = 400
+internal const val COMPACT_WIDTH_DP = 400
 
+/**
+ * `true` cuando la ventana es angosta (teléfono): la barra de navegación pasa a solo iconos. El ancho
+ * de pantalla es una métrica de plataforma, así que va por [expect]/[actual] (Android: `LocalConfiguration`;
+ * iOS: `LocalWindowInfo`).
+ */
 @Composable
-fun isCompactWidth(): Boolean = LocalConfiguration.current.screenWidthDp < COMPACT_WIDTH_DP
+expect fun isCompactWidth(): Boolean
 
 /**
  * Header grande de pantalla (estilo Material 3 "large title"): un título prominente con un
