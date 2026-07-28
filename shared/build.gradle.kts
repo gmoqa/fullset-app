@@ -62,6 +62,8 @@ kotlin {
             // ViewModel + viewModelScope multiplataforma (DiaryViewModel común). `api`: :app usa el
             // tipo con viewModel().
             api("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel:2.8.4")
+            // collectAsStateWithLifecycle en las pantallas comunes (GameDetailScreen).
+            implementation("org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose:2.8.4")
         }
         // Fronteras por plataforma (expect/actual): engine HTTP, driver SQLDelight, settings.
         androidMain.dependencies {

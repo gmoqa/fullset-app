@@ -32,7 +32,7 @@ import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import com.gmoqa.diariogamer.data.Note
 import com.gmoqa.diariogamer.data.Photo
-import java.io.File
+import com.gmoqa.diariogamer.data.localCoverModel
 
 /**
  * Una entrada del diario del juego. Notas escritas, notas de voz y fotos comparten una única
@@ -111,7 +111,7 @@ internal fun DiaryEntryCard(
                     )
 
                     is DiaryEntry.Snapshot -> AsyncImage(
-                        model = File(entry.photo.path),
+                        model = localCoverModel(entry.photo.path),
                         contentDescription = entry.photo.caption.ifBlank { "Photo" },
                         contentScale = ContentScale.Crop,
                         modifier = Modifier

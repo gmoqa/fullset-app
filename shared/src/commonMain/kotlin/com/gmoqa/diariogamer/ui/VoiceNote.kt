@@ -1,6 +1,5 @@
 package com.gmoqa.diariogamer.ui
 
-import android.media.MediaPlayer
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -102,10 +101,10 @@ internal fun LevelBar(amplitude: Float, modifier: Modifier = Modifier) {
 internal fun VoiceNotePlayer(path: String, durationMs: Long, modifier: Modifier = Modifier) {
     var playing by remember(path) { mutableStateOf(false) }
     var prepared by remember(path) { mutableStateOf(false) }
-    val player = remember(path) { MediaPlayer() }
+    val player = remember(path) { AudioClip(path) }
 
     DisposableEffect(path) {
-        player.setOnCompletionListener { playing = false }
+        player.setOnCompletion { playing = false }
         onDispose { runCatching { player.release() } }
     }
 
@@ -116,7 +115,6 @@ internal fun VoiceNotePlayer(path: String, durationMs: Long, modifier: Modifier 
             .clickable {
                 runCatching {
                     if (!prepared) {
-                        player.setDataSource(path)
                         player.prepare()
                         prepared = true
                     }

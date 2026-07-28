@@ -1,10 +1,5 @@
 package com.gmoqa.diariogamer.ui
 
-import android.Manifest
-import android.content.pm.PackageManager
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.PickVisualMediaRequest
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -65,18 +60,14 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
 import com.gmoqa.diariogamer.DiaryViewModel
 import com.gmoqa.diariogamer.data.Game
-import com.gmoqa.diariogamer.data.PlatformImage
 import com.gmoqa.diariogamer.data.coverModel
-import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -103,25 +94,10 @@ fun GameDetailScreen(
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showAddNote by remember { mutableStateOf(false) }
 
-    val context = LocalContext.current
-    val micPermission = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { granted -> if (granted) vm.startVoiceNote(gameId) }
+    val startRecording = rememberMicPermission { vm.startVoiceNote(gameId) }
 
-    fun startRecording() {
-        val granted = ContextCompat.checkSelfPermission(
-            context, Manifest.permission.RECORD_AUDIO
-        ) == PackageManager.PERMISSION_GRANTED
-        if (granted) vm.startVoiceNote(gameId) else micPermission.launch(Manifest.permission.RECORD_AUDIO)
-    }
-
-    val coverPicker = rememberLauncherForActivityResult(
-        ActivityResultContracts.PickVisualMedia()
-    ) { uri -> if (uri != null) vm.setCover(gameId, PlatformImage(uri)) }
-
-    val photoPicker = rememberLauncherForActivityResult(
-        ActivityResultContracts.PickVisualMedia()
-    ) { uri -> if (uri != null) vm.addPhoto(gameId, PlatformImage(uri)) }
+    val pickCover = rememberImagePicker { image -> if (image != null) vm.setCover(gameId, image) }
+    val pickPhoto = rememberImagePicker { image -> if (image != null) vm.addPhoto(gameId, image) }
 
     Scaffold { _ ->
         // El hero va a sangre por arriba (detrás del status bar).
@@ -132,11 +108,7 @@ fun GameDetailScreen(
                 onDelete = { showDeleteDialog = true },
                 onTogglePlaying = { vm.setPlaying(gameId, game?.playing != true) },
                 onToggleBacklog = { vm.setBacklog(gameId, game?.backlog != true) },
-                onChangeCover = {
-                    coverPicker.launch(
-                        PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
-                    )
-                },
+                onChangeCover = { pickCover() },
                 onResetCover = { vm.clearCustomCover(gameId) },
             )
 
@@ -194,11 +166,7 @@ fun GameDetailScreen(
                 DiaryComposer(
                     onWrite = { showAddNote = true },
                     onRecord = { startRecording() },
-                    onPhoto = {
-                        photoPicker.launch(
-                            PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
-                        )
-                    },
+                    onPhoto = { pickPhoto() },
                 )
             }
         }
