@@ -1,0 +1,703 @@
+{
+ "source": "Sega Retro",
+ "url": "https://segaretro.org/List_of_Master_System_games_in_the_United_States",
+ "region": "NTSC-U",
+ "games": [
+  {
+   "title": "Action Fighter",
+   "releaseDate": "1986-11",
+   "serial": "5055",
+   "rating": ""
+  },
+  {
+   "title": "Aerial Assault",
+   "releaseDate": "1990-07",
+   "serial": "7041",
+   "rating": ""
+  },
+  {
+   "title": "After Burner",
+   "releaseDate": "1988-03",
+   "serial": "9001",
+   "rating": ""
+  },
+  {
+   "title": "Alex Kidd in Miracle World",
+   "releaseDate": "1986-12",
+   "serial": "5067",
+   "rating": ""
+  },
+  {
+   "title": "Alex Kidd in Shinobi World",
+   "releaseDate": "1990",
+   "serial": "7044",
+   "rating": ""
+  },
+  {
+   "title": "Alex Kidd: High-Tech World",
+   "releaseDate": "1989-06",
+   "serial": "5116",
+   "rating": ""
+  },
+  {
+   "title": "Alex Kidd: The Lost Stars",
+   "releaseDate": "1988-07",
+   "serial": "7005",
+   "rating": ""
+  },
+  {
+   "title": "ALF",
+   "releaseDate": "1989-05",
+   "serial": "5111",
+   "rating": ""
+  },
+  {
+   "title": "Alien Syndrome",
+   "releaseDate": "1988-03",
+   "serial": "7006",
+   "rating": ""
+  },
+  {
+   "title": "Altered Beast",
+   "releaseDate": "1989-06",
+   "serial": "7018",
+   "rating": ""
+  },
+  {
+   "title": "Astro Warrior",
+   "releaseDate": "1986-12",
+   "serial": "5069",
+   "rating": ""
+  },
+  {
+   "title": "Aztec Adventure: The Golden Road to Paradise",
+   "releaseDate": "1988-03",
+   "serial": "5100",
+   "rating": ""
+  },
+  {
+   "title": "Black Belt",
+   "releaseDate": "1986-11",
+   "serial": "5054",
+   "rating": ""
+  },
+  {
+   "title": "Blade Eagle",
+   "releaseDate": "1988-09",
+   "serial": "8005",
+   "rating": ""
+  },
+  {
+   "title": "Bomber Raid",
+   "releaseDate": "1989-01",
+   "serial": "QC-003",
+   "rating": ""
+  },
+  {
+   "title": "California Games",
+   "releaseDate": "1989-05",
+   "serial": "7014",
+   "rating": ""
+  },
+  {
+   "title": "Captain Silver",
+   "releaseDate": "1989-09",
+   "serial": "5117",
+   "rating": ""
+  },
+  {
+   "title": "Casino Games",
+   "releaseDate": "1989-09",
+   "serial": "7021",
+   "rating": ""
+  },
+  {
+   "title": "Castle of Illusion Starring Mickey Mouse",
+   "releaseDate": "1991-02",
+   "serial": "7053",
+   "rating": ""
+  },
+  {
+   "title": "Choplifter",
+   "releaseDate": "1986-09",
+   "serial": "5051",
+   "rating": ""
+  },
+  {
+   "title": "Cloud Master",
+   "releaseDate": "1989-08",
+   "serial": "7027",
+   "rating": ""
+  },
+  {
+   "title": "Columns",
+   "releaseDate": "1990-09",
+   "serial": "5120",
+   "rating": ""
+  },
+  {
+   "title": "Cyber Police ESWAT",
+   "releaseDate": "1990-09",
+   "serial": "7042",
+   "rating": ""
+  },
+  {
+   "title": "Cyborg Hunter",
+   "releaseDate": "1989-01",
+   "serial": "QC-002",
+   "rating": ""
+  },
+  {
+   "title": "Dead Angle",
+   "releaseDate": "1990",
+   "serial": "7030",
+   "rating": ""
+  },
+  {
+   "title": "Dick Tracy",
+   "releaseDate": "1991-01",
+   "serial": "7057",
+   "rating": ""
+  },
+  {
+   "title": "Double Dragon",
+   "releaseDate": "1988-11",
+   "serial": "7012",
+   "rating": ""
+  },
+  {
+   "title": "Enduro Racer",
+   "releaseDate": "1987-08",
+   "serial": "5077",
+   "rating": ""
+  },
+  {
+   "title": "F-16 Fighter",
+   "releaseDate": "1986-10",
+   "serial": "4005",
+   "rating": ""
+  },
+  {
+   "title": "Fantasy Zone",
+   "releaseDate": "1986-09",
+   "serial": "5052",
+   "rating": ""
+  },
+  {
+   "title": "Fantasy Zone II: The Tears of Opa-Opa",
+   "releaseDate": "1987-12",
+   "serial": "7004",
+   "rating": ""
+  },
+  {
+   "title": "Fantasy Zone: The Maze",
+   "releaseDate": "1988-07",
+   "serial": "5108",
+   "rating": ""
+  },
+  {
+   "title": "Galaxy Force",
+   "releaseDate": "1989-10",
+   "serial": "QC-004",
+   "rating": ""
+  },
+  {
+   "title": "Gangster Town",
+   "releaseDate": "1987-08",
+   "serial": "5074",
+   "rating": ""
+  },
+  {
+   "title": "Ghost House",
+   "releaseDate": "1986-09",
+   "serial": "4002",
+   "rating": ""
+  },
+  {
+   "title": "Ghostbusters",
+   "releaseDate": "1987-05",
+   "serial": "5065",
+   "rating": ""
+  },
+  {
+   "title": "Ghouls'n Ghosts",
+   "releaseDate": "1991-01",
+   "serial": "7055",
+   "rating": ""
+  },
+  {
+   "title": "Golden Axe",
+   "releaseDate": "1990-03-01",
+   "serial": "9004",
+   "rating": ""
+  },
+  {
+   "title": "Golden Axe Warrior",
+   "releaseDate": "1991-04",
+   "serial": "7505",
+   "rating": ""
+  },
+  {
+   "title": "Golvellius: Valley of Doom",
+   "releaseDate": "1988-12",
+   "serial": "7017",
+   "rating": ""
+  },
+  {
+   "title": "Great Baseball",
+   "releaseDate": "1987-03",
+   "serial": "5061",
+   "rating": ""
+  },
+  {
+   "title": "Great Basketball",
+   "releaseDate": "1987-12",
+   "serial": "5071",
+   "rating": ""
+  },
+  {
+   "title": "Great Football",
+   "releaseDate": "1987-07",
+   "serial": "5058",
+   "rating": ""
+  },
+  {
+   "title": "Great Golf",
+   "releaseDate": "1987-11",
+   "serial": "5057",
+   "rating": ""
+  },
+  {
+   "title": "Great Ice Hockey",
+   "releaseDate": "1986-12",
+   "serial": "5062",
+   "rating": ""
+  },
+  {
+   "title": "Great Soccer",
+   "releaseDate": "1987-10",
+   "serial": "5059",
+   "rating": ""
+  },
+  {
+   "title": "Great Volleyball",
+   "releaseDate": "1987-08",
+   "serial": "5070",
+   "rating": ""
+  },
+  {
+   "title": "Hang-On / Astro Warrior",
+   "releaseDate": "1986-09",
+   "serial": "6002",
+   "rating": ""
+  },
+  {
+   "title": "Hang-On / Safari Hunt",
+   "releaseDate": "1986-09",
+   "serial": "6001",
+   "rating": ""
+  },
+  {
+   "title": "Heavyweight Champ",
+   "releaseDate": "1990",
+   "serial": "7063",
+   "rating": ""
+  },
+  {
+   "title": "Joe Montana Football",
+   "releaseDate": "1990-12",
+   "serial": "7062",
+   "rating": ""
+  },
+  {
+   "title": "Kenseiden",
+   "releaseDate": "1988-10",
+   "serial": "7013",
+   "rating": ""
+  },
+  {
+   "title": "King's Quest: Quest for the Crown",
+   "releaseDate": "1989-07",
+   "serial": "4360",
+   "rating": ""
+  },
+  {
+   "title": "Kung Fu Kid",
+   "releaseDate": "1987-10",
+   "serial": "5078",
+   "rating": ""
+  },
+  {
+   "title": "Lord of the Sword",
+   "releaseDate": "1989-03",
+   "serial": "7016",
+   "rating": ""
+  },
+  {
+   "title": "Marksman Shooting & Trap Shooting",
+   "releaseDate": "1986-12",
+   "serial": "6003",
+   "rating": ""
+  },
+  {
+   "title": "Maze Hunter 3D",
+   "releaseDate": "1988-05",
+   "serial": "8003",
+   "rating": ""
+  },
+  {
+   "title": "Michael Jackson's Moonwalker",
+   "releaseDate": "1991-05",
+   "serial": "7052",
+   "rating": ""
+  },
+  {
+   "title": "Miracle Warriors: Seal of the Dark Lord",
+   "releaseDate": "1988-10",
+   "serial": "7500",
+   "rating": ""
+  },
+  {
+   "title": "Missile Defense 3-D",
+   "releaseDate": "1987-08",
+   "serial": "8001",
+   "rating": ""
+  },
+  {
+   "title": "Monopoly",
+   "releaseDate": "1988-09",
+   "serial": "5500",
+   "rating": ""
+  },
+  {
+   "title": "Montezuma's Revenge",
+   "releaseDate": "1989-06",
+   "serial": "4370",
+   "rating": ""
+  },
+  {
+   "title": "My Hero",
+   "releaseDate": "1986-09",
+   "serial": "4001",
+   "rating": ""
+  },
+  {
+   "title": "OutRun",
+   "releaseDate": "1987-10",
+   "serial": "7003",
+   "rating": ""
+  },
+  {
+   "title": "Paperboy",
+   "releaseDate": "1990",
+   "serial": "5121",
+   "rating": ""
+  },
+  {
+   "title": "Parlour Games",
+   "releaseDate": "1988-05",
+   "serial": "5103",
+   "rating": ""
+  },
+  {
+   "title": "Penguin Land",
+   "releaseDate": "1988-01",
+   "serial": "5501",
+   "rating": ""
+  },
+  {
+   "title": "Phantasy Star",
+   "releaseDate": "1988-11",
+   "serial": "9500",
+   "rating": ""
+  },
+  {
+   "title": "Poseidon Wars 3D",
+   "releaseDate": "1989-03",
+   "serial": "8006",
+   "rating": ""
+  },
+  {
+   "title": "Power Strike",
+   "releaseDate": "1988-12",
+   "serial": "5109",
+   "rating": ""
+  },
+  {
+   "title": "Pro Wrestling",
+   "releaseDate": "1986-12",
+   "serial": "5056",
+   "rating": ""
+  },
+  {
+   "title": "Psycho Fox",
+   "releaseDate": "1990-05",
+   "serial": "7032",
+   "rating": ""
+  },
+  {
+   "title": "Quartet",
+   "releaseDate": "1987-04",
+   "serial": "5073",
+   "rating": ""
+  },
+  {
+   "title": "R-Type",
+   "releaseDate": "1988-12",
+   "serial": "9002",
+   "rating": ""
+  },
+  {
+   "title": "R.C. Grand Prix",
+   "releaseDate": "1990-06",
+   "serial": "27007",
+   "rating": ""
+  },
+  {
+   "title": "Rambo III",
+   "releaseDate": "1988-12",
+   "serial": "7015",
+   "rating": ""
+  },
+  {
+   "title": "Rambo: First Blood Part II",
+   "releaseDate": "1986-12",
+   "serial": "5064",
+   "rating": ""
+  },
+  {
+   "title": "Rampage",
+   "releaseDate": "1989-01",
+   "serial": "QC-001",
+   "rating": ""
+  },
+  {
+   "title": "Rastan",
+   "releaseDate": "1989-04",
+   "serial": "7022",
+   "rating": ""
+  },
+  {
+   "title": "Reggie Jackson Baseball",
+   "releaseDate": "1989-03",
+   "serial": "7019",
+   "rating": ""
+  },
+  {
+   "title": "Rescue Mission",
+   "releaseDate": "1988-04",
+   "serial": "5106",
+   "rating": ""
+  },
+  {
+   "title": "Rocky",
+   "releaseDate": "1987-07",
+   "serial": "7002",
+   "rating": ""
+  },
+  {
+   "title": "Safari Hunt",
+   "releaseDate": "1986",
+   "serial": "",
+   "rating": ""
+  },
+  {
+   "title": "SDI: Strategic Defense Initiative",
+   "releaseDate": "1988-03",
+   "serial": "5102",
+   "rating": ""
+  },
+  {
+   "title": "Shanghai",
+   "releaseDate": "1988-10",
+   "serial": "5110",
+   "rating": ""
+  },
+  {
+   "title": "Shinobi",
+   "releaseDate": "1988-09",
+   "serial": "7009",
+   "rating": ""
+  },
+  {
+   "title": "Shooting Gallery",
+   "releaseDate": "1987-03",
+   "serial": "5072",
+   "rating": ""
+  },
+  {
+   "title": "Slap Shot",
+   "releaseDate": "1990",
+   "serial": "7035",
+   "rating": ""
+  },
+  {
+   "title": "Snail Maze",
+   "releaseDate": "1986-09",
+   "serial": "",
+   "rating": ""
+  },
+  {
+   "title": "Sonic the Hedgehog",
+   "releaseDate": "1991-11",
+   "serial": "7076",
+   "rating": ""
+  },
+  {
+   "title": "Space Harrier",
+   "releaseDate": "1987-03",
+   "serial": "7001",
+   "rating": ""
+  },
+  {
+   "title": "Space Harrier 3D",
+   "releaseDate": "1988-07",
+   "serial": "8004",
+   "rating": ""
+  },
+  {
+   "title": "SpellCaster",
+   "releaseDate": "1989-09",
+   "serial": "9003",
+   "rating": ""
+  },
+  {
+   "title": "Spider-Man vs. The Kingpin",
+   "releaseDate": "1991-08",
+   "serial": "7065",
+   "rating": ""
+  },
+  {
+   "title": "Sports Pad Football",
+   "releaseDate": "1987-08",
+   "serial": "5060",
+   "rating": ""
+  },
+  {
+   "title": "Spy vs Spy",
+   "releaseDate": "1988-10",
+   "serial": "4010",
+   "rating": ""
+  },
+  {
+   "title": "Strider",
+   "releaseDate": "1991-06",
+   "serial": "9005",
+   "rating": ""
+  },
+  {
+   "title": "Super Monaco GP",
+   "releaseDate": "1990-09",
+   "serial": "7043",
+   "rating": ""
+  },
+  {
+   "title": "Super Tennis",
+   "releaseDate": "1986-12",
+   "serial": "4007",
+   "rating": ""
+  },
+  {
+   "title": "Teddy Boy Blues",
+   "releaseDate": "1986-09",
+   "serial": "4003",
+   "rating": ""
+  },
+  {
+   "title": "The Ninja",
+   "releaseDate": "1986-12",
+   "serial": "5066",
+   "rating": ""
+  },
+  {
+   "title": "Thunder Blade",
+   "releaseDate": "1988-10",
+   "serial": "7011",
+   "rating": ""
+  },
+  {
+   "title": "Time Soldiers",
+   "releaseDate": "1989-05",
+   "serial": "7024",
+   "rating": ""
+  },
+  {
+   "title": "TransBot",
+   "releaseDate": "1986-10",
+   "serial": "4004",
+   "rating": ""
+  },
+  {
+   "title": "Vigilante",
+   "releaseDate": "1989-05",
+   "serial": "7023",
+   "rating": ""
+  },
+  {
+   "title": "Walter Payton Football",
+   "releaseDate": "1989-09",
+   "serial": "7020",
+   "rating": ""
+  },
+  {
+   "title": "Wanted",
+   "releaseDate": "1989-08",
+   "serial": "5118",
+   "rating": ""
+  },
+  {
+   "title": "Where in the World is Carmen Sandiego?",
+   "releaseDate": "1988-12",
+   "serial": "4350",
+   "rating": ""
+  },
+  {
+   "title": "Wonder Boy",
+   "releaseDate": "1987-06",
+   "serial": "5068",
+   "rating": ""
+  },
+  {
+   "title": "Wonder Boy III: The Dragon's Trap",
+   "releaseDate": "1989-09",
+   "serial": "7026",
+   "rating": ""
+  },
+  {
+   "title": "Wonder Boy in Monster Land",
+   "releaseDate": "1988-08",
+   "serial": "7007",
+   "rating": ""
+  },
+  {
+   "title": "World Grand Prix",
+   "releaseDate": "1986-10",
+   "serial": "5053",
+   "rating": ""
+  },
+  {
+   "title": "Ys: Ancient Ys Vanished Omen",
+   "releaseDate": "1989-03",
+   "serial": "7501",
+   "rating": ""
+  },
+  {
+   "title": "Zaxxon 3D",
+   "releaseDate": "1988-03",
+   "serial": "8002",
+   "rating": ""
+  },
+  {
+   "title": "Zillion",
+   "releaseDate": "1987-11",
+   "serial": "5075",
+   "rating": ""
+  },
+  {
+   "title": "Zillion II: The Tri Formation",
+   "releaseDate": "1988-07",
+   "serial": "5105",
+   "rating": ""
+  }
+ ]
+}

@@ -41,8 +41,8 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 | `nes-usa.json` | `build_nes_catalog.py` | Wikipedia NES (col 5) | libretro DAT | 100/100/93/95 | — |
 | `snes-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | — | 100/100/95/92 | — |
 | `n64-usa.json` | `build_n64_catalog.py` | Wikipedia N64 (col 5) | libretro DAT | 100/100/96/100 | `n64-usa.json` |
-| `genesis-usa.json` | `segaretro_source.py` + `enrich_genesis_segaretro.py` | Excel del usuario (base Sega Retro) | **Sega Retro** (lista US) | 99/0/**97**/92 · +releaseDate 99% (545 a mes), rating 48% | fixes inline |
-| `master-system-usa.json` | `build_mastersystem_catalog.py` | Wikipedia MS (col 4) | libretro DAT | 100/100/40/92 | — |
+| `genesis-usa.json` | `segaretro_source.py` + `enrich_from_segaretro.py` | Excel del usuario (base Sega Retro) | **Sega Retro** (lista US) | 99/0/**97**/92 · +releaseDate 99% (545 a mes), rating 48% | fixes inline |
+| `master-system-usa.json` | Wikipedia + `segaretro_source.py`/`enrich_from_segaretro.py` | Wikipedia MS | **Sega Retro** (dates/serial; incl. Sega Cards) | 100/100/**92**/92 · +releaseDate 91% (98 a mes) | — |
 | `psx-usa.json` | `build_psx_catalog.py` | Wikipedia PS (A–L / M–Z) | sin DAT | 100/100/0/87 | — |
 | `dreamcast-usa.json` | `build_dreamcast_catalog.py` | Wikipedia DC (col 5) | sin DAT | 100/100/0/99 | `dreamcast-usa.json` |
 
@@ -61,8 +61,10 @@ descargado, en dos pasos reproducibles:
 1. `tools/segaretro_source.py <html> <out.json>` — parsea la tabla a una **fuente de registro**
    (`tools/sources/genesis-segaretro.json`), tagueada con `source`/`url`/`region`. Guarda facts, no la
    página.
-2. `tools/enrich_genesis_segaretro.py` — aplica esa fuente al catálogo (match por título; rellena
-   `releaseDate`/`serial`/`rating`, alinea `year`). Re-correr cuando Sega Retro actualice.
+2. `tools/enrich_from_segaretro.py <catalogo> <fuente>` — aplica esa fuente a un catálogo (match por
+   título; rellena `releaseDate`/`serial`/`rating`, alinea `year`). **Genérico**: sirve para cualquier
+   consola Sega. Ya aplicado a **Genesis** y **Master System** (esta última con cartuchos + Sega Cards).
+   Re-correr cuando Sega Retro actualice.
 
 Este es **el patrón a replicar: cada consola con su mejor fuente**, siempre trazada — Sega Retro para
 las Sega, una fuente japonesa para los catálogos JP, un foro/base de datos confiable donde Wikipedia no

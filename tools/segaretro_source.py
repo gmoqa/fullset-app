@@ -41,22 +41,27 @@ def cell_rating(cell_html: str) -> str:
 
 
 def parse(html_text: str):
-    table = max(re.findall(r"<table.*?</table>", html_text, re.S), key=len)
-    games = []
-    for tr in re.findall(r"<tr\b.*?</tr>", table, re.S):
-        cells = re.findall(r"<t[hd]\b[^>]*>(.*?)</t[hd]>", tr, re.S)
-        if len(cells) < 4:
+    """Parsea TODAS las tablas de lista de juegos (columna 'Release Date'). Algunas consolas Sega
+    tienen la lista partida en varias (p. ej. Master System: cartuchos + Sega Cards)."""
+    games, seen = [], set()
+    for table in re.findall(r"<table.*?</table>", html_text, re.S):
+        if "Release Date" not in table:   # tablas de nav/info no tienen esa columna
             continue
-        title = cell_text(cells[0])
-        if not title or title == "Title":
-            continue
-        date = strip_footnote(cell_text(cells[1]))
-        games.append({
-            "title": title,
-            "releaseDate": date if DATE_RE.match(date) else "",
-            "serial": strip_footnote(cell_text(cells[3])),
-            "rating": cell_rating(cells[4]) if len(cells) > 4 else "",
-        })
+        for tr in re.findall(r"<tr\b.*?</tr>", table, re.S):
+            cells = re.findall(r"<t[hd]\b[^>]*>(.*?)</t[hd]>", tr, re.S)
+            if len(cells) < 4:
+                continue
+            title = cell_text(cells[0])
+            if not title or title == "Title" or title in seen:
+                continue
+            seen.add(title)
+            date = strip_footnote(cell_text(cells[1]))
+            games.append({
+                "title": title,
+                "releaseDate": date if DATE_RE.match(date) else "",
+                "serial": strip_footnote(cell_text(cells[3])),
+                "rating": cell_rating(cells[4]) if len(cells) > 4 else "",
+            })
     return games
 
 
