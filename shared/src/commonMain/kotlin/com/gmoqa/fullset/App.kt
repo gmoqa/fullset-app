@@ -29,6 +29,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -131,15 +132,27 @@ private fun AppRoot(
     isDebug: Boolean,
 ) {
     var tab by rememberSaveable { mutableStateOf(0) }
-    var screen by remember { mutableStateOf<Screen>(Screen.Home) }
+    // Pila de navegación sobre Home. Home es el fondo (el pager con las tabs); cada pantalla que se
+    // abre (detalle, plataforma, agregar) se apila encima y "back" desapila UNA. Así volver desde el
+    // detalle de un juego regresa a la vista de plataforma desde la que se abrió, no siempre a Home.
+    val backStack = remember { mutableStateListOf<Screen>() }
+    val screen = backStack.lastOrNull() ?: Screen.Home
+    // Dirección de la animación: al apilar (open) la pantalla entra desde la derecha; al desapilar
+    // (back) sale hacia la derecha y la anterior reaparece con fundido.
+    var goingBack by remember { mutableStateOf(false) }
+    fun open(next: Screen) {
+        // Doble tap rápido en la misma fila: no apilar dos veces la misma pantalla (back parecería
+        // no hacer nada la primera vez).
+        if (backStack.lastOrNull() == next) return
+        goingBack = false
+        backStack.add(next)
+    }
+    fun back() { goingBack = true; backStack.removeLastOrNull() }
 
-    // Navegación con transición push/pop: al entrar (detalle/agregar) la nueva pantalla entra
-    // desde la derecha; al volver, sale hacia la derecha. Home usa fundido.
     AnimatedContent(
         targetState = screen,
         transitionSpec = {
-            val goingDeeper = initialState is Screen.Home && targetState !is Screen.Home
-            if (goingDeeper) {
+            if (!goingBack) {
                 (slideInHorizontally(tween(240)) { it } + fadeIn(tween(240))) togetherWith
                     fadeOut(tween(200))
             } else {
@@ -151,17 +164,17 @@ private fun AppRoot(
     ) { current ->
         when (current) {
             is Screen.Detail -> {
-                BackHandler { screen = Screen.Home }
+                BackHandler { back() }
                 GameDetailScreen(
                     vm = vm,
                     gameId = current.gameId,
-                    onBack = { screen = Screen.Home },
-                    onDelete = { screen = Screen.Home },
+                    onBack = { back() },
+                    onDelete = { back() },
                 )
             }
 
             is Screen.Add -> {
-                BackHandler { screen = Screen.Home }
+                BackHandler { back() }
                 // Lo ya registrado, para marcarlo en la lista del catálogo. Se recolecta acá adentro
                 // para no recomponer todo el root con cada cambio de la colección.
                 val allGames by vm.games.collectAsStateWithLifecycle()
@@ -187,7 +200,7 @@ private fun AppRoot(
                     title = if (current.target == AddTarget.LIBRARY) "Add game" else "Add to wishlist",
                     platforms = platforms,
                     catalog = catalog,
-                    onCancel = { screen = Screen.Home },
+                    onCancel = { back() },
                     onPicked = { platform, entry, coverUrl ->
                         when (current.target) {
                             AddTarget.LIBRARY ->
@@ -214,7 +227,7 @@ private fun AppRoot(
                                 tab = HOME_TAB_WISHLIST
                             }
                         }
-                        screen = Screen.Home
+                        back()
                     },
                     coverSearchEnabled = vm.coverSearchEnabled,
                     onSearchGames = { vm.searchGames(it) },
@@ -224,21 +237,21 @@ private fun AppRoot(
             }
 
             Screen.AddDigital -> {
-                BackHandler { screen = Screen.Home }
+                BackHandler { back() }
                 AddDigitalGameScreen(
                     coverSearchEnabled = vm.coverSearchEnabled,
                     onSearchGames = { vm.searchGames(it) },
                     onCoversFor = { vm.coversFor(it) },
-                    onCancel = { screen = Screen.Home },
+                    onCancel = { back() },
                     onAdd = { platform, gameTitle, coverUrl, cover ->
                         vm.addDigitalGame(gameTitle, platform, coverUrl, cover)
-                        screen = Screen.Home
+                        back()
                     },
                 )
             }
 
             is Screen.Platform -> {
-                BackHandler { screen = Screen.Home }
+                BackHandler { back() }
                 val allGames by vm.games.collectAsStateWithLifecycle()
                 // Tus juegos físicos de esa plataforma (el orden por lanzamiento lo hace la vista).
                 val platformGames = remember(allGames, current.platform) {
@@ -257,8 +270,9 @@ private fun AppRoot(
                     region = regionFilter,
                     games = platformGames,
                     catalog = catalogEntries,
-                    onOpenGame = { screen = Screen.Detail(it) },
-                    onBack = { screen = Screen.Home },
+                    // El detalle se APILA sobre la plataforma: back desde el juego vuelve acá.
+                    onOpenGame = { open(Screen.Detail(it)) },
+                    onBack = { back() },
                     // Agregar directo desde el timeline: mismo alta que el flujo de "Add game".
                     onAddGame = { entry ->
                         vm.addGame(
@@ -283,11 +297,11 @@ private fun AppRoot(
                 onShowLabelsChange = onShowLabelsChange,
                 showConsoleTitles = showConsoleTitles,
                 onShowConsoleTitlesChange = onShowConsoleTitlesChange,
-                onOpenGame = { screen = Screen.Detail(it) },
-                onOpenPlatform = { screen = Screen.Platform(it) },
-                onAddLibrary = { screen = Screen.Add(AddTarget.LIBRARY) },
-                onAddWishlist = { screen = Screen.Add(AddTarget.WISHLIST) },
-                onAddDigital = { screen = Screen.AddDigital },
+                onOpenGame = { open(Screen.Detail(it)) },
+                onOpenPlatform = { open(Screen.Platform(it)) },
+                onAddLibrary = { open(Screen.Add(AddTarget.LIBRARY)) },
+                onAddWishlist = { open(Screen.Add(AddTarget.WISHLIST)) },
+                onAddDigital = { open(Screen.AddDigital) },
                 isDebug = isDebug,
             )
         }
