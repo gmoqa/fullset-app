@@ -155,6 +155,7 @@ class DiaryViewModel(
 
     fun setPlaying(id: Long, playing: Boolean) = io { repo.setPlaying(id, playing) }
     fun setBacklog(id: Long, backlog: Boolean) = io { repo.setBacklog(id, backlog) }
+    fun setCondition(id: Long, condition: String) = io { repo.setCondition(id, condition) }
     fun deleteGame(id: Long) = io { repo.deleteGame(id) }
 
     fun addNote(gameId: Long, text: String) = io { repo.addNote(gameId, text) }

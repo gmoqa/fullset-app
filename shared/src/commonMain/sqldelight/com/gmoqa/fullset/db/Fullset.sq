@@ -96,6 +96,9 @@ UPDATE games SET condition = :new WHERE condition = :old;
 setConditionByPlatform:
 UPDATE games SET condition = ? WHERE name = ? AND platform = ?;
 
+updateCondition:
+UPDATE games SET condition = ? WHERE id = ?;
+
 lastInsertRowId:
 SELECT last_insert_rowid();
 

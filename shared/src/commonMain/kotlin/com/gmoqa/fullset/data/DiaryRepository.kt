@@ -147,6 +147,9 @@ class DiaryRepository {
     /** Marca o desmarca "backlog" (pendiente por jugar). */
     fun setBacklog(gameId: Long, backlog: Boolean) = q.setBacklog(if (backlog) 1L else 0L, gameId)
 
+    /** Estado de conservación de la copia física (loose/loose_manual/boxed/complete; "" = sin dato). */
+    fun setCondition(gameId: Long, condition: String) = q.updateCondition(condition.trim(), gameId)
+
     /** Borra el juego, sus notas y sus fotos (filas por CASCADE + archivos en disco). */
     fun deleteGame(id: Long) {
         photos(id).forEach { FileStore.delete(it.path) }

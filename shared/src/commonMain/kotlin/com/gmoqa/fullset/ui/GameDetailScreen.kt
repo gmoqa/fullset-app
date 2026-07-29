@@ -18,15 +18,18 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.AddPhotoAlternate
 import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.EditNote
 import androidx.compose.material.icons.filled.Image
@@ -69,6 +72,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
 import com.gmoqa.fullset.DiaryViewModel
+import com.gmoqa.fullset.data.Condition
 import com.gmoqa.fullset.data.Game
 import com.gmoqa.fullset.data.Note
 import com.gmoqa.fullset.data.coverModel
@@ -120,6 +124,7 @@ fun GameDetailScreen(
                 onResetCover = { vm.clearCustomCover(gameId) },
                 onShareText = { shareText(vm.gameNotesText(gameId)) },
                 onShareJson = { shareText(vm.gameNotesJson(gameId)) },
+                onSetCondition = { vm.setCondition(gameId, it?.key ?: "") },
             )
 
             // Notas escritas, de voz y fotos en una sola línea de tiempo.
@@ -241,6 +246,7 @@ private fun HeroHeader(
     onResetCover: () -> Unit,
     onShareText: () -> Unit,
     onShareJson: () -> Unit,
+    onSetCondition: (Condition?) -> Unit,
 ) {
     var shareMenu by remember { mutableStateOf(false) }
     val model = game?.coverModel
@@ -352,7 +358,9 @@ private fun HeroHeader(
                         game?.releaseYear?.let { MetaChip(it.toString()) }
                         game?.publisher?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
                         game?.genre?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
-                        game?.condition?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
+                        // Condición editable: tocá para elegir loose/boxed/complete; el punto de
+                        // color se refleja en Collection (la lista es reactiva).
+                        EditableConditionChip(game?.conditionState, onSetCondition)
                         // Código impreso en el cartucho/disco: identifica la copia física.
                         game?.serial?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
                     }
@@ -403,6 +411,44 @@ private fun HeroHeader(
                     }
                 }
             }
+        }
+    }
+}
+
+/** Chip de condición editable: punto de color + label (o "Condition" si vacío) → menú de opciones. */
+@Composable
+private fun EditableConditionChip(current: Condition?, onSelect: (Condition?) -> Unit) {
+    var open by remember { mutableStateOf(false) }
+    Box {
+        Row(
+            modifier = Modifier
+                .clip(RoundedCornerShape(50))
+                .background(Color.White.copy(alpha = 0.18f))
+                .clickable { open = true }
+                .padding(start = 10.dp, end = 4.dp, top = 4.dp, bottom = 4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            if (current != null) {
+                Box(Modifier.size(8.dp).clip(CircleShape).background(Color(current.dot)))
+                Spacer(Modifier.width(6.dp))
+                Text(current.label, style = MaterialTheme.typography.labelMedium, color = Color.White, maxLines = 1)
+            } else {
+                Text("Condition", style = MaterialTheme.typography.labelMedium, color = Color.White.copy(alpha = 0.75f))
+            }
+            Icon(Icons.Filled.ArrowDropDown, contentDescription = "Set condition", tint = Color.White, modifier = Modifier.size(18.dp))
+        }
+        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            Condition.entries.forEach { c ->
+                DropdownMenuItem(
+                    text = { Text(c.label) },
+                    leadingIcon = { Box(Modifier.size(12.dp).clip(CircleShape).background(Color(c.dot))) },
+                    onClick = { open = false; onSelect(c) },
+                )
+            }
+            DropdownMenuItem(
+                text = { Text("None") },
+                onClick = { open = false; onSelect(null) },
+            )
         }
     }
 }
