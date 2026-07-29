@@ -44,7 +44,7 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 | `genesis-usa.json` | `segaretro_source.py` + `enrich_from_segaretro.py` | Excel del usuario (base Sega Retro) | **Sega Retro** (lista US) | 99/0/**97**/92 · +releaseDate 99% (545 a mes), rating 48% | fixes inline |
 | `master-system-usa.json` | Wikipedia + `segaretro_source.py`/`enrich_from_segaretro.py` | Wikipedia MS | **Sega Retro** (dates/serial; incl. Sega Cards) | 100/100/**92**/92 · +releaseDate 91% (98 a mes) | — |
 | `psx-usa.json` | `build_psx_catalog.py` | Wikipedia PS (A–L / M–Z) | sin DAT | 100/100/0/87 | — |
-| `dreamcast-usa.json` | `build_dreamcast_catalog.py` | Wikipedia DC (col 5) | sin DAT | 100/100/0/99 | `dreamcast-usa.json` |
+| `dreamcast-usa.json` | Wikipedia + `segaretro_source.py`/`enrich_from_segaretro.py` | Wikipedia DC | **Sega Retro** (fecha al día/serial/rating) | 100/100/**88**/99 · +releaseDate 88% (al día), rating 88% | `dreamcast-usa.json` |
 
 Repos de carátula por plataforma (libretro-thumbnails): NES `Nintendo_-_Nintendo_Entertainment_System`,
 SNES `Nintendo_-_Super_Nintendo_Entertainment_System`, N64 `Nintendo_-_Nintendo_64`, Genesis
@@ -63,8 +63,8 @@ descargado, en dos pasos reproducibles:
    página.
 2. `tools/enrich_from_segaretro.py <catalogo> <fuente>` — aplica esa fuente a un catálogo (match por
    título; rellena `releaseDate`/`serial`/`rating`, alinea `year`). **Genérico**: sirve para cualquier
-   consola Sega. Ya aplicado a **Genesis** y **Master System** (esta última con cartuchos + Sega Cards).
-   Re-correr cuando Sega Retro actualice.
+   consola Sega. Ya aplicado a **Genesis**, **Master System** (cartuchos + Sega Cards) y **Dreamcast**
+   (fechas al día). Re-correr cuando Sega Retro actualice.
 
 Este es **el patrón a replicar: cada consola con su mejor fuente**, siempre trazada — Sega Retro para
 las Sega, una fuente japonesa para los catálogos JP, un foro/base de datos confiable donde Wikipedia no
