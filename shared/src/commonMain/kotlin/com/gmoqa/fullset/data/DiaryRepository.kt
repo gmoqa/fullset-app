@@ -20,10 +20,13 @@ import kotlinx.coroutines.withContext
  *  - síncronas (`games()`, `game()`…) → una sola lectura; las usan la siembra y el export CSV.
  * Las escrituras son síncronas; el ViewModel las corre en [ioDispatcher].
  */
-class DiaryRepository {
-
-    // Driver del módulo :shared (expect/actual): AndroidSqliteDriver en Android, NativeSqliteDriver en iOS.
-    private val driver: SqlDriver = createSqlDriver()
+class DiaryRepository(
+    // Inyectables para tests (driver JDBC en memoria + MapSettings). Los defaults son las fronteras
+    // expect/actual reales: AndroidSqliteDriver/SharedPreferences en Android, Native/NSUserDefaults
+    // en iOS. Producción sigue construyendo `DiaryRepository()` sin cambios.
+    driver: SqlDriver = createSqlDriver(),
+    private val settings: Settings = createSettings(),
+) {
 
     // `internal` para que [DiarySeeder] (mismo módulo) reutilice la BD durante la siembra.
     internal val database = FullsetDatabase(driver)
@@ -32,9 +35,6 @@ class DiaryRepository {
     /** Ruta destino para una nueva nota de voz (aún no insertada en la BD). */
     fun newVoiceNoteFile(gameId: Long): String =
         "${FileStore.audioDir}/note_${gameId}_${nowMillis()}.wav"
-
-    // Settings del módulo :shared (expect/actual): SharedPreferences en Android, NSUserDefaults en iOS.
-    private val settings: Settings = createSettings()
 
     /** Siembra + migraciones puntuales, fuera del hilo principal. Idempotente (banderas en prefs). */
     suspend fun seed() = withContext(ioDispatcher) {

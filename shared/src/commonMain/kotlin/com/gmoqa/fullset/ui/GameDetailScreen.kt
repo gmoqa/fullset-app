@@ -627,21 +627,6 @@ private fun DatePartPicker(
     }
 }
 
-/** ISO de precisión variable: "1994" | "1994-06" | "1994-06-08" (el día requiere mes). */
-private fun partialIso(year: Int, month: Int?, day: Int?): String = buildString {
-    append(year)
-    if (month != null) {
-        append('-').append(month.toString().padStart(2, '0'))
-        if (day != null) append('-').append(day.toString().padStart(2, '0'))
-    }
-}
-
-private fun daysInMonth(year: Int, month: Int): Int = when (month) {
-    4, 6, 9, 11 -> 30
-    2 -> if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) 29 else 28
-    else -> 31
-}
-
 @Composable
 private fun MetaChip(text: String, accent: Boolean = false) {
     Text(

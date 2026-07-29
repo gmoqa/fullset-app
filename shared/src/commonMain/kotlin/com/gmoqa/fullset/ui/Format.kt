@@ -53,6 +53,22 @@ fun formatReleaseDate(iso: String, fallbackYear: Int? = null): String {
     }
 }
 
+/** ISO de precisión variable: "1994" | "1994-06" | "1994-06-08" (el día requiere mes). */
+internal fun partialIso(year: Int, month: Int?, day: Int?): String = buildString {
+    append(year)
+    if (month != null) {
+        append('-').append(month.toString().padStart(2, '0'))
+        if (day != null) append('-').append(day.toString().padStart(2, '0'))
+    }
+}
+
+/** Días del mes (bisiestos incluidos), para validar el selector de "First played". */
+internal fun daysInMonth(year: Int, month: Int): Int = when (month) {
+    4, 6, 9, 11 -> 30
+    2 -> if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) 29 else 28
+    else -> 31
+}
+
 /** Duración de una nota de voz como "m:ss" (p. ej. 1:07). */
 fun formatDuration(millis: Long): String {
     val totalSeconds = millis / 1000

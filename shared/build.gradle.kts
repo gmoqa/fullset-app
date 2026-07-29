@@ -85,6 +85,20 @@ kotlin {
             // Fetcher de red de Coil (vía Ktor/Darwin) para cargar carátulas remotas en iOS.
             implementation("io.coil-kt.coil3:coil-network-ktor3:3.0.4")
         }
+        // Tests de la lógica pura (Format, Condition, GameSearch, Platform): corren en JVM con
+        // `./gradlew :shared:testDebugUnitTest` (y en iOS si algún día corremos esos targets).
+        commonTest.dependencies {
+            implementation(kotlin("test"))
+        }
+        // Tests que necesitan una BD real (SyncSnapshot sobre DiaryRepository): SQLite JDBC en
+        // memoria + Settings en memoria. Solo JVM; no toca Android (no requiere Robolectric).
+        val androidUnitTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+                implementation("app.cash.sqldelight:sqlite-driver:2.0.2")
+                implementation("com.russhwolf:multiplatform-settings-test:1.2.0")
+            }
+        }
     }
 }
 
