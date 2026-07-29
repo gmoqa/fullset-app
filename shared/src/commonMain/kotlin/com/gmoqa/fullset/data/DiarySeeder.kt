@@ -19,6 +19,17 @@ class DiarySeeder(
     fun run() {
         seedCollectionIfNeeded()
         syncSeededGames()
+        fixMissingCovers()
+    }
+
+    /**
+     * Rellena la carátula de juegos cuyo `coverUrl` quedó vacío por un desajuste de nombre con
+     * libretro (la imagen existe, con otro título). Solo toca los que están sin cover. Una vez.
+     */
+    private fun fixMissingCovers() = migration(COVER_FIX_FLAG) {
+        val q = repo.database.fullsetQueries
+        q.fillCoverUrlByName(GENESIS_BOXART + "Aladdin%20%28USA%29%20%28Final%20Cut%29.png", "Disney's Aladdin")
+        q.fillCoverUrlByName(GENESIS_BOXART + "Lotus%20II%20%28USA%29.png", "Lotus II: RECS")
     }
 
     /** Ejecuta [block] una sola vez (marca [flag] al terminar). Base del mecanismo de siembra. */
@@ -79,6 +90,9 @@ class DiarySeeder(
     companion object {
         private const val SEED_FLAG = "seed_v1"
         private const val SYNC_SEED_FLAG = "sync_seed_v1"
+        private const val COVER_FIX_FLAG = "cover_fix_genesis_v1"
+        private const val GENESIS_BOXART =
+            "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Mega_Drive_-_Genesis/master/Named_Boxarts/"
     }
 }
 

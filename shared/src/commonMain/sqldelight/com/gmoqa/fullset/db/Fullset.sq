@@ -114,6 +114,9 @@ UPDATE games SET cover_path = ? WHERE name = ?;
 updateCoverUrlByName:
 UPDATE games SET cover_url = ? WHERE name = ?;
 
+fillCoverUrlByName:
+UPDATE games SET cover_url = ? WHERE name = ? AND trim(cover_url) = '';
+
 renameGameByName:
 UPDATE games SET name = ? WHERE name = ?;
 
