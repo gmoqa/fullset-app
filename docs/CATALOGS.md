@@ -10,16 +10,19 @@ para mejorar sin perder el rastro de por qué.
 
 ## Esquema canónico
 
-Cada catálogo es un array JSON, **un objeto por línea**, **ordenado por `slug`**, con estas 9 claves
+Cada catálogo es un array JSON, **un objeto por línea**, **ordenado por `slug`**, con estas 11 claves
 SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 
 ```
-{title, platform, region, year, publisher, genre, slug, serial, coverUrl}
+{title, platform, region, year, releaseDate, publisher, genre, slug, serial, coverUrl, rating}
 ```
 
 - `slug`: identidad estable del juego dentro de su plataforma (clave para overrides y merges).
 - `region`: hoy siempre `"NTSC-U"` (ver [Región](#región)).
-- `year`: entero o `null`. **Limitación actual:** solo año; ver [Precisión de fechas](#precisión-de-fechas-y-confianza-dirección).
+- `year`: entero o `null` — lo que usa la app para mostrar/ordenar.
+- `releaseDate`: fecha ISO de **precisión variable** `""` | `"1991"` | `"1991-06"` | `"1991-06-11"`. Es
+  la versión precisa y con fuente del año; **mejora con el tiempo** cuando aparece un dato más fino.
+- `rating`: clasificación normalizada `""` | `"VRC: GA"` | `"ESRB: Teen"` … (VRC = sistema Sega pre-1994).
 - El resto: texto (vacío `""` si falta).
 
 ## Procedencia — de dónde obtenemos cada dato
@@ -38,7 +41,7 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 | `nes-usa.json` | `build_nes_catalog.py` | Wikipedia NES (col 5) | libretro DAT | 100/100/93/95 | — |
 | `snes-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | — | 100/100/95/92 | — |
 | `n64-usa.json` | `build_n64_catalog.py` | Wikipedia N64 (col 5) | libretro DAT | 100/100/96/100 | `n64-usa.json` |
-| `genesis-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | — | **90/0/49/92** | — (fixes inline) |
+| `genesis-usa.json` | `segaretro_source.py` + `enrich_genesis_segaretro.py` | Excel del usuario (base Sega Retro) | **Sega Retro** (lista US) | 99/0/**97**/92 · +releaseDate 99% (545 a mes), rating 48% | fixes inline |
 | `master-system-usa.json` | `build_mastersystem_catalog.py` | Wikipedia MS (col 4) | libretro DAT | 100/100/40/92 | — |
 | `psx-usa.json` | `build_psx_catalog.py` | Wikipedia PS (A–L / M–Z) | sin DAT | 100/100/0/87 | — |
 | `dreamcast-usa.json` | `build_dreamcast_catalog.py` | Wikipedia DC (col 5) | sin DAT | 100/100/0/99 | `dreamcast-usa.json` |
@@ -47,6 +50,23 @@ Repos de carátula por plataforma (libretro-thumbnails): NES `Nintendo_-_Nintend
 SNES `Nintendo_-_Super_Nintendo_Entertainment_System`, N64 `Nintendo_-_Nintendo_64`, Genesis
 `Sega_-_Mega_Drive_-_Genesis`, Master System `Sega_-_Master_System_-_Mark_III`, PSX
 `Sony_-_PlayStation`, Dreamcast `Sega_-_Dreamcast`.
+
+## Sega Retro — la fuente insignia (y el patrón por consola)
+
+**Genesis es el catálogo modelo** del dataset con procedencia. Sus fechas (con mes, a veces día),
+seriales (catalog number) y ratings salen de **[Sega Retro](https://segaretro.org)** (lista US), la
+fuente más certera para las consolas Sega. El sitio **bloquea bots**, así que se trabaja desde el HTML
+descargado, en dos pasos reproducibles:
+
+1. `tools/segaretro_source.py <html> <out.json>` — parsea la tabla a una **fuente de registro**
+   (`tools/sources/genesis-segaretro.json`), tagueada con `source`/`url`/`region`. Guarda facts, no la
+   página.
+2. `tools/enrich_genesis_segaretro.py` — aplica esa fuente al catálogo (match por título; rellena
+   `releaseDate`/`serial`/`rating`, alinea `year`). Re-correr cuando Sega Retro actualice.
+
+Este es **el patrón a replicar: cada consola con su mejor fuente**, siempre trazada — Sega Retro para
+las Sega, una fuente japonesa para los catálogos JP, un foro/base de datos confiable donde Wikipedia no
+alcance (p. ej. PSX-US). El norte: fullset dice **de dónde sacó cada dato**.
 
 ## De dónde mejoramos — la capa de overrides
 

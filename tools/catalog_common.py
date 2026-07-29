@@ -165,7 +165,7 @@ def _merge(existing, new):
 
 # Orden fijo de claves. Estas 9 van SIEMPRE (aunque vacías), así todos los catálogos son idénticos
 # en estructura y el diff refleja solo cambios de contenido.
-CANON_KEYS = ["title", "platform", "region", "year", "publisher", "genre", "slug", "serial", "coverUrl"]
+CANON_KEYS = ["title", "platform", "region", "year", "releaseDate", "publisher", "genre", "slug", "serial", "coverUrl", "rating"]
 
 
 def canonical(entry):
