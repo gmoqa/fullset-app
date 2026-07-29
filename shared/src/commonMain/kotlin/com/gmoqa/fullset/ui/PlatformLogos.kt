@@ -11,13 +11,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.ui.draw.clipToBounds
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.graphics.drawscope.rotate
-import androidx.compose.ui.graphics.drawscope.translate
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
@@ -114,11 +107,10 @@ fun PlatformBandHeader(
 ) {
     val band = platformBandColor(platform) ?: MaterialTheme.colorScheme.surfaceVariant
     val header = onBack != null
-    val padIcon = PLATFORM_STYLES[platform]?.padIcon
 
-    // Modo "comienzo" (franjas de Collection): el control asoma su parte derecha desde el borde
-    // izquierdo como **watermark tenue de fondo**, y el nombre/contador van ENCIMA.
-    if (bleedIcon && padIcon != null) {
+    // Franjas de Collection/Backlog: banda de color con el nombre + contador. (Antes llevaba un patrón
+    // del ícono de control de fondo; se quitó porque no aportaba.)
+    if (bleedIcon) {
         Box(
             modifier = modifier
                 .fillMaxWidth()
@@ -127,9 +119,6 @@ fun PlatformBandHeader(
                 .clipToBounds()
                 .windowInsetsPadding(windowInsets),
         ) {
-            // Patrón repetido del control (tenue) como textura de fondo. `matchParentSize` no agranda
-            // la franja: la altura la fija la fila del texto.
-            ControllerPattern(icon = padIcon, modifier = Modifier.matchParentSize())
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -231,43 +220,6 @@ fun PlatformBandHeader(
             )
         }
     }
-}
-
-/**
- * Textura de fondo: repite el control de la plataforma **en diagonal**, en una grilla con filas
- * corridas progresivamente (para que las diagonales se lean), muy tenue, detrás del texto. Se dibuja
- * con [drawBehind] (no crea nodos por baldosa). [tile] = tamaño de cada control; alpha bajo = sutil.
- */
-@Composable
-private fun ControllerPattern(icon: DrawableResource, modifier: Modifier) {
-    val painter = painterResource(icon)
-    val tint = ColorFilter.tint(Color.White.copy(alpha = 0.10f))
-    // Control chico: así entran 2-3 filas en el alto de la franja y el half-drop se ve.
-    val tile = with(LocalDensity.current) { 20.dp.toPx() }
-    Box(
-        modifier = modifier.clipToBounds().drawBehind {
-            val stepX = tile * 1.35f
-            val stepY = tile * 0.9f
-            var row = 0
-            var y = -tile
-            while (y < size.height + tile) {
-                // Filas alternas corridas medio paso (half-drop): el patrón clásico.
-                val offset = if (row % 2 == 0) 0f else stepX / 2f
-                var x = -tile + offset
-                while (x < size.width + tile) {
-                    translate(left = x, top = y) {
-                        // Control inclinado en diagonal.
-                        rotate(degrees = -35f, pivot = Offset(tile / 2f, tile / 2f)) {
-                            with(painter) { draw(size = Size(tile, tile), colorFilter = tint) }
-                        }
-                    }
-                    x += stepX
-                }
-                row++
-                y += stepY
-            }
-        },
-    )
 }
 
 /**
