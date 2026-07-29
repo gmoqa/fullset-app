@@ -82,6 +82,7 @@ class DiaryRepository {
         publisher: String,
         serial: String,
         digital: Long,
+        firstPlayed: String,
         noteCount: Long,
         photoCount: Long,
     ): Game = Game(
@@ -101,6 +102,7 @@ class DiaryRepository {
         publisher = publisher,
         serial = serial,
         digital = digital != 0L,
+        firstPlayed = firstPlayed,
         noteCount = noteCount.toInt(),
         photoCount = photoCount.toInt(),
     )
@@ -149,6 +151,9 @@ class DiaryRepository {
 
     /** Estado de conservación de la copia física (loose/loose_manual/boxed/complete; "" = sin dato). */
     fun setCondition(gameId: Long, condition: String) = q.updateCondition(condition.trim(), gameId)
+
+    /** Primera vez jugado: ISO de precisión variable ("1994" | "1994-06" | "1994-06-08"; "" = borrar). */
+    fun setFirstPlayed(gameId: Long, iso: String) = q.updateFirstPlayed(iso.trim(), gameId)
 
     /** Borra el juego, sus notas y sus fotos (filas por CASCADE + archivos en disco). */
     fun deleteGame(id: Long) {

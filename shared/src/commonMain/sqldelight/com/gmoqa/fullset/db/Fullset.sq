@@ -19,7 +19,10 @@ CREATE TABLE games (
     -- Código de producto de la copia física (SCUS-94163, MK-01077-00…).
     serial TEXT NOT NULL DEFAULT '',
     -- 1 = juego digital (no lo poseés): no cuenta como colección física. Ver 10.sqm.
-    digital INTEGER NOT NULL DEFAULT 0
+    digital INTEGER NOT NULL DEFAULT 0,
+    -- Primera vez que lo jugaste: ISO de precisión variable ('1994' | '1994-06' | '1994-06-08').
+    -- '' = sin dato. Ver 11.sqm.
+    first_played TEXT NOT NULL DEFAULT ''
 );
 
 CREATE TABLE notes (
@@ -61,6 +64,7 @@ CREATE INDEX idx_photos_game ON photos(game_id);
 selectAllGames:
 SELECT g.id, g.name, g.platform, g.cover_url, g.cover_path, g.playing, g.backlog, g.created_at,
     g.region, g.release_year, g.genre, g.condition, g.slug, g.publisher, g.serial, g.digital,
+    g.first_played,
     (SELECT COUNT(*) FROM notes n WHERE n.game_id = g.id) AS note_count,
     (SELECT COUNT(*) FROM photos p WHERE p.game_id = g.id) AS photo_count
 FROM games g
@@ -69,6 +73,7 @@ ORDER BY g.created_at DESC;
 selectGameById:
 SELECT g.id, g.name, g.platform, g.cover_url, g.cover_path, g.playing, g.backlog, g.created_at,
     g.region, g.release_year, g.genre, g.condition, g.slug, g.publisher, g.serial, g.digital,
+    g.first_played,
     (SELECT COUNT(*) FROM notes n WHERE n.game_id = g.id) AS note_count,
     (SELECT COUNT(*) FROM photos p WHERE p.game_id = g.id) AS photo_count
 FROM games g
@@ -98,6 +103,10 @@ UPDATE games SET condition = ? WHERE name = ? AND platform = ?;
 
 updateCondition:
 UPDATE games SET condition = ? WHERE id = ?;
+
+-- Primera vez jugado: ISO de precisión variable ('' = borrar el dato).
+updateFirstPlayed:
+UPDATE games SET first_played = ? WHERE id = ?;
 
 lastInsertRowId:
 SELECT last_insert_rowid();

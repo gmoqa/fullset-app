@@ -25,6 +25,8 @@ data class Game(
     val serial: String = "",
     /** true = juego digital (no lo poseés): no aparece en Collection. Ver migración 10.sqm. */
     val digital: Boolean = false,
+    /** Primera vez que lo jugaste: ISO de precisión variable ("1994" | "1994-06" | "1994-06-08"). */
+    val firstPlayed: String = "",
     val noteCount: Int = 0,
     val photoCount: Int = 0,
 ) {

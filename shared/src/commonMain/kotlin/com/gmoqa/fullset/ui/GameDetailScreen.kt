@@ -32,6 +32,7 @@ import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.EditNote
+import androidx.compose.material.icons.filled.Event
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.Refresh
@@ -72,6 +73,9 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
 import com.gmoqa.fullset.DiaryViewModel
+import kotlinx.datetime.Clock
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.toLocalDateTime
 import com.gmoqa.fullset.data.Condition
 import com.gmoqa.fullset.data.Game
 import com.gmoqa.fullset.data.Note
@@ -125,6 +129,7 @@ fun GameDetailScreen(
                 onShareText = { shareText(vm.gameNotesText(gameId)) },
                 onShareJson = { shareText(vm.gameNotesJson(gameId)) },
                 onSetCondition = { vm.setCondition(gameId, it?.key ?: "") },
+                onSetFirstPlayed = { vm.setFirstPlayed(gameId, it) },
             )
 
             // Notas escritas, de voz y fotos en una sola línea de tiempo.
@@ -247,6 +252,7 @@ private fun HeroHeader(
     onShareText: () -> Unit,
     onShareJson: () -> Unit,
     onSetCondition: (Condition?) -> Unit,
+    onSetFirstPlayed: (String) -> Unit,
 ) {
     var shareMenu by remember { mutableStateOf(false) }
     val model = game?.coverModel
@@ -361,6 +367,9 @@ private fun HeroHeader(
                         // Condición editable: tocá para elegir loose/boxed/complete; el punto de
                         // color se refleja en Collection (la lista es reactiva).
                         EditableConditionChip(game?.conditionState, onSetCondition)
+                        // Primera vez que lo jugaste: EL dato de diario. Editable, con precisión
+                        // variable (el año alcanza; mes y día si los recordás).
+                        FirstPlayedChip(game?.firstPlayed ?: "", onSetFirstPlayed)
                         // Código impreso en el cartucho/disco: identifica la copia física.
                         game?.serial?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
                     }
@@ -451,6 +460,186 @@ private fun EditableConditionChip(current: Condition?, onSelect: (Condition?) ->
             )
         }
     }
+}
+
+/** Chip "First played": cuándo lo jugaste por primera vez (editable; vacío = "First played"). */
+@Composable
+private fun FirstPlayedChip(current: String, onSet: (String) -> Unit) {
+    var open by remember { mutableStateOf(false) }
+    Row(
+        modifier = Modifier
+            .clip(RoundedCornerShape(50))
+            .background(Color.White.copy(alpha = 0.18f))
+            .clickable { open = true }
+            .padding(horizontal = 10.dp, vertical = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Icon(
+            Icons.Filled.Event,
+            contentDescription = "First played",
+            tint = Color.White.copy(alpha = if (current.isBlank()) 0.75f else 1f),
+            modifier = Modifier.size(14.dp),
+        )
+        Spacer(Modifier.width(5.dp))
+        if (current.isBlank()) {
+            Text("First played", style = MaterialTheme.typography.labelMedium, color = Color.White.copy(alpha = 0.75f))
+        } else {
+            Text(formatReleaseDate(current), style = MaterialTheme.typography.labelMedium, color = Color.White, maxLines = 1)
+        }
+    }
+    if (open) {
+        FirstPlayedDialog(
+            initial = current,
+            onDismiss = { open = false },
+            onSave = { open = false; onSet(it) },
+        )
+    }
+}
+
+/**
+ * Diálogo de "primera vez jugado", con precisión variable: el año alcanza; mes y día son opcionales
+ * (de un juego de la infancia rara vez se recuerda el día exacto). Guarda ISO parcial
+ * ("1994" | "1994-06" | "1994-06-08"); "" = borrar el dato.
+ */
+@Composable
+private fun FirstPlayedDialog(
+    initial: String,
+    onDismiss: () -> Unit,
+    onSave: (String) -> Unit,
+) {
+    val parts = initial.split("-")
+    var year by remember { mutableStateOf(parts.getOrNull(0)?.toIntOrNull()) }
+    var month by remember { mutableStateOf(parts.getOrNull(1)?.toIntOrNull()?.takeIf { it in 1..12 }) }
+    var day by remember { mutableStateOf(parts.getOrNull(2)?.toIntOrNull()) }
+
+    // De la era Pong a hoy: cubre cualquier primera partida posible.
+    val thisYear = remember { Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).year }
+    val years = remember(thisYear) { (thisYear downTo 1970).toList() }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("First played") },
+        text = {
+            Column {
+                Text(
+                    "When did you first play it? Year is enough — add month and day if you remember.",
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+                Spacer(Modifier.height(16.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                    DatePartPicker(
+                        label = "Year",
+                        value = year?.toString() ?: "—",
+                        options = years.map { it.toString() },
+                        onPick = { i ->
+                            year = years[i]
+                            // El día puede quedar inválido al cambiar el año (29 de febrero).
+                            if (month != null) day = day?.coerceAtMost(daysInMonth(years[i], month!!))
+                        },
+                    )
+                    DatePartPicker(
+                        label = "Month",
+                        value = month?.let { MONTH_ABBR[it - 1] } ?: "—",
+                        options = listOf("—") + MONTH_ABBR,
+                        onPick = { i ->
+                            if (i == 0) { month = null; day = null } else {
+                                month = i
+                                day = day?.coerceAtMost(daysInMonth(year ?: 2000, i))
+                            }
+                        },
+                    )
+                    DatePartPicker(
+                        label = "Day",
+                        value = day?.toString() ?: "—",
+                        options = listOf("—") + (1..daysInMonth(year ?: 2000, month ?: 1)).map { it.toString() },
+                        onPick = { i -> day = if (i == 0) null else i },
+                        // Sin mes no hay día: la precisión crece de a un nivel.
+                        enabled = month != null,
+                    )
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(
+                enabled = year != null,
+                onClick = { onSave(partialIso(year!!, month, day)) },
+            ) { Text("Save") }
+        },
+        dismissButton = {
+            Row {
+                if (initial.isNotBlank()) {
+                    TextButton(onClick = { onSave("") }) { Text("Clear") }
+                }
+                TextButton(onClick = onDismiss) { Text("Cancel") }
+            }
+        },
+    )
+}
+
+/** Selector de una parte de la fecha: label chico + valor actual → menú de opciones. */
+@Composable
+private fun DatePartPicker(
+    label: String,
+    value: String,
+    options: List<String>,
+    onPick: (Int) -> Unit,
+    enabled: Boolean = true,
+) {
+    var open by remember { mutableStateOf(false) }
+    Column {
+        Text(
+            label,
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(start = 4.dp, bottom = 2.dp),
+        )
+        Box {
+            Row(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
+                    .clickable(enabled = enabled) { open = true }
+                    .padding(start = 12.dp, end = 4.dp, top = 8.dp, bottom = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    value,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = if (enabled) 1f else 0.38f),
+                )
+                Icon(
+                    Icons.Filled.ArrowDropDown,
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.onSurface.copy(alpha = if (enabled) 1f else 0.38f),
+                    modifier = Modifier.size(20.dp),
+                )
+            }
+            DropdownMenu(
+                expanded = open,
+                onDismissRequest = { open = false },
+                modifier = Modifier.heightIn(max = 300.dp),
+            ) {
+                options.forEachIndexed { i, opt ->
+                    DropdownMenuItem(text = { Text(opt) }, onClick = { open = false; onPick(i) })
+                }
+            }
+        }
+    }
+}
+
+/** ISO de precisión variable: "1994" | "1994-06" | "1994-06-08" (el día requiere mes). */
+private fun partialIso(year: Int, month: Int?, day: Int?): String = buildString {
+    append(year)
+    if (month != null) {
+        append('-').append(month.toString().padStart(2, '0'))
+        if (day != null) append('-').append(day.toString().padStart(2, '0'))
+    }
+}
+
+private fun daysInMonth(year: Int, month: Int): Int = when (month) {
+    4, 6, 9, 11 -> 30
+    2 -> if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) 29 else 28
+    else -> 31
 }
 
 @Composable

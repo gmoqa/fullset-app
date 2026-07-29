@@ -32,7 +32,7 @@ fun formatDateTime(epochMillis: Long): String = dateTimeFmt.format(localDateTime
 
 fun formatDate(epochMillis: Long): String = datePart.format(localDateTime(epochMillis).date)
 
-private val MONTH_ABBR = arrayOf(
+internal val MONTH_ABBR = arrayOf(
     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
 )
 

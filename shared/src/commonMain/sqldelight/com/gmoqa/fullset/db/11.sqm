@@ -1,0 +1,4 @@
+-- Migración v11 -> v12. Fecha de "primera vez que lo jugué", el dato de diario por excelencia.
+-- ISO de precisión variable, como releaseDate del catálogo: '' | '1994' | '1994-06' | '1994-06-08'.
+-- Para juegos de la infancia rara vez se recuerda el día exacto; el año solo alcanza.
+ALTER TABLE games ADD COLUMN first_played TEXT NOT NULL DEFAULT '';
