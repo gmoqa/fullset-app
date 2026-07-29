@@ -106,7 +106,7 @@ enum class ThemeMode(val key: String) {
  */
 enum class RegionFilter(val key: String, val label: String, val supported: Boolean) {
     NTSC_U("ntsc", "NTSC-U", true),      // América (se mantiene la key "ntsc" por compatibilidad)
-    NTSC_J("ntsc-j", "NTSC-J", false),   // Japón (aún no soportado)
+    NTSC_J("ntsc-j", "NTSC-J", true),    // Japón (Genesis/Mega Drive tiene catálogo JP)
     PAL("pal", "PAL", false);            // Europa (aún no soportado)
 
     companion object {

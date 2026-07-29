@@ -92,14 +92,22 @@ con claves con guion bajo (que el generador ignora al aplicar):
 
 Así, cuando dentro de un año revisemos por qué un dato es lo que es, la respuesta está al lado del dato.
 
-## Región
+## Región (multi-región: implementado)
 
-Hoy **todos los catálogos son NTSC-U** (América). `region` es un string fijo. La app tiene un
-`RegionFilter` con NTSC-U soportado y NTSC-J / PAL marcados "Soon".
+**Modelo:** un **archivo de catálogo por (plataforma × región)**, linkeado por `slug`. `platforms.json`
+mapea la consola a sus catálogos: `"catalogs": { "NTSC-U": "…usa.json", "NTSC-J": "…jp.json" }`
+(o el legacy `"catalog": "…"` = NTSC-U). `Platform.catalogFor(region)` elige el archivo, con **fallback
+a NTSC-U** cuando esa región no tiene lista. `GameCatalog` carga/cachea por archivo; `RegionFilter`
+(Settings) elige la región activa y la app muestra ese catálogo en Add-game y el timeline.
 
-La **dirección** es que región sea un **eje de primera clase**: poder declarar, por plataforma, qué
-regiones tenemos y cuánto está **confirmado** de cada una (NA/JP/PAL), con fechas de lanzamiento por
-región. Hoy la estructura no lo soporta; es parte del roadmap.
+**Estado:** **NTSC-U** en todas; **NTSC-J** real en **Genesis** (`genesis-jp.json`, 435 juegos desde
+Sega Retro JP, fechas al día). El resto cae a NTSC-U en modo JP hasta que tenga su catálogo.
+
+**Dirección — datos por país, selector por región.** El `catalogs` map tiene **key de texto libre**, así
+que soporta granularidad de **país** sin cambiar el modelo (Sega Retro separa Europa en UK/Francia/
+Alemania/España/Australia/Brasil, cada uno con otra fecha/serial). El plan: los **datos** por país
+(`genesis-uk.json`, `genesis-germany.json`…) y el **selector** por región agrupando países (PAL → [UK,
+Francia…]), con drill-down a país como refinamiento. Japón es 1:1 con NTSC-J, por eso entró directo.
 
 ## Precisión de fechas y confianza (dirección)
 

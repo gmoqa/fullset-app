@@ -131,7 +131,7 @@ fun SettingsScreen(
         SettingsSection("Library")
         SettingsChoice(
             label = "Default region",
-            description = "NTSC-U only for now.",
+            description = "Which regional list you browse. NTSC-J available on Genesis; PAL soon.",
             options = RegionFilter.entries.map { it to it.label },
             selected = regionFilter,
             onSelect = onRegionChange,
