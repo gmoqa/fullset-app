@@ -5,6 +5,27 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import java.io.ByteArrayOutputStream
+import java.io.InputStream
+
+// Un backup real pesa unos KB; este tope corta un archivo enorme (malicioso o equivocado) antes de
+// leerlo entero a memoria (evita OOM).
+private const val MAX_IMPORT_BYTES = 10 * 1024 * 1024
+
+/** Lee hasta [max] bytes; aborta si el archivo lo supera (sin cargarlo entero). */
+private fun InputStream.readCapped(max: Int): ByteArray {
+    val out = ByteArrayOutputStream()
+    val buf = ByteArray(8192)
+    var total = 0
+    while (true) {
+        val r = read(buf)
+        if (r < 0) break
+        total += r
+        if (total > max) error("Backup file too large")
+        out.write(buf, 0, r)
+    }
+    return out.toByteArray()
+}
 
 @Composable
 actual fun rememberBackupExporter(json: () -> String): () -> Unit {
@@ -32,10 +53,10 @@ actual fun rememberBackupImporter(onJson: (String) -> Unit): () -> Unit {
     ) { uri ->
         if (uri != null) {
             val text = runCatching {
-                context.contentResolver.openInputStream(uri)?.use { it.readBytes().decodeToString() }
+                context.contentResolver.openInputStream(uri)?.use { it.readCapped(MAX_IMPORT_BYTES).decodeToString() }
             }.getOrNull()
             if (text != null) onJson(text)
-            else Toast.makeText(context, "Couldn't read file", Toast.LENGTH_SHORT).show()
+            else Toast.makeText(context, "Couldn't read file (or too large)", Toast.LENGTH_SHORT).show()
         }
     }
     // */* para que el picker no oculte el backup por su tipo MIME (varía según de dónde venga).
