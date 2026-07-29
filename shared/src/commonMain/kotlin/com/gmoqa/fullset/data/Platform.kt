@@ -8,12 +8,19 @@ package com.gmoqa.fullset.data
 data class Platform(
     val id: String,
     val name: String,
+    /** Catálogo por defecto (NTSC-U): compat + fallback cuando una región no tiene su propia lista. */
     val catalogFile: String,
     val libretroRepo: String,
     val enabled: Boolean,
     /** Ficha técnica (año por región, specs). Null si la entrada no la trae. */
     val info: PlatformInfo? = null,
-)
+    /** Catálogos por región (label de [RegionFilter] → archivo): `{"NTSC-U": "...", "PAL": "..."}`. */
+    val catalogs: Map<String, String> = emptyMap(),
+) {
+    /** Archivo de catálogo para [region]; cae a [catalogFile] (NTSC-U) si esa región no está. */
+    fun catalogFor(region: RegionFilter): String =
+        catalogs[region.label]?.takeIf { it.isNotBlank() } ?: catalogFile
+}
 
 /**
  * Ficha técnica de una consola (bloque `info` en `config/platforms.json`). Todos los campos son

@@ -65,7 +65,7 @@
   {
     "id": "sega-genesis",
     "name": "Sega Genesis",
-    "catalog": "catalogs/genesis-usa.json",
+    "catalogs": { "NTSC-U": "catalogs/genesis-usa.json" },
     "libretroRepo": "Sega_-_Mega_Drive_-_Genesis",
     "enabled": true,
     "info": {

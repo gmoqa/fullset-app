@@ -9,6 +9,7 @@ private data class CatalogEntryDto(
     val platform: String = "",
     val region: String = "",
     val year: Int? = null,
+    val releaseDate: String = "",
     val publisher: String = "",
     val genre: String = "",
     val slug: String = "",
@@ -25,31 +26,36 @@ class GameCatalog {
 
     private val cache = mutableMapOf<String, List<CatalogEntry>>()
 
-    fun entries(platform: Platform): List<CatalogEntry> = cache.getOrPut(platform.id) {
-        // Plataformas modernas (PS5…) no traen catálogo: se cargan a mano, sin lista que buscar.
-        if (platform.catalogFile.isBlank()) return@getOrPut emptyList()
-        val text = readTextAsset(platform.catalogFile) ?: return@getOrPut emptyList()
-        AppJson.decodeFromString<List<CatalogEntryDto>>(text)
-            .mapNotNull { dto ->
-                val title = dto.title.trim()
-                if (title.isEmpty()) return@mapNotNull null
-                val subtitle = listOfNotNull(dto.publisher.trim().ifEmpty { null }, dto.year?.toString())
-                    .joinToString(" · ")
-                CatalogEntry(
-                    title = title,
-                    subtitle = subtitle,
-                    slug = dto.slug,
-                    region = dto.region,
-                    year = dto.year,
-                    publisher = dto.publisher.trim(),
-                    genre = dto.genre.trim(),
-                    coverUrl = dto.coverUrl.trim(),
-                )
-            }
-            .sortedBy { it.title.lowercase() }
+    fun entries(platform: Platform, region: RegionFilter = RegionFilter.NTSC_U): List<CatalogEntry> {
+        val file = platform.catalogFor(region)
+        // Cache por archivo (no por plataforma): cada región carga y cachea su propio catálogo.
+        return cache.getOrPut("${platform.id}:$file") {
+            // Plataformas modernas (PS5…) no traen catálogo: se cargan a mano, sin lista que buscar.
+            if (file.isBlank()) return@getOrPut emptyList()
+            val text = readTextAsset(file) ?: return@getOrPut emptyList()
+            AppJson.decodeFromString<List<CatalogEntryDto>>(text)
+                .mapNotNull { dto ->
+                    val title = dto.title.trim()
+                    if (title.isEmpty()) return@mapNotNull null
+                    val subtitle = listOfNotNull(dto.publisher.trim().ifEmpty { null }, dto.year?.toString())
+                        .joinToString(" · ")
+                    CatalogEntry(
+                        title = title,
+                        subtitle = subtitle,
+                        slug = dto.slug,
+                        region = dto.region,
+                        year = dto.year,
+                        releaseDate = dto.releaseDate.trim(),
+                        publisher = dto.publisher.trim(),
+                        genre = dto.genre.trim(),
+                        coverUrl = dto.coverUrl.trim(),
+                    )
+                }
+                .sortedBy { it.title.lowercase() }
+        }
     }
 
     /** Mismo buscador difuso que la colección: tolera acentos, orden de palabras y typos. */
-    fun search(platform: Platform, query: String, limit: Int = 60): List<CatalogEntry> =
-        GameSearch.rank(entries(platform), query, limit) { it.title }
+    fun search(platform: Platform, region: RegionFilter, query: String, limit: Int = 60): List<CatalogEntry> =
+        GameSearch.rank(entries(platform, region), query, limit) { it.title }
 }

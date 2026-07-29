@@ -9,6 +9,8 @@ private data class PlatformDto(
     val id: String = "",
     val name: String = "",
     @SerialName("catalog") val catalogFile: String = "",
+    /** Catálogos por región (label → archivo). Si está vacío, se usa el legacy `catalog` como NTSC-U. */
+    val catalogs: Map<String, String> = emptyMap(),
     val libretroRepo: String = "",
     val enabled: Boolean = false,
     val info: PlatformInfoDto? = null,
@@ -32,14 +34,19 @@ class PlatformRegistry {
     private val platforms: List<Platform> by lazy {
         val text = readTextAsset("config/platforms.json") ?: return@lazy emptyList()
         AppJson.decodeFromString<List<PlatformDto>>(text).map { dto ->
+            // Soporta ambos formatos: el mapa `catalogs` nuevo, o el legacy `catalog` (= NTSC-U).
+            val cats = dto.catalogs.ifEmpty {
+                if (dto.catalogFile.isNotBlank()) mapOf("NTSC-U" to dto.catalogFile) else emptyMap()
+            }
             Platform(
-                dto.id, dto.name, dto.catalogFile, dto.libretroRepo, dto.enabled,
+                dto.id, dto.name, cats["NTSC-U"] ?: dto.catalogFile, dto.libretroRepo, dto.enabled,
                 info = dto.info?.let {
                     PlatformInfo(
                         it.manufacturer, it.generation, it.media, it.released,
                         it.discontinued, it.unitsSold, it.cpu, it.description,
                     )
                 },
+                catalogs = cats,
             )
         }
     }

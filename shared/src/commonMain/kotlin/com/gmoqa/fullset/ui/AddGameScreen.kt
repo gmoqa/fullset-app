@@ -141,7 +141,7 @@ fun AddGameScreen(
                     platform = platform.name,
                     // Sin catálogo (PS5…) no hay nada que contar: sin badge.
                     count = remember(platform) {
-                        if (platform.catalogFile.isBlank()) null else catalog.entries(platform).size
+                        if (platform.catalogFile.isBlank()) null else catalog.entries(platform, region).size
                     },
                     onBack = { selected = null },
                     // Misma ficha que en Collection: solo si la plataforma la trae.
@@ -153,9 +153,9 @@ fun AddGameScreen(
     ) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding)) {
             if (platform == null) {
-                PlatformStep(platforms = platforms, catalog = catalog, onSelect = { selected = it })
+                PlatformStep(platforms = platforms, catalog = catalog, region = region, onSelect = { selected = it })
             } else if (platform.catalogFile.isNotBlank()) {
-                TitleStep(platform = platform, catalog = catalog, marks = marks, onPicked = onPicked)
+                TitleStep(platform = platform, catalog = catalog, region = region, marks = marks, onPicked = onPicked)
             } else {
                 // Plataforma sin catálogo (PS5…): se carga a mano.
                 ManualEntryStep(
@@ -187,6 +187,7 @@ fun AddGameScreen(
 private fun PlatformStep(
     platforms: List<Platform>,
     catalog: GameCatalog,
+    region: RegionFilter,
     onSelect: (Platform) -> Unit,
 ) {
     LazyVerticalGrid(
@@ -201,7 +202,7 @@ private fun PlatformStep(
                 PlatformCube(
                     platform = p,
                     // Offline: el conteo sale del JSON de catálogo empaquetado.
-                    count = remember(p.id) { catalog.entries(p).size },
+                    count = remember(p.id, region) { catalog.entries(p, region).size },
                     onClick = { onSelect(p) },
                 )
             } else {
@@ -293,13 +294,14 @@ private fun CubeCaption(name: String, tag: String, tagColor: Color, modifier: Mo
 private fun TitleStep(
     platform: Platform,
     catalog: GameCatalog,
+    region: RegionFilter,
     marks: List<CatalogMark>,
     onPicked: (platform: Platform, entry: CatalogEntry, coverUrl: String) -> Unit,
 ) {
     var query by remember { mutableStateOf("") }
     var saving by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
-    val results = remember(platform, query) { catalog.search(platform, query) }
+    val results = remember(platform, query, region) { catalog.search(platform, region, query) }
     // Lo ya registrado de esta plataforma, indexado por slug y por título (los juegos viejos del
     // Excel pueden no tener slug). Como `marks` es reactivo, al agregar uno la etiqueta sale sola.
     // Las que bloquean se indexan últimas: si un juego está en la colección y en la wishlist, manda

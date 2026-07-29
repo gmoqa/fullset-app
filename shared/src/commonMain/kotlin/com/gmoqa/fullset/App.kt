@@ -249,7 +249,7 @@ private fun AppRoot(
                 }
                 // Catálogo completo de la consola: la vista marca cuáles tenés y cuáles faltan.
                 val catalogEntries = remember(platformObj) {
-                    platformObj?.let { catalog.entries(it) } ?: emptyList()
+                    platformObj?.let { catalog.entries(it, regionFilter) } ?: emptyList()
                 }
                 PlatformScreen(
                     platform = current.platform,

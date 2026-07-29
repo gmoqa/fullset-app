@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -31,6 +32,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.gmoqa.fullset.data.CatalogEntry
@@ -67,6 +69,7 @@ fun PlatformScreen(
                 key = "cat:${e.slug.ifBlank { e.title }}",
                 title = owned?.name ?: e.title,
                 year = e.year ?: owned?.releaseYear,
+                releaseDate = e.releaseDate,
                 subtitle = listOfNotNull(e.genre.ifBlank { null }, e.publisher.ifBlank { null })
                     .joinToString(" · "),
                 coverModel = owned?.coverModel ?: e.coverUrl.ifBlank { null },
@@ -86,8 +89,10 @@ fun PlatformScreen(
                 ownedId = g.id,
             )
         }
+        // Orden cronológico real por la fecha precisa (ISO ordena cronológicamente); sin fecha usa el
+        // año; sin nada va al final. Así "1991-06" queda antes que "1991-12" dentro del mismo año.
         (fromCatalog + extras)
-            .sortedWith(compareBy({ it.year ?: Int.MAX_VALUE }, { it.title.lowercase() }))
+            .sortedWith(compareBy({ it.releaseDate.ifBlank { it.year?.toString() ?: "9999" } }, { it.title.lowercase() }))
     }
     val ownedCount = rows.count { it.ownedId != null }
     // Con catálogo: "X de Y" (completitud). Sin catálogo (PS5…): solo el conteo de los que tenés.
@@ -166,6 +171,8 @@ private data class PlatformRow(
     val key: String,
     val title: String,
     val year: Int?,
+    /** Fecha ISO de precisión variable del catálogo ("" si el juego no está en el catálogo). */
+    val releaseDate: String = "",
     val subtitle: String,
     val coverModel: Any?,
     /** Non-null → lo tenés (abre su detalle). Null → falta (en gris, con botón para agregar). */
@@ -241,15 +248,18 @@ private fun PlatformGameRow(
             }
         }
         Text(
-            row.year?.toString() ?: "—",
-            style = MaterialTheme.typography.titleMedium,
+            formatReleaseDate(row.releaseDate, row.year),
+            style = MaterialTheme.typography.titleSmall,
             fontWeight = FontWeight.SemiBold,
+            textAlign = TextAlign.End,
+            maxLines = 2,
             color = when {
-                row.year == null -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
+                row.releaseDate.isBlank() && row.year == null ->
+                    MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
                 owned -> MaterialTheme.colorScheme.onSurface
                 else -> MaterialTheme.colorScheme.onSurfaceVariant
             },
-            modifier = Modifier.padding(start = 12.dp),
+            modifier = Modifier.padding(start = 12.dp).widthIn(max = 104.dp),
         )
         // Los que faltan se agregan directo a la colección desde acá; al agregarlo, la fila pasa
         // sola a "poseído" (✓) porque la lista es reactiva.

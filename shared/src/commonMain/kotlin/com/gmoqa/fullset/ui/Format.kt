@@ -32,6 +32,27 @@ fun formatDateTime(epochMillis: Long): String = dateTimeFmt.format(localDateTime
 
 fun formatDate(epochMillis: Long): String = datePart.format(localDateTime(epochMillis).date)
 
+private val MONTH_ABBR = arrayOf(
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+)
+
+/**
+ * Fecha de lanzamiento ISO de **precisión variable** a texto legible:
+ * `"1999"` → "1999" · `"1999-09"` → "Sep 1999" · `"1999-09-09"` → "Sep 9, 1999".
+ * Si no hay fecha, cae a [fallbackYear] (o "—").
+ */
+fun formatReleaseDate(iso: String, fallbackYear: Int? = null): String {
+    val parts = iso.split("-")
+    val month = parts.getOrNull(1)?.toIntOrNull()?.takeIf { it in 1..12 }?.let { MONTH_ABBR[it - 1] }
+    val day = parts.getOrNull(2)?.toIntOrNull()
+    return when {
+        month != null && day != null -> "$month $day, ${parts[0]}"
+        month != null -> "$month ${parts[0]}"
+        iso.isNotBlank() -> parts[0]                    // solo año (o formato inesperado)
+        else -> fallbackYear?.toString() ?: "—"
+    }
+}
+
 /** Duración de una nota de voz como "m:ss" (p. ej. 1:07). */
 fun formatDuration(millis: Long): String {
     val totalSeconds = millis / 1000
