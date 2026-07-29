@@ -6,6 +6,7 @@ import com.gmoqa.fullset.data.DiaryRepository
 import com.gmoqa.fullset.data.FileStore
 import com.gmoqa.fullset.data.exportSnapshot
 import com.gmoqa.fullset.data.gameNotesJson
+import com.gmoqa.fullset.data.gameNotesText
 import com.gmoqa.fullset.data.importSnapshot
 import com.gmoqa.fullset.data.syncSnapshotFromJson
 import com.gmoqa.fullset.data.toJson
@@ -161,6 +162,9 @@ class DiaryViewModel(
 
     /** JSON de las notas de un juego, para compartir (p. ej. pegarlo en un LLM). */
     fun gameNotesJson(gameId: Long): String = repo.gameNotesJson(gameId)
+
+    /** Las notas de un juego como texto legible, para compartir/leer/pegar en un chat. */
+    fun gameNotesText(gameId: Long): String = repo.gameNotesText(gameId)
     fun deleteNote(id: Long) = io { repo.deleteNote(id) }
 
     // ---- Notas de voz (Fase 1: grabar y guardar; la transcripción llega después) ----

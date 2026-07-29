@@ -54,3 +54,36 @@ fun DiaryRepository.gameNotesJson(gameId: Long): String {
         )
     )
 }
+
+/**
+ * Las notas de un juego como **texto legible** (para leer, mandar por chat o pegar en un LLM como
+ * lenguaje natural). Encabezado con el juego + una línea por nota con su fecha.
+ */
+fun DiaryRepository.gameNotesText(gameId: Long): String {
+    val g = games().firstOrNull { it.id == gameId } ?: return ""
+    val header = buildString {
+        append(g.name)
+        val meta = listOfNotNull(
+            g.platform.ifBlank { null },
+            g.releaseYear?.toString(),
+            g.genre.ifBlank { null },
+        ).joinToString(" · ")
+        if (meta.isNotBlank()) append(" — ").append(meta)
+    }
+    val lines = notes(gameId)
+        .filter { it.text.isNotBlank() }
+        .sortedBy { it.createdAt }
+        .map {
+            val date = Instant.fromEpochMilliseconds(it.createdAt)
+                .toLocalDateTime(TimeZone.currentSystemDefault()).date.toString()
+            val voice = if (it.isVoice || it.durationMs > 0) " (voice note)" else ""
+            "- $date$voice: ${it.text}"
+        }
+    return buildString {
+        append(header)
+        if (lines.isNotEmpty()) {
+            append("\n\nNotes:\n")
+            append(lines.joinToString("\n"))
+        }
+    }
+}

@@ -36,6 +36,8 @@ import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -116,7 +118,8 @@ fun GameDetailScreen(
                 onToggleBacklog = { vm.setBacklog(gameId, game?.backlog != true) },
                 onChangeCover = { pickCover() },
                 onResetCover = { vm.clearCustomCover(gameId) },
-                onShare = { shareText(vm.gameNotesJson(gameId)) },
+                onShareText = { shareText(vm.gameNotesText(gameId)) },
+                onShareJson = { shareText(vm.gameNotesJson(gameId)) },
             )
 
             // Notas escritas, de voz y fotos en una sola línea de tiempo.
@@ -236,8 +239,10 @@ private fun HeroHeader(
     onToggleBacklog: () -> Unit,
     onChangeCover: () -> Unit,
     onResetCover: () -> Unit,
-    onShare: () -> Unit,
+    onShareText: () -> Unit,
+    onShareJson: () -> Unit,
 ) {
+    var shareMenu by remember { mutableStateOf(false) }
     val model = game?.coverModel
     val hasCustomCover = game?.coverPath?.isNotBlank() == true
     val compactWidth = isCompactWidth()
@@ -283,8 +288,20 @@ private fun HeroHeader(
                     Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = Color.White)
                 }
                 Spacer(Modifier.weight(1f))
-                IconButton(onClick = onShare) {
-                    Icon(Icons.Filled.Share, contentDescription = "Share notes", tint = Color.White)
+                Box {
+                    IconButton(onClick = { shareMenu = true }) {
+                        Icon(Icons.Filled.Share, contentDescription = "Share notes", tint = Color.White)
+                    }
+                    DropdownMenu(expanded = shareMenu, onDismissRequest = { shareMenu = false }) {
+                        DropdownMenuItem(
+                            text = { Text("Share as text") },
+                            onClick = { shareMenu = false; onShareText() },
+                        )
+                        DropdownMenuItem(
+                            text = { Text("Share as JSON") },
+                            onClick = { shareMenu = false; onShareJson() },
+                        )
+                    }
                 }
                 if (hasCustomCover) {
                     IconButton(onClick = onResetCover) {
