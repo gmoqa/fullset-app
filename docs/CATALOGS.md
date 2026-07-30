@@ -18,7 +18,7 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 ```
 
 - `slug`: identidad estable del juego dentro de su plataforma (clave para overrides y merges).
-- `region`: hoy siempre `"NTSC-U"` (ver [Región](#región)).
+- `region`: `"NTSC-U"` | `"NTSC-J"` | `"PAL"` — la de ese archivo (ver [Región](#región)).
 - `year`: entero o `null` — lo que usa la app para mostrar/ordenar.
 - `releaseDate`: fecha ISO de **precisión variable** `""` | `"1991"` | `"1991-06"` | `"1991-06-11"`. Es
   la versión precisa y con fuente del año; **mejora con el tiempo** cuando aparece un dato más fino.
