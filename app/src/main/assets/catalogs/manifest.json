@@ -1,5 +1,16 @@
 [
   {
+    "file": "32x-eu.json",
+    "platform": "Sega 32X",
+    "games": 26,
+    "coverage": {
+      "year": 96,
+      "publisher": 0,
+      "serial": 96,
+      "coverUrl": 92
+    }
+  },
+  {
     "file": "32x-jp.json",
     "platform": "Sega 32X",
     "games": 18,
@@ -19,6 +30,17 @@
       "publisher": 0,
       "serial": 96,
       "coverUrl": 87
+    }
+  },
+  {
+    "file": "dreamcast-eu.json",
+    "platform": "Dreamcast",
+    "games": 224,
+    "coverage": {
+      "year": 97,
+      "publisher": 0,
+      "serial": 97,
+      "coverUrl": 94
     }
   },
   {
@@ -44,6 +66,17 @@
     }
   },
   {
+    "file": "game-gear-eu.json",
+    "platform": "Sega Game Gear",
+    "games": 208,
+    "coverage": {
+      "year": 95,
+      "publisher": 0,
+      "serial": 97,
+      "coverUrl": 87
+    }
+  },
+  {
     "file": "game-gear-jp.json",
     "platform": "Sega Game Gear",
     "games": 199,
@@ -66,6 +99,17 @@
     }
   },
   {
+    "file": "genesis-eu.json",
+    "platform": "Sega Genesis",
+    "games": 747,
+    "coverage": {
+      "year": 88,
+      "publisher": 0,
+      "serial": 84,
+      "coverUrl": 79
+    }
+  },
+  {
     "file": "genesis-jp.json",
     "platform": "Sega Genesis",
     "games": 435,
@@ -85,6 +129,17 @@
       "publisher": 0,
       "serial": 98,
       "coverUrl": 92
+    }
+  },
+  {
+    "file": "master-system-eu.json",
+    "platform": "Sega Master System",
+    "games": 363,
+    "coverage": {
+      "year": 93,
+      "publisher": 0,
+      "serial": 83,
+      "coverUrl": 73
     }
   },
   {
@@ -143,6 +198,17 @@
     }
   },
   {
+    "file": "saturn-eu.json",
+    "platform": "Sega Saturn",
+    "games": 247,
+    "coverage": {
+      "year": 98,
+      "publisher": 0,
+      "serial": 98,
+      "coverUrl": 94
+    }
+  },
+  {
     "file": "saturn-jp.json",
     "platform": "Sega Saturn",
     "games": 1091,
@@ -162,6 +228,17 @@
       "publisher": 0,
       "serial": 100,
       "coverUrl": 92
+    }
+  },
+  {
+    "file": "sega-cd-eu.json",
+    "platform": "Sega CD",
+    "games": 109,
+    "coverage": {
+      "year": 90,
+      "publisher": 0,
+      "serial": 97,
+      "coverUrl": 93
     }
   },
   {

@@ -1,0 +1,680 @@
+{
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_Mega-CD_games_in_Europe",
+  "region": "PAL",
+  "games": [
+    {
+      "title": "After Burner III",
+      "releaseDate": "1993",
+      "serial": "4415",
+      "rating": ""
+    },
+    {
+      "title": "Batman Returns (Mega-CD)",
+      "releaseDate": "1993",
+      "serial": "4401",
+      "rating": "OFLC: G8+"
+    },
+    {
+      "title": "Battlecorps",
+      "releaseDate": "1994-08",
+      "serial": "T-115045-50",
+      "rating": "OFLC: G"
+    },
+    {
+      "title": "BC Racers",
+      "releaseDate": "1994-12",
+      "serial": "T-115075-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Bill Walsh College Football",
+      "releaseDate": "1994-03",
+      "serial": "T-50025-05",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "Black Hole Assault",
+      "releaseDate": "1993",
+      "serial": "4405",
+      "rating": ""
+    },
+    {
+      "title": "Bloodshot",
+      "releaseDate": "1995-06",
+      "serial": "T-88045-50",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Battle Frenzy"
+      ]
+    },
+    {
+      "title": "Bram Stoker's Dracula (Mega-CD)",
+      "releaseDate": "1994",
+      "serial": "063050",
+      "rating": ""
+    },
+    {
+      "title": "Brutal: Paws of Fury",
+      "releaseDate": "1994-09",
+      "serial": "T-83015-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Cadillacs and Dinosaurs: The Second Cataclysm",
+      "releaseDate": "",
+      "serial": "063496",
+      "rating": "ClassInd: 13"
+    },
+    {
+      "title": "Chuck Rock",
+      "releaseDate": "1993",
+      "serial": "T-93045-50",
+      "rating": ""
+    },
+    {
+      "title": "Chuck Rock II: Son of Chuck",
+      "releaseDate": "1994-01",
+      "serial": "T-115025-50",
+      "rating": ""
+    },
+    {
+      "title": "Cliffhanger",
+      "releaseDate": "",
+      "serial": "063130",
+      "rating": ""
+    },
+    {
+      "title": "Corpse Killer",
+      "releaseDate": "1995-03",
+      "serial": "T-162055-50",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Dark Wizard",
+      "releaseDate": "",
+      "serial": "062110",
+      "rating": ""
+    },
+    {
+      "title": "Double Switch",
+      "releaseDate": "1994-02",
+      "serial": "4419",
+      "rating": "OFLC: M15+"
+    },
+    {
+      "title": "Dracula Unleashed",
+      "releaseDate": "1994-05",
+      "serial": "4420",
+      "rating": "OFLC: MA15+"
+    },
+    {
+      "title": "Dragon's Lair",
+      "releaseDate": "1994-03",
+      "serial": "4436-50",
+      "rating": "OFLC: G8+"
+    },
+    {
+      "title": "Dune",
+      "releaseDate": "1994-01",
+      "serial": "T-70035-50",
+      "rating": "OFLC: G8+"
+    },
+    {
+      "title": "Dungeon Explorer",
+      "releaseDate": "1995",
+      "serial": "T-143025-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Dungeon Master II: Skullkeep",
+      "releaseDate": "1994",
+      "serial": "T-60085-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Earthworm Jim: Special Edition",
+      "releaseDate": "1995-06",
+      "serial": "T-125045-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Ecco the Dolphin",
+      "releaseDate": "1993",
+      "serial": "4408",
+      "rating": ""
+    },
+    {
+      "title": "Ecco: The Tides of Time",
+      "releaseDate": "1995-06",
+      "serial": "4441-50",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Ecco: Les Marées du Temps"
+      ]
+    },
+    {
+      "title": "ESPN Baseball Tonight",
+      "releaseDate": "1994",
+      "serial": "T-93115-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Eternal Champions: Challenge From the Dark Side",
+      "releaseDate": "1995-05",
+      "serial": "4427-50",
+      "rating": "ELSPA: 18+"
+    },
+    {
+      "title": "Eye of the Beholder",
+      "releaseDate": "1994-12",
+      "serial": "4655-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Fahrenheit",
+      "releaseDate": "1995-05",
+      "serial": "4438-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Fatal Fury Special",
+      "releaseDate": "1995-07",
+      "serial": "T-60165-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "FIFA International Soccer: Championship Edition",
+      "releaseDate": "1994-06",
+      "serial": "T-50055-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Final Fight CD",
+      "releaseDate": "1993",
+      "serial": "4410",
+      "rating": ""
+    },
+    {
+      "title": "Flux",
+      "releaseDate": "1996-03-06",
+      "serial": "T-70416-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Formula One World Championship: Beyond the Limit",
+      "releaseDate": "1994-09",
+      "serial": "4608-50",
+      "rating": "OFLC: G"
+    },
+    {
+      "title": "Ground Zero Texas",
+      "releaseDate": "1994",
+      "serial": "T-93145-50",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Heart of the Alien: Out of this World Parts I and II",
+      "releaseDate": "",
+      "serial": "063100",
+      "rating": "ClassInd: 13"
+    },
+    {
+      "title": "Hook",
+      "releaseDate": "1993",
+      "serial": "T-93055-50",
+      "rating": ""
+    },
+    {
+      "title": "INXS",
+      "releaseDate": "1993",
+      "serial": "4902",
+      "rating": "OFLC: G"
+    },
+    {
+      "title": "Jaguar XJ220",
+      "releaseDate": "1993",
+      "serial": "4602",
+      "rating": ""
+    },
+    {
+      "title": "Joe Montana's NFL Football",
+      "releaseDate": "",
+      "serial": "063190",
+      "rating": ""
+    },
+    {
+      "title": "Jurassic Park (Mega-CD)",
+      "releaseDate": "1994-02",
+      "serial": "4411",
+      "rating": "USK: 0"
+    },
+    {
+      "title": "Keio Flying Squadron",
+      "releaseDate": "1994-10",
+      "serial": "T-60185-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Kids on Site",
+      "releaseDate": "1994",
+      "serial": "T-162015-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Kris Kross",
+      "releaseDate": "1993",
+      "serial": "T-93025-50",
+      "rating": ""
+    },
+    {
+      "title": "Lethal Enforcers",
+      "releaseDate": "1993-11-19",
+      "serial": "T-95015-50",
+      "rating": "BBFC: PG"
+    },
+    {
+      "title": "Lethal Enforcers II: Gun Fighters",
+      "releaseDate": "1994-12-23",
+      "serial": "T-95025-50",
+      "rating": "BBFC: PG"
+    },
+    {
+      "title": "Loadstar: The Legend of Tully Bodine",
+      "releaseDate": "1996-12",
+      "serial": "063486",
+      "rating": "ClassInd: 13"
+    },
+    {
+      "title": "Lords of Thunder",
+      "releaseDate": "1995",
+      "serial": "T-143035-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Mad Dog McCree",
+      "releaseDate": "1993",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Marko's Magic Football",
+      "releaseDate": "1994",
+      "serial": "T-88025-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Mickey Mania: The Timeless Adventures of Mickey Mouse",
+      "releaseDate": "1994-12",
+      "serial": "T-93305-50",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Topolino Mania"
+      ]
+    },
+    {
+      "title": "Microcosm",
+      "releaseDate": "1994-01",
+      "serial": "T-113015-50",
+      "rating": ""
+    },
+    {
+      "title": "Midnight Raiders",
+      "releaseDate": "1995-03",
+      "serial": "4439-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Mighty Morphin Power Rangers (Mega-CD)",
+      "releaseDate": "1995-03",
+      "serial": "4442-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Mortal Kombat",
+      "releaseDate": "1994-07",
+      "serial": "T-81025-50",
+      "rating": "OFLC: MA15+"
+    },
+    {
+      "title": "NBA Jam",
+      "releaseDate": "1994",
+      "serial": "T-81035-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NFL's Greatest: San Francisco vs. Dallas 1978-1993",
+      "releaseDate": "",
+      "serial": "063200",
+      "rating": ""
+    },
+    {
+      "title": "NHL Hockey '94",
+      "releaseDate": "1994-03",
+      "serial": "T-50015-50",
+      "rating": ""
+    },
+    {
+      "title": "Night Trap",
+      "releaseDate": "1993",
+      "serial": "4903",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Novastorm",
+      "releaseDate": "1994-11",
+      "serial": "T-113065-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Pitfall: The Mayan Adventure",
+      "releaseDate": "1995",
+      "serial": "T-130025-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Power Factory Featuring C+C Music Factory",
+      "releaseDate": "1993",
+      "serial": "T-93035-50",
+      "rating": ""
+    },
+    {
+      "title": "Power Monger",
+      "releaseDate": "1994-04",
+      "serial": "T-50035-50",
+      "rating": ""
+    },
+    {
+      "title": "Prince of Persia (Mega-CD)",
+      "releaseDate": "1993",
+      "serial": "4652",
+      "rating": ""
+    },
+    {
+      "title": "Prize Fighter",
+      "releaseDate": "1994-03",
+      "serial": "4206",
+      "rating": "OFLC: M15+"
+    },
+    {
+      "title": "Puggsy",
+      "releaseDate": "1993-11",
+      "serial": "T-113035-50",
+      "rating": ""
+    },
+    {
+      "title": "Racing Aces",
+      "releaseDate": "",
+      "serial": "063230",
+      "rating": ""
+    },
+    {
+      "title": "Revenge of the Ninja",
+      "releaseDate": "",
+      "serial": "063440",
+      "rating": "ClassInd: 13"
+    },
+    {
+      "title": "Road Avenger",
+      "releaseDate": "1993",
+      "serial": "4603",
+      "rating": "OFLC: MA15+"
+    },
+    {
+      "title": "Road Rash (Mega-CD)",
+      "releaseDate": "1995-10",
+      "serial": "",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "Robo Aleste",
+      "releaseDate": "1993",
+      "serial": "4416",
+      "rating": ""
+    },
+    {
+      "title": "Samurai Shodown",
+      "releaseDate": "1995-06",
+      "serial": "T-60175-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Sega Classics Arcade Collection",
+      "releaseDate": "1993-04-02",
+      "serial": "4127",
+      "rating": ""
+    },
+    {
+      "title": "Sensible Soccer",
+      "releaseDate": "1994-07",
+      "serial": "T-93185-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sewer Shark",
+      "releaseDate": "1993-06",
+      "serial": "T-93015-50",
+      "rating": "BBFC: PG"
+    },
+    {
+      "title": "Shadow of the Beast II",
+      "releaseDate": "1994-05",
+      "serial": "T-113045-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Sherlock Holmes: Consulting Detective Vol. I",
+      "releaseDate": "1993",
+      "serial": "4650",
+      "rating": ""
+    },
+    {
+      "title": "Sherlock Holmes: Consulting Detective Vol. II",
+      "releaseDate": "1993",
+      "serial": "4653",
+      "rating": ""
+    },
+    {
+      "title": "Shining Force CD",
+      "releaseDate": "1995-04",
+      "serial": "4656-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Silpheed",
+      "releaseDate": "1993-09",
+      "serial": "4423",
+      "rating": ""
+    },
+    {
+      "title": "Slam City with Scottie Pippen",
+      "releaseDate": "1995-02",
+      "serial": "T-162035-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Snatcher",
+      "releaseDate": "1995-01",
+      "serial": "T-95035-05",
+      "rating": "ELSPA: 18+"
+    },
+    {
+      "title": "Sol-Feace / Cobra Command",
+      "releaseDate": "1993-04",
+      "serial": "4130",
+      "rating": ""
+    },
+    {
+      "title": "Sonic the Hedgehog CD",
+      "releaseDate": "1993-10",
+      "serial": "4407",
+      "rating": "OFLC: G"
+    },
+    {
+      "title": "Soul Star",
+      "releaseDate": "1994-10",
+      "serial": "T-115035-50",
+      "rating": "USK: 6"
+    },
+    {
+      "title": "Space Ace (Mega-CD)",
+      "releaseDate": "",
+      "serial": "063410",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "Spider-Man vs. The Kingpin (Mega-CD)",
+      "releaseDate": "1993-11",
+      "serial": "4412",
+      "rating": ""
+    },
+    {
+      "title": "Star Wars: Rebel Assault",
+      "releaseDate": "1994",
+      "serial": "T-60075-50",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "StarBlade",
+      "releaseDate": "1994-12",
+      "serial": "4284-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Supreme Warrior",
+      "releaseDate": "1994",
+      "serial": "T-162045-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Surgical Strike",
+      "releaseDate": "1995-09",
+      "serial": "4435-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Syndicate",
+      "releaseDate": "1995-06",
+      "serial": "T-88065-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "The Adventures of Batman & Robin (Mega-CD)",
+      "releaseDate": "1995-12",
+      "serial": "4432-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "The Lawnmower Man (Mega-CD)",
+      "releaseDate": "1994-11",
+      "serial": "T-160015-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "The Misadventures of Flink",
+      "releaseDate": "1994",
+      "serial": "T-113055-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "The San Diego Zoo Presents... The Animals!",
+      "releaseDate": "1994-09",
+      "serial": "T-158015-50",
+      "rating": "ClassInd: 13"
+    },
+    {
+      "title": "The Smurfs",
+      "releaseDate": "1995-06",
+      "serial": "T-151015-50",
+      "rating": "",
+      "altTitles": [
+        "De Smurfen",
+        "Die Schlümpfe",
+        "I Puffi",
+        "Les Schtroumpfs",
+        "Los Pitufos",
+        "Os Estrumfes",
+        "Os Smurfs",
+        "Smurfarna"
+      ]
+    },
+    {
+      "title": "The Software Toolworks' Star Wars Chess",
+      "releaseDate": "1994",
+      "serial": "T-158025-50",
+      "rating": "ClassInd: 13"
+    },
+    {
+      "title": "The Space Adventure",
+      "releaseDate": "1995-07",
+      "serial": "T-143015-50",
+      "rating": "ELSPA: 18+"
+    },
+    {
+      "title": "The Terminator (Mega-CD)",
+      "releaseDate": "1994-02",
+      "serial": "T-70015-50",
+      "rating": "BBFC: PG"
+    },
+    {
+      "title": "Theme Park",
+      "releaseDate": "1995",
+      "serial": "T-88055-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Thunderhawk",
+      "releaseDate": "1993",
+      "serial": "T-115015-50",
+      "rating": ""
+    },
+    {
+      "title": "Time Gal",
+      "releaseDate": "1993-09",
+      "serial": "4417",
+      "rating": ""
+    },
+    {
+      "title": "Tomcat Alley",
+      "releaseDate": "1994-05",
+      "serial": "4429",
+      "rating": "OFLC: M15+"
+    },
+    {
+      "title": "Wild Woody",
+      "releaseDate": "1995-10",
+      "serial": "",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "Wolfchild",
+      "releaseDate": "1993",
+      "serial": "4404",
+      "rating": "OFLC: G8+"
+    },
+    {
+      "title": "Wonder Dog",
+      "releaseDate": "",
+      "serial": "4428",
+      "rating": ""
+    },
+    {
+      "title": "World Cup USA 94",
+      "releaseDate": "1994",
+      "serial": "T-79025-50",
+      "rating": ""
+    },
+    {
+      "title": "WWF Rage in the Cage",
+      "releaseDate": "1994-01",
+      "serial": "T-81015-50",
+      "rating": "OFLC: PG"
+    },
+    {
+      "title": "Yumemi Mystery Mansion",
+      "releaseDate": "1994-03",
+      "serial": "4430",
+      "rating": "OFLC: G8+"
+    }
+  ]
+}

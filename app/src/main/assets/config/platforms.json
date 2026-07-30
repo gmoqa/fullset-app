@@ -88,7 +88,8 @@
     "name": "Sega Master System",
     "catalogs": {
       "NTSC-U": "catalogs/master-system-usa.json",
-      "NTSC-J": "catalogs/master-system-jp.json"
+      "NTSC-J": "catalogs/master-system-jp.json",
+      "PAL": "catalogs/master-system-eu.json"
     },
     "libretroRepo": "Sega_-_Master_System_-_Mark_III",
     "enabled": true,
@@ -112,7 +113,8 @@
     "name": "Sega Genesis",
     "catalogs": {
       "NTSC-U": "catalogs/genesis-usa.json",
-      "NTSC-J": "catalogs/genesis-jp.json"
+      "NTSC-J": "catalogs/genesis-jp.json",
+      "PAL": "catalogs/genesis-eu.json"
     },
     "libretroRepo": "Sega_-_Mega_Drive_-_Genesis",
     "enabled": true,
@@ -136,7 +138,8 @@
     "name": "Sega Game Gear",
     "catalogs": {
       "NTSC-U": "catalogs/game-gear-usa.json",
-      "NTSC-J": "catalogs/game-gear-jp.json"
+      "NTSC-J": "catalogs/game-gear-jp.json",
+      "PAL": "catalogs/game-gear-eu.json"
     },
     "libretroRepo": "Sega_-_Game_Gear",
     "enabled": true,
@@ -160,7 +163,8 @@
     "name": "Sega CD",
     "catalogs": {
       "NTSC-U": "catalogs/sega-cd-usa.json",
-      "NTSC-J": "catalogs/sega-cd-jp.json"
+      "NTSC-J": "catalogs/sega-cd-jp.json",
+      "PAL": "catalogs/sega-cd-eu.json"
     },
     "libretroRepo": "Sega_-_Mega-CD_-_Sega_CD",
     "enabled": true,
@@ -184,7 +188,8 @@
     "name": "Sega 32X",
     "catalogs": {
       "NTSC-U": "catalogs/32x-usa.json",
-      "NTSC-J": "catalogs/32x-jp.json"
+      "NTSC-J": "catalogs/32x-jp.json",
+      "PAL": "catalogs/32x-eu.json"
     },
     "libretroRepo": "Sega_-_32X",
     "enabled": true,
@@ -208,7 +213,8 @@
     "name": "Sega Saturn",
     "catalogs": {
       "NTSC-U": "catalogs/saturn-usa.json",
-      "NTSC-J": "catalogs/saturn-jp.json"
+      "NTSC-J": "catalogs/saturn-jp.json",
+      "PAL": "catalogs/saturn-eu.json"
     },
     "libretroRepo": "Sega_-_Saturn",
     "enabled": true,
@@ -232,7 +238,8 @@
     "name": "Dreamcast",
     "catalogs": {
       "NTSC-U": "catalogs/dreamcast-usa.json",
-      "NTSC-J": "catalogs/dreamcast-jp.json"
+      "NTSC-J": "catalogs/dreamcast-jp.json",
+      "PAL": "catalogs/dreamcast-eu.json"
     },
     "libretroRepo": "Sega_-_Dreamcast",
     "enabled": true,

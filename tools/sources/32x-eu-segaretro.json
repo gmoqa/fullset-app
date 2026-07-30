@@ -1,0 +1,163 @@
+{
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_32X_games_in_Europe",
+  "region": "PAL",
+  "games": [
+    {
+      "title": "After Burner Complete",
+      "releaseDate": "1995-01",
+      "serial": "84507-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Blackthorne",
+      "releaseDate": "1996-01",
+      "serial": "152130",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "Chaotix",
+      "releaseDate": "1995-06",
+      "serial": "84503-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Cosmic Carnage",
+      "releaseDate": "1995-02",
+      "serial": "84700-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Darxide",
+      "releaseDate": "1996-01",
+      "serial": "84580-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Doom (32X)",
+      "releaseDate": "1994-12-04",
+      "serial": "84506-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "FIFA Soccer 96 (32X)",
+      "releaseDate": "1995-11",
+      "serial": "T-5002B-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Golf Magazine: 36 Great Holes Starring Fred Couples",
+      "releaseDate": "1995-03",
+      "serial": "84602-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Kolibri",
+      "releaseDate": "1995-11-17",
+      "serial": "84518-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Metal Head",
+      "releaseDate": "1995-04",
+      "serial": "84511-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Mortal Kombat II",
+      "releaseDate": "1995-03",
+      "serial": "T-8101B-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Motocross Championship",
+      "releaseDate": "1995-03",
+      "serial": "84600-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NBA Jam Tournament Edition",
+      "releaseDate": "1995-06",
+      "serial": "T-8104B-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NFL Quarterback Club (32X)",
+      "releaseDate": "1995-07",
+      "serial": "T-8102B-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Primal Rage",
+      "releaseDate": "1996-03",
+      "serial": "MK-84705",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Space Harrier",
+      "releaseDate": "",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Star Trek: Starfleet Academy Starship Bridge Simulator",
+      "releaseDate": "1995",
+      "serial": "152140",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "Star Wars Arcade",
+      "releaseDate": "1994-12-04",
+      "serial": "84508-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Stellar Assault",
+      "releaseDate": "1995-06",
+      "serial": "84509-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "T-MEK",
+      "releaseDate": "1995-10",
+      "serial": "MK-84520",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Tempo",
+      "releaseDate": "1995-05",
+      "serial": "152070",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "Toughman Contest",
+      "releaseDate": "1995-06",
+      "serial": "T-5001B-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Virtua Fighter",
+      "releaseDate": "1995-10",
+      "serial": "MK84701-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtua Racing Deluxe",
+      "releaseDate": "1994-12-04",
+      "serial": "84601-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "WWF Raw",
+      "releaseDate": "1995-09",
+      "serial": "T-8103B-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Zaxxon's Motherbase 2000",
+      "releaseDate": "1995-06",
+      "serial": "84512-50",
+      "rating": "ELSPA: 3+"
+    }
+  ]
+}

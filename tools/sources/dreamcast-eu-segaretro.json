@@ -1,0 +1,1394 @@
+{
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_Dreamcast_games_in_Europe",
+  "region": "PAL",
+  "games": [
+    {
+      "title": "18 Wheeler: American Pro Trucker",
+      "releaseDate": "2001-06-01",
+      "serial": "MK-51064-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "4 Wheel Thunder",
+      "releaseDate": "2000-06-16",
+      "serial": "T-9706D-61",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "90 Minutes: Sega Championship Football",
+      "releaseDate": "2001-10-26",
+      "serial": "MK-51190-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Action Replay CDX: Demo Version",
+      "releaseDate": "2000-06-09",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "AeroWings",
+      "releaseDate": "1999-10-29",
+      "serial": "T-40202D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "AeroWings 2: Airstrike",
+      "releaseDate": "2000-12-08",
+      "serial": "T-40209D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Airforce Delta",
+      "releaseDate": "2000-02-18",
+      "serial": "T-9501D-76",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Alone in the Dark: The New Nightmare",
+      "releaseDate": "2001-06-22",
+      "serial": "T-15112D-05",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Aqua GT",
+      "releaseDate": "2001-01-26",
+      "serial": "T-40509D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Army Men: Sarge's Heroes",
+      "releaseDate": "2000-11-17",
+      "serial": "T-9708D-61",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Bangai-O",
+      "releaseDate": "2000-10-20",
+      "serial": "T-7011D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Blue Stinger",
+      "releaseDate": "1999-10-14",
+      "serial": "T-13001D-58",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Buggy Heat",
+      "releaseDate": "1999-10-22",
+      "serial": "MK-54040-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Bust-A-Move 4",
+      "releaseDate": "2000",
+      "serial": "T-8109D-18",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Caesars Palace 2000: Millennium Gold Edition",
+      "releaseDate": "2000-06-30",
+      "serial": "T-12502D-61",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Cannon Spike",
+      "releaseDate": "2002-05-23",
+      "serial": "T-46601D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Capcom vs. SNK: Millennium Fight 2000",
+      "releaseDate": "2000-12-15",
+      "serial": "T-7017D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Carrier",
+      "releaseDate": "2001-06-29",
+      "serial": "T-44901D-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Championship Surfer",
+      "releaseDate": "2001-08-10",
+      "serial": "T-41402D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Charge 'N Blast",
+      "releaseDate": "2001-06-29",
+      "serial": "T-44902D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Chicken Run",
+      "releaseDate": "2000-11-24",
+      "serial": "T-36814D-05",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Chicken Run: Evasión en la Granja",
+        "Chicken Run: Hennen Rennen",
+        "Galline in Fuga: Chicken Run"
+      ]
+    },
+    {
+      "title": "ChuChu Rocket!",
+      "releaseDate": "2000-06-09",
+      "serial": "MK-51049-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Coaster Works",
+      "releaseDate": "2001-06-29",
+      "serial": "T-44903D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Confidential Mission",
+      "releaseDate": "2001-05-25",
+      "serial": "MK-51160-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Conflict Zone",
+      "releaseDate": "2002-05-10",
+      "serial": "T-46603D-71",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Crazy Taxi",
+      "releaseDate": "2000-02-25",
+      "serial": "MK-51035-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Crazy Taxi 2",
+      "releaseDate": "2001-07-06",
+      "serial": "MK-51136-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Dave Mirra Freestyle BMX",
+      "releaseDate": "2000",
+      "serial": "T-8120D-18",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Daytona USA 2001",
+      "releaseDate": "2001-05-11",
+      "serial": "MK-51037-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Dead or Alive 2",
+      "releaseDate": "2000-07-28",
+      "serial": "T-8116D-05",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Deep Fighter",
+      "releaseDate": "2000-09-22",
+      "serial": "T-17704D-61",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Dino Crisis",
+      "releaseDate": "2000-12-22",
+      "serial": "T-7019D-05",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Disney's 102 Dalmatians: Puppies to the Rescue",
+      "releaseDate": "2000-12-15",
+      "serial": "T-36813D-05",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Disney 102 Dálmatas: Cachorros al Rescate",
+        "Disney La Carica dei 102: Cuccioli alla Riscossa",
+        "Disney Les 102 Dalmatiens: À La Rescousse!",
+        "Disneys 102 Dalmatiner"
+      ]
+    },
+    {
+      "title": "Disney's Dinosaur",
+      "releaseDate": "2000-11-24",
+      "serial": "T-17718D-84",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Disney's Donald Duck Quack Attack",
+      "releaseDate": "2000-12-15",
+      "serial": "T-17714D-74",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Disney/Pixar's Buzz Lightyear of Star Command",
+      "releaseDate": "2001-02-09",
+      "serial": "T-13005D-05",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Disney/Pixar Captain Buzz Lightyear Star Command",
+        "Disney/Pixar Les Aventures de Buzz L'Éclair"
+      ]
+    },
+    {
+      "title": "Disney/Pixar's Toy Story 2: Buzz Lightyear to the Rescue!",
+      "releaseDate": "2000-11-17",
+      "serial": "T-13003D-05",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Disney/Pixar Toy Story 2: Buzz l'Eclair à la Rescousse!",
+        "Disney/Pixar Toy Story 2: Buzz Lightyear Eilt Zur Hilfe!"
+      ]
+    },
+    {
+      "title": "Draconus Cult of the Wyrm",
+      "releaseDate": "2000-06-30",
+      "serial": "T-12503D-61",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Dragon Riders: Chronicles of Pern",
+      "releaseDate": "2002-02-08",
+      "serial": "T-17716D-91",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Dreamkey",
+      "releaseDate": "1999-10-14",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Dreamkey 3.0",
+      "releaseDate": "2002-02-01",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Dreamkey 3.1",
+      "releaseDate": "",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Dreamkey Version 1.5",
+      "releaseDate": "1999",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Dreamkey Version 2.0",
+      "releaseDate": "2001",
+      "serial": "832-0045-46",
+      "rating": ""
+    },
+    {
+      "title": "Ducati World Racing Challenge",
+      "releaseDate": "",
+      "serial": "T-8121D-18",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Dynamite Cop",
+      "releaseDate": "1999-10-14",
+      "serial": "MK-51013-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Ecco the Dolphin: Defender of the Future",
+      "releaseDate": "2000-06-16",
+      "serial": "MK-51033-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "ECW Anarchy Rulz",
+      "releaseDate": "",
+      "serial": "T-8119D-18",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "ECW Hardcore Revolution",
+      "releaseDate": "2000-03-17",
+      "serial": "T-8116D-05",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "ESPN International Track & Field",
+      "releaseDate": "2000-09-22",
+      "serial": "T-9504D-76",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "European Super League",
+      "releaseDate": "2001-03-02",
+      "serial": "T-7015D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Evil Dead: Hail to the King",
+      "releaseDate": "2001-06-22",
+      "serial": "T-10005D-05",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Evil Twin: Cyprien's Chronicles",
+      "releaseDate": "2002-05-10",
+      "serial": "T-46605D-80",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Evolution 2: Far Off Promise",
+      "releaseDate": "2001-11-23",
+      "serial": "T-45005D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Evolution: The World of Sacred Device",
+      "releaseDate": "2000-06-09",
+      "serial": "T-17705SD-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Exhibition of Speed",
+      "releaseDate": "2001-05-18",
+      "serial": "T-22903D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Expendable",
+      "releaseDate": "1999-10-14",
+      "serial": "T-15101D-05",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "F1 Racing Championship",
+      "releaseDate": "2001-01-19",
+      "serial": "T-17706D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "F1 World Grand Prix",
+      "releaseDate": "1999-11-19",
+      "serial": "T-3001D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "F1 World Grand Prix II",
+      "releaseDate": "2000-12-01",
+      "serial": "T-3002D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "F355 Challenge",
+      "releaseDate": "2000-10-20",
+      "serial": "T-8118D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Fighting Force 2",
+      "releaseDate": "1999-12-24",
+      "serial": "T-36802D-05",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Fighting Vipers 2",
+      "releaseDate": "2001-03-02",
+      "serial": "MK-51154-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Flag to Flag",
+      "releaseDate": "",
+      "serial": "197106",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "Floigan Bros. Episode 1",
+      "releaseDate": "2001-11-23",
+      "serial": "MK-51114-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Fur Fighters",
+      "releaseDate": "2000",
+      "serial": "T-8113D-18",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Gauntlet Legends",
+      "releaseDate": "2000-07-21",
+      "serial": "T-9707D-61",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Giant Killers",
+      "releaseDate": "2001-05-04",
+      "serial": "T-45401D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Giga Wing",
+      "releaseDate": "2000-10-20",
+      "serial": "T-7008D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Grand Theft Auto 2",
+      "releaseDate": "2000-08-04",
+      "serial": "T-40502D-05",
+      "rating": "BBFC: 18"
+    },
+    {
+      "title": "Grandia II",
+      "releaseDate": "2001-02-23",
+      "serial": "T-17715D-05",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Gunbird 2",
+      "releaseDate": "2001-02-02",
+      "serial": "T-7018D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Headhunter",
+      "releaseDate": "2001-11-16",
+      "serial": "MK-51041-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Heavy Metal Geomatrix",
+      "releaseDate": "2002-05-23",
+      "serial": "T-46602D-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Hidden & Dangerous",
+      "releaseDate": "2000-09-08",
+      "serial": "T-40503D-64",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Hydro Thunder",
+      "releaseDate": "1999-11-05",
+      "serial": "T-9702D-61",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Incoming",
+      "releaseDate": "1999-10-14",
+      "serial": "T-40701D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Iron Aces",
+      "releaseDate": "2001-06-29",
+      "serial": "T-44904D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Jeremy McGrath Supercross 2000",
+      "releaseDate": "2000-09-08",
+      "serial": "T-8114D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Jet Set Radio",
+      "releaseDate": "2000-11-24",
+      "serial": "MK-51058-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Jimmy White's 2: Cueball",
+      "releaseDate": "2000-01-07",
+      "serial": "T-7001D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "JoJo's Bizarre Adventure",
+      "releaseDate": "2000-04-28",
+      "serial": "T-7007D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Kao the Kangaroo",
+      "releaseDate": "2000-12-08",
+      "serial": "T-22902D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "KISS Psycho Circus: The Nightmare Child",
+      "releaseDate": "2001-01-19",
+      "serial": "T-40506D-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Le Mans 24 Hours (Dreamcast)",
+      "releaseDate": "2000",
+      "serial": "T-15111D-18",
+      "rating": "USK: 6",
+      "altTitles": [
+        "24 Heures du Mans",
+        "24 Horas de Le Mans",
+        "Die 24 Stunden von Le Mans",
+        "La 24 Ore di Le Mans"
+      ]
+    },
+    {
+      "title": "Legacy of Kain: Soul Reaver",
+      "releaseDate": "2000-02-25",
+      "serial": "T-36803D-05",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Looney Tunes: Space Race",
+      "releaseDate": "2000-11-03",
+      "serial": "T-15108D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "MagForce Racing",
+      "releaseDate": "2000-08-25",
+      "serial": "T-40207D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Maken X",
+      "releaseDate": "2000-07-21",
+      "serial": "MK-51050-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Marvel vs. Capcom 2: New Age of Heroes",
+      "releaseDate": "2000-07-21",
+      "serial": "T-7010D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Marvel vs. Capcom: Clash of Super Heroes",
+      "releaseDate": "1999-12-24",
+      "serial": "T-7002D-61",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "MDK 2",
+      "releaseDate": "2000-06-09",
+      "serial": "T-12501D-61",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Metropolis Street Racer",
+      "releaseDate": "2000-11-03",
+      "serial": "MK-51022-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Midway's Greatest Arcade Hits Volume 1",
+      "releaseDate": "2000-07-21",
+      "serial": "T-9710D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "MoHo",
+      "releaseDate": "2000-11-24",
+      "serial": "T-40508D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Monaco Grand Prix",
+      "releaseDate": "1999-10-14",
+      "serial": "T-17701D-05",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Monaco Grand Prix: Racing Simulation 2",
+        "Racing Simulation 2",
+        "Racing Simulation: Monaco Grand Prix"
+      ]
+    },
+    {
+      "title": "Mortal Kombat Gold",
+      "releaseDate": "1999-10-29",
+      "serial": "T-9701D-61",
+      "rating": "BBFC: 18"
+    },
+    {
+      "title": "Mr. Driller",
+      "releaseDate": "2000-12-08",
+      "serial": "T-7020D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "MTV Sports: Skateboarding Featuring Andy Macdonald",
+      "releaseDate": "2000-11-24",
+      "serial": "T-10001D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NBA 2K",
+      "releaseDate": "2000-03-17",
+      "serial": "MK-51004-53",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NBA 2K2",
+      "releaseDate": "2002-03-08",
+      "serial": "MK-51178-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NBA Hoopz",
+      "releaseDate": "2001-04-20",
+      "serial": "T-9713D-61",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NBA Showtime: NBA on NBC",
+      "releaseDate": "1999-12-10",
+      "serial": "T-9705D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NFL Blitz 2000",
+      "releaseDate": "1999-12-10",
+      "serial": "T-9703D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NFL Quarterback Club 2000",
+      "releaseDate": "1999-12-10",
+      "serial": "T-8102D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NHL 2K",
+      "releaseDate": "2000",
+      "serial": "MK-51025-89",
+      "rating": "USK: 0"
+    },
+    {
+      "title": "Nightmare Creatures II",
+      "releaseDate": "2000-09-08",
+      "serial": "T-9502D-76",
+      "rating": "BBFC: 18"
+    },
+    {
+      "title": "Omikron: The Nomad Soul",
+      "releaseDate": "2000-06-23",
+      "serial": "T-36805D-05",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Outtrigger",
+      "releaseDate": "2001-08-03",
+      "serial": "MK-51102-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Pen Pen TriIceLon",
+      "releaseDate": "1999-11-12",
+      "serial": "T-15103D-61",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Phantasy Star Online",
+      "releaseDate": "2001-02-23",
+      "serial": "MK-51100-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Phantasy Star Online Ver. 2",
+      "releaseDate": "2002-03-01",
+      "serial": "MK-51193-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Planet Ring",
+      "releaseDate": "2000-11-30",
+      "serial": "MK-51148-64",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Plasma Sword: Nightmare of Bilstein",
+      "releaseDate": "2000-08-25",
+      "serial": "T-7003D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "POD 2",
+      "releaseDate": "2000-12-15",
+      "serial": "T-17710D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Power Stone",
+      "releaseDate": "1999-10-14",
+      "serial": "T-36801D-64",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Power Stone 2",
+      "releaseDate": "2000",
+      "serial": "T-36812D-64",
+      "rating": "USK: 12"
+    },
+    {
+      "title": "Pro-Pinball Trilogy",
+      "releaseDate": "2001-05-18",
+      "serial": "T-30701D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Project Justice",
+      "releaseDate": "2001-04-13",
+      "serial": "T-7022D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Psychic Force 2012",
+      "releaseDate": "1999-12-03",
+      "serial": "T-8106D-05",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Quake III Arena",
+      "releaseDate": "2000-12-08",
+      "serial": "MK-51061-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Racing Simulation 2: Monaco Grand Prix Online",
+      "releaseDate": "2001-07-27",
+      "serial": "T-45006D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Railroad Tycoon II",
+      "releaseDate": "2000-11-10",
+      "serial": "T-40505D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Rayman 2: The Great Escape",
+      "releaseDate": "2000-03-17",
+      "serial": "T-17707D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Razor Freestyle Scooter",
+      "releaseDate": "2002-05-10",
+      "serial": "T-46604D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Re-Volt",
+      "releaseDate": "2000-02-11",
+      "serial": "T-8107D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Ready 2 Rumble Boxing",
+      "releaseDate": "1999-10-14",
+      "serial": "T-9704D-05",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Ready 2 Rumble Boxing Round 2",
+      "releaseDate": "2000-11-10",
+      "serial": "T-9711D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Record of Lodoss War",
+      "releaseDate": "2000-12-15",
+      "serial": "T-7012D-97",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Red Dog: Superior Firepower",
+      "releaseDate": "2000-04-21",
+      "serial": "MK-51021-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Resident Evil 2",
+      "releaseDate": "2000-04-28",
+      "serial": "T-7004D-61",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Resident Evil 3: Nemesis",
+      "releaseDate": "2000-12-22",
+      "serial": "T-7021D-56",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Resident Evil Code: Veronica",
+      "releaseDate": "2000-05-26",
+      "serial": "T-36806D-05",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Rez",
+      "releaseDate": "2002-01-11",
+      "serial": "MK-51192-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Rippin' Riders",
+      "releaseDate": "1999-11-12",
+      "serial": "MK-51010-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Roadsters",
+      "releaseDate": "2000-07-07",
+      "serial": "T-22901D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Samba de Amigo",
+      "releaseDate": "2000-12-08",
+      "serial": "MK-51092-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "San Francisco Rush 2049",
+      "releaseDate": "2000-09-29",
+      "serial": "T-9709D-61",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sega Bass Fishing",
+      "releaseDate": "2000",
+      "serial": "MK-51006-05",
+      "rating": "USK: 0"
+    },
+    {
+      "title": "Sega Extreme Sports",
+      "releaseDate": "2000-10-20",
+      "serial": "MK-51081-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sega GT",
+      "releaseDate": "2000-12-01",
+      "serial": "MK-51053-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sega Rally 2",
+      "releaseDate": "1999-10-14",
+      "serial": "MK-51019-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sega Worldwide Soccer 2000",
+      "releaseDate": "1999-11-26",
+      "serial": "MK-51031-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sega Worldwide Soccer 2000: Euro Edition",
+      "releaseDate": "2000-05-26",
+      "serial": "MK-51083-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Shadow Man",
+      "releaseDate": "2000-01-21",
+      "serial": "T-8104D-05",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Shenmue",
+      "releaseDate": "2000-12-01",
+      "serial": "MK-51059-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Shenmue II",
+      "releaseDate": "2001-11-23",
+      "serial": "MK-51184-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Silent Scope",
+      "releaseDate": "2000-11-17",
+      "serial": "T-9505D-76",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Silver",
+      "releaseDate": "2000-06-30",
+      "serial": "T-15109D-91",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Skies of Arcadia",
+      "releaseDate": "2001-04-27",
+      "serial": "MK-51052-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Slave Zero",
+      "releaseDate": "2000-03-24",
+      "serial": "T-15104D-05",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Sno-Cross Championship Racing",
+      "releaseDate": "2001-01-19",
+      "serial": "T-17722D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Soldier of Fortune",
+      "releaseDate": "2001-08-17",
+      "serial": "T-17726D-50",
+      "rating": "BBFC: 18"
+    },
+    {
+      "title": "Sonic Adventure",
+      "releaseDate": "1999",
+      "serial": "MK-51000-53",
+      "rating": "USK: 0"
+    },
+    {
+      "title": "Sonic Adventure 2",
+      "releaseDate": "2001-06-23",
+      "serial": "MK-51117-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sonic Shuffle",
+      "releaseDate": "2001-03-09",
+      "serial": "MK-51060-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Soul Fighter",
+      "releaseDate": "1999-12-10",
+      "serial": "T-41401D-61",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "SoulCalibur",
+      "releaseDate": "1999-11-26",
+      "serial": "T-1401D-50",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "South Park Rally",
+      "releaseDate": "2000",
+      "serial": "T-8112D-18",
+      "rating": "USK: 0"
+    },
+    {
+      "title": "South Park: Chef's Luv Shack",
+      "releaseDate": "1999-11-26",
+      "serial": "T-8105D-05",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Space Channel 5",
+      "releaseDate": "2000-10-06",
+      "serial": "MK-51051-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Spawn: In the Demon's Hand",
+      "releaseDate": "2001-01-19",
+      "serial": "T-36816D-05",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Spec Ops II: Omega Squad",
+      "releaseDate": "2001-08-10",
+      "serial": "T-45004D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Speed Devils",
+      "releaseDate": "1999-11-05",
+      "serial": "T-17702D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Speed Devils Online Racing",
+      "releaseDate": "2001-01-26",
+      "serial": "T-17713D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Spider-Man (Dreamcast)",
+      "releaseDate": "2001-06-15",
+      "serial": "T-13011D-05",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Spirit of Speed 1937",
+      "releaseDate": "2000-07-14",
+      "serial": "T-8117D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Star Wars Demolition",
+      "releaseDate": "2000-12-15",
+      "serial": "T-13010D-05",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Star Wars: Episode I Jedi Power Battles",
+      "releaseDate": "2000-10-20",
+      "serial": "T-17721D-05",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Star Wars: Episode I Racer",
+      "releaseDate": "2000-07-28",
+      "serial": "T-17719D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "StarLancer",
+      "releaseDate": "2001-03-23",
+      "serial": "T-17723D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Street Fighter Alpha 3",
+      "releaseDate": "2000-09-29",
+      "serial": "T-7005D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Street Fighter III: 3rd Strike",
+      "releaseDate": "2000-12-15",
+      "serial": "T-7013D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Street Fighter III: Double Impact",
+      "releaseDate": "2000-09-15",
+      "serial": "T-7006D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Stunt GP",
+      "releaseDate": "2001-06-08",
+      "serial": "T-22904D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Stupid Invaders",
+      "releaseDate": "2001-05-18",
+      "serial": "T-17711D-71",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Super Magnetic Neo",
+      "releaseDate": "2000-08-04",
+      "serial": "T-40206D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Super Runabout: San Francisco Edition",
+      "releaseDate": "2000-12-08",
+      "serial": "T-7014D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Surf Rocket Racers",
+      "releaseDate": "2001-03-02",
+      "serial": "T-17721D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Suzuki Alstare Extreme Racing",
+      "releaseDate": "1999-11-12",
+      "serial": "T-17703D-74",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sword of the Berserk: Guts' Rage",
+      "releaseDate": "2000-05-19",
+      "serial": "T-36807D-05",
+      "rating": "ELSPA: 18+"
+    },
+    {
+      "title": "Sydney 2000",
+      "releaseDate": "2000-09-01",
+      "serial": "T-36808D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Taxi 2: Le Jeu",
+      "releaseDate": "2000-11-30",
+      "serial": "T-17708D-09",
+      "rating": "All ages"
+    },
+    {
+      "title": "Tech Romancer",
+      "releaseDate": "2000-07-07",
+      "serial": "T-7009D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Tee Off",
+      "releaseDate": "2000-03-03",
+      "serial": "T-8108D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "The Grinch",
+      "releaseDate": "2000-12-15",
+      "serial": "T-9503D-76",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "The House of the Dead 2",
+      "releaseDate": "1999-11-05",
+      "serial": "MK-51002-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "The King of Fighters: Dream Match 1999",
+      "releaseDate": "1999",
+      "serial": "197156",
+      "rating": "ClassInd: 14"
+    },
+    {
+      "title": "The Next Tetris: On-Line Edition",
+      "releaseDate": "2001-05-11",
+      "serial": "T-17717D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Time Stalkers",
+      "releaseDate": "2000",
+      "serial": "MK-51011-53",
+      "rating": "USK: 0"
+    },
+    {
+      "title": "Tokyo Xtreme Racer",
+      "releaseDate": "1999-10-14",
+      "serial": "T-40201D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Tokyo Xtreme Racer 2",
+      "releaseDate": "2000-12-15",
+      "serial": "T-17724D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Tom Clancy's Rainbow Six",
+      "releaseDate": "2001-02-02",
+      "serial": "T-45001D-05",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Tom Clancy's Rainbow Six Rogue Spear",
+      "releaseDate": "2001-05-04",
+      "serial": "T-45002D-05",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Tomb Raider: Chronicles",
+      "releaseDate": "2000",
+      "serial": "T-36815D-18",
+      "rating": "USK: 12",
+      "altTitles": [
+        "Tomb Raider Chronicles: La Leggenda di Lara Croft",
+        "Tomb Raider: Die Chronik",
+        "Tomb Raider: Sur Les Traces de Lara Croft"
+      ]
+    },
+    {
+      "title": "Tomb Raider: The Last Revelation",
+      "releaseDate": "2000-03-24",
+      "serial": "T-36804D-05",
+      "rating": "ELSPA: 11+",
+      "altTitles": [
+        "Tomb Raider IV: The Last Revelation",
+        "Tomb Raider: De Laatste Onthulling",
+        "Tomb Raider: La Revelation Finale"
+      ]
+    },
+    {
+      "title": "Tony Hawk's Pro Skater",
+      "releaseDate": "2000-06-30",
+      "serial": "T-40204D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Tony Hawk's Pro Skater 2",
+      "releaseDate": "2000-12-15",
+      "serial": "T-13008D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Toy Commander",
+      "releaseDate": "1999-10-22",
+      "serial": "MK-51020-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Toy Racer",
+      "releaseDate": "2000-12-22",
+      "serial": "MK-51149-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "TrickStyle",
+      "releaseDate": "1999-10-14",
+      "serial": "T-8101D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "UEFA Dream Soccer",
+      "releaseDate": "2000-12-08",
+      "serial": "MK-51095-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "UEFA Striker",
+      "releaseDate": "",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Ultimate Fighting Championship",
+      "releaseDate": "2000-12-08",
+      "serial": "T-40203D-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Unreal Tournament",
+      "releaseDate": "2001-06-29",
+      "serial": "T-15113D-05",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Urban Chaos",
+      "releaseDate": "2000-10-06",
+      "serial": "T-36810D-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "V-Rally 2: Expert Edition",
+      "releaseDate": "2000-05-26",
+      "serial": "T-15105D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Vanishing Point",
+      "releaseDate": "2001-03-09",
+      "serial": "T-8110D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Vigilante 8: Second Offense",
+      "releaseDate": "2000-02-25",
+      "serial": "T-13002D-71",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Virtua Athlete 2K",
+      "releaseDate": "2000-08-25",
+      "serial": "MK-51094-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtua Fighter 3tb",
+      "releaseDate": "1999-10-14",
+      "serial": "MK-51001-53",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Virtua Striker 2 Ver. 2000.1",
+      "releaseDate": "2000-01-21",
+      "serial": "MK-51028-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtua Tennis",
+      "releaseDate": "2000-09-08",
+      "serial": "MK-51054-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtua Tennis 2",
+      "releaseDate": "2001-11-23",
+      "serial": "MK-51186-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Wacky Races",
+      "releaseDate": "2000-06-30",
+      "serial": "T-15106D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Walt Disney World Quest: Magical Racing Tour",
+      "releaseDate": "2000-08-18",
+      "serial": "T-36809D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Wetrix+",
+      "releaseDate": "2000-03-31",
+      "serial": "T-40504D-64",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Who Wants to Be a Millionaire?",
+      "releaseDate": "2000-09-29",
+      "serial": "T-36811D-05",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Qui Veut Gagner des Millions?"
+      ]
+    },
+    {
+      "title": "Wild Metal",
+      "releaseDate": "2000-02-04",
+      "serial": "T-40501D-64",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Worms Armageddon",
+      "releaseDate": "1999-12-10",
+      "serial": "T-40601D-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Worms World Party",
+      "releaseDate": "2001-03-16",
+      "serial": "T-7016D-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "WWF Attitude",
+      "releaseDate": "1999-11-05",
+      "serial": "T-8103D-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "WWF Royal Rumble (Sega)",
+      "releaseDate": "2000-09-22",
+      "serial": "T-10003D-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Zombie Revenge",
+      "releaseDate": "2000-06-09",
+      "serial": "MK-51038-50",
+      "rating": "ELSPA: 15+"
+    }
+  ]
+}

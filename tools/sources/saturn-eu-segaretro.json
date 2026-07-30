@@ -1,0 +1,1522 @@
+{
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_Saturn_games_in_Europe",
+  "region": "PAL",
+  "games": [
+    {
+      "title": "3D Lemmings",
+      "releaseDate": "1996-07-05",
+      "serial": "T-11304H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Actua Golf",
+      "releaseDate": "1996-09-06",
+      "serial": "T-12302H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Actua Soccer Club Edition",
+      "releaseDate": "1997",
+      "serial": "T-12305H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Alien Trilogy",
+      "releaseDate": "1996-09-04",
+      "serial": "T-8113H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Alone in the Dark 2",
+      "releaseDate": "1996-05",
+      "serial": "T-15101H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "AMOK",
+      "releaseDate": "1997-03-06",
+      "serial": "MK81064-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Andretti Racing",
+      "releaseDate": "1997-02-07",
+      "serial": "T-5020H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Area 51",
+      "releaseDate": "1997-03-14",
+      "serial": "T-25408H-50",
+      "rating": "BBFC: 12"
+    },
+    {
+      "title": "Astal",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "ClassInd: 6"
+    },
+    {
+      "title": "Atlantis: The Lost Tales",
+      "releaseDate": "1998-06",
+      "serial": "MK81091-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Baku Baku Animal",
+      "releaseDate": "1996-05",
+      "serial": "MK81501-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Batman Forever (arcade)",
+      "releaseDate": "1996-11-16",
+      "serial": "T-8140H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Battle Arena Toshinden Remix",
+      "releaseDate": "1996-03-29",
+      "serial": "MK81029-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Battle Arena Toshinden URA",
+      "releaseDate": "1997-02-06",
+      "serial": "MK81054-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Battle Monsters",
+      "releaseDate": "1996",
+      "serial": "T-8137H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Battle Stations",
+      "releaseDate": "1997-05",
+      "serial": "T-5021H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Black Dawn",
+      "releaseDate": "1997-05-01",
+      "serial": "T-7027H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Black Fire",
+      "releaseDate": "1996-06-28",
+      "serial": "T-7011H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Blam! Machinehead",
+      "releaseDate": "1996-09",
+      "serial": "T-11505H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Blast Chamber",
+      "releaseDate": "1996-11-13",
+      "serial": "T-13003H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Blazing Dragons",
+      "releaseDate": "1996-11",
+      "serial": "T-15913H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Break Point",
+      "releaseDate": "1996-12",
+      "serial": "T-16408H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Bubble Bobble also featuring Rainbow Islands",
+      "releaseDate": "1996",
+      "serial": "T-8131H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Bug Too!",
+      "releaseDate": "1997-04-24",
+      "serial": "MK81040-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Bug!",
+      "releaseDate": "1995-10",
+      "serial": "MK81004-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Burning Rangers",
+      "releaseDate": "1998-06-12",
+      "serial": "MK81803-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Bust-A-Move 2: Arcade Edition",
+      "releaseDate": "1996",
+      "serial": "T-8132H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Bust-A-Move 3",
+      "releaseDate": "1997",
+      "serial": "T-8155H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Casper",
+      "releaseDate": "1996-09-13",
+      "serial": "T-12512H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Chaos Control",
+      "releaseDate": "1996-09",
+      "serial": "T-15102H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Christmas NiGHTS into Dreams",
+      "releaseDate": "1996-12",
+      "serial": "MK81067-50",
+      "rating": "OFLC: G"
+    },
+    {
+      "title": "Clockwork Knight",
+      "releaseDate": "1995-07-08",
+      "serial": "MK81007-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Clockwork Knight 2",
+      "releaseDate": "1995-10-27",
+      "serial": "MK81021-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Command & Conquer",
+      "releaseDate": "1996-12-06",
+      "serial": "T-7028H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Courier Crisis",
+      "releaseDate": "1998",
+      "serial": "MK81099-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Crimewave",
+      "releaseDate": "1996-11-08",
+      "serial": "T-8807H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Croc: Legend of the Gobbos",
+      "releaseDate": "1997-12-19",
+      "serial": "T-5029H-05",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Crusader: No Remorse",
+      "releaseDate": "1997-03-14",
+      "serial": "T-5014H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Crypt Killer",
+      "releaseDate": "1997-03-21",
+      "serial": "T-9509H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Cyber Speedway",
+      "releaseDate": "1996",
+      "serial": "MK-81205-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Cyber Troopers Virtual-On",
+      "releaseDate": "1997-01",
+      "serial": "MK81042-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Cyberia",
+      "releaseDate": "1996-04-19",
+      "serial": "T-12508H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "D",
+      "releaseDate": "1996-03-08",
+      "serial": "T-8106H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Darius Gaiden",
+      "releaseDate": "1996-03",
+      "serial": "T-8123H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Darius II",
+      "releaseDate": "1996",
+      "serial": "MK81085-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Dark Savior",
+      "releaseDate": "1997-02-20",
+      "serial": "MK81304-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Darklight Conflict",
+      "releaseDate": "1997-07",
+      "serial": "T-5022H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Daytona USA",
+      "releaseDate": "1995-07-08",
+      "serial": "MK-81200-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Daytona USA: Championship Circuit Edition",
+      "releaseDate": "1996-11-14",
+      "serial": "MK81213-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Decathlete",
+      "releaseDate": "1996-09",
+      "serial": "MK81115-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Deep Fear",
+      "releaseDate": "1998-09-18",
+      "serial": "MK81804-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Defcon 5",
+      "releaseDate": "1996-06",
+      "serial": "T-25401H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Destruction Derby",
+      "releaseDate": "1996-08-15",
+      "serial": "T-11303H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Die Hard Arcade",
+      "releaseDate": "1997-02-24",
+      "serial": "MK81057-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Die Hard Trilogy",
+      "releaseDate": "1997-02-28",
+      "serial": "T-16103H-50",
+      "rating": "ELSPA: 18+"
+    },
+    {
+      "title": "Digital Pinball: Last Gladiators",
+      "releaseDate": "1995",
+      "serial": "MK81680-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Discworld",
+      "releaseDate": "1996-08-15",
+      "serial": "T-11302H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Discworld II: Missing Presumed...!?",
+      "releaseDate": "1997-08-28",
+      "serial": "MK81093-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Doom (Saturn)",
+      "releaseDate": "1997",
+      "serial": "T-25406H-50",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Dragon Ball Z Idainaru Dragon Ball Densetsu",
+      "releaseDate": "1996-12",
+      "serial": "T-13301H-09",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Dragon Ball Z: La Grande Legende Des Boules De Cristal",
+        "Dragon Ball Z: The Legend"
+      ]
+    },
+    {
+      "title": "Dragon Force",
+      "releaseDate": "1997-08",
+      "serial": "MK81382-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Dragonheart: Fire & Steel",
+      "releaseDate": "1996",
+      "serial": "T-8117H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Duke Nukem 3D",
+      "releaseDate": "1997-10-30",
+      "serial": "MK81071-50",
+      "rating": "BBFC: 18"
+    },
+    {
+      "title": "Earthworm Jim 2",
+      "releaseDate": "1996-10",
+      "serial": "T-7019H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Enemy Zero",
+      "releaseDate": "1997-12",
+      "serial": "MK81076-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "F1 Challenge",
+      "releaseDate": "1996-02",
+      "serial": "MK81206-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "FIFA Road to World Cup 98 (Saturn)",
+      "releaseDate": "1997-12-26",
+      "serial": "T-5025H-50",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "FIFA: Die WM-Qualifikation 98",
+        "FIFA: En Route pour la Coupe du Monde 98",
+        "FIFA: Rumbo al Mundial 98"
+      ]
+    },
+    {
+      "title": "FIFA Soccer 96 (Saturn)",
+      "releaseDate": "1996",
+      "serial": "T-5003H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "FIFA Soccer 97",
+      "releaseDate": "1997-04-04",
+      "serial": "T-5017H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Fighters Megamix",
+      "releaseDate": "1997-06-05",
+      "serial": "MK81073-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Fighting Vipers",
+      "releaseDate": "1996-11-07",
+      "serial": "MK81041-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Formula Karts Special Edition",
+      "releaseDate": "1997-05-22",
+      "serial": "MK81282-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Frank Thomas Big Hurt Baseball (Saturn)",
+      "releaseDate": "1996-06",
+      "serial": "T-8138H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Frankenstein: Through the Eyes of the Monster",
+      "releaseDate": "1997",
+      "serial": "T-12511H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Galactic Attack",
+      "releaseDate": "1996-02",
+      "serial": "T-8116H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Galaxy Fight",
+      "releaseDate": "1996-06",
+      "serial": "T-1504H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Gex",
+      "releaseDate": "1996-04-05",
+      "serial": "T-15904H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Ghen War",
+      "releaseDate": "1996-06-28",
+      "serial": "T-7010H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Golden Axe: The Duel",
+      "releaseDate": "1995-12",
+      "serial": "MK81045-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Grid Runner",
+      "releaseDate": "1996-11",
+      "serial": "T-7017H-50",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Grid Run"
+      ]
+    },
+    {
+      "title": "Guardian Heroes",
+      "releaseDate": "1996-06-20",
+      "serial": "MK81035-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Gungriffon",
+      "releaseDate": "1996",
+      "serial": "MK81046-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Hang-On GP",
+      "releaseDate": "1996-03",
+      "serial": "MK81202-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Hardcore 4x4",
+      "releaseDate": "1996-12",
+      "serial": "T-12303H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Hebereke's Popoitto",
+      "releaseDate": "1995-12",
+      "serial": "T-1502H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Heir of Zendor: The Legend and The Land",
+      "releaseDate": "",
+      "serial": "191496",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "Hexen",
+      "releaseDate": "1997-03-21",
+      "serial": "T-25405H-50",
+      "rating": "BBFC: 12"
+    },
+    {
+      "title": "Hi-Octane",
+      "releaseDate": "1995-12",
+      "serial": "T-5002H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Highway 2000",
+      "releaseDate": "1996-09",
+      "serial": "T-6012H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Hyper 3D Pinball",
+      "releaseDate": "1996-09-06",
+      "serial": "T-7015H-50",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Tilt!"
+      ]
+    },
+    {
+      "title": "Impact Racing",
+      "releaseDate": "1996-07-05",
+      "serial": "T-6010H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "In the Hunt",
+      "releaseDate": "1996-06",
+      "serial": "T-10001H-50",
+      "rating": "USK: 16"
+    },
+    {
+      "title": "Independence Day",
+      "releaseDate": "1997-06-13",
+      "serial": "T-16104H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Iron Man/X-O Manowar in Heavy Metal",
+      "releaseDate": "1996-09-04",
+      "serial": "T-8119H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Jewels of the Oracle",
+      "releaseDate": "1996-12",
+      "serial": "T-1503H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Johnny Bazookatone",
+      "releaseDate": "1996-02",
+      "serial": "T-7909H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Jonah Lomu Rugby",
+      "releaseDate": "1997-04-18",
+      "serial": "T-12003H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Keio Flying Squadron 2",
+      "releaseDate": "1996-09",
+      "serial": "T-6008H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Krazy Ivan",
+      "releaseDate": "1997-05-23",
+      "serial": "T-11305H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Last Bronx",
+      "releaseDate": "1997-10-23",
+      "serial": "MK81078-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Le Duo Saturn",
+      "releaseDate": "1996",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Loaded",
+      "releaseDate": "1996-07",
+      "serial": "T-12301H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Madden NFL 97 (Saturn)",
+      "releaseDate": "1996",
+      "serial": "T-5018H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Madden NFL 98 (Saturn)",
+      "releaseDate": "1997",
+      "serial": "T-5024H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Magic Carpet",
+      "releaseDate": "1996-03-29",
+      "serial": "T-5006H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Manx TT Super Bike",
+      "releaseDate": "1997-03-20",
+      "serial": "MK81210-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Marvel Super Heroes",
+      "releaseDate": "1997-11-14",
+      "serial": "T-7032H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Mass Destruction",
+      "releaseDate": "1997-03-27",
+      "serial": "MK81089-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Maximum Force",
+      "releaseDate": "1998-03",
+      "serial": "T-25417H-50",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "MechWarrior 2: 31st Century Combat",
+      "releaseDate": "1997-05",
+      "serial": "T-13004H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Mega Man X3",
+      "releaseDate": "1997",
+      "serial": "T-7029H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Mega Man X4",
+      "releaseDate": "",
+      "serial": "191396",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "Midway Presents Arcade's Greatest Hits: The Atari Collection 1",
+      "releaseDate": "1998-03",
+      "serial": "T-25413H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Mighty Hits",
+      "releaseDate": "1996-12",
+      "serial": "MK81087",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Mortal Kombat II",
+      "releaseDate": "1996",
+      "serial": "T-8103H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Mortal Kombat Trilogy",
+      "releaseDate": "1997-04-11",
+      "serial": "T-25414H-50",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Mr. Bones",
+      "releaseDate": "1997-03-13",
+      "serial": "MK81016-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Myst",
+      "releaseDate": "1995",
+      "serial": "MK81081-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Mystaria: The Realms of Lore",
+      "releaseDate": "1996-01-26",
+      "serial": "MK81300-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NASCAR 98",
+      "releaseDate": "1997",
+      "serial": "T-5028H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NBA Action",
+      "releaseDate": "1996-09-12",
+      "serial": "MK81103-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NBA Action 98",
+      "releaseDate": "1997-11",
+      "serial": "MK81124-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NBA Jam Extreme",
+      "releaseDate": "1996-12-06",
+      "serial": "T-8151H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NBA Jam Tournament Edition",
+      "releaseDate": "1995-12",
+      "serial": "T-8102H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NBA Live 97 (Saturn)",
+      "releaseDate": "1997-04-04",
+      "serial": "T-5015H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NBA Live 98 (Saturn)",
+      "releaseDate": "1997",
+      "serial": "T-5027H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NetLink Custom Web Browser",
+      "releaseDate": "1997",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "NFL Quarterback Club '96 (Saturn)",
+      "releaseDate": "1996-04-19",
+      "serial": "T-8109H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NFL Quarterback Club '97",
+      "releaseDate": "1996-08",
+      "serial": "T-8136H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NHL 97 (Saturn)",
+      "releaseDate": "1996-12-06",
+      "serial": "T-5016H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NHL 98 (Saturn)",
+      "releaseDate": "1998-01",
+      "serial": "T-5026H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NHL All-Star Hockey",
+      "releaseDate": "1995-11",
+      "serial": "MK81102-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NHL All-Star Hockey 98",
+      "releaseDate": "1998-01",
+      "serial": "MK81122-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "NHL Powerplay '96",
+      "releaseDate": "1997-05",
+      "serial": "T-7013H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Night Warriors: Darkstalkers' Revenge",
+      "releaseDate": "1996-10-04",
+      "serial": "T-7009H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "NiGHTS into Dreams",
+      "releaseDate": "1996-09-19",
+      "serial": "MK81020-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Off-World Interceptor Extreme",
+      "releaseDate": "1995-11",
+      "serial": "T-15908H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Olympic Soccer",
+      "releaseDate": "1996-08",
+      "serial": "T-7904H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Pacific Theater of Operations II",
+      "releaseDate": "",
+      "serial": "191506",
+      "rating": "ClassInd: Livre"
+    },
+    {
+      "title": "Pandemonium!",
+      "releaseDate": "1997-06-12",
+      "serial": "MK81090-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Panzer Dragoon",
+      "releaseDate": "1995-08-30",
+      "serial": "MK81009-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Panzer Dragoon Saga",
+      "releaseDate": "1998-04",
+      "serial": "MK81307-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Panzer Dragoon Zwei",
+      "releaseDate": "1996-05-10",
+      "serial": "81022-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Parodius",
+      "releaseDate": "1995-11",
+      "serial": "T-9501H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Pebble Beach Golf Links (Saturn)",
+      "releaseDate": "1995-08",
+      "serial": "MK81101-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "PGA Tour 97",
+      "releaseDate": "1996-12-06",
+      "serial": "T-5011H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Photo CD Operating System",
+      "releaseDate": "1995-10",
+      "serial": "MK81681-50",
+      "rating": ""
+    },
+    {
+      "title": "Pinball Graffiti",
+      "releaseDate": "1997",
+      "serial": "T-6011H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Powerslave",
+      "releaseDate": "1996-09-26",
+      "serial": "81084-50",
+      "rating": "ELSPA: 15+",
+      "altTitles": [
+        "Exhumed"
+      ]
+    },
+    {
+      "title": "Primal Rage",
+      "releaseDate": "1996-08",
+      "serial": "T-4802H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Pro-Pinball: The Web",
+      "releaseDate": "1996-08",
+      "serial": "T-30701H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Quake",
+      "releaseDate": "1997-11",
+      "serial": "MK81066-50",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Rampage World Tour",
+      "releaseDate": "1998",
+      "serial": "T-25416H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Rayman",
+      "releaseDate": "1995-11",
+      "serial": "T-17701H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Resident Evil",
+      "releaseDate": "1997-10",
+      "serial": "MK81092-50",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Revolution X",
+      "releaseDate": "1996-03-29",
+      "serial": "T-8107H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Rise 2 Resurrection",
+      "releaseDate": "1996-04-19",
+      "serial": "T-8114H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Riven: The Sequel to Myst",
+      "releaseDate": "1998-05-15",
+      "serial": "MK81801-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Road & Track Presents The Need for Speed",
+      "releaseDate": "1996-07-05",
+      "serial": "T-5009H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Road Rash (Saturn)",
+      "releaseDate": "1996-07-26",
+      "serial": "T-5008H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Robo Pit",
+      "releaseDate": "1996-11",
+      "serial": "T-10002H-50",
+      "rating": "USK: 12"
+    },
+    {
+      "title": "Robotica: Cybernation Revolt",
+      "releaseDate": "1995-11",
+      "serial": "MK81008-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Saturn Bomberman",
+      "releaseDate": "1997-05-01",
+      "serial": "MK81070-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Scorcher",
+      "releaseDate": "1997-05-15",
+      "serial": "MK81214-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sea Bass Fishing",
+      "releaseDate": "1996-09",
+      "serial": "T-6009H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sega Ages: Volume 1",
+      "releaseDate": "1996-12-19",
+      "serial": "MK81604-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sega International Victory Goal",
+      "releaseDate": "1995-07-08",
+      "serial": "MK-81105-50",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Worldwide Soccer"
+      ]
+    },
+    {
+      "title": "Sega Rally Championship",
+      "releaseDate": "1996-01-24",
+      "serial": "MK81207-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sega Touring Car Championship",
+      "releaseDate": "1997-11",
+      "serial": "MK81216-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sega Worldwide Soccer 97",
+      "releaseDate": "1996-10-17",
+      "serial": "MK81112-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sega Worldwide Soccer 98",
+      "releaseDate": "1997-10-16",
+      "serial": "MK81123-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Shellshock",
+      "releaseDate": "1996-04-19",
+      "serial": "T-11502H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Shining Force III",
+      "releaseDate": "1998-06-19",
+      "serial": "MK81383-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Shining the Holy Ark",
+      "releaseDate": "1997-06-19",
+      "serial": "MK81306-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Shining Wisdom",
+      "releaseDate": "1996-07-11",
+      "serial": "MK81381-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Shinobi Legions",
+      "releaseDate": "1995",
+      "serial": "MK81082-50",
+      "rating": "ELSPA: 11+",
+      "altTitles": [
+        "Shinobi X"
+      ]
+    },
+    {
+      "title": "Shockwave Assault",
+      "releaseDate": "1996-07-05",
+      "serial": "T-5005H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "SimCity 2000",
+      "releaseDate": "1995-12-08",
+      "serial": "MK81580-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Skeleton Warriors",
+      "releaseDate": "1996-09-04",
+      "serial": "T-7018H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sky Target",
+      "releaseDate": "1997-06-05",
+      "serial": "MK81051-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Slam 'n Jam '96 Featuring Magic & Kareem",
+      "releaseDate": "1996-07",
+      "serial": "T-15902H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sonic 3D: Flickies' Island",
+      "releaseDate": "1997-02-14",
+      "serial": "MK81062-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sonic Jam",
+      "releaseDate": "1997-08-21",
+      "serial": "MK81079-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Sonic R",
+      "releaseDate": "1997-11-21",
+      "serial": "MK81800-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Soviet Strike",
+      "releaseDate": "1997-02-21",
+      "serial": "T-5013H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Space Hulk: Vengeance of the Blood Angels",
+      "releaseDate": "1996-09-27",
+      "serial": "T-5007H-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Space Jam",
+      "releaseDate": "1997-03-14",
+      "serial": "T-8125H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Spot Goes to Hollywood (Saturn)",
+      "releaseDate": "1997",
+      "serial": "T-7001H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "StarFighter 3000",
+      "releaseDate": "1996-06-21",
+      "serial": "T-29701H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Steep Slope Sliders",
+      "releaseDate": "1998-02",
+      "serial": "MK81128-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Street Fighter Alpha 2",
+      "releaseDate": "1996-11-16",
+      "serial": "T-7026H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Street Fighter Alpha: Warriors' Dreams",
+      "releaseDate": "1996-05-22",
+      "serial": "T-7008H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Street Fighter Collection",
+      "releaseDate": "1998-03",
+      "serial": "T-7033H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Street Fighter: The Movie",
+      "releaseDate": "1995",
+      "serial": "T-8105H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Street Racer (Saturn)",
+      "releaseDate": "1996-11-16",
+      "serial": "T-17702H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Striker '96",
+      "releaseDate": "1996-07",
+      "serial": "T-8133H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Super Puzzle Fighter II Turbo",
+      "releaseDate": "1997-04",
+      "serial": "T-7030H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Swagman",
+      "releaseDate": "1997-04",
+      "serial": "T-11507H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Tempest 2000",
+      "releaseDate": "1997-03-20",
+      "serial": "T-12516H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Tetris Plus",
+      "releaseDate": "1997",
+      "serial": "T-5704H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "The Crow: City of Angels",
+      "releaseDate": "1997-02-26",
+      "serial": "T-8124H-50",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "The Horde",
+      "releaseDate": "1996",
+      "serial": "T-15909H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "The House of the Dead",
+      "releaseDate": "1998-04-10",
+      "serial": "MK81802-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "The Incredible Hulk: The Pantheon Saga",
+      "releaseDate": "1997",
+      "serial": "T-7905H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "The King of Fighters '95",
+      "releaseDate": "1997-07-26",
+      "serial": "MK81088-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "The Lost Vikings 2: Norse by Norsewest",
+      "releaseDate": "1997",
+      "serial": "T-12521H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "The Lost World: Jurassic Park (Saturn)",
+      "releaseDate": "1997-11",
+      "serial": "MK81065-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "The Mansion of Hidden Souls",
+      "releaseDate": "1995-11",
+      "serial": "MK81012-05",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "La Mansión de las Almas Ocultas",
+        "Le Manoir des Ames Perdues",
+        "Mystery Mansion: Das Haus Der Verlorenen Seelen"
+      ]
+    },
+    {
+      "title": "The Story of Thor 2",
+      "releaseDate": "1996-09-19",
+      "serial": "MK81302-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Theme Park",
+      "releaseDate": "1995-11",
+      "serial": "T-5001H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Three Dirty Dwarves",
+      "releaseDate": "1997-04-03",
+      "serial": "MK81033-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Thunderhawk II",
+      "releaseDate": "1995-12",
+      "serial": "T-11501H-50",
+      "rating": "ELSPA: 3+",
+      "altTitles": [
+        "Firestorm: Thunderhawk 2",
+        "Thunderhawk 2: Firestorm"
+      ]
+    },
+    {
+      "title": "Time Warner Interactive's VR Virtua Racing",
+      "releaseDate": "1995",
+      "serial": "T-4801H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Titan Wars",
+      "releaseDate": "1996-04-12",
+      "serial": "T-15911H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Tomb Raider",
+      "releaseDate": "1996-10-24",
+      "serial": "MK81086-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Torico",
+      "releaseDate": "1997-03-27",
+      "serial": "MK81053-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Trash It",
+      "releaseDate": "1997",
+      "serial": "T-25411H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "True Pinball",
+      "releaseDate": "1996-04-05",
+      "serial": "T-16406H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Tunnel B1",
+      "releaseDate": "1996-10-16",
+      "serial": "T-16414H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "UEFA Euro 96 England",
+      "releaseDate": "1996-05-30",
+      "serial": "MK81180-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Ultimate Mortal Kombat 3 (Saturn)",
+      "releaseDate": "1996-06",
+      "serial": "T-25403H-50",
+      "rating": "BBFC: 15"
+    },
+    {
+      "title": "Valora Valley Golf",
+      "releaseDate": "1996",
+      "serial": "T-2303H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Victory Boxing",
+      "releaseDate": "1995-11",
+      "serial": "T-6005H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtua Cop",
+      "releaseDate": "1995-12-08",
+      "serial": "MK81015-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtua Cop 2",
+      "releaseDate": "1996-11-28",
+      "serial": "MK81043-50",
+      "rating": "ELSPA: 15+"
+    },
+    {
+      "title": "Virtua Fighter",
+      "releaseDate": "1995-07-08",
+      "serial": "MK81005-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtua Fighter 2",
+      "releaseDate": "1996-01-26",
+      "serial": "MK81014-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtua Fighter Kids",
+      "releaseDate": "1996-10-03",
+      "serial": "MK81049-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtua Fighter Remix",
+      "releaseDate": "1995-10-06",
+      "serial": "MK81083-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtual Golf",
+      "releaseDate": "1996-02",
+      "serial": "T-11506H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtual Hydlide",
+      "releaseDate": "1995",
+      "serial": "MK81380-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Virtual Open Tennis",
+      "releaseDate": "1996-06-06",
+      "serial": "T-8129H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Warcraft II: The Dark Saga",
+      "releaseDate": "1997-07",
+      "serial": "T-5023H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "Whizz",
+      "releaseDate": "1997",
+      "serial": "T-9514H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Wing Arms",
+      "releaseDate": "1996-02",
+      "serial": "MK81024-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Winter Heat",
+      "releaseDate": "1998-02-13",
+      "serial": "MK81129-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Wipeout",
+      "releaseDate": "1996-03-29",
+      "serial": "T-11301H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Wipeout 2097",
+      "releaseDate": "1997-09",
+      "serial": "T-11308H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "World Cup Golf: Professional Edition",
+      "releaseDate": "1996-02",
+      "serial": "T-7903H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "World League Soccer '98",
+      "releaseDate": "1998-06-05",
+      "serial": "MK81181-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "World Series Baseball (Saturn)",
+      "releaseDate": "1995-11-17",
+      "serial": "MK81109-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "World Series Baseball II",
+      "releaseDate": "1996-11",
+      "serial": "MK81113-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Worms",
+      "releaseDate": "1996",
+      "serial": "T-16403H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "WWF In Your House",
+      "releaseDate": "1996-11-08",
+      "serial": "T-8126H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "WWF WrestleMania: The Arcade Game",
+      "releaseDate": "1996-06",
+      "serial": "T-8112H-50",
+      "rating": "ELSPA: 11+"
+    },
+    {
+      "title": "X-Men: Children of the Atom",
+      "releaseDate": "1996-04-12",
+      "serial": "T-8108H-50",
+      "rating": "ELSPA: 3+"
+    },
+    {
+      "title": "Z",
+      "releaseDate": "1998-04",
+      "serial": "T-25412H-50",
+      "rating": "ELSPA: 11+"
+    }
+  ]
+}

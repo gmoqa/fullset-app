@@ -74,15 +74,29 @@ class CatalogAssetsTest {
     }
 
     @Test
-    fun lasConsolasSegaTienenAmbasRegiones() {
-        // Lo que acabamos de cerrar: 8 consolas Sega con NTSC-U y NTSC-J (la SG-1000 solo salió
-        // en Japón, así que va con su única lista).
+    fun lasConsolasSegaCubrenLasTresRegiones() {
+        // Lo que cerramos: 8 consolas Sega con NTSC-U, NTSC-J y PAL. La SG-1000 es la excepción
+        // real: solo salió en Japón (en Europa su lugar lo ocupó el Master System).
         val sega = platforms().filter { it.name.startsWith("Sega") || it.name in setOf("Dreamcast", "SG-1000") }
         assertEquals(8, sega.size, "se esperaban 8 consolas Sega, hay ${sega.map { it.name }}")
         for (platform in sega) {
             assertTrue(platform.enabled, "${platform.name} debería estar habilitada")
-            val expected = if (platform.id == "sg-1000") setOf("NTSC-J") else setOf("NTSC-U", "NTSC-J")
+            val expected =
+                if (platform.id == "sg-1000") setOf("NTSC-J") else setOf("NTSC-U", "NTSC-J", "PAL")
             assertEquals(expected, platform.catalogs.keys, "regiones de ${platform.name}")
         }
+    }
+
+    @Test
+    fun palEstaSoportadaYCargaJuegos() {
+        // PAL estuvo declarada pero sin datos por mucho tiempo; ahora tiene catálogos de verdad.
+        assertTrue(RegionFilter.PAL.supported, "PAL debería estar soportada")
+        val genesis = platforms().first { it.id == "sega-genesis" }
+        val pal = catalog.entries(genesis, RegionFilter.PAL)
+        assertTrue(pal.size > 500, "Genesis PAL trajo solo ${pal.size} juegos")
+        // El catálogo PAL une Europa con Australia y Brasil (los Tec Toy en portugués), así que
+        // tiene títulos que no existen en la lista americana.
+        val usa = catalog.entries(genesis, RegionFilter.NTSC_U).map { it.slug }.toSet()
+        assertTrue(pal.any { it.slug !in usa }, "PAL no aporta ningún título propio")
     }
 }
