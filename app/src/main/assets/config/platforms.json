@@ -275,7 +275,7 @@
   {
     "id": "playstation-2",
     "name": "PlayStation 2",
-    "catalog": "catalogs/ps2-usa.json",
+    "catalog": "",
     "libretroRepo": "Sony_-_PlayStation_2",
     "enabled": false,
     "info": {

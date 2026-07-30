@@ -20,9 +20,10 @@ private data class CatalogEntryDto(
 /**
  * Lee los catálogos JSON empaquetados en assets y permite buscarlos. Las plataformas se declaran en
  * `config/platforms.json` (ver [PlatformRegistry]); agregar una consola es solo config + su JSON de
- * catálogo. Multiplataforma: los assets se leen con [readTextAsset] (expect/actual).
+ * catálogo. Multiplataforma: los assets se leen con [readTextAsset] (expect/actual), inyectable para
+ * poder testear el parseo real contra los catálogos del repo.
  */
-class GameCatalog {
+class GameCatalog(private val readAsset: (String) -> String? = ::readTextAsset) {
 
     private val cache = mutableMapOf<String, List<CatalogEntry>>()
 
@@ -32,7 +33,7 @@ class GameCatalog {
         return cache.getOrPut("${platform.id}:$file") {
             // Plataformas modernas (PS5…) no traen catálogo: se cargan a mano, sin lista que buscar.
             if (file.isBlank()) return@getOrPut emptyList()
-            val text = readTextAsset(file) ?: return@getOrPut emptyList()
+            val text = readAsset(file) ?: return@getOrPut emptyList()
             AppJson.decodeFromString<List<CatalogEntryDto>>(text)
                 .mapNotNull { dto ->
                     val title = dto.title.trim()

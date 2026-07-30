@@ -28,11 +28,16 @@ private data class PlatformInfoDto(
     val description: String = "",
 )
 
-/** Carga y consulta las plataformas declaradas en `config/platforms.json`. Multiplataforma. */
-class PlatformRegistry {
+/**
+ * Carga y consulta las plataformas declaradas en `config/platforms.json`. Multiplataforma.
+ *
+ * [readAsset] es inyectable para tests (leer los assets del repo desde la JVM); por defecto usa la
+ * frontera `expect/actual` real de cada plataforma.
+ */
+class PlatformRegistry(private val readAsset: (String) -> String? = ::readTextAsset) {
 
     private val platforms: List<Platform> by lazy {
-        val text = readTextAsset("config/platforms.json") ?: return@lazy emptyList()
+        val text = readAsset("config/platforms.json") ?: return@lazy emptyList()
         AppJson.decodeFromString<List<PlatformDto>>(text).map { dto ->
             // Soporta ambos formatos: el mapa `catalogs` nuevo, o el legacy `catalog` (= NTSC-U).
             val cats = dto.catalogs.ifEmpty {
