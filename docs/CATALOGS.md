@@ -36,27 +36,45 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 
 ### Estado por catálogo (auditado 2026-07-29)
 
-**Sega: cobertura completa.** Las 8 consolas, en NTSC-U y NTSC-J, con Sega Retro como fuente única
-vía API (`tools/local/segaretro_api.py`). Fechas ISO de precisión variable, catalog number y rating
-salen todos de ahí; la carátula de libretro-thumbnails prefiriendo la región.
+**Sega: cobertura completa.** Las 8 consolas × las 3 regiones (**6226 juegos**), con Sega Retro como
+fuente única vía API (`tools/local/segaretro_api.py`). Fechas ISO de precisión variable, catalog
+number y rating salen todos de ahí; la carátula de libretro-thumbnails prefiriendo la región.
 
-| Catálogo | Juegos | año/serial/cover | rating | Notas |
-|---|---|---|---|---|
-| `sg-1000-jp.json` | 79 | 100/98/91 | — | JP only (nunca salió fuera) |
-| `master-system-usa.json` | 114 | 100/94/92 | — | base Wikipedia + enriquecido |
-| `master-system-jp.json` | 84 | 98/96/83 | — | |
-| `genesis-usa.json` | 711 | 99/98/92 | 68% | el catálogo modelo |
-| `genesis-jp.json` | 435 | 99/99/87 | 3% | fechas al día |
-| `game-gear-usa.json` | 234 | 99/99/91 | 61% | |
-| `game-gear-jp.json` | 199 | 98/97/81 | 23% | |
-| `sega-cd-usa.json` | 146 | 100/97/93 | 83% | |
-| `sega-cd-jp.json` | 116 | 99/99/87 | 5% | |
-| `32x-usa.json` | 31 | 96/96/87 | 96% | |
-| `32x-jp.json` | 18 | 94/94/72 | 88% | |
-| `saturn-usa.json` | 251 | 99/100/92 | 99% | |
-| `saturn-jp.json` | 1091 | 99/99/79 | 88% | la biblioteca JP más grande |
-| `dreamcast-usa.json` | 248 | 100/93/99 | 90% | base Wikipedia + enriquecido |
-| `dreamcast-jp.json` | 545 | 99/94/77 | 91% | |
+| Catálogo | Juegos | año/serial/cover | rating |
+|---|---|---|---|
+| `sg-1000-jp.json` | 79 | 100/98/91 | — |
+| `master-system-usa.json` | 114 | 100/94/92 | — |
+| `master-system-jp.json` | 84 | 98/96/83 | — |
+| `master-system-eu.json` | 363 | 93/83/73 | 26% |
+| `genesis-usa.json` | 711 | 99/98/92 | 68% |
+| `genesis-jp.json` | 435 | 99/99/87 | 3% |
+| `genesis-eu.json` | 747 | 88/84/79 | 41% |
+| `game-gear-usa.json` | 234 | 99/99/91 | 61% |
+| `game-gear-jp.json` | 199 | 98/97/81 | 23% |
+| `game-gear-eu.json` | 208 | 95/97/87 | 32% |
+| `sega-cd-usa.json` | 146 | 100/97/93 | 83% |
+| `sega-cd-jp.json` | 116 | 99/99/87 | 5% |
+| `sega-cd-eu.json` | 109 | 90/97/93 | 68% |
+| `32x-usa.json` | 31 | 96/96/87 | 96% |
+| `32x-jp.json` | 18 | 94/94/72 | 88% |
+| `32x-eu.json` | 26 | 96/96/92 | 96% |
+| `saturn-usa.json` | 251 | 99/100/92 | 99% |
+| `saturn-jp.json` | 1091 | 99/99/79 | 88% |
+| `saturn-eu.json` | 247 | 98/98/94 | 98% |
+| `dreamcast-usa.json` | 248 | 100/93/99 | 93% |
+| `dreamcast-jp.json` | 545 | 99/94/77 | 91% |
+| `dreamcast-eu.json` | 224 | 97/97/94 | 96% |
+
+Dos cosas que sorprenden y son correctas: **Master System PAL (363) triplica al americano (114)** —
+en Europa y Brasil fue *la* consola de Sega, no el Genesis; y **Saturn JP (1091) cuadruplica al
+americano** — la Saturn se vendió sobre todo en Japón.
+
+**La clasificación depende de quién clasifica.** El mismo código significa cosas distintas por
+territorio y época, así que se normaliza con ambos datos: `12` es **USK** en Alemania, **ClassInd**
+en Brasil y **ELSPA/PEGI** en el resto de Europa. Ojo con la época: **PEGI recién existe desde 2003**,
+o sea después de toda la era que catalogamos (la Dreamcast se discontinuó en 2001), así que lo
+europeo es ELSPA salvo lanzamientos tardíos. En Japón, antes de CERO (2002) regía la autorregulación
+de Sega: 全年齢 (todas las edades), 18禁 y la marca X. En EE.UU., VRC hasta 1994 y ESRB después.
 
 **No-Sega (pendientes de una fuente con procedencia — ver roadmap E):**
 
@@ -140,10 +158,18 @@ mapea la consola a sus catálogos: `"catalogs": { "NTSC-U": "…usa.json", "NTSC
 a NTSC-U** cuando esa región no tiene lista. `GameCatalog` carga/cachea por archivo; `RegionFilter`
 (Settings) elige la región activa y la app muestra ese catálogo en Add-game y el timeline.
 
-**Estado:** **todas las consolas Sega tienen NTSC-U y NTSC-J reales** (la SG-1000 solo NTSC-J: nunca
-salió de Japón). Las no-Sega (NES, SNES, N64, PSX) siguen solo con NTSC-U y caen a esa lista en modo
-JP. `catalogFor` cae a cualquier catálogo disponible cuando la región pedida no tiene lista ni hay
-default, para que una consola de una sola región no se vea vacía.
+**Estado:** **todas las consolas Sega tienen las tres regiones** (la SG-1000 solo NTSC-J: nunca salió
+de Japón — en Europa su lugar lo ocupó el Master System). Las no-Sega (NES, SNES, N64, PSX) siguen
+solo con NTSC-U y caen a esa lista en las otras regiones. `catalogFor` cae a cualquier catálogo
+disponible cuando la región pedida no tiene lista ni hay default, para que una consola de una sola
+región no se vea vacía.
+
+**PAL = unión de territorios, no un país.** Sega Retro separa Europa por país, pero cada país es
+casi siempre la distribución local del lanzamiento paneuropeo (95%+ de cada uno cae dentro de `EU`):
+un archivo por país sería el mismo listado repetido doce veces. Así que PAL se arma como la **unión**
+de `EU` + los países europeos + Australia + Brasil. `EU` aporta el grueso y cada país sus exclusivos:
+Australia 55 y sobre todo **Brasil 77**, los Tec Toy en portugués que no salieron en ningún otro lado.
+Brasil es técnicamente PAL-M (60 Hz), pero va acá porque sus juegos no existen en ninguna otra lista.
 
 **Dirección — datos por país, selector por región.** El `catalogs` map tiene **key de texto libre**, así
 que soporta granularidad de **país** sin cambiar el modelo (Sega Retro separa Europa en UK/Francia/
@@ -173,11 +199,12 @@ claves nuevas no rompe nada.
 - **C. Evolución de esquema** — precisión de fecha + confianza (aditivo, backward-compatible).
 - **D. Pipeline de corrección con procedencia** — overrides con `_source`/`_note`/`_date`; lint valida;
   report muestra confirmado vs auto.
-- **E. Cerrar huecos** — **Sega cerrado** ✅ (8 consolas × 2 regiones desde Sega Retro). Queda:
+- **E. Cerrar huecos** — **Sega cerrado** ✅ (8 consolas × 3 regiones desde Sega Retro). Queda:
   documentar la procedencia de **SNES** (sin builder), editora 0% en los catálogos Sega (Sega Retro
   no la trae en `releases`: hace falta una 2da fuente), y los faltantes **GameCube, PS2, PS3**.
-- **F. Eje de región** — NTSC-U/NTSC-J listo en todo Sega ✅. Falta **PAL**, que Sega Retro separa
-  por país (UK/Francia/Alemania/España/Australia/Brasil): datos por país, selector por región.
+- **F. Eje de región** — **cerrado para Sega** ✅: NTSC-U, NTSC-J y PAL en las 8 consolas. Si alguna
+  vez se quiere drill-down por país dentro de PAL, el modelo lo soporta (la key del mapa `catalogs`
+  es texto libre); hoy no compensa porque los países son 95% el mismo listado.
 
 ## Herramientas
 
