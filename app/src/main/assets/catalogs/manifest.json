@@ -1,13 +1,79 @@
 [
   {
+    "file": "32x-jp.json",
+    "platform": "Sega 32X",
+    "games": 18,
+    "coverage": {
+      "year": 94,
+      "publisher": 0,
+      "serial": 94,
+      "coverUrl": 72
+    }
+  },
+  {
+    "file": "32x-usa.json",
+    "platform": "Sega 32X",
+    "games": 31,
+    "coverage": {
+      "year": 96,
+      "publisher": 0,
+      "serial": 96,
+      "coverUrl": 87
+    }
+  },
+  {
+    "file": "dreamcast-jp.json",
+    "platform": "Dreamcast",
+    "games": 545,
+    "coverage": {
+      "year": 99,
+      "publisher": 0,
+      "serial": 94,
+      "coverUrl": 77
+    }
+  },
+  {
     "file": "dreamcast-usa.json",
     "platform": "Dreamcast",
     "games": 248,
     "coverage": {
       "year": 100,
       "publisher": 100,
-      "serial": 0,
+      "serial": 93,
       "coverUrl": 99
+    }
+  },
+  {
+    "file": "game-gear-jp.json",
+    "platform": "Sega Game Gear",
+    "games": 199,
+    "coverage": {
+      "year": 98,
+      "publisher": 0,
+      "serial": 97,
+      "coverUrl": 81
+    }
+  },
+  {
+    "file": "game-gear-usa.json",
+    "platform": "Sega Game Gear",
+    "games": 234,
+    "coverage": {
+      "year": 99,
+      "publisher": 0,
+      "serial": 99,
+      "coverUrl": 91
+    }
+  },
+  {
+    "file": "genesis-jp.json",
+    "platform": "Sega Genesis",
+    "games": 435,
+    "coverage": {
+      "year": 99,
+      "publisher": 0,
+      "serial": 99,
+      "coverUrl": 87
     }
   },
   {
@@ -15,10 +81,21 @@
     "platform": "Sega Genesis",
     "games": 711,
     "coverage": {
-      "year": 90,
+      "year": 99,
       "publisher": 0,
-      "serial": 49,
-      "coverUrl": 91
+      "serial": 98,
+      "coverUrl": 92
+    }
+  },
+  {
+    "file": "master-system-jp.json",
+    "platform": "Sega Master System",
+    "games": 84,
+    "coverage": {
+      "year": 98,
+      "publisher": 0,
+      "serial": 96,
+      "coverUrl": 83
     }
   },
   {
@@ -28,7 +105,7 @@
     "coverage": {
       "year": 100,
       "publisher": 100,
-      "serial": 40,
+      "serial": 94,
       "coverUrl": 92
     }
   },
@@ -63,6 +140,61 @@
       "publisher": 100,
       "serial": 0,
       "coverUrl": 87
+    }
+  },
+  {
+    "file": "saturn-jp.json",
+    "platform": "Sega Saturn",
+    "games": 1091,
+    "coverage": {
+      "year": 99,
+      "publisher": 0,
+      "serial": 99,
+      "coverUrl": 79
+    }
+  },
+  {
+    "file": "saturn-usa.json",
+    "platform": "Sega Saturn",
+    "games": 251,
+    "coverage": {
+      "year": 99,
+      "publisher": 0,
+      "serial": 100,
+      "coverUrl": 92
+    }
+  },
+  {
+    "file": "sega-cd-jp.json",
+    "platform": "Sega CD",
+    "games": 116,
+    "coverage": {
+      "year": 99,
+      "publisher": 0,
+      "serial": 99,
+      "coverUrl": 87
+    }
+  },
+  {
+    "file": "sega-cd-usa.json",
+    "platform": "Sega CD",
+    "games": 146,
+    "coverage": {
+      "year": 100,
+      "publisher": 0,
+      "serial": 97,
+      "coverUrl": 93
+    }
+  },
+  {
+    "file": "sg-1000-jp.json",
+    "platform": "SG-1000",
+    "games": 79,
+    "coverage": {
+      "year": 100,
+      "publisher": 0,
+      "serial": 98,
+      "coverUrl": 91
     }
   },
   {

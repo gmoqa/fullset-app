@@ -1,2617 +1,3076 @@
 {
- "source": "Sega Retro",
- "url": "https://segaretro.org/List_of_Mega_Drive_games_in_Japan",
- "region": "NTSC-J",
- "games": [
-  {
-   "title": "007 Shitou",
-   "releaseDate": "1993-05-14",
-   "serial": "T-48073",
-   "rating": ""
-  },
-  {
-   "title": "A Ressha de Ikou MD",
-   "releaseDate": "1992-04-10",
-   "serial": "G-4532",
-   "rating": ""
-  },
-  {
-   "title": "Aa Harimanada",
-   "releaseDate": "1993-09-03",
-   "serial": "G-4086",
-   "rating": ""
-  },
-  {
-   "title": "Advanced Busterhawk Gley Lancer",
-   "releaseDate": "1992-07-17",
-   "serial": "T-25123",
-   "rating": ""
-  },
-  {
-   "title": "Advanced Daisenryaku: Deutsch Dengeki Sakusen",
-   "releaseDate": "1991-06-17",
-   "serial": "G-5505",
-   "rating": ""
-  },
-  {
-   "title": "Aero Blasters",
-   "releaseDate": "1991-01-31",
-   "serial": "T-33013",
-   "rating": ""
-  },
-  {
-   "title": "After Burner II",
-   "releaseDate": "1990-03-23",
-   "serial": "T-17013",
-   "rating": ""
-  },
-  {
-   "title": "Air Diver",
-   "releaseDate": "1990-03-09",
-   "serial": "T-20023",
-   "rating": ""
-  },
-  {
-   "title": "Air Management II: Koukuuou o Mezase",
-   "releaseDate": "1994-02-18",
-   "serial": "T-76143",
-   "rating": ""
-  },
-  {
-   "title": "Air Management: Oozora ni Kakeru",
-   "releaseDate": "1992-11-01",
-   "serial": "T-76083",
-   "rating": ""
-  },
-  {
-   "title": "Alex Kidd: Tenkuu Majou",
-   "releaseDate": "1989-02-10",
-   "serial": "G-4004",
-   "rating": ""
-  },
-  {
-   "title": "Alien Soldier",
-   "releaseDate": "1995-02-24",
-   "serial": "G-4130",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Alien Storm",
-   "releaseDate": "1991-06-28",
-   "serial": "G-4048",
-   "rating": ""
-  },
-  {
-   "title": "Alisia Dragoon",
-   "releaseDate": "1992-04-24",
-   "serial": "T-45033",
-   "rating": ""
-  },
-  {
-   "title": "Aoki Ookami to Shiroki Meshika: Genchou Hishi",
-   "releaseDate": "1993-03-25",
-   "serial": "T-76103",
-   "rating": ""
-  },
-  {
-   "title": "Arcus Odyssey",
-   "releaseDate": "1991-06-14",
-   "serial": "T-32053",
-   "rating": ""
-  },
-  {
-   "title": "Arrow Flash",
-   "releaseDate": "1990-10-20",
-   "serial": "G-4039",
-   "rating": ""
-  },
-  {
-   "title": "Art Alive!",
-   "releaseDate": "1992-03-27",
-   "serial": "G-4069",
-   "rating": ""
-  },
-  {
-   "title": "Atomic Robo-Kid",
-   "releaseDate": "1990-12-14",
-   "serial": "T-24013",
-   "rating": ""
-  },
-  {
-   "title": "Awesome Possum Kicks Dr. Machino's Butt!",
-   "releaseDate": "1993-12-25",
-   "serial": "T-48153",
-   "rating": ""
-  },
-  {
-   "title": "Ayrton Senna's Super Monaco GP II",
-   "releaseDate": "1992-07-17",
-   "serial": "G-5514",
-   "rating": ""
-  },
-  {
-   "title": "Bad Omen",
-   "releaseDate": "1992-04-24",
-   "serial": "T-28043",
-   "rating": ""
-  },
-  {
-   "title": "Bahamut Senki",
-   "releaseDate": "1991-03-08",
-   "serial": "G-4520",
-   "rating": ""
-  },
-  {
-   "title": "Ball Jacks",
-   "releaseDate": "1993-04-23",
-   "serial": "T-14163",
-   "rating": ""
-  },
-  {
-   "title": "Bare Knuckle II: Shitou e no Requiem",
-   "releaseDate": "1993-01-14",
-   "serial": "G-4091",
-   "rating": ""
-  },
-  {
-   "title": "Bare Knuckle III",
-   "releaseDate": "1994-03-18",
-   "serial": "G-4116",
-   "rating": ""
-  },
-  {
-   "title": "Bare Knuckle: Ikari no Tekken",
-   "releaseDate": "1991-08-02",
-   "serial": "G-4050",
-   "rating": ""
-  },
-  {
-   "title": "Batman",
-   "releaseDate": "1990-07-27",
-   "serial": "T-15043",
-   "rating": ""
-  },
-  {
-   "title": "Batman Forever",
-   "releaseDate": "1995-10-27",
-   "serial": "T-81223",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Batman Returns",
-   "releaseDate": "1993-02-19",
-   "serial": "G-4092",
-   "rating": ""
-  },
-  {
-   "title": "Battle Golfer Yui",
-   "releaseDate": "1991-02-15",
-   "serial": "G-4040",
-   "rating": ""
-  },
-  {
-   "title": "Battle Mania",
-   "releaseDate": "1992-03-06",
-   "serial": "T-23013",
-   "rating": ""
-  },
-  {
-   "title": "Battle Mania Daiginjou",
-   "releaseDate": "1993-12-24",
-   "serial": "T-23043",
-   "rating": ""
-  },
-  {
-   "title": "Battletoads",
-   "releaseDate": "1993-03-26",
-   "serial": "G-4074",
-   "rating": ""
-  },
-  {
-   "title": "Beast Warriors",
-   "releaseDate": "1991-11-29",
-   "serial": "T-49053",
-   "rating": ""
-  },
-  {
-   "title": "Bishoujo Senshi Sailor Moon",
-   "releaseDate": "1994-07-08",
-   "serial": "T-16043",
-   "rating": ""
-  },
-  {
-   "title": "Blockout",
-   "releaseDate": "1991-11-01",
-   "serial": "G-4059",
-   "rating": ""
-  },
-  {
-   "title": "Blue Almanac",
-   "releaseDate": "1991-06-22",
-   "serial": "T-46013",
-   "rating": ""
-  },
-  {
-   "title": "Bonanza Bros.",
-   "releaseDate": "1991-05-17",
-   "serial": "G-4046",
-   "rating": ""
-  },
-  {
-   "title": "Boogie Woogie Bowling",
-   "releaseDate": "1993-12-17",
-   "serial": "T-58033",
-   "rating": ""
-  },
-  {
-   "title": "Burning Force",
-   "releaseDate": "1990-10-19",
-   "serial": "T-14023",
-   "rating": ""
-  },
-  {
-   "title": "Caesar no Yabou",
-   "releaseDate": "1991-02-24",
-   "serial": "T-22033",
-   "rating": ""
-  },
-  {
-   "title": "Caesar no Yabou II",
-   "releaseDate": "1992-05-28",
-   "serial": "T-22063",
-   "rating": ""
-  },
-  {
-   "title": "Captain Lang",
-   "releaseDate": "1994-04-22",
-   "serial": "T-13103",
-   "rating": ""
-  },
-  {
-   "title": "CD-ROM Multi Seminar Onsei Kaiseki Hakei Hyouji Cartridge",
-   "releaseDate": "",
-   "serial": "",
-   "rating": ""
-  },
-  {
-   "title": "Chameleon Kid",
-   "releaseDate": "1992-05-29",
-   "serial": "G-4070",
-   "rating": ""
-  },
-  {
-   "title": "Champions World Class Soccer",
-   "releaseDate": "1994-06-24",
-   "serial": "T-81063",
-   "rating": ""
-  },
-  {
-   "title": "Chelnov",
-   "releaseDate": "1992-10-16",
-   "serial": "T-13073",
-   "rating": ""
-  },
-  {
-   "title": "Chibi Maruko-chan: Waku Waku Shopping",
-   "releaseDate": "1992-01-14",
-   "serial": "T-14123",
-   "rating": ""
-  },
-  {
-   "title": "Chiki Chiki Boys",
-   "releaseDate": "1992-10-16",
-   "serial": "G-4083",
-   "rating": ""
-  },
-  {
-   "title": "Chou Kyuukai Miracle Nine",
-   "releaseDate": "1995-07-21",
-   "serial": "G-5546",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Chou Touryuu Retsuden Dino Land",
-   "releaseDate": "1991-08-02",
-   "serial": "T-32043",
-   "rating": ""
-  },
-  {
-   "title": "Chuck Rock II",
-   "releaseDate": "1994-06-24",
-   "serial": "T-70063",
-   "rating": ""
-  },
-  {
-   "title": "Columns",
-   "releaseDate": "1990-06-30",
-   "serial": "G-4035",
-   "rating": ""
-  },
-  {
-   "title": "Columns III: Taiketsu! Columns World",
-   "releaseDate": "1993-10-15",
-   "serial": "G-4108",
-   "rating": ""
-  },
-  {
-   "title": "Comix Zone",
-   "releaseDate": "1995-09-01",
-   "serial": "G-4132",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Contra: The Hard Corps",
-   "releaseDate": "1994-09-15",
-   "serial": "T-95093",
-   "rating": ""
-  },
-  {
-   "title": "Cool Spot",
-   "releaseDate": "1994-02-18",
-   "serial": "T-70013",
-   "rating": ""
-  },
-  {
-   "title": "Crack Down",
-   "releaseDate": "1990-12-20",
-   "serial": "G-4024",
-   "rating": ""
-  },
-  {
-   "title": "Crayon Shin-chan: Arashi o Yobu Enji",
-   "releaseDate": "1994-03-11",
-   "serial": "T-16033",
-   "rating": ""
-  },
-  {
-   "title": "Crude Buster",
-   "releaseDate": "1992-02-28",
-   "serial": "T-13063",
-   "rating": ""
-  },
-  {
-   "title": "Crying: Aseimei Sensou",
-   "releaseDate": "1992-10-30",
-   "serial": "G-4087",
-   "rating": ""
-  },
-  {
-   "title": "Crüe Ball",
-   "releaseDate": "1993-12-26",
-   "serial": "EM20005",
-   "rating": ""
-  },
-  {
-   "title": "Curse",
-   "releaseDate": "1989-12-23",
-   "serial": "T-22013",
-   "rating": ""
-  },
-  {
-   "title": "Cutie Suzuki no Ringside Angel",
-   "releaseDate": "1990-12-12",
-   "serial": "T-20033",
-   "rating": ""
-  },
-  {
-   "title": "CyberBall",
-   "releaseDate": "1990-07-28",
-   "serial": "G-4027",
-   "rating": ""
-  },
-  {
-   "title": "Dahna Megami Tanjou",
-   "releaseDate": "1991-12-20",
-   "serial": "T-64013",
-   "rating": ""
-  },
-  {
-   "title": "Daikoukai Jidai",
-   "releaseDate": "1992-04-29",
-   "serial": "T-76053",
-   "rating": ""
-  },
-  {
-   "title": "Daikoukai Jidai II",
-   "releaseDate": "1994-06-24",
-   "serial": "T-76163",
-   "rating": ""
-  },
-  {
-   "title": "Daimakaimura",
-   "releaseDate": "1989-08-03",
-   "serial": "G-4013",
-   "rating": ""
-  },
-  {
-   "title": "Daisenpuu",
-   "releaseDate": "1990-06-23",
-   "serial": "G-4034",
-   "rating": ""
-  },
-  {
-   "title": "Dangerous Seed",
-   "releaseDate": "1990-12-18",
-   "serial": "T-14033",
-   "rating": ""
-  },
-  {
-   "title": "Darius II",
-   "releaseDate": "1990-12-20",
-   "serial": "T-11083",
-   "rating": ""
-  },
-  {
-   "title": "Darwin 4081",
-   "releaseDate": "1990-04-07",
-   "serial": "G-4033",
-   "rating": ""
-  },
-  {
-   "title": "David Robinson Basketball",
-   "releaseDate": "1992-07-10",
-   "serial": "G-4071",
-   "rating": ""
-  },
-  {
-   "title": "Davis Cup Tennis",
-   "releaseDate": "1994-02-25",
-   "serial": "T-48163",
-   "rating": ""
-  },
-  {
-   "title": "Desert Strike: Wangan Sakusen",
-   "releaseDate": "1993-04-23",
-   "serial": "EM20010",
-   "rating": ""
-  },
-  {
-   "title": "Devil Crash MD",
-   "releaseDate": "1991-10-10",
-   "serial": "T-18053",
-   "rating": ""
-  },
-  {
-   "title": "Dial Q o Mawase!",
-   "releaseDate": "1992",
-   "serial": "AMMDR-01",
-   "rating": ""
-  },
-  {
-   "title": "Dick Tracy",
-   "releaseDate": "1991-03-01",
-   "serial": "G-4044",
-   "rating": ""
-  },
-  {
-   "title": "Disney's Aladdin",
-   "releaseDate": "1993-11-12",
-   "serial": "G-4111",
-   "rating": ""
-  },
-  {
-   "title": "Divine Sealing",
-   "releaseDate": "1992-05",
-   "serial": "",
-   "rating": ""
-  },
-  {
-   "title": "DJ Boy",
-   "releaseDate": "1990-05-19",
-   "serial": "G-4032",
-   "rating": ""
-  },
-  {
-   "title": "Doraemon Yume Dorobou to 7 Nin no Gozans",
-   "releaseDate": "1993-03-26",
-   "serial": "G-4094",
-   "rating": ""
-  },
-  {
-   "title": "Double Dragon II: The Revenge",
-   "releaseDate": "1991-12-20",
-   "serial": "T-74023",
-   "rating": ""
-  },
-  {
-   "title": "Dragon Ball Z: Buyū Retsuden",
-   "releaseDate": "1994-04-01",
-   "serial": "T-133013",
-   "rating": ""
-  },
-  {
-   "title": "Dragon Slayer: The Legend of Heroes",
-   "releaseDate": "1994-09-16",
-   "serial": "G-5542",
-   "rating": ""
-  },
-  {
-   "title": "Dragon Slayer: The Legend of Heroes II",
-   "releaseDate": "1995-01-20",
-   "serial": "G-5544",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Dragon's Eye Plus: Shanghai III",
-   "releaseDate": "1991-11-02",
-   "serial": "T-67023",
-   "rating": ""
-  },
-  {
-   "title": "Dragon's Revenge",
-   "releaseDate": "1993-12-10",
-   "serial": "T-48143",
-   "rating": ""
-  },
-  {
-   "title": "Dream Team USA",
-   "releaseDate": "1992-12-26",
-   "serial": "EM20004",
-   "rating": ""
-  },
-  {
-   "title": "Dyna Brothers",
-   "releaseDate": "1992-07-24",
-   "serial": "T-68033",
-   "rating": ""
-  },
-  {
-   "title": "Dyna Brothers 2",
-   "releaseDate": "1993-12-03",
-   "serial": "T-68063",
-   "rating": ""
-  },
-  {
-   "title": "Dynamite Duke",
-   "releaseDate": "1990-10-27",
-   "serial": "G-4038",
-   "rating": ""
-  },
-  {
-   "title": "Dynamite Headdy",
-   "releaseDate": "1994-08-05",
-   "serial": "G-4117",
-   "rating": ""
-  },
-  {
-   "title": "Ecco the Dolphin",
-   "releaseDate": "1993-07-30",
-   "serial": "G-4106",
-   "rating": ""
-  },
-  {
-   "title": "Ecco the Dolphin II",
-   "releaseDate": "1994-08-26",
-   "serial": "G-4123",
-   "rating": ""
-  },
-  {
-   "title": "El Viento",
-   "releaseDate": "1991-09-20",
-   "serial": "T-32063",
-   "rating": ""
-  },
-  {
-   "title": "Elemental Master",
-   "releaseDate": "1990-12-14",
-   "serial": "T-18043",
-   "rating": ""
-  },
-  {
-   "title": "Eliminate Down",
-   "releaseDate": "1993-06-25",
-   "serial": "T-73033",
-   "rating": ""
-  },
-  {
-   "title": "ESWAT: City Under Siege",
-   "releaseDate": "1990-07-14",
-   "serial": "G-4029",
-   "rating": ""
-  },
-  {
-   "title": "Eternal Champions",
-   "releaseDate": "1994-02-18",
-   "serial": "G-4114",
-   "rating": ""
-  },
-  {
-   "title": "Europa Sensen",
-   "releaseDate": "1993-01-16",
-   "serial": "T-76113",
-   "rating": ""
-  },
-  {
-   "title": "Evander Holyfield Boxing",
-   "releaseDate": "1992-10-30",
-   "serial": "G-4084",
-   "rating": ""
-  },
-  {
-   "title": "Ex-Ranza",
-   "releaseDate": "1993-05-28",
-   "serial": "G-4097",
-   "rating": ""
-  },
-  {
-   "title": "Exile: Toki no Hazama he",
-   "releaseDate": "1991-12-06",
-   "serial": "T-49093",
-   "rating": ""
-  },
-  {
-   "title": "F-117 Stealth Operation: Night Storm",
-   "releaseDate": "1994-05-27",
-   "serial": "EM20029",
-   "rating": ""
-  },
-  {
-   "title": "F-22 Interceptor: Advanced Tactical Fighter",
-   "releaseDate": "1993-02-12",
-   "serial": "EM20007",
-   "rating": ""
-  },
-  {
-   "title": "F1 Circus MD",
-   "releaseDate": "1991-12-20",
-   "serial": "T-71013",
-   "rating": ""
-  },
-  {
-   "title": "Fantasia: Mickey Mouse Magic",
-   "releaseDate": "1991-11-22",
-   "serial": "G-4061",
-   "rating": ""
-  },
-  {
-   "title": "Fastest 1",
-   "releaseDate": "1991-06-28",
-   "serial": "T-43023",
-   "rating": ""
-  },
-  {
-   "title": "Fatman",
-   "releaseDate": "1990-10-12",
-   "serial": "T-44013",
-   "rating": ""
-  },
-  {
-   "title": "FIFA International Soccer",
-   "releaseDate": "1994-06-10",
-   "serial": "EM20030",
-   "rating": ""
-  },
-  {
-   "title": "Fighting Masters",
-   "releaseDate": "1991-12-06",
-   "serial": "T-24063",
-   "rating": ""
-  },
-  {
-   "title": "Final Blow",
-   "releaseDate": "1990-03-23",
-   "serial": "T-11033",
-   "rating": ""
-  },
-  {
-   "title": "Fire Mustang",
-   "releaseDate": "1991-05-31",
-   "serial": "T-11123",
-   "rating": ""
-  },
-  {
-   "title": "Flashback",
-   "releaseDate": "1993-12-29",
-   "serial": "T-15083",
-   "rating": ""
-  },
-  {
-   "title": "Foreman for Real",
-   "releaseDate": "1995-10-27",
-   "serial": "T-81233",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Forgotten Worlds",
-   "releaseDate": "1989-11-18",
-   "serial": "G-4016",
-   "rating": ""
-  },
-  {
-   "title": "From TV Animation Slam Dunk: Kyougou Makkou Taiketsu!",
-   "releaseDate": "1995-04-28",
-   "serial": "T-133023",
-   "rating": ""
-  },
-  {
-   "title": "Fushigi no Umi no Nadia",
-   "releaseDate": "1991-03-19",
-   "serial": "T-14083",
-   "rating": ""
-  },
-  {
-   "title": "FZ Senki Axis",
-   "releaseDate": "1990-10-12",
-   "serial": "T-32013",
-   "rating": ""
-  },
-  {
-   "title": "G-LOC: Air Battle",
-   "releaseDate": "1993-02-26",
-   "serial": "G-4079",
-   "rating": ""
-  },
-  {
-   "title": "Gaiares",
-   "releaseDate": "1990-12-26",
-   "serial": "T-49013",
-   "rating": ""
-  },
-  {
-   "title": "Gain Ground",
-   "releaseDate": "1991-01-03",
-   "serial": "G-4036",
-   "rating": ""
-  },
-  {
-   "title": "Galaxy Force II",
-   "releaseDate": "1991-09-13",
-   "serial": "T-68013",
-   "rating": ""
-  },
-  {
-   "title": "Gambler Jiko Chuushinha: Katayama Masayuki no Mahjong Doujou",
-   "releaseDate": "1990-12-14",
-   "serial": "T-45013",
-   "rating": ""
-  },
-  {
-   "title": "Garou Densetsu 2: Aratanaru Tatakai",
-   "releaseDate": "1994-06-24",
-   "serial": "T-146023",
-   "rating": ""
-  },
-  {
-   "title": "Garou Densetsu: Shukumei no Tatakai",
-   "releaseDate": "1993-04-23",
-   "serial": "G-4100",
-   "rating": ""
-  },
-  {
-   "title": "Gauntlet",
-   "releaseDate": "1993-09-17",
-   "serial": "T-48123",
-   "rating": ""
-  },
-  {
-   "title": "General Chaos Daikonsen",
-   "releaseDate": "1994-01-14",
-   "serial": "EM20025",
-   "rating": ""
-  },
-  {
-   "title": "Ghostbusters",
-   "releaseDate": "1990-06-30",
-   "serial": "G-4030",
-   "rating": ""
-  },
-  {
-   "title": "Go Net",
-   "releaseDate": "1992",
-   "serial": "G-4533",
-   "rating": ""
-  },
-  {
-   "title": "Gods",
-   "releaseDate": "1993-03-26",
-   "serial": "T-85013",
-   "rating": ""
-  },
-  {
-   "title": "Golden Axe",
-   "releaseDate": "1989-12-23",
-   "serial": "G-4018",
-   "rating": ""
-  },
-  {
-   "title": "Golden Axe II",
-   "releaseDate": "1991-12-27",
-   "serial": "G-4062",
-   "rating": ""
-  },
-  {
-   "title": "Golden Axe III",
-   "releaseDate": "1993-06-25",
-   "serial": "G-4093",
-   "rating": ""
-  },
-  {
-   "title": "Gouketsuji Ichizoku",
-   "releaseDate": "1994-11-18",
-   "serial": "T-144013",
-   "rating": ""
-  },
-  {
-   "title": "Granada",
-   "releaseDate": "1990-11-16",
-   "serial": "T-32023",
-   "rating": ""
-  },
-  {
-   "title": "GrandSlam: The Tennis Tournament '92",
-   "releaseDate": "1992-06-12",
-   "serial": "T-49133",
-   "rating": ""
-  },
-  {
-   "title": "Greatest Heavyweights",
-   "releaseDate": "1994-05-27",
-   "serial": "G-5539",
-   "rating": ""
-  },
-  {
-   "title": "Gunstar Heroes",
-   "releaseDate": "1993-09-10",
-   "serial": "G-4103",
-   "rating": ""
-  },
-  {
-   "title": "Gynoug",
-   "releaseDate": "1991-01-25",
-   "serial": "T-25093",
-   "rating": ""
-  },
-  {
-   "title": "Hard Drivin'",
-   "releaseDate": "1990-12-21",
-   "serial": "T-48013",
-   "rating": ""
-  },
-  {
-   "title": "Heavy Unit: Mega Drive Special",
-   "releaseDate": "1990-12-26",
-   "serial": "T-27013",
-   "rating": ""
-  },
-  {
-   "title": "Hellfire",
-   "releaseDate": "1990-09-28",
-   "serial": "T-25073",
-   "rating": ""
-  },
-  {
-   "title": "Herzog Zwei",
-   "releaseDate": "1989-12-15",
-   "serial": "T-18023",
-   "rating": ""
-  },
-  {
-   "title": "Hokuto no Ken: Shin Seikimatsu Kyuuseishu Densetsu",
-   "releaseDate": "1989-07-01",
-   "serial": "G-4012",
-   "rating": ""
-  },
-  {
-   "title": "Honoo no Toukyuuji Dodge Danpei",
-   "releaseDate": "1992-07-10",
-   "serial": "G-4076",
-   "rating": ""
-  },
-  {
-   "title": "Hyokkori Hyoutanjima: Daitouryou o Mezase!",
-   "releaseDate": "1992-08-07",
-   "serial": "G-4075",
-   "rating": ""
-  },
-  {
-   "title": "Hyper Dunk: The Playoff Edition",
-   "releaseDate": "1994-03-04",
-   "serial": "T-95083",
-   "rating": ""
-  },
-  {
-   "title": "I Love Donald Duck: Gurujia Ou no Hihou",
-   "releaseDate": "1991-12-20",
-   "serial": "G-4054",
-   "rating": ""
-  },
-  {
-   "title": "I Love Mickey and Donald: Fushigi na Magic Box",
-   "releaseDate": "1992-12-18",
-   "serial": "G-4080",
-   "rating": ""
-  },
-  {
-   "title": "I Love Mickey Mouse: Fushigi no Oshiro Daibouken",
-   "releaseDate": "1990-11-21",
-   "serial": "G-4042",
-   "rating": ""
-  },
-  {
-   "title": "Insector X",
-   "releaseDate": "1990-09-07",
-   "serial": "T-28023",
-   "rating": ""
-  },
-  {
-   "title": "J.League Champion Soccer",
-   "releaseDate": "1993-02-26",
-   "serial": "T-105013",
-   "rating": ""
-  },
-  {
-   "title": "J.League Pro Striker",
-   "releaseDate": "1993-04-23",
-   "serial": "G-5518",
-   "rating": ""
-  },
-  {
-   "title": "J.League Pro Striker 2",
-   "releaseDate": "1994-07-15",
-   "serial": "G-5540",
-   "rating": ""
-  },
-  {
-   "title": "J.League Pro Striker Kanzenban",
-   "releaseDate": "1993-12-17",
-   "serial": "G-5532",
-   "rating": ""
-  },
-  {
-   "title": "James Pond II: Codename RoboCod",
-   "releaseDate": "1993-06-09",
-   "serial": "EM20015",
-   "rating": ""
-  },
-  {
-   "title": "Janou Touryuumon",
-   "releaseDate": "1993-11-05",
-   "serial": "G-4096",
-   "rating": ""
-  },
-  {
-   "title": "Jantei Monogatari",
-   "releaseDate": "1991-03-29",
-   "serial": "T-49033",
-   "rating": ""
-  },
-  {
-   "title": "Jashin Draxos",
-   "releaseDate": "1993-02-19",
-   "serial": "EM20006",
-   "rating": ""
-  },
-  {
-   "title": "Jewel Master",
-   "releaseDate": "1991-08-30",
-   "serial": "G-4047",
-   "rating": ""
-  },
-  {
-   "title": "Joe Montana Football",
-   "releaseDate": "1991-03-01",
-   "serial": "G-4045",
-   "rating": ""
-  },
-  {
-   "title": "Joe Montana II Sports Talk Football",
-   "releaseDate": "1992-01-24",
-   "serial": "G-4065",
-   "rating": ""
-  },
-  {
-   "title": "Jordan vs Bird",
-   "releaseDate": "1993-09-24",
-   "serial": "EM20022",
-   "rating": ""
-  },
-  {
-   "title": "Judge Dredd",
-   "releaseDate": "1995-09-01",
-   "serial": "T-81203",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "JuJu Densetsu",
-   "releaseDate": "1992-01-31",
-   "serial": "G-4064",
-   "rating": ""
-  },
-  {
-   "title": "Junction",
-   "releaseDate": "1990-11-25",
-   "serial": "T-22023",
-   "rating": ""
-  },
-  {
-   "title": "Jungle Strike: Uketsugareta Kyouki",
-   "releaseDate": "1993-12-17",
-   "serial": "EM20020",
-   "rating": ""
-  },
-  {
-   "title": "Jurassic Park",
-   "releaseDate": "1993-08-27",
-   "serial": "G-4109",
-   "rating": ""
-  },
-  {
-   "title": "Jusou Kihei Leynos",
-   "releaseDate": "1990-03-16",
-   "serial": "T-25013",
-   "rating": ""
-  },
-  {
-   "title": "Justice League Task Force",
-   "releaseDate": "1995-09-01",
-   "serial": "T-81213",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Juuouki",
-   "releaseDate": "1988-11-27",
-   "serial": "G-4001",
-   "rating": ""
-  },
-  {
-   "title": "Ka-Ge-Ki",
-   "releaseDate": "1991-04-26",
-   "serial": "T-28013",
-   "rating": ""
-  },
-  {
-   "title": "Kidou Keisatsu Patlabor: 98-Shiki Kidou Seyo!",
-   "releaseDate": "1992-10-23",
-   "serial": "T-16013",
-   "rating": ""
-  },
-  {
-   "title": "King of the Monsters",
-   "releaseDate": "1993-11-26",
-   "serial": "G-4104",
-   "rating": ""
-  },
-  {
-   "title": "King Salmon",
-   "releaseDate": "1992-09-26",
-   "serial": "T-28053",
-   "rating": ""
-  },
-  {
-   "title": "Kishi Densetsu",
-   "releaseDate": "1993-07-30",
-   "serial": "T-46033",
-   "rating": ""
-  },
-  {
-   "title": "Klax",
-   "releaseDate": "1990-09-07",
-   "serial": "T-14063",
-   "rating": ""
-  },
-  {
-   "title": "Koutetsu Teikoku",
-   "releaseDate": "1992-03-13",
-   "serial": "T-28033",
-   "rating": ""
-  },
-  {
-   "title": "Kujaku Ou 2: Geneijou",
-   "releaseDate": "1989-11-25",
-   "serial": "G-4017",
-   "rating": ""
-  },
-  {
-   "title": "Kuuga: Operation Code \"Vapor Trail\"",
-   "releaseDate": "1991-08-02",
-   "serial": "T-49043",
-   "rating": ""
-  },
-  {
-   "title": "Kyuukai Douchuuki",
-   "releaseDate": "1991-07-12",
-   "serial": "T-14103",
-   "rating": ""
-  },
-  {
-   "title": "Kyuukyoku Tiger",
-   "releaseDate": "1991-02-22",
-   "serial": "T-24033",
-   "rating": ""
-  },
-  {
-   "title": "Landstalker: Koutei no Zaihou",
-   "releaseDate": "1992-10-30",
-   "serial": "G-5517",
-   "rating": ""
-  },
-  {
-   "title": "Langrisser",
-   "releaseDate": "1991-04-26",
-   "serial": "T-25103",
-   "rating": ""
-  },
-  {
-   "title": "Langrisser II",
-   "releaseDate": "1994-08-26",
-   "serial": "T-25143",
-   "rating": ""
-  },
-  {
-   "title": "Lemmings",
-   "releaseDate": "1992-11-20",
-   "serial": "T-15063",
-   "rating": ""
-  },
-  {
-   "title": "Lethal Enforcers",
-   "releaseDate": "1993-12-10",
-   "serial": "T-95073",
-   "rating": ""
-  },
-  {
-   "title": "LHX Attack Chopper",
-   "releaseDate": "1993-06-04",
-   "serial": "EM20016",
-   "rating": ""
-  },
-  {
-   "title": "Light Crusader",
-   "releaseDate": "1995-05-26",
-   "serial": "G-5545",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Lion King",
-   "releaseDate": "1994-12-09",
-   "serial": "T-70083",
-   "rating": ""
-  },
-  {
-   "title": "Lord Monarch",
-   "releaseDate": "1994-06-24",
-   "serial": "G-5534",
-   "rating": ""
-  },
-  {
-   "title": "Magical Hat no Buttobi Turbo! Daibouken",
-   "releaseDate": "1990-12-15",
-   "serial": "G-4041",
-   "rating": ""
-  },
-  {
-   "title": "Magical Kid Taruruto",
-   "releaseDate": "1992-04-24",
-   "serial": "G-4068",
-   "rating": ""
-  },
-  {
-   "title": "Mahjong Cop Ryuu: Hakurou no Yabou",
-   "releaseDate": "1989-12-14",
-   "serial": "G-4015",
-   "rating": ""
-  },
-  {
-   "title": "Mamono Hunter Youko: Dai 7 no Keishou",
-   "releaseDate": "1991-03-22",
-   "serial": "T-25053",
-   "rating": ""
-  },
-  {
-   "title": "Maou Renjishi",
-   "releaseDate": "1991-10-25",
-   "serial": "T-11143",
-   "rating": ""
-  },
-  {
-   "title": "Marble Madness",
-   "releaseDate": "1993-08-13",
-   "serial": "T-48113",
-   "rating": ""
-  },
-  {
-   "title": "Marvel Land",
-   "releaseDate": "1991-06-28",
-   "serial": "T-14093",
-   "rating": ""
-  },
-  {
-   "title": "Master of Monsters",
-   "releaseDate": "1991-07-26",
-   "serial": "T-63013",
-   "rating": ""
-  },
-  {
-   "title": "Master of Weapon",
-   "releaseDate": "1991-09-27",
-   "serial": "T-11063",
-   "rating": ""
-  },
-  {
-   "title": "Maten no Soumetsu",
-   "releaseDate": "1993-12-29",
-   "serial": "T-46023",
-   "rating": ""
-  },
-  {
-   "title": "MazinSaga",
-   "releaseDate": "1993-02-26",
-   "serial": "G-4078",
-   "rating": ""
-  },
-  {
-   "title": "McDonald's Treasure Land Adventure",
-   "releaseDate": "1993-09-23",
-   "serial": "G-4102",
-   "rating": ""
-  },
-  {
-   "title": "Mega Anser",
-   "releaseDate": "1990",
-   "serial": "G-4502",
-   "rating": ""
-  },
-  {
-   "title": "Mega Lo Mania",
-   "releaseDate": "1993-04-23",
-   "serial": "T-68053",
-   "rating": ""
-  },
-  {
-   "title": "Megapanel",
-   "releaseDate": "1990-11-22",
-   "serial": "T-14073",
-   "rating": ""
-  },
-  {
-   "title": "MegaTrax",
-   "releaseDate": "1991-08-06",
-   "serial": "T-14113",
-   "rating": ""
-  },
-  {
-   "title": "Metal Fangs",
-   "releaseDate": "1993-12-17",
-   "serial": "T-60033",
-   "rating": ""
-  },
-  {
-   "title": "Michael Jackson's Moonwalker",
-   "releaseDate": "1990-08-25",
-   "serial": "G-4028",
-   "rating": ""
-  },
-  {
-   "title": "Mickey Mania",
-   "releaseDate": "1995-03-31",
-   "serial": "G-4131",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Mickey to Minnie Magical Adventure 2",
-   "releaseDate": "1994-12-16",
-   "serial": "T-12063",
-   "rating": ""
-  },
-  {
-   "title": "Midnight Resistance",
-   "releaseDate": "1991-03-29",
-   "serial": "T-13043",
-   "rating": ""
-  },
-  {
-   "title": "MiG-29 Fighter Pilot",
-   "releaseDate": "1993-11-26",
-   "serial": "T-48133",
-   "rating": ""
-  },
-  {
-   "title": "Minato no Traysia",
-   "releaseDate": "1992-02-14",
-   "serial": "T-49073",
-   "rating": ""
-  },
-  {
-   "title": "Monster World IV",
-   "releaseDate": "1994-04-01",
-   "serial": "G-5519",
-   "rating": ""
-  },
-  {
-   "title": "Mortal Kombat",
-   "releaseDate": "1994-05-27",
-   "serial": "T-81013",
-   "rating": ""
-  },
-  {
-   "title": "Mortal Kombat II: Ultimate Godly Fist",
-   "releaseDate": "1994-09-09",
-   "serial": "T-81093",
-   "rating": ""
-  },
-  {
-   "title": "Mugen Senshi Valis",
-   "releaseDate": "1991-12-27",
-   "serial": "T-49083",
-   "rating": ""
-  },
-  {
-   "title": "Mutant League Football",
-   "releaseDate": "1993-09-10",
-   "serial": "EM20018",
-   "rating": ""
-  },
-  {
-   "title": "Naisu-kun Mini",
-   "releaseDate": "1990",
-   "serial": "G-4519",
-   "rating": ""
-  },
-  {
-   "title": "Nakajima Satoru Kanshuu F1 Grand Prix",
-   "releaseDate": "1991-12-20",
-   "serial": "T-72013",
-   "rating": ""
-  },
-  {
-   "title": "Nakajima Satoru Kanshuu F1 Hero MD",
-   "releaseDate": "1992-05-15",
-   "serial": "T-72023",
-   "rating": ""
-  },
-  {
-   "title": "Nakajima Satoru Kanshuu F1 Super License",
-   "releaseDate": "1992-12-11",
-   "serial": "T-72033",
-   "rating": ""
-  },
-  {
-   "title": "NBA Jam",
-   "releaseDate": "1994-04-29",
-   "serial": "T-81033",
-   "rating": ""
-  },
-  {
-   "title": "NBA Jam Tournament Edition",
-   "releaseDate": "1995-02-24",
-   "serial": "T-81143",
-   "rating": ""
-  },
-  {
-   "title": "NBA Playoffs: Bulls vs Blazers",
-   "releaseDate": "1993-07-30",
-   "serial": "EM20017",
-   "rating": ""
-  },
-  {
-   "title": "NBA Pro Basketball '94",
-   "releaseDate": "1994-07-01",
-   "serial": "EM20028",
-   "rating": ""
-  },
-  {
-   "title": "NBA Pro Basketball: Bulls vs Lakers",
-   "releaseDate": "1993-04-02",
-   "serial": "EM20012",
-   "rating": ""
-  },
-  {
-   "title": "Nekketsu Kouko Dodgeball Bu: Soccer Hen MD",
-   "releaseDate": "1992-08-07",
-   "serial": "T-74033",
-   "rating": ""
-  },
-  {
-   "title": "New 3D Golf Simulation: Devil's Course",
-   "releaseDate": "1994-01-28",
-   "serial": "G-5527",
-   "rating": ""
-  },
-  {
-   "title": "New 3D Golf Simulation: Harukanaru Augusta",
-   "releaseDate": "1993-12-17",
-   "serial": "T-114033",
-   "rating": ""
-  },
-  {
-   "title": "New 3D Golf Simulation: Pebble Beach no Hatou",
-   "releaseDate": "1993-10-29",
-   "serial": "G-5525",
-   "rating": ""
-  },
-  {
-   "title": "New 3D Golf Simulation: Waialae no Kiseki",
-   "releaseDate": "1994-02-25",
-   "serial": "G-5529",
-   "rating": ""
-  },
-  {
-   "title": "NFL Football '94",
-   "releaseDate": "1994-02-04",
-   "serial": "G-5535",
-   "rating": ""
-  },
-  {
-   "title": "NFL Pro Football '94",
-   "releaseDate": "1994-02-18",
-   "serial": "EM20026",
-   "rating": ""
-  },
-  {
-   "title": "NFL Quarterback Club",
-   "releaseDate": "1995-02-24",
-   "serial": "T-81153",
-   "rating": ""
-  },
-  {
-   "title": "NHK Taiga Drama: Taiheiki",
-   "releaseDate": "1991-12-13",
-   "serial": "G-5511",
-   "rating": ""
-  },
-  {
-   "title": "Nigel Mansell IndyCar",
-   "releaseDate": "1994-12-16",
-   "serial": "T-81123",
-   "rating": ""
-  },
-  {
-   "title": "Nikkan Sports Pro Yakyuu VAN",
-   "releaseDate": "1991-04-06",
-   "serial": "G-4522",
-   "rating": ""
-  },
-  {
-   "title": "Ninja Burai Densetsu",
-   "releaseDate": "1991-12-05",
-   "serial": "G-4524",
-   "rating": ""
-  },
-  {
-   "title": "Nobunaga no Yabou: Bushou Fuuunroku",
-   "releaseDate": "1991-12-20",
-   "serial": "T-76013",
-   "rating": ""
-  },
-  {
-   "title": "Nobunaga no Yabou: Haouden",
-   "releaseDate": "1994-02-25",
-   "serial": "T-76153",
-   "rating": ""
-  },
-  {
-   "title": "Nobunaga no Yabou: Zenkoku Ban",
-   "releaseDate": "1993-09-15",
-   "serial": "T-76133",
-   "rating": ""
-  },
-  {
-   "title": "Olympic Gold",
-   "releaseDate": "1992-07-24",
-   "serial": "G-4081",
-   "rating": ""
-  },
-  {
-   "title": "Osaka Ginkou no Home Banking Service My Line",
-   "releaseDate": "1990",
-   "serial": "G-4517",
-   "rating": ""
-  },
-  {
-   "title": "Osomatsu-kun Hachamecha Gekijou",
-   "releaseDate": "1988-12-24",
-   "serial": "G-4005",
-   "rating": ""
-  },
-  {
-   "title": "OutRun",
-   "releaseDate": "1991-08-09",
-   "serial": "G-4052",
-   "rating": ""
-  },
-  {
-   "title": "OutRun 2019",
-   "releaseDate": "1993-03-26",
-   "serial": "T-44033",
-   "rating": ""
-  },
-  {
-   "title": "OutRunners",
-   "releaseDate": "1994-05-13",
-   "serial": "G-4119",
-   "rating": ""
-  },
-  {
-   "title": "Ozaki Naomichi no Super Masters",
-   "releaseDate": "1989-09-09",
-   "serial": "G-4014",
-   "rating": ""
-  },
-  {
-   "title": "Pachinko Kuunyan",
-   "releaseDate": "1992-12-18",
-   "serial": "T-73013",
-   "rating": ""
-  },
-  {
-   "title": "Panorama Cotton",
-   "releaseDate": "1994-08-12",
-   "serial": "T-15103",
-   "rating": ""
-  },
-  {
-   "title": "Paperboy",
-   "releaseDate": "1992-06-26",
-   "serial": "T-48043",
-   "rating": ""
-  },
-  {
-   "title": "Party Quiz Mega Q",
-   "releaseDate": "1993-11-05",
-   "serial": "G-4107",
-   "rating": ""
-  },
-  {
-   "title": "Pepenga Pengo",
-   "releaseDate": "1995-12-22",
-   "serial": "G-4133",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "PGA Tour Golf II",
-   "releaseDate": "1993-04-16",
-   "serial": "EM20009",
-   "rating": ""
-  },
-  {
-   "title": "Phantasy Star",
-   "releaseDate": "1994-04-02",
-   "serial": "G-4534",
-   "rating": ""
-  },
-  {
-   "title": "Phantasy Star II: Kaerazaru Toki no Owari ni",
-   "releaseDate": "1989-03-21",
-   "serial": "G-5501",
-   "rating": ""
-  },
-  {
-   "title": "Phantasy Star: Sennenki no Owari ni",
-   "releaseDate": "1993-12-17",
-   "serial": "G-5524",
-   "rating": ""
-  },
-  {
-   "title": "Phelios",
-   "releaseDate": "1990-07-20",
-   "serial": "T-14013",
-   "rating": ""
-  },
-  {
-   "title": "Pit-Fighter",
-   "releaseDate": "1992-03-27",
-   "serial": "T-48033",
-   "rating": ""
-  },
-  {
-   "title": "Populous",
-   "releaseDate": "1991-08-09",
-   "serial": "G-4057",
-   "rating": ""
-  },
-  {
-   "title": "Power Athlete",
-   "releaseDate": "1992-12-11",
-   "serial": "T-33033",
-   "rating": ""
-  },
-  {
-   "title": "Power Monger",
-   "releaseDate": "1993-06-18",
-   "serial": "EM20011",
-   "rating": ""
-  },
-  {
-   "title": "Pro Football",
-   "releaseDate": "1992-11-20",
-   "serial": "EM20001",
-   "rating": ""
-  },
-  {
-   "title": "Pro Hockey",
-   "releaseDate": "1992-11-20",
-   "serial": "EM20002",
-   "rating": ""
-  },
-  {
-   "title": "Pro Striker Final Stage",
-   "releaseDate": "1995-08-04",
-   "serial": "G-5547",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Pro Yakyuu Super League '91",
-   "releaseDate": "1991-08-30",
-   "serial": "G-4529",
-   "rating": ""
-  },
-  {
-   "title": "Psy-O-Blade",
-   "releaseDate": "1990-04-27",
-   "serial": "T-26013",
-   "rating": ""
-  },
-  {
-   "title": "Pulseman",
-   "releaseDate": "1994-07-22",
-   "serial": "G-4098",
-   "rating": ""
-  },
-  {
-   "title": "Puyo Puyo",
-   "releaseDate": "1992-12-18",
-   "serial": "G-4082",
-   "rating": ""
-  },
-  {
-   "title": "Puyo Puyo Tsuu",
-   "releaseDate": "1994-12-02",
-   "serial": "T-66013",
-   "rating": ""
-  },
-  {
-   "title": "Puzzle & Action: Ichidant-R",
-   "releaseDate": "1995-01-13",
-   "serial": "G-4128",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Puzzle & Action: Tant-R",
-   "releaseDate": "1994-04-01",
-   "serial": "G-4118",
-   "rating": ""
-  },
-  {
-   "title": "R.B.I. Baseball 4",
-   "releaseDate": "1992-12-18",
-   "serial": "T-48063",
-   "rating": ""
-  },
-  {
-   "title": "Raiden Densetsu",
-   "releaseDate": "1991-07-06",
-   "serial": "T-22043",
-   "rating": ""
-  },
-  {
-   "title": "Rainbow Islands Extra",
-   "releaseDate": "1990-10-05",
-   "serial": "T-11073",
-   "rating": ""
-  },
-  {
-   "title": "Rambo III",
-   "releaseDate": "1989-10-21",
-   "serial": "G-4010",
-   "rating": ""
-  },
-  {
-   "title": "Rampart",
-   "releaseDate": "1992-12-11",
-   "serial": "T-48053",
-   "rating": ""
-  },
-  {
-   "title": "Ransei no Hasha",
-   "releaseDate": "1991-11-29",
-   "serial": "T-20053",
-   "rating": ""
-  },
-  {
-   "title": "Rastan Saga II",
-   "releaseDate": "1990-08-10",
-   "serial": "T-11043",
-   "rating": ""
-  },
-  {
-   "title": "Rent A Hero",
-   "releaseDate": "1991-09-20",
-   "serial": "G-5508",
-   "rating": ""
-  },
-  {
-   "title": "Ristar The Shooting Star",
-   "releaseDate": "1995-02-17",
-   "serial": "G-4126",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Road Rash",
-   "releaseDate": "1992-11-20",
-   "serial": "EM20003",
-   "rating": ""
-  },
-  {
-   "title": "Road Rash II",
-   "releaseDate": "1993-07-23",
-   "serial": "EM20014",
-   "rating": ""
-  },
-  {
-   "title": "RoadBlasters",
-   "releaseDate": "1992-02-28",
-   "serial": "T-48023",
-   "rating": ""
-  },
-  {
-   "title": "RoboCop Versus The Terminator",
-   "releaseDate": "1994-05-28",
-   "serial": "T-70043",
-   "rating": ""
-  },
-  {
-   "title": "Rocket Knight Adventures",
-   "releaseDate": "1993-08-06",
-   "serial": "T-95063",
-   "rating": ""
-  },
-  {
-   "title": "Rockman Mega World",
-   "releaseDate": "1994-10-21",
-   "serial": "T-12053",
-   "rating": ""
-  },
-  {
-   "title": "Rolling Thunder 2",
-   "releaseDate": "1991-11-19",
-   "serial": "T-14133",
-   "rating": ""
-  },
-  {
-   "title": "Royal Blood",
-   "releaseDate": "1992-06-25",
-   "serial": "T-76063",
-   "rating": ""
-  },
-  {
-   "title": "Runark",
-   "releaseDate": "1991-11-15",
-   "serial": "T-11153",
-   "rating": ""
-  },
-  {
-   "title": "Ryuuko no Ken",
-   "releaseDate": "1994-01-14",
-   "serial": "G-4113",
-   "rating": ""
-  },
-  {
-   "title": "Saint Sword",
-   "releaseDate": "1991-06-28",
-   "serial": "T-11133",
-   "rating": ""
-  },
-  {
-   "title": "Same! Same! Same!",
-   "releaseDate": "1990-11-02",
-   "serial": "T-40013",
-   "rating": ""
-  },
-  {
-   "title": "Samurai Spirits",
-   "releaseDate": "1994-11-19",
-   "serial": "G-4127",
-   "rating": ""
-  },
-  {
-   "title": "Sangokushi II",
-   "releaseDate": "1991-12-26",
-   "serial": "T-76023",
-   "rating": ""
-  },
-  {
-   "title": "Sangokushi III",
-   "releaseDate": "1992-11-08",
-   "serial": "T-76093",
-   "rating": ""
-  },
-  {
-   "title": "Sangokushi Retsuden: Ransei no Eiyuutachi",
-   "releaseDate": "1991-04-29",
-   "serial": "G-5504",
-   "rating": ""
-  },
-  {
-   "title": "Sansan",
-   "releaseDate": "1994-09",
-   "serial": "T-147013",
-   "rating": ""
-  },
-  {
-   "title": "SD Valis",
-   "releaseDate": "1992-02-14",
-   "serial": "T-49103",
-   "rating": ""
-  },
-  {
-   "title": "Sega Game Toshokan",
-   "releaseDate": "1990-11-03",
-   "serial": "G-4503",
-   "rating": ""
-  },
-  {
-   "title": "Senjou no Ookami II",
-   "releaseDate": "1991-09-27",
-   "serial": "G-4051",
-   "rating": ""
-  },
-  {
-   "title": "Shadow Dancer: The Secret of Shinobi",
-   "releaseDate": "1990-12-01",
-   "serial": "G-4043",
-   "rating": ""
-  },
-  {
-   "title": "Shadow of the Beast: Mashou no Okite",
-   "releaseDate": "1992-03-27",
-   "serial": "T-60023",
-   "rating": ""
-  },
-  {
-   "title": "Shijou Saidai no Soukoban",
-   "releaseDate": "1990-01-30",
-   "serial": "T-25023",
-   "rating": ""
-  },
-  {
-   "title": "Shikinjoh",
-   "releaseDate": "1991-04-27",
-   "serial": "T-15053",
-   "rating": ""
-  },
-  {
-   "title": "Shin Souseiki Ragnacenty",
-   "releaseDate": "1994-06-17",
-   "serial": "G-5536",
-   "rating": ""
-  },
-  {
-   "title": "Shining and the Darkness",
-   "releaseDate": "1991-03-29",
-   "serial": "G-5506",
-   "rating": ""
-  },
-  {
-   "title": "Shining Force II: Inishie no Fuuin",
-   "releaseDate": "1993-10-01",
-   "serial": "G-5521",
-   "rating": ""
-  },
-  {
-   "title": "Shining Force: Legacy of the Gods",
-   "releaseDate": "1992-03-20",
-   "serial": "G-5512",
-   "rating": ""
-  },
-  {
-   "title": "Shiten Myouou",
-   "releaseDate": "1990-08-10",
-   "serial": "T-26023",
-   "rating": ""
-  },
-  {
-   "title": "Shougi no Hoshi",
-   "releaseDate": "1991-10-31",
-   "serial": "T-67013",
-   "rating": ""
-  },
-  {
-   "title": "Shura no Mon",
-   "releaseDate": "1992-08-07",
-   "serial": "G-4073",
-   "rating": ""
-  },
-  {
-   "title": "Side Pocket",
-   "releaseDate": "1992-12-11",
-   "serial": "T-13083",
-   "rating": ""
-  },
-  {
-   "title": "Slap Fight MD",
-   "releaseDate": "1993-06-11",
-   "serial": "T-48093",
-   "rating": ""
-  },
-  {
-   "title": "Slime World",
-   "releaseDate": "1992-04-30",
-   "serial": "T-49123",
-   "rating": ""
-  },
-  {
-   "title": "Snow Bros.",
-   "releaseDate": "1993-05-28",
-   "serial": "T-48083",
-   "rating": ""
-  },
-  {
-   "title": "Sonic & Knuckles",
-   "releaseDate": "1994-10-28",
-   "serial": "G-4124",
-   "rating": ""
-  },
-  {
-   "title": "Sonic the Hedgehog",
-   "releaseDate": "1991-07-26",
-   "serial": "G-4049",
-   "rating": ""
-  },
-  {
-   "title": "Sonic the Hedgehog 2",
-   "releaseDate": "1992-11-21",
-   "serial": "G-4088",
-   "rating": ""
-  },
-  {
-   "title": "Sonic the Hedgehog 3",
-   "releaseDate": "1994-05-27",
-   "serial": "G-5531",
-   "rating": ""
-  },
-  {
-   "title": "Sonic the Hedgehog Spinball",
-   "releaseDate": "1993-12-10",
-   "serial": "G-4112",
-   "rating": ""
-  },
-  {
-   "title": "Sorcer Kingdom",
-   "releaseDate": "1992-02-07",
-   "serial": "T-25113",
-   "rating": ""
-  },
-  {
-   "title": "Sorcerian",
-   "releaseDate": "1990-02-24",
-   "serial": "G-4504",
-   "rating": ""
-  },
-  {
-   "title": "Sorcery Saga I",
-   "releaseDate": "1996-03-22",
-   "serial": "T-66023",
-   "rating": ""
-  },
-  {
-   "title": "Space Funky B.O.B.",
-   "releaseDate": "1993-11-19",
-   "serial": "EM20019",
-   "rating": ""
-  },
-  {
-   "title": "Space Harrier II",
-   "releaseDate": "1988-10-29",
-   "serial": "G-4002",
-   "rating": ""
-  },
-  {
-   "title": "Space Invaders 90",
-   "releaseDate": "1990-09-07",
-   "serial": "T-11053",
-   "rating": ""
-  },
-  {
-   "title": "Sparkster: Rocket Knight Adventures 2",
-   "releaseDate": "1994-09-23",
-   "serial": "T-95103",
-   "rating": ""
-  },
-  {
-   "title": "Speedball 2",
-   "releaseDate": "1992-06-19",
-   "serial": "T-68023",
-   "rating": ""
-  },
-  {
-   "title": "Spider-Man and Venom: Maximum Carnage",
-   "releaseDate": "1995-05-26",
-   "serial": "T-81256-50",
-   "rating": ""
-  },
-  {
-   "title": "Spider-Man vs. The Kingpin",
-   "releaseDate": "1991-10-18",
-   "serial": "G-4058",
-   "rating": ""
-  },
-  {
-   "title": "Splatterhouse Part 2",
-   "releaseDate": "1992-08-04",
-   "serial": "T-14143",
-   "rating": ""
-  },
-  {
-   "title": "Splatterhouse Part 3",
-   "releaseDate": "1993-03-19",
-   "serial": "T-14153",
-   "rating": ""
-  },
-  {
-   "title": "Star Cruiser",
-   "releaseDate": "1990-12-21",
-   "serial": "T-25063",
-   "rating": ""
-  },
-  {
-   "title": "Steel Talons",
-   "releaseDate": "1993-06-25",
-   "serial": "T-48103",
-   "rating": ""
-  },
-  {
-   "title": "Stormlord",
-   "releaseDate": "1992-03-27",
-   "serial": "T-49113",
-   "rating": ""
-  },
-  {
-   "title": "Street Fighter II' Plus",
-   "releaseDate": "1993-09-28",
-   "serial": "T-12033",
-   "rating": ""
-  },
-  {
-   "title": "Street Smart",
-   "releaseDate": "1991-07-19",
-   "serial": "T-24083",
-   "rating": ""
-  },
-  {
-   "title": "Strider Hiryuu",
-   "releaseDate": "1990-09-29",
-   "serial": "G-4037",
-   "rating": ""
-  },
-  {
-   "title": "Sumisei Home Tanmatsu",
-   "releaseDate": "1991",
-   "serial": "G-5507",
-   "rating": ""
-  },
-  {
-   "title": "Super Airwolf",
-   "releaseDate": "1991-03-29",
-   "serial": "T-29023",
-   "rating": ""
-  },
-  {
-   "title": "Super Baseball 2020",
-   "releaseDate": "1994-03-04",
-   "serial": "EM20027",
-   "rating": ""
-  },
-  {
-   "title": "Super Daisenryaku",
-   "releaseDate": "1989-04-29",
-   "serial": "G-4501",
-   "rating": ""
-  },
-  {
-   "title": "Super Fantasy Zone",
-   "releaseDate": "1992-01-14",
-   "serial": "T-15023",
-   "rating": ""
-  },
-  {
-   "title": "Super H.Q.",
-   "releaseDate": "1992-10-23",
-   "serial": "T-11163",
-   "rating": ""
-  },
-  {
-   "title": "Super Hang-On",
-   "releaseDate": "1989-10-06",
-   "serial": "G-4011",
-   "rating": ""
-  },
-  {
-   "title": "Super Hydlide",
-   "releaseDate": "1989-10-06",
-   "serial": "T-20013",
-   "rating": ""
-  },
-  {
-   "title": "Super League",
-   "releaseDate": "1989-04-22",
-   "serial": "G-4006",
-   "rating": ""
-  },
-  {
-   "title": "Super Monaco GP",
-   "releaseDate": "1990-08-09",
-   "serial": "G-4026",
-   "rating": ""
-  },
-  {
-   "title": "Super Real Basketball",
-   "releaseDate": "1990-03-02",
-   "serial": "G-4021",
-   "rating": ""
-  },
-  {
-   "title": "Super Street Fighter II: The New Challengers",
-   "releaseDate": "1994-06-25",
-   "serial": "T-12043",
-   "rating": ""
-  },
-  {
-   "title": "Super Thunder Blade",
-   "releaseDate": "1988-10-29",
-   "serial": "G-4003",
-   "rating": ""
-  },
-  {
-   "title": "Super Volley Ball",
-   "releaseDate": "1991-02-01",
-   "serial": "T-30013",
-   "rating": ""
-  },
-  {
-   "title": "Surging Aura",
-   "releaseDate": "1995-03-17",
-   "serial": "G-5522",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "Sword of Sodan",
-   "releaseDate": "1991-10-11",
-   "serial": "G-4056",
-   "rating": ""
-  },
-  {
-   "title": "T2: The Arcade Game",
-   "releaseDate": "1994-02-25",
-   "serial": "T-81023",
-   "rating": ""
-  },
-  {
-   "title": "Taikou Risshiden",
-   "releaseDate": "1993-05-28",
-   "serial": "T-76123",
-   "rating": ""
-  },
-  {
-   "title": "Task Force Harrier EX",
-   "releaseDate": "1991-12-20",
-   "serial": "T-24053",
-   "rating": ""
-  },
-  {
-   "title": "Tatsujin",
-   "releaseDate": "1989-12-09",
-   "serial": "G-4020",
-   "rating": ""
-  },
-  {
-   "title": "Taz-Mania",
-   "releaseDate": "1992-12-25",
-   "serial": "G-4089",
-   "rating": ""
-  },
-  {
-   "title": "Tecmo Super Bowl",
-   "releaseDate": "1993-11-26",
-   "serial": "T-36023",
-   "rating": ""
-  },
-  {
-   "title": "Tecmo Super Bowl II: Special Edition",
-   "releaseDate": "1994-12-20",
-   "serial": "T-36043",
-   "rating": ""
-  },
-  {
-   "title": "Tecmo Super NBA Basketball",
-   "releaseDate": "1994-03-04",
-   "serial": "T-36033",
-   "rating": ""
-  },
-  {
-   "title": "Tecmo World Cup '92",
-   "releaseDate": "1992-01-31",
-   "serial": "T-44023",
-   "rating": ""
-  },
-  {
-   "title": "Teenage Mutant Ninja Turtles: Return of the Shredder",
-   "releaseDate": "1992-12-22",
-   "serial": "T-95013",
-   "rating": ""
-  },
-  {
-   "title": "Teenage Mutant Ninja Turtles: Tournament Fighters",
-   "releaseDate": "1993-12-03",
-   "serial": "T-95053",
-   "rating": ""
-  },
-  {
-   "title": "Teitoku no Ketsudan",
-   "releaseDate": "1992-09-24",
-   "serial": "T-76073",
-   "rating": ""
-  },
-  {
-   "title": "Tel-Tel Mahjong",
-   "releaseDate": "1990-06-08",
-   "serial": "T-15033",
-   "rating": ""
-  },
-  {
-   "title": "Tel-Tel Stadium",
-   "releaseDate": "1990-10-21",
-   "serial": "T-15013",
-   "rating": ""
-  },
-  {
-   "title": "Tetris",
-   "releaseDate": "1989",
-   "serial": "G-4007",
-   "rating": ""
-  },
-  {
-   "title": "The Flintstones",
-   "releaseDate": "1993-11-19",
-   "serial": "T-11173",
-   "rating": ""
-  },
-  {
-   "title": "The Hybrid Front",
-   "releaseDate": "1994-07-22",
-   "serial": "G-5541",
-   "rating": ""
-  },
-  {
-   "title": "The Kick Boxing",
-   "releaseDate": "1993-01-29",
-   "serial": "T-49143",
-   "rating": ""
-  },
-  {
-   "title": "The Killing Game Show",
-   "releaseDate": "1993-08-20",
-   "serial": "EM20021",
-   "rating": ""
-  },
-  {
-   "title": "The NewZealand Story",
-   "releaseDate": "1990-03-03",
-   "serial": "T-11013",
-   "rating": ""
-  },
-  {
-   "title": "The Ooze",
-   "releaseDate": "1995-09-22",
-   "serial": "G-4134",
-   "rating": ""
-  },
-  {
-   "title": "The Story of Thor: Hikari o Tsugumono",
-   "releaseDate": "1994-12-09",
-   "serial": "G-5543",
-   "rating": "Sega Rating: All Ages"
-  },
-  {
-   "title": "The Super Shinobi",
-   "releaseDate": "1989-12-02",
-   "serial": "G-4019",
-   "rating": ""
-  },
-  {
-   "title": "The Super Shinobi II",
-   "releaseDate": "1993-07-23",
-   "serial": "G-4085",
-   "rating": ""
-  },
-  {
-   "title": "Thunder Force II",
-   "releaseDate": "1989-06-15",
-   "serial": "T-18013",
-   "rating": ""
-  },
-  {
-   "title": "Thunder Force III",
-   "releaseDate": "1990-06-08",
-   "serial": "T-18033",
-   "rating": ""
-  },
-  {
-   "title": "Thunder Force IV",
-   "releaseDate": "1992-07-24",
-   "serial": "T-18063",
-   "rating": ""
-  },
-  {
-   "title": "Thunder Fox",
-   "releaseDate": "1991-06-26",
-   "serial": "T-11113",
-   "rating": ""
-  },
-  {
-   "title": "Thunder Pro Wrestling Retsuden",
-   "releaseDate": "1992-03-27",
-   "serial": "T-43013",
-   "rating": ""
-  },
-  {
-   "title": "Time Dominator 1st",
-   "releaseDate": "1994-03-25",
-   "serial": "T-23033",
-   "rating": ""
-  },
-  {
-   "title": "ToeJam & Earl",
-   "releaseDate": "1992-03-13",
-   "serial": "G-4066",
-   "rating": ""
-  },
-  {
-   "title": "Toki no Keishousha: Phantasy Star III",
-   "releaseDate": "1990-04-21",
-   "serial": "G-5503",
-   "rating": ""
-  },
-  {
-   "title": "Tom and Jerry",
-   "releaseDate": "1994-12-16",
-   "serial": "T-166013",
-   "rating": ""
-  },
-  {
-   "title": "Top Pro Golf",
-   "releaseDate": "1992-06-19",
-   "serial": "T-73023",
-   "rating": ""
-  },
-  {
-   "title": "Top Pro Golf 2",
-   "releaseDate": "1993-06-25",
-   "serial": "T-73043",
-   "rating": ""
-  },
-  {
-   "title": "Tougi Ou King Colossus",
-   "releaseDate": "1992-06-26",
-   "serial": "G-5513",
-   "rating": ""
-  },
-  {
-   "title": "True Lies",
-   "releaseDate": "1995-04-28",
-   "serial": "T-81163",
-   "rating": "Sega Rating: 18 and Up"
-  },
-  {
-   "title": "Turbo OutRun",
-   "releaseDate": "1992-03-27",
-   "serial": "G-4053",
-   "rating": ""
-  },
-  {
-   "title": "Twinkle Tale",
-   "releaseDate": "1992-07-24",
-   "serial": "T-61013",
-   "rating": ""
-  },
-  {
-   "title": "Uchuu Senkan Gomora",
-   "releaseDate": "1991-09-30",
-   "serial": "T-42023",
-   "rating": ""
-  },
-  {
-   "title": "Ultraman",
-   "releaseDate": "1993-04-09",
-   "serial": "T-16023",
-   "rating": ""
-  },
-  {
-   "title": "Undeadline",
-   "releaseDate": "1991-12-20",
-   "serial": "T-74013",
-   "rating": ""
-  },
-  {
-   "title": "V-Five / V-V",
-   "releaseDate": "1994-03-25",
-   "serial": "T-48173",
-   "rating": ""
-  },
-  {
-   "title": "Valis III",
-   "releaseDate": "1991-03-22",
-   "serial": "T-49023",
-   "rating": ""
-  },
-  {
-   "title": "Vampire Killer",
-   "releaseDate": "1994-03-18",
-   "serial": "T-95043",
-   "rating": ""
-  },
-  {
-   "title": "Vermilion",
-   "releaseDate": "1989-12-16",
-   "serial": "G-5502",
-   "rating": ""
-  },
-  {
-   "title": "Verytex",
-   "releaseDate": "1991-04-05",
-   "serial": "T-20043",
-   "rating": ""
-  },
-  {
-   "title": "Virtua Racing",
-   "releaseDate": "1994-03-18",
-   "serial": "G-7001",
-   "rating": ""
-  },
-  {
-   "title": "Virtual Bart",
-   "releaseDate": "1995-12-31",
-   "serial": "T-81103",
-   "rating": ""
-  },
-  {
-   "title": "Vixen 357",
-   "releaseDate": "1992-10-23",
-   "serial": "T-25133",
-   "rating": ""
-  },
-  {
-   "title": "Volfied",
-   "releaseDate": "1991-01-25",
-   "serial": "T-11103",
-   "rating": ""
-  },
-  {
-   "title": "Wani Wani World",
-   "releaseDate": "1992-01-31",
-   "serial": "T-33023",
-   "rating": ""
-  },
-  {
-   "title": "Wardner no Mori Special",
-   "releaseDate": "1991-04-26",
-   "serial": "T-58013",
-   "rating": ""
-  },
-  {
-   "title": "Whip Rush: Wakusei Voltegas no Nazo",
-   "releaseDate": "1990-05-26",
-   "serial": "G-4031",
-   "rating": ""
-  },
-  {
-   "title": "Wimbledon Championship Tennis",
-   "releaseDate": "1994-05-20",
-   "serial": "G-4110",
-   "rating": ""
-  },
-  {
-   "title": "Winter Olympics",
-   "releaseDate": "1994-02-11",
-   "serial": "G-4115",
-   "rating": ""
-  },
-  {
-   "title": "Wizard of the Immortal",
-   "releaseDate": "1993-08-10",
-   "serial": "EM20023",
-   "rating": ""
-  },
-  {
-   "title": "Wonder Boy III: Monster Lair",
-   "releaseDate": "1990-12-22",
-   "serial": "G-4025",
-   "rating": ""
-  },
-  {
-   "title": "Wonder Boy V: Monster World III",
-   "releaseDate": "1991-10-25",
-   "serial": "G-5509",
-   "rating": ""
-  },
-  {
-   "title": "Wonder Library",
-   "releaseDate": "1993-10-08",
-   "serial": "RG-ED1",
-   "rating": ""
-  },
-  {
-   "title": "Wonder MIDI",
-   "releaseDate": "1992-12-25",
-   "serial": "RG-MD1",
-   "rating": ""
-  },
-  {
-   "title": "World Cup Soccer",
-   "releaseDate": "1989-07-29",
-   "serial": "G-4009",
-   "rating": ""
-  },
-  {
-   "title": "Wrestle War",
-   "releaseDate": "1991-06-28",
-   "serial": "G-4055",
-   "rating": ""
-  },
-  {
-   "title": "Wrestleball",
-   "releaseDate": "1991-02-08",
-   "serial": "T-14043",
-   "rating": ""
-  },
-  {
-   "title": "WWF Raw",
-   "releaseDate": "1995-12-31",
-   "serial": "T-81316-50",
-   "rating": ""
-  },
-  {
-   "title": "WWF Royal Rumble",
-   "releaseDate": "1994-03-25",
-   "serial": "T-81043",
-   "rating": ""
-  },
-  {
-   "title": "XDR",
-   "releaseDate": "1990-08-26",
-   "serial": "T-41013",
-   "rating": ""
-  },
-  {
-   "title": "Ys III: Wanderers from Ys",
-   "releaseDate": "1991-11-01",
-   "serial": "T-49063",
-   "rating": ""
-  },
-  {
-   "title": "Yuu Yuu Hakusho Gaiden",
-   "releaseDate": "1994-01-28",
-   "serial": "G-5523",
-   "rating": ""
-  },
-  {
-   "title": "Yuu Yuu Hakusho: Makyou Toitsusen",
-   "releaseDate": "1994-09-30",
-   "serial": "G-4122",
-   "rating": ""
-  },
-  {
-   "title": "Zan Yasha Enbukyoku",
-   "releaseDate": "1991-03-29",
-   "serial": "T-32033",
-   "rating": ""
-  },
-  {
-   "title": "Zero Wing",
-   "releaseDate": "1991-05-31",
-   "serial": "T-40023",
-   "rating": ""
-  },
-  {
-   "title": "Zoom!",
-   "releaseDate": "1990-01-13",
-   "serial": "G-4023",
-   "rating": ""
-  },
-  {
-   "title": "Zou! Zou! Zou! Rescue Daisakusen",
-   "releaseDate": "1993-04-29",
-   "serial": "EM20008",
-   "rating": ""
-  }
- ]
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_Mega_Drive_games_in_Japan",
+  "region": "NTSC-J",
+  "games": [
+    {
+      "title": "007 Shitou",
+      "releaseDate": "1993-05-14",
+      "serial": "T-48073",
+      "rating": "",
+      "altTitles": [
+        "James Bond 007: The Duel"
+      ]
+    },
+    {
+      "title": "A Ressha de Ikou MD",
+      "releaseDate": "1992-04-10",
+      "serial": "G-4532",
+      "rating": ""
+    },
+    {
+      "title": "Aa Harimanada",
+      "releaseDate": "1993-09-03",
+      "serial": "G-4086",
+      "rating": ""
+    },
+    {
+      "title": "Advanced Busterhawk Gley Lancer",
+      "releaseDate": "1992-07-17",
+      "serial": "T-25123",
+      "rating": ""
+    },
+    {
+      "title": "Advanced Daisenryaku: Deutsch Dengeki Sakusen",
+      "releaseDate": "1991-06-17",
+      "serial": "G-5505",
+      "rating": ""
+    },
+    {
+      "title": "Aero Blasters",
+      "releaseDate": "1991-01-31",
+      "serial": "T-33013",
+      "rating": "",
+      "altTitles": [
+        "Air Buster: Trouble Specialty Raid Unit"
+      ]
+    },
+    {
+      "title": "After Burner II",
+      "releaseDate": "1990-03-23",
+      "serial": "T-17013",
+      "rating": ""
+    },
+    {
+      "title": "Air Diver",
+      "releaseDate": "1990-03-09",
+      "serial": "T-20023",
+      "rating": ""
+    },
+    {
+      "title": "Air Management II: Koukuuou o Mezase",
+      "releaseDate": "1994-02-18",
+      "serial": "T-76143",
+      "rating": "",
+      "altTitles": [
+        "Aerobiz Supersonic"
+      ]
+    },
+    {
+      "title": "Air Management: Oozora ni Kakeru",
+      "releaseDate": "1992-11-01",
+      "serial": "T-76083",
+      "rating": "",
+      "altTitles": [
+        "Aerobiz"
+      ]
+    },
+    {
+      "title": "Alex Kidd: Tenkuu Majou",
+      "releaseDate": "1989-02-10",
+      "serial": "G-4004",
+      "rating": "",
+      "altTitles": [
+        "Alex Kidd in the Enchanted Castle"
+      ]
+    },
+    {
+      "title": "Alien Soldier",
+      "releaseDate": "1995-02-24",
+      "serial": "G-4130",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Alien Storm (Mega Drive)",
+      "releaseDate": "1991-06-28",
+      "serial": "G-4048",
+      "rating": ""
+    },
+    {
+      "title": "Alisia Dragoon",
+      "releaseDate": "1992-04-24",
+      "serial": "T-45033",
+      "rating": ""
+    },
+    {
+      "title": "Aoki Ookami to Shiroki Meshika: Genchou Hishi",
+      "releaseDate": "1993-03-25",
+      "serial": "T-76103",
+      "rating": "",
+      "altTitles": [
+        "Genghis Khan II: Clan of the Gray Wolf"
+      ]
+    },
+    {
+      "title": "Arcus Odyssey",
+      "releaseDate": "1991-06-14",
+      "serial": "T-32053",
+      "rating": ""
+    },
+    {
+      "title": "Arrow Flash",
+      "releaseDate": "1990-10-20",
+      "serial": "G-4039",
+      "rating": ""
+    },
+    {
+      "title": "Art Alive!",
+      "releaseDate": "1992-03-27",
+      "serial": "G-4069",
+      "rating": ""
+    },
+    {
+      "title": "Atomic Robo-Kid",
+      "releaseDate": "1990-12-14",
+      "serial": "T-24013",
+      "rating": ""
+    },
+    {
+      "title": "Awesome Possum Kicks Dr. Machino's Butt!",
+      "releaseDate": "1993-12-25",
+      "serial": "T-48153",
+      "rating": ""
+    },
+    {
+      "title": "Ayrton Senna's Super Monaco GP II",
+      "releaseDate": "1992-07-17",
+      "serial": "G-5514",
+      "rating": ""
+    },
+    {
+      "title": "Bad Omen",
+      "releaseDate": "1992-04-24",
+      "serial": "T-28043",
+      "rating": "",
+      "altTitles": [
+        "Devilish: The Next Possession"
+      ]
+    },
+    {
+      "title": "Bahamut Senki",
+      "releaseDate": "1991-03-08",
+      "serial": "G-4520",
+      "rating": ""
+    },
+    {
+      "title": "Ball Jacks",
+      "releaseDate": "1993-04-23",
+      "serial": "T-14163",
+      "rating": ""
+    },
+    {
+      "title": "Bare Knuckle II: Shitou e no Requiem",
+      "releaseDate": "1993-01-14",
+      "serial": "G-4091",
+      "rating": "",
+      "altTitles": [
+        "Streets of Rage 2"
+      ]
+    },
+    {
+      "title": "Bare Knuckle III",
+      "releaseDate": "1994-03-18",
+      "serial": "G-4116",
+      "rating": "",
+      "altTitles": [
+        "Streets of Rage 3"
+      ]
+    },
+    {
+      "title": "Bare Knuckle: Ikari no Tekken",
+      "releaseDate": "1991-08-02",
+      "serial": "G-4050",
+      "rating": "",
+      "altTitles": [
+        "Streets of Rage"
+      ]
+    },
+    {
+      "title": "Batman",
+      "releaseDate": "1990-07-27",
+      "serial": "T-15043",
+      "rating": ""
+    },
+    {
+      "title": "Batman Forever (Mega Drive)",
+      "releaseDate": "1995-10-27",
+      "serial": "T-81223",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Batman Returns (Mega Drive)",
+      "releaseDate": "1993-02-19",
+      "serial": "G-4092",
+      "rating": ""
+    },
+    {
+      "title": "Battle Golfer Yui",
+      "releaseDate": "1991-02-15",
+      "serial": "G-4040",
+      "rating": ""
+    },
+    {
+      "title": "Battle Mania",
+      "releaseDate": "1992-03-06",
+      "serial": "T-23013",
+      "rating": "",
+      "altTitles": [
+        "Trouble Shooter"
+      ]
+    },
+    {
+      "title": "Battle Mania Daiginjou",
+      "releaseDate": "1993-12-24",
+      "serial": "T-23043",
+      "rating": ""
+    },
+    {
+      "title": "Battletoads",
+      "releaseDate": "1993-03-26",
+      "serial": "G-4074",
+      "rating": ""
+    },
+    {
+      "title": "Beast Warriors",
+      "releaseDate": "1991-11-29",
+      "serial": "T-49053",
+      "rating": "",
+      "altTitles": [
+        "Beast Wrestler"
+      ]
+    },
+    {
+      "title": "Bishoujo Senshi Sailor Moon",
+      "releaseDate": "1994-07-08",
+      "serial": "T-16043",
+      "rating": ""
+    },
+    {
+      "title": "Blockout",
+      "releaseDate": "1991-11-01",
+      "serial": "G-4059",
+      "rating": ""
+    },
+    {
+      "title": "Blue Almanac",
+      "releaseDate": "1991-06-22",
+      "serial": "T-46013",
+      "rating": ""
+    },
+    {
+      "title": "Bonanza Bros.",
+      "releaseDate": "1991-05-17",
+      "serial": "G-4046",
+      "rating": ""
+    },
+    {
+      "title": "Boogie Woogie Bowling",
+      "releaseDate": "1993-12-17",
+      "serial": "T-58033",
+      "rating": "",
+      "altTitles": [
+        "Championship Bowling"
+      ]
+    },
+    {
+      "title": "Burning Force",
+      "releaseDate": "1990-10-19",
+      "serial": "T-14023",
+      "rating": ""
+    },
+    {
+      "title": "Caesar no Yabou",
+      "releaseDate": "1991-02-24",
+      "serial": "T-22033",
+      "rating": "",
+      "altTitles": [
+        "Warrior of Rome"
+      ]
+    },
+    {
+      "title": "Caesar no Yabou II",
+      "releaseDate": "1992-05-28",
+      "serial": "T-22063",
+      "rating": "",
+      "altTitles": [
+        "Warrior of Rome II"
+      ]
+    },
+    {
+      "title": "Captain Lang",
+      "releaseDate": "1994-04-22",
+      "serial": "T-13103",
+      "rating": "",
+      "altTitles": [
+        "High Seas Havoc"
+      ]
+    },
+    {
+      "title": "CD-ROM Multi Seminar Onsei Kaiseki Hakei Hyouji Cartridge",
+      "releaseDate": "",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Chameleon Kid",
+      "releaseDate": "1992-05-29",
+      "serial": "G-4070",
+      "rating": "",
+      "altTitles": [
+        "Kid Chameleon"
+      ]
+    },
+    {
+      "title": "Champions World Class Soccer",
+      "releaseDate": "1994-06-24",
+      "serial": "T-81063",
+      "rating": ""
+    },
+    {
+      "title": "Chelnov",
+      "releaseDate": "1992-10-16",
+      "serial": "T-13073",
+      "rating": "",
+      "altTitles": [
+        "Atomic Runner"
+      ]
+    },
+    {
+      "title": "Chibi Maruko-chan: Waku Waku Shopping",
+      "releaseDate": "1992-01-14",
+      "serial": "T-14123",
+      "rating": ""
+    },
+    {
+      "title": "Chiki Chiki Boys",
+      "releaseDate": "1992-10-16",
+      "serial": "G-4083",
+      "rating": ""
+    },
+    {
+      "title": "Chou Kyuukai Miracle Nine",
+      "releaseDate": "1995-07-21",
+      "serial": "G-5546",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Chou Touryuu Retsuden Dino Land",
+      "releaseDate": "1991-08-02",
+      "serial": "T-32043",
+      "rating": "",
+      "altTitles": [
+        "Dino Land"
+      ]
+    },
+    {
+      "title": "Chuck Rock II",
+      "releaseDate": "1994-06-24",
+      "serial": "T-70063",
+      "rating": "",
+      "altTitles": [
+        "Chuck Rock II: Son of Chuck"
+      ]
+    },
+    {
+      "title": "Columns",
+      "releaseDate": "1990-06-30",
+      "serial": "G-4035",
+      "rating": ""
+    },
+    {
+      "title": "Columns III: Taiketsu! Columns World",
+      "releaseDate": "1993-10-15",
+      "serial": "G-4108",
+      "rating": "",
+      "altTitles": [
+        "Columns III: Revenge of Columns"
+      ]
+    },
+    {
+      "title": "Comix Zone",
+      "releaseDate": "1995-09-01",
+      "serial": "G-4132",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Contra: The Hard Corps",
+      "releaseDate": "1994-09-15",
+      "serial": "T-95093",
+      "rating": "",
+      "altTitles": [
+        "Contra: Hard Corps"
+      ]
+    },
+    {
+      "title": "Cool Spot",
+      "releaseDate": "1994-02-18",
+      "serial": "T-70013",
+      "rating": ""
+    },
+    {
+      "title": "Crack Down",
+      "releaseDate": "1990-12-20",
+      "serial": "G-4024",
+      "rating": ""
+    },
+    {
+      "title": "Crayon Shin-chan: Arashi o Yobu Enji",
+      "releaseDate": "1994-03-11",
+      "serial": "T-16033",
+      "rating": ""
+    },
+    {
+      "title": "Crude Buster",
+      "releaseDate": "1992-02-28",
+      "serial": "T-13063",
+      "rating": "",
+      "altTitles": [
+        "Two Crude Dudes"
+      ]
+    },
+    {
+      "title": "Crying: Aseimei Sensou",
+      "releaseDate": "1992-10-30",
+      "serial": "G-4087",
+      "rating": "",
+      "altTitles": [
+        "Bio-Hazard Battle"
+      ]
+    },
+    {
+      "title": "Crüe Ball",
+      "releaseDate": "1993-12-26",
+      "serial": "EM20005",
+      "rating": ""
+    },
+    {
+      "title": "Curse",
+      "releaseDate": "1989-12-23",
+      "serial": "T-22013",
+      "rating": ""
+    },
+    {
+      "title": "Cutie Suzuki no Ringside Angel",
+      "releaseDate": "1990-12-12",
+      "serial": "T-20033",
+      "rating": ""
+    },
+    {
+      "title": "CyberBall",
+      "releaseDate": "1990-07-28",
+      "serial": "G-4027",
+      "rating": ""
+    },
+    {
+      "title": "Dahna Megami Tanjou",
+      "releaseDate": "1991-12-20",
+      "serial": "T-64013",
+      "rating": ""
+    },
+    {
+      "title": "Daikoukai Jidai",
+      "releaseDate": "1992-04-29",
+      "serial": "T-76053",
+      "rating": "",
+      "altTitles": [
+        "Uncharted Waters"
+      ]
+    },
+    {
+      "title": "Daikoukai Jidai II",
+      "releaseDate": "1994-06-24",
+      "serial": "T-76163",
+      "rating": ""
+    },
+    {
+      "title": "Daimakaimura",
+      "releaseDate": "1989-08-03",
+      "serial": "G-4013",
+      "rating": "",
+      "altTitles": [
+        "Ghouls'n Ghosts"
+      ]
+    },
+    {
+      "title": "Daisenpuu",
+      "releaseDate": "1990-06-23",
+      "serial": "G-4034",
+      "rating": "",
+      "altTitles": [
+        "Twin Hawk"
+      ]
+    },
+    {
+      "title": "Dangerous Seed",
+      "releaseDate": "1990-12-18",
+      "serial": "T-14033",
+      "rating": ""
+    },
+    {
+      "title": "Darius II",
+      "releaseDate": "1990-12-20",
+      "serial": "T-11083",
+      "rating": ""
+    },
+    {
+      "title": "Darwin 4081",
+      "releaseDate": "1990-04-07",
+      "serial": "G-4033",
+      "rating": ""
+    },
+    {
+      "title": "David Robinson Basketball",
+      "releaseDate": "1992-07-10",
+      "serial": "G-4071",
+      "rating": "",
+      "altTitles": [
+        "David Robinson's Supreme Court"
+      ]
+    },
+    {
+      "title": "Davis Cup Tennis",
+      "releaseDate": "1994-02-25",
+      "serial": "T-48163",
+      "rating": ""
+    },
+    {
+      "title": "Desert Strike: Wangan Sakusen",
+      "releaseDate": "1993-04-23",
+      "serial": "EM20010",
+      "rating": "",
+      "altTitles": [
+        "Desert Strike: Return to the Gulf"
+      ]
+    },
+    {
+      "title": "Devil Crash MD",
+      "releaseDate": "1991-10-10",
+      "serial": "T-18053",
+      "rating": "",
+      "altTitles": [
+        "Dragon's Fury"
+      ]
+    },
+    {
+      "title": "Dial Q o Mawase!",
+      "releaseDate": "1992",
+      "serial": "AMMDR-01",
+      "rating": ""
+    },
+    {
+      "title": "Dick Tracy",
+      "releaseDate": "1991-03-01",
+      "serial": "G-4044",
+      "rating": ""
+    },
+    {
+      "title": "Disney's Aladdin",
+      "releaseDate": "1993-11-12",
+      "serial": "G-4111",
+      "rating": ""
+    },
+    {
+      "title": "Divine Sealing",
+      "releaseDate": "1992-05",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "DJ Boy",
+      "releaseDate": "1990-05-19",
+      "serial": "G-4032",
+      "rating": ""
+    },
+    {
+      "title": "Doraemon Yume Dorobou to 7 Nin no Gozans",
+      "releaseDate": "1993-03-26",
+      "serial": "G-4094",
+      "rating": "",
+      "altTitles": [
+        "Doraemon: Yume Dorobou to 7 Nin no Gozans"
+      ]
+    },
+    {
+      "title": "Double Dragon II: The Revenge",
+      "releaseDate": "1991-12-20",
+      "serial": "T-74023",
+      "rating": ""
+    },
+    {
+      "title": "Dragon Ball Z: Buyū Retsuden",
+      "releaseDate": "1994-04-01",
+      "serial": "T-133013",
+      "rating": "",
+      "altTitles": [
+        "Dragon Ball Z: Buyuu Retsuden"
+      ]
+    },
+    {
+      "title": "Dragon Slayer: The Legend of Heroes",
+      "releaseDate": "1994-09-16",
+      "serial": "G-5542",
+      "rating": ""
+    },
+    {
+      "title": "Dragon Slayer: The Legend of Heroes II",
+      "releaseDate": "1995-01-20",
+      "serial": "G-5544",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Dragon's Eye Plus: Shanghai III",
+      "releaseDate": "1991-11-02",
+      "serial": "T-67023",
+      "rating": ""
+    },
+    {
+      "title": "Dragon's Revenge",
+      "releaseDate": "1993-12-10",
+      "serial": "T-48143",
+      "rating": ""
+    },
+    {
+      "title": "Dream Team USA",
+      "releaseDate": "1992-12-26",
+      "serial": "EM20004",
+      "rating": "",
+      "altTitles": [
+        "Team USA Basketball"
+      ]
+    },
+    {
+      "title": "Dyna Brothers",
+      "releaseDate": "1992-07-24",
+      "serial": "T-68033",
+      "rating": ""
+    },
+    {
+      "title": "Dyna Brothers 2",
+      "releaseDate": "1993-12-03",
+      "serial": "T-68063",
+      "rating": ""
+    },
+    {
+      "title": "Dynamite Duke",
+      "releaseDate": "1990-10-27",
+      "serial": "G-4038",
+      "rating": ""
+    },
+    {
+      "title": "Dynamite Headdy",
+      "releaseDate": "1994-08-05",
+      "serial": "G-4117",
+      "rating": ""
+    },
+    {
+      "title": "Earthworm Jim",
+      "releaseDate": "1995-12-01",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Earthworm Jim 2",
+      "releaseDate": "1996-09",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Ecco Jr.",
+      "releaseDate": "1995-08-16",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Ecco the Dolphin",
+      "releaseDate": "1993-07-30",
+      "serial": "G-4106",
+      "rating": ""
+    },
+    {
+      "title": "Ecco the Dolphin II",
+      "releaseDate": "1994-08-26",
+      "serial": "G-4123",
+      "rating": "",
+      "altTitles": [
+        "Ecco: The Tides of Time"
+      ]
+    },
+    {
+      "title": "El Viento",
+      "releaseDate": "1991-09-20",
+      "serial": "T-32063",
+      "rating": ""
+    },
+    {
+      "title": "Elemental Master",
+      "releaseDate": "1990-12-14",
+      "serial": "T-18043",
+      "rating": ""
+    },
+    {
+      "title": "Eliminate Down",
+      "releaseDate": "1993-06-25",
+      "serial": "T-73033",
+      "rating": ""
+    },
+    {
+      "title": "ESWAT: City Under Siege",
+      "releaseDate": "1990-07-14",
+      "serial": "G-4029",
+      "rating": ""
+    },
+    {
+      "title": "Eternal Champions",
+      "releaseDate": "1994-02-18",
+      "serial": "G-4114",
+      "rating": ""
+    },
+    {
+      "title": "Europa Sensen",
+      "releaseDate": "1993-01-16",
+      "serial": "T-76113",
+      "rating": "",
+      "altTitles": [
+        "Operation Europe: Path to Victory 1939-45"
+      ]
+    },
+    {
+      "title": "Evander Holyfield Boxing",
+      "releaseDate": "1992-10-30",
+      "serial": "G-4084",
+      "rating": "",
+      "altTitles": [
+        "Evander Holyfield's \"Real Deal\" Boxing"
+      ]
+    },
+    {
+      "title": "Ex-Ranza",
+      "releaseDate": "1993-05-28",
+      "serial": "G-4097",
+      "rating": "",
+      "altTitles": [
+        "Ranger-X"
+      ]
+    },
+    {
+      "title": "Exile: Toki no Hazama he",
+      "releaseDate": "1991-12-06",
+      "serial": "T-49093",
+      "rating": "",
+      "altTitles": [
+        "Exile"
+      ]
+    },
+    {
+      "title": "F-117 Stealth Operation: Night Storm",
+      "releaseDate": "1994-05-27",
+      "serial": "EM20029",
+      "rating": "",
+      "altTitles": [
+        "F-117 Night Storm"
+      ]
+    },
+    {
+      "title": "F-22 Interceptor: Advanced Tactical Fighter",
+      "releaseDate": "1993-02-12",
+      "serial": "EM20007",
+      "rating": ""
+    },
+    {
+      "title": "F1 Circus MD",
+      "releaseDate": "1991-12-20",
+      "serial": "T-71013",
+      "rating": ""
+    },
+    {
+      "title": "Fantasia: Mickey Mouse Magic",
+      "releaseDate": "1991-11-22",
+      "serial": "G-4061",
+      "rating": "",
+      "altTitles": [
+        "Fantasia"
+      ]
+    },
+    {
+      "title": "Fastest 1",
+      "releaseDate": "1991-06-28",
+      "serial": "T-43023",
+      "rating": ""
+    },
+    {
+      "title": "Fatman",
+      "releaseDate": "1990-10-12",
+      "serial": "T-44013",
+      "rating": "",
+      "altTitles": [
+        "Slaughter Sport"
+      ]
+    },
+    {
+      "title": "FIFA International Soccer",
+      "releaseDate": "1994-06-10",
+      "serial": "EM20030",
+      "rating": ""
+    },
+    {
+      "title": "Fighting Masters",
+      "releaseDate": "1991-12-06",
+      "serial": "T-24063",
+      "rating": ""
+    },
+    {
+      "title": "Final Blow",
+      "releaseDate": "1990-03-23",
+      "serial": "T-11033",
+      "rating": "",
+      "altTitles": [
+        "James \"Buster\" Douglas Knockout Boxing (Mega Drive)"
+      ]
+    },
+    {
+      "title": "Fire Mustang",
+      "releaseDate": "1991-05-31",
+      "serial": "T-11123",
+      "rating": ""
+    },
+    {
+      "title": "Flashback",
+      "releaseDate": "1993-12-29",
+      "serial": "T-15083",
+      "rating": ""
+    },
+    {
+      "title": "Flicky",
+      "releaseDate": "1991-01",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Foreman for Real",
+      "releaseDate": "1995-10-27",
+      "serial": "T-81233",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Forgotten Worlds (Mega Drive)",
+      "releaseDate": "1989-11-18",
+      "serial": "G-4016",
+      "rating": ""
+    },
+    {
+      "title": "From TV Animation Slam Dunk: Kyougou Makkou Taiketsu!",
+      "releaseDate": "1995-04-28",
+      "serial": "T-133023",
+      "rating": ""
+    },
+    {
+      "title": "Fushigi no Umi no Nadia",
+      "releaseDate": "1991-03-19",
+      "serial": "T-14083",
+      "rating": ""
+    },
+    {
+      "title": "FZ Senki Axis",
+      "releaseDate": "1990-10-12",
+      "serial": "T-32013",
+      "rating": "",
+      "altTitles": [
+        "Final Zone"
+      ]
+    },
+    {
+      "title": "G-LOC: Air Battle",
+      "releaseDate": "1993-02-26",
+      "serial": "G-4079",
+      "rating": ""
+    },
+    {
+      "title": "Gaiares",
+      "releaseDate": "1990-12-26",
+      "serial": "T-49013",
+      "rating": ""
+    },
+    {
+      "title": "Gain Ground",
+      "releaseDate": "1991-01-03",
+      "serial": "G-4036",
+      "rating": ""
+    },
+    {
+      "title": "Galaxy Force II",
+      "releaseDate": "1991-09-13",
+      "serial": "T-68013",
+      "rating": ""
+    },
+    {
+      "title": "Gambler Jiko Chuushinha: Katayama Masayuki no Mahjong Doujou",
+      "releaseDate": "1990-12-14",
+      "serial": "T-45013",
+      "rating": ""
+    },
+    {
+      "title": "Garou Densetsu 2: Aratanaru Tatakai",
+      "releaseDate": "1994-06-24",
+      "serial": "T-146023",
+      "rating": "",
+      "altTitles": [
+        "Fatal Fury 2"
+      ]
+    },
+    {
+      "title": "Garou Densetsu: Shukumei no Tatakai",
+      "releaseDate": "1993-04-23",
+      "serial": "G-4100",
+      "rating": "",
+      "altTitles": [
+        "Fatal Fury"
+      ]
+    },
+    {
+      "title": "Gauntlet",
+      "releaseDate": "1993-09-17",
+      "serial": "T-48123",
+      "rating": "",
+      "altTitles": [
+        "Gauntlet IV"
+      ]
+    },
+    {
+      "title": "General Chaos Daikonsen",
+      "releaseDate": "1994-01-14",
+      "serial": "EM20025",
+      "rating": "",
+      "altTitles": [
+        "General Chaos"
+      ]
+    },
+    {
+      "title": "Ghostbusters (Mega Drive)",
+      "releaseDate": "1990-06-30",
+      "serial": "G-4030",
+      "rating": ""
+    },
+    {
+      "title": "Go Net",
+      "releaseDate": "1992",
+      "serial": "G-4533",
+      "rating": ""
+    },
+    {
+      "title": "Gods",
+      "releaseDate": "1993-03-26",
+      "serial": "T-85013",
+      "rating": ""
+    },
+    {
+      "title": "Golden Axe",
+      "releaseDate": "1989-12-23",
+      "serial": "G-4018",
+      "rating": ""
+    },
+    {
+      "title": "Golden Axe II",
+      "releaseDate": "1991-12-27",
+      "serial": "G-4062",
+      "rating": ""
+    },
+    {
+      "title": "Golden Axe III",
+      "releaseDate": "1993-06-25",
+      "serial": "G-4093",
+      "rating": ""
+    },
+    {
+      "title": "Gouketsuji Ichizoku",
+      "releaseDate": "1994-11-18",
+      "serial": "T-144013",
+      "rating": ""
+    },
+    {
+      "title": "Granada",
+      "releaseDate": "1990-11-16",
+      "serial": "T-32023",
+      "rating": ""
+    },
+    {
+      "title": "GrandSlam: The Tennis Tournament '92",
+      "releaseDate": "1992-06-12",
+      "serial": "T-49133",
+      "rating": ""
+    },
+    {
+      "title": "Greatest Heavyweights",
+      "releaseDate": "1994-05-27",
+      "serial": "G-5539",
+      "rating": ""
+    },
+    {
+      "title": "Gunstar Heroes",
+      "releaseDate": "1993-09-10",
+      "serial": "G-4103",
+      "rating": ""
+    },
+    {
+      "title": "Gynoug",
+      "releaseDate": "1991-01-25",
+      "serial": "T-25093",
+      "rating": ""
+    },
+    {
+      "title": "Hard Drivin'",
+      "releaseDate": "1990-12-21",
+      "serial": "T-48013",
+      "rating": ""
+    },
+    {
+      "title": "Heavy Unit: Mega Drive Special",
+      "releaseDate": "1990-12-26",
+      "serial": "T-27013",
+      "rating": ""
+    },
+    {
+      "title": "Hellfire",
+      "releaseDate": "1990-09-28",
+      "serial": "T-25073",
+      "rating": ""
+    },
+    {
+      "title": "Herzog Zwei",
+      "releaseDate": "1989-12-15",
+      "serial": "T-18023",
+      "rating": ""
+    },
+    {
+      "title": "Hokuto no Ken: Shin Seikimatsu Kyuuseishu Densetsu",
+      "releaseDate": "1989-07-01",
+      "serial": "G-4012",
+      "rating": ""
+    },
+    {
+      "title": "Honoo no Toukyuuji Dodge Danpei (Mega Drive)",
+      "releaseDate": "1992-07-10",
+      "serial": "G-4076",
+      "rating": ""
+    },
+    {
+      "title": "Hyokkori Hyoutanjima: Daitouryou o Mezase!",
+      "releaseDate": "1992-08-07",
+      "serial": "G-4075",
+      "rating": ""
+    },
+    {
+      "title": "Hyper Dunk: The Playoff Edition",
+      "releaseDate": "1994-03-04",
+      "serial": "T-95083",
+      "rating": ""
+    },
+    {
+      "title": "I Love Donald Duck: Gurujia Ou no Hihou",
+      "releaseDate": "1991-12-20",
+      "serial": "G-4054",
+      "rating": "",
+      "altTitles": [
+        "QuackShot Starring Donald Duck"
+      ]
+    },
+    {
+      "title": "I Love Mickey and Donald: Fushigi na Magic Box",
+      "releaseDate": "1992-12-18",
+      "serial": "G-4080",
+      "rating": "",
+      "altTitles": [
+        "World of Illusion Starring Mickey Mouse and Donald Duck"
+      ]
+    },
+    {
+      "title": "I Love Mickey Mouse: Fushigi no Oshiro Daibouken",
+      "releaseDate": "1990-11-21",
+      "serial": "G-4042",
+      "rating": "",
+      "altTitles": [
+        "Castle of Illusion Starring Mickey Mouse (Mega Drive)"
+      ]
+    },
+    {
+      "title": "Insector X",
+      "releaseDate": "1990-09-07",
+      "serial": "T-28023",
+      "rating": ""
+    },
+    {
+      "title": "J.League Champion Soccer",
+      "releaseDate": "1993-02-26",
+      "serial": "T-105013",
+      "rating": ""
+    },
+    {
+      "title": "J.League Pro Striker",
+      "releaseDate": "1993-04-23",
+      "serial": "G-5518",
+      "rating": ""
+    },
+    {
+      "title": "J.League Pro Striker 2",
+      "releaseDate": "1994-07-15",
+      "serial": "G-5540",
+      "rating": ""
+    },
+    {
+      "title": "J.League Pro Striker Kanzenban",
+      "releaseDate": "1993-12-17",
+      "serial": "G-5532",
+      "rating": ""
+    },
+    {
+      "title": "James Pond II: Codename RoboCod",
+      "releaseDate": "1993-06-09",
+      "serial": "EM20015",
+      "rating": ""
+    },
+    {
+      "title": "Janou Touryuumon",
+      "releaseDate": "1993-11-05",
+      "serial": "G-4096",
+      "rating": ""
+    },
+    {
+      "title": "Jantei Monogatari",
+      "releaseDate": "1991-03-29",
+      "serial": "T-49033",
+      "rating": ""
+    },
+    {
+      "title": "Jashin Draxos",
+      "releaseDate": "1993-02-19",
+      "serial": "EM20006",
+      "rating": "",
+      "altTitles": [
+        "Risky Woods"
+      ]
+    },
+    {
+      "title": "Jewel Master",
+      "releaseDate": "1991-08-30",
+      "serial": "G-4047",
+      "rating": ""
+    },
+    {
+      "title": "Joe Montana Football (Mega Drive)",
+      "releaseDate": "1991-03-01",
+      "serial": "G-4045",
+      "rating": ""
+    },
+    {
+      "title": "Joe Montana II Sports Talk Football",
+      "releaseDate": "1992-01-24",
+      "serial": "G-4065",
+      "rating": ""
+    },
+    {
+      "title": "Jordan vs Bird",
+      "releaseDate": "1993-09-24",
+      "serial": "EM20022",
+      "rating": ""
+    },
+    {
+      "title": "Judge Dredd",
+      "releaseDate": "1995-09-01",
+      "serial": "T-81203",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "JuJu Densetsu",
+      "releaseDate": "1992-01-31",
+      "serial": "G-4064",
+      "rating": "",
+      "altTitles": [
+        "Toki: Going Ape Spit"
+      ]
+    },
+    {
+      "title": "Junction",
+      "releaseDate": "1990-11-25",
+      "serial": "T-22023",
+      "rating": ""
+    },
+    {
+      "title": "Jungle Strike: Uketsugareta Kyouki",
+      "releaseDate": "1993-12-17",
+      "serial": "EM20020",
+      "rating": "",
+      "altTitles": [
+        "Jungle Strike"
+      ]
+    },
+    {
+      "title": "Jurassic Park (Mega Drive)",
+      "releaseDate": "1993-08-27",
+      "serial": "G-4109",
+      "rating": ""
+    },
+    {
+      "title": "Jusou Kihei Leynos",
+      "releaseDate": "1990-03-16",
+      "serial": "T-25013",
+      "rating": "",
+      "altTitles": [
+        "Target Earth"
+      ]
+    },
+    {
+      "title": "Justice League Task Force",
+      "releaseDate": "1995-09-01",
+      "serial": "T-81213",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Juuouki",
+      "releaseDate": "1988-11-27",
+      "serial": "G-4001",
+      "rating": "",
+      "altTitles": [
+        "Altered Beast"
+      ]
+    },
+    {
+      "title": "Ka-Ge-Ki",
+      "releaseDate": "1991-04-26",
+      "serial": "T-28013",
+      "rating": ""
+    },
+    {
+      "title": "Kidou Keisatsu Patlabor: 98-Shiki Kidou Seyo!",
+      "releaseDate": "1992-10-23",
+      "serial": "T-16013",
+      "rating": ""
+    },
+    {
+      "title": "King of the Monsters",
+      "releaseDate": "1993-11-26",
+      "serial": "G-4104",
+      "rating": ""
+    },
+    {
+      "title": "King Salmon",
+      "releaseDate": "1992-09-26",
+      "serial": "T-28053",
+      "rating": ""
+    },
+    {
+      "title": "Kishi Densetsu",
+      "releaseDate": "1993-07-30",
+      "serial": "T-46033",
+      "rating": ""
+    },
+    {
+      "title": "Klax (Namco)",
+      "releaseDate": "1990-09-07",
+      "serial": "T-14063",
+      "rating": ""
+    },
+    {
+      "title": "Koutetsu Teikoku",
+      "releaseDate": "1992-03-13",
+      "serial": "T-28033",
+      "rating": "",
+      "altTitles": [
+        "The Steel Empire"
+      ]
+    },
+    {
+      "title": "Kujaku Ou 2: Geneijou",
+      "releaseDate": "1989-11-25",
+      "serial": "G-4017",
+      "rating": ""
+    },
+    {
+      "title": "Kuuga: Operation Code \"Vapor Trail\"",
+      "releaseDate": "1991-08-02",
+      "serial": "T-49043",
+      "rating": "",
+      "altTitles": [
+        "Vapor Trail: Hyper Offence Formation"
+      ]
+    },
+    {
+      "title": "Kyuukai Douchuuki",
+      "releaseDate": "1991-07-12",
+      "serial": "T-14103",
+      "rating": ""
+    },
+    {
+      "title": "Kyuukyoku Tiger",
+      "releaseDate": "1991-02-22",
+      "serial": "T-24033",
+      "rating": "",
+      "altTitles": [
+        "Twin Cobra"
+      ]
+    },
+    {
+      "title": "Landstalker: Koutei no Zaihou",
+      "releaseDate": "1992-10-30",
+      "serial": "G-5517",
+      "rating": "",
+      "altTitles": [
+        "Landstalker: The Treasures of King Nole"
+      ]
+    },
+    {
+      "title": "Langrisser",
+      "releaseDate": "1991-04-26",
+      "serial": "T-25103",
+      "rating": ""
+    },
+    {
+      "title": "Langrisser II",
+      "releaseDate": "1994-08-26",
+      "serial": "T-25143",
+      "rating": ""
+    },
+    {
+      "title": "Lemmings",
+      "releaseDate": "1992-11-20",
+      "serial": "T-15063",
+      "rating": ""
+    },
+    {
+      "title": "Lethal Enforcers",
+      "releaseDate": "1993-12-10",
+      "serial": "T-95073",
+      "rating": ""
+    },
+    {
+      "title": "LHX Attack Chopper",
+      "releaseDate": "1993-06-04",
+      "serial": "EM20016",
+      "rating": ""
+    },
+    {
+      "title": "Light Crusader",
+      "releaseDate": "1995-05-26",
+      "serial": "G-5545",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Lion King",
+      "releaseDate": "1994-12-09",
+      "serial": "T-70083",
+      "rating": "",
+      "altTitles": [
+        "The Lion King"
+      ]
+    },
+    {
+      "title": "Lord Monarch",
+      "releaseDate": "1994-06-24",
+      "serial": "G-5534",
+      "rating": "",
+      "altTitles": [
+        "Lord Monarch: Tokoton Sentou Densetsu"
+      ]
+    },
+    {
+      "title": "Magical Hat no Buttobi Turbo! Daibouken",
+      "releaseDate": "1990-12-15",
+      "serial": "G-4041",
+      "rating": ""
+    },
+    {
+      "title": "Magical Kid Taruruto",
+      "releaseDate": "1992-04-24",
+      "serial": "G-4068",
+      "rating": "",
+      "altTitles": [
+        "Magical Taruruto-kun (Mega Drive)"
+      ]
+    },
+    {
+      "title": "Mahjong Cop Ryuu: Hakurou no Yabou",
+      "releaseDate": "1989-12-14",
+      "serial": "G-4015",
+      "rating": ""
+    },
+    {
+      "title": "Mamono Hunter Youko: Dai 7 no Keishou",
+      "releaseDate": "1991-03-22",
+      "serial": "T-25053",
+      "rating": ""
+    },
+    {
+      "title": "Maou Renjishi",
+      "releaseDate": "1991-10-25",
+      "serial": "T-11143",
+      "rating": "",
+      "altTitles": [
+        "Mystical Fighter"
+      ]
+    },
+    {
+      "title": "Marble Madness",
+      "releaseDate": "1993-08-13",
+      "serial": "T-48113",
+      "rating": ""
+    },
+    {
+      "title": "Marvel Land",
+      "releaseDate": "1991-06-28",
+      "serial": "T-14093",
+      "rating": ""
+    },
+    {
+      "title": "Master of Monsters",
+      "releaseDate": "1991-07-26",
+      "serial": "T-63013",
+      "rating": ""
+    },
+    {
+      "title": "Master of Weapon",
+      "releaseDate": "1991-09-27",
+      "serial": "T-11063",
+      "rating": ""
+    },
+    {
+      "title": "Maten no Soumetsu",
+      "releaseDate": "1993-12-29",
+      "serial": "T-46023",
+      "rating": ""
+    },
+    {
+      "title": "MazinSaga",
+      "releaseDate": "1993-02-26",
+      "serial": "G-4078",
+      "rating": "",
+      "altTitles": [
+        "Mazin Saga: Mutant Fighter"
+      ]
+    },
+    {
+      "title": "McDonald's Treasure Land Adventure",
+      "releaseDate": "1993-09-23",
+      "serial": "G-4102",
+      "rating": ""
+    },
+    {
+      "title": "Mega Anser (software)",
+      "releaseDate": "1990",
+      "serial": "G-4502",
+      "rating": ""
+    },
+    {
+      "title": "Mega Lo Mania",
+      "releaseDate": "1993-04-23",
+      "serial": "T-68053",
+      "rating": ""
+    },
+    {
+      "title": "Megapanel",
+      "releaseDate": "1990-11-22",
+      "serial": "T-14073",
+      "rating": ""
+    },
+    {
+      "title": "MegaTrax",
+      "releaseDate": "1991-08-06",
+      "serial": "T-14113",
+      "rating": "",
+      "altTitles": [
+        "Quad Challenge"
+      ]
+    },
+    {
+      "title": "Metal Fangs",
+      "releaseDate": "1993-12-17",
+      "serial": "T-60033",
+      "rating": ""
+    },
+    {
+      "title": "Michael Jackson's Moonwalker",
+      "releaseDate": "1990-08-25",
+      "serial": "G-4028",
+      "rating": ""
+    },
+    {
+      "title": "Mickey Mania",
+      "releaseDate": "1995-03-31",
+      "serial": "G-4131",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Mickey Mania: The Timeless Adventures of Mickey Mouse"
+      ]
+    },
+    {
+      "title": "Mickey to Minnie Magical Adventure 2",
+      "releaseDate": "1994-12-16",
+      "serial": "T-12063",
+      "rating": "",
+      "altTitles": [
+        "The Great Circus Mystery Starring Mickey & Minnie"
+      ]
+    },
+    {
+      "title": "Midnight Resistance",
+      "releaseDate": "1991-03-29",
+      "serial": "T-13043",
+      "rating": ""
+    },
+    {
+      "title": "MiG-29 Fighter Pilot",
+      "releaseDate": "1993-11-26",
+      "serial": "T-48133",
+      "rating": ""
+    },
+    {
+      "title": "Minato no Traysia",
+      "releaseDate": "1992-02-14",
+      "serial": "T-49073",
+      "rating": "",
+      "altTitles": [
+        "Traysia"
+      ]
+    },
+    {
+      "title": "Monster World IV",
+      "releaseDate": "1994-04-01",
+      "serial": "G-5519",
+      "rating": ""
+    },
+    {
+      "title": "Mortal Kombat",
+      "releaseDate": "1994-05-27",
+      "serial": "T-81013",
+      "rating": ""
+    },
+    {
+      "title": "Mortal Kombat II: Ultimate Godly Fist",
+      "releaseDate": "1994-09-09",
+      "serial": "T-81093",
+      "rating": "",
+      "altTitles": [
+        "Mortal Kombat II"
+      ]
+    },
+    {
+      "title": "Mugen Senshi Valis",
+      "releaseDate": "1991-12-27",
+      "serial": "T-49083",
+      "rating": "",
+      "altTitles": [
+        "Valis: The Fantasm Soldier"
+      ]
+    },
+    {
+      "title": "Musha Aleste",
+      "releaseDate": "1990-12-21",
+      "serial": "T-35013",
+      "rating": "",
+      "altTitles": [
+        "M.U.S.H.A."
+      ]
+    },
+    {
+      "title": "Mutant League Football",
+      "releaseDate": "1993-09-10",
+      "serial": "EM20018",
+      "rating": ""
+    },
+    {
+      "title": "Naisu-kun Mini",
+      "releaseDate": "1990",
+      "serial": "G-4519",
+      "rating": ""
+    },
+    {
+      "title": "Nakajima Satoru Kanshuu F1 Grand Prix",
+      "releaseDate": "1991-12-20",
+      "serial": "T-72013",
+      "rating": ""
+    },
+    {
+      "title": "Nakajima Satoru Kanshuu F1 Hero MD",
+      "releaseDate": "1992-05-15",
+      "serial": "T-72023",
+      "rating": "",
+      "altTitles": [
+        "Ferrari Grand Prix Challenge"
+      ]
+    },
+    {
+      "title": "Nakajima Satoru Kanshuu F1 Super License",
+      "releaseDate": "1992-12-11",
+      "serial": "T-72033",
+      "rating": ""
+    },
+    {
+      "title": "NBA Jam",
+      "releaseDate": "1994-04-29",
+      "serial": "T-81033",
+      "rating": ""
+    },
+    {
+      "title": "NBA Jam Tournament Edition",
+      "releaseDate": "1995-02-24",
+      "serial": "T-81143",
+      "rating": ""
+    },
+    {
+      "title": "NBA Playoffs: Bulls vs Blazers",
+      "releaseDate": "1993-07-30",
+      "serial": "EM20017",
+      "rating": "",
+      "altTitles": [
+        "Bulls versus Blazers and the NBA Playoffs"
+      ]
+    },
+    {
+      "title": "NBA Pro Basketball '94",
+      "releaseDate": "1994-07-01",
+      "serial": "EM20028",
+      "rating": "",
+      "altTitles": [
+        "NBA Showdown '94"
+      ]
+    },
+    {
+      "title": "NBA Pro Basketball: Bulls vs Lakers",
+      "releaseDate": "1993-04-02",
+      "serial": "EM20012",
+      "rating": "",
+      "altTitles": [
+        "Bulls vs Lakers and the NBA Playoffs"
+      ]
+    },
+    {
+      "title": "Nekketsu Kouko Dodgeball Bu: Soccer Hen MD",
+      "releaseDate": "1992-08-07",
+      "serial": "T-74033",
+      "rating": ""
+    },
+    {
+      "title": "New 3D Golf Simulation: Devil's Course",
+      "releaseDate": "1994-01-28",
+      "serial": "G-5527",
+      "rating": ""
+    },
+    {
+      "title": "New 3D Golf Simulation: Harukanaru Augusta",
+      "releaseDate": "1993-12-17",
+      "serial": "T-114033",
+      "rating": ""
+    },
+    {
+      "title": "New 3D Golf Simulation: Pebble Beach no Hatou",
+      "releaseDate": "1993-10-29",
+      "serial": "G-5525",
+      "rating": "",
+      "altTitles": [
+        "Pebble Beach Golf Links (Mega Drive)"
+      ]
+    },
+    {
+      "title": "New 3D Golf Simulation: Waialae no Kiseki",
+      "releaseDate": "1994-02-25",
+      "serial": "G-5529",
+      "rating": ""
+    },
+    {
+      "title": "NFL Football '94",
+      "releaseDate": "1994-02-04",
+      "serial": "G-5535",
+      "rating": "",
+      "altTitles": [
+        "NFL Football '94 Starring Joe Montana"
+      ]
+    },
+    {
+      "title": "NFL Pro Football '94",
+      "releaseDate": "1994-02-18",
+      "serial": "EM20026",
+      "rating": "",
+      "altTitles": [
+        "Madden NFL '94"
+      ]
+    },
+    {
+      "title": "NFL Quarterback Club (Mega Drive)",
+      "releaseDate": "1995-02-24",
+      "serial": "T-81153",
+      "rating": ""
+    },
+    {
+      "title": "NHK Taiga Drama: Taiheiki",
+      "releaseDate": "1991-12-13",
+      "serial": "G-5511",
+      "rating": ""
+    },
+    {
+      "title": "Nigel Mansell IndyCar",
+      "releaseDate": "1994-12-16",
+      "serial": "T-81123",
+      "rating": "",
+      "altTitles": [
+        "Newman-Haas IndyCar Featuring Nigel Mansell"
+      ]
+    },
+    {
+      "title": "Nikkan Sports Pro Yakyuu VAN",
+      "releaseDate": "1991-04-06",
+      "serial": "G-4522",
+      "rating": ""
+    },
+    {
+      "title": "Ninja Burai Densetsu",
+      "releaseDate": "1991-12-05",
+      "serial": "G-4524",
+      "rating": ""
+    },
+    {
+      "title": "Nobunaga no Yabou: Bushou Fuuunroku",
+      "releaseDate": "1991-12-20",
+      "serial": "T-76013",
+      "rating": ""
+    },
+    {
+      "title": "Nobunaga no Yabou: Haouden",
+      "releaseDate": "1994-02-25",
+      "serial": "T-76153",
+      "rating": ""
+    },
+    {
+      "title": "Nobunaga no Yabou: Zenkoku Ban",
+      "releaseDate": "1993-09-15",
+      "serial": "T-76133",
+      "rating": "",
+      "altTitles": [
+        "Nobunaga's Ambition"
+      ]
+    },
+    {
+      "title": "Olympic Gold",
+      "releaseDate": "1992-07-24",
+      "serial": "G-4081",
+      "rating": ""
+    },
+    {
+      "title": "Osaka Ginkou no Home Banking Service My Line",
+      "releaseDate": "1990",
+      "serial": "G-4517",
+      "rating": ""
+    },
+    {
+      "title": "Osomatsu-kun Hachamecha Gekijou",
+      "releaseDate": "1988-12-24",
+      "serial": "G-4005",
+      "rating": ""
+    },
+    {
+      "title": "OutRun",
+      "releaseDate": "1991-08-09",
+      "serial": "G-4052",
+      "rating": ""
+    },
+    {
+      "title": "OutRun 2019",
+      "releaseDate": "1993-03-26",
+      "serial": "T-44033",
+      "rating": ""
+    },
+    {
+      "title": "OutRunners",
+      "releaseDate": "1994-05-13",
+      "serial": "G-4119",
+      "rating": ""
+    },
+    {
+      "title": "Ozaki Naomichi no Super Masters",
+      "releaseDate": "1989-09-09",
+      "serial": "G-4014",
+      "rating": "",
+      "altTitles": [
+        "Arnold Palmer Tournament Golf"
+      ]
+    },
+    {
+      "title": "Pachinko Kuunyan",
+      "releaseDate": "1992-12-18",
+      "serial": "T-73013",
+      "rating": ""
+    },
+    {
+      "title": "Panorama Cotton",
+      "releaseDate": "1994-08-12",
+      "serial": "T-15103",
+      "rating": ""
+    },
+    {
+      "title": "Paperboy",
+      "releaseDate": "1992-06-26",
+      "serial": "T-48043",
+      "rating": ""
+    },
+    {
+      "title": "Party Quiz Mega Q",
+      "releaseDate": "1993-11-05",
+      "serial": "G-4107",
+      "rating": ""
+    },
+    {
+      "title": "Pepenga Pengo",
+      "releaseDate": "1995-12-22",
+      "serial": "G-4133",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "PGA Tour Golf II",
+      "releaseDate": "1993-04-16",
+      "serial": "EM20009",
+      "rating": ""
+    },
+    {
+      "title": "Phantasy Star",
+      "releaseDate": "1994-04-02",
+      "serial": "G-4534",
+      "rating": ""
+    },
+    {
+      "title": "Phantasy Star II: Kaerazaru Toki no Owari ni",
+      "releaseDate": "1989-03-21",
+      "serial": "G-5501",
+      "rating": "",
+      "altTitles": [
+        "Phantasy Star II"
+      ]
+    },
+    {
+      "title": "Phantasy Star: Sennenki no Owari ni",
+      "releaseDate": "1993-12-17",
+      "serial": "G-5524",
+      "rating": "",
+      "altTitles": [
+        "Phantasy Star IV: The End of the Millennium"
+      ]
+    },
+    {
+      "title": "Phelios",
+      "releaseDate": "1990-07-20",
+      "serial": "T-14013",
+      "rating": ""
+    },
+    {
+      "title": "Pit-Fighter",
+      "releaseDate": "1992-03-27",
+      "serial": "T-48033",
+      "rating": ""
+    },
+    {
+      "title": "Pitfall: The Mayan Adventure",
+      "releaseDate": "",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Populous",
+      "releaseDate": "1991-08-09",
+      "serial": "G-4057",
+      "rating": ""
+    },
+    {
+      "title": "Power Athlete",
+      "releaseDate": "1992-12-11",
+      "serial": "T-33033",
+      "rating": "",
+      "altTitles": [
+        "Deadly Moves"
+      ]
+    },
+    {
+      "title": "Power Monger",
+      "releaseDate": "1993-06-18",
+      "serial": "EM20011",
+      "rating": ""
+    },
+    {
+      "title": "Pro Football",
+      "releaseDate": "1992-11-20",
+      "serial": "EM20001",
+      "rating": "",
+      "altTitles": [
+        "John Madden Football '92"
+      ]
+    },
+    {
+      "title": "Pro Hockey",
+      "releaseDate": "1992-11-20",
+      "serial": "EM20002",
+      "rating": "",
+      "altTitles": [
+        "EA Hockey"
+      ]
+    },
+    {
+      "title": "Pro Striker Final Stage",
+      "releaseDate": "1995-08-04",
+      "serial": "G-5547",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Pro Yakyuu Super League '91",
+      "releaseDate": "1991-08-30",
+      "serial": "G-4529",
+      "rating": ""
+    },
+    {
+      "title": "Psy-O-Blade",
+      "releaseDate": "1990-04-27",
+      "serial": "T-26013",
+      "rating": ""
+    },
+    {
+      "title": "Pulseman",
+      "releaseDate": "1994-07-22",
+      "serial": "G-4098",
+      "rating": ""
+    },
+    {
+      "title": "Puyo Puyo",
+      "releaseDate": "1992-12-18",
+      "serial": "G-4082",
+      "rating": ""
+    },
+    {
+      "title": "Puyo Puyo Tsuu",
+      "releaseDate": "1994-12-02",
+      "serial": "T-66013",
+      "rating": ""
+    },
+    {
+      "title": "Puzzle & Action: Ichidant-R",
+      "releaseDate": "1995-01-13",
+      "serial": "G-4128",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Puzzle & Action: Tant-R",
+      "releaseDate": "1994-04-01",
+      "serial": "G-4118",
+      "rating": ""
+    },
+    {
+      "title": "R.B.I. Baseball 4",
+      "releaseDate": "1992-12-18",
+      "serial": "T-48063",
+      "rating": ""
+    },
+    {
+      "title": "Raiden Densetsu",
+      "releaseDate": "1991-07-06",
+      "serial": "T-22043",
+      "rating": "",
+      "altTitles": [
+        "Raiden Trad"
+      ]
+    },
+    {
+      "title": "Rainbow Islands Extra",
+      "releaseDate": "1990-10-05",
+      "serial": "T-11073",
+      "rating": ""
+    },
+    {
+      "title": "Rambo III (Mega Drive)",
+      "releaseDate": "1989-10-21",
+      "serial": "G-4010",
+      "rating": ""
+    },
+    {
+      "title": "Rampart",
+      "releaseDate": "1992-12-11",
+      "serial": "T-48053",
+      "rating": ""
+    },
+    {
+      "title": "Ransei no Hasha",
+      "releaseDate": "1991-11-29",
+      "serial": "T-20053",
+      "rating": ""
+    },
+    {
+      "title": "Rastan Saga II",
+      "releaseDate": "1990-08-10",
+      "serial": "T-11043",
+      "rating": ""
+    },
+    {
+      "title": "Rent A Hero",
+      "releaseDate": "1991-09-20",
+      "serial": "G-5508",
+      "rating": ""
+    },
+    {
+      "title": "Ristar The Shooting Star",
+      "releaseDate": "1995-02-17",
+      "serial": "G-4126",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Ristar"
+      ]
+    },
+    {
+      "title": "Road Rash",
+      "releaseDate": "1992-11-20",
+      "serial": "EM20003",
+      "rating": ""
+    },
+    {
+      "title": "Road Rash II",
+      "releaseDate": "1993-07-23",
+      "serial": "EM20014",
+      "rating": ""
+    },
+    {
+      "title": "RoadBlasters",
+      "releaseDate": "1992-02-28",
+      "serial": "T-48023",
+      "rating": ""
+    },
+    {
+      "title": "RoboCop Versus The Terminator",
+      "releaseDate": "1994-05-28",
+      "serial": "T-70043",
+      "rating": ""
+    },
+    {
+      "title": "Rocket Knight Adventures",
+      "releaseDate": "1993-08-06",
+      "serial": "T-95063",
+      "rating": ""
+    },
+    {
+      "title": "Rockman Mega World",
+      "releaseDate": "1994-10-21",
+      "serial": "T-12053",
+      "rating": "",
+      "altTitles": [
+        "Mega Man: The Wily Wars"
+      ]
+    },
+    {
+      "title": "Rolling Thunder 2",
+      "releaseDate": "1991-11-19",
+      "serial": "T-14133",
+      "rating": ""
+    },
+    {
+      "title": "Royal Blood",
+      "releaseDate": "1992-06-25",
+      "serial": "T-76063",
+      "rating": "",
+      "altTitles": [
+        "Gemfire"
+      ]
+    },
+    {
+      "title": "Runark",
+      "releaseDate": "1991-11-15",
+      "serial": "T-11153",
+      "rating": "",
+      "altTitles": [
+        "Growl"
+      ]
+    },
+    {
+      "title": "Ryuuko no Ken",
+      "releaseDate": "1994-01-14",
+      "serial": "G-4113",
+      "rating": "",
+      "altTitles": [
+        "Art of Fighting"
+      ]
+    },
+    {
+      "title": "Saint Sword",
+      "releaseDate": "1991-06-28",
+      "serial": "T-11133",
+      "rating": ""
+    },
+    {
+      "title": "Same! Same! Same!",
+      "releaseDate": "1990-11-02",
+      "serial": "T-40013",
+      "rating": "",
+      "altTitles": [
+        "Fire Shark"
+      ]
+    },
+    {
+      "title": "Samurai Spirits",
+      "releaseDate": "1994-11-19",
+      "serial": "G-4127",
+      "rating": "",
+      "altTitles": [
+        "Samurai Shodown"
+      ]
+    },
+    {
+      "title": "Sangokushi II",
+      "releaseDate": "1991-12-26",
+      "serial": "T-76023",
+      "rating": "",
+      "altTitles": [
+        "Romance of the Three Kingdoms II"
+      ]
+    },
+    {
+      "title": "Sangokushi III",
+      "releaseDate": "1992-11-08",
+      "serial": "T-76093",
+      "rating": "",
+      "altTitles": [
+        "Romance of the Three Kingdoms III: Dragon of Destiny"
+      ]
+    },
+    {
+      "title": "Sangokushi Retsuden: Ransei no Eiyuutachi",
+      "releaseDate": "1991-04-29",
+      "serial": "G-5504",
+      "rating": ""
+    },
+    {
+      "title": "Sansan",
+      "releaseDate": "1994-09",
+      "serial": "T-147013",
+      "rating": ""
+    },
+    {
+      "title": "SD Valis",
+      "releaseDate": "1992-02-14",
+      "serial": "T-49103",
+      "rating": "",
+      "altTitles": [
+        "Syd of Valis"
+      ]
+    },
+    {
+      "title": "Sega Game Toshokan",
+      "releaseDate": "1990-11-03",
+      "serial": "G-4503",
+      "rating": ""
+    },
+    {
+      "title": "Senjou no Ookami II",
+      "releaseDate": "1991-09-27",
+      "serial": "G-4051",
+      "rating": "",
+      "altTitles": [
+        "Mercs"
+      ]
+    },
+    {
+      "title": "Shadow Dancer: The Secret of Shinobi",
+      "releaseDate": "1990-12-01",
+      "serial": "G-4043",
+      "rating": ""
+    },
+    {
+      "title": "Shadow of the Beast: Mashou no Okite",
+      "releaseDate": "1992-03-27",
+      "serial": "T-60023",
+      "rating": "",
+      "altTitles": [
+        "Shadow of the Beast"
+      ]
+    },
+    {
+      "title": "Shi no Meikyu: Labyrinth of Death",
+      "releaseDate": "1990-11-21",
+      "serial": "",
+      "rating": "",
+      "altTitles": [
+        "Fatal Labyrinth"
+      ]
+    },
+    {
+      "title": "Shijou Saidai no Soukoban",
+      "releaseDate": "1990-01-30",
+      "serial": "T-25023",
+      "rating": "",
+      "altTitles": [
+        "Shove It! ...The Warehouse Game"
+      ]
+    },
+    {
+      "title": "Shikinjoh",
+      "releaseDate": "1991-04-27",
+      "serial": "T-15053",
+      "rating": ""
+    },
+    {
+      "title": "Shin Souseiki Ragnacenty",
+      "releaseDate": "1994-06-17",
+      "serial": "G-5536",
+      "rating": "",
+      "altTitles": [
+        "Crusader of Centy"
+      ]
+    },
+    {
+      "title": "Shining and the Darkness",
+      "releaseDate": "1991-03-29",
+      "serial": "G-5506",
+      "rating": "",
+      "altTitles": [
+        "Shining in the Darkness"
+      ]
+    },
+    {
+      "title": "Shining Force II: Inishie no Fuuin",
+      "releaseDate": "1993-10-01",
+      "serial": "G-5521",
+      "rating": "",
+      "altTitles": [
+        "Shining Force II"
+      ]
+    },
+    {
+      "title": "Shining Force: Legacy of the Gods",
+      "releaseDate": "1992-03-20",
+      "serial": "G-5512",
+      "rating": "",
+      "altTitles": [
+        "Shining Force"
+      ]
+    },
+    {
+      "title": "Shiten Myouou",
+      "releaseDate": "1990-08-10",
+      "serial": "T-26023",
+      "rating": "",
+      "altTitles": [
+        "Shadow Blasters"
+      ]
+    },
+    {
+      "title": "Shougi no Hoshi",
+      "releaseDate": "1991-10-31",
+      "serial": "T-67013",
+      "rating": ""
+    },
+    {
+      "title": "Shura no Mon",
+      "releaseDate": "1992-08-07",
+      "serial": "G-4073",
+      "rating": ""
+    },
+    {
+      "title": "Side Pocket",
+      "releaseDate": "1992-12-11",
+      "serial": "T-13083",
+      "rating": ""
+    },
+    {
+      "title": "Slap Fight MD",
+      "releaseDate": "1993-06-11",
+      "serial": "T-48093",
+      "rating": ""
+    },
+    {
+      "title": "Slime World",
+      "releaseDate": "1992-04-30",
+      "serial": "T-49123",
+      "rating": "",
+      "altTitles": [
+        "Todd's Adventures in Slime World"
+      ]
+    },
+    {
+      "title": "Snow Bros.",
+      "releaseDate": "1993-05-28",
+      "serial": "T-48083",
+      "rating": ""
+    },
+    {
+      "title": "Sonic & Knuckles",
+      "releaseDate": "1994-10-28",
+      "serial": "G-4124",
+      "rating": ""
+    },
+    {
+      "title": "Sonic the Hedgehog (Mega Drive)",
+      "releaseDate": "1991-07-26",
+      "serial": "G-4049",
+      "rating": ""
+    },
+    {
+      "title": "Sonic the Hedgehog 2 (Mega Drive)",
+      "releaseDate": "1992-11-21",
+      "serial": "G-4088",
+      "rating": ""
+    },
+    {
+      "title": "Sonic the Hedgehog 3",
+      "releaseDate": "1994-05-27",
+      "serial": "G-5531",
+      "rating": ""
+    },
+    {
+      "title": "Sonic the Hedgehog Spinball",
+      "releaseDate": "1993-12-10",
+      "serial": "G-4112",
+      "rating": ""
+    },
+    {
+      "title": "Sorcer Kingdom",
+      "releaseDate": "1992-02-07",
+      "serial": "T-25113",
+      "rating": "",
+      "altTitles": [
+        "Sorcerer's Kingdom"
+      ]
+    },
+    {
+      "title": "Sorcerian",
+      "releaseDate": "1990-02-24",
+      "serial": "G-4504",
+      "rating": ""
+    },
+    {
+      "title": "Sorcery Saga I",
+      "releaseDate": "1996-03-22",
+      "serial": "T-66023",
+      "rating": "",
+      "altTitles": [
+        "Madou Monogatari I"
+      ]
+    },
+    {
+      "title": "Space Funky B.O.B.",
+      "releaseDate": "1993-11-19",
+      "serial": "EM20019",
+      "rating": "",
+      "altTitles": [
+        "B.O.B."
+      ]
+    },
+    {
+      "title": "Space Harrier II",
+      "releaseDate": "1988-10-29",
+      "serial": "G-4002",
+      "rating": ""
+    },
+    {
+      "title": "Space Invaders 90",
+      "releaseDate": "1990-09-07",
+      "serial": "T-11053",
+      "rating": ""
+    },
+    {
+      "title": "Sparkster: Rocket Knight Adventures 2",
+      "releaseDate": "1994-09-23",
+      "serial": "T-95103",
+      "rating": ""
+    },
+    {
+      "title": "Speedball 2",
+      "releaseDate": "1992-06-19",
+      "serial": "T-68023",
+      "rating": "",
+      "altTitles": [
+        "Speedball 2: Brutal Deluxe"
+      ]
+    },
+    {
+      "title": "Spider-Man and Venom: Maximum Carnage",
+      "releaseDate": "1995-05-26",
+      "serial": "T-81256-50",
+      "rating": ""
+    },
+    {
+      "title": "Spider-Man vs. The Kingpin",
+      "releaseDate": "1991-10-18",
+      "serial": "G-4058",
+      "rating": ""
+    },
+    {
+      "title": "Splatterhouse Part 2",
+      "releaseDate": "1992-08-04",
+      "serial": "T-14143",
+      "rating": "",
+      "altTitles": [
+        "Splatterhouse 2"
+      ]
+    },
+    {
+      "title": "Splatterhouse Part 3",
+      "releaseDate": "1993-03-19",
+      "serial": "T-14153",
+      "rating": "",
+      "altTitles": [
+        "Splatterhouse 3"
+      ]
+    },
+    {
+      "title": "Star Cruiser",
+      "releaseDate": "1990-12-21",
+      "serial": "T-25063",
+      "rating": ""
+    },
+    {
+      "title": "Steel Talons",
+      "releaseDate": "1993-06-25",
+      "serial": "T-48103",
+      "rating": ""
+    },
+    {
+      "title": "Stormlord",
+      "releaseDate": "1992-03-27",
+      "serial": "T-49113",
+      "rating": ""
+    },
+    {
+      "title": "Street Fighter II' Plus",
+      "releaseDate": "1993-09-28",
+      "serial": "T-12033",
+      "rating": "",
+      "altTitles": [
+        "Street Fighter II': Special Champion Edition"
+      ]
+    },
+    {
+      "title": "Street Smart",
+      "releaseDate": "1991-07-19",
+      "serial": "T-24083",
+      "rating": ""
+    },
+    {
+      "title": "Strider Hiryuu",
+      "releaseDate": "1990-09-29",
+      "serial": "G-4037",
+      "rating": "",
+      "altTitles": [
+        "Strider"
+      ]
+    },
+    {
+      "title": "Sumisei Home Tanmatsu",
+      "releaseDate": "1991",
+      "serial": "G-5507",
+      "rating": ""
+    },
+    {
+      "title": "Super Airwolf",
+      "releaseDate": "1991-03-29",
+      "serial": "T-29023",
+      "rating": "",
+      "altTitles": [
+        "Cross Fire"
+      ]
+    },
+    {
+      "title": "Super Baseball 2020",
+      "releaseDate": "1994-03-04",
+      "serial": "EM20027",
+      "rating": ""
+    },
+    {
+      "title": "Super Daisenryaku",
+      "releaseDate": "1989-04-29",
+      "serial": "G-4501",
+      "rating": ""
+    },
+    {
+      "title": "Super Fantasy Zone",
+      "releaseDate": "1992-01-14",
+      "serial": "T-15023",
+      "rating": ""
+    },
+    {
+      "title": "Super H.Q.",
+      "releaseDate": "1992-10-23",
+      "serial": "T-11163",
+      "rating": "",
+      "altTitles": [
+        "Chase H.Q. II"
+      ]
+    },
+    {
+      "title": "Super Hang-On",
+      "releaseDate": "1989-10-06",
+      "serial": "G-4011",
+      "rating": ""
+    },
+    {
+      "title": "Super Hydlide",
+      "releaseDate": "1989-10-06",
+      "serial": "T-20013",
+      "rating": ""
+    },
+    {
+      "title": "Super League (Mega Drive)",
+      "releaseDate": "1989-04-22",
+      "serial": "G-4006",
+      "rating": ""
+    },
+    {
+      "title": "Super Monaco GP",
+      "releaseDate": "1990-08-09",
+      "serial": "G-4026",
+      "rating": ""
+    },
+    {
+      "title": "Super Real Basketball",
+      "releaseDate": "1990-03-02",
+      "serial": "G-4021",
+      "rating": ""
+    },
+    {
+      "title": "Super Street Fighter II: The New Challengers",
+      "releaseDate": "1994-06-25",
+      "serial": "T-12043",
+      "rating": ""
+    },
+    {
+      "title": "Super Thunder Blade",
+      "releaseDate": "1988-10-29",
+      "serial": "G-4003",
+      "rating": ""
+    },
+    {
+      "title": "Super Volley Ball",
+      "releaseDate": "1991-02-01",
+      "serial": "T-30013",
+      "rating": ""
+    },
+    {
+      "title": "Surging Aura",
+      "releaseDate": "1995-03-17",
+      "serial": "G-5522",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Sword of Sodan",
+      "releaseDate": "1991-10-11",
+      "serial": "G-4056",
+      "rating": ""
+    },
+    {
+      "title": "T2: The Arcade Game",
+      "releaseDate": "1994-02-25",
+      "serial": "T-81023",
+      "rating": ""
+    },
+    {
+      "title": "Taikou Risshiden",
+      "releaseDate": "1993-05-28",
+      "serial": "T-76123",
+      "rating": ""
+    },
+    {
+      "title": "Task Force Harrier EX",
+      "releaseDate": "1991-12-20",
+      "serial": "T-24053",
+      "rating": ""
+    },
+    {
+      "title": "Tatsujin",
+      "releaseDate": "1989-12-09",
+      "serial": "G-4020",
+      "rating": "",
+      "altTitles": [
+        "Truxton"
+      ]
+    },
+    {
+      "title": "Taz-Mania",
+      "releaseDate": "1992-12-25",
+      "serial": "G-4089",
+      "rating": ""
+    },
+    {
+      "title": "Tecmo Super Bowl",
+      "releaseDate": "1993-11-26",
+      "serial": "T-36023",
+      "rating": ""
+    },
+    {
+      "title": "Tecmo Super Bowl II: Special Edition",
+      "releaseDate": "1994-12-20",
+      "serial": "T-36043",
+      "rating": ""
+    },
+    {
+      "title": "Tecmo Super NBA Basketball",
+      "releaseDate": "1994-03-04",
+      "serial": "T-36033",
+      "rating": ""
+    },
+    {
+      "title": "Tecmo World Cup '92",
+      "releaseDate": "1992-01-31",
+      "serial": "T-44023",
+      "rating": ""
+    },
+    {
+      "title": "Teenage Mutant Ninja Turtles: Return of the Shredder",
+      "releaseDate": "1992-12-22",
+      "serial": "T-95013",
+      "rating": "",
+      "altTitles": [
+        "Teenage Mutant Ninja Turtles: The Hyperstone Heist"
+      ]
+    },
+    {
+      "title": "Teenage Mutant Ninja Turtles: Tournament Fighters",
+      "releaseDate": "1993-12-03",
+      "serial": "T-95053",
+      "rating": ""
+    },
+    {
+      "title": "Teitoku no Ketsudan",
+      "releaseDate": "1992-09-24",
+      "serial": "T-76073",
+      "rating": "",
+      "altTitles": [
+        "P.T.O.: Pacific Theater of Operations"
+      ]
+    },
+    {
+      "title": "Tel-Tel Mahjong",
+      "releaseDate": "1990-06-08",
+      "serial": "T-15033",
+      "rating": ""
+    },
+    {
+      "title": "Tel-Tel Stadium",
+      "releaseDate": "1990-10-21",
+      "serial": "T-15013",
+      "rating": ""
+    },
+    {
+      "title": "Tetris",
+      "releaseDate": "1989",
+      "serial": "G-4007",
+      "rating": ""
+    },
+    {
+      "title": "The Flintstones (Taito)",
+      "releaseDate": "1993-11-19",
+      "serial": "T-11173",
+      "rating": ""
+    },
+    {
+      "title": "The Hybrid Front",
+      "releaseDate": "1994-07-22",
+      "serial": "G-5541",
+      "rating": ""
+    },
+    {
+      "title": "The Kick Boxing",
+      "releaseDate": "1993-01-29",
+      "serial": "T-49143",
+      "rating": "",
+      "altTitles": [
+        "Best of the Best: Championship Karate"
+      ]
+    },
+    {
+      "title": "The Killing Game Show",
+      "releaseDate": "1993-08-20",
+      "serial": "EM20021",
+      "rating": "",
+      "altTitles": [
+        "Fatal Rewind"
+      ]
+    },
+    {
+      "title": "The NewZealand Story",
+      "releaseDate": "1990-03-03",
+      "serial": "T-11013",
+      "rating": ""
+    },
+    {
+      "title": "The Ooze",
+      "releaseDate": "1995-09-22",
+      "serial": "G-4134",
+      "rating": ""
+    },
+    {
+      "title": "The Story of Thor: Hikari o Tsugumono",
+      "releaseDate": "1994-12-09",
+      "serial": "G-5543",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "The Story of Thor: A Successor of the Light"
+      ]
+    },
+    {
+      "title": "The Super Shinobi",
+      "releaseDate": "1989-12-02",
+      "serial": "G-4019",
+      "rating": "",
+      "altTitles": [
+        "The Revenge of Shinobi"
+      ]
+    },
+    {
+      "title": "The Super Shinobi II",
+      "releaseDate": "1993-07-23",
+      "serial": "G-4085",
+      "rating": "",
+      "altTitles": [
+        "Shinobi III: Return of the Ninja Master"
+      ]
+    },
+    {
+      "title": "Thunder Force II",
+      "releaseDate": "1989-06-15",
+      "serial": "T-18013",
+      "rating": ""
+    },
+    {
+      "title": "Thunder Force III",
+      "releaseDate": "1990-06-08",
+      "serial": "T-18033",
+      "rating": ""
+    },
+    {
+      "title": "Thunder Force IV",
+      "releaseDate": "1992-07-24",
+      "serial": "T-18063",
+      "rating": ""
+    },
+    {
+      "title": "Thunder Fox",
+      "releaseDate": "1991-06-26",
+      "serial": "T-11113",
+      "rating": ""
+    },
+    {
+      "title": "Thunder Pro Wrestling Retsuden",
+      "releaseDate": "1992-03-27",
+      "serial": "T-43013",
+      "rating": ""
+    },
+    {
+      "title": "Time Dominator 1st",
+      "releaseDate": "1994-03-25",
+      "serial": "T-23033",
+      "rating": "",
+      "altTitles": [
+        "Socket"
+      ]
+    },
+    {
+      "title": "ToeJam & Earl",
+      "releaseDate": "1992-03-13",
+      "serial": "G-4066",
+      "rating": ""
+    },
+    {
+      "title": "Toki no Keishousha: Phantasy Star III",
+      "releaseDate": "1990-04-21",
+      "serial": "G-5503",
+      "rating": "",
+      "altTitles": [
+        "Phantasy Star III: Generations of Doom"
+      ]
+    },
+    {
+      "title": "Tom and Jerry",
+      "releaseDate": "1994-12-16",
+      "serial": "T-166013",
+      "rating": "",
+      "altTitles": [
+        "Tom and Jerry: Frantic Antics"
+      ]
+    },
+    {
+      "title": "Top Pro Golf",
+      "releaseDate": "1992-06-19",
+      "serial": "T-73023",
+      "rating": ""
+    },
+    {
+      "title": "Top Pro Golf 2",
+      "releaseDate": "1993-06-25",
+      "serial": "T-73043",
+      "rating": "",
+      "altTitles": [
+        "Chi Chi's Pro Challenge Golf"
+      ]
+    },
+    {
+      "title": "Tougi Ou King Colossus",
+      "releaseDate": "1992-06-26",
+      "serial": "G-5513",
+      "rating": ""
+    },
+    {
+      "title": "True Lies",
+      "releaseDate": "1995-04-28",
+      "serial": "T-81163",
+      "rating": "PEGI: 18"
+    },
+    {
+      "title": "Turbo OutRun",
+      "releaseDate": "1992-03-27",
+      "serial": "G-4053",
+      "rating": ""
+    },
+    {
+      "title": "Twinkle Tale",
+      "releaseDate": "1992-07-24",
+      "serial": "T-61013",
+      "rating": ""
+    },
+    {
+      "title": "Uchuu Senkan Gomora",
+      "releaseDate": "1991-09-30",
+      "serial": "T-42023",
+      "rating": ""
+    },
+    {
+      "title": "Ultraman",
+      "releaseDate": "1993-04-09",
+      "serial": "T-16023",
+      "rating": ""
+    },
+    {
+      "title": "Undeadline",
+      "releaseDate": "1991-12-20",
+      "serial": "T-74013",
+      "rating": ""
+    },
+    {
+      "title": "V-Five / V-V",
+      "releaseDate": "1994-03-25",
+      "serial": "T-48173",
+      "rating": "",
+      "altTitles": [
+        "Grind Stormer"
+      ]
+    },
+    {
+      "title": "Valis III",
+      "releaseDate": "1991-03-22",
+      "serial": "T-49023",
+      "rating": ""
+    },
+    {
+      "title": "Vampire Killer",
+      "releaseDate": "1994-03-18",
+      "serial": "T-95043",
+      "rating": "",
+      "altTitles": [
+        "Castlevania: Bloodlines"
+      ]
+    },
+    {
+      "title": "Vermilion",
+      "releaseDate": "1989-12-16",
+      "serial": "G-5502",
+      "rating": "",
+      "altTitles": [
+        "Sword of Vermilion"
+      ]
+    },
+    {
+      "title": "Verytex",
+      "releaseDate": "1991-04-05",
+      "serial": "T-20043",
+      "rating": ""
+    },
+    {
+      "title": "Virtua Racing",
+      "releaseDate": "1994-03-18",
+      "serial": "G-7001",
+      "rating": ""
+    },
+    {
+      "title": "Virtual Bart",
+      "releaseDate": "1995-12-31",
+      "serial": "T-81103",
+      "rating": ""
+    },
+    {
+      "title": "Vixen 357",
+      "releaseDate": "1992-10-23",
+      "serial": "T-25133",
+      "rating": ""
+    },
+    {
+      "title": "Volfied",
+      "releaseDate": "1991-01-25",
+      "serial": "T-11103",
+      "rating": "",
+      "altTitles": [
+        "Ultimate Qix"
+      ]
+    },
+    {
+      "title": "Wani Wani World",
+      "releaseDate": "1992-01-31",
+      "serial": "T-33023",
+      "rating": ""
+    },
+    {
+      "title": "Wardner no Mori Special",
+      "releaseDate": "1991-04-26",
+      "serial": "T-58013",
+      "rating": "",
+      "altTitles": [
+        "Wardner"
+      ]
+    },
+    {
+      "title": "Whip Rush: Wakusei Voltegas no Nazo",
+      "releaseDate": "1990-05-26",
+      "serial": "G-4031",
+      "rating": "",
+      "altTitles": [
+        "Whip Rush"
+      ]
+    },
+    {
+      "title": "Wimbledon Championship Tennis",
+      "releaseDate": "1994-05-20",
+      "serial": "G-4110",
+      "rating": ""
+    },
+    {
+      "title": "Winter Olympics",
+      "releaseDate": "1994-02-11",
+      "serial": "G-4115",
+      "rating": ""
+    },
+    {
+      "title": "Wizard of the Immortal",
+      "releaseDate": "1993-08-10",
+      "serial": "EM20023",
+      "rating": "",
+      "altTitles": [
+        "Will Harvey Presents The Immortal"
+      ]
+    },
+    {
+      "title": "Wonder Boy III: Monster Lair",
+      "releaseDate": "1990-12-22",
+      "serial": "G-4025",
+      "rating": ""
+    },
+    {
+      "title": "Wonder Boy V: Monster World III",
+      "releaseDate": "1991-10-25",
+      "serial": "G-5509",
+      "rating": "",
+      "altTitles": [
+        "Wonder Boy in Monster World"
+      ]
+    },
+    {
+      "title": "Wonder Library",
+      "releaseDate": "1993-10-08",
+      "serial": "RG-ED1",
+      "rating": ""
+    },
+    {
+      "title": "Wonder MIDI",
+      "releaseDate": "1992-12-25",
+      "serial": "RG-MD1",
+      "rating": ""
+    },
+    {
+      "title": "World Cup Soccer",
+      "releaseDate": "1989-07-29",
+      "serial": "G-4009",
+      "rating": ""
+    },
+    {
+      "title": "Wrestle War",
+      "releaseDate": "1991-06-28",
+      "serial": "G-4055",
+      "rating": ""
+    },
+    {
+      "title": "Wrestleball",
+      "releaseDate": "1991-02-08",
+      "serial": "T-14043",
+      "rating": "",
+      "altTitles": [
+        "Powerball"
+      ]
+    },
+    {
+      "title": "WWF Raw",
+      "releaseDate": "1995-12-31",
+      "serial": "T-81316-50",
+      "rating": ""
+    },
+    {
+      "title": "WWF Royal Rumble (Acclaim)",
+      "releaseDate": "1994-03-25",
+      "serial": "T-81043",
+      "rating": ""
+    },
+    {
+      "title": "XDR",
+      "releaseDate": "1990-08-26",
+      "serial": "T-41013",
+      "rating": ""
+    },
+    {
+      "title": "Ys III: Wanderers from Ys",
+      "releaseDate": "1991-11-01",
+      "serial": "T-49063",
+      "rating": ""
+    },
+    {
+      "title": "Yuu Yuu Hakusho Gaiden",
+      "releaseDate": "1994-01-28",
+      "serial": "G-5523",
+      "rating": ""
+    },
+    {
+      "title": "Yuu Yuu Hakusho: Makyou Toitsusen",
+      "releaseDate": "1994-09-30",
+      "serial": "G-4122",
+      "rating": ""
+    },
+    {
+      "title": "Zan Yasha Enbukyoku",
+      "releaseDate": "1991-03-29",
+      "serial": "T-32033",
+      "rating": ""
+    },
+    {
+      "title": "Zero Wing",
+      "releaseDate": "1991-05-31",
+      "serial": "T-40023",
+      "rating": ""
+    },
+    {
+      "title": "Zoom!",
+      "releaseDate": "1990-01-13",
+      "serial": "G-4023",
+      "rating": ""
+    },
+    {
+      "title": "Zou! Zou! Zou! Rescue Daisakusen",
+      "releaseDate": "1993-04-29",
+      "serial": "EM20008",
+      "rating": "",
+      "altTitles": [
+        "Rolo to the Rescue"
+      ]
+    }
+  ]
 }

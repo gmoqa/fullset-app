@@ -1,0 +1,1324 @@
+{
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_Game_Gear_games_in_Japan",
+  "region": "NTSC-J",
+  "games": [
+    {
+      "title": "Aa Harimanada",
+      "releaseDate": "1993-07-02",
+      "serial": "G-3327",
+      "rating": ""
+    },
+    {
+      "title": "Aerial Assault (Game Gear)",
+      "releaseDate": "1992-06-05",
+      "serial": "G-3219",
+      "rating": ""
+    },
+    {
+      "title": "Alien 3",
+      "releaseDate": "1994-05-27",
+      "serial": "T-81047",
+      "rating": ""
+    },
+    {
+      "title": "Alien Syndrome",
+      "releaseDate": "1992-03-19",
+      "serial": "T-44037",
+      "rating": ""
+    },
+    {
+      "title": "Arliel: Crystal Densetsu",
+      "releaseDate": "1991-12-13",
+      "serial": "G-3403",
+      "rating": "",
+      "altTitles": [
+        "Crystal Warriors"
+      ]
+    },
+    {
+      "title": "Ax Battler: Golden Axe Densetsu",
+      "releaseDate": "1991-11-01",
+      "serial": "G-3306",
+      "rating": "",
+      "altTitles": [
+        "Ax Battler: A Legend of Golden Axe"
+      ]
+    },
+    {
+      "title": "Ayrton Senna's Super Monaco GP II (8-bit)",
+      "releaseDate": "1992-08-28",
+      "serial": "G-3312",
+      "rating": ""
+    },
+    {
+      "title": "Baku Baku Animal",
+      "releaseDate": "1996-01-26",
+      "serial": "G-3378",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Bare Knuckle II: Shitou e no Requiem",
+      "releaseDate": "1993-07-23",
+      "serial": "G-3328",
+      "rating": "",
+      "altTitles": [
+        "Streets of Rage 2"
+      ]
+    },
+    {
+      "title": "Bare Knuckle: Ikari no Tekken",
+      "releaseDate": "1992-11-27",
+      "serial": "G-3313",
+      "rating": "",
+      "altTitles": [
+        "Streets of Rage"
+      ]
+    },
+    {
+      "title": "Batman Forever (Game Gear)",
+      "releaseDate": "1995-10-27",
+      "serial": "T-81187",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Batman Returns (Game Gear)",
+      "releaseDate": "1992-10-23",
+      "serial": "G-3314",
+      "rating": ""
+    },
+    {
+      "title": "Battletoads",
+      "releaseDate": "1994-01-14",
+      "serial": "G-3311",
+      "rating": ""
+    },
+    {
+      "title": "Berlin no Kabe",
+      "releaseDate": "1991-11-29",
+      "serial": "T-33017",
+      "rating": ""
+    },
+    {
+      "title": "Buster Ball",
+      "releaseDate": "1992-03-20",
+      "serial": "T-53027",
+      "rating": ""
+    },
+    {
+      "title": "Buster Fight",
+      "releaseDate": "1994-02-11",
+      "serial": "G-3341",
+      "rating": "",
+      "altTitles": [
+        "Masters of Combat"
+      ]
+    },
+    {
+      "title": "Car Licence",
+      "releaseDate": "1995",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Chase H.Q.",
+      "releaseDate": "1991-03-08",
+      "serial": "T-11017",
+      "rating": ""
+    },
+    {
+      "title": "Chuck Rock",
+      "releaseDate": "1992-10-30",
+      "serial": "G-3320",
+      "rating": ""
+    },
+    {
+      "title": "Columns",
+      "releaseDate": "1990-10-06",
+      "serial": "G-3101",
+      "rating": ""
+    },
+    {
+      "title": "Crash Dummy: Slick Bouya no Daichousen",
+      "releaseDate": "1994-09-30",
+      "serial": "T-81127",
+      "rating": "",
+      "altTitles": [
+        "The Incredible Crash Dummies (8-bit)"
+      ]
+    },
+    {
+      "title": "Crayon Shin-Chan: Showdown! Quantum Panic!!",
+      "releaseDate": "1995-02-24",
+      "serial": "T-133047",
+      "rating": "",
+      "altTitles": [
+        "Crayon Shin-chan: Taiketsu! Quantum Panic!!"
+      ]
+    },
+    {
+      "title": "Demon Child Zenki",
+      "releaseDate": "1995-09-01",
+      "serial": "G-3373",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Kishin Douji Zenki"
+      ]
+    },
+    {
+      "title": "Devilish",
+      "releaseDate": "1991-03-29",
+      "serial": "T-28017",
+      "rating": ""
+    },
+    {
+      "title": "Disney's Aladdin (8-bit)",
+      "releaseDate": "1994-03-25",
+      "serial": "G-3336",
+      "rating": ""
+    },
+    {
+      "title": "Donald Duck no Lucky Dime",
+      "releaseDate": "1991-12-20",
+      "serial": "G-3309",
+      "rating": "",
+      "altTitles": [
+        "The Lucky Dime Caper Starring Donald Duck"
+      ]
+    },
+    {
+      "title": "Donald Duck no Yottsu no Hihou",
+      "releaseDate": "1993-12-17",
+      "serial": "G-3332",
+      "rating": "",
+      "altTitles": [
+        "Deep Duck Trouble Starring Donald Duck"
+      ]
+    },
+    {
+      "title": "Donald no Magical World",
+      "releaseDate": "1994-03-04",
+      "serial": "G-3340",
+      "rating": ""
+    },
+    {
+      "title": "Doraemon Noranosuke no Yabou",
+      "releaseDate": "1993-04-28",
+      "serial": "G-3326",
+      "rating": ""
+    },
+    {
+      "title": "Doraemon Waku Waku Pocket Paradise",
+      "releaseDate": "1996-04-26",
+      "serial": "G-3383",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Dragon Crystal: Tsurani no Meikyu",
+      "releaseDate": "1990-12-22",
+      "serial": "G-3206",
+      "rating": "",
+      "altTitles": [
+        "Dragon Crystal"
+      ]
+    },
+    {
+      "title": "Dunk Kids",
+      "releaseDate": "1994-09-16",
+      "serial": "G-3352",
+      "rating": ""
+    },
+    {
+      "title": "Dynamite Headdy",
+      "releaseDate": "1994-08-05",
+      "serial": "G-3355",
+      "rating": "",
+      "altTitles": [
+        "Dynamite Headdy (8-bit)"
+      ]
+    },
+    {
+      "title": "Ecco the Dolphin",
+      "releaseDate": "1994-03-11",
+      "serial": "G-3344",
+      "rating": ""
+    },
+    {
+      "title": "Ecco the Dolphin II",
+      "releaseDate": "1995-02-03",
+      "serial": "G-3362",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Ecco: The Tides of Time"
+      ]
+    },
+    {
+      "title": "Eternal Legend",
+      "releaseDate": "1991-08-09",
+      "serial": "G-3402",
+      "rating": ""
+    },
+    {
+      "title": "Faceball 2000",
+      "releaseDate": "1993-12-17",
+      "serial": "T-53037",
+      "rating": ""
+    },
+    {
+      "title": "Fantasy Zone Gear: Opa Opa Jr. no Bouken",
+      "releaseDate": "1991-07-19",
+      "serial": "T-44017",
+      "rating": "",
+      "altTitles": [
+        "Fantasy Zone Gear"
+      ]
+    },
+    {
+      "title": "FIFA International Soccer (8-bit)",
+      "releaseDate": "",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Foreman for Real",
+      "releaseDate": "1995-10-27",
+      "serial": "T-81197",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Fray: Shugyouhen",
+      "releaseDate": "1991-12-27",
+      "serial": "T-52037",
+      "rating": ""
+    },
+    {
+      "title": "Fred Couples Golf",
+      "releaseDate": "1994-12-23",
+      "serial": "G-3358",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "From TV Animation Slam Dunk: Shouri-e no Starting 5",
+      "releaseDate": "1994-12-16",
+      "serial": "T-133037",
+      "rating": ""
+    },
+    {
+      "title": "G-LOC: Air Battle",
+      "releaseDate": "1990-12-15",
+      "serial": "G-3204",
+      "rating": ""
+    },
+    {
+      "title": "Galaga '91",
+      "releaseDate": "1991-10-25",
+      "serial": "T-14057",
+      "rating": ""
+    },
+    {
+      "title": "Gamble Panic",
+      "releaseDate": "1995-01-27",
+      "serial": "G-3364",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Gambler Jiko Chuushinha (Game Gear)",
+      "releaseDate": "1992-06-12",
+      "serial": "G-3339",
+      "rating": ""
+    },
+    {
+      "title": "Ganbare Gorby!",
+      "releaseDate": "1991-06-21",
+      "serial": "G-3210",
+      "rating": "",
+      "altTitles": [
+        "Factory Panic"
+      ]
+    },
+    {
+      "title": "Garou Densetsu Special",
+      "releaseDate": "1994-11-25",
+      "serial": "T-103017",
+      "rating": "",
+      "altTitles": [
+        "Fatal Fury Special"
+      ]
+    },
+    {
+      "title": "Gear Stadium",
+      "releaseDate": "1991-04-05",
+      "serial": "T-14037",
+      "rating": "",
+      "altTitles": [
+        "Batter Up (Game Gear)"
+      ]
+    },
+    {
+      "title": "Gear Stadium Heiseiban",
+      "releaseDate": "1995-10-20",
+      "serial": "T-14077",
+      "rating": ""
+    },
+    {
+      "title": "GG Aleste",
+      "releaseDate": "1991-12-29",
+      "serial": "T-66017",
+      "rating": ""
+    },
+    {
+      "title": "GG Aleste 3",
+      "releaseDate": "2020-12-24",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "GG Aleste II",
+      "releaseDate": "1993-10-01",
+      "serial": "G-3330",
+      "rating": "",
+      "altTitles": [
+        "Power Strike II (Game Gear)"
+      ]
+    },
+    {
+      "title": "GG Portrait: Pai Chan",
+      "releaseDate": "1996-11-22",
+      "serial": "G-3387",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "GG Portrait: Yuuki Akira",
+      "releaseDate": "1996-11-01",
+      "serial": "G-3386",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Godzilla Kaijuu Daishingeki",
+      "releaseDate": "1995-12-08",
+      "serial": "G-3430",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "GP Rider (Game Gear)",
+      "releaseDate": "1994-04-22",
+      "serial": "G-3347",
+      "rating": ""
+    },
+    {
+      "title": "Griffin",
+      "releaseDate": "1991-07-26",
+      "serial": "T-49017",
+      "rating": ""
+    },
+    {
+      "title": "Gunstar Heroes",
+      "releaseDate": "1995-03-24",
+      "serial": "G-3349",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Halley Wars",
+      "releaseDate": "1991-06-21",
+      "serial": "T-11027",
+      "rating": ""
+    },
+    {
+      "title": "Head Buster",
+      "releaseDate": "1991-03-15",
+      "serial": "T-25017",
+      "rating": ""
+    },
+    {
+      "title": "Heavyweight Champ (8-bit)",
+      "releaseDate": "1991-12-27",
+      "serial": "T-44027",
+      "rating": ""
+    },
+    {
+      "title": "Honoo no Toukyuuji Dodge Danpei (Game Gear)",
+      "releaseDate": "1992-08-07",
+      "serial": "G-3220",
+      "rating": ""
+    },
+    {
+      "title": "House of Tarot",
+      "releaseDate": "1991-03-08",
+      "serial": "G-3208",
+      "rating": ""
+    },
+    {
+      "title": "Hyokkori Hyoutanjima: Hyoutanjima no Daikoukai",
+      "releaseDate": "1992-05-22",
+      "serial": "G-3218",
+      "rating": ""
+    },
+    {
+      "title": "Hyper Pro Yakyuu '92",
+      "releaseDate": "1992-04-24",
+      "serial": "G-3217",
+      "rating": ""
+    },
+    {
+      "title": "In the Wake of Vampire",
+      "releaseDate": "1992-10-23",
+      "serial": "T-44047",
+      "rating": "",
+      "altTitles": [
+        "Master of Darkness"
+      ]
+    },
+    {
+      "title": "J.League GG Pro Striker '94",
+      "releaseDate": "1994-07-22",
+      "serial": "G-3417",
+      "rating": ""
+    },
+    {
+      "title": "J.League Soccer Dream Eleven",
+      "releaseDate": "1995-11-24",
+      "serial": "G-3431",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Joe Montana Football (8-bit)",
+      "releaseDate": "1992-05-22",
+      "serial": "G-3305",
+      "rating": ""
+    },
+    {
+      "title": "Junction",
+      "releaseDate": "1991-02-24",
+      "serial": "T-22017",
+      "rating": ""
+    },
+    {
+      "title": "Jurassic Park (8-bit)",
+      "releaseDate": "1993-07-30",
+      "serial": "G-3329",
+      "rating": ""
+    },
+    {
+      "title": "Kenyuu Densetsu Yaiba",
+      "releaseDate": "1994-09-09",
+      "serial": "G-3346",
+      "rating": ""
+    },
+    {
+      "title": "Kick & Rush",
+      "releaseDate": "1993-05-28",
+      "serial": "T-44057",
+      "rating": ""
+    },
+    {
+      "title": "Kinetic Connection",
+      "releaseDate": "1991-03-29",
+      "serial": "G-3401",
+      "rating": ""
+    },
+    {
+      "title": "Kuni Chan no Game Tengoku",
+      "releaseDate": "1991-11-22",
+      "serial": "G-3303",
+      "rating": ""
+    },
+    {
+      "title": "Kuni Chan no Game Tengoku Part 2",
+      "releaseDate": "1992-12-18",
+      "serial": "G-3322",
+      "rating": ""
+    },
+    {
+      "title": "Lemmings",
+      "releaseDate": "1993-02-05",
+      "serial": "G-3317",
+      "rating": ""
+    },
+    {
+      "title": "Lion King",
+      "releaseDate": "1995-01-13",
+      "serial": "G-3363",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "The Lion King"
+      ]
+    },
+    {
+      "title": "Lunar: Sanpo-suru Gakuen",
+      "releaseDate": "1996-01-12",
+      "serial": "T-45017",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Madou Monogatari A: Doki Doki Vacation",
+      "releaseDate": "1995-11-24",
+      "serial": "T-66047",
+      "rating": ""
+    },
+    {
+      "title": "Madou Monogatari I: 3tsu no Madoukyuu",
+      "releaseDate": "1993-12-03",
+      "serial": "G-3410",
+      "rating": ""
+    },
+    {
+      "title": "Madou Monogatari II: Arle 16-Sai",
+      "releaseDate": "1994-05-20",
+      "serial": "G-3419",
+      "rating": ""
+    },
+    {
+      "title": "Madou Monogatari III: Kyuukyoku Joou-sama",
+      "releaseDate": "1994-11-25",
+      "serial": "G-3424",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Magic Knight Rayearth",
+      "releaseDate": "1994-12-16",
+      "serial": "G-3423",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Mahou Kishi Rayearth (Game Gear)"
+      ]
+    },
+    {
+      "title": "Magic Knight Rayearth 2: Making of Magic Knight",
+      "releaseDate": "1995-08-04",
+      "serial": "G-3429",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Mahou Kishi Rayearth 2: Making of Magic Knight"
+      ]
+    },
+    {
+      "title": "Magical Puzzle Popils",
+      "releaseDate": "1991-07-12",
+      "serial": "T-48017",
+      "rating": ""
+    },
+    {
+      "title": "Magical Taruruto-kun (Game Gear)",
+      "releaseDate": "1991-07-05",
+      "serial": "T-65017",
+      "rating": ""
+    },
+    {
+      "title": "Mappy",
+      "releaseDate": "1991-05-24",
+      "serial": "T-14027",
+      "rating": ""
+    },
+    {
+      "title": "Megami Tensei Gaiden: Last Bible",
+      "releaseDate": "1994-04-22",
+      "serial": "G-3418",
+      "rating": ""
+    },
+    {
+      "title": "Megami Tensei Gaiden: Last Bible Special",
+      "releaseDate": "1995-03-24",
+      "serial": "G-3427",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Mickey Mouse Densetsu no Oukoku",
+      "releaseDate": "1995-01-13",
+      "serial": "G-3360",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Legend of Illusion Starring Mickey Mouse"
+      ]
+    },
+    {
+      "title": "Mickey Mouse no Castle Illusion",
+      "releaseDate": "1991-03-21",
+      "serial": "G-3301",
+      "rating": "",
+      "altTitles": [
+        "Castle of Illusion Starring Mickey Mouse (8-bit)"
+      ]
+    },
+    {
+      "title": "Mickey Mouse no Mahou no Crystal",
+      "releaseDate": "1993-03-26",
+      "serial": "G-3323",
+      "rating": "",
+      "altTitles": [
+        "Land of Illusion Starring Mickey Mouse"
+      ]
+    },
+    {
+      "title": "Moldorian: Hikari to Yami no Sister",
+      "releaseDate": "1994-10-30",
+      "serial": "G-3422",
+      "rating": ""
+    },
+    {
+      "title": "Monster World II: Dragon no Wana",
+      "releaseDate": "1992-03-27",
+      "serial": "G-3308",
+      "rating": "",
+      "altTitles": [
+        "Wonder Boy III: The Dragon's Trap"
+      ]
+    },
+    {
+      "title": "Mortal Kombat (8-bit)",
+      "releaseDate": "1993-12-17",
+      "serial": "T-81017",
+      "rating": ""
+    },
+    {
+      "title": "Mortal Kombat II (8-bit)",
+      "releaseDate": "1994-09-09",
+      "serial": "T-81107",
+      "rating": ""
+    },
+    {
+      "title": "Mysterious Thief Saint Tail",
+      "releaseDate": "1996-03-29",
+      "serial": "G-3382",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Kaitou Saint Tail (Game Gear)"
+      ]
+    },
+    {
+      "title": "Nazo Puyo",
+      "releaseDate": "1993-07-23",
+      "serial": "G-3224",
+      "rating": ""
+    },
+    {
+      "title": "Nazo Puyo 2",
+      "releaseDate": "1993-12-10",
+      "serial": "G-3413",
+      "rating": ""
+    },
+    {
+      "title": "Nazo Puyo Arle no Roux",
+      "releaseDate": "1994-07-29",
+      "serial": "G-3357",
+      "rating": ""
+    },
+    {
+      "title": "NBA Jam",
+      "releaseDate": "1994-04-29",
+      "serial": "T-81037",
+      "rating": ""
+    },
+    {
+      "title": "NBA Jam Tournament Edition",
+      "releaseDate": "1995-02-24",
+      "serial": "T-81137",
+      "rating": ""
+    },
+    {
+      "title": "Neko Dai Suki!",
+      "releaseDate": "1996-07-19",
+      "serial": "G-3434",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "NFL Quarterback Club (Game Gear)",
+      "releaseDate": "1995-02-24",
+      "serial": "T-81147",
+      "rating": ""
+    },
+    {
+      "title": "Ninja Gaiden (Game Gear)",
+      "releaseDate": "1991-11-01",
+      "serial": "G-3215",
+      "rating": ""
+    },
+    {
+      "title": "Ninku",
+      "releaseDate": "1995-07-21",
+      "serial": "G-3370",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Ninku 2: Tenkuryu-e no Michi",
+      "releaseDate": "1995-12-22",
+      "serial": "G-3376",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Ninku Gaiden: Hiroyuki Daikatsugeki",
+      "releaseDate": "1995-11-03",
+      "serial": "G-3377",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Nomo's World Series Baseball",
+      "releaseDate": "1995-12-01",
+      "serial": "G-3432",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Olympic Gold",
+      "releaseDate": "1992-07-24",
+      "serial": "G-3316",
+      "rating": ""
+    },
+    {
+      "title": "OutRun",
+      "releaseDate": "1991-08-09",
+      "serial": "G-3213",
+      "rating": ""
+    },
+    {
+      "title": "Pac-Man",
+      "releaseDate": "1991-01-29",
+      "serial": "T-14017",
+      "rating": ""
+    },
+    {
+      "title": "Panzer Dragoon Mini",
+      "releaseDate": "1996-11-22",
+      "serial": "G-3384",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Pengo",
+      "releaseDate": "1990-10-06",
+      "serial": "G-3102",
+      "rating": ""
+    },
+    {
+      "title": "Pet Club Inu Dai Suki!",
+      "releaseDate": "1996-12-06",
+      "serial": "G-3436",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Phantasy Star Adventure",
+      "releaseDate": "1992-03-13",
+      "serial": "G-3216",
+      "rating": ""
+    },
+    {
+      "title": "Phantasy Star Gaiden",
+      "releaseDate": "1992-10-16",
+      "serial": "G-3405",
+      "rating": ""
+    },
+    {
+      "title": "Pocket Jansou",
+      "releaseDate": "1992-02-07",
+      "serial": "T-14067",
+      "rating": ""
+    },
+    {
+      "title": "Pop Breaker",
+      "releaseDate": "1991-02-23",
+      "serial": "T-51017",
+      "rating": ""
+    },
+    {
+      "title": "Popeye Beach Volleyball",
+      "releaseDate": "1994-08-12",
+      "serial": "T-154017",
+      "rating": ""
+    },
+    {
+      "title": "Pretty Soldier Sailor Moon S",
+      "releaseDate": "1995-01-27",
+      "serial": "T-133017",
+      "rating": "",
+      "altTitles": [
+        "Bishoujo Senshi Sailor Moon S (Game Gear)"
+      ]
+    },
+    {
+      "title": "Pro Yakyuu GG League",
+      "releaseDate": "1993-04-29",
+      "serial": "G-3407",
+      "rating": ""
+    },
+    {
+      "title": "Pro Yakyuu GG League '94",
+      "releaseDate": "1994-09-30",
+      "serial": "G-3353",
+      "rating": ""
+    },
+    {
+      "title": "Psychic World (Game Gear)",
+      "releaseDate": "1991-02-02",
+      "serial": "G-3203",
+      "rating": ""
+    },
+    {
+      "title": "Putt & Putter",
+      "releaseDate": "1991-09-27",
+      "serial": "G-3209",
+      "rating": "",
+      "altTitles": [
+        "Putt & Putter (Game Gear)"
+      ]
+    },
+    {
+      "title": "Puyo Puyo",
+      "releaseDate": "1993-03-19",
+      "serial": "G-3324",
+      "rating": ""
+    },
+    {
+      "title": "Puyo Puyo Tsuu",
+      "releaseDate": "1994-12-16",
+      "serial": "T-66037",
+      "rating": ""
+    },
+    {
+      "title": "Puzzle & Action: Ichidant-R",
+      "releaseDate": "1994-11-25",
+      "serial": "G-3359",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Puzzle & Action: Tant-R",
+      "releaseDate": "1994-04-22",
+      "serial": "G-3345",
+      "rating": ""
+    },
+    {
+      "title": "Puzzle Bobble",
+      "releaseDate": "1996-08-02",
+      "serial": "T-11047",
+      "rating": "",
+      "altTitles": [
+        "Bust-A-Move"
+      ]
+    },
+    {
+      "title": "Rastan",
+      "releaseDate": "1991-08-09",
+      "serial": "T-11037",
+      "rating": ""
+    },
+    {
+      "title": "Riddick Bowe Boxing",
+      "releaseDate": "1994-01-21",
+      "serial": "T-22027",
+      "rating": ""
+    },
+    {
+      "title": "Ristar The Shooting Star",
+      "releaseDate": "1995-02-17",
+      "serial": "G-3365",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Ristar (Game Gear)"
+      ]
+    },
+    {
+      "title": "RoboCop 3",
+      "releaseDate": "1994-06-24",
+      "serial": "T-81097",
+      "rating": ""
+    },
+    {
+      "title": "Royal Stone: Hirakareshi Toki no Tobira",
+      "releaseDate": "1995-02-24",
+      "serial": "G-3425",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Ryuu Kyuu",
+      "releaseDate": "1991-05-31",
+      "serial": "T-54017",
+      "rating": "",
+      "altTitles": [
+        "Solitaire Poker"
+      ]
+    },
+    {
+      "title": "Samurai Spirits",
+      "releaseDate": "1994-12-09",
+      "serial": "T-146027",
+      "rating": "",
+      "altTitles": [
+        "Samurai Shodown"
+      ]
+    },
+    {
+      "title": "Sassou Shounen Eiyuuden Coca-Cola Kid",
+      "releaseDate": "1994-08-05",
+      "serial": "G-3350",
+      "rating": ""
+    },
+    {
+      "title": "Scratch Golf",
+      "releaseDate": "1994-03-25",
+      "serial": "T-23017",
+      "rating": ""
+    },
+    {
+      "title": "SD Gundam Winner's History",
+      "releaseDate": "1995-03-24",
+      "serial": "T-133027",
+      "rating": ""
+    },
+    {
+      "title": "Shadam Crusader: Harukanaru Oukoku",
+      "releaseDate": "1992-09-18",
+      "serial": "G-3404",
+      "rating": "",
+      "altTitles": [
+        "Defenders of Oasis"
+      ]
+    },
+    {
+      "title": "Shanghai II",
+      "releaseDate": "1990-12-27",
+      "serial": "T-15017",
+      "rating": ""
+    },
+    {
+      "title": "Shikinjoh",
+      "releaseDate": "1991-04-26",
+      "serial": "T-15027",
+      "rating": ""
+    },
+    {
+      "title": "Shining Force Gaiden II: Jashin no Mezame",
+      "releaseDate": "1993-06-25",
+      "serial": "G-3409",
+      "rating": "",
+      "altTitles": [
+        "Shining Force: The Sword of Hajya"
+      ]
+    },
+    {
+      "title": "Shining Force Gaiden: Ensei Jashin no Kuni e",
+      "releaseDate": "1992-12-25",
+      "serial": "G-3406",
+      "rating": ""
+    },
+    {
+      "title": "Shining Force Gaiden: Final Conflict",
+      "releaseDate": "1995-06-30",
+      "serial": "G-3428",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Skweek",
+      "releaseDate": "1991-04-26",
+      "serial": "T-60017",
+      "rating": "",
+      "altTitles": [
+        "Slider"
+      ]
+    },
+    {
+      "title": "Smash T.V.",
+      "releaseDate": "1994-07-29",
+      "serial": "T-81057",
+      "rating": ""
+    },
+    {
+      "title": "Sonic & Tails",
+      "releaseDate": "1993-11-19",
+      "serial": "G-3331",
+      "rating": "",
+      "altTitles": [
+        "Sonic Chaos"
+      ]
+    },
+    {
+      "title": "Sonic & Tails 2",
+      "releaseDate": "1994-11-11",
+      "serial": "G-3356",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Sonic the Hedgehog Triple Trouble"
+      ]
+    },
+    {
+      "title": "Sonic & Tails Jitsuenyou Sample",
+      "releaseDate": "1993",
+      "serial": "670-4394",
+      "rating": ""
+    },
+    {
+      "title": "Sonic Blast",
+      "releaseDate": "1996-12-13",
+      "serial": "G-3385",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Sonic Drift",
+      "releaseDate": "1994-03-18",
+      "serial": "G-3415",
+      "rating": ""
+    },
+    {
+      "title": "Sonic Drift 2",
+      "releaseDate": "1995-03-17",
+      "serial": "G-3366",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Sonic Labyrinth",
+      "releaseDate": "1995-11-17",
+      "serial": "G-3374",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Sonic the Hedgehog (8-bit)",
+      "releaseDate": "1991-12-28",
+      "serial": "G-3307",
+      "rating": ""
+    },
+    {
+      "title": "Sonic the Hedgehog 2 (8-bit)",
+      "releaseDate": "1992-11-21",
+      "serial": "G-3321",
+      "rating": ""
+    },
+    {
+      "title": "Soukoban (Game Gear)",
+      "releaseDate": "1990-12-15",
+      "serial": "T-53017",
+      "rating": ""
+    },
+    {
+      "title": "Space Harrier",
+      "releaseDate": "",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Stargate (Game Gear)",
+      "releaseDate": "1995-05-26",
+      "serial": "T-81157",
+      "rating": ""
+    },
+    {
+      "title": "Super Columns",
+      "releaseDate": "1995-05-26",
+      "serial": "G-3226",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Super Golf",
+      "releaseDate": "1991-04-19",
+      "serial": "T-26017",
+      "rating": ""
+    },
+    {
+      "title": "Super Momotarou Dentetsu III",
+      "releaseDate": "1995-12-15",
+      "serial": "T-143017",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Super Monaco GP (8-bit)",
+      "releaseDate": "1990-10-06",
+      "serial": "G-3201",
+      "rating": ""
+    },
+    {
+      "title": "Sylvan Tale",
+      "releaseDate": "1995-01-27",
+      "serial": "G-3426",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "T2: The Arcade Game",
+      "releaseDate": "1994-02-25",
+      "serial": "T-81027",
+      "rating": ""
+    },
+    {
+      "title": "Tails Adventures",
+      "releaseDate": "1995-09-22",
+      "serial": "G-3372",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Tails' Skypatrol",
+      "releaseDate": "1995-04-28",
+      "serial": "G-3368",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Taisen Mahjong HaoPai",
+      "releaseDate": "1990-11-10",
+      "serial": "G-3202",
+      "rating": ""
+    },
+    {
+      "title": "Taisen Mahjong HaoPai 2",
+      "releaseDate": "1993-12-17",
+      "serial": "G-3335",
+      "rating": ""
+    },
+    {
+      "title": "Taisen-gata Daisenryaku G",
+      "releaseDate": "1991-09-28",
+      "serial": "T-52017",
+      "rating": ""
+    },
+    {
+      "title": "Tama & Friends: 3 Choume Kouen Tamalympic",
+      "releaseDate": "1995-03-03",
+      "serial": "G-3361",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Tatakae! Pro Yakyuu Twin League",
+      "releaseDate": "1995-07-14",
+      "serial": "G-3371",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Tempo Jr.",
+      "releaseDate": "1995-04-28",
+      "serial": "G-3369",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Terminator 2: Judgment Day (8-bit)",
+      "releaseDate": "1994-09-30",
+      "serial": "T-81117",
+      "rating": ""
+    },
+    {
+      "title": "The Addams Family (8-bit)",
+      "releaseDate": "1994-06-24",
+      "serial": "T-81087",
+      "rating": ""
+    },
+    {
+      "title": "The GG Shinobi",
+      "releaseDate": "1991-04-26",
+      "serial": "G-3302",
+      "rating": ""
+    },
+    {
+      "title": "The GG Shinobi II",
+      "releaseDate": "1992-12-11",
+      "serial": "G-3315",
+      "rating": "",
+      "altTitles": [
+        "Shinobi II: The Silent Fury"
+      ]
+    },
+    {
+      "title": "The Pro Yakyuu '91",
+      "releaseDate": "1991-01-26",
+      "serial": "G-3207",
+      "rating": ""
+    },
+    {
+      "title": "The Quiz Gear Fight!!",
+      "releaseDate": "1995-04-07",
+      "serial": "G-3367",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "The Simpsons: Bart vs. the World",
+      "releaseDate": "1994-07-29",
+      "serial": "T-81077",
+      "rating": ""
+    },
+    {
+      "title": "Tom and Jerry: The Movie",
+      "releaseDate": "1993-06-25",
+      "serial": "G-3319",
+      "rating": ""
+    },
+    {
+      "title": "Torarete Tamaruka!?",
+      "releaseDate": "1994-06-03",
+      "serial": "G-3348",
+      "rating": ""
+    },
+    {
+      "title": "True Lies",
+      "releaseDate": "1995-05-12",
+      "serial": "T-81167",
+      "rating": "PEGI: 18"
+    },
+    {
+      "title": "Ultimate Soccer",
+      "releaseDate": "1993-10-29",
+      "serial": "G-3333",
+      "rating": ""
+    },
+    {
+      "title": "Virtua Fighter Mini",
+      "releaseDate": "1996-03-29",
+      "serial": "G-3380",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Virtua Fighter Animation"
+      ]
+    },
+    {
+      "title": "Wagyan Land",
+      "releaseDate": "1991-07-26",
+      "serial": "T-14047",
+      "rating": ""
+    },
+    {
+      "title": "Wimbledon",
+      "releaseDate": "1993-02-26",
+      "serial": "G-3221",
+      "rating": ""
+    },
+    {
+      "title": "Winter Olympics",
+      "releaseDate": "1994-02-11",
+      "serial": "G-3342",
+      "rating": ""
+    },
+    {
+      "title": "Wonder Boy",
+      "releaseDate": "1990-12-08",
+      "serial": "G-3205",
+      "rating": ""
+    },
+    {
+      "title": "Woody Pop",
+      "releaseDate": "1991-03-01",
+      "serial": "G-3103",
+      "rating": ""
+    },
+    {
+      "title": "World Derby",
+      "releaseDate": "1994-05-27",
+      "serial": "T-68017",
+      "rating": ""
+    },
+    {
+      "title": "Yuu Yuu Hakusho II: Gekitou! Nanakyou no Tatakai",
+      "releaseDate": "1994-09-30",
+      "serial": "G-3354",
+      "rating": ""
+    },
+    {
+      "title": "Yuu Yuu Hakusho: Horobishi Mono no Gyakushuu",
+      "releaseDate": "1994-03-18",
+      "serial": "G-3343",
+      "rating": ""
+    },
+    {
+      "title": "Zan Gear",
+      "releaseDate": "1990-10-23",
+      "serial": "T-32017",
+      "rating": ""
+    },
+    {
+      "title": "Zool no Yume Bouken",
+      "releaseDate": "1994-07-29",
+      "serial": "T-149017",
+      "rating": "",
+      "altTitles": [
+        "Zool (8-bit)"
+      ]
+    }
+  ]
+}

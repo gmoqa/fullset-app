@@ -1,0 +1,592 @@
+{
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_Master_System_games_in_Japan",
+  "region": "NTSC-J",
+  "games": [
+    {
+      "title": "Action Fighter",
+      "releaseDate": "1986-08-17",
+      "serial": "G-1305",
+      "rating": ""
+    },
+    {
+      "title": "After Burner",
+      "releaseDate": "1987-12-12",
+      "serial": "G-1340",
+      "rating": ""
+    },
+    {
+      "title": "Akai Koudan Zillion",
+      "releaseDate": "1987-05-24",
+      "serial": "G-1325",
+      "rating": "",
+      "altTitles": [
+        "Zillion"
+      ]
+    },
+    {
+      "title": "Aleste",
+      "releaseDate": "1988-02-29",
+      "serial": "G-1352",
+      "rating": "",
+      "altTitles": [
+        "Power Strike"
+      ]
+    },
+    {
+      "title": "Alex Kidd BMX Trial",
+      "releaseDate": "1987-11-15",
+      "serial": "G-1330",
+      "rating": ""
+    },
+    {
+      "title": "Alex Kidd no Miracle World",
+      "releaseDate": "1986-11-01",
+      "serial": "G-1306",
+      "rating": "",
+      "altTitles": [
+        "Alex Kidd in Miracle World"
+      ]
+    },
+    {
+      "title": "Alex Kidd: The Lost Stars",
+      "releaseDate": "1988-03-10",
+      "serial": "G-1347",
+      "rating": ""
+    },
+    {
+      "title": "Alien Syndrome",
+      "releaseDate": "1987-10-18",
+      "serial": "G-1339",
+      "rating": ""
+    },
+    {
+      "title": "Anmitsu Hime",
+      "releaseDate": "1987-07-19",
+      "serial": "G-1328",
+      "rating": ""
+    },
+    {
+      "title": "Argos no Juujiken",
+      "releaseDate": "1988-03-25",
+      "serial": "001",
+      "rating": ""
+    },
+    {
+      "title": "Ashura",
+      "releaseDate": "1986-11-16",
+      "serial": "G-1307",
+      "rating": "",
+      "altTitles": [
+        "Secret Command"
+      ]
+    },
+    {
+      "title": "Astro Flash",
+      "releaseDate": "1985-12-22",
+      "serial": "C-503",
+      "rating": "",
+      "altTitles": [
+        "TransBot"
+      ]
+    },
+    {
+      "title": "Astro Warrior",
+      "releaseDate": "1986-12-14",
+      "serial": "G-1312",
+      "rating": ""
+    },
+    {
+      "title": "Blade Eagle",
+      "releaseDate": "1988-03-26",
+      "serial": "G-1351",
+      "rating": ""
+    },
+    {
+      "title": "Bomber Raid",
+      "releaseDate": "1989-02-04",
+      "serial": "G-1373",
+      "rating": ""
+    },
+    {
+      "title": "Captain Silver",
+      "releaseDate": "1988-07-02",
+      "serial": "G-1356",
+      "rating": ""
+    },
+    {
+      "title": "Chouon Senshi Borgman",
+      "releaseDate": "1988-12-01",
+      "serial": "G-1371",
+      "rating": ""
+    },
+    {
+      "title": "Comical Machine Gun Joe",
+      "releaseDate": "1986-04-21",
+      "serial": "C-511",
+      "rating": ""
+    },
+    {
+      "title": "Doki Doki Penguin Land: Uchuu Daibouken",
+      "releaseDate": "1987-08-18",
+      "serial": "G-1334",
+      "rating": "",
+      "altTitles": [
+        "Penguin Land"
+      ]
+    },
+    {
+      "title": "Double Dragon",
+      "releaseDate": "1988-10-01",
+      "serial": "G-1369",
+      "rating": ""
+    },
+    {
+      "title": "Enduro Racer (Master System)",
+      "releaseDate": "1987-05-18",
+      "serial": "G-1322",
+      "rating": ""
+    },
+    {
+      "title": "F-16 Fighting Falcon",
+      "releaseDate": "1986-03",
+      "serial": "C-508",
+      "rating": "",
+      "altTitles": [
+        "F-16 Fighter"
+      ]
+    },
+    {
+      "title": "Family Games",
+      "releaseDate": "1987-12-27",
+      "serial": "G-1342",
+      "rating": "",
+      "altTitles": [
+        "Parlour Games"
+      ]
+    },
+    {
+      "title": "Fantasy Zone",
+      "releaseDate": "1986-06-15",
+      "serial": "G-1301",
+      "rating": ""
+    },
+    {
+      "title": "Fantasy Zone II: Opa-Opa no Namida",
+      "releaseDate": "1987-10-17",
+      "serial": "G-1329",
+      "rating": "",
+      "altTitles": [
+        "Fantasy Zone II: The Tears of Opa-Opa"
+      ]
+    },
+    {
+      "title": "Final Bubble Bobble",
+      "releaseDate": "1988-07-02",
+      "serial": "G-1362",
+      "rating": "",
+      "altTitles": [
+        "Bubble Bobble"
+      ]
+    },
+    {
+      "title": "Fushigi no Oshiro Pit Pot",
+      "releaseDate": "1985-12-14",
+      "serial": "C-507",
+      "rating": "",
+      "altTitles": [
+        "Pit Pot"
+      ]
+    },
+    {
+      "title": "Galactic Protector",
+      "releaseDate": "1988-02-21",
+      "serial": "G-1348",
+      "rating": ""
+    },
+    {
+      "title": "Game de Check! Koutsuu Anzen",
+      "releaseDate": "1988",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Ghost House",
+      "releaseDate": "1986-04-21",
+      "serial": "C-512",
+      "rating": ""
+    },
+    {
+      "title": "Gokuaku Doumei Dump Matsumoto",
+      "releaseDate": "1986-07-20",
+      "serial": "G-1302",
+      "rating": ""
+    },
+    {
+      "title": "Great Baseball (1985)",
+      "releaseDate": "1985-12-15",
+      "serial": "C-505",
+      "rating": ""
+    },
+    {
+      "title": "Great Basketball",
+      "releaseDate": "1987-03-29",
+      "serial": "G-1320",
+      "rating": ""
+    },
+    {
+      "title": "Great Football",
+      "releaseDate": "1987-04-29",
+      "serial": "G-1321",
+      "rating": ""
+    },
+    {
+      "title": "Great Golf (1986)",
+      "releaseDate": "1986-12-20",
+      "serial": "G-1313",
+      "rating": ""
+    },
+    {
+      "title": "Great Ice Hockey",
+      "releaseDate": "1987",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Great Soccer",
+      "releaseDate": "1985-10-27",
+      "serial": "C-504",
+      "rating": ""
+    },
+    {
+      "title": "Great Tennis",
+      "releaseDate": "1985-12-22",
+      "serial": "C-515",
+      "rating": "",
+      "altTitles": [
+        "Super Tennis"
+      ]
+    },
+    {
+      "title": "Great Volleyball",
+      "releaseDate": "1987-03-29",
+      "serial": "G-1317",
+      "rating": ""
+    },
+    {
+      "title": "Haja no Fuuin",
+      "releaseDate": "1987-10-18",
+      "serial": "G-1331",
+      "rating": "",
+      "altTitles": [
+        "Miracle Warriors: Seal of the Dark Lord"
+      ]
+    },
+    {
+      "title": "Hang-On",
+      "releaseDate": "1985-10-20",
+      "serial": "C-502",
+      "rating": ""
+    },
+    {
+      "title": "High School! Kimengumi",
+      "releaseDate": "1986-12-15",
+      "serial": "G-1309",
+      "rating": ""
+    },
+    {
+      "title": "Hokuto no Ken (Master System)",
+      "releaseDate": "1986-07-20",
+      "serial": "G-1303",
+      "rating": ""
+    },
+    {
+      "title": "Kenseiden",
+      "releaseDate": "1988-06-02",
+      "serial": "G-1358",
+      "rating": ""
+    },
+    {
+      "title": "Kujaku Ou",
+      "releaseDate": "1988-09-23",
+      "serial": "G-1366",
+      "rating": ""
+    },
+    {
+      "title": "Lord of Sword",
+      "releaseDate": "1988-06-02",
+      "serial": "G-1361",
+      "rating": "",
+      "altTitles": [
+        "Lord of the Sword"
+      ]
+    },
+    {
+      "title": "Mahjong Sengoku Jidai",
+      "releaseDate": "1987-10-18",
+      "serial": "G-1337",
+      "rating": ""
+    },
+    {
+      "title": "Makai Retsuden",
+      "releaseDate": "1987-05-17",
+      "serial": "G-1324",
+      "rating": "",
+      "altTitles": [
+        "Kung Fu Kid"
+      ]
+    },
+    {
+      "title": "Maou Golvellius",
+      "releaseDate": "1988-08-14",
+      "serial": "G-1363",
+      "rating": "",
+      "altTitles": [
+        "Golvellius"
+      ]
+    },
+    {
+      "title": "Masters Golf",
+      "releaseDate": "1987-10-10",
+      "serial": "G-1332",
+      "rating": "",
+      "altTitles": [
+        "Great Golf"
+      ]
+    },
+    {
+      "title": "Maze Walker",
+      "releaseDate": "1988-01-31",
+      "serial": "G-1345",
+      "rating": "",
+      "altTitles": [
+        "Maze Hunter 3D"
+      ]
+    },
+    {
+      "title": "Megumi Rescue",
+      "releaseDate": "1988-07-30",
+      "serial": "G-1359",
+      "rating": ""
+    },
+    {
+      "title": "Nazca '88",
+      "releaseDate": "1987-09-20",
+      "serial": "G-1335",
+      "rating": "",
+      "altTitles": [
+        "Aztec Adventure: The Golden Road to Paradise"
+      ]
+    },
+    {
+      "title": "Nekkyuu Koushien",
+      "releaseDate": "1988-09-09",
+      "serial": "G-1367",
+      "rating": ""
+    },
+    {
+      "title": "Opa Opa",
+      "releaseDate": "1987-12-20",
+      "serial": "G-1343",
+      "rating": "",
+      "altTitles": [
+        "Fantasy Zone: The Maze"
+      ]
+    },
+    {
+      "title": "OutRun",
+      "releaseDate": "1987-06-30",
+      "serial": "G-1326",
+      "rating": ""
+    },
+    {
+      "title": "Phantasy Star",
+      "releaseDate": "1987-12-20",
+      "serial": "G-1341",
+      "rating": ""
+    },
+    {
+      "title": "Quartet",
+      "releaseDate": "1987-01-18",
+      "serial": "G-1314",
+      "rating": ""
+    },
+    {
+      "title": "R-Type",
+      "releaseDate": "1988-10-01",
+      "serial": "G-1364",
+      "rating": ""
+    },
+    {
+      "title": "Rocky",
+      "releaseDate": "1987-04-19",
+      "serial": "G-1319",
+      "rating": ""
+    },
+    {
+      "title": "Satellite 7",
+      "releaseDate": "1985-12-20",
+      "serial": "C-506",
+      "rating": ""
+    },
+    {
+      "title": "SDI: Strategic Defense Initiative",
+      "releaseDate": "1987-10-24",
+      "serial": "G-1338",
+      "rating": ""
+    },
+    {
+      "title": "Seishun Scandal",
+      "releaseDate": "1986-01-31",
+      "serial": "C-510",
+      "rating": "",
+      "altTitles": [
+        "My Hero"
+      ]
+    },
+    {
+      "title": "Shinobi",
+      "releaseDate": "1988-06-19",
+      "serial": "G-1353",
+      "rating": ""
+    },
+    {
+      "title": "Solomon's Key: The Tears of Princess Lihita",
+      "releaseDate": "1988-04-17",
+      "serial": "002",
+      "rating": "",
+      "altTitles": [
+        "Solomon no Kagi: Oujo Rihita no Namida"
+      ]
+    },
+    {
+      "title": "Space Harrier",
+      "releaseDate": "",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Space Harrier 3D",
+      "releaseDate": "1988-02-29",
+      "serial": "G-1349",
+      "rating": ""
+    },
+    {
+      "title": "Spy vs Spy",
+      "releaseDate": "1986-09-20",
+      "serial": "C-514",
+      "rating": ""
+    },
+    {
+      "title": "Sukeban Deka II",
+      "releaseDate": "1987-04-19",
+      "serial": "G-1318",
+      "rating": "",
+      "altTitles": [
+        "Sukeban Deka II: Shoujo Tekkamen Densetsu"
+      ]
+    },
+    {
+      "title": "Super Racing",
+      "releaseDate": "1988-07-02",
+      "serial": "G-1357",
+      "rating": ""
+    },
+    {
+      "title": "Teddy Boy Blues",
+      "releaseDate": "1985-10-20",
+      "serial": "C-501",
+      "rating": ""
+    },
+    {
+      "title": "Tensai Bakabon",
+      "releaseDate": "1988-06-02",
+      "serial": "G-1355",
+      "rating": ""
+    },
+    {
+      "title": "The Circuit",
+      "releaseDate": "1986-09-21",
+      "serial": "G-1304",
+      "rating": "",
+      "altTitles": [
+        "World Grand Prix"
+      ]
+    },
+    {
+      "title": "The Ninja",
+      "releaseDate": "1986-11-08",
+      "serial": "G-1308",
+      "rating": ""
+    },
+    {
+      "title": "The Pro Yakyuu: Pennant Race",
+      "releaseDate": "1987-08-17",
+      "serial": "G-1323",
+      "rating": ""
+    },
+    {
+      "title": "The Story of Mio",
+      "releaseDate": "1988-04-02",
+      "serial": "G-1354",
+      "rating": "",
+      "altTitles": [
+        "Hoshi o Sagashite..."
+      ]
+    },
+    {
+      "title": "Thunder Blade",
+      "releaseDate": "1988-07-30",
+      "serial": "G-1360",
+      "rating": ""
+    },
+    {
+      "title": "Tri Formation",
+      "releaseDate": "1987-12-13",
+      "serial": "G-1344",
+      "rating": "",
+      "altTitles": [
+        "Zillion II: The Tri Formation"
+      ]
+    },
+    {
+      "title": "Wonder Boy",
+      "releaseDate": "1987-03-22",
+      "serial": "G-1316",
+      "rating": ""
+    },
+    {
+      "title": "Wonder Boy: Monster Land",
+      "releaseDate": "1988-01-31",
+      "serial": "G-1346",
+      "rating": "",
+      "altTitles": [
+        "Wonder Boy in Monster Land"
+      ]
+    },
+    {
+      "title": "Woody Pop",
+      "releaseDate": "1987-03-15",
+      "serial": "C-519",
+      "rating": ""
+    },
+    {
+      "title": "World Soccer",
+      "releaseDate": "1987-07-19",
+      "serial": "G-1327",
+      "rating": ""
+    },
+    {
+      "title": "Ys: Ancient Ys Vanished Omen",
+      "releaseDate": "1988-10-15",
+      "serial": "G-1370",
+      "rating": ""
+    },
+    {
+      "title": "Zaxxon 3D",
+      "releaseDate": "1987-11-07",
+      "serial": "G-1336",
+      "rating": ""
+    }
+  ]
+}

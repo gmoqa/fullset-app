@@ -1,0 +1,127 @@
+{
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_32X_games_in_Japan",
+  "region": "NTSC-J",
+  "games": [
+    {
+      "title": "After Burner Complete",
+      "releaseDate": "1995-01-13",
+      "serial": "GM-4006",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Chaotix",
+      "releaseDate": "1995-04-21",
+      "serial": "GM-5003",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Cyber Brawl",
+      "releaseDate": "1995-01-27",
+      "serial": "GM-4004",
+      "rating": "PEGI: 18",
+      "altTitles": [
+        "Cosmic Carnage"
+      ]
+    },
+    {
+      "title": "Doom (32X)",
+      "releaseDate": "1994-12-03",
+      "serial": "GM-4003",
+      "rating": "PEGI: 18"
+    },
+    {
+      "title": "Golf Magazine: 36 Great Holes Starring Fred Couples",
+      "releaseDate": "1995-02-24",
+      "serial": "GM-5002",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Metal Head",
+      "releaseDate": "1995-02-24",
+      "serial": "GM-4008",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Mortal Kombat II: Ultimate Godly Fist",
+      "releaseDate": "1995-05-19",
+      "serial": "T-8104A",
+      "rating": "PEGI: 18",
+      "altTitles": [
+        "Mortal Kombat II"
+      ]
+    },
+    {
+      "title": "NBA Jam Tournament Edition",
+      "releaseDate": "1995-09-01",
+      "serial": "T-8102A",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "NFL Quarterback Club (32X)",
+      "releaseDate": "1995-07-14",
+      "serial": "T-8103A",
+      "rating": ""
+    },
+    {
+      "title": "Parasquad",
+      "releaseDate": "1995-07-14",
+      "serial": "GM-4012",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Zaxxon's Motherbase 2000"
+      ]
+    },
+    {
+      "title": "Sangokushi Ⅳ",
+      "releaseDate": "1995-07-07",
+      "serial": "T-7601A",
+      "rating": "CERO: All ages",
+      "altTitles": [
+        "Sangokushi IV"
+      ]
+    },
+    {
+      "title": "Space Harrier",
+      "releaseDate": "",
+      "serial": "",
+      "rating": ""
+    },
+    {
+      "title": "Star Wars Arcade",
+      "releaseDate": "1994-12-03",
+      "serial": "GM-4002",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Stellar Assault",
+      "releaseDate": "1995-04-26",
+      "serial": "GM-4010",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Tempo",
+      "releaseDate": "1995-03-24",
+      "serial": "GM-4009",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Virtua Fighter",
+      "releaseDate": "1995-10-20",
+      "serial": "GM-4013",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "Virtua Racing Deluxe",
+      "releaseDate": "1994-12-16",
+      "serial": "GM-5001",
+      "rating": "CERO: All ages"
+    },
+    {
+      "title": "WWF Raw",
+      "releaseDate": "1995-09-01",
+      "serial": "T-8101A",
+      "rating": "CERO: All ages"
+    }
+  ]
+}
