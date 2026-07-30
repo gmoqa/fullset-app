@@ -36,20 +36,43 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 
 ### Estado por catálogo (auditado 2026-07-29)
 
-| Catálogo | Builder | Fuente títulos | Serial | Cobertura año/ed/serial/cover | Overrides |
-|---|---|---|---|---|---|
-| `nes-usa.json` | `build_nes_catalog.py` | Wikipedia NES (col 5) | libretro DAT | 100/100/93/95 | — |
-| `snes-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | — | 100/100/95/92 | — |
-| `n64-usa.json` | `build_n64_catalog.py` | Wikipedia N64 (col 5) | libretro DAT | 100/100/96/100 | `n64-usa.json` |
-| `genesis-usa.json` | `segaretro_source.py` + `enrich_from_segaretro.py` | Excel del usuario (base Sega Retro) | **Sega Retro** (lista US) | 99/0/**97**/92 · +releaseDate 99% (545 a mes), rating 48% | fixes inline |
-| `master-system-usa.json` | Wikipedia + `segaretro_source.py`/`enrich_from_segaretro.py` | Wikipedia MS | **Sega Retro** (dates/serial; incl. Sega Cards) | 100/100/**92**/92 · +releaseDate 91% (98 a mes) | — |
-| `psx-usa.json` | `build_psx_catalog.py` | Wikipedia PS (A–L / M–Z) | sin DAT | 100/100/0/87 | — |
-| `dreamcast-usa.json` | Wikipedia + `segaretro_source.py`/`enrich_from_segaretro.py` | Wikipedia DC | **Sega Retro** (fecha al día/serial/rating) | 100/100/**88**/99 · +releaseDate 88% (al día), rating 88% | `dreamcast-usa.json` |
+**Sega: cobertura completa.** Las 8 consolas, en NTSC-U y NTSC-J, con Sega Retro como fuente única
+vía API (`tools/local/segaretro_api.py`). Fechas ISO de precisión variable, catalog number y rating
+salen todos de ahí; la carátula de libretro-thumbnails prefiriendo la región.
 
-Repos de carátula por plataforma (libretro-thumbnails): NES `Nintendo_-_Nintendo_Entertainment_System`,
-SNES `Nintendo_-_Super_Nintendo_Entertainment_System`, N64 `Nintendo_-_Nintendo_64`, Genesis
-`Sega_-_Mega_Drive_-_Genesis`, Master System `Sega_-_Master_System_-_Mark_III`, PSX
-`Sony_-_PlayStation`, Dreamcast `Sega_-_Dreamcast`.
+| Catálogo | Juegos | año/serial/cover | rating | Notas |
+|---|---|---|---|---|
+| `sg-1000-jp.json` | 79 | 100/98/91 | — | JP only (nunca salió fuera) |
+| `master-system-usa.json` | 114 | 100/94/92 | — | base Wikipedia + enriquecido |
+| `master-system-jp.json` | 84 | 98/96/83 | — | |
+| `genesis-usa.json` | 711 | 99/98/92 | 68% | el catálogo modelo |
+| `genesis-jp.json` | 435 | 99/99/87 | 3% | fechas al día |
+| `game-gear-usa.json` | 234 | 99/99/91 | 61% | |
+| `game-gear-jp.json` | 199 | 98/97/81 | 23% | |
+| `sega-cd-usa.json` | 146 | 100/97/93 | 83% | |
+| `sega-cd-jp.json` | 116 | 99/99/87 | 5% | |
+| `32x-usa.json` | 31 | 96/96/87 | 96% | |
+| `32x-jp.json` | 18 | 94/94/72 | 88% | |
+| `saturn-usa.json` | 251 | 99/100/92 | 99% | |
+| `saturn-jp.json` | 1091 | 99/99/79 | 88% | la biblioteca JP más grande |
+| `dreamcast-usa.json` | 248 | 100/93/99 | 90% | base Wikipedia + enriquecido |
+| `dreamcast-jp.json` | 545 | 99/94/77 | 91% | |
+
+**No-Sega (pendientes de una fuente con procedencia — ver roadmap E):**
+
+| Catálogo | Builder | Fuente títulos | Serial | año/ed/serial/cover |
+|---|---|---|---|---|
+| `nes-usa.json` | `build_nes_catalog.py` | Wikipedia NES (col 5) | libretro DAT | 100/100/93/95 |
+| `snes-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | — | 100/100/95/92 |
+| `n64-usa.json` | `build_n64_catalog.py` | Wikipedia N64 (col 5) | libretro DAT | 100/100/96/100 |
+| `psx-usa.json` | `build_psx_catalog.py` | Wikipedia PS (A–L / M–Z) | sin DAT | 100/100/0/87 |
+
+Repos de carátula (libretro-thumbnails): NES `Nintendo_-_Nintendo_Entertainment_System`, SNES
+`Nintendo_-_Super_Nintendo_Entertainment_System`, N64 `Nintendo_-_Nintendo_64`, PSX
+`Sony_-_PlayStation`, Genesis `Sega_-_Mega_Drive_-_Genesis`, Master System
+`Sega_-_Master_System_-_Mark_III`, Game Gear `Sega_-_Game_Gear`, Sega CD
+`Sega_-_Mega-CD_-_Sega_CD`, 32X `Sega_-_32X`, Saturn `Sega_-_Saturn`, Dreamcast `Sega_-_Dreamcast`,
+SG-1000 `Sega_-_SG-1000`.
 
 ## Sega Retro — la fuente insignia (y el patrón por consola)
 
@@ -117,8 +140,10 @@ mapea la consola a sus catálogos: `"catalogs": { "NTSC-U": "…usa.json", "NTSC
 a NTSC-U** cuando esa región no tiene lista. `GameCatalog` carga/cachea por archivo; `RegionFilter`
 (Settings) elige la región activa y la app muestra ese catálogo en Add-game y el timeline.
 
-**Estado:** **NTSC-U** en todas; **NTSC-J** real en **Genesis** (`genesis-jp.json`, 435 juegos desde
-Sega Retro JP, fechas al día). El resto cae a NTSC-U en modo JP hasta que tenga su catálogo.
+**Estado:** **todas las consolas Sega tienen NTSC-U y NTSC-J reales** (la SG-1000 solo NTSC-J: nunca
+salió de Japón). Las no-Sega (NES, SNES, N64, PSX) siguen solo con NTSC-U y caen a esa lista en modo
+JP. `catalogFor` cae a cualquier catálogo disponible cuando la región pedida no tiene lista ni hay
+default, para que una consola de una sola región no se vea vacía.
 
 **Dirección — datos por país, selector por región.** El `catalogs` map tiene **key de texto libre**, así
 que soporta granularidad de **país** sin cambiar el modelo (Sega Retro separa Europa en UK/Francia/
@@ -148,9 +173,11 @@ claves nuevas no rompe nada.
 - **C. Evolución de esquema** — precisión de fecha + confianza (aditivo, backward-compatible).
 - **D. Pipeline de corrección con procedencia** — overrides con `_source`/`_note`/`_date`; lint valida;
   report muestra confirmado vs auto.
-- **E. Cerrar huecos** — documentar/reconstruir la procedencia de **SNES** y **Genesis**; mejorar
-  **Genesis** (editora 0%); catálogos faltantes (GameCube, Saturn, PS2, PS3).
-- **F. Eje de región** — estructura para datos por región (NA/JP/PAL), fechas y cobertura por región.
+- **E. Cerrar huecos** — **Sega cerrado** ✅ (8 consolas × 2 regiones desde Sega Retro). Queda:
+  documentar la procedencia de **SNES** (sin builder), editora 0% en los catálogos Sega (Sega Retro
+  no la trae en `releases`: hace falta una 2da fuente), y los faltantes **GameCube, PS2, PS3**.
+- **F. Eje de región** — NTSC-U/NTSC-J listo en todo Sega ✅. Falta **PAL**, que Sega Retro separa
+  por país (UK/Francia/Alemania/España/Australia/Brasil): datos por país, selector por región.
 
 ## Herramientas
 
