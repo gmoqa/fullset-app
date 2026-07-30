@@ -54,17 +54,34 @@ SNES `Nintendo_-_Super_Nintendo_Entertainment_System`, N64 `Nintendo_-_Nintendo_
 ## Sega Retro — la fuente insignia (y el patrón por consola)
 
 **Genesis es el catálogo modelo** del dataset con procedencia. Sus fechas (con mes, a veces día),
-seriales (catalog number) y ratings salen de **[Sega Retro](https://segaretro.org)** (lista US), la
-fuente más certera para las consolas Sega. El sitio **bloquea bots**, así que se trabaja desde el HTML
-descargado, en dos pasos reproducibles:
+seriales (catalog number) y ratings salen de **[Sega Retro](https://segaretro.org)**, la fuente más
+certera para las consolas Sega.
 
-1. `tools/segaretro_source.py <html> <out.json>` — parsea la tabla a una **fuente de registro**
-   (`tools/sources/genesis-segaretro.json`), tagueada con `source`/`url`/`region`. Guarda facts, no la
-   página.
-2. `tools/enrich_from_segaretro.py <catalogo> <fuente>` — aplica esa fuente a un catálogo (match por
-   título; rellena `releaseDate`/`serial`/`rating`, alinea `year`). **Genérico**: sirve para cualquier
-   consola Sega. Ya aplicado a **Genesis**, **Master System** (cartuchos + Sega Cards) y **Dreamcast**
-   (fechas al día). Re-correr cuando Sega Retro actualice.
+**Recolección: por API, automática.** Sega Retro corre MediaWiki con la extensión **Cargo**, o sea
+que expone los datos *estructurados* (`action=cargoquery`). Lo que antes obligaba a bajar el HTML a
+mano era el rechazo al User-Agent por defecto; con un UA descriptivo la API responde normal. El
+recolector vive en `tools/local/segaretro_api.py` (**fuera del repo**, ver `tools/local/README.md`):
+
+```bash
+python3 tools/local/segaretro_api.py fetch --console MD --region JP \
+    --out tools/sources/genesis-jp-segaretro.json
+```
+
+Reproduce la **lista curada** de la wiki replicando el filtro de `Template:GameList` (categoría
+`<REGIÓN> <Consola> games` menos accesorios/hardware/aftermarket/download-only) y cruza `releases`
+(fecha ISO, catalog number, rating) con `localisednames` (título de la región). Contrastado contra
+las fuentes hechas a mano: **434/434** fechas y seriales idénticos en Mega Drive JP, **696/696** en
+Mega Drive US, **102/102** en Master System US — y además cubre más títulos.
+
+Luego se aplica con:
+
+- `tools/enrich_from_segaretro.py <catalogo> <fuente>` — aplica la fuente a un catálogo existente
+  (match por título; rellena `releaseDate`/`serial`/`rating`, alinea `year`). Ya aplicado a
+  **Genesis**, **Master System** (cartuchos + Sega Cards) y **Dreamcast**.
+- `tools/build_catalog_from_segaretro.py` — construye un catálogo regional nuevo desde cero.
+
+El parser viejo de HTML (`tools/segaretro_source.py`) queda como respaldo para material que no esté
+en las tablas Cargo.
 
 Este es **el patrón a replicar: cada consola con su mejor fuente**, siempre trazada — Sega Retro para
 las Sega, una fuente japonesa para los catálogos JP, un foro/base de datos confiable donde Wikipedia no
