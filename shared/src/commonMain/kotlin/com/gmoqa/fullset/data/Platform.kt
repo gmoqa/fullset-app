@@ -17,9 +17,18 @@ data class Platform(
     /** Catálogos por región (label de [RegionFilter] → archivo): `{"NTSC-U": "...", "PAL": "..."}`. */
     val catalogs: Map<String, String> = emptyMap(),
 ) {
-    /** Archivo de catálogo para [region]; cae a [catalogFile] (NTSC-U) si esa región no está. */
+    /**
+     * Archivo de catálogo para [region].
+     *
+     * Cae a [catalogFile] (NTSC-U) si esa región no tiene lista propia, y si tampoco hay default
+     * usa cualquiera que exista: pasa con las consolas de una sola región (la SG-1000 solo salió en
+     * Japón), donde mostrar su catálogo japonés es mejor que mostrar una consola vacía.
+     */
     fun catalogFor(region: RegionFilter): String =
-        catalogs[region.label]?.takeIf { it.isNotBlank() } ?: catalogFile
+        catalogs[region.label]?.takeIf { it.isNotBlank() }
+            ?: catalogFile.takeIf { it.isNotBlank() }
+            ?: catalogs.values.firstOrNull { it.isNotBlank() }
+            ?: ""
 }
 
 /**

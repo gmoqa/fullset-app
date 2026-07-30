@@ -65,8 +65,14 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     "PlayStation" to PlatformStyle(pad("ic_pad_playstation"), Color(0xFF26262E), 1.00f),      // gris
     "Sega Genesis" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF383840), 0.71f),         // gris
     "Sega CD" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1B3A6B), 0.59f),              // azul (usa pad de Genesis)
+    // Add-ons del Genesis: comparten su control. El 32X usa caja de cartón como el Genesis.
+    "Sega 32X" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1F3A38), 0.73f),             // verde petróleo
+    // Familia 8-bit: comparten el control del Master System.
+    "Sega Game Gear" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF3A2A45), 0.71f), // violeta
+    "SG-1000" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF453220), 0.74f),        // marrón
     "PlayStation 5" to PlatformStyle(pad("ic_pad_playstation5"), Color(0xFF1E2C5C), 0.80f),   // azul marino
-    "Sega Saturn" to PlatformStyle(pad("ic_pad_saturn"), Color(0xFF2A2E45), 0.72f),           // slate
+    // Jewel case alta y angosta (medido en Libretro = 0.59; antes estaba en 0.72 y dejaba banda).
+    "Sega Saturn" to PlatformStyle(pad("ic_pad_saturn"), Color(0xFF2A2E45), 0.59f),           // slate
     "Dreamcast" to PlatformStyle(pad("ic_pad_dreamcast"), Color(0xFF24384A), 1.00f),          // steel blue (jewel case cuadrada, medido en Libretro = 1.00)
     "PlayStation 2" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1E2038), 0.70f),   // azul oscuro
 )

@@ -42,9 +42,54 @@
     }
   },
   {
+    "id": "nintendo-64",
+    "name": "Nintendo 64",
+    "catalog": "catalogs/n64-usa.json",
+    "libretroRepo": "Nintendo_-_Nintendo_64",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Nintendo",
+      "generation": 5,
+      "media": "Cartridge",
+      "released": {
+        "ntsc-j": 1996,
+        "ntsc": 1996,
+        "pal": 1997
+      },
+      "discontinued": 2002,
+      "unitsSold": "32.9M",
+      "cpu": "NEC VR4300 (MIPS) @ 93.75 MHz — 64-bit",
+      "description": "Nintendo's 64-bit console and its last home system on cartridges. Super Mario 64 pioneered analog-stick 3D control."
+    }
+  },
+  {
+    "id": "sg-1000",
+    "name": "SG-1000",
+    "catalogs": {
+      "NTSC-J": "catalogs/sg-1000-jp.json"
+    },
+    "libretroRepo": "Sega_-_SG-1000",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sega",
+      "generation": 3,
+      "media": "Cartridge",
+      "released": {
+        "ntsc-j": 1983
+      },
+      "discontinued": 1985,
+      "unitsSold": "2M",
+      "cpu": "Zilog Z80 @ 3.58 MHz — 8-bit",
+      "description": "Sega's first home console, launched in Japan the same day as the Famicom."
+    }
+  },
+  {
     "id": "sega-master-system",
     "name": "Sega Master System",
-    "catalog": "catalogs/master-system-usa.json",
+    "catalogs": {
+      "NTSC-U": "catalogs/master-system-usa.json",
+      "NTSC-J": "catalogs/master-system-jp.json"
+    },
     "libretroRepo": "Sega_-_Master_System_-_Mark_III",
     "enabled": true,
     "info": {
@@ -65,7 +110,10 @@
   {
     "id": "sega-genesis",
     "name": "Sega Genesis",
-    "catalogs": { "NTSC-U": "catalogs/genesis-usa.json", "NTSC-J": "catalogs/genesis-jp.json" },
+    "catalogs": {
+      "NTSC-U": "catalogs/genesis-usa.json",
+      "NTSC-J": "catalogs/genesis-jp.json"
+    },
     "libretroRepo": "Sega_-_Mega_Drive_-_Genesis",
     "enabled": true,
     "info": {
@@ -81,6 +129,126 @@
       "unitsSold": "~30.8M",
       "cpu": "Motorola 68000 @ 7.6 MHz + Z80 — 16-bit",
       "description": "Sega's 16-bit console, sold as 'Genesis' in North America. Sonic and its Blast Processing drove the 16-bit console war."
+    }
+  },
+  {
+    "id": "sega-game-gear",
+    "name": "Sega Game Gear",
+    "catalogs": {
+      "NTSC-U": "catalogs/game-gear-usa.json",
+      "NTSC-J": "catalogs/game-gear-jp.json"
+    },
+    "libretroRepo": "Sega_-_Game_Gear",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sega",
+      "generation": 4,
+      "media": "Cartridge",
+      "released": {
+        "ntsc-j": 1990,
+        "ntsc": 1991,
+        "pal": 1991
+      },
+      "discontinued": 1997,
+      "unitsSold": "10.6M",
+      "cpu": "Zilog Z80 @ 3.58 MHz — 8-bit",
+      "description": "Sega's colour-screen handheld, built on Master System hardware, fielded against the Game Boy."
+    }
+  },
+  {
+    "id": "sega-cd",
+    "name": "Sega CD",
+    "catalogs": {
+      "NTSC-U": "catalogs/sega-cd-usa.json",
+      "NTSC-J": "catalogs/sega-cd-jp.json"
+    },
+    "libretroRepo": "Sega_-_Mega-CD_-_Sega_CD",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sega",
+      "generation": 4,
+      "media": "CD-ROM",
+      "released": {
+        "ntsc-j": 1991,
+        "ntsc": 1992,
+        "pal": 1993
+      },
+      "discontinued": 1996,
+      "unitsSold": "2.24M",
+      "cpu": "Motorola 68000 @ 12.5 MHz — 16-bit (add-on)",
+      "description": "CD add-on for the Mega Drive/Genesis: full-motion video, CD audio and bigger games."
+    }
+  },
+  {
+    "id": "sega-32x",
+    "name": "Sega 32X",
+    "catalogs": {
+      "NTSC-U": "catalogs/32x-usa.json",
+      "NTSC-J": "catalogs/32x-jp.json"
+    },
+    "libretroRepo": "Sega_-_32X",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sega",
+      "generation": 4,
+      "media": "Cartridge",
+      "released": {
+        "ntsc": 1994,
+        "ntsc-j": 1994,
+        "pal": 1995
+      },
+      "discontinued": 1996,
+      "unitsSold": "0.8M",
+      "cpu": "2× Hitachi SH-2 @ 23 MHz — 32-bit (add-on)",
+      "description": "Short-lived 32-bit add-on for the Genesis, released months before the Saturn."
+    }
+  },
+  {
+    "id": "sega-saturn",
+    "name": "Sega Saturn",
+    "catalogs": {
+      "NTSC-U": "catalogs/saturn-usa.json",
+      "NTSC-J": "catalogs/saturn-jp.json"
+    },
+    "libretroRepo": "Sega_-_Saturn",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sega",
+      "generation": 5,
+      "media": "CD-ROM",
+      "released": {
+        "ntsc-j": 1994,
+        "ntsc": 1995,
+        "pal": 1995
+      },
+      "discontinued": 2000,
+      "unitsSold": "9.3M",
+      "cpu": "2× Hitachi SH-2 @ 28.6 MHz — 32-bit (dual)",
+      "description": "Sega's dual-CPU 32-bit console. Strong in Japan but held back by a complex architecture and a rushed US launch."
+    }
+  },
+  {
+    "id": "dreamcast",
+    "name": "Dreamcast",
+    "catalogs": {
+      "NTSC-U": "catalogs/dreamcast-usa.json",
+      "NTSC-J": "catalogs/dreamcast-jp.json"
+    },
+    "libretroRepo": "Sega_-_Dreamcast",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sega",
+      "generation": 6,
+      "media": "GD-ROM",
+      "released": {
+        "ntsc-j": 1998,
+        "ntsc": 1999,
+        "pal": 1999
+      },
+      "discontinued": 2001,
+      "unitsSold": "9.1M",
+      "cpu": "Hitachi SH-4 @ 200 MHz",
+      "description": "Sega's final console and the first with a built-in modem for online play. Acclaimed but discontinued early."
     }
   },
   {
@@ -105,88 +273,6 @@
     }
   },
   {
-    "id": "playstation-5",
-    "name": "PlayStation 5",
-    "catalog": "",
-    "libretroRepo": "",
-    "enabled": true,
-    "info": {
-      "manufacturer": "Sony",
-      "generation": 9,
-      "media": "Ultra HD Blu-ray / digital",
-      "released": {
-        "ntsc-j": 2020,
-        "ntsc": 2020,
-        "pal": 2020
-      },
-      "cpu": "AMD Zen 2 8-core @ 3.5 GHz + RDNA 2 GPU",
-      "description": "Sony's ninth-generation console, built around a custom AMD CPU and an SSD for near-instant loading."
-    }
-  },
-  {
-    "id": "nintendo-64",
-    "name": "Nintendo 64",
-    "catalog": "catalogs/n64-usa.json",
-    "libretroRepo": "Nintendo_-_Nintendo_64",
-    "enabled": true,
-    "info": {
-      "manufacturer": "Nintendo",
-      "generation": 5,
-      "media": "Cartridge",
-      "released": {
-        "ntsc-j": 1996,
-        "ntsc": 1996,
-        "pal": 1997
-      },
-      "discontinued": 2002,
-      "unitsSold": "32.9M",
-      "cpu": "NEC VR4300 (MIPS) @ 93.75 MHz — 64-bit",
-      "description": "Nintendo's 64-bit console and its last home system on cartridges. Super Mario 64 pioneered analog-stick 3D control."
-    }
-  },
-  {
-    "id": "sega-saturn",
-    "name": "Sega Saturn",
-    "catalog": "catalogs/saturn-usa.json",
-    "libretroRepo": "Sega_-_Saturn",
-    "enabled": false,
-    "info": {
-      "manufacturer": "Sega",
-      "generation": 5,
-      "media": "CD-ROM",
-      "released": {
-        "ntsc-j": 1994,
-        "ntsc": 1995,
-        "pal": 1995
-      },
-      "discontinued": 2000,
-      "unitsSold": "9.3M",
-      "cpu": "2× Hitachi SH-2 @ 28.6 MHz — 32-bit (dual)",
-      "description": "Sega's dual-CPU 32-bit console. Strong in Japan but held back by a complex architecture and a rushed US launch."
-    }
-  },
-  {
-    "id": "dreamcast",
-    "name": "Dreamcast",
-    "catalog": "catalogs/dreamcast-usa.json",
-    "libretroRepo": "Sega_-_Dreamcast",
-    "enabled": true,
-    "info": {
-      "manufacturer": "Sega",
-      "generation": 6,
-      "media": "GD-ROM",
-      "released": {
-        "ntsc-j": 1998,
-        "ntsc": 1999,
-        "pal": 1999
-      },
-      "discontinued": 2001,
-      "unitsSold": "9.1M",
-      "cpu": "Hitachi SH-4 @ 200 MHz",
-      "description": "Sega's final console and the first with a built-in modem for online play. Acclaimed but discontinued early."
-    }
-  },
-  {
     "id": "playstation-2",
     "name": "PlayStation 2",
     "catalog": "catalogs/ps2-usa.json",
@@ -205,6 +291,25 @@
       "unitsSold": "155M+",
       "cpu": "Emotion Engine @ 294 MHz — 128-bit",
       "description": "Sony's sixth-generation console and the best-selling of all time, doubling as an affordable DVD player."
+    }
+  },
+  {
+    "id": "playstation-5",
+    "name": "PlayStation 5",
+    "catalog": "",
+    "libretroRepo": "",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sony",
+      "generation": 9,
+      "media": "Ultra HD Blu-ray / digital",
+      "released": {
+        "ntsc-j": 2020,
+        "ntsc": 2020,
+        "pal": 2020
+      },
+      "cpu": "AMD Zen 2 8-core @ 3.5 GHz + RDNA 2 GPU",
+      "description": "Sony's ninth-generation console, built around a custom AMD CPU and an SSD for near-instant loading."
     }
   }
 ]

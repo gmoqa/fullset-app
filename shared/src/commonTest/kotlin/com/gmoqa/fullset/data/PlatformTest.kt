@@ -48,4 +48,26 @@ class PlatformTest {
         val p = platform(mapOf("NTSC-J" to ""))
         assertEquals("catalogs/genesis-usa.json", p.catalogFor(RegionFilter.NTSC_J))
     }
+
+    @Test
+    fun consolaDeUnaSolaRegionUsaSuUnicoCatalogo() {
+        // La SG-1000 solo salió en Japón: en modo NTSC-U mostramos su catálogo japonés, no vacío.
+        val jpOnly = Platform(
+            id = "sg-1000", name = "SG-1000", catalogFile = "",
+            libretroRepo = "Sega_-_SG-1000", enabled = true,
+            catalogs = mapOf("NTSC-J" to "catalogs/sg-1000-jp.json"),
+        )
+        assertEquals("catalogs/sg-1000-jp.json", jpOnly.catalogFor(RegionFilter.NTSC_J))
+        assertEquals("catalogs/sg-1000-jp.json", jpOnly.catalogFor(RegionFilter.NTSC_U))
+    }
+
+    @Test
+    fun sinNingunCatalogoDevuelveVacio() {
+        // Plataformas modernas (PS5): se cargan a mano, no tienen lista.
+        val none = Platform(
+            id = "playstation-5", name = "PlayStation 5", catalogFile = "",
+            libretroRepo = "", enabled = true,
+        )
+        assertEquals("", none.catalogFor(RegionFilter.NTSC_U))
+    }
 }
