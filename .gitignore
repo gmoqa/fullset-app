@@ -30,3 +30,9 @@ __pycache__/
 # --- Datos personales de prueba ---
 # Si te armas un seed con tu coleccion real para tu build local, dejalo fuera del repo.
 /app/src/main/assets/seed/collection.local.json
+
+# --- Herramientas locales (fuera del repo) ---
+# Scripts de recolección de datos que corren en la máquina del mantenedor: no son parte del
+# producto y no se versionan. Las **fuentes** que generan (tools/sources/*.json) sí se versionan,
+# porque son el registro con procedencia del que salen los catálogos.
+/tools/local/
