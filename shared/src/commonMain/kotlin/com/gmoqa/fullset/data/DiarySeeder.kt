@@ -21,6 +21,7 @@ class DiarySeeder(
         syncSeededGames()
         fixMissingCovers()
         fixForeignSnesSerials()
+        fixDuplicateSnesSerials()
         refreshFromCatalog()
     }
 
@@ -34,6 +35,33 @@ class DiarySeeder(
      */
     private fun fixForeignSnesSerials() = migration(SNES_SERIAL_FIX_FLAG) {
         repo.clearForeignSerials("Super Nintendo", "SNSP-%", "SHVC-%")
+    }
+
+    /**
+     * Cinco pares de juegos de SNES compartían catalog number porque el generador legacy cruzaba por
+     * título de forma laxa: uno de cada par se quedaba con el código del otro. Ya está resuelto en el
+     * catálogo contra la etiqueta de cada cartucho, pero [refreshFromCatalog] no pisa un valor
+     * existente, así que las colecciones ya cargadas conservan el equivocado.
+     *
+     * Se reemplaza **solo si el juego todavía tiene exactamente el valor viejo**: si lo editaste a
+     * mano, tu dato manda y no se toca.
+     */
+    private fun fixDuplicateSnesSerials() = migration(SNES_DUPLICATE_FIX_FLAG) {
+        val corrections = listOf(
+            // slug, valor viejo (compartido), valor correcto
+            Triple("brawl-brothers", "SNS-RB", "SNS-RE-USA"),
+            Triple("rival-turf", "SNS-RB", "SNS-RB-USA"),
+            Triple("king-of-the-monsters-2", "SNS-A7SE-USA", "SNS-KT-USA"),
+            Triple("lost-vikings-2", "SNS-LV", "SNS-ALVE-USA"),
+            Triple("the-lost-vikings", "SNS-LV", "SNS-LV-USA"),
+            Triple("tony-meolas-sidekicks-soccer", "SNS-WO", "SNS-6K-USA"),
+            Triple("star-fox-super-weekend", "SNS-FO", "SNS-FO-DIS"),
+        )
+        repo.database.transaction {
+            corrections.forEach { (slug, old, new) ->
+                repo.updateSerialIfEquals("Super Nintendo", slug, old, new)
+            }
+        }
     }
 
     /**
@@ -145,6 +173,7 @@ class DiarySeeder(
         private const val SYNC_SEED_FLAG = "sync_seed_v1"
         private const val COVER_FIX_FLAG = "cover_fix_genesis_v1"
         private const val SNES_SERIAL_FIX_FLAG = "snes_foreign_serial_fix_v1"
+        private const val SNES_DUPLICATE_FIX_FLAG = "snes_duplicate_serial_fix_v1"
         /** Subir la versión cuando los catálogos mejoren, para volver a completar huecos. */
         private const val CATALOG_REFRESH_FLAG = "catalog_refresh_v4"
         private const val GENESIS_BOXART =

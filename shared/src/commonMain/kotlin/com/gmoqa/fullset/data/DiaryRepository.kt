@@ -155,6 +155,10 @@ class DiaryRepository(
     /** Primera vez jugado: ISO de precisión variable ("1994" | "1994-06" | "1994-06-08"; "" = borrar). */
     fun setFirstPlayed(gameId: Long, iso: String) = q.updateFirstPlayed(iso.trim(), gameId)
 
+    /** Corrige un catalog number solo si el juego aún tiene el valor viejo (no pisa ediciones a mano). */
+    fun updateSerialIfEquals(platform: String, slug: String, old: String, new: String) =
+        q.updateSerialIfEquals(new, slug, platform, old)
+
     /** Borra los catalog number de otra región (prefijos como `SNSP-` europeo o `SHVC-` japonés). */
     fun clearForeignSerials(platform: String, prefix1: String, prefix2: String) =
         q.clearForeignSerials(platform, prefix1, prefix2)

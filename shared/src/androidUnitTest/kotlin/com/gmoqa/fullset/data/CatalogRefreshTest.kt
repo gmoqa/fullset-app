@@ -101,4 +101,22 @@ class CatalogRefreshTest {
         assertEquals("SNS-MW-USA", bySerial[ok], "el serial correcto no se toca")
         assertEquals("SNSP-XX", bySerial[other], "solo afecta a la plataforma indicada")
     }
+
+    @Test
+    fun corrigeElSerialViejoPeroRespetaTuEdicion() {
+        val repo = repo()
+        // Los dos Lost Vikings compartían SNS-LV por el match laxo del generador legacy.
+        val stale = repo.addGame(name = "Lost Vikings 2", platform = "Super Nintendo",
+            slug = "lost-vikings-2", serial = "SNS-LV")
+        // Este lo corrigió el usuario a mano antes de que llegara la migración.
+        val edited = repo.addGame(name = "The Lost Vikings", platform = "Super Nintendo",
+            slug = "the-lost-vikings", serial = "LO QUE DICE MI CARTUCHO")
+
+        repo.updateSerialIfEquals("Super Nintendo", "lost-vikings-2", "SNS-LV", "SNS-ALVE-USA")
+        repo.updateSerialIfEquals("Super Nintendo", "the-lost-vikings", "SNS-LV", "SNS-LV-USA")
+
+        val bySerial = repo.games().associate { it.id to it.serial }
+        assertEquals("SNS-ALVE-USA", bySerial[stale], "el valor viejo se corrige")
+        assertEquals("LO QUE DICE MI CARTUCHO", bySerial[edited], "tu edición manda")
+    }
 }

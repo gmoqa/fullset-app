@@ -108,6 +108,12 @@ UPDATE games SET condition = ? WHERE id = ?;
 updateFirstPlayed:
 UPDATE games SET first_played = ? WHERE id = ?;
 
+-- Reemplaza un catalog number SOLO si el juego todavía tiene exactamente el valor viejo. Se usa
+-- cuando el catálogo corrige un dato que él mismo había dado: si el usuario lo editó a mano, el
+-- valor ya no coincide y su edición queda intacta.
+updateSerialIfEquals:
+UPDATE games SET serial = :new WHERE slug = :slug AND platform = :platform AND serial = :old;
+
 -- Borra el catalog number de los juegos de una plataforma cuyo código sea de otra región. Los
 -- prefijos identifican el mercado (SNSP- = Europa, SHVC- = Japón), así que en una lista NTSC-U son
 -- un dato equivocado: peor que no tener ninguno, porque no coincide con la copia que tenés.
