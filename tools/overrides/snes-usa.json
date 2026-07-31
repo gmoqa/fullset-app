@@ -1,8 +1,32 @@
 {
+  "bassins-black-bass-with-hank-parker": {
+    "serial": "SNS-AB2E-USA",
+    "_source": "libretro-database: 'Bassin's Black Bass (USA)'",
+    "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
+    "_date": "2026-07-30"
+  },
   "choplifter-iii": {
     "serial": "SNS-3C",
     "_source": "libretro-database: 'Choplifter III - Rescue-Survive (USA)'",
     "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "desert-strike": {
+    "serial": "SNS-RG",
+    "_source": "libretro-database: 'Desert Strike - Return to the Gulf (USA)'",
+    "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
+    "_date": "2026-07-30"
+  },
+  "hit-the-ice": {
+    "serial": "SNS-HC-USA",
+    "_source": "libretro-database: 'Hit the Ice - VHL - The Official Video Hockey League (USA)'",
+    "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
+    "_date": "2026-07-30"
+  },
+  "home-improvement": {
+    "serial": "SNS-AHIE-USA",
+    "_source": "libretro-database: 'Home Improvement - Power Tool Pursuit! (USA)'",
+    "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
     "_date": "2026-07-30"
   },
   "mario-paint": {
@@ -29,6 +53,18 @@
     "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
     "_date": "2026-07-30"
   },
+  "olympic-summer-games-atlanta-1996": {
+    "serial": "SNS-AO9E-USA",
+    "_source": "libretro-database: 'Olympic Summer Games (USA)'",
+    "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
+    "_date": "2026-07-30"
+  },
+  "operation-europe-path-to-victory": {
+    "serial": "SNS-YP",
+    "_source": "libretro-database: 'Operation Europe - Path to Victory 1939-45 (USA)'",
+    "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
+    "_date": "2026-07-30"
+  },
   "r-type-iii-the-third-lightning": {
     "serial": "SNS-ER-USA",
     "_source": "libretro-database: 'R-Type III (USA)'",
@@ -39,6 +75,18 @@
     "serial": "SNS-AN-USA",
     "_source": "libretro-database: 'SimAnt - The Electronic Ant Colony (USA)'",
     "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "street-fighter-ii-the-world-warrior": {
+    "serial": "SNS-S2",
+    "_source": "libretro-database: 'Street Fighter II (USA)'",
+    "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
+    "_date": "2026-07-30"
+  },
+  "super-conflict-the-mideast": {
+    "serial": "SNS-CN",
+    "_source": "libretro-database: 'Super Conflict (USA)'",
+    "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
     "_date": "2026-07-30"
   },
   "super-metroid": {
@@ -63,6 +111,12 @@
     "serial": "SNS-AMOE-USA",
     "_source": "libretro-database: 'Mighty Max (USA)'",
     "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "thomas-the-tank-engine-friends-adventure-series": {
+    "serial": "SNS-6T",
+    "_source": "libretro-database: 'Thomas the Tank Engine & Friends (USA)'",
+    "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
     "_date": "2026-07-30"
   },
   "x-zone": {
