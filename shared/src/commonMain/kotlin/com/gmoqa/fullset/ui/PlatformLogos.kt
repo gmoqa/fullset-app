@@ -143,10 +143,10 @@ fun PlatformBandHeader(
                     Text(
                         count.toString(),
                         style = MaterialTheme.typography.labelMedium,
-                        color = Color.White.copy(alpha = 0.75f),
+                        color = Tokens.Overlay.textDim,
                         modifier = Modifier
-                            .clip(RoundedCornerShape(50))
-                            .background(Color.White.copy(alpha = 0.14f))
+                            .clip(Tokens.Shape.pill)
+                            .background(Tokens.Overlay.chipDim)
                             .padding(horizontal = 9.dp, vertical = 2.dp),
                     )
                 }
@@ -155,7 +155,7 @@ fun PlatformBandHeader(
                     Icon(
                         Icons.AutoMirrored.Filled.KeyboardArrowRight,
                         contentDescription = null,
-                        tint = Color.White.copy(alpha = 0.75f),
+                        tint = Tokens.Overlay.textDim,
                         modifier = Modifier.size(22.dp),
                     )
                 }
@@ -198,10 +198,10 @@ fun PlatformBandHeader(
             Text(
                 count.toString(),
                 style = MaterialTheme.typography.labelMedium,
-                color = Color.White.copy(alpha = 0.75f),
+                color = Tokens.Overlay.textDim,
                 modifier = Modifier
-                    .clip(RoundedCornerShape(50))
-                    .background(Color.White.copy(alpha = 0.14f))
+                    .clip(Tokens.Shape.pill)
+                    .background(Tokens.Overlay.chipDim)
                     .padding(horizontal = 9.dp, vertical = 2.dp),
             )
         }
@@ -210,7 +210,7 @@ fun PlatformBandHeader(
                 Icon(
                     Icons.Outlined.Info,
                     contentDescription = "Platform info",
-                    tint = Color.White.copy(alpha = 0.85f),
+                    tint = Tokens.Overlay.icon,
                     modifier = Modifier.size(20.dp),
                 )
             }
@@ -221,7 +221,7 @@ fun PlatformBandHeader(
             Icon(
                 Icons.AutoMirrored.Filled.KeyboardArrowRight,
                 contentDescription = null,
-                tint = Color.White.copy(alpha = 0.75f),
+                tint = Tokens.Overlay.textDim,
                 modifier = Modifier.size(22.dp),
             )
         }

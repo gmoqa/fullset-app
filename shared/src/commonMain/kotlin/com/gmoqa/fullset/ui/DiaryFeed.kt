@@ -131,7 +131,7 @@ internal fun DiaryEntryCard(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(220.dp)
-                            .clip(RoundedCornerShape(8.dp)),
+                            .clip(Tokens.Shape.small),
                     )
                 }
             }
@@ -203,7 +203,7 @@ internal fun DiaryComposer(
             Box(
                 modifier = Modifier
                     .weight(1f)
-                    .clip(RoundedCornerShape(50))
+                    .clip(Tokens.Shape.pill)
                     .background(MaterialTheme.colorScheme.surface)
                     .clickable(onClick = onWrite)
                     .padding(horizontal = 16.dp, vertical = 12.dp),

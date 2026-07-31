@@ -199,7 +199,7 @@ private fun SearchBar(
                 }
             },
             singleLine = true,
-            shape = RoundedCornerShape(50),
+            shape = Tokens.Shape.pill,
             modifier = Modifier.weight(1f).focusRequester(focusRequester),
         )
     }

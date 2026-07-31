@@ -123,7 +123,7 @@ fun GameShelves(
         games.groupBy { it.platform }.mapValues { (_, list) -> list.sortedBy(sortOrder) }
     }
     // En teléfonos angostos achicamos el tile: con 140dp apenas entraban dos carátulas y media.
-    val tileWidth = if (isCompactWidth()) 120.dp else 140.dp
+    val tileWidth = if (isCompactWidth()) Tokens.Size.coverTileCompact else Tokens.Size.coverTile
     val columnState = rememberLazyListState()
     // Un estado por franja: hace falta para poder correr la fila hasta el juego enfocado.
     val rowStates = remember { mutableMapOf<String, LazyListState>() }

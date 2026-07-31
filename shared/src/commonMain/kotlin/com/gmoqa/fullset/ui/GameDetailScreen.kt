@@ -268,7 +268,7 @@ private fun HeroHeader(
                 model = model,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
-                modifier = Modifier.matchParentSize().blur(32.dp),
+                modifier = Modifier.matchParentSize().blur(Tokens.Size.heroBlur),
             )
         }
         // Scrim: oscuro arriba (para los iconos) y abajo (para el texto).
@@ -277,9 +277,9 @@ private fun HeroHeader(
                 .matchParentSize()
                 .background(
                     Brush.verticalGradient(
-                        0f to Color.Black.copy(alpha = 0.50f),
-                        0.45f to Color.Black.copy(alpha = 0.30f),
-                        1f to Color.Black.copy(alpha = 0.88f),
+                        0f to Tokens.Overlay.scrimTop,
+                        0.45f to Tokens.Overlay.scrimMid,
+                        1f to Tokens.Overlay.scrimBottom,
                     )
                 ),
         )
@@ -389,7 +389,7 @@ private fun HeroHeader(
                 Box(
                     modifier = Modifier
                         .weight(if (compactWidth) 0.6f else 0.8f)
-                        .height(if (compactWidth) 150.dp else 180.dp),
+                        .height(if (compactWidth) Tokens.Size.heroCoverCompact else Tokens.Size.heroCover),
                     // Arriba, para que acompañe al logo y al título: alineada al fondo quedaba
                     // colgando con un hueco encima cuando el ancho es el que la limita.
                     contentAlignment = Alignment.TopEnd,
@@ -407,13 +407,13 @@ private fun HeroHeader(
                             modifier = Modifier
                                 .fillMaxHeight()
                                 .aspectRatio(0.72f)
-                                .background(Color.White.copy(alpha = 0.10f)),
+                                .background(Tokens.Overlay.placeholder),
                             contentAlignment = Alignment.Center,
                         ) {
                             Icon(
                                 Icons.Filled.SportsEsports,
                                 contentDescription = null,
-                                tint = Color.White.copy(alpha = 0.5f),
+                                tint = Tokens.Overlay.placeholderIcon,
                                 modifier = Modifier.size(32.dp),
                             )
                         }
@@ -431,8 +431,8 @@ private fun EditableConditionChip(current: Condition?, onSelect: (Condition?) ->
     Box {
         Row(
             modifier = Modifier
-                .clip(RoundedCornerShape(50))
-                .background(Color.White.copy(alpha = 0.18f))
+                .clip(Tokens.Shape.pill)
+                .background(Tokens.Overlay.chip)
                 .clickable { open = true }
                 .padding(start = 10.dp, end = 4.dp, top = 4.dp, bottom = 4.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -442,7 +442,7 @@ private fun EditableConditionChip(current: Condition?, onSelect: (Condition?) ->
                 Spacer(Modifier.width(6.dp))
                 Text(current.label, style = MaterialTheme.typography.labelMedium, color = Color.White, maxLines = 1)
             } else {
-                Text("Condition", style = MaterialTheme.typography.labelMedium, color = Color.White.copy(alpha = 0.75f))
+                Text("Condition", style = MaterialTheme.typography.labelMedium, color = Tokens.Overlay.textDim)
             }
             Icon(Icons.Filled.ArrowDropDown, contentDescription = "Set condition", tint = Color.White, modifier = Modifier.size(18.dp))
         }
@@ -468,8 +468,8 @@ private fun FirstPlayedChip(current: String, onSet: (String) -> Unit) {
     var open by remember { mutableStateOf(false) }
     Row(
         modifier = Modifier
-            .clip(RoundedCornerShape(50))
-            .background(Color.White.copy(alpha = 0.18f))
+            .clip(Tokens.Shape.pill)
+            .background(Tokens.Overlay.chip)
             .clickable { open = true }
             .padding(horizontal = 10.dp, vertical = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -482,7 +482,7 @@ private fun FirstPlayedChip(current: String, onSet: (String) -> Unit) {
         )
         Spacer(Modifier.width(5.dp))
         if (current.isBlank()) {
-            Text("First played", style = MaterialTheme.typography.labelMedium, color = Color.White.copy(alpha = 0.75f))
+            Text("First played", style = MaterialTheme.typography.labelMedium, color = Tokens.Overlay.textDim)
         } else {
             Text(formatReleaseDate(current), style = MaterialTheme.typography.labelMedium, color = Color.White, maxLines = 1)
         }
@@ -596,7 +596,7 @@ private fun DatePartPicker(
         Box {
             Row(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(8.dp))
+                    .clip(Tokens.Shape.small)
                     .background(MaterialTheme.colorScheme.surfaceVariant)
                     .clickable(enabled = enabled) { open = true }
                     .padding(start = 12.dp, end = 4.dp, top = 8.dp, bottom = 8.dp),
@@ -635,10 +635,10 @@ private fun MetaChip(text: String, accent: Boolean = false) {
         color = Color.White,
         maxLines = 1,
         modifier = Modifier
-            .clip(RoundedCornerShape(50))
+            .clip(Tokens.Shape.pill)
             .background(
                 if (accent) MaterialTheme.colorScheme.primary.copy(alpha = 0.9f)
-                else Color.White.copy(alpha = 0.18f)
+                else Tokens.Overlay.chip
             )
             .padding(horizontal = 10.dp, vertical = 4.dp),
     )
@@ -651,7 +651,7 @@ private fun HeroToggle(label: String, icon: ImageVector, selected: Boolean, onCl
     val fg = if (selected) MaterialTheme.colorScheme.onPrimary else Color.White
     Row(
         modifier = Modifier
-            .clip(RoundedCornerShape(50))
+            .clip(Tokens.Shape.pill)
             .background(bg)
             .clickable(onClick = onClick)
             .padding(horizontal = 14.dp, vertical = 8.dp),

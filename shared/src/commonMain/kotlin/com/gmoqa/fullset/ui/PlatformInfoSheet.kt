@@ -110,7 +110,7 @@ private fun Header(platform: String, info: PlatformInfo) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(18.dp))
+            .clip(Tokens.Shape.large)
             .background(band)
             .padding(horizontal = 20.dp, vertical = 22.dp),
     ) {
@@ -131,7 +131,7 @@ private fun Header(platform: String, info: PlatformInfo) {
                 Text(
                     subtitle,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color.White.copy(alpha = 0.85f),
+                    color = Tokens.Overlay.icon,
                 )
             }
         }
@@ -167,7 +167,7 @@ private fun ReleaseCard(label: String, year: Int?, mine: Boolean, modifier: Modi
     else MaterialTheme.colorScheme.onSurface
     Column(
         modifier = modifier
-            .clip(RoundedCornerShape(14.dp))
+            .clip(Tokens.Shape.medium)
             .background(bg)
             .padding(vertical = 12.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -218,7 +218,7 @@ private fun HardwareGrid(info: PlatformInfo) {
 private fun SpecTile(icon: ImageVector, label: String, value: String, modifier: Modifier) {
     Column(
         modifier = modifier
-            .clip(RoundedCornerShape(14.dp))
+            .clip(Tokens.Shape.medium)
             .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
             .padding(14.dp),
         verticalArrangement = Arrangement.spacedBy(6.dp),

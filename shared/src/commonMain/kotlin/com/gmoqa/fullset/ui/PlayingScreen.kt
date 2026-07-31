@@ -108,7 +108,7 @@ private fun PlayingCard(game: Game, onClick: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .height(180.dp)
-            .clip(RoundedCornerShape(20.dp))
+            .clip(Tokens.Shape.xlarge)
             .background(MaterialTheme.colorScheme.surfaceVariant)
             .clickable(onClick = onClick),
     ) {
@@ -129,7 +129,7 @@ private fun PlayingCard(game: Game, onClick: () -> Unit) {
                     Brush.horizontalGradient(
                         0f to Color.Black.copy(alpha = 0.82f),
                         0.6f to Color.Black.copy(alpha = 0.55f),
-                        1f to Color.Black.copy(alpha = 0.30f),
+                        1f to Tokens.Overlay.scrimMid,
                     )
                 ),
         )
@@ -168,9 +168,9 @@ private fun PlayingCard(game: Game, onClick: () -> Unit) {
                         PlatformLabel(
                             platform = game.platform,
                             iconSize = 16.dp,
-                            tint = Color.White.copy(alpha = 0.85f),
+                            tint = Tokens.Overlay.icon,
                             nameStyle = MaterialTheme.typography.labelMedium,
-                            nameColor = Color.White.copy(alpha = 0.85f),
+                            nameColor = Tokens.Overlay.icon,
                         )
                     }
                     if (counts.isNotBlank()) {
@@ -209,7 +209,7 @@ private fun PlayingCard(game: Game, onClick: () -> Unit) {
                         Icon(
                             Icons.Filled.SportsEsports,
                             contentDescription = null,
-                            tint = Color.White.copy(alpha = 0.5f),
+                            tint = Tokens.Overlay.placeholderIcon,
                             modifier = Modifier.size(32.dp),
                         )
                     }
@@ -232,7 +232,7 @@ private fun DigitalBadge() {
         maxLines = 1,
         softWrap = false,
         modifier = Modifier
-            .clip(RoundedCornerShape(8.dp))
+            .clip(Tokens.Shape.small)
             .background(Color(0xFFFFC400))
             .padding(horizontal = 12.dp, vertical = 6.dp),
     )

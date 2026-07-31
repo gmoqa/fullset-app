@@ -50,6 +50,21 @@ python3 tools/build_psx_catalog.py       # requiere internet
 python3 tools/catalog_lint.py            # valida el esquema
 ```
 
+## Estilos centralizados
+Todo el estilo vive en dos archivos de `shared/src/commonMain/kotlin/com/gmoqa/fullset/ui/`, al modo
+de las variables de un SASS: se cambia ahí y se propaga a toda la app.
+
+- **`Theme.kt` → `Palette`**: los colores de marca. Cambiar `primaryLight`/`primaryDark` recolorea
+  botones, chips seleccionados, acentos y la barra de estado. El resto del `ColorScheme` (fondos,
+  superficies, texto) lo deriva Material 3 solo, que ya garantiza el contraste entre sus roles.
+- **`Tokens.kt`**: `Space` (escala de espaciado), `Shape` (pill y esquinas), `Overlay` (las capas
+  sobre carátula: velos del hero, chips, texto) y `Size` (tile de carátula, hero, íconos).
+
+Van ahí los valores que se **repiten o expresan una decisión de diseño**; una medida que existe una
+sola vez se queda en su pantalla, porque darle nombre global no aclara nada. Dos cosas quedan
+deliberadamente afuera: los colores y el aspecto de carátula de cada consola (`PlatformLogos.kt`, son
+datos de la plataforma) y los overlays no dependen del tema claro/oscuro porque van sobre una imagen.
+
 ## Carátulas
 - La **búsqueda** es 100% offline (lee los JSON de `assets/catalogs/`).
 - La **imagen** no se versiona ni se empaqueta: se resuelve por URL desde

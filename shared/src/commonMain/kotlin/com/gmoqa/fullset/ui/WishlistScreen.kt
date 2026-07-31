@@ -99,7 +99,7 @@ fun WishlistScreen(
                                 items(list, key = { it.id }) { item ->
                                     WishlistTile(
                                         item = item,
-                                        modifier = Modifier.width(140.dp),
+                                        modifier = Modifier.width(Tokens.Size.coverTile),
                                         onRemove = { onRemove(item.id) },
                                     )
                                 }

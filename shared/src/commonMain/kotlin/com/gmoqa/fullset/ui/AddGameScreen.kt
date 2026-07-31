@@ -735,7 +735,7 @@ fun CoverPickerField(
 private fun CoverBox(model: Any?, aspect: Float) {
     Box(
         modifier = Modifier
-            .width(120.dp)
+            .width(Tokens.Size.coverTileCompact)
             .aspectRatio(aspect)
             .background(MaterialTheme.colorScheme.surfaceVariant),
         contentAlignment = Alignment.Center,

@@ -80,14 +80,14 @@ internal fun LevelBar(amplitude: Float, modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .height(4.dp)
-            .clip(RoundedCornerShape(50))
+            .clip(Tokens.Shape.pill)
             .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.25f)),
     ) {
         Box(
             Modifier
                 .fillMaxHeight()
                 .fillMaxWidth(level.coerceAtLeast(0.02f))
-                .clip(RoundedCornerShape(50))
+                .clip(Tokens.Shape.pill)
                 .background(MaterialTheme.colorScheme.primary),
         )
     }
@@ -110,7 +110,7 @@ internal fun VoiceNotePlayer(path: String, durationMs: Long, modifier: Modifier 
 
     Row(
         modifier = modifier
-            .clip(RoundedCornerShape(50))
+            .clip(Tokens.Shape.pill)
             .background(MaterialTheme.colorScheme.surfaceVariant)
             .clickable {
                 runCatching {

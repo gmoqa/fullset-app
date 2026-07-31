@@ -1,0 +1,90 @@
+package com.gmoqa.fullset.ui
+
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+
+/**
+ * **Los estilos de la app, en un solo lugar.** Es el equivalente a las variables de un archivo SASS:
+ * cambiás un valor acá y se propaga a toda la UI, sin ir archivo por archivo.
+ *
+ * Lo que va acá son los **tokens compartidos** —espaciados, formas, capas sobre carátula, tamaños—,
+ * no cada medida puntual: un padding que existe una sola vez en una pantalla se queda ahí, porque
+ * darle nombre global no aclara nada. La regla práctica: si un valor se repite o expresa una
+ * decisión de diseño ("el alto de un tile", "cuánto se oscurece una carátula"), va acá.
+ *
+ * Los colores de marca (primary/secondary) viven en [Theme.kt] porque el tema de Material los
+ * necesita en su forma de `ColorScheme`; los de cada consola en `PlatformLogos.kt`, porque son
+ * datos de la plataforma más que estilo de la app.
+ */
+object Tokens {
+
+    /**
+     * Escala de espaciado. Todo múltiplo de 2 y creciendo suave: alcanzan para el 90% de los
+     * paddings y separaciones sin inventar números sueltos.
+     */
+    object Space {
+        val xxs = 2.dp
+        val xs = 4.dp
+        val sm = 6.dp
+        val md = 8.dp
+        val lg = 10.dp
+        val xl = 12.dp
+        val xxl = 16.dp
+        val xxxl = 20.dp
+        val huge = 24.dp
+        val giant = 32.dp
+    }
+
+    /** Formas. [pill] es la cápsula de chips y toggles; el resto, esquinas de tarjetas y cuadros. */
+    object Shape {
+        val pill = RoundedCornerShape(50)
+        val small = RoundedCornerShape(8.dp)
+        val medium = RoundedCornerShape(14.dp)
+        val large = RoundedCornerShape(18.dp)
+        val xlarge = RoundedCornerShape(20.dp)
+    }
+
+    /**
+     * Capas sobre una carátula. Son blancos y negros con alpha en vez de colores del tema porque van
+     * **encima de una imagen**, no del fondo de la app: ahí el contraste lo da la propia carátula y
+     * el color del tema se perdería. Por eso no cambian entre claro y oscuro.
+     */
+    object Overlay {
+        /** Texto principal sobre carátula (título, nombre de consola). */
+        val text = Color.White
+        /** Texto secundario: metadatos, contadores, placeholders. */
+        val textDim = Color.White.copy(alpha = 0.75f)
+        /** Íconos de acción sobre la carátula. */
+        val icon = Color.White.copy(alpha = 0.85f)
+        /** Fondo de un chip o pill sobre la carátula. */
+        val chip = Color.White.copy(alpha = 0.18f)
+        /** Igual pero más tenue: badges de conteo, toggles apagados. */
+        val chipDim = Color.White.copy(alpha = 0.14f)
+        /** Hueco donde iría una carátula que no cargó. */
+        val placeholder = Color.White.copy(alpha = 0.10f)
+        /** El ícono de control que se dibuja dentro de ese hueco. */
+        val placeholderIcon = Color.White.copy(alpha = 0.5f)
+
+        /** Velo del hero: oscurece arriba para los íconos y abajo para el texto. */
+        val scrimTop = Color.Black.copy(alpha = 0.50f)
+        val scrimMid = Color.Black.copy(alpha = 0.30f)
+        val scrimBottom = Color.Black.copy(alpha = 0.88f)
+    }
+
+    /** Medidas de la estantería y de los íconos recurrentes. */
+    object Size {
+        /** Ancho del tile de carátula; en teléfonos angostos entra uno menos, por eso el compacto. */
+        val coverTile = 140.dp
+        val coverTileCompact = 120.dp
+        /** Alto de la carátula del hero en el detalle. */
+        val heroCover = 180.dp
+        val heroCoverCompact = 150.dp
+        /** Ícono chico dentro de un chip o botón. */
+        val iconSmall = 18.dp
+        /** Ícono de acción en headers y barras. */
+        val icon = 22.dp
+        /** Desenfoque del fondo del hero. */
+        val heroBlur = 32.dp
+    }
+}
