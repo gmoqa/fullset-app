@@ -49,6 +49,7 @@ class GameCatalog(private val readAsset: (String) -> String? = ::readTextAsset) 
                         releaseDate = dto.releaseDate.trim(),
                         publisher = dto.publisher.trim(),
                         genre = dto.genre.trim(),
+                        serial = dto.serial.trim(),
                         coverUrl = dto.coverUrl.trim(),
                     )
                 }

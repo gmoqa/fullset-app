@@ -155,6 +155,14 @@ class DiaryRepository(
     /** Primera vez jugado: ISO de precisión variable ("1994" | "1994-06" | "1994-06-08"; "" = borrar). */
     fun setFirstPlayed(gameId: Long, iso: String) = q.updateFirstPlayed(iso.trim(), gameId)
 
+    /** Borra los catalog number de otra región (prefijos como `SNSP-` europeo o `SHVC-` japonés). */
+    fun clearForeignSerials(platform: String, prefix1: String, prefix2: String) =
+        q.clearForeignSerials(platform, prefix1, prefix2)
+
+    /** Completa desde el catálogo lo que el juego tenga vacío; nunca pisa lo cargado a mano. */
+    fun fillFromCatalog(gameId: Long, serial: String, publisher: String, genre: String, year: Int?) =
+        q.fillFromCatalog(serial.trim(), publisher.trim(), genre.trim(), year?.toLong(), gameId)
+
     /** Borra el juego, sus notas y sus fotos (filas por CASCADE + archivos en disco). */
     fun deleteGame(id: Long) {
         photos(id).forEach { FileStore.delete(it.path) }

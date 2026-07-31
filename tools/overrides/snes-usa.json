@@ -1,0 +1,74 @@
+{
+  "choplifter-iii": {
+    "serial": "SNS-3C",
+    "_source": "libretro-database: 'Choplifter III - Rescue-Survive (USA)'",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "mario-paint": {
+    "serial": "",
+    "_source": "libretro-database solo tiene la entrada europea (SNSP-MP)",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "mickey-mania": {
+    "serial": "SNS-AMIE-USA",
+    "_source": "libretro-database: 'Mickey Mania - The Timeless Adventures of Mickey Mouse (USA)'",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "mighty-morphin-power-rangers": {
+    "serial": "",
+    "_source": "libretro-database solo tiene la japonesa; las USA son de otros títulos de la saga",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "monopoly": {
+    "serial": "",
+    "_source": "libretro-database solo tiene la japonesa (SHVC-ML)",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "r-type-iii-the-third-lightning": {
+    "serial": "SNS-ER-USA",
+    "_source": "libretro-database: 'R-Type III (USA)'",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "simant": {
+    "serial": "SNS-AN-USA",
+    "_source": "libretro-database: 'SimAnt - The Electronic Ant Colony (USA)'",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "super-metroid": {
+    "serial": "",
+    "_source": "libretro-database solo tiene la europea (SNSP-RI)",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "super-star-wars": {
+    "serial": "",
+    "_source": "libretro-database solo tiene europea y japonesa",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "super-street-fighter-ii-the-new-challengers": {
+    "serial": "SNS-XW",
+    "_source": "libretro-database: 'Super Street Fighter II (USA)'",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "the-adventures-of-mighty-max": {
+    "serial": "SNS-AMOE-USA",
+    "_source": "libretro-database: 'Mighty Max (USA)'",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  },
+  "x-zone": {
+    "serial": "",
+    "_source": "sin entrada en libretro-database",
+    "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
+    "_date": "2026-07-30"
+  }
+}

@@ -108,6 +108,22 @@ UPDATE games SET condition = ? WHERE id = ?;
 updateFirstPlayed:
 UPDATE games SET first_played = ? WHERE id = ?;
 
+-- Borra el catalog number de los juegos de una plataforma cuyo código sea de otra región. Los
+-- prefijos identifican el mercado (SNSP- = Europa, SHVC- = Japón), así que en una lista NTSC-U son
+-- un dato equivocado: peor que no tener ninguno, porque no coincide con la copia que tenés.
+clearForeignSerials:
+UPDATE games SET serial = '' WHERE platform = :platform AND (serial LIKE :prefix1 OR serial LIKE :prefix2);
+
+-- Completa desde el catálogo SOLO lo que esté vacío: nunca pisa lo que cargaste a mano. Se usa al
+-- refrescar la colección cuando los catálogos mejoran (ver DiarySeeder.refreshFromCatalog).
+fillFromCatalog:
+UPDATE games SET
+    serial = CASE WHEN trim(serial) = '' THEN :serial ELSE serial END,
+    publisher = CASE WHEN trim(publisher) = '' THEN :publisher ELSE publisher END,
+    genre = CASE WHEN trim(genre) = '' THEN :genre ELSE genre END,
+    release_year = COALESCE(release_year, :year)
+WHERE id = :id;
+
 lastInsertRowId:
 SELECT last_insert_rowid();
 

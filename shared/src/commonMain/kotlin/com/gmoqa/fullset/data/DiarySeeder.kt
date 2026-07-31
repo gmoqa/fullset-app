@@ -20,6 +20,59 @@ class DiarySeeder(
         seedCollectionIfNeeded()
         syncSeededGames()
         fixMissingCovers()
+        fixForeignSnesSerials()
+        refreshFromCatalog()
+    }
+
+    /**
+     * El catálogo de SNES traía doce catalog number de otra región (`SNSP-` europeo, `SHVC-`
+     * japonés) porque su generador tomaba de libretro la fila equivocada. Ya está corregido en el
+     * catálogo, pero quien haya abierto la app antes tiene esos códigos copiados en su colección, y
+     * [refreshFromCatalog] no los pisa (solo completa vacíos). Esto los limpia para que el refresh
+     * de abajo los vuelva a completar bien; el que no tenga equivalente NTSC-U queda vacío, que es
+     * más honesto que un código que no coincide con el cartucho.
+     */
+    private fun fixForeignSnesSerials() = migration(SNES_SERIAL_FIX_FLAG) {
+        repo.clearForeignSerials("Super Nintendo", "SNSP-%", "SHVC-%")
+    }
+
+    /**
+     * Vuelve a cruzar la colección con los catálogos y completa **solo lo que esté vacío**
+     * (catalog number, editora, género, año).
+     *
+     * Los catálogos son un dataset vivo: cuando una consola estrena lista o una existente se
+     * enriquece, los juegos ya cargados se quedan con los datos que había el día que los agregaste.
+     * Esto los pone al día sin tocar nada tuyo: no renombra, no pisa lo que completaste a mano y no
+     * cambia condición ni notas. El match es por `slug` (la identidad del juego en el catálogo),
+     * mirando todas las regiones de esa consola porque un juego puede estar solo en una.
+     *
+     * La bandera lleva versión: al mejorar los catálogos se sube el número y vuelve a correr una vez.
+     */
+    private fun refreshFromCatalog() = migration(CATALOG_REFRESH_FLAG) {
+        val registry = PlatformRegistry()
+        val catalog = GameCatalog()
+        // slug -> entrada, por plataforma. Se arma una vez y sirve para todos los juegos.
+        val bySlug = registry.all().associate { platform ->
+            val entries = HashMap<String, CatalogEntry>()
+            for (region in RegionFilter.entries) {
+                // La primera región que traiga el slug gana; el resto solo agrega los que falten.
+                catalog.entries(platform, region).forEach { entries.putIfAbsent(it.slug, it) }
+            }
+            platform.name to entries
+        }
+        repo.database.transaction {
+            for (game in repo.games()) {
+                if (game.slug.isBlank()) continue
+                val entry = bySlug[game.platform]?.get(game.slug) ?: continue
+                repo.fillFromCatalog(
+                    game.id,
+                    serial = entry.serial,
+                    publisher = entry.publisher,
+                    genre = entry.genre,
+                    year = entry.year,
+                )
+            }
+        }
     }
 
     /**
@@ -91,6 +144,9 @@ class DiarySeeder(
         private const val SEED_FLAG = "seed_v1"
         private const val SYNC_SEED_FLAG = "sync_seed_v1"
         private const val COVER_FIX_FLAG = "cover_fix_genesis_v1"
+        private const val SNES_SERIAL_FIX_FLAG = "snes_foreign_serial_fix_v1"
+        /** Subir la versión cuando los catálogos mejoren, para volver a completar huecos. */
+        private const val CATALOG_REFRESH_FLAG = "catalog_refresh_v2"
         private const val GENESIS_BOXART =
             "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Mega_Drive_-_Genesis/master/Named_Boxarts/"
     }

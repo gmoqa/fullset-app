@@ -81,7 +81,7 @@ de Sega: 全年齢 (todas las edades), 18禁 y la marca X. En EE.UU., VRC hasta 
 | Catálogo | Builder | Fuente títulos | Serial | año/ed/serial/cover |
 |---|---|---|---|---|
 | `nes-usa.json` | `build_nes_catalog.py` | Wikipedia NES (col 5) | libretro DAT | 100/100/93/95 |
-| `snes-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | — | 100/100/95/92 |
+| `snes-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | libretro DAT (con 12 fixes) | 100/100/93/92 |
 | `n64-usa.json` | `build_n64_catalog.py` | Wikipedia N64 (col 5) | libretro DAT | 100/100/96/100 |
 | `psx-usa.json` | `build_psx_catalog.py` | Wikipedia PS (A–L / M–Z) | sin DAT | 100/100/0/87 |
 
@@ -149,6 +149,13 @@ con claves con guion bajo (que el generador ignora al aplicar):
 ```
 
 Así, cuando dentro de un año revisemos por qué un dato es lo que es, la respuesta está al lado del dato.
+
+**Caso real (2026-07-30):** `snes-usa.json` traía doce catalog number de **otra región** — `SNSP-`
+(Europa) y `SHVC-` (Japón) — porque su generador legacy tomaba de libretro la fila equivocada. En una
+lista NTSC-U eso no identifica la copia que tenés, así que se verificó cada uno contra la entrada
+`(USA)` de libretro-database: seis se corrigieron y **seis quedaron vacíos** porque libretro no tiene
+la entrada estadounidense. Un dato equivocado es peor que ninguno. Ver `tools/overrides/snes-usa.json`,
+donde cada corrección dice de dónde salió.
 
 ## Región (multi-región: implementado)
 
