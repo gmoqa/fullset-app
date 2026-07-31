@@ -7,241 +7,281 @@
       "title": "3 Ninjas Kick Back / Hook",
       "releaseDate": "1994",
       "serial": "T-93175",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "A/X-101",
       "releaseDate": "1994",
       "serial": "T-86015",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Absolute Entertainment"
     },
     {
       "title": "After Burner III",
       "releaseDate": "1993-05",
       "serial": "4415",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "Android Assault: The Revenge of Bari-Arm",
       "releaseDate": "1994-10",
       "serial": "4445",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Big Fun Games"
     },
     {
       "title": "Batman Returns (Mega-CD)",
       "releaseDate": "1993-05-19",
       "serial": "4401",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "Battlecorps",
       "releaseDate": "1994-08",
       "serial": "T-115045",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": ""
     },
     {
       "title": "BC Racers",
       "releaseDate": "1995-02",
       "serial": "T-115075",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Core Design"
     },
     {
       "title": "Bill Walsh College Football",
       "releaseDate": "1993-12",
       "serial": "T-50025",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Black Hole Assault",
       "releaseDate": "1992-11",
       "serial": "PN-6400",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Bouncers",
       "releaseDate": "1994-12",
       "serial": "4908",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sega of America"
     },
     {
       "title": "Bram Stoker's Dracula (Mega-CD)",
       "releaseDate": "1993-11",
       "serial": "T-93065",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Brutal: Paws of Fury",
       "releaseDate": "1994-11",
       "serial": "T-83015",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "GameTek"
     },
     {
       "title": "Cadillacs and Dinosaurs: The Second Cataclysm",
       "releaseDate": "1994-12",
       "serial": "T-153035",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Rocket Science Games"
     },
     {
       "title": "Chuck Rock",
       "releaseDate": "1992-12",
       "serial": "T-6204",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "Chuck Rock II: Son of Chuck",
       "releaseDate": "1993",
       "serial": "T-70045",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Tengen"
     },
     {
       "title": "Cliffhanger",
       "releaseDate": "1993-11",
       "serial": "T-93075",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Cobra Command",
       "releaseDate": "1992-11",
       "serial": "4402",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "Compton's Interactive Encyclopedia",
       "releaseDate": "1994",
       "serial": "T-118015",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Compton's NewMedia"
     },
     {
       "title": "Corpse Killer",
       "releaseDate": "1994-11",
       "serial": "T-162055",
-      "rating": "ESRB: Mature"
+      "rating": "ESRB: Mature",
+      "publisher": "Digital Pictures"
     },
     {
       "title": "Crime Patrol",
       "releaseDate": "1994-10",
       "serial": "T-111055",
-      "rating": "ESRB: Mature"
+      "rating": "ESRB: Mature",
+      "publisher": "American Laser Games"
     },
     {
       "title": "Dark Wizard",
       "releaseDate": "1994-03",
       "serial": "4651",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Sega of America"
     },
     {
       "title": "Demolition Man",
       "releaseDate": "1995-11-15",
       "serial": "T-81045",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Double Switch",
       "releaseDate": "1993-12",
       "serial": "4419",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Sega of America"
     },
     {
       "title": "Dracula Unleashed",
       "releaseDate": "1993",
       "serial": "4420",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Sega of America"
     },
     {
       "title": "Dragon's Lair",
       "releaseDate": "1993-12",
       "serial": "T-121015",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "ReadySoft"
     },
     {
       "title": "Dune",
       "releaseDate": "1993-12",
       "serial": "T-70065",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Virgin Interactive Entertainment"
     },
     {
       "title": "Dungeon Explorer",
       "releaseDate": "1995-04",
       "serial": "4657",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sega of America"
     },
     {
       "title": "Dungeon Master II: Skullkeep",
       "releaseDate": "1994-09",
       "serial": "T-60085",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "JVC Musical Industries"
     },
     {
       "title": "Earthworm Jim: Special Edition",
       "releaseDate": "1995-04",
       "serial": "T-125045",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": ""
     },
     {
       "title": "Ecco the Dolphin",
       "releaseDate": "1993-07",
       "serial": "4408",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sega PC"
     },
     {
       "title": "Ecco: The Tides of Time",
       "releaseDate": "1994-11",
       "serial": "4441",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sega of America"
     },
     {
       "title": "ESPN Baseball Tonight",
       "releaseDate": "1994-10",
       "serial": "T-93115",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "ESPN National Hockey Night",
       "releaseDate": "1994-11",
       "serial": "T-93215",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "ESPN NBA Hangtime '95",
       "releaseDate": "1994",
       "serial": "T-93245",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "ESPN Sunday Night NFL",
       "releaseDate": "1994-11",
       "serial": "T-93105",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Eternal Champions: Challenge From the Dark Side",
       "releaseDate": "1995-06-06",
       "serial": "4427",
-      "rating": "ESRB: Mature"
+      "rating": "ESRB: Mature",
+      "publisher": "Sega of America"
     },
     {
       "title": "Eye of the Beholder",
       "releaseDate": "1994-08",
       "serial": "4655",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sega of America"
     },
     {
       "title": "Fahrenheit",
       "releaseDate": "1995-04",
       "serial": "4438",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "Fatal Fury Special",
       "releaseDate": "1995-06",
       "serial": "T-60165",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "JVC Musical Industries"
     },
     {
       "title": "FIFA International Soccer: Championship Edition",
       "releaseDate": "1994",
       "serial": "T-50055",
       "rating": "VRC: GA",
+      "publisher": "",
       "altTitles": [
         "FIFA International Soccer"
       ]
@@ -250,337 +290,393 @@
       "title": "Final Fight CD",
       "releaseDate": "1993-06",
       "serial": "4410",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "Flashback",
       "releaseDate": "1994-11",
       "serial": "4448",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Sega of America"
     },
     {
       "title": "Formula One World Championship: Beyond the Limit",
       "releaseDate": "1994-08",
       "serial": "4608",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sega of America"
     },
     {
       "title": "Ground Zero Texas",
       "releaseDate": "1993-11",
       "serial": "T-93145",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Heart of the Alien: Out of this World Parts I and II",
       "releaseDate": "1994-07",
       "serial": "T-70025",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Virgin Interactive Entertainment"
     },
     {
       "title": "Heimdall",
       "releaseDate": "1994-04",
       "serial": "T-60145",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "JVC Musical Industries"
     },
     {
       "title": "Hook",
       "releaseDate": "1993-01",
       "serial": "T-6205",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "INXS",
       "releaseDate": "1993-01",
       "serial": "4902",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "Iron Helix",
       "releaseDate": "1994-09",
       "serial": "T-124015",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Spectrum HoloByte"
     },
     {
       "title": "Jaguar XJ220",
       "releaseDate": "1993-04",
       "serial": "T-6406",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Jeopardy! (Mega-CD)",
       "releaseDate": "1994-11",
       "serial": "T-93095",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Joe Montana's NFL Football",
       "releaseDate": "1993-10",
       "serial": "T-4201",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sega of America"
     },
     {
       "title": "Jurassic Park (Mega-CD)",
       "releaseDate": "1993-12",
       "serial": "4411",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sega of America"
     },
     {
       "title": "Keio Flying Squadron",
       "releaseDate": "1995-02",
       "serial": "T-60185",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "JVC Musical Industries"
     },
     {
       "title": "Kids on Site",
       "releaseDate": "1994-11",
       "serial": "T-162015",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Digital Pictures"
     },
     {
       "title": "Kris Kross",
       "releaseDate": "1992-12",
       "serial": "T-6202",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Lethal Enforcers",
       "releaseDate": "1993-11",
       "serial": "T-95015",
-      "rating": "VRC: MA-17"
+      "rating": "VRC: MA-17",
+      "publisher": "Konami"
     },
     {
       "title": "Lethal Enforcers II: Gun Fighters",
       "releaseDate": "1994-11-24",
       "serial": "T-95025",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Konami"
     },
     {
       "title": "Links: The Challenge of Golf",
       "releaseDate": "1994-09",
       "serial": "T-70095",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": ""
     },
     {
       "title": "Loadstar: The Legend of Tully Bodine",
       "releaseDate": "1994-11",
       "serial": "T-153015",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Rocket Science Games"
     },
     {
       "title": "Lords of Thunder",
       "releaseDate": "1995-03-28",
       "serial": "4450",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sega of America"
     },
     {
       "title": "Lunar: Eternal Blue",
       "releaseDate": "1995-09-11",
       "serial": "T-127045",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": ""
     },
     {
       "title": "Lunar: The Silver Star",
       "releaseDate": "1993-12-10",
       "serial": "T-127015",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Working Designs"
     },
     {
       "title": "Mad Dog II: The Lost Gold",
       "releaseDate": "1994",
       "serial": "T-111065",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "American Laser Games"
     },
     {
       "title": "Mad Dog McCree",
       "releaseDate": "1993",
       "serial": "T-111015",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "American Laser Games"
     },
     {
       "title": "Marky Mark and the Funky Bunch",
       "releaseDate": "1993-01",
       "serial": "4901",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "Mary Shelley's Frankenstein / Bram Stoker's Dracula",
       "releaseDate": "1994-12",
       "serial": "T-93155",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "MegaRace",
       "releaseDate": "1994-12",
       "serial": "T-87025",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "The Software Toolworks"
     },
     {
       "title": "Mickey Mania: The Timeless Adventures of Mickey Mouse",
       "releaseDate": "1994-11",
       "serial": "T-93265",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": ""
     },
     {
       "title": "Microcosm",
       "releaseDate": "1994-01",
       "serial": "T-113015",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": ""
     },
     {
       "title": "Midnight Raiders",
       "releaseDate": "1994-10",
       "serial": "4439",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "Sega of America"
     },
     {
       "title": "Mighty Morphin Power Rangers (Mega-CD)",
       "releaseDate": "1994-11",
       "serial": "4442",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sega of America"
     },
     {
       "title": "Mortal Kombat",
       "releaseDate": "1994-04",
       "serial": "T-81025",
-      "rating": "VRC: MA-17"
+      "rating": "VRC: MA-17",
+      "publisher": ""
     },
     {
       "title": "My Paint: The Animated Paint Program",
       "releaseDate": "1994",
       "serial": "T-109015",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Saddleback Graphics"
     },
     {
       "title": "NBA Jam",
       "releaseDate": "1994-12",
       "serial": "T-81035",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": ""
     },
     {
       "title": "NFL Football Trivia Challenge",
       "releaseDate": "1994-11",
       "serial": "T-135015",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "CapDisc"
     },
     {
       "title": "NFL's Greatest: San Francisco vs. Dallas 1978-1993",
       "releaseDate": "1993-10",
       "serial": "4202",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sega of America"
     },
     {
       "title": "NHL Hockey '94",
       "releaseDate": "1993",
       "serial": "T-50015",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Night Trap",
       "releaseDate": "1992-11",
       "serial": "4903",
-      "rating": "VRC: MA-17"
+      "rating": "VRC: MA-17",
+      "publisher": "Sega of America"
     },
     {
       "title": "Novastorm",
       "releaseDate": "1995-02",
       "serial": "T-113025",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Psygnosis"
     },
     {
       "title": "Panic!",
       "releaseDate": "1994-10",
       "serial": "T-13015",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "Data East USA"
     },
     {
       "title": "Pitfall: The Mayan Adventure",
       "releaseDate": "1994-12",
       "serial": "T-130025",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "Activision"
     },
     {
       "title": "Popful Mail",
       "releaseDate": "1995-02-23",
       "serial": "T-127035",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Working Designs"
     },
     {
       "title": "Power Factory Featuring C+C Music Factory",
       "releaseDate": "1993-09",
       "serial": "T-93035",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Power Monger",
       "releaseDate": "1994-01",
       "serial": "T-50035",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": ""
     },
     {
       "title": "Prime / Microcosm",
       "releaseDate": "1994-12",
       "serial": "T-93325",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Prince of Persia (Mega-CD)",
       "releaseDate": "1992-11",
       "serial": "4652",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Prize Fighter",
       "releaseDate": "1993-12",
       "serial": "4206",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Sega of America"
     },
     {
       "title": "Puggsy",
       "releaseDate": "1994-01-06",
       "serial": "T-113035",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Psygnosis"
     },
     {
       "title": "Racing Aces",
       "releaseDate": "1993-12",
       "serial": "4607",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sega of America"
     },
     {
       "title": "Radical Rex",
       "releaseDate": "1995-02",
       "serial": "T-130035",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Activision"
     },
     {
       "title": "RDF: Global Conflict",
       "releaseDate": "1994-11",
       "serial": "T-86025",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Absolute Entertainment"
     },
     {
       "title": "Revenge of the Ninja",
       "releaseDate": "1994-03",
       "serial": "T-49035",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Revengers of Vengeance",
       "releaseDate": "1994-07",
       "serial": "T-22035",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Extreme Entertainment Group"
     },
     {
       "title": "Rise of the Dragon",
       "releaseDate": "1994-03",
       "serial": "4301",
-      "rating": "VRC: MA-17"
+      "rating": "VRC: MA-17",
+      "publisher": "Dynamix"
     },
     {
       "title": "Road Avenger",
       "releaseDate": "1993-02",
       "serial": "T-6207",
       "rating": "",
+      "publisher": "Renovation Products",
       "altTitles": [
         "Road Prosecutor"
       ]
@@ -589,301 +685,351 @@
       "title": "Road Rash (Mega-CD)",
       "releaseDate": "1995-04",
       "serial": "T-50085",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Robo Aleste",
       "releaseDate": "1993-08",
       "serial": "T-48015",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Tengen"
     },
     {
       "title": "Samurai Shodown",
       "releaseDate": "1995-02",
       "serial": "T-60175",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "JVC Musical Industries"
     },
     {
       "title": "Sega Classics Arcade Collection",
       "releaseDate": "1992-11",
       "serial": "",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Sega of America"
     },
     {
       "title": "Sensible Soccer",
       "releaseDate": "1994-09",
       "serial": "T-93185",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Renegade Software"
     },
     {
       "title": "Sewer Shark",
       "releaseDate": "1992-11",
       "serial": "T-6201",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Shadow of the Beast II",
       "releaseDate": "1994",
       "serial": "T-113045",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Sherlock Holmes: Consulting Detective Vol. I",
       "releaseDate": "1992-11",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Sherlock Holmes: Consulting Detective Vol. II",
       "releaseDate": "1993-06",
       "serial": "4653",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "Shining Force CD",
       "releaseDate": "1995-03",
       "serial": "4656",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sega of America"
     },
     {
       "title": "Silpheed",
       "releaseDate": "1993-10",
       "serial": "4423",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sega of America"
     },
     {
       "title": "Slam City with Scottie Pippen",
       "releaseDate": "1994-11",
       "serial": "T-162035",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "Digital Pictures"
     },
     {
       "title": "Snatcher",
       "releaseDate": "1994-12",
       "serial": "T-95035",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "Konami"
     },
     {
       "title": "Sol-Feace",
       "releaseDate": "1992-11",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "Sonic the Hedgehog CD",
       "releaseDate": "1993-11-23",
       "serial": "4407",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sega of America"
     },
     {
       "title": "Soul Star",
       "releaseDate": "1994-09",
       "serial": "T-115035",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": ""
     },
     {
       "title": "Space Ace (Mega-CD)",
       "releaseDate": "1994-12",
       "serial": "T-121025",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "ReadySoft"
     },
     {
       "title": "Spider-Man vs. The Kingpin (Mega-CD)",
       "releaseDate": "1993-09",
       "serial": "4412",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Sega of America"
     },
     {
       "title": "Star Wars: Rebel Assault",
       "releaseDate": "1994-03",
       "serial": "T-60075",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": ""
     },
     {
       "title": "StarBlade",
       "releaseDate": "1994-09",
       "serial": "T-14025",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Namco Hometek"
     },
     {
       "title": "Stellar-Fire",
       "releaseDate": "1993-12",
       "serial": "T-110025",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "Dynamix"
     },
     {
       "title": "Supreme Warrior",
       "releaseDate": "1994-11",
       "serial": "T-162045",
-      "rating": "ESRB: Mature"
+      "rating": "ESRB: Mature",
+      "publisher": "Digital Pictures"
     },
     {
       "title": "Surgical Strike",
       "releaseDate": "1995-06",
       "serial": "4435",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "Sega of America"
     },
     {
       "title": "The Adventures of Batman & Robin (Mega-CD)",
       "releaseDate": "1995-07",
       "serial": "4432",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sega of America"
     },
     {
       "title": "The Adventures of Willy Beamish",
       "releaseDate": "1993-03",
       "serial": "T-6300",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "The Colors of Modern Rock",
       "releaseDate": "1993",
       "serial": "WCM-9302-00",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega of America"
     },
     {
       "title": "The Lawnmower Man (Mega-CD)",
       "releaseDate": "1994",
       "serial": "T-160015",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Sales Curve Interactive"
     },
     {
       "title": "The Masked Rider: Kamen Rider ZO",
       "releaseDate": "1994-12",
       "serial": "4444",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "Sega of America"
     },
     {
       "title": "The Misadventures of Flink",
       "releaseDate": "1995-02",
       "serial": "T-23055",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "VIC Tokai Inc."
     },
     {
       "title": "The San Diego Zoo Presents... The Animals!",
       "releaseDate": "1994-07",
       "serial": "T-87015",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "The Software Toolworks"
     },
     {
       "title": "The Secret of Monkey Island",
       "releaseDate": "1993-11",
       "serial": "T-60035",
-      "rating": ""
+      "rating": "",
+      "publisher": "JVC Musical Industries"
     },
     {
       "title": "The Software Toolworks' Star Wars Chess",
       "releaseDate": "1994-05",
       "serial": "T-87035",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "The Software Toolworks"
     },
     {
       "title": "The Space Adventure",
       "releaseDate": "1995",
       "serial": "T-143015",
-      "rating": "ESRB: Mature"
+      "rating": "ESRB: Mature",
+      "publisher": "Hudson Soft USA"
     },
     {
       "title": "The Terminator (Mega-CD)",
       "releaseDate": "1993-06",
       "serial": "T-70015",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Virgin Games (United States)"
     },
     {
       "title": "The Third World War",
       "releaseDate": "1994-03",
       "serial": "T-22025",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Extreme Entertainment Group"
     },
     {
       "title": "Thunderhawk",
       "releaseDate": "1993-11",
       "serial": "T-60055",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "JVC Musical Industries"
     },
     {
       "title": "Time Gal",
       "releaseDate": "1993-05",
       "serial": "T-6214",
-      "rating": ""
+      "rating": "",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Tomcat Alley",
       "releaseDate": "1994-03",
       "serial": "4429",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Sega PC"
     },
     {
       "title": "Trivial Pursuit: Interactive Multimedia Game",
       "releaseDate": "1994-12",
       "serial": "T-89015",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Parker Brothers"
     },
     {
       "title": "Vay",
       "releaseDate": "1994-07",
       "serial": "T-127025",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Working Designs"
     },
     {
       "title": "Wheel of Fortune (Mega-CD)",
       "releaseDate": "1994",
       "serial": "T-93085",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Who Shot Johnny Rock?",
       "releaseDate": "1994-09",
       "serial": "T-111045",
-      "rating": "VRC: MA-17"
+      "rating": "VRC: MA-17",
+      "publisher": "American Laser Games"
     },
     {
       "title": "Wild Woody",
       "releaseDate": "1995",
       "serial": "4440",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "publisher": "Sega of America"
     },
     {
       "title": "Wing Commander",
       "releaseDate": "1994-03",
       "serial": "T-50045",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Wirehead",
       "releaseDate": "1995-09",
       "serial": "4437",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "publisher": "Sega of America"
     },
     {
       "title": "Wolfchild",
       "releaseDate": "1992-12",
       "serial": "T-6403",
-      "rating": ""
+      "rating": "",
+      "publisher": "JVC Musical Industries"
     },
     {
       "title": "Wonder Dog",
       "releaseDate": "1992-12",
       "serial": "T-6402",
-      "rating": ""
+      "rating": "",
+      "publisher": "Victor Musical Industries"
     },
     {
       "title": "World Cup USA 94",
       "releaseDate": "1994-07",
       "serial": "T-79025",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "WWF Rage in the Cage",
       "releaseDate": "1993-11",
       "serial": "T-81015",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "publisher": ""
     },
     {
       "title": "Yumemi Mystery Mansion",
       "releaseDate": "1994-02",
       "serial": "T-23015",
       "rating": "VRC: GA",
+      "publisher": "VIC Tokai Inc.",
       "altTitles": [
         "Mansion of Hidden Souls"
       ]

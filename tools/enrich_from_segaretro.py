@@ -48,7 +48,7 @@ def main():
         by[core(g["title"])] = g
 
     keys = list(by)
-    matched = date = month = serial = rating = 0
+    matched = date = month = serial = rating = publisher = 0
     unmatched, by_subtitle = [], []
     for e in cat:
         k = core(e["title"])
@@ -73,13 +73,19 @@ def main():
         if s["rating"]:
             e["rating"] = s["rating"]
             rating += 1
+        # La editora **solo si falta**: a diferencia de fecha/serial/rating, donde Sega Retro es la
+        # autoridad, acá puede haber un dato mejor de otra fuente o cargado a mano.
+        if s.get("publisher") and not e["publisher"].strip():
+            e["publisher"] = s["publisher"]
+            publisher += 1
 
     rows = sorted((canonical(e) for e in cat), key=lambda x: x["slug"])
     body = ",\n".join(json.dumps(x, ensure_ascii=False) for x in rows)
     open(cat_path, "w", encoding="utf-8").write("[\n" + body + "\n]\n")
 
     print(f"{os.path.basename(cat_path)}: {len(cat)} juegos · match {matched}")
-    print(f"  releaseDate {date} (a mes {month}) · serial {serial} · rating {rating}")
+    print(f"  releaseDate {date} (a mes {month}) · serial {serial} · rating {rating}"
+          + (f" · editora +{publisher}" if publisher else ""))
     if by_subtitle:
         print(f"  por subtítulo ({len(by_subtitle)}): {by_subtitle}")
     print(f"  sin match ({len(unmatched)}): {unmatched}")

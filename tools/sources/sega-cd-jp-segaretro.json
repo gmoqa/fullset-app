@@ -7,49 +7,57 @@
       "title": "A-Rank Thunder Tanjouhen",
       "releaseDate": "1993-06-25",
       "serial": "T-49064",
-      "rating": ""
+      "rating": "",
+      "publisher": "Riot"
     },
     {
       "title": "A/X-101",
       "releaseDate": "1994-03-25",
       "serial": "G-6031",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "After Armageddon Gaiden: Majuu Toushouden Eclipse",
       "releaseDate": "1994-11-11",
       "serial": "G-6026",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "After Burner III",
       "releaseDate": "1992-12-18",
       "serial": "T-68014",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Aisle Lord",
       "releaseDate": "1992-05-29",
       "serial": "T-32044",
-      "rating": ""
+      "rating": "",
+      "publisher": "Telenet Japan"
     },
     {
       "title": "Alshark",
       "releaseDate": "1993-11-26",
       "serial": "T-92014",
-      "rating": ""
+      "rating": "",
+      "publisher": "SandstormCategory :Live link reference"
     },
     {
       "title": "Anetto Futatabi",
       "releaseDate": "1993-03-30",
       "serial": "T-32104",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Aoki Ookami to Shiroki Meshika: Genchou Hishi",
       "releaseDate": "1993-09-24",
       "serial": "T-76054",
       "rating": "",
+      "publisher": "Koei",
       "altTitles": [
         "Genghis Khan II: Clan of the Gray Wolf"
       ]
@@ -58,25 +66,29 @@
       "title": "Arcus I-II-III",
       "releaseDate": "1993-07-23",
       "serial": "T-32094",
-      "rating": ""
+      "rating": "",
+      "publisher": "Nihon Telenet"
     },
     {
       "title": "Arslan Senki",
       "releaseDate": "1993-11-19",
       "serial": "G-6028",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Bakuden Unbalance Zone",
       "releaseDate": "1994-04-22",
       "serial": "T-145014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sony Music Entertainment Japan"
     },
     {
       "title": "Bari-Arm",
       "releaseDate": "1993-07-30",
       "serial": "T-43024",
       "rating": "",
+      "publisher": "",
       "altTitles": [
         "Android Assault: The Revenge of Bari-Arm"
       ]
@@ -86,6 +98,7 @@
       "releaseDate": "1994-04-15",
       "serial": "T-22044",
       "rating": "",
+      "publisher": "",
       "altTitles": [
         "Revengers of Vengeance"
       ]
@@ -94,61 +107,71 @@
       "title": "Battlecorps",
       "releaseDate": "1994-09-30",
       "serial": "T-60194",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Black Hole Assault",
       "releaseDate": "1992-10-23",
       "serial": "T-22024",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Burai: Hachigyoku no Yuushi Densetsu",
       "releaseDate": "1992-09-11",
       "serial": "G-6004",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Capcom no Quiz Tonosama no Yabou",
       "releaseDate": "1992-12-25",
       "serial": "T-44024",
-      "rating": ""
+      "rating": "",
+      "publisher": "SIMS"
     },
     {
       "title": "Captain Tsubasa",
       "releaseDate": "1994-09-30",
       "serial": "T-36014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Tecmo"
     },
     {
       "title": "CD-ROM Multi Seminar: Eigo (2) Hyper-Skit",
       "releaseDate": "",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "publisher": "Linguaphone Japan"
     },
     {
       "title": "Cosmic Fantasy Stories",
       "releaseDate": "1992-03-27",
       "serial": "T-49014",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Cyborg 009",
       "releaseDate": "1993-07-30",
       "serial": "T-49054",
-      "rating": ""
+      "rating": "",
+      "publisher": "Riot"
     },
     {
       "title": "Daihoushinden",
       "releaseDate": "1995-02-24",
       "serial": "T-60024",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Dark Wizard: Yomigaerishi Yami no Madoushi",
       "releaseDate": "1993-11-12",
       "serial": "G-6005",
       "rating": "",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Dark Wizard"
       ]
@@ -157,13 +180,15 @@
       "title": "Death Bringer",
       "releaseDate": "1992-04-17",
       "serial": "T-49034",
-      "rating": ""
+      "rating": "",
+      "publisher": "Riot"
     },
     {
       "title": "Dennin Aleste",
       "releaseDate": "1992-11-27",
       "serial": "T-66014",
       "rating": "",
+      "publisher": "",
       "altTitles": [
         "Robo Aleste"
       ]
@@ -172,103 +197,120 @@
       "title": "Detonator Orgun",
       "releaseDate": "1992-07-31",
       "serial": "T-28014",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Devastator",
       "releaseDate": "1993-05-28",
       "serial": "T-32074",
-      "rating": ""
+      "rating": "",
+      "publisher": "Wolf Team"
     },
     {
       "title": "Double Switch",
       "releaseDate": "1995-03-24",
       "serial": "G-6040",
-      "rating": "All ages"
+      "rating": "All ages",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Dragon's Lair",
       "releaseDate": "1994-06-03",
       "serial": "G-6035",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Dungeon Master II: Skullkeep",
       "releaseDate": "1994-03-25",
       "serial": "T-60144",
-      "rating": ""
+      "rating": "",
+      "publisher": "Victor Entertainment"
     },
     {
       "title": "Dynamic Country Club",
       "releaseDate": "1993-07-16",
       "serial": "G-6017",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Earnest Evans",
       "releaseDate": "1991-12-20",
       "serial": "T-32014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Ecco the Dolphin CD",
       "releaseDate": "1995-02-24",
       "serial": "G-6041",
-      "rating": "All ages"
+      "rating": "All ages",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Egawa Suguru no Super League CD",
       "releaseDate": "1993-08-06",
       "serial": "G-6019",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Eye of the Beholder",
       "releaseDate": "1994-04-22",
       "serial": "T-75014",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "F1 Circus CD",
       "releaseDate": "1994-03-18",
       "serial": "T-71014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Nihon Bussan"
     },
     {
       "title": "Fahrenheit",
       "releaseDate": "1995-09-01",
       "serial": "G-6043",
-      "rating": "All ages"
+      "rating": "All ages",
+      "publisher": ""
     },
     {
       "title": "Final Fight CD",
       "releaseDate": "1993-04-02",
       "serial": "G-6013",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Gambler Jiko Chuushinha 2: Gekitou! Tokyo Mahjong Land Hen",
       "releaseDate": "1992-12-18",
       "serial": "T-45044",
-      "rating": ""
+      "rating": "",
+      "publisher": "Game Arts"
     },
     {
       "title": "Game no Kanzume Vol. 1",
       "releaseDate": "1994-03-18",
       "serial": "G-6032",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Game no Kanzume Vol. 2",
       "releaseDate": "1994-03-18",
       "serial": "G-6033",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Garou Densetsu Special",
       "releaseDate": "1995-03-31",
       "serial": "T-60214",
       "rating": "",
+      "publisher": "Victor Entertainment",
       "altTitles": [
         "Fatal Fury Special"
       ]
@@ -277,13 +319,15 @@
       "title": "Genei Toshi",
       "releaseDate": "1993-05-28",
       "serial": "T-51014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Microcabin"
     },
     {
       "title": "Heavenly Symphony: Formula One World Championship 1993",
       "releaseDate": "1994-04-23",
       "serial": "G-6034",
       "rating": "",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Formula One World Championship: Beyond the Limit"
       ]
@@ -292,43 +336,50 @@
       "title": "Heavy Nova",
       "releaseDate": "1991-12-12",
       "serial": "T-22014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Micronet"
     },
     {
       "title": "Heimdall",
       "releaseDate": "1994-03-18",
       "serial": "T-60054",
-      "rating": ""
+      "rating": "",
+      "publisher": "Victor Entertainment"
     },
     {
       "title": "Ishii Hisaichi no Daiseikai",
       "releaseDate": "1994-01-28",
       "serial": "G-6016",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Jaguar XJ220",
       "releaseDate": "1993-03-26",
       "serial": "T-60094",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Jango World Cup",
       "releaseDate": "1993-08-27",
       "serial": "T-60124",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Jurassic Park (Mega-CD)",
       "releaseDate": "1994-09-30",
       "serial": "G-6038",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Kamen Rider ZO",
       "releaseDate": "1994-05-13",
       "serial": "T-141014",
       "rating": "",
+      "publisher": "",
       "altTitles": [
         "The Masked Rider: Kamen Rider ZO"
       ]
@@ -338,6 +389,7 @@
       "releaseDate": "1993-08-06",
       "serial": "T-60114",
       "rating": "",
+      "publisher": "Victor Entertainment",
       "altTitles": [
         "Keio Flying Squadron"
       ]
@@ -346,13 +398,15 @@
       "title": "Lethal Enforcers",
       "releaseDate": "1993-10-29",
       "serial": "T-95014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Konami"
     },
     {
       "title": "Lethal Enforcers II: The Western",
       "releaseDate": "1994-11-25",
       "serial": "T-95034",
       "rating": "",
+      "publisher": "Konami",
       "altTitles": [
         "Lethal Enforcers II: Gun Fighters"
       ]
@@ -361,49 +415,57 @@
       "title": "Lodoss-tou Senki: Eiyuu Sensou",
       "releaseDate": "1994-05-20",
       "serial": "G-6024",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Lunar: Eternal Blue",
       "releaseDate": "1994-12-22",
       "serial": "T-45074",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Lunar: The Silver Star",
       "releaseDate": "1992-06-26",
       "serial": "T-45014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Game Arts"
     },
     {
       "title": "Mahou no Shoujo: Silky Lip",
       "releaseDate": "1992-06-19",
       "serial": "T-49024",
-      "rating": ""
+      "rating": "",
+      "publisher": "Riot"
     },
     {
       "title": "Mega Schwarzschild",
       "releaseDate": "1993-06-25",
       "serial": "G-6020",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Microcosm",
       "releaseDate": "1994-02-25",
       "serial": "T-60164",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Might and Magic III: Isles of Terra",
       "releaseDate": "1993-11-26",
       "serial": "T-68024",
-      "rating": ""
+      "rating": "",
+      "publisher": "CRI"
     },
     {
       "title": "Monkey Island: Yuurei Kaizoku Daisoudou!",
       "releaseDate": "1993-09-23",
       "serial": "T-60044",
       "rating": "",
+      "publisher": "Victor Entertainment",
       "altTitles": [
         "The Secret of Monkey Island"
       ]
@@ -412,91 +474,106 @@
       "title": "Mortal Kombat",
       "releaseDate": "1994-06-03",
       "serial": "T-81014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "NBA Jam",
       "releaseDate": "1994-12-20",
       "serial": "T-81034",
-      "rating": ""
+      "rating": "",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "Night Striker",
       "releaseDate": "1993-05-28",
       "serial": "T-11014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Taito"
     },
     {
       "title": "Night Trap",
       "releaseDate": "1993-11-19",
       "serial": "G-6025",
-      "rating": ""
+      "rating": "",
+      "publisher": "Digital Pictures"
     },
     {
       "title": "Nobunaga no Yabou: Haouden",
       "releaseDate": "1994-03-25",
       "serial": "T-76024",
-      "rating": ""
+      "rating": "",
+      "publisher": "Koei"
     },
     {
       "title": "Nostalgia 1907",
       "releaseDate": "1991-12-14",
       "serial": "T-77014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sur Dé Wave"
     },
     {
       "title": "Popful Mail",
       "releaseDate": "1994-04-01",
       "serial": "G-6029",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Prince of Persia (Mega-CD)",
       "releaseDate": "1992-08-07",
       "serial": "T-60014",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Prize Fighter",
       "releaseDate": "1995-03-24",
       "serial": "G-6037",
-      "rating": "All ages"
+      "rating": "All ages",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Pro Yakyuu Super League CD",
       "releaseDate": "1992-10-30",
       "serial": "G-6010",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Psychic Detective Series Vol. 3: AÝA",
       "releaseDate": "1993-01-03",
       "serial": "T-84024",
-      "rating": ""
+      "rating": "",
+      "publisher": "Data West"
     },
     {
       "title": "Psychic Detective Series Vol. 4: Orgel",
       "releaseDate": "1993-12-10",
       "serial": "T-84034",
-      "rating": ""
+      "rating": "",
+      "publisher": "Data West"
     },
     {
       "title": "Quiz Scramble Special",
       "releaseDate": "1992-05-29",
       "serial": "G-6003",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Ranma ½: Byakuran Aika",
       "releaseDate": "1993-04-23",
       "serial": "T-25014",
-      "rating": ""
+      "rating": "",
+      "publisher": "Masaya"
     },
     {
       "title": "Rise of the Dragon: A Blade Hunter Mystery",
       "releaseDate": "1992-09-25",
       "serial": "G-6002",
       "rating": "",
+      "publisher": "",
       "altTitles": [
         "Rise of the Dragon"
       ]
@@ -506,6 +583,7 @@
       "releaseDate": "1992-12-18",
       "serial": "T-32124",
       "rating": "",
+      "publisher": "Wolf Team",
       "altTitles": [
         "Road Avenger",
         "Road Blaster FX"
@@ -516,6 +594,7 @@
       "releaseDate": "1993-04-23",
       "serial": "T-76014",
       "rating": "",
+      "publisher": "Koei",
       "altTitles": [
         "Romance of the Three Kingdoms III: Dragon of Destiny"
       ]
@@ -524,31 +603,36 @@
       "title": "Sega Classics Arcade Collection",
       "releaseDate": "1993-04-23",
       "serial": "G-6012",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Seima Densetsu 3x3 Eyes",
       "releaseDate": "1993-07-23",
       "serial": "G-6007",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Seirei Shinseiki Fhey Area",
       "releaseDate": "1992-02-18",
       "serial": "T-32034",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Sengoku Denshou",
       "releaseDate": "1993-12-28",
       "serial": "T-24034",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sammy"
     },
     {
       "title": "Shadow of the Beast II: Jyushin no Jubaku",
       "releaseDate": "1994-07-29",
       "serial": "T-60034",
       "rating": "",
+      "publisher": "Victor Entertainment",
       "altTitles": [
         "Shadow of the Beast II"
       ]
@@ -557,73 +641,85 @@
       "title": "Shadowrun (Mega-CD)",
       "releaseDate": "1996-02-23",
       "serial": "T-66024",
-      "rating": ""
+      "rating": "",
+      "publisher": "Compile"
     },
     {
       "title": "Shin Megami Tensei",
       "releaseDate": "1994-02-25",
       "serial": "T-44044",
-      "rating": ""
+      "rating": "",
+      "publisher": "SIMS"
     },
     {
       "title": "Shining Force CD",
       "releaseDate": "1994-07-22",
       "serial": "G-6036",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd.Category :Live link reference"
     },
     {
       "title": "Silpheed",
       "releaseDate": "1993-07-30",
       "serial": "T-45054",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "SimEarth",
       "releaseDate": "1993-03-12",
       "serial": "G-6008",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Sol-Feace",
       "releaseDate": "1991-12-12",
       "serial": "T-32024",
-      "rating": ""
+      "rating": "",
+      "publisher": "Wolf Team"
     },
     {
       "title": "Sonic the Hedgehog CD",
       "releaseDate": "1993-09-23",
       "serial": "G-6021",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Entertainment Inc."
     },
     {
       "title": "Soul Star",
       "releaseDate": "1994-12-22",
       "serial": "T-60184",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Star Wars: Rebel Assault",
       "releaseDate": "1994-09-22",
       "serial": "T-60174",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "StarBlade",
       "releaseDate": "1994-10-28",
       "serial": "T-14014",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Surgical Strike",
       "releaseDate": "1995-12-22",
       "serial": "G-6044",
-      "rating": "18+"
+      "rating": "18+",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Switch",
       "releaseDate": "1993-04-23",
       "serial": "G-6009",
       "rating": "",
+      "publisher": "Sega Corporation (2000-2015)",
       "altTitles": [
         "Panic!"
       ]
@@ -632,19 +728,22 @@
       "title": "Tenbu Mega CD Special",
       "releaseDate": "1992-12-25",
       "serial": "T-32084",
-      "rating": ""
+      "rating": "",
+      "publisher": "Wolf Team"
     },
     {
       "title": "Tenka Fubu: Eiyuutachi no Houkou",
       "releaseDate": "1991-12-28",
       "serial": "T-45024",
-      "rating": ""
+      "rating": "",
+      "publisher": "Game Arts"
     },
     {
       "title": "The IIIrd World War",
       "releaseDate": "1993-11-26",
       "serial": "T-22034",
       "rating": "",
+      "publisher": "",
       "altTitles": [
         "The Third World War"
       ]
@@ -653,13 +752,15 @@
       "title": "The Ninja Warriors",
       "releaseDate": "1993-03-12",
       "serial": "T-11024",
-      "rating": ""
+      "rating": "",
+      "publisher": "Taito"
     },
     {
       "title": "Thunder Storm FX",
       "releaseDate": "1992-08-28",
       "serial": "T-32064",
       "rating": "",
+      "publisher": "Wolf Team",
       "altTitles": [
         "Cobra Command"
       ]
@@ -668,31 +769,36 @@
       "title": "Thunderhawk",
       "releaseDate": "1993-09-17",
       "serial": "T-60134",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Time Gal",
       "releaseDate": "1992-11-13",
       "serial": "T-32114",
-      "rating": ""
+      "rating": "",
+      "publisher": "Wolf Team"
     },
     {
       "title": "Tomcat Alley",
       "releaseDate": "1994-12-22",
       "serial": "G-6039",
-      "rating": "All ages"
+      "rating": "All ages",
+      "publisher": "Sega PC"
     },
     {
       "title": "Urusei Yatsura: Dear My Friends",
       "releaseDate": "1994-04-15",
       "serial": "T-45064",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Vay: Ryuusei no Yoroi",
       "releaseDate": "1993-10-22",
       "serial": "T-44014",
       "rating": "",
+      "publisher": "",
       "altTitles": [
         "Vay"
       ]
@@ -701,49 +807,57 @@
       "title": "Wakusei Woodstock: Funky Horror Band",
       "releaseDate": "1991-12-20",
       "serial": "G-6001",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Warau Salesman",
       "releaseDate": "1993-09-17",
       "serial": "G-6006",
-      "rating": ""
+      "rating": "",
+      "publisher": ""
     },
     {
       "title": "Wing Commander",
       "releaseDate": "1994-03-25",
       "serial": "G-6011",
-      "rating": ""
+      "rating": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Winning Post",
       "releaseDate": "1993-09-17",
       "serial": "T-76044",
-      "rating": ""
+      "rating": "",
+      "publisher": "Koei"
     },
     {
       "title": "Wolfchild",
       "releaseDate": "1993-03-19",
       "serial": "T-60104",
-      "rating": ""
+      "rating": "",
+      "publisher": "Victor Musical Industries"
     },
     {
       "title": "Wonder Dog",
       "releaseDate": "1992-09-25",
       "serial": "T-60074",
-      "rating": ""
+      "rating": "",
+      "publisher": "Victor Musical Industries"
     },
     {
       "title": "Wondermega Collection",
       "releaseDate": "1992-04-01",
       "serial": "CDS-135",
-      "rating": ""
+      "rating": "",
+      "publisher": "Victor Musical Industries"
     },
     {
       "title": "WWF Mania Tour",
       "releaseDate": "1994-06-24",
       "serial": "T-81024",
       "rating": "",
+      "publisher": "",
       "altTitles": [
         "WWF Rage in the Cage"
       ]
@@ -753,6 +867,7 @@
       "releaseDate": "1993-12-10",
       "serial": "G-6027",
       "rating": "",
+      "publisher": "",
       "altTitles": [
         "Yumemi Mystery Mansion"
       ]
@@ -761,7 +876,8 @@
       "title": "Yumimi Mix",
       "releaseDate": "1993-01-29",
       "serial": "T-45034",
-      "rating": ""
+      "rating": "",
+      "publisher": "Game Arts"
     }
   ]
 }

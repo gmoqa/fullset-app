@@ -33,7 +33,9 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 | `serial` | **libretro-database** DAT (`metadat/serial/…`, CC BY-SA 4.0) | match por título/región; no todas las plataformas tienen DAT |
 | `serial` (SNES, huecos) | **[SNES Central](https://snescentral.com)** | tabla "Cartridge label information", fila Americas/USA; consulta puntual respetando su `Crawl-delay: 10` |
 | `coverUrl` | **libretro-thumbnails** (`Named_Boxarts/`) | match por título, región más cercana a NTSC-U, evitando Beta/Proto |
-| `genre` / `condition` | manual / catálogo | se completa a mano o desde el catálogo oficial |
+| `publisher` / `genre` | **libretro-database** (`metadat/publisher/`, `metadat/genre/`, CC BY-SA 4.0) | `tools/enrich_meta_libretro.py`, prefiriendo la etiqueta de región del DAT |
+| `publisher` (consolas de disco) | **Sega Retro**, tabla `companies` | rol `Publisher(US/JP/EU)` según la región, con respaldo al `Publisher` genérico |
+| `condition` | manual | lo carga el usuario desde la app |
 
 ### Estado por catálogo (auditado 2026-07-29)
 
@@ -65,6 +67,12 @@ number y rating salen todos de ahí; la carátula de libretro-thumbnails prefiri
 | `dreamcast-usa.json` | 248 | 100/93/99 | 93% |
 | `dreamcast-jp.json` | 545 | 99/94/77 | 91% |
 | `dreamcast-eu.json` | 224 | 97/97/94 | 96% |
+
+**Editora y género** salen de `metadat/publisher/` y `metadat/genre/` de libretro-database para las
+consolas de cartucho, y de la tabla `companies` de Sega Retro para las de disco (Saturn, Sega CD,
+Dreamcast), que libretro no cubre. Ambas fuentes distinguen región: la editora cambia según el
+mercado, y en Sega Retro el rol viene etiquetado (`Publisher(US)`, `Publisher(JP)`, `Publisher(EU)`).
+Era el hueco más viejo del dataset — los catálogos Sega tenían editora en **0%**.
 
 Dos cosas que sorprenden y son correctas: **Master System PAL (363) triplica al americano (114)** —
 en Europa y Brasil fue *la* consola de Sega, no el Genesis; y **Saturn JP (1091) cuadruplica al
