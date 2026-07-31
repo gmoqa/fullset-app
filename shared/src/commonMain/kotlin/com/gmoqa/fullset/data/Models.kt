@@ -96,16 +96,19 @@ data class WishlistItem(
 /**
  * Cómo se ordenan los juegos dentro de cada estante (Collection y Backlog agrupan por consola).
  *
- * [ADDED] era el único orden hasta ahora: el más reciente primero, que sirve para ver lo último que
- * cargaste pero no para encontrar un juego. [TITLE] y [RELEASE] son para recorrer la colección.
+ * El **default es [RELEASE]**, del más antiguo al más nuevo: leer un estante de izquierda a derecha
+ * recorre la historia de esa consola, que es como uno mira una colección. [ADDED] (el orden viejo,
+ * lo último cargado primero) queda como opción para ver las altas recientes.
  */
 enum class SortOrder(val key: String, val label: String) {
-    ADDED("added", "Recently added"),
+    RELEASE("release", "Release date"),
     TITLE("title", "Title (A–Z)"),
-    RELEASE("release", "Release date");
+    ADDED("added", "Recently added");
 
     companion object {
-        fun fromKey(key: String?): SortOrder = entries.firstOrNull { it.key == key } ?: ADDED
+        val DEFAULT = RELEASE
+
+        fun fromKey(key: String?): SortOrder = entries.firstOrNull { it.key == key } ?: DEFAULT
     }
 }
 

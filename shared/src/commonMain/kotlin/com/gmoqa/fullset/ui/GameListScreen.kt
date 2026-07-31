@@ -60,7 +60,7 @@ fun GameListScreen(
     onOpenGame: (Long) -> Unit,
     onAddGame: (() -> Unit)?,
     subtitle: String? = null,
-    sortOrder: SortOrder = SortOrder.ADDED,
+    sortOrder: SortOrder = SortOrder.DEFAULT,
     onSortChange: ((SortOrder) -> Unit)? = null,
 ) {
     Scaffold(
@@ -117,7 +117,7 @@ fun GameShelves(
     /** Mostrar la franja con el nombre de cada consola (Collection lo hace opcional desde Settings). */
     showPlatformTitles: Boolean = true,
     /** Orden de los juegos **dentro de cada estante**; la agrupación por consola no cambia. */
-    sortOrder: SortOrder = SortOrder.ADDED,
+    sortOrder: SortOrder = SortOrder.DEFAULT,
 ) {
     val shelves = remember(games, sortOrder) {
         games.groupBy { it.platform }.mapValues { (_, list) -> list.sortedBy(sortOrder) }

@@ -60,7 +60,7 @@ fun LibraryScreen(
     onFocusConsumed: () -> Unit = {},
     onOpenPlatform: (String) -> Unit = {},
     showLabels: Boolean = true,
-    sortOrder: SortOrder = SortOrder.ADDED,
+    sortOrder: SortOrder = SortOrder.DEFAULT,
     onSortChange: (SortOrder) -> Unit = {},
     showConsoleTitles: Boolean = true,
 ) {

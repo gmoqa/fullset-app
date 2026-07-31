@@ -32,7 +32,7 @@ fun SortMenu(current: SortOrder, onSelect: (SortOrder) -> Unit, modifier: Modifi
                 Icons.AutoMirrored.Filled.Sort,
                 contentDescription = "Sort: ${current.label}",
                 // Resaltado cuando NO es el orden por defecto, para que se note que hay uno activo.
-                tint = if (current == SortOrder.ADDED) MaterialTheme.colorScheme.onSurfaceVariant
+                tint = if (current == SortOrder.DEFAULT) MaterialTheme.colorScheme.onSurfaceVariant
                 else MaterialTheme.colorScheme.primary,
             )
         }

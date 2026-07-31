@@ -99,7 +99,23 @@ class SortOrderTest {
     @Test
     fun laPreferenciaSobreviveIdaYVuelta() {
         SortOrder.entries.forEach { assertEquals(it, SortOrder.fromKey(it.key)) }
-        assertEquals(SortOrder.ADDED, SortOrder.fromKey(null), "sin preferencia guardada")
-        assertEquals(SortOrder.ADDED, SortOrder.fromKey("basura"))
+        // Sin preferencia guardada manda el default: por lanzamiento, del más antiguo al más nuevo.
+        assertEquals(SortOrder.RELEASE, SortOrder.DEFAULT)
+        assertEquals(SortOrder.DEFAULT, SortOrder.fromKey(null), "sin preferencia guardada")
+        assertEquals(SortOrder.DEFAULT, SortOrder.fromKey("basura"))
+    }
+
+    @Test
+    fun elDefaultEsCronologicoAscendente() {
+        // Leer un estante de principio a fin recorre la historia de esa consola.
+        val games = listOf(
+            game("Sonic 2", releaseDate = "1992-11-21"),
+            game("Altered Beast", releaseDate = "1989-08-14"),
+            game("Gunstar Heroes", releaseDate = "1993-09-09"),
+        )
+        assertEquals(
+            listOf("Altered Beast", "Sonic 2", "Gunstar Heroes"),
+            games.sortedBy(SortOrder.DEFAULT).map { it.name },
+        )
     }
 }
