@@ -27,6 +27,8 @@ data class Game(
     val digital: Boolean = false,
     /** Primera vez que lo jugaste: ISO de precisión variable ("1994" | "1994-06" | "1994-06-08"). */
     val firstPlayed: String = "",
+    /** Lanzamiento con la precisión del catálogo, mismo formato ISO variable. Vacío → solo [releaseYear]. */
+    val releaseDate: String = "",
     val noteCount: Int = 0,
     val photoCount: Int = 0,
 ) {
@@ -90,6 +92,42 @@ data class WishlistItem(
     val coverUrl: String,
     val addedAt: Long,
 )
+
+/**
+ * Cómo se ordenan los juegos dentro de cada estante (Collection y Backlog agrupan por consola).
+ *
+ * [ADDED] era el único orden hasta ahora: el más reciente primero, que sirve para ver lo último que
+ * cargaste pero no para encontrar un juego. [TITLE] y [RELEASE] son para recorrer la colección.
+ */
+enum class SortOrder(val key: String, val label: String) {
+    ADDED("added", "Recently added"),
+    TITLE("title", "Title (A–Z)"),
+    RELEASE("release", "Release date");
+
+    companion object {
+        fun fromKey(key: String?): SortOrder = entries.firstOrNull { it.key == key } ?: ADDED
+    }
+}
+
+/**
+ * Ordena una lista de juegos. El orden por lanzamiento usa [Game.releaseDate] (ISO de precisión
+ * variable) y cae a [Game.releaseYear] cuando no hay fecha fina; los que no tienen ninguno van al
+ * final, porque un juego sin fecha no debería encabezar una lista cronológica. A igual fecha
+ * desempata el título, para que el orden sea estable entre recomposiciones.
+ */
+fun List<Game>.sortedBy(order: SortOrder): List<Game> = when (order) {
+    SortOrder.ADDED -> sortedByDescending { it.createdAt }
+    SortOrder.TITLE -> sortedBy { it.name.lowercase() }
+    SortOrder.RELEASE -> sortedWith(
+        compareBy<Game> { it.releaseKey.isEmpty() }
+            .thenBy { it.releaseKey }
+            .thenBy { it.name.lowercase() }
+    )
+}
+
+/** Clave de orden cronológico: la fecha más precisa que tengamos, o el año, o vacío. */
+private val Game.releaseKey: String
+    get() = releaseDate.ifBlank { releaseYear?.toString().orEmpty() }
 
 /** Modo de tema elegido por el usuario. */
 enum class ThemeMode(val key: String) {

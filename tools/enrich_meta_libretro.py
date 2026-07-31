@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Rellena `publisher` y `genre` desde **libretro-database** (CC BY-SA 4.0), que publica esos metadatos
-por plataforma en `metadat/publisher/` y `metadat/genre/`.
+Rellena `publisher`, `genre` y `releaseDate` desde **libretro-database** (CC BY-SA 4.0), que
+publica esos metadatos por plataforma en `metadat/`. La fecha viene partida en `releaseyear/` y
+`releasemonth/`; se compone al mismo ISO de precisión variable del resto ("1995" o "1995-08").
 
 Consciente de la región: las entradas del DAT vienen etiquetadas con su mercado —"Sonic (USA)",
 "Sonic (Japan)"— así que se prefiere la que corresponde al catálogo (un juego puede tener otra
@@ -82,8 +83,10 @@ def main() -> None:
     region = catalog[0]["region"] if catalog else "NTSC-U"
     publishers = parse(fetch("publisher", args.dat), "publisher")
     genres = parse(fetch("genre", args.dat), "genre")
+    years = parse(fetch("releaseyear", args.dat), "releaseyear")
+    months = parse(fetch("releasemonth", args.dat), "releasemonth")
 
-    filled_pub = filled_genre = 0
+    filled_pub = filled_genre = filled_date = 0
     for entry in catalog:
         key = core(entry["title"])
         if not entry["publisher"].strip() and key in publishers:
@@ -96,14 +99,29 @@ def main() -> None:
             if value:
                 entry["genre"] = value
                 filled_genre += 1
+        # Fecha de lanzamiento: libretro la guarda partida en año y mes. Se compone al mismo ISO de
+        # precisión variable del resto ("1995" o "1995-08"); sin día, que este DAT no trae.
+        if not entry["releaseDate"].strip() and key in years:
+            year = pick(years[key], region).strip()
+            if year.isdigit():
+                month = pick(months.get(key, []), region).strip()
+                iso = year
+                if month.isdigit() and 1 <= int(month) <= 12:
+                    iso = f"{year}-{int(month):02d}"
+                entry["releaseDate"] = iso
+                entry["year"] = int(year)
+                filled_date += 1
 
     total = len(catalog) or 1
     have_pub = sum(1 for e in catalog if e["publisher"].strip())
     have_genre = sum(1 for e in catalog if e["genre"].strip())
     name = os.path.basename(args.catalog)
-    print(f"{name}: {len(catalog)} juegos · +{filled_pub} editoras, +{filled_genre} géneros")
+    have_date = sum(1 for e in catalog if e["releaseDate"].strip())
+    print(f"{name}: {len(catalog)} juegos · +{filled_pub} editoras, +{filled_genre} géneros, "
+          f"+{filled_date} fechas")
     print(f"   editora {have_pub}/{total} ({have_pub * 100 // total}%) · "
-          f"género {have_genre}/{total} ({have_genre * 100 // total}%)")
+          f"género {have_genre}/{total} ({have_genre * 100 // total}%) · "
+          f"fecha {have_date}/{total} ({have_date * 100 // total}%)")
 
     if args.dry_run:
         print("   (dry-run: no se escribió)")

@@ -83,6 +83,7 @@ class DiaryRepository(
         serial: String,
         digital: Long,
         firstPlayed: String,
+        releaseDate: String,
         noteCount: Long,
         photoCount: Long,
     ): Game = Game(
@@ -103,6 +104,7 @@ class DiaryRepository(
         serial = serial,
         digital = digital != 0L,
         firstPlayed = firstPlayed,
+        releaseDate = releaseDate,
         noteCount = noteCount.toInt(),
         photoCount = photoCount.toInt(),
     )
@@ -164,8 +166,12 @@ class DiaryRepository(
         q.clearForeignSerials(platform, prefix1, prefix2)
 
     /** Completa desde el catálogo lo que el juego tenga vacío; nunca pisa lo cargado a mano. */
-    fun fillFromCatalog(gameId: Long, serial: String, publisher: String, genre: String, year: Int?) =
-        q.fillFromCatalog(serial.trim(), publisher.trim(), genre.trim(), year?.toLong(), gameId)
+    fun fillFromCatalog(
+        gameId: Long, serial: String, publisher: String, genre: String,
+        releaseDate: String, year: Int?,
+    ) = q.fillFromCatalog(
+        serial.trim(), publisher.trim(), genre.trim(), releaseDate.trim(), year?.toLong(), gameId,
+    )
 
     /** Borra el juego, sus notas y sus fotos (filas por CASCADE + archivos en disco). */
     fun deleteGame(id: Long) {
@@ -320,6 +326,13 @@ class DiaryRepository(
     }
 
     /** Collection: mostrar el título bajo cada carátula (se puede ocultar para una grilla más limpia). */
+    /** Orden de los juegos dentro de cada estante (Collection y Backlog). */
+    fun sortOrder(): SortOrder = SortOrder.fromKey(settings.getStringOrNull(SORT_ORDER_KEY))
+
+    fun setSortOrder(order: SortOrder) {
+        settings.putString(SORT_ORDER_KEY, order.key)
+    }
+
     fun showCollectionLabels(): Boolean = settings.getBoolean(SHOW_LABELS_KEY, true)
 
     fun setShowCollectionLabels(show: Boolean) {
@@ -353,6 +366,7 @@ class DiaryRepository(
         private const val REGION_KEY = "region_filter"
         private const val LANGUAGE_KEY = "transcription_language"
         private const val SHOW_LABELS_KEY = "collection_show_labels"
+        private const val SORT_ORDER_KEY = "list_sort_order"
         private const val SHOW_CONSOLE_TITLES_KEY = "collection_show_console_titles"
         private const val DELETE_AUDIO_KEY = "delete_audio_after_transcription"
     }

@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.dp
 import com.gmoqa.fullset.data.Game
 import com.gmoqa.fullset.data.coverModel
 import com.gmoqa.fullset.data.GameSearch
+import com.gmoqa.fullset.data.SortOrder
 
 /** La colección: estanterías de carátulas por plataforma, con buscador difuso. */
 @Composable
@@ -59,6 +60,8 @@ fun LibraryScreen(
     onFocusConsumed: () -> Unit = {},
     onOpenPlatform: (String) -> Unit = {},
     showLabels: Boolean = true,
+    sortOrder: SortOrder = SortOrder.ADDED,
+    onSortChange: (SortOrder) -> Unit = {},
     showConsoleTitles: Boolean = true,
 ) {
     // La búsqueda vive detrás de la lupa: mientras no la abrís no ocupa nada de pantalla.
@@ -90,6 +93,7 @@ fun LibraryScreen(
                 subtitle = "${games.size} games · $platformCount platforms",
                 trailing = {
                     if (games.isNotEmpty()) {
+                        SortMenu(current = sortOrder, onSelect = onSortChange)
                         IconButton(onClick = { searchOpen = true }) {
                             Icon(Icons.Filled.Search, contentDescription = "Search collection")
                         }
@@ -150,6 +154,7 @@ fun LibraryScreen(
                 bleedHeaderIcon = true,
                 showGameLabels = showLabels,
                 showPlatformTitles = showConsoleTitles,
+                sortOrder = sortOrder,
             )
         }
     }

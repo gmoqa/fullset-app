@@ -42,6 +42,7 @@ import com.gmoqa.fullset.data.GameCatalog
 import com.gmoqa.fullset.data.Platform
 import com.gmoqa.fullset.data.PlatformRegistry
 import com.gmoqa.fullset.data.RegionFilter
+import com.gmoqa.fullset.data.SortOrder
 import com.gmoqa.fullset.data.ThemeMode
 import com.gmoqa.fullset.resources.Res
 import com.gmoqa.fullset.resources.ic_eye_search
@@ -79,6 +80,7 @@ fun App(vm: DiaryViewModel, isDebug: Boolean = false) {
     var region by remember { mutableStateOf(vm.regionFilter()) }
     var showLabels by remember { mutableStateOf(vm.showCollectionLabels()) }
     var showConsoleTitles by remember { mutableStateOf(vm.showConsoleTitles()) }
+    var sortOrder by remember { mutableStateOf(vm.sortOrder()) }
     val darkTheme = when (themeMode) {
         ThemeMode.LIGHT -> false
         ThemeMode.DARK -> true
@@ -109,6 +111,8 @@ fun App(vm: DiaryViewModel, isDebug: Boolean = false) {
                     onShowLabelsChange = { showLabels = it; vm.setShowCollectionLabels(it) },
                     showConsoleTitles = showConsoleTitles,
                     onShowConsoleTitlesChange = { showConsoleTitles = it; vm.setShowConsoleTitles(it) },
+                    sortOrder = sortOrder,
+                    onSortChange = { sortOrder = it; vm.setSortOrder(it) },
                     isDebug = isDebug,
                 )
             }
@@ -129,6 +133,8 @@ private fun AppRoot(
     onShowLabelsChange: (Boolean) -> Unit,
     showConsoleTitles: Boolean,
     onShowConsoleTitlesChange: (Boolean) -> Unit,
+    sortOrder: SortOrder,
+    onSortChange: (SortOrder) -> Unit,
     isDebug: Boolean,
 ) {
     var tab by rememberSaveable { mutableStateOf(0) }
@@ -297,6 +303,8 @@ private fun AppRoot(
                 onShowLabelsChange = onShowLabelsChange,
                 showConsoleTitles = showConsoleTitles,
                 onShowConsoleTitlesChange = onShowConsoleTitlesChange,
+                sortOrder = sortOrder,
+                onSortChange = onSortChange,
                 onOpenGame = { open(Screen.Detail(it)) },
                 onOpenPlatform = { open(Screen.Platform(it)) },
                 onAddLibrary = { open(Screen.Add(AddTarget.LIBRARY)) },
@@ -346,6 +354,8 @@ private fun HomeContent(
     onShowLabelsChange: (Boolean) -> Unit,
     showConsoleTitles: Boolean,
     onShowConsoleTitlesChange: (Boolean) -> Unit,
+    sortOrder: SortOrder,
+    onSortChange: (SortOrder) -> Unit,
     onOpenGame: (Long) -> Unit,
     onOpenPlatform: (String) -> Unit,
     onAddLibrary: () -> Unit,
@@ -415,6 +425,8 @@ private fun HomeContent(
                     // Opciones de vista (Settings → Collection): ocultar labels y/o franjas de consola.
                     showLabels = showLabels,
                     showConsoleTitles = showConsoleTitles,
+                    sortOrder = sortOrder,
+                    onSortChange = onSortChange,
                 )
                 1 -> GameListScreen(
                     title = "Backlog",
@@ -425,6 +437,8 @@ private fun HomeContent(
                     emptySubtitle = "Mark games as backlog from their details.",
                     onOpenGame = onOpenGame,
                     onAddGame = null,
+                    sortOrder = sortOrder,
+                    onSortChange = onSortChange,
                 )
                 2 -> PlayingScreen(
                     games = games.filter { it.playing },

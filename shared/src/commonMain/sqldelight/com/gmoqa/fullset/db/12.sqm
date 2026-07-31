@@ -1,0 +1,5 @@
+-- Migración v12 -> v13. Fecha de lanzamiento con la precisión que tenga el catálogo, en el mismo
+-- formato ISO variable que usa `first_played`: '' | '1992' | '1992-11' | '1992-11-21'.
+-- `release_year` se mantiene (lo usan las vistas y el orden cuando no hay fecha fina); esta columna
+-- permite ordenar bien dentro de un mismo año y mostrar "Nov 1992" en vez de solo "1992".
+ALTER TABLE games ADD COLUMN release_date TEXT NOT NULL DEFAULT '';

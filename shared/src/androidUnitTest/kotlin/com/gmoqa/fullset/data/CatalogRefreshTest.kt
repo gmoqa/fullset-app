@@ -23,7 +23,7 @@ class CatalogRefreshTest {
         val repo = repo()
         val id = repo.addGame(name = "Sonic the Hedgehog", platform = "Sega Genesis", slug = "sonic-the-hedgehog")
 
-        repo.fillFromCatalog(id, serial = "1001", publisher = "Sega", genre = "Platform", year = 1991)
+        repo.fillFromCatalog(id, serial = "1001", publisher = "Sega", genre = "Platform", releaseDate = "", year = 1991)
 
         val game = repo.games().single()
         assertEquals("1001", game.serial)
@@ -40,7 +40,7 @@ class CatalogRefreshTest {
             releaseYear = 1992, genre = "Mi género", publisher = "Mi editora", serial = "MI-SERIAL",
         )
 
-        repo.fillFromCatalog(id, serial = "1001", publisher = "Sega", genre = "Platform", year = 1991)
+        repo.fillFromCatalog(id, serial = "1001", publisher = "Sega", genre = "Platform", releaseDate = "", year = 1991)
 
         val game = repo.games().single()
         assertEquals("MI-SERIAL", game.serial)
@@ -58,7 +58,7 @@ class CatalogRefreshTest {
             releaseYear = 1993, publisher = "Sega",
         )
 
-        repo.fillFromCatalog(id, serial = "4408", publisher = "Otra", genre = "Action", year = 1900)
+        repo.fillFromCatalog(id, serial = "4408", publisher = "Otra", genre = "Action", releaseDate = "", year = 1900)
 
         val game = repo.games().single()
         assertEquals("4408", game.serial)       // estaba vacío → se completa
@@ -76,7 +76,7 @@ class CatalogRefreshTest {
         )
 
         // El catálogo no siempre trae todo (la editora está al 0% en los catálogos Sega).
-        repo.fillFromCatalog(id, serial = "", publisher = "", genre = "", year = null)
+        repo.fillFromCatalog(id, serial = "", publisher = "", genre = "", releaseDate = "", year = null)
 
         val game = repo.games().single()
         assertEquals("4407", game.serial)
@@ -118,5 +118,31 @@ class CatalogRefreshTest {
         val bySerial = repo.games().associate { it.id to it.serial }
         assertEquals("SNS-ALVE-USA", bySerial[stale], "el valor viejo se corrige")
         assertEquals("LO QUE DICE MI CARTUCHO", bySerial[edited], "tu edición manda")
+    }
+
+    @Test
+    fun completaLaFechaDeLanzamientoPrecisa() {
+        val repo = repo()
+        // Los juegos ya cargados solo tenían el año; la fecha fina llega del catálogo.
+        val id = repo.addGame(name = "Sonic 2", platform = "Sega Genesis", slug = "sonic-2",
+            releaseYear = 1992)
+
+        repo.fillFromCatalog(id, serial = "", publisher = "", genre = "",
+            releaseDate = "1992-11-21", year = 1992)
+
+        assertEquals("1992-11-21", repo.games().single().releaseDate)
+    }
+
+    @Test
+    fun noPisaUnaFechaDeLanzamientoYaCargada() {
+        val repo = repo()
+        val id = repo.addGame(name = "Sonic 2", platform = "Sega Genesis", slug = "sonic-2")
+        repo.fillFromCatalog(id, serial = "", publisher = "", genre = "",
+            releaseDate = "1992-11-21", year = null)
+
+        repo.fillFromCatalog(id, serial = "", publisher = "", genre = "",
+            releaseDate = "1900-01-01", year = null)
+
+        assertEquals("1992-11-21", repo.games().single().releaseDate)
     }
 }

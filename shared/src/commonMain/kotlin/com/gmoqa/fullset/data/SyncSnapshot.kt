@@ -36,6 +36,8 @@ data class GameSync(
     val digital: Boolean = false,
     /** Primera vez jugado (ISO de precisión variable); "" = sin dato. */
     val firstPlayed: String = "",
+    /** Lanzamiento con precisión de mes/día cuando el catálogo la tiene. */
+    val releaseDate: String = "",
     val playing: Boolean = false,
     val backlog: Boolean = false,
     val coverUrl: String = "",
@@ -84,7 +86,7 @@ fun DiaryRepository.exportSnapshot(): SyncSnapshot {
             name = g.name, platform = g.platform, slug = g.slug, region = g.region,
             year = g.releaseYear, genre = g.genre, condition = g.condition,
             publisher = g.publisher, serial = g.serial, digital = g.digital,
-            firstPlayed = g.firstPlayed,
+            firstPlayed = g.firstPlayed, releaseDate = g.releaseDate,
             playing = g.playing, backlog = g.backlog, coverUrl = g.coverUrl, createdAt = g.createdAt,
             notes = notes(g.id).filter { it.text.isNotBlank() }
                 .map { NoteSync(it.text, it.createdAt, it.durationMs) },

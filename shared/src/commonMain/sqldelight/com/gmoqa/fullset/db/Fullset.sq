@@ -22,7 +22,10 @@ CREATE TABLE games (
     digital INTEGER NOT NULL DEFAULT 0,
     -- Primera vez que lo jugaste: ISO de precisión variable ('1994' | '1994-06' | '1994-06-08').
     -- '' = sin dato. Ver 11.sqm.
-    first_played TEXT NOT NULL DEFAULT ''
+    first_played TEXT NOT NULL DEFAULT '',
+    -- Lanzamiento con la precisión que tenga el catálogo, mismo formato ISO variable. Permite
+    -- ordenar bien dentro de un mismo año y mostrar "Nov 1992" en vez de solo "1992". Ver 12.sqm.
+    release_date TEXT NOT NULL DEFAULT ''
 );
 
 CREATE TABLE notes (
@@ -64,7 +67,7 @@ CREATE INDEX idx_photos_game ON photos(game_id);
 selectAllGames:
 SELECT g.id, g.name, g.platform, g.cover_url, g.cover_path, g.playing, g.backlog, g.created_at,
     g.region, g.release_year, g.genre, g.condition, g.slug, g.publisher, g.serial, g.digital,
-    g.first_played,
+    g.first_played, g.release_date,
     (SELECT COUNT(*) FROM notes n WHERE n.game_id = g.id) AS note_count,
     (SELECT COUNT(*) FROM photos p WHERE p.game_id = g.id) AS photo_count
 FROM games g
@@ -73,7 +76,7 @@ ORDER BY g.created_at DESC;
 selectGameById:
 SELECT g.id, g.name, g.platform, g.cover_url, g.cover_path, g.playing, g.backlog, g.created_at,
     g.region, g.release_year, g.genre, g.condition, g.slug, g.publisher, g.serial, g.digital,
-    g.first_played,
+    g.first_played, g.release_date,
     (SELECT COUNT(*) FROM notes n WHERE n.game_id = g.id) AS note_count,
     (SELECT COUNT(*) FROM photos p WHERE p.game_id = g.id) AS photo_count
 FROM games g
@@ -127,6 +130,7 @@ UPDATE games SET
     serial = CASE WHEN trim(serial) = '' THEN :serial ELSE serial END,
     publisher = CASE WHEN trim(publisher) = '' THEN :publisher ELSE publisher END,
     genre = CASE WHEN trim(genre) = '' THEN :genre ELSE genre END,
+    release_date = CASE WHEN trim(release_date) = '' THEN :releaseDate ELSE release_date END,
     release_year = COALESCE(release_year, :year)
 WHERE id = :id;
 

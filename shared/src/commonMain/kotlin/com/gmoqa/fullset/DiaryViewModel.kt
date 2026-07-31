@@ -18,6 +18,7 @@ import com.gmoqa.fullset.data.PlatformImage
 import com.gmoqa.fullset.data.RegionFilter
 import com.gmoqa.fullset.data.SteamGridDb
 import com.gmoqa.fullset.data.SteamGridGame
+import com.gmoqa.fullset.data.SortOrder
 import com.gmoqa.fullset.data.ThemeMode
 import com.gmoqa.fullset.data.Transcriber
 import com.gmoqa.fullset.data.TranscriptionLanguage
@@ -334,6 +335,8 @@ class DiaryViewModel(
     fun setThemeMode(mode: ThemeMode) = repo.setThemeMode(mode)
     fun regionFilter(): RegionFilter = repo.regionFilter()
     fun setRegionFilter(region: RegionFilter) = repo.setRegionFilter(region)
+    fun sortOrder(): SortOrder = repo.sortOrder()
+    fun setSortOrder(order: SortOrder) = repo.setSortOrder(order)
     fun showCollectionLabels(): Boolean = repo.showCollectionLabels()
     fun setShowCollectionLabels(show: Boolean) = repo.setShowCollectionLabels(show)
     fun showConsoleTitles(): Boolean = repo.showConsoleTitles()

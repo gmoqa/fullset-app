@@ -45,6 +45,8 @@ import coil3.compose.SubcomposeAsyncImage
 import coil3.compose.SubcomposeAsyncImageContent
 import com.gmoqa.fullset.data.Condition
 import com.gmoqa.fullset.data.Game
+import com.gmoqa.fullset.data.SortOrder
+import com.gmoqa.fullset.data.sortedBy
 import com.gmoqa.fullset.data.coverModel
 import kotlinx.coroutines.delay
 
@@ -58,6 +60,8 @@ fun GameListScreen(
     onOpenGame: (Long) -> Unit,
     onAddGame: (() -> Unit)?,
     subtitle: String? = null,
+    sortOrder: SortOrder = SortOrder.ADDED,
+    onSortChange: ((SortOrder) -> Unit)? = null,
 ) {
     Scaffold(
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
@@ -70,7 +74,13 @@ fun GameListScreen(
         },
     ) { _ ->
         Column(modifier = Modifier.fillMaxSize()) {
-            ScreenHeader(title = title, subtitle = subtitle)
+            ScreenHeader(
+                title = title,
+                subtitle = subtitle,
+                trailing = if (onSortChange != null && games.isNotEmpty()) {
+                    { SortMenu(current = sortOrder, onSelect = onSortChange) }
+                } else null,
+            )
             if (games.isEmpty()) {
                 EmptyState(
                     modifier = Modifier.fillMaxSize(),
@@ -106,8 +116,12 @@ fun GameShelves(
     showGameLabels: Boolean = true,
     /** Mostrar la franja con el nombre de cada consola (Collection lo hace opcional desde Settings). */
     showPlatformTitles: Boolean = true,
+    /** Orden de los juegos **dentro de cada estante**; la agrupación por consola no cambia. */
+    sortOrder: SortOrder = SortOrder.ADDED,
 ) {
-    val shelves = games.groupBy { it.platform }
+    val shelves = remember(games, sortOrder) {
+        games.groupBy { it.platform }.mapValues { (_, list) -> list.sortedBy(sortOrder) }
+    }
     // En teléfonos angostos achicamos el tile: con 140dp apenas entraban dos carátulas y media.
     val tileWidth = if (isCompactWidth()) 120.dp else 140.dp
     val columnState = rememberLazyListState()
