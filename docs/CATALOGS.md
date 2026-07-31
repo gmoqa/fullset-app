@@ -30,7 +30,8 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 | Campo | Fuente | Cómo |
 |---|---|---|
 | `title` / `year` / `publisher` | **Wikipedia** "List of \<consola\> games", columna **North America** | scrape del wikitext (`catalog_common.py`), filtrando lanzamientos NA = NTSC-U |
-| `serial` | **libretro-database** DAT (`metadat/serial/…`) | match por título/región; no todas las plataformas tienen DAT |
+| `serial` | **libretro-database** DAT (`metadat/serial/…`, CC BY-SA 4.0) | match por título/región; no todas las plataformas tienen DAT |
+| `serial` (SNES, huecos) | **[SNES Central](https://snescentral.com)** | tabla "Cartridge label information", fila Americas/USA; consulta puntual respetando su `Crawl-delay: 10` |
 | `coverUrl` | **libretro-thumbnails** (`Named_Boxarts/`) | match por título, región más cercana a NTSC-U, evitando Beta/Proto |
 | `genre` / `condition` | manual / catálogo | se completa a mano o desde el catálogo oficial |
 
@@ -81,7 +82,7 @@ de Sega: 全年齢 (todas las edades), 18禁 y la marca X. En EE.UU., VRC hasta 
 | Catálogo | Builder | Fuente títulos | Serial | año/ed/serial/cover |
 |---|---|---|---|---|
 | `nes-usa.json` | `build_nes_catalog.py` | Wikipedia NES (col 5) | libretro DAT | 100/100/93/95 |
-| `snes-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | libretro DAT (con 12 fixes) | 100/100/93/92 |
+| `snes-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | libretro DAT + **SNES Central** | 100/100/**98**/92 |
 | `n64-usa.json` | `build_n64_catalog.py` | Wikipedia N64 (col 5) | libretro DAT | 100/100/96/100 |
 | `psx-usa.json` | `build_psx_catalog.py` | Wikipedia PS (A–L / M–Z) | sin DAT | 100/100/0/87 |
 
@@ -156,6 +157,16 @@ lista NTSC-U eso no identifica la copia que tenés, así que se verificó cada u
 `(USA)` de libretro-database: seis se corrigieron y **seis quedaron vacíos** porque libretro no tiene
 la entrada estadounidense. Un dato equivocado es peor que ninguno. Ver `tools/overrides/snes-usa.json`,
 donde cada corrección dice de dónde salió.
+
+Los que libretro no cubría se cerraron con **[SNES Central](https://snescentral.com)** (Evan G.), que
+publica la etiqueta del cartucho por región. Se consultaron **solo las fichas de los títulos que
+faltaban**, respetando el `Crawl-delay: 10` de su robots.txt — no se replicó el sitio ni se copiaron
+sus textos o escaneos: lo que se toma es el código impreso en el cartucho, un hecho, y se integra a
+nuestra lista con la fuente anotada juego por juego. La cobertura de serial pasó de 93% a **98%**.
+
+Eso además destapó **cinco pares de juegos que compartían catalog number** por el match difuso del
+generador legacy (Brawl Brothers con Rival Turf!, The Lost Vikings con su secuela, Star Fox con el
+cartucho de competencia Super Weekend…). Resueltos contra la ficha de cada uno.
 
 ## Región (multi-región: implementado)
 

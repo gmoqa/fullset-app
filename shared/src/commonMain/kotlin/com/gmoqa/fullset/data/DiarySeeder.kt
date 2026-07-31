@@ -146,7 +146,7 @@ class DiarySeeder(
         private const val COVER_FIX_FLAG = "cover_fix_genesis_v1"
         private const val SNES_SERIAL_FIX_FLAG = "snes_foreign_serial_fix_v1"
         /** Subir la versión cuando los catálogos mejoren, para volver a completar huecos. */
-        private const val CATALOG_REFRESH_FLAG = "catalog_refresh_v3"
+        private const val CATALOG_REFRESH_FLAG = "catalog_refresh_v4"
         private const val GENESIS_BOXART =
             "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Mega_Drive_-_Genesis/master/Named_Boxarts/"
     }
