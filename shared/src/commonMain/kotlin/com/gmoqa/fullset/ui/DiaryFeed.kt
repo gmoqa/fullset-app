@@ -183,7 +183,9 @@ private fun VoiceEntryBody(
 internal fun DiaryComposer(
     onWrite: () -> Unit,
     onRecord: () -> Unit,
-    onPhoto: () -> Unit,
+    onTakePhoto: () -> Unit,
+    onPickPhoto: () -> Unit,
+    cameraAvailable: Boolean,
     modifier: Modifier = Modifier,
 ) {
     Surface(
@@ -214,7 +216,13 @@ internal fun DiaryComposer(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-            ComposerAction(Icons.Filled.AddPhotoAlternate, "Add photo", onPhoto)
+            PhotoSourceButton(
+                icon = Icons.Filled.AddPhotoAlternate,
+                description = "Add photo",
+                onTakePhoto = onTakePhoto,
+                onPickFromGallery = onPickPhoto,
+                cameraAvailable = cameraAvailable,
+            )
         }
     }
 }

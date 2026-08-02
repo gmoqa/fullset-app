@@ -114,6 +114,9 @@ fun GameDetailScreen(
 
     val pickCover = rememberImagePicker { image -> if (image != null) vm.setCover(gameId, image) }
     val pickPhoto = rememberImagePicker { image -> if (image != null) vm.addPhoto(gameId, image) }
+    // Cámara: la foto entra al diario igual que una de la galería (el repo la copia a photos/).
+    val takePhoto = rememberCameraCapture { image -> if (image != null) vm.addPhoto(gameId, image) }
+    val takeCover = rememberCameraCapture { image -> if (image != null) vm.setCover(gameId, image) }
 
     Scaffold { _ ->
         // El hero va a sangre por arriba (detrás del status bar).
@@ -125,6 +128,8 @@ fun GameDetailScreen(
                 onTogglePlaying = { vm.setPlaying(gameId, game?.playing != true) },
                 onToggleBacklog = { vm.setBacklog(gameId, game?.backlog != true) },
                 onChangeCover = { pickCover() },
+                onShootCover = { takeCover.launch() },
+                cameraAvailable = takeCover.available,
                 onResetCover = { vm.clearCustomCover(gameId) },
                 onShareText = { shareText(vm.gameNotesText(gameId)) },
                 onShareJson = { shareText(vm.gameNotesJson(gameId)) },
@@ -191,7 +196,9 @@ fun GameDetailScreen(
                 DiaryComposer(
                     onWrite = { showAddNote = true },
                     onRecord = { startRecording() },
-                    onPhoto = { pickPhoto() },
+                    onTakePhoto = { takePhoto.launch() },
+                    onPickPhoto = { pickPhoto() },
+                    cameraAvailable = takePhoto.available,
                 )
             }
         }
@@ -248,6 +255,8 @@ private fun HeroHeader(
     onTogglePlaying: () -> Unit,
     onToggleBacklog: () -> Unit,
     onChangeCover: () -> Unit,
+    onShootCover: () -> Unit,
+    cameraAvailable: Boolean,
     onResetCover: () -> Unit,
     onShareText: () -> Unit,
     onShareJson: () -> Unit,
@@ -320,9 +329,16 @@ private fun HeroHeader(
                         Icon(Icons.Filled.Refresh, contentDescription = "Reset cover", tint = Color.White)
                     }
                 }
-                IconButton(onClick = onChangeCover) {
-                    Icon(Icons.Filled.Image, contentDescription = "Change cover", tint = Color.White)
-                }
+                // Fotografiar el cartucho es la forma natural de ponerle carátula a una copia
+                // propia, así que la cámara también se ofrece acá.
+                PhotoSourceButton(
+                    icon = Icons.Filled.Image,
+                    description = "Change cover",
+                    onTakePhoto = onShootCover,
+                    onPickFromGallery = onChangeCover,
+                    cameraAvailable = cameraAvailable,
+                    tint = Tokens.Overlay.text,
+                )
                 IconButton(onClick = onDelete) {
                     Icon(Icons.Filled.Delete, contentDescription = "Delete game", tint = Color.White)
                 }

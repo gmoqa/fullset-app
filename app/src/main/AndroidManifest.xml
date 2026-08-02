@@ -26,5 +26,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Comparte SOLO cache/captures con la app de cámara, para que pueda escribir ahí la foto
+             recién tomada. No exportado y con permiso por URI: nadie más puede leerlo. Al delegar la
+             captura en la app de cámara del sistema no hace falta el permiso CAMERA. -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 </manifest>

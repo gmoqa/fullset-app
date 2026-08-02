@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Único directorio compartido: donde la app de cámara escribe la foto recién tomada. El
+         alcance es esa carpeta y nada más; el resto del almacenamiento interno queda fuera. -->
+    <cache-path name="captures" path="captures/" />
+</paths>
