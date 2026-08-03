@@ -99,6 +99,39 @@
     }
   },
   {
+    "file": "gamecube-eu.json",
+    "platform": "GameCube",
+    "games": 433,
+    "coverage": {
+      "year": 100,
+      "publisher": 100,
+      "serial": 81,
+      "coverUrl": 81
+    }
+  },
+  {
+    "file": "gamecube-jp.json",
+    "platform": "GameCube",
+    "games": 274,
+    "coverage": {
+      "year": 100,
+      "publisher": 100,
+      "serial": 42,
+      "coverUrl": 74
+    }
+  },
+  {
+    "file": "gamecube-usa.json",
+    "platform": "GameCube",
+    "games": 537,
+    "coverage": {
+      "year": 100,
+      "publisher": 100,
+      "serial": 83,
+      "coverUrl": 82
+    }
+  },
+  {
     "file": "genesis-eu.json",
     "platform": "Sega Genesis",
     "games": 747,
@@ -189,12 +222,12 @@
   {
     "file": "psx-eu.json",
     "platform": "PlayStation",
-    "games": 1287,
+    "games": 1286,
     "coverage": {
       "year": 100,
       "publisher": 99,
-      "serial": 65,
-      "coverUrl": 68
+      "serial": 76,
+      "coverUrl": 85
     }
   },
   {
@@ -204,8 +237,8 @@
     "coverage": {
       "year": 100,
       "publisher": 98,
-      "serial": 54,
-      "coverUrl": 59
+      "serial": 58,
+      "coverUrl": 67
     }
   },
   {

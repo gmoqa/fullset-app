@@ -101,6 +101,16 @@ Los regionales salen enteros de la tabla de Wikipedia (`build_catalog_from_wikip
 entra si su columna tiene **fecha**, porque la tabla marca `{{unreleased}}` donde no salió — la fecha
 es a la vez el dato y la prueba de que se publicó ahí. Por eso llegan al 100%.
 
+**GameCube.** Mismo patrón que PlayStation, y también con Europa como zona única. Su tabla ordena
+las columnas `Japan | North America | PAL` —distinto de PlayStation, que pone Europa en el medio—,
+otra razón para leer la cabecera en vez de fijar el índice.
+
+| Catálogo | Juegos | fecha | editora | serial | cover |
+|---|---|---|---|---|---|
+| `gamecube-usa.json` | 537 | 100% (536 al día) | 100% | 83% | 82% |
+| `gamecube-jp.json` | 274 | 100% (274 al día) | 100% | 42% | 74% |
+| `gamecube-eu.json` | 433 | 100% (432 al día) | 100% | 81% | 81% |
+
 **No-Sega (pendientes de una fuente con procedencia — ver roadmap E):**
 
 | Catálogo | Builder | Fuente títulos | Serial | año/ed/serial/cover |

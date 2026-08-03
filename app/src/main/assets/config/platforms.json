@@ -63,6 +63,31 @@
     }
   },
   {
+    "id": "gamecube",
+    "name": "GameCube",
+    "catalogs": {
+      "NTSC-U": "catalogs/gamecube-usa.json",
+      "NTSC-J": "catalogs/gamecube-jp.json",
+      "PAL": "catalogs/gamecube-eu.json"
+    },
+    "libretroRepo": "Nintendo_-_GameCube",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Nintendo",
+      "generation": 6,
+      "media": "miniDVD (GOD)",
+      "released": {
+        "ntsc": 2001,
+        "ntsc-j": 2001,
+        "pal": 2002
+      },
+      "discontinued": 2007,
+      "unitsSold": "21.7M",
+      "cpu": "IBM PowerPC Gekko @ 485 MHz + ATI Flipper",
+      "description": "Nintendo's compact sixth-generation console, the first to drop cartridges for optical discs."
+    }
+  },
+  {
     "id": "sg-1000",
     "name": "SG-1000",
     "catalogs": {

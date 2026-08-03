@@ -62,6 +62,9 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     "Sega Master System" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF3A2530), 0.70f), // granate
     "Super Nintendo" to PlatformStyle(pad("ic_pad_snes"), Color(0xFF302C48), 1.41f),          // índigo
     "Nintendo 64" to PlatformStyle(pad("ic_pad_n64"), Color(0xFF243A2A), 1.40f),              // verde
+    // Sin ícono propio en Controllercons: se muestra solo con su nombre. Reusar el del N64 sería
+    // mentir — es otro control. El aspecto es parejo en las tres regiones (medido ~0.71).
+    "GameCube" to PlatformStyle(pad("ic_pad_gamecube"), Color(0xFF3B2A55), 0.71f),            // violeta
     "PlayStation" to PlatformStyle(pad("ic_pad_playstation"), Color(0xFF26262E), 1.00f),      // gris
     "Sega Genesis" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF383840), 0.71f),         // gris
     "Sega CD" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1B3A6B), 0.68f),              // azul (usa pad de Genesis)

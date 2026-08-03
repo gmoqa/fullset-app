@@ -24,12 +24,31 @@ from enrich_dates_wikipedia import wikitext, region_column  # noqa: E402
 
 
 def clean_cell(text: str) -> str:
-    """Quita wikitext de una celda: enlaces, cursivas, referencias, plantillas sueltas."""
+    """
+    Quita el wikitext de una celda y deja el texto visible.
+
+    Dos cosas que no son obvias y rompen si faltan:
+      - Las celdas pueden llevar atributos HTML antes del contenido, separados por `|`
+        (`data-sort-value="Legend of Zelda…"|The Legend of Zelda…`, `id="0–9"|…`). Sin quitarlos, el
+        atributo termina dentro del título.
+      - Una fila puede separar celdas con `||` en la misma línea, así que se corta ahí: si no, la
+        desarrolladora se pega al nombre del juego.
+    """
     s = re.sub(r"<ref[^>]*>.*?</ref>|<ref[^>]*/>", "", text, flags=re.S)
-    s = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", s)
+    s = s.split("||")[0]
+    s = re.sub(r'^\s*(?:[\w-]+="[^"]*"\s*)+\|', "", s)
+    # Las plantillas se resuelven ANTES que los enlaces, porque pueden ir adentro:
+    # `[[{{Not a typo|Med|iEvil}}]]`. Si se procesara el enlace primero, su regex cortaría por el
+    # primer `|` de la plantilla y el título quedaría partido. Las de texto (Not a typo, sic…)
+    # concatenan sus argumentos, así que se unen; las de marcado (unreleased, dts…) desaparecen.
+    s = re.sub(r"\{\{(?:not a typo|sic|nowrap|small)\|([^}]*)\}\}",
+               lambda m: m.group(1).replace("|", ""), s, flags=re.I)
     s = re.sub(r"\{\{[^}]*\}\}", "", s)
+    s = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", s)
     s = re.sub(r"''+|<[^>]+>", "", s)
-    s = re.sub(r"^id=\"[^\"]*\"\|", "", s)
+    # Algunas filas listan el título alternativo de otra región tras un "•"
+    # ("The Adventures of Lomax•Lomax^PAL"): nos quedamos con el principal.
+    s = s.split("•")[0]
     return re.sub(r"\s+", " ", s).strip(" |")
 
 
@@ -37,7 +56,11 @@ def parse(text: str, column: int) -> list[dict]:
     """Filas con fecha en la columna pedida: título, editora y fecha ISO de precisión variable."""
     out = []
     for block in text.split("\n|-")[1:]:
-        cells = re.findall(r"(\{\{unreleased\}\}|\{\{dts\|[^}]+\}\}|\{\{n/a[^}]*\}\})", block)
+        # Case-insensitive: la lista de PlayStation escribe `{{unreleased}}` y la de GameCube
+        # `{{Unreleased}}`. Saltear una desplazaría los índices y le asignaría a cada juego la
+        # fecha de otra región.
+        cells = re.findall(
+            r"(\{\{unreleased\}\}|\{\{dts\|[^}]+\}\}|\{\{n/a[^}]*\}\})", block, re.I)
         if len(cells) <= column:
             continue
         m = re.match(r"\{\{dts\|(\d{4})(?:\|(\d{1,2}))?(?:\|(\d{1,2}))?", cells[column])
@@ -64,13 +87,20 @@ def main() -> None:
     ap.add_argument("pages", nargs="+")
     ap.add_argument("--platform", required=True)
     ap.add_argument("--region", required=True)
-    ap.add_argument("--cache", help="carpeta con el wikitext ya descargado (evita volver a pedirlo)")
+    ap.add_argument("--cache", help="carpeta donde cachear el wikitext (evita volver a pedirlo)")
     args = ap.parse_args()
 
     rows = []
-    for i, page in enumerate(args.pages):
-        cached = os.path.join(args.cache, f"psx_wiki_{i}.txt") if args.cache else None
-        text = open(cached, encoding="utf-8").read() if cached and os.path.exists(cached) else wikitext(page)
+    for page in args.pages:
+        # Caché por página: se construyen varios catálogos regionales de la MISMA tabla, así que sin
+        # esto se le pediría a Wikipedia lo mismo una vez por región.
+        cached = os.path.join(args.cache, re.sub(r"[^\w]+", "_", page) + ".wikitext") if args.cache else None
+        if cached and os.path.exists(cached):
+            text = open(cached, encoding="utf-8").read()
+        else:
+            text = wikitext(page)
+            if cached:
+                open(cached, "w", encoding="utf-8").write(text)
         column = region_column(text, args.region)
         if column is None:
             raise SystemExit(f"no encontré la columna de {args.region} en '{page}'")

@@ -85,7 +85,11 @@ def parse_page(text: str, column: int) -> dict[str, str]:
         if not title:
             continue
         # Las tres celdas de región, en orden: fecha, "sin lanzar" o "n/d".
-        cells = re.findall(r"(\{\{unreleased\}\}|\{\{dts\|[^}]+\}\}|\{\{n/a[^}]*\}\})", block)
+        # Case-insensitive: la lista de PlayStation escribe `{{unreleased}}` y la de GameCube
+        # `{{Unreleased}}`. Saltear una desplazaría los índices y le asignaría a cada juego la
+        # fecha de otra región.
+        cells = re.findall(
+            r"(\{\{unreleased\}\}|\{\{dts\|[^}]+\}\}|\{\{n/a[^}]*\}\})", block, re.I)
         if len(cells) <= column:
             continue
         m = re.match(r"\{\{dts\|(\d{4})(?:\|(\d{1,2}))?(?:\|(\d{1,2}))?", cells[column])
