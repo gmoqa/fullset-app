@@ -3,7 +3,8 @@
 Validador/gate de los catálogos (solo lectura, no toca nada). Garantiza que TODOS estén en la
 misma forma canónica, para que se puedan versionar y mantener sin sorpresas:
 
-  - las 9 claves EXACTAS y EN ORDEN: title, platform, region, year, publisher, genre, slug, serial, coverUrl
+  - las 11 claves EXACTAS y EN ORDEN: title, platform, region, year, releaseDate, publisher,
+    genre, slug, serial, coverUrl, rating
   - identidad presente (no vacía): title, platform, region, slug
   - tipos correctos (year entero o null; el resto strings)
   - region de un set válido

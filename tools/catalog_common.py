@@ -163,13 +163,13 @@ def _merge(existing, new):
 
 # --- Forma canónica: mismo esquema, orden y formato en TODOS los catálogos (para versionar) -------
 
-# Orden fijo de claves. Estas 9 van SIEMPRE (aunque vacías), así todos los catálogos son idénticos
+# Orden fijo de claves. Estas 11 van SIEMPRE (aunque vacías), así todos los catálogos son idénticos
 # en estructura y el diff refleja solo cambios de contenido.
 CANON_KEYS = ["title", "platform", "region", "year", "releaseDate", "publisher", "genre", "slug", "serial", "coverUrl", "rating"]
 
 
 def canonical(entry):
-    """Entrada con las 9 claves en orden fijo. year → null si falta; el resto → "" si falta."""
+    """Entrada con las 11 claves en orden fijo. year → null si falta; el resto → "" si falta."""
     return {k: entry.get(k, None if k == "year" else "") for k in CANON_KEYS}
 
 
@@ -302,7 +302,7 @@ def build(page, platform, out, dat_name, repo, na_col, year=(1983, 2010)):
 def normalize(out, dat_name, repo):
     """
     Normaliza un catálogo YA existente sin regenerar el set de juegos: hornea `serial` y `coverUrl`
-    faltantes (desde el DAT y el índice de carátulas, por título), completa las 9 claves, aplica
+    faltantes (desde el DAT y el índice de carátulas, por título), completa las 11 claves, aplica
     overrides y reescribe en forma canónica. Es la vía para poner los catálogos viejos (SNES,
     Genesis, PSX) al mismo molde que NES/N64 sin arriesgar duplicados.
     """

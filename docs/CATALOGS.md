@@ -50,7 +50,7 @@ agregan un grupo— y desempata descartando los prefijos `SCED`/`SLED`, que son 
 comparten número con el retail (*My Street* es SCED-51677 **y** SCES-51677). Corrigió **77 seriales**
 repartidos en PlayStation, PS2, PS3 y GameCube.
 
-### Estado por catálogo (auditado 2026-07-29)
+### Estado por catálogo (auditado 2026-08-03)
 
 **Sega: cobertura completa.** Las 8 consolas × las 3 regiones (**6226 juegos**), con Sega Retro como
 fuente única vía API (`tools/local/segaretro_api.py`). Fechas ISO de precisión variable, catalog
@@ -105,8 +105,8 @@ serial (`SCES`/`SLES`), así que Wikipedia lo lista en **una sola columna** y co
 | Catálogo | Juegos | fecha | editora | serial | cover |
 |---|---|---|---|---|---|
 | `psx-usa.json` | 1344 | 91% (1155 al día) | 100% | 87% | 87% |
-| `psx-jp.json` | 3148 | **100%** (3145 al día) | 98% | 54% | 59% |
-| `psx-eu.json` | 1286 | **100%** (789 al día) | 99% | 65% | 68% |
+| `psx-jp.json` | 3148 | **100%** (3145 al día) | 98% | 58% | 67% |
+| `psx-eu.json` | 1286 | **100%** (789 al día) | 99% | 76% | 85% |
 
 Los regionales salen enteros de la tabla de Wikipedia (`build_catalog_from_wikipedia.py`): un juego
 entra si su columna tiene **fecha**, porque la tabla marca `{{unreleased}}` donde no salió — la fecha
@@ -340,11 +340,41 @@ nombre americano y los dos no se reconocían entre sí.
 
 ## Herramientas
 
-- `tools/catalog_lint.py` — valida la forma canónica.
-- `tools/catalog_report.py` — cobertura por campo, por catálogo (solo lectura).
-- `tools/normalize_catalogs.py` — normaliza y regenera `manifest.json` (**pisa los catálogos**: correr
-  solo con confirmación; los catálogos se mantienen a mano).
-- `tools/catalog_common.py` — motor de scrape/normalización compartido por los builders.
+Los catálogos viven en **`data/catalogs/`**, en la raíz del repo — no dentro del módulo de Android,
+porque los consumen las dos plataformas (Android los suma vía `sourceSets`, iOS los referencia como
+carpeta en `project.yml`).
+
+**Inspección** (solo lectura, no tocan nada):
+
+- `catalog_lint.py` — valida la forma canónica de los 37 catálogos y que cada override cite su
+  fuente. Devuelve 1 si algo falla, así sirve de gate.
+- `catalog_report.py` — cobertura por campo y por catálogo, y cuánto está confirmado a mano.
+
+**Construcción** — uno por consola, salvo el genérico:
+
+- `build_catalog_from_wikipedia.py` — el genérico, por región. Dos formatos de tabla: `regions-dated`
+  (una fecha por región: PlayStation, GameCube, PS3) y `--layout checkmarks` (una sola fecha de
+  primer lanzamiento + tildes: PS2).
+- `build_snes_catalog.py`, `build_nes_catalog.py`, `build_n64_catalog.py`,
+  `build_dreamcast_catalog.py`, `build_mastersystem_catalog.py`, `build_psx_catalog.py`.
+- `build_catalog_from_segaretro.py` + `segaretro_source.py` — desde las capturas de `tools/sources/`.
+- `catalog_common.py` — el motor compartido: `clean_cell`, `core`, `slug`, `write_catalog` y la
+  aplicación de overrides.
+
+**Enriquecimiento** — todos completan **solo lo vacío**, salvo donde se pida `--overwrite`:
+
+| Herramienta | Campo | Fuente |
+|---|---|---|
+| `enrich_dates_wikipedia.py` | `releaseDate` | la columna de región de la lista |
+| `enrich_infobox_wikipedia.py` | `releaseDate`, `publisher` | la ficha del artículo de cada juego |
+| `enrich_serials_redump.py` | `serial` | DAT de Redump (consolas de disco) |
+| `enrich_meta_libretro.py` | `publisher`, `genre`, `releaseDate` | libretro-database |
+| `enrich_covers_libretro.py` | `coverUrl` | libretro-thumbnails |
+| `enrich_covers_steamgriddb.py` | `coverUrl` | SteamGridDB (PS3, que libretro no cubre) |
+| `enrich_from_segaretro.py` | fechas, serial, rating | Sega Retro |
+
+`normalize_catalogs.py` rehornea los catálogos legacy y regenera `manifest.json` leyendo el
+directorio entero. **Pisa los catálogos**: correr solo con confirmación.
 
 > **Nota:** los catálogos son documentación curada a mano. No se regeneran a la ligera (el script los
 > pisa). Las mejoras van por override (con procedencia) o edición puntual documentada.

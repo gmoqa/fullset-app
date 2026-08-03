@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Normaliza TODOS los catálogos a la misma forma canónica (mismo esquema de 9 claves, ordenado por
+Normaliza TODOS los catálogos a la misma forma canónica (mismo esquema de 11 claves, ordenado por
 slug, un objeto por línea, overrides aplicados) SIN regenerar el set de juegos desde Wikipedia.
 
 Para los que ya están horneados (NES, Master System, N64) es solo un reformateo + overrides.
