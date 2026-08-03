@@ -34,10 +34,26 @@ Todas permisivas; ninguna copyleft.
 
 ## Datos
 
-- **Catálogos de juegos** (`app/src/main/assets/catalogs/*.json`): listas de títulos,
-  años y editoras. Son datos factuales derivados de fuentes públicas (listados de
-  Wikipedia y la base de datos de No-Intro/libretro). Los títulos de los juegos son
-  marcas de sus respectivos dueños.
+Los **catálogos** (`app/src/main/assets/catalogs/*.json`) son datos factuales —título, fecha de
+lanzamiento, catalog number, editora, género, clasificación— compilados de las fuentes de abajo.
+Los títulos de los juegos son marcas de sus respectivos dueños. La procedencia campo por campo
+está en [`docs/CATALOGS.md`](docs/CATALOGS.md); las correcciones puntuales anotan su fuente en
+`tools/overrides/`.
+
+- **[Sega Retro](https://segaretro.org)** — fechas de lanzamiento, catalog numbers y
+  clasificaciones de **las 8 consolas Sega en sus 3 regiones** (6226 juegos), más las editoras de
+  Saturn, Sega CD y Dreamcast. Contenido bajo **GNU Free Documentation License 1.2**, que declara
+  el propio sitio en su `siteinfo`. Se consultó su API de MediaWiki/Cargo.
+- **[libretro-database](https://github.com/libretro/libretro-database)** — catalog numbers
+  (`metadat/serial/`), editoras (`metadat/publisher/`), géneros (`metadat/genre/`) y fechas
+  (`metadat/releaseyear/`, `releasemonth/`). **CC BY-SA 4.0**. Deriva a su vez de los DAT de
+  **No-Intro**.
+- **[SNES Central](https://snescentral.com)** (Evan G.) — catalog numbers de SNES que
+  libretro-database no cubre, tomados de la tabla de etiquetas de cartucho de cada ficha. Se
+  consultaron solo las fichas de los títulos faltantes, respetando el `Crawl-delay` de su
+  robots.txt.
+- **Wikipedia** — listas de títulos de NES, SNES, N64, PlayStation, Master System y Dreamcast, y
+  las editoras de las consolas de cartucho. **CC BY-SA 4.0**.
 - **Carátulas**: NO se incluyen en el repo ni en el APK. Se cargan en tiempo de
   ejecución por URL desde [libretro-thumbnails](https://github.com/libretro-thumbnails)
   y archive.org. Son propiedad de sus respectivos dueños; su uso aquí es para

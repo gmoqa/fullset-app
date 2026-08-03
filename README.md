@@ -3,7 +3,8 @@
 App Android para llevar tu **colección de videojuegos retro** y un **diario por juego**.
 Armás tu estantería eligiendo consolas y títulos de catálogos offline, marcás lo que estás
 jugando o tenés pendiente, y en cada juego podés escribir **notas** fechadas, grabar **notas de
-voz** (transcritas en el dispositivo) y guardar **fotos**. Todo local, sin cuentas ni backend.
+voz** (transcritas en el dispositivo), sacar **fotos** y anotar **cuándo lo jugaste por primera
+vez**. Todo local, sin cuentas ni backend.
 
 UI en **inglés**. Licencia **MIT**.
 
@@ -14,40 +15,59 @@ UI en **inglés**. Licencia **MIT**.
   - **kotlinx.serialization** (JSON) · **kotlinx-datetime** · **Ktor** (HTTP)
   - **Coil 3** (imágenes) · **multiplatform-settings** (preferencias)
 - **whisper.cpp** (código nativo vendored) para transcribir notas de voz sin conexión
-- Fotos/carátulas: la imagen se cachea local; en la BD se guarda solo la ruta/URL
-- Selección de fotos vía **Photo Picker** (sin permisos runtime)
+- Fotos/carátulas: la imagen se cachea local; en la BD se guarda solo la ruta/URL. Al guardarlas se
+  **redimensionan a 1600px** (JPEG 85): una foto de cámara pasa de ~3,5 MB a ~300 KB
+- Fotos vía **Photo Picker** o **cámara** — ambas sin permisos runtime (la captura la hace la app de
+  cámara del sistema, así que no hace falta declarar `CAMERA`)
 
 El paquete y el nombre del producto son **fullset** (`com.gmoqa.fullset`).
 
 ## Secciones (bottom nav: Collection · Backlog · Playing · Wishlist · Settings)
 - **Collection**: tu colección **física**, en estanterías por plataforma, con buscador y un punto
   de color por juego que indica su estado de conservación (loose / loose+manual / boxed / complete).
+  Cada estante se ordena **por fecha de lanzamiento** (del más antiguo al más nuevo, así recorrer
+  una fila recorre la historia de esa consola); también se puede ordenar A–Z o por lo último cargado.
 - **Backlog**: lo pendiente por jugar (bandera `games.backlog`).
 - **Playing**: lo que estás jugando ahora (`games.playing`), en cards a todo el ancho. Desde acá
   se agregan los juegos **digitales** (no cuentan como poseídos: no entran a Collection, llevan
   un badge *DIGITAL*).
 - **Wishlist**: lo que querés conseguir. Se elige del catálogo; dedup por plataforma+juego.
-- **Settings**: tema (System/Light/Dark), región, export de la colección a CSV, idioma de la
-  transcripción de voz, y créditos.
+- **Settings**: tema (System/Light/Dark), región (NTSC-U / NTSC-J / PAL), opciones de vista de
+  Collection, export a CSV, **respaldo y restauración**, idioma de la transcripción, y créditos.
 
 ## Plataformas por configuración
-Se declaran en `assets/config/platforms.json`: cada una con `id`, `name`, `catalog` (JSON en
-`assets/catalogs/`), `libretroRepo` (repo de carátulas) y `enabled`. Agregar una consola = una
-entrada en ese JSON + su catálogo, sin tocar código (lo carga `PlatformRegistry`). Las consolas
-sin catálogo aparecen bloqueadas ("Soon") o, si son current-gen (PS5), se cargan a mano.
+Se declaran en `assets/config/platforms.json`: cada una con `id`, `name`, `libretroRepo` (repo de
+carátulas), `enabled` y sus catálogos. Agregar una consola = una entrada en ese JSON + su catálogo,
+sin tocar código (lo carga `PlatformRegistry`). Las consolas sin catálogo aparecen bloqueadas
+("Soon") o, si son current-gen (PS5), se cargan a mano.
 
-**Esquema normalizado** (mismos campos base en todas las listas, en inglés):
+**Un catálogo por región.** La consola mapea región → archivo; `catalogFor()` cae a NTSC-U cuando
+esa región no tiene lista propia, y a cualquiera disponible si la consola salió en una sola (la
+SG-1000 es JP only). Sigue aceptándose el formato viejo `"catalog": "…"` como NTSC-U.
+
 ```jsonc
-// catalogs/*.json  y  seed → wishlist
-{ "title", "platform", "region", "year", "publisher", "genre", "slug" }
-// seed → library añade:  "condition", "notes", "cover"
+"catalogs": { "NTSC-U": "catalogs/genesis-usa.json",
+              "NTSC-J": "catalogs/genesis-jp.json",
+              "PAL":    "catalogs/genesis-eu.json" }
 ```
-`region` = `"NTSC-U"`, `year` = número o `null`, campos desconocidos = `""`.
 
-Los catálogos se generan/mantienen con los scripts de `tools/` (Wikipedia + base No-Intro/libretro):
+**Esquema normalizado**, 11 claves siempre presentes (aunque vacías), validado por
+`tools/catalog_lint.py`:
+```jsonc
+{ "title", "platform", "region", "year", "releaseDate", "publisher",
+  "genre", "slug", "serial", "coverUrl", "rating" }
+```
+`region` = `"NTSC-U"` | `"NTSC-J"` | `"PAL"` · `year` = número o `null` ·
+`releaseDate` = ISO de **precisión variable** (`"1991"` | `"1991-06"` | `"1991-06-11"`) ·
+desconocidos = `""`.
+
+Hoy son **26 catálogos con 9256 juegos**. De dónde sale cada dato, con qué fuente y con qué
+cobertura: **[docs/CATALOGS.md](docs/CATALOGS.md)**.
+
 ```bash
-python3 tools/build_psx_catalog.py       # requiere internet
-python3 tools/catalog_lint.py            # valida el esquema
+python3 tools/catalog_lint.py                       # valida el esquema
+python3 tools/enrich_meta_libretro.py <cat> "<DAT>" # editora/género/fecha desde libretro
+python3 tools/enrich_from_segaretro.py <cat> <src>  # fechas/serial/rating desde Sega Retro
 ```
 
 ## iOS
