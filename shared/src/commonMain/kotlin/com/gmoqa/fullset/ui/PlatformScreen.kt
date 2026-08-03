@@ -156,6 +156,7 @@ fun PlatformScreen(
         } else {
             items(rows, key = { it.key }) { row ->
                 PlatformGameRow(
+                    region = region,
                     row = row,
                     platform = platform,
                     onOpenGame = onOpenGame,
@@ -190,6 +191,8 @@ private data class PlatformRow(
 private fun PlatformGameRow(
     row: PlatformRow,
     platform: String,
+    /** Para reservar el alto correcto: el packaging cambiaba según el mercado. */
+    region: RegionFilter,
     onOpenGame: (Long) -> Unit,
     onAddGame: (CatalogEntry) -> Unit,
 ) {
@@ -206,7 +209,7 @@ private fun PlatformGameRow(
                 model = row.coverModel,
                 contentDescription = row.title,
                 grayscale = !owned,
-                modifier = Modifier.height(56.dp).aspectRatio(coverAspectRatio(platform)),
+                modifier = Modifier.height(56.dp).aspectRatio(coverAspectRatio(platform, region.label)),
             )
             if (owned) {
                 // ✓ en la esquina para los que tenés (disco de color con halo para leerse siempre).

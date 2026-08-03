@@ -64,7 +64,7 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     "Nintendo 64" to PlatformStyle(pad("ic_pad_n64"), Color(0xFF243A2A), 1.40f),              // verde
     "PlayStation" to PlatformStyle(pad("ic_pad_playstation"), Color(0xFF26262E), 1.00f),      // gris
     "Sega Genesis" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF383840), 0.71f),         // gris
-    "Sega CD" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1B3A6B), 0.59f),              // azul (usa pad de Genesis)
+    "Sega CD" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1B3A6B), 0.68f),              // azul (usa pad de Genesis)
     // Add-ons del Genesis: comparten su control. El 32X usa caja de cartón como el Genesis.
     "Sega 32X" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1F3A38), 0.73f),             // verde petróleo
     // Familia 8-bit: comparten el control del Master System.
@@ -72,7 +72,7 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     "SG-1000" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF453220), 0.74f),        // marrón
     "PlayStation 5" to PlatformStyle(pad("ic_pad_playstation5"), Color(0xFF1E2C5C), 0.80f),   // azul marino
     // Jewel case alta y angosta (medido en Libretro = 0.59; antes estaba en 0.72 y dejaba banda).
-    "Sega Saturn" to PlatformStyle(pad("ic_pad_saturn"), Color(0xFF2A2E45), 0.59f),           // slate
+    "Sega Saturn" to PlatformStyle(pad("ic_pad_saturn"), Color(0xFF2A2E45), 0.60f),           // slate
     "Dreamcast" to PlatformStyle(pad("ic_pad_dreamcast"), Color(0xFF24384A), 1.00f),          // steel blue (jewel case cuadrada, medido en Libretro = 1.00)
     "PlayStation 2" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1E2038), 0.70f),   // azul oscuro
 )
@@ -81,11 +81,30 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
 fun platformBandColor(platform: String): Color? = PLATFORM_STYLES[platform]?.bandColor
 
 /**
- * Aspecto (ancho/alto) típico de las carátulas de la plataforma. Se usa para reservar un alto
- * estable en las listas (placeholder e imagen comparten alto → sin salto al cargar). Default
- * vertical para plataformas sin datos.
+ * Aspecto (ancho/alto) de las carátulas **según la región**, porque el mismo juego venía en cajas
+ * distintas según el mercado: la Saturn japonesa usaba jewel case cuadrado y la americana una caja
+ * alta y angosta. Usar un solo número dejaba la mitad de las carátulas flotando en un hueco.
+ *
+ * Medido sobre las imágenes de libretro-thumbnails de cada catálogo (mediana de una muestra).
  */
-fun coverAspectRatio(platform: String): Float = PLATFORM_STYLES[platform]?.coverAspect ?: 0.72f
+private val COVER_ASPECT_BY_REGION: Map<Pair<String, String>, Float> = mapOf(
+    ("Sega Saturn" to "NTSC-U") to 0.60f,   // caja alta
+    ("Sega Saturn" to "NTSC-J") to 1.00f,   // jewel case cuadrado
+    ("Sega Saturn" to "PAL") to 0.65f,
+    ("Sega CD" to "NTSC-U") to 0.68f,       // convivieron long box y jewel case: es el más parejo
+    ("Sega CD" to "NTSC-J") to 1.00f,
+    ("Sega CD" to "PAL") to 1.18f,
+)
+
+/**
+ * Aspecto (ancho/alto) típico de las carátulas. Se usa para reservar un alto estable en las listas
+ * (placeholder e imagen comparten alto → sin salto al cargar). Con [region] se afina por mercado
+ * donde el packaging cambió; sin ella, el valor general de la plataforma.
+ */
+fun coverAspectRatio(platform: String, region: String = ""): Float =
+    COVER_ASPECT_BY_REGION[platform to region]
+        ?: PLATFORM_STYLES[platform]?.coverAspect
+        ?: 0.72f
 
 /**
  * Header de estantería: una **franja a todo el ancho** pintada con [platformBandColor], con el ícono

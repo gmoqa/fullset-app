@@ -227,7 +227,7 @@ private fun SearchResults(results: List<Game>, onOpenGame: (Long) -> Unit) {
                     contentDescription = game.name,
                     modifier = Modifier
                         .height(54.dp)
-                        .aspectRatio(coverAspectRatio(game.platform)),
+                        .aspectRatio(coverAspectRatio(game.platform, game.region)),
                 )
                 Column(modifier = Modifier.padding(start = 12.dp).weight(1f)) {
                     Text(

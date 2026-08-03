@@ -204,7 +204,7 @@ private fun CoverTile(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .aspectRatio(coverAspectRatio(game.platform)),
+                .aspectRatio(coverAspectRatio(game.platform, game.region)),
         ) {
             SubcomposeAsyncImage(
                 model = game.coverModel,
@@ -225,9 +225,12 @@ private fun CoverTile(
             }
         }
         if (showLabel) {
+            // Alto fijo de dos líneas: la fila entera mide lo que su tile más alto, así que un
+            // título largo entre dos cortos hacía crecer TODO el renglón al scrollear hasta él.
             Text(
                 game.name,
                 style = MaterialTheme.typography.titleSmall,
+                minLines = 2,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.padding(top = 6.dp, start = 2.dp, end = 2.dp),

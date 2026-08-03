@@ -162,9 +162,11 @@ private fun WishlistTile(
                 )
             }
         }
+        // Dos líneas siempre: la fila mide lo que su tile más alto, y un título largo la agrandaba.
         Text(
             item.game,
             style = MaterialTheme.typography.titleSmall,
+            minLines = 2,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
             modifier = Modifier.padding(top = 6.dp, start = 2.dp, end = 2.dp),
