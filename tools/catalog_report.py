@@ -14,7 +14,7 @@ Uso:  python3 tools/catalog_report.py
 import json, os
 from collections import Counter
 
-CAT_DIR = os.path.join(os.path.dirname(__file__), "..", "app", "src", "main", "assets", "catalogs")
+CAT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs")
 OVR_DIR = os.path.join(os.path.dirname(__file__), "overrides")
 
 # Las 11 consolas legacy objetivo: (nombre visible, archivo del catálogo, repo de Libretro).

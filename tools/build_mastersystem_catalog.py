@@ -4,7 +4,7 @@ import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from catalog_common import build
 
-OUT = os.path.join(os.path.dirname(__file__), "..", "app", "src", "main", "assets", "catalogs", "master-system-usa.json")
+OUT = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs", "master-system-usa.json")
 
 if __name__ == "__main__":
     build(page="List of Master System games", platform="Sega Master System", out=OUT,

@@ -10,7 +10,7 @@ fecha de otro mercado.
 Solo completa lo que esté **vacío**; alinea `year` con la fecha que pone.
 
 Uso:  python3 tools/enrich_dates_wikipedia.py <catalogo.json> "<Página 1>" ["<Página 2>" …] [--dry-run]
-      python3 tools/enrich_dates_wikipedia.py app/src/main/assets/catalogs/psx-usa.json \
+      python3 tools/enrich_dates_wikipedia.py data/catalogs/psx-usa.json \
           "List of PlayStation (console) games (A–L)" "List of PlayStation (console) games (M–Z)"
 """
 import argparse

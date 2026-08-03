@@ -1,6 +1,6 @@
 # Catálogos — procedencia, normalización y mejora continua
 
-Los catálogos (`app/src/main/assets/catalogs/*.json`) **no son una lista estática** de juegos
+Los catálogos (`data/catalogs/*.json`) **no son una lista estática** de juegos
 retro. Son un **dataset vivo** que se corrige y mejora con el tiempo: títulos, fechas, editoras,
 carátulas y regiones se refinan a medida que aparecen mejores fuentes (una fecha que pasa de solo
 año a año-mes confirmada por una revista/base de datos, una carátula bajo el nombre correcto, un

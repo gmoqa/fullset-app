@@ -15,13 +15,14 @@ targets:
       - path: iosApp
       # Assets del dominio (catálogos/config/seed) como referencias de carpeta: conservan la
       # estructura en el bundle (catalogs/…, config/…, seed/…), que es lo que lee readTextAsset.
-      - path: ../app/src/main/assets/catalogs
+      # Viven en `data/` en la raíz, compartidos con Android, que los toma vía sourceSets.
+      - path: ../data/catalogs
         type: folder
         buildPhase: resources
-      - path: ../app/src/main/assets/config
+      - path: ../data/config
         type: folder
         buildPhase: resources
-      - path: ../app/src/main/assets/seed
+      - path: ../data/seed
         type: folder
         buildPhase: resources
     settings:

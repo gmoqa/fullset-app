@@ -35,8 +35,7 @@ from build_catalog_from_wikipedia import parse, publisher_column  # noqa: E402
 PAGE = "List of Super Nintendo Entertainment System games"
 PLATFORM = "Super Nintendo"
 REGION = "NTSC-U"
-OUT = os.path.join(os.path.dirname(__file__), "..", "app", "src", "main", "assets",
-                   "catalogs", "snes-usa.json")
+OUT = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs", "snes-usa.json")
 
 
 ROMANOS = {"ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x"}

@@ -34,7 +34,7 @@ Todas permisivas; ninguna copyleft.
 
 ## Datos
 
-Los **catálogos** (`app/src/main/assets/catalogs/*.json`) son datos factuales —título, fecha de
+Los **catálogos** (`data/catalogs/*.json`) son datos factuales —título, fecha de
 lanzamiento, catalog number, editora, género, clasificación— compilados de las fuentes de abajo.
 Los títulos de los juegos son marcas de sus respectivos dueños. La procedencia campo por campo
 está en [`docs/CATALOGS.md`](docs/CATALOGS.md); las correcciones puntuales anotan su fuente en

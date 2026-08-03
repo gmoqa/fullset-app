@@ -7,7 +7,7 @@ Fuente: Wikipedia "List of PlayStation (console) games (A–L)" y "(M–Z)".
 Se filtran los juegos con lanzamiento en North America (3ª columna de región) y se limpia
 el markup (enlaces, plantillas, títulos regionales con <sup>NA</sup>, etc.).
 
-Uso:  python3 tools/build_psx_catalog.py            # escribe app/src/main/assets/catalogs/psx-usa.json
+Uso:  python3 tools/build_psx_catalog.py            # escribe data/catalogs/psx-usa.json
 Requiere: internet (API de Wikipedia). Sin dependencias externas.
 """
 import json, re, calendar, urllib.parse, urllib.request
@@ -159,4 +159,4 @@ def clean_pub(p):
 
 
 if __name__ == "__main__":
-    main("app/src/main/assets/catalogs/psx-usa.json")
+    main("data/catalogs/psx-usa.json")

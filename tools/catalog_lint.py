@@ -17,7 +17,7 @@ Uso:  python3 tools/catalog_lint.py
 """
 import json, os, re, sys
 
-CAT_DIR = os.path.join(os.path.dirname(__file__), "..", "app", "src", "main", "assets", "catalogs")
+CAT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs")
 
 CANON_KEYS = ["title", "platform", "region", "year", "releaseDate", "publisher", "genre", "slug", "serial", "coverUrl", "rating"]
 REQUIRED = {"title", "platform", "region", "slug"}          # identidad, nunca vacíos

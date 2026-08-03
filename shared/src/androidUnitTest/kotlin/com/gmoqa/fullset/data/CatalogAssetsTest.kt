@@ -14,7 +14,7 @@ import kotlin.test.assertTrue
 class CatalogAssetsTest {
 
     // El test corre con working dir = shared/; los assets viven en el módulo :app.
-    private val assets = File("../app/src/main/assets")
+    private val assets = File("../data")
     private val readAsset: (String) -> String? = { path ->
         File(assets, path).takeIf { it.isFile }?.readText()
     }

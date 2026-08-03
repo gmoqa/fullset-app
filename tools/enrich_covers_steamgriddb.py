@@ -18,7 +18,7 @@ Cachea cada búsqueda en disco: los catálogos regionales comparten la mayoría 
 volver a correrlo no debería repetir miles de consultas.
 
 Uso:  python3 tools/enrich_covers_steamgriddb.py <catalogo.json> [<catalogo2.json> …] [--dry-run]
-      python3 tools/enrich_covers_steamgriddb.py app/src/main/assets/catalogs/ps3-{usa,jp,eu}.json
+      python3 tools/enrich_covers_steamgriddb.py data/catalogs/ps3-{usa,jp,eu}.json
 """
 import argparse
 import json

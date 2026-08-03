@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Genera app/src/main/assets/seed/collection.json a partir del Excel de la colección.
+Genera data/seed/collection.json a partir del Excel de la colección.
 
 - Lee una hoja por consola (Título, Consola, Género, Año, Estado, Notas) + hoja "Wishlist".
 - Resuelve la carátula de cada juego en Libretro Thumbnails: primero probando nombres
@@ -25,7 +25,7 @@ PLAT = {
 }
 # Catálogo oficial por consola (para canonicalizar el nombre del Excel contra nuestros datos
 # antes de buscar la carátula: corrige typos, subtítulos y mayúsculas de los títulos US).
-CATALOG_DIR = os.path.join("app", "src", "main", "assets", "catalogs")
+CATALOG_DIR = os.path.join("data", "catalogs")
 CATALOG_FILE = {"SNES": "snes-usa.json", "GENESIS": "genesis-usa.json", "PSX": "psx-usa.json"}
 
 # Títulos anotados en el Excel cuyo nombre real es tan distinto que la comparación por similitud
@@ -311,4 +311,4 @@ def main(xlsx, out_path):
 
 if __name__ == "__main__":
     xlsx = sys.argv[1] if len(sys.argv) > 1 else "collection.xlsx"
-    main(xlsx, "app/src/main/assets/seed/collection.json")
+    main(xlsx, "data/seed/collection.json")

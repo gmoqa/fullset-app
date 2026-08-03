@@ -5,8 +5,10 @@ iOS necesita macOS y Xcode), así que todo lo de acá se escribió a ciegas: com
 pero **nunca se ejecutó**. Asumí que hay errores de cinterop esperando.
 
 El dataset creció bastante desde que se escribió esto: **37 catálogos con 26.862 juegos** en 17
-plataformas, **9,4 MB** de assets. No hay nada que agregar al proyecto de Xcode —`project.yml` los
-referencia como `type: folder`, así que los archivos nuevos entran solos— pero sí conviene mirar el
+plataformas, **9,4 MB** de assets, que ahora viven en **`data/` en la raíz** y ya no dentro del
+módulo de Android: `project.yml` apunta a `../data/catalogs` y no a `../app/src/main/assets/…`. No
+hay nada que agregar al proyecto —los referencia como `type: folder`, así que los archivos nuevos
+entran solos— pero sí conviene mirar el
 **tiempo del primer arranque**, que es cuando `DiarySeeder` los recorre entero. En Android eso hizo
 falta envolverlo en `NonCancellable` porque el `viewModelScope` se cancelaba al bloquear la pantalla
 y las migraciones quedaban a medias.

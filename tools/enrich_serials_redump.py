@@ -10,7 +10,7 @@ Cada entrada trae `region` y `serial`, así que se toma la del mercado del catá
 Solo completa lo que esté **vacío**: nunca pisa un serial ya cargado.
 
 Uso:  python3 tools/enrich_serials_redump.py <catalogo.json> "<nombre del DAT>" [--region USA] [--dry-run]
-      python3 tools/enrich_serials_redump.py app/src/main/assets/catalogs/psx-usa.json \
+      python3 tools/enrich_serials_redump.py data/catalogs/psx-usa.json \
           "Sony - PlayStation"
 """
 import argparse

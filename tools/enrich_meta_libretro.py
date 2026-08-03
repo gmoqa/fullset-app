@@ -13,7 +13,7 @@ Solo completa lo que esté **vacío**: nunca pisa lo que ya tenga el catálogo. 
 correrlo cuando libretro se actualice.
 
 Uso:  python3 tools/enrich_meta_libretro.py <catalogo.json> <nombre-del-DAT> [--dry-run]
-      python3 tools/enrich_meta_libretro.py app/src/main/assets/catalogs/genesis-usa.json \
+      python3 tools/enrich_meta_libretro.py data/catalogs/genesis-usa.json \
           "Sega - Mega Drive - Genesis"
 """
 import argparse

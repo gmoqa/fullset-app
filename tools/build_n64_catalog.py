@@ -7,7 +7,7 @@ import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from catalog_common import build
 
-OUT = os.path.join(os.path.dirname(__file__), "..", "app", "src", "main", "assets", "catalogs", "n64-usa.json")
+OUT = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs", "n64-usa.json")
 
 if __name__ == "__main__":
     # Columnas: Title(0) Developer(1) Publisher(2) First released(3) JP(4) NA(5) PAL(6).

@@ -36,7 +36,7 @@ El paquete y el nombre del producto son **fullset** (`com.gmoqa.fullset`).
   Collection, export a CSV, **respaldo y restauración**, idioma de la transcripción, y créditos.
 
 ## Plataformas por configuración
-Se declaran en `assets/config/platforms.json`: cada una con `id`, `name`, `libretroRepo` (repo de
+Se declaran en `data/config/platforms.json`: cada una con `id`, `name`, `libretroRepo` (repo de
 carátulas), `enabled` y sus catálogos. Agregar una consola = una entrada en ese JSON + su catálogo,
 sin tocar código (lo carga `PlatformRegistry`). Las consolas sin catálogo aparecen bloqueadas
 ("Soon") o, si son current-gen (PS5), se cargan a mano.
@@ -61,7 +61,12 @@ SG-1000 es JP only). Sigue aceptándose el formato viejo `"catalog": "…"` como
 `releaseDate` = ISO de **precisión variable** (`"1991"` | `"1991-06"` | `"1991-06-11"`) ·
 desconocidos = `""`.
 
-Hoy son **37 catálogos con 26.862 juegos**. De dónde sale cada dato, con qué fuente y con qué
+Todo el dataset vive en **`data/` en la raíz** —`catalogs/`, `config/` y `seed/`— compartido por
+las dos plataformas: Android lo suma a sus assets con `sourceSets` y el proyecto de Xcode lo
+referencia como carpeta. Antes vivía dentro del módulo de Android y iOS lo alcanzaba cruzando
+hasta `../app/src/main/assets/`.
+
+Hoy son **37 catálogos con 26.884 juegos**. De dónde sale cada dato, con qué fuente y con qué
 cobertura: **[docs/CATALOGS.md](docs/CATALOGS.md)**.
 
 ```bash
@@ -92,7 +97,7 @@ deliberadamente afuera: los colores y el aspecto de carátula de cada consola (`
 datos de la plataforma) y los overlays no dependen del tema claro/oscuro porque van sobre una imagen.
 
 ## Carátulas
-- La **búsqueda** es 100% offline (lee los JSON de `assets/catalogs/`).
+- La **búsqueda** es 100% offline (lee los JSON de `data/catalogs/`).
 - La **imagen** no se versiona ni se empaqueta: se resuelve por URL desde
   [libretro-thumbnails](https://github.com/libretro-thumbnails) tras elegir el título
   (`CoverArt.resolve`, convención No-Intro con fallback de región) y Coil la cachea.
@@ -107,7 +112,7 @@ Requiere el Android SDK y NDK (por el módulo nativo whisper.cpp). La API key de
 **opcional** (ver `local.properties.example`): solo habilita el buscador de carátulas de
 plataformas modernas.
 
-La app arranca **sin juegos**: el seed (`assets/seed/collection.json`) viene vacío. Agregá los
+La app arranca **sin juegos**: el seed (`data/seed/collection.json`) viene vacío. Agregá los
 tuyos desde el botón **+** de Collection.
 
 ### Un APK para pasarle a alguien

@@ -20,6 +20,13 @@ android {
     namespace = "com.gmoqa.fullset"
     compileSdk = 35
 
+    // Los catálogos, el registro de plataformas y el seed viven en `data/` en la raíz, no dentro de
+    // este módulo: los consumen Android **e iOS**, y tenerlos acá obligaba al proyecto de Xcode a
+    // cruzarse hasta `../app/src/main/assets/`, o sea el build de una plataforma metiendo la mano en
+    // el árbol de fuentes de la otra. La estructura interna (catalogs/, config/, seed/) se conserva
+    // tal cual porque es la ruta que pide `readTextAsset`.
+    sourceSets["main"].assets.srcDirs("../data")
+
     defaultConfig {
         applicationId = "com.gmoqa.fullset"
         minSdk = 26

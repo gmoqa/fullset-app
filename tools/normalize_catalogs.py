@@ -14,7 +14,7 @@ import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from catalog_common import normalize
 
-CAT = os.path.join(os.path.dirname(__file__), "..", "app", "src", "main", "assets", "catalogs")
+CAT = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs")
 
 # (archivo, DAT de seriales, repo de carátulas de libretro-thumbnails)
 CATALOGS = [
