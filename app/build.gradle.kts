@@ -42,9 +42,41 @@ android {
         }
     }
 
+    // Firma de release. Si existe `keystore.properties` (fuera del repo) se usa esa; si no, se cae
+    // al keystore de debug para poder generar un APK **instalable** y pasárselo a alguien a mano.
+    // Sirve para compartir, NO para publicar: la Play Store exige una firma propia, y una app
+    // firmada con la clave de debug no se puede actualizar después con otra distinta.
+    signingConfigs {
+        create("sideload") {
+            val props = Properties().apply {
+                val f = rootProject.file("keystore.properties")
+                if (f.exists()) f.inputStream().use { load(it) }
+            }
+            val store = props.getProperty("storeFile")
+            if (store != null) {
+                storeFile = file(store)
+                storePassword = props.getProperty("storePassword")
+                keyAlias = props.getProperty("keyAlias")
+                keyPassword = props.getProperty("keyPassword")
+            } else {
+                val debugStore = listOf(
+                    File(System.getProperty("user.home"), ".android/debug.keystore"),
+                    File(System.getProperty("user.home"), ".config/.android/debug.keystore"),
+                ).firstOrNull { it.exists() }
+                if (debugStore != null) {
+                    storeFile = debugStore
+                    storePassword = "android"
+                    keyAlias = "androiddebugkey"
+                    keyPassword = "android"
+                }
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("sideload")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

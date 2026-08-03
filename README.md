@@ -110,6 +110,19 @@ plataformas modernas.
 La app arranca **sin juegos**: el seed (`assets/seed/collection.json`) viene vacío. Agregá los
 tuyos desde el botón **+** de Collection.
 
+### Un APK para pasarle a alguien
+```bash
+./gradlew :app:assembleRelease   # app/build/outputs/apk/release/app-release.apk (~16 MB)
+```
+Queda **firmado e instalable**: si existe un `keystore.properties` (fuera del repo) usa esa firma;
+si no, cae al keystore de debug. Sirve para compartir a mano — **no para publicar**, porque la Play
+Store exige una firma propia y una app firmada con la clave de debug no se puede actualizar después
+con otra distinta.
+
+Frente al APK de debug pesa menos y no muestra la sección *Developer* de Settings. Quien lo reciba
+tiene que permitir la instalación desde orígenes desconocidos. Ojo: la API key de SteamGridDB de
+`local.properties` **queda dentro del APK**; para uno sin ella, buildeá con esa línea vacía.
+
 ## Trademarks
 Los nombres de consolas y juegos son marcas de sus respectivos dueños; fullset no está afiliado
 ni respaldado por ninguno, y los nombres se usan solo para identificar la plataforma de cada juego.
