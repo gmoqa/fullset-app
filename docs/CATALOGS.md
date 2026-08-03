@@ -233,8 +233,9 @@ alcance (p. ej. PSX-US). El norte: fullset dice **de dónde sacó cada dato**.
 generación y **pisan** el valor auto-derivado, así las correcciones a mano sobreviven un rebuild desde
 cero. Es la vía canónica para mejorar la calidad sin perderla cuando se regenera.
 
-**Convención de procedencia en overrides (nueva):** cada corrección debería documentar de dónde salió,
-con claves con guion bajo (que el generador ignora al aplicar):
+**Procedencia obligatoria:** cada corrección declara de dónde salió, con claves de guion bajo que
+`apply_overrides` **no copia al catálogo** (romperían el esquema de 11 campos). `catalog_lint.py`
+exige `_source` y rechaza el archivo sin él, así que una corrección sin fuente no entra:
 
 ```json
 {
@@ -248,6 +249,11 @@ con claves con guion bajo (que el generador ignora al aplicar):
 ```
 
 Así, cuando dentro de un año revisemos por qué un dato es lo que es, la respuesta está al lado del dato.
+
+El lint valida además que el slug exista en su catálogo, que los campos corregidos sean del esquema y
+que `_date` sea `AAAA-MM-DD`. Y `catalog_report.py` cierra con cuántas correcciones hay por catálogo
+y sobre qué campos, para poder leer de un vistazo **qué parte del dataset está confirmada a mano y
+qué parte es scrape sin revisar** — en el JSON las dos se ven igual, y no lo son.
 
 **Caso real (2026-07-30):** `snes-usa.json` traía doce catalog number de **otra región** — `SNSP-`
 (Europa) y `SHVC-` (Japón) — porque su generador legacy tomaba de libretro la fila equivocada. En una
@@ -313,14 +319,17 @@ claves nuevas no rompe nada.
 - **B. Registro machine-readable** — por catálogo: región, fuentes por campo, builder, overrides,
   cobertura, estado de revisión. Reporta "confirmado por región". El lint/report lo consumen.
 - **C. Evolución de esquema** — precisión de fecha + confianza (aditivo, backward-compatible).
-- **D. Pipeline de corrección con procedencia** — overrides con `_source`/`_note`/`_date`; lint valida;
-  report muestra confirmado vs auto.
-- **E. Cerrar huecos** — **Sega cerrado** ✅ (8 consolas × 3 regiones desde Sega Retro). Queda:
-  documentar la procedencia de **SNES** (sin builder), editora 0% en los catálogos Sega (Sega Retro
-  no la trae en `releases`: hace falta una 2da fuente), y los faltantes **GameCube, PS2, PS3**.
-- **F. Eje de región** — **cerrado para Sega** ✅: NTSC-U, NTSC-J y PAL en las 8 consolas. Si alguna
-  vez se quiere drill-down por país dentro de PAL, el modelo lo soporta (la key del mapa `catalogs`
-  es texto libre); hoy no compensa porque los países son 95% el mismo listado.
+- **D. Pipeline de corrección con procedencia** — ✅ overrides con `_source`/`_note`/`_date`;
+  `catalog_lint.py` **exige** `_source` y valida slug, campos y formato de fecha; `catalog_report.py`
+  separa confirmado a mano de auto-derivado. Hoy son **74 correcciones**, todas con fuente citada.
+- **E. Cerrar huecos** — **Sega cerrado** ✅ (8 consolas × 3 regiones) y **GameCube, PS2 y PS3
+  cerrados** ✅. La editora de los catálogos Sega ya no está en 0%: va de 77% (Saturn, Sega CD) a 89%
+  (SG-1000). Queda un hueco de fondo: **`snes-usa` sigue sin builder**, o sea que es el único
+  catálogo que no se puede regenerar ni auditar como el resto — y es justo el que resultó tener 149
+  fechas de otra región (ver más abajo).
+- **F. Eje de región** — ✅ **cerrado**: las tres regiones en Sega (8 consolas), PlayStation, PS2,
+  PS3 y GameCube. Si alguna vez se quiere drill-down por país dentro de PAL, el modelo lo soporta (la
+  key del mapa `catalogs` es texto libre); hoy no compensa porque los países son 95% el mismo listado.
 
 ## Herramientas
 

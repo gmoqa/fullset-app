@@ -1,41 +1,80 @@
 {
   "a-bugs-life": {
+    "_date": "2026-08-03",
+    "_note": "libretro pospone el artículo (convención No-Intro) y el catálogo lo deja adelante",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/Bug's Life, A (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Bug%27s%20Life%2C%20A%20%28USA%29.png"
   },
   "command-and-conquer": {
+    "_date": "2026-08-03",
+    "_note": "libretro reemplaza el '&' por '_', que no es válido en un nombre de archivo",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/Command _ Conquer (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Command%20_%20Conquer%20%28USA%29.png"
   },
   "daikatana": {
+    "_date": "2026-08-03",
+    "_note": "libretro antepone \"John Romero's\", que el título del catálogo no lleva",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/John Romero's Daikatana (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/John%20Romero%27s%20Daikatana%20%28USA%29.png"
   },
   "elmos-letter-adventure": {
+    "_date": "2026-08-03",
+    "_note": "libretro antepone 'Sesame Street', que el título del catálogo no lleva",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/Sesame Street - Elmo's Letter Adventure (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Sesame%20Street%20-%20Elmo%27s%20Letter%20Adventure%20%28USA%29.png"
   },
   "elmos-number-journey": {
+    "_date": "2026-08-03",
+    "_note": "libretro antepone 'Sesame Street', que el título del catálogo no lleva",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/Sesame Street - Elmo's Number Journey (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Sesame%20Street%20-%20Elmo%27s%20Number%20Journey%20%28USA%29.png"
   },
   "extreme-g-2": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/Extreme-G XG2 (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Extreme-G%20XG2%20%28USA%29.png"
   },
   "international-track-and-field-2000": {
+    "_date": "2026-08-03",
+    "_note": "libretro reemplaza el '&' por '_', que no es válido en un nombre de archivo",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/International Track _ Field 2000 (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/International%20Track%20_%20Field%202000%20%28USA%29.png"
   },
   "quake-64": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/Quake (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Quake%20%28USA%29.png"
   },
   "racing-simulation-monaco-grand-prix": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/Monaco Grand Prix (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Monaco%20Grand%20Prix%20%28USA%29.png"
   },
   "ridge-racer-64": {
+    "_date": "2026-08-03",
+    "_note": "libretro antepone 'RR64', que el título del catálogo no lleva",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/RR64 - Ridge Racer 64 (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/RR64%20-%20Ridge%20Racer%2064%20%28USA%29.png"
   },
   "superman-the-new-superman-adventures": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/Superman (USA) (Beta) (1998-09-06).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Superman%20%28USA%29%20%28Beta%29%20%281998-09-06%29.png"
   },
   "the-world-is-not-enough": {
+    "_date": "2026-08-03",
+    "_note": "libretro antepone '007', que el título del catálogo no lleva",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/007 - The World Is Not Enough (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/007%20-%20The%20World%20Is%20Not%20Enough%20%28USA%29.png"
   },
   "wave-race-64": {
+    "_date": "2026-08-03",
+    "_note": "libretro agrega al nombre la edición o el subtítulo, que el catálogo no lleva",
+    "_source": "libretro-thumbnails/Nintendo_-_Nintendo_64, Named_Boxarts/Wave Race 64 - Kawasaki Jet Ski (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Wave%20Race%2064%20-%20Kawasaki%20Jet%20Ski%20%28USA%29.png"
   }
 }

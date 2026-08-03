@@ -6,11 +6,16 @@ Muestra, por plataforma legacy objetivo, si su catálogo existe y qué % de cada
 "completable" (year/publisher/genre/serial) está lleno. Es la barra de progreso de
 "documentación mejorable hasta completar": lo corrés cuando quieras para ver qué falta.
 
+Al final separa lo **confirmado a mano** —las correcciones de `tools/overrides/` que citan su
+fuente— de lo auto-derivado. En el JSON los dos se ven igual, y no lo son.
+
 Uso:  python3 tools/catalog_report.py
 """
 import json, os
+from collections import Counter
 
 CAT_DIR = os.path.join(os.path.dirname(__file__), "..", "app", "src", "main", "assets", "catalogs")
+OVR_DIR = os.path.join(os.path.dirname(__file__), "overrides")
 
 # Las 11 consolas legacy objetivo: (nombre visible, archivo del catálogo, repo de Libretro).
 # Legacy = consola cerrada con carátulas en Libretro; se completa hasta el 100%.
@@ -56,6 +61,32 @@ def main():
     print("-" * 70)
     have = sum(1 for _n, f, _r in TARGETS if os.path.exists(os.path.join(CAT_DIR, f)))
     print(f"{have}/{len(TARGETS)} catálogos presentes · {grand} juegos catalogados")
+    confirmados()
+
+
+def confirmados():
+    """
+    Qué parte del dataset está **confirmada a mano** contra una fuente citada, campo por campo.
+
+    Todo lo demás es auto-derivado: salió de un scrape que nadie revisó. La distinción importa
+    porque los dos se ven igual en el JSON — un `serial` corregido leyendo la etiqueta del cartucho
+    en SNES Central y uno que el matcher por título dedujo son la misma cadena de texto.
+    """
+    if not os.path.isdir(OVR_DIR):
+        return
+    filas, total = [], 0
+    for f in sorted(x for x in os.listdir(OVR_DIR) if x.endswith(".json")):
+        data = json.load(open(os.path.join(OVR_DIR, f), encoding="utf-8"))
+        campos = Counter(k for v in data.values() for k in v if not k.startswith("_"))
+        con_fuente = sum(1 for v in data.values() if str(v.get("_source", "")).strip())
+        total += len(data)
+        filas.append((f[:-5], len(data), con_fuente,
+                      ", ".join(f"{k} ×{n}" for k, n in campos.most_common())))
+    print(f"\nConfirmado a mano ({total} correcciones con procedencia citada):")
+    for nombre, n, fuente, campos in filas:
+        marca = "" if fuente == n else f"  ⚠ {n - fuente} sin _source"
+        print(f"  {nombre:<20} {n:>3} correcciones   {campos}{marca}")
+    print("  El resto del dataset es auto-derivado (scrape sin revisar).")
 
 
 if __name__ == "__main__":

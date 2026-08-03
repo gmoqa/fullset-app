@@ -66,6 +66,43 @@ def lint_file(path):
     return len(data), errs
 
 
+OVR_DIR = os.path.join(os.path.dirname(__file__), "overrides")
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def lint_override(path):
+    """
+    Valida una corrección a mano: que apunte a algo que existe y que **diga de dónde salió**.
+
+    Un override pisa un valor auto-derivado, así que sin `_source` queda un dato que nadie puede
+    verificar ni revisar más adelante: solo se sabe que alguien, alguna vez, escribió otra cosa.
+    Estas claves viven **solo acá** — `apply_overrides` no las copia al catálogo, que tiene que
+    cumplir el esquema de 11 campos.
+    """
+    name = os.path.basename(path)
+    cat_path = os.path.join(CAT_DIR, name)
+    if not os.path.exists(cat_path):
+        return 0, [f"no hay catálogo {name} para estas correcciones"]
+    slugs = {e["slug"] for e in json.load(open(cat_path, encoding="utf-8"))}
+    data = json.load(open(path, encoding="utf-8"))
+    errs = []
+    for slug, fields in data.items():
+        if slug not in slugs:
+            errs.append(f"{slug!r}: no existe en {name}")
+        campos = [k for k in fields if not k.startswith("_")]
+        if not campos:
+            errs.append(f"{slug!r}: no corrige ningún campo")
+        for k in campos:
+            if k not in CANON_KEYS:
+                errs.append(f"{slug!r}: {k!r} no es un campo del esquema")
+        if not str(fields.get("_source", "")).strip():
+            errs.append(f"{slug!r}: falta '_source' (de dónde salió la corrección)")
+        fecha = str(fields.get("_date", ""))
+        if fecha and not DATE_RE.match(fecha):
+            errs.append(f"{slug!r}: '_date' no es AAAA-MM-DD ({fecha!r})")
+    return len(data), errs
+
+
 def main():
     # manifest.json no es un catálogo de juegos: se saltea.
     files = sorted(f for f in os.listdir(CAT_DIR) if f.endswith(".json") and f != "manifest.json")
@@ -78,6 +115,15 @@ def main():
         if len(errs) > 30:
             print(f"    … y {len(errs) - 30} más")
         total_errs += len(errs)
+
+    if os.path.isdir(OVR_DIR):
+        print()
+        for f in sorted(x for x in os.listdir(OVR_DIR) if x.endswith(".json")):
+            n, errs = lint_override(os.path.join(OVR_DIR, f))
+            print(f"overrides/{f:<13} {n:>5} correcciones   {'OK' if not errs else f'{len(errs)} ERRORES'}")
+            for e in errs[:15]:
+                print(f"    - {e}")
+            total_errs += len(errs)
     sys.exit(1 if total_errs else 0)
 
 

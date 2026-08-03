@@ -1,59 +1,116 @@
 {
   "buzz-lightyear-of-star-command": {
+    "_date": "2026-08-03",
+    "_note": "libretro antepone 'Disney-Pixar', que el título del catálogo no lleva",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Disney-Pixar Buzz Lightyear of Star Command (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Disney-Pixar%20Buzz%20Lightyear%20of%20Star%20Command%20%28USA%29.png"
   },
   "caesars-palace-2000": {
+    "_date": "2026-08-03",
+    "_note": "libretro agrega al nombre la edición o el subtítulo, que el catálogo no lleva",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Caesars Palace 2000 - Millennium Gold Edition (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Caesars%20Palace%202000%20-%20Millennium%20Gold%20Edition%20%28USA%29.png"
   },
   "dinosaur": {
+    "_date": "2026-08-03",
+    "_note": "libretro antepone \"Disney's\", que el título del catálogo no lleva",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Disney's Dinosaur (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Disney%27s%20Dinosaur%20%28USA%29.png"
   },
   "donald-duck-goin-quackers": {
+    "_date": "2026-08-03",
+    "_note": "libretro antepone \"Disney's\", que el título del catálogo no lleva",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Disney's Donald Duck - Goin' Quackers (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Disney%27s%20Donald%20Duck%20-%20Goin%27%20Quackers%20%28USA%29.png"
   },
   "espn-international-track-and-field": {
+    "_date": "2026-08-03",
+    "_note": "libretro reemplaza el '&' por '_', que no es válido en un nombre de archivo",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/ESPN International Track _ Field (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/ESPN%20International%20Track%20_%20Field%20%28USA%29.png"
   },
   "floigan-bros": {
+    "_date": "2026-08-03",
+    "_note": "libretro agrega al nombre la edición o el subtítulo, que el catálogo no lleva",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Floigan Bros. - Episode 1 (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Floigan%20Bros.%20-%20Episode%201%20%28USA%29.png"
   },
   "hidden-and-dangerous": {
+    "_date": "2026-08-03",
+    "_note": "libretro reemplaza el '&' por '_', que no es válido en un nombre de archivo",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Hidden _ Dangerous (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Hidden%20_%20Dangerous%20%28USA%29.png"
   },
   "metropolis-street-racer": {
+    "_date": "2026-08-03",
+    "_note": "libretro antepone 'MSR', que el título del catálogo no lleva",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/MSR - Metropolis Street Racer (USA) (Rev A).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/MSR%20-%20Metropolis%20Street%20Racer%20%28USA%29%20%28Rev%20A%29.png"
   },
   "midways-greatest-hits-volume-1": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Midway's Greatest Arcade Hits - Volume 1 (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Midway%27s%20Greatest%20Arcade%20Hits%20-%20Volume%201%20%28USA%29.png"
   },
   "midways-greatest-hits-volume-2": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Midway's Greatest Arcade Hits - Volume 2 (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Midway%27s%20Greatest%20Arcade%20Hits%20-%20Volume%202%20%28USA%29.png"
   },
   "railroad-tycoon-ii-gold-edition": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Railroad Tycoon II (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Railroad%20Tycoon%20II%20%28USA%29.png"
   },
   "record-of-lodoss-war-advent-of-cardice": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Record of Lodoss War (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Record%20of%20Lodoss%20War%20%28USA%29.png"
   },
   "rippin-riders-snowboarding": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Rippin' Riders (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Rippin%27%20Riders%20%28USA%29.png"
   },
   "sega-rally-championship-2": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Sega Rally 2 - Sega Rally Championship (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Sega%20Rally%202%20-%20Sega%20Rally%20Championship%20%28USA%29.png"
   },
   "sega-smash-pack-vol-1": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Sega Smash Pack - Volume 1 (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Sega%20Smash%20Pack%20-%20Volume%201%20%28USA%29.png"
   },
   "tom-clancys-rainbow-six-rogue-spear": {
+    "_date": "2026-08-03",
+    "_note": "libretro agrega al nombre la edición o el subtítulo, que el catálogo no lleva",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Tom Clancy's Rainbow Six - Rogue Spear + Mission Pack - Urban Operations (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Tom%20Clancy%27s%20Rainbow%20Six%20-%20Rogue%20Spear%20%2B%20Mission%20Pack%20-%20Urban%20Operations%20%28USA%29.png"
   },
   "toy-story-2-buzz-lightyear-to-the-rescue": {
+    "_date": "2026-08-03",
+    "_note": "libretro antepone 'Disney-Pixar', que el título del catálogo no lleva",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Disney-Pixar Toy Story 2 - Buzz Lightyear to the Rescue! (USA).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Disney-Pixar%20Toy%20Story%202%20-%20Buzz%20Lightyear%20to%20the%20Rescue%21%20%28USA%29.png"
   },
   "v-rally-2": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Test Drive V-Rally (USA) (En,Fr,De).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Test%20Drive%20V-Rally%20%28USA%29%20%28En%2CFr%2CDe%29.png"
   },
   "virtua-tennis-2": {
+    "_date": "2026-08-03",
+    "_note": "el nombre del archivo en libretro no coincide con el título del catálogo",
+    "_source": "libretro-thumbnails/Sega_-_Dreamcast, Named_Boxarts/Tennis 2K2 (USA) (En,Ja,Fr,De,Es) (Rev A).png",
     "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Dreamcast/master/Named_Boxarts/Tennis%202K2%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%29%20%28Rev%20A%29.png"
   }
 }
