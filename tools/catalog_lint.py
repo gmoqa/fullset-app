@@ -12,11 +12,23 @@ misma forma canónica, para que se puedan versionar y mantener sin sorpresas:
   - entradas ordenadas por slug
   - un objeto por línea (para diffs limpios)
 
+Y los invariantes de **significado**, que es donde vivieron todos los defectos que encontramos:
+
+  - `year` es el año de `releaseDate` (el mismo hecho contado dos veces, no pueden separarse)
+  - ningún juego es anterior al lanzamiento de su consola
+  - el prefijo del catalog number no es de otra región (SLUS/SLES/SLPM…)
+  - las carátulas de otra región no superan la línea base de `baseline-semantica.json`
+
+Las primeras reglas validan la forma, y daban OK con fechas japonesas en catálogos americanos,
+carátulas europeas en el americano y seriales de discos promocionales: todo eso es
+estructuralmente impecable. `tools/test_catalog_lint.py` prueba cada invariante contra el defecto
+real que le dio origen.
+
 Devuelve código 1 si hay errores, así sirve de pre-commit/CI. Si algo falla, casi siempre se
 arregla con:  python3 tools/normalize_catalogs.py
 Uso:  python3 tools/catalog_lint.py
 """
-import json, os, re, sys
+import json, os, re, sys, urllib.parse
 
 CAT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs")
 
@@ -70,6 +82,74 @@ def lint_file(path):
 OVR_DIR = os.path.join(os.path.dirname(__file__), "overrides")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
+# ---- Invariantes semánticos --------------------------------------------------------------------
+# Las reglas de arriba validan la **forma**: 11 claves, orden, tipos, unicidad. Todas se cumplían
+# mientras el dataset tenía fechas japonesas en catálogos americanos, carátulas europeas en el
+# americano y seriales del disco promocional. Una fecha de otra región es estructuralmente
+# impecable. Lo que sigue valida el **significado**, que es donde vivieron todos esos defectos.
+
+PLATFORMS = os.path.join(os.path.dirname(__file__), "..", "data", "config", "platforms.json")
+BASELINE = os.path.join(os.path.dirname(__file__), "baseline-semantica.json")
+
+# Prefijos de catalog number que identifican la región sin ambigüedad. Solo Sony y Nintendo: en
+# Sega la misma `T` aparece en las tres regiones, así que ahí no dice nada.
+SERIAL_REGION = {
+    "SLUS": "NTSC-U", "SCUS": "NTSC-U", "SKUS": "NTSC-U", "BLUS": "NTSC-U", "BCUS": "NTSC-U",
+    "SNS": "NTSC-U", "NES": "NTSC-U", "NUS": "NTSC-U",
+    "SLES": "PAL", "SCES": "PAL", "SCED": "PAL", "SLED": "PAL", "BLES": "PAL", "BCES": "PAL",
+    "SLPS": "NTSC-J", "SLPM": "NTSC-J", "SCPS": "NTSC-J", "SIPS": "NTSC-J", "PAPX": "NTSC-J",
+    "PBPX": "NTSC-J", "BLJM": "NTSC-J", "BLJS": "NTSC-J", "BCJS": "NTSC-J",
+    "SHVC": "NTSC-J", "HVC": "NTSC-J",
+}
+# `BLAS`/`BCAS`/`BLKS`/`BCKS` (Asia y Corea) aparecen en las tres regiones de PS3: no diagnostican.
+
+REGION_KEY = {"NTSC-U": "ntsc", "NTSC-J": "ntsc-j", "PAL": "pal"}
+COVER_REGION = {"NTSC-U": "USA", "NTSC-J": "JAPAN", "PAL": "EUROPE"}
+
+
+def _regiones_archivo(url):
+    """Regiones que declara el nombre de archivo de No-Intro, como conjunto."""
+    nombre = urllib.parse.unquote(url.rsplit("/", 1)[-1])
+    m = re.search(r"\(([^)]*)\)", nombre)
+    return {x.strip().upper() for x in m.group(1).split(",")} if m else set()
+
+
+def lint_semantica(data, lanzamiento):
+    """
+    Errores de significado y el conteo de carátulas de otra región (que se compara contra la línea
+    base, porque muchas son inevitables: libretro no publica tapa de ese mercado).
+    """
+    errs, fuera_de_region = [], 0
+    for i, e in enumerate(data):
+        donde = f"[{i}] {e.get('title', '?')!r}"
+
+        # `year` tiene que ser el año de `releaseDate`: son el mismo hecho contado dos veces, y que
+        # se separen significa que un enriquecedor escribió uno y se olvidó del otro.
+        iso = (e.get("releaseDate") or "").strip()
+        if iso and e.get("year") != int(iso[:4]):
+            errs.append(f"{donde}: year={e.get('year')} no coincide con releaseDate={iso!r}")
+
+        # Un juego no pudo salir antes que su consola. Lo contrario —salir después de
+        # discontinuarla— es normal y NO se valida: Tec Toy publicó Master System en Brasil hasta
+        # 2011 y Japón tuvo Dreamcast hasta 2004.
+        if e.get("year") and lanzamiento and e["year"] < lanzamiento:
+            errs.append(f"{donde}: año {e['year']} anterior al lanzamiento de la consola ({lanzamiento})")
+
+        serial = (e.get("serial") or "").strip()
+        m = re.match(r"^[A-Za-z]+", serial)
+        if m:
+            esperada = SERIAL_REGION.get(m.group(0).upper())
+            if esperada and esperada != e.get("region"):
+                errs.append(f"{donde}: serial {serial!r} es de {esperada}, no de {e.get('region')}")
+
+        url = (e.get("coverUrl") or "").strip()
+        if url and "steamgriddb" not in url:
+            suyas = _regiones_archivo(url)
+            quiero = COVER_REGION.get(e.get("region"))
+            if suyas and quiero not in suyas and "WORLD" not in suyas:
+                fuera_de_region += 1
+    return errs, fuera_de_region
+
 
 def lint_override(path):
     """
@@ -107,9 +187,26 @@ def lint_override(path):
 def main():
     # manifest.json no es un catálogo de juegos: se saltea.
     files = sorted(f for f in os.listdir(CAT_DIR) if f.endswith(".json") and f != "manifest.json")
+    plats = {p["name"]: p for p in json.load(open(PLATFORMS, encoding="utf-8"))}
+    base = json.load(open(BASELINE, encoding="utf-8")) if os.path.exists(BASELINE) else {}
+    actual = {}
     total_errs = 0
     for f in files:
         n, errs = lint_file(os.path.join(CAT_DIR, f))
+        data = json.load(open(os.path.join(CAT_DIR, f), encoding="utf-8"))
+        if data:
+            info = plats.get(data[0]["platform"], {}).get("info", {})
+            lanz = info.get("released", {}).get(REGION_KEY.get(data[0]["region"]))
+            sem, fuera = lint_semantica(data, lanz)
+            errs += sem
+            actual[f] = fuera
+            # La deuda conocida no puede **crecer**. Muchas carátulas de otra región son inevitables
+            # —libretro no publica tapa de ese mercado— así que exigir cero sería mentir; lo que no
+            # se tolera es que aparezcan nuevas, que es como se coló el bug del 32X.
+            tope = base.get(f)
+            if tope is not None and fuera > tope:
+                errs.append(f"carátulas de otra región: {fuera} (la línea base es {tope}) "
+                            f"→ revisá el ranking de región antes de subir la base")
         print(f"{f:<24} {n:>5} entradas   {'OK' if not errs else f'{len(errs)} ERRORES'}")
         for e in errs[:30]:
             print(f"    - {e}")
@@ -125,6 +222,15 @@ def main():
             for e in errs[:15]:
                 print(f"    - {e}")
             total_errs += len(errs)
+    fuera = sum(actual.values())
+    if not base:
+        json.dump(actual, open(BASELINE, "w", encoding="utf-8"), indent=2, sort_keys=True)
+        open(BASELINE, "a", encoding="utf-8").write("\n")
+        print(f"\nlínea base de carátulas creada ({fuera} de otra región)")
+    else:
+        bajo = sum(max(base.get(k, 0) - v, 0) for k, v in actual.items())
+        print(f"\ncarátulas de otra región: {fuera}"
+              + (f" · {bajo} menos que la línea base (podés bajarla)" if bajo else ""))
     sys.exit(1 if total_errs else 0)
 
 

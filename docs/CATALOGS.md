@@ -61,6 +61,37 @@ Corregidas **130 carátulas** en 20 catálogos (32X americano 7, Genesis europeo
 caer a otra es lo único posible. Otras 5 son deliberadas — la única americana disponible es una
 `(Beta)`, y una caja de prototipo no es la que está en el estante.
 
+## Invariantes semánticos — validar el significado, no solo la forma
+
+Las reglas de forma de `catalog_lint.py` (11 claves, orden, tipos, unicidad, ordenamiento) daban
+**OK** mientras el dataset tenía fechas japonesas en catálogos americanos, carátulas europeas en el
+americano y seriales de discos promocionales. Una fecha de otra región es estructuralmente
+impecable: por eso ninguno de esos defectos se detectó solo, y todos aparecieron de casualidad.
+
+Ahora también se valida el significado:
+
+| Invariante | Por qué | Estado |
+|---|---|---|
+| `year` es el año de `releaseDate` | Son el mismo hecho contado dos veces; separarse significa que un enriquecedor escribió uno y olvidó el otro | duro, 0 |
+| Ningún juego es anterior al lanzamiento de su consola | *The Three Stooges* de PSX estaba fechado en 1987, que es el original de Amiga | duro, 0 (13 corregidos) |
+| El prefijo del catalog number no es de otra región | `SHVC-AHZJ-JPN` —con "JPN" en el texto— estaba en el catálogo americano de SNES | duro, 0 (8 vaciados) |
+| Las carátulas de otra región no superan la línea base | 1.827 son inevitables (libretro no publica tapa de ese mercado); lo que no se tolera es que **crezcan** | línea base |
+
+Lo que **no** se valida, a propósito: que un juego salga *después* de discontinuar la consola. Es
+normal — Tec Toy publicó Master System en Brasil hasta 2011 y Japón tuvo Dreamcast hasta 2004.
+Validarlo daba 151 falsos positivos.
+
+El prefijo de serial solo diagnostica región en Sony y Nintendo. En Sega la misma `T` aparece en
+las tres, y en PS3 los prefijos asiáticos (`BLAS`, `BCAS`, `BLKS`) también: esos quedan exentos.
+
+`tools/test_catalog_lint.py` prueba cada invariante **contra el defecto real que le dio origen**,
+más los casos legítimos que no debe marcar. Un invariante sin test es una promesa, no una garantía.
+
+**Rating con sistema.** El 40% de los ratings (1.549) no llevaba prefijo: eran `All ages`, `18+`,
+`Violence`, `X (adults only)`. Todos NTSC-J y de plataformas Sega — la autorregulación previa a
+CERO. Pasaron a `Sega: All ages` y equivalentes, así que el esquema `SISTEMA: valor` ahora se
+cumple en el 100%.
+
 ### Estado por catálogo (auditado 2026-08-03)
 
 **Sega: cobertura completa.** Las 8 consolas × las 3 regiones (**6226 juegos**), con Sega Retro como
