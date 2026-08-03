@@ -92,6 +92,45 @@ más los casos legítimos que no debe marcar. Un invariante sin test es una prom
 CERO. Pasaron a `Sega: All ages` y equivalentes, así que el esquema `SISTEMA: valor` ahora se
 cumple en el 100%.
 
+## Normalización — identidad, vocabularios y desambiguación
+
+**El slug se deriva del título y no se congela.** `slug()` descartaba los diacríticos en vez de
+transliterarlos, así que `Astérix` daba `ast-rix` y `Crüe Ball` daba `cr-e-ball`: la `é` no es
+`[a-z0-9]` y el `re.sub` final la convertía en separador, partiendo la palabra. Corregido, más la
+convención de `&` (408 títulos ya usaban `and`, 39 lo descartaban), quedaron **310 slugs
+normalizados**. El lint exige ahora que el slug derive del título, admitiendo un sufijo extra para
+las desambiguaciones a mano —`Street Fighter Zero 2` y `Street Fighter Zero 2'` darían el mismo, y
+el segundo lleva su catalog number pegado—.
+
+Renombrar un slug es delicado porque la tabla `game` de la app lo usa como vínculo con el catálogo,
+y el refresco hacía `?: continue`: el juego dejaba de recibir actualizaciones **en silencio**. Ahora
+`DiarySeeder` tiene un índice de respaldo por título normalizado que reconoce el juego y le repara
+el slug, así que este renombre y cualquier futuro se resuelven solos.
+
+**Editoras.** Eran 1.663 grafías para 1.574 empresas. `tools/alias-editoras.json` colapsa **89
+variantes** que son puro ruido —mayúsculas, comas, `Inc.`, `Co.`, `Corporation`— y deja intactas las
+palabras que distinguen una entidad de otra: `Sega of America` y `Sega Europe` son editoras
+distintas y siguen separadas. Donde la frecuencia elegía una grafía que no es la de la marca hay una
+excepción explícita: `SEGA` (1.094) perdía contra `Sega` (736) por conteo, pero *Sega* es como lo
+escriben Wikipedia, Sega Retro y esta documentación.
+
+**Géneros.** `Various` no es un género sino la ausencia de uno disfrazada de dato: se vació.
+`Casual Game`→`Casual`, `Sports with Animals`→`Sports`, `Music / Dancing`→`Music`. **No** se
+fusionaron `Shooter`, `Shoot'em Up` y `Lightgun Shooter`: parecen solapados y son subgéneros
+distintos.
+
+**Lo que NO se normalizó, a propósito.** 228 títulos de catálogos Sega llevan su propia plataforma
+entre paréntesis (`Doom (32X)`, `Putt & Putter (Game Gear)`) porque Sega Retro desambigua contra su
+wiki entera. Sacarlo es puramente cosmético —`core()` ya los ignora al cruzar— y el costo es
+renombrar 228 slugs *y* cambiar el título mostrado, que rompe las dos vías de reparación a la vez.
+No compensa.
+
+**Desambiguación.** 31 juegos son indistinguibles al normalizar, porque `core()` borra los
+paréntesis para poder cruzar con los nombres de No-Intro y eso también borra los desambiguadores
+propios: `Sonic the Hedgehog` y `Sonic the Hedgehog (Genesis)`, `Jeopardy!` y `Jeopardy! (2012)`.
+Cualquier matcher que se quede con el primero elige al azar. El validador de la colección ahora
+prefiere la coincidencia **literal** y, si sigue habiendo más de una, pregunta en vez de elegir.
+
 ### Estado por catálogo (auditado 2026-08-03)
 
 **Sega: cobertura completa.** Las 8 consolas × las 3 regiones (**6226 juegos**), con Sega Retro como

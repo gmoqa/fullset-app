@@ -1,254 +1,254 @@
 {
   "an-american-tail-fievel-goes-west": {
-    "serial": "SNS-9W-USA",
-    "_source": "SNES Central — ficha de 'An American Tail: Fievel Goes West', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'An American Tail: Fievel Goes West', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-9W-USA"
   },
   "ballz-3d": {
-    "serial": "SNS-ABZE-USA",
-    "_source": "SNES Central — ficha de 'Ballz 3D', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Ballz 3D', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-ABZE-USA"
   },
   "bassins-black-bass-with-hank-parker": {
-    "serial": "SNS-AB2E-USA",
-    "_source": "libretro-database: 'Bassin's Black Bass (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Bassin's Black Bass (USA)'",
+    "serial": "SNS-AB2E-USA"
   },
   "brawl-brothers": {
-    "serial": "SNS-RE-USA",
-    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "compartía SNS-RB con Rival Turf!",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-RE-USA"
   },
   "championship-soccer-94": {
-    "serial": "SNS-67-USA",
-    "_source": "SNES Central — ficha de 'Championship Soccer '94', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Championship Soccer '94', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-67-USA"
   },
   "choplifter-iii": {
-    "serial": "SNS-3C",
-    "_source": "libretro-database: 'Choplifter III - Rescue-Survive (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Choplifter III - Rescue-Survive (USA)'",
+    "serial": "SNS-3C"
   },
   "desert-strike": {
-    "serial": "SNS-RG",
-    "_source": "libretro-database: 'Desert Strike - Return to the Gulf (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Desert Strike - Return to the Gulf (USA)'",
+    "serial": "SNS-RG"
   },
   "donkey-kong-country-blockbuster-world-video-game-championship-ii": {
-    "serial": "DIS-SNS-8X-USA",
-    "_source": "SNES Central — ficha de 'Donkey Kong Country: Blockbuster World Video Game Championship II', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Donkey Kong Country: Blockbuster World Video Game Championship II', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "DIS-SNS-8X-USA"
   },
   "hit-the-ice": {
-    "serial": "SNS-HC-USA",
-    "_source": "libretro-database: 'Hit the Ice - VHL - The Official Video Hockey League (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Hit the Ice - VHL - The Official Video Hockey League (USA)'",
+    "serial": "SNS-HC-USA"
   },
   "home-improvement": {
-    "serial": "SNS-AHIE-USA",
-    "_source": "libretro-database: 'Home Improvement - Power Tool Pursuit! (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Home Improvement - Power Tool Pursuit! (USA)'",
+    "serial": "SNS-AHIE-USA"
   },
   "jammit": {
-    "serial": "SNS-J6-USA",
-    "_source": "SNES Central — ficha de 'Jammit', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Jammit', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-J6-USA"
   },
   "king-of-the-monsters-2": {
-    "serial": "SNS-KT-USA",
-    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "compartía SNS-A7SE-USA con Samurai Shodown",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-KT-USA"
   },
   "lost-vikings-2": {
-    "serial": "SNS-ALVE-USA",
-    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "compartía SNS-LV con The Lost Vikings",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-ALVE-USA"
   },
   "mario-paint": {
-    "serial": "SNS-MP-USA",
-    "_source": "SNES Central — ficha de 'Mario Paint', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Mario Paint', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-MP-USA"
   },
   "mickey-mania": {
-    "serial": "SNS-AMIE-USA",
-    "_source": "libretro-database: 'Mickey Mania - The Timeless Adventures of Mickey Mouse (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Mickey Mania - The Timeless Adventures of Mickey Mouse (USA)'",
+    "serial": "SNS-AMIE-USA"
   },
   "mighty-morphin-power-rangers": {
-    "serial": "SNS-52-USA",
-    "_source": "SNES Central — ficha de 'Mighty Morphin Power Rangers', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Mighty Morphin Power Rangers', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-52-USA"
   },
   "monopoly": {
-    "serial": "SNS-ML-USA",
-    "_source": "SNES Central — ficha de 'Monopoly', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Monopoly', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-ML-USA"
   },
   "mortal-kombat-competition-edition": {
-    "serial": "SNS-KX-USA",
-    "_source": "SNES Central — ficha de 'Mortal Kombat: Competition Edition', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Mortal Kombat: Competition Edition', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-KX-USA"
   },
   "olympic-summer-games-atlanta-1996": {
-    "serial": "SNS-AO9E-USA",
-    "_source": "libretro-database: 'Olympic Summer Games (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Olympic Summer Games (USA)'",
+    "serial": "SNS-AO9E-USA"
   },
   "operation-europe-path-to-victory": {
-    "serial": "SNS-YP",
-    "_source": "libretro-database: 'Operation Europe - Path to Victory 1939-45 (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Operation Europe - Path to Victory 1939-45 (USA)'",
+    "serial": "SNS-YP"
   },
   "r-type-iii-the-third-lightning": {
-    "serial": "SNS-ER-USA",
-    "_source": "libretro-database: 'R-Type III (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'R-Type III (USA)'",
+    "serial": "SNS-ER-USA"
   },
   "rival-turf": {
-    "serial": "SNS-RB-USA",
-    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "compartía SNS-RB con Brawl Brothers",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-RB-USA"
   },
   "samurai-shodown": {
-    "serial": "SNS-A7SE-USA",
-    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "compartía SNS-A7SE-USA con King of the Monsters 2",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-A7SE-USA"
   },
   "simant": {
-    "serial": "SNS-AN-USA",
-    "_source": "libretro-database: 'SimAnt - The Electronic Ant Colony (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'SimAnt - The Electronic Ant Colony (USA)'",
+    "serial": "SNS-AN-USA"
   },
   "spawn-the-video-game": {
-    "serial": "SNS-A9WE-USA",
-    "_source": "SNES Central — ficha de 'Spawn: The Video Game', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Spawn: The Video Game', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-A9WE-USA"
   },
   "star-fox-super-weekend": {
-    "serial": "SNS-FO-DIS",
-    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "compartía SNS-FO con Star Fox; es el cartucho de competencia",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-FO-DIS"
   },
   "street-fighter-ii-the-world-warrior": {
-    "serial": "SNS-S2",
-    "_source": "libretro-database: 'Street Fighter II (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Street Fighter II (USA)'",
+    "serial": "SNS-S2"
   },
   "street-hockey-95": {
-    "serial": "SNS-AHYE-USA",
-    "_source": "SNES Central — ficha de 'Street Hockey '95', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Street Hockey '95', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-AHYE-USA"
   },
   "super-baseball-2020": {
-    "serial": "SNS-SA-USA",
-    "_source": "SNES Central — ficha de 'Super Baseball 2020', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Super Baseball 2020', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-SA-USA"
   },
   "super-conflict-the-mideast": {
-    "serial": "SNS-CN",
-    "_source": "libretro-database: 'Super Conflict (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Super Conflict (USA)'",
+    "serial": "SNS-CN"
   },
   "super-metroid": {
-    "serial": "SNS-RI-USA",
-    "_source": "SNES Central — ficha de 'Super Metroid', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Super Metroid', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-RI-USA"
   },
   "super-star-wars": {
-    "serial": "SNS-V4-USA",
-    "_source": "SNES Central — ficha de 'Super Star Wars', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Super Star Wars', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-V4-USA"
   },
   "super-street-fighter-ii-the-new-challengers": {
-    "serial": "SNS-XW",
-    "_source": "libretro-database: 'Super Street Fighter II (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Super Street Fighter II (USA)'",
+    "serial": "SNS-XW"
   },
   "test-drive-ii-the-duel": {
-    "serial": "SNS-DL-USA",
-    "_source": "SNES Central — ficha de 'Test Drive II: The Duel', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Test Drive II: The Duel', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-DL-USA"
   },
   "the-adventures-of-mighty-max": {
-    "serial": "SNS-AMOE-USA",
-    "_source": "libretro-database: 'Mighty Max (USA)'",
+    "_date": "2026-07-30",
     "_note": "el catálogo traía el serial de otra región (SNSP-=Europa, SHVC-=Japón); esta lista es NTSC-U",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Mighty Max (USA)'",
+    "serial": "SNS-AMOE-USA"
   },
   "the-lost-vikings": {
-    "serial": "SNS-LV-USA",
-    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "compartía SNS-LV con Lost Vikings 2",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-LV-USA"
   },
-  "thomas-the-tank-engine-friends-adventure-series": {
-    "serial": "SNS-6T",
-    "_source": "libretro-database: 'Thomas the Tank Engine & Friends (USA)'",
+  "thomas-the-tank-engine-and-friends-adventure-series": {
+    "_date": "2026-07-30",
     "_note": "el catálogo lo tenía vacío; libretro usa una forma corta del mismo título",
-    "_date": "2026-07-30"
+    "_source": "libretro-database: 'Thomas the Tank Engine & Friends (USA)'",
+    "serial": "SNS-6T"
   },
   "tony-meolas-sidekicks-soccer": {
-    "serial": "SNS-6K-USA",
-    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "compartía SNS-WO con World Soccer '94",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de este título, tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-6K-USA"
   },
   "toys": {
-    "serial": "SNS-YT-USA",
-    "_source": "SNES Central — ficha de 'Toys', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Toys', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-YT-USA"
   },
   "uncharted-waters-new-horizons": {
-    "serial": "SNS-QL-USA",
-    "_source": "SNES Central — ficha de 'Uncharted Waters: New Horizons', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Uncharted Waters: New Horizons', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-QL-USA"
   },
   "wild-cats": {
-    "serial": "SNS-AWIE-USA",
-    "_source": "SNES Central — ficha de 'Wild C.A.T.s', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'Wild C.A.T.s', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-AWIE-USA"
   },
   "x-zone": {
-    "serial": "SNS-XZ-USA",
-    "_source": "SNES Central — ficha de 'X-Zone', tabla 'Cartridge label information', fila Americas/USA",
+    "_date": "2026-07-30",
     "_note": "libretro-database no tiene la entrada estadounidense de este título",
-    "_date": "2026-07-30"
+    "_source": "SNES Central — ficha de 'X-Zone', tabla 'Cartridge label information', fila Americas/USA",
+    "serial": "SNS-XZ-USA"
   }
 }

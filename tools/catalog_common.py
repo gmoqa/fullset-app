@@ -93,6 +93,19 @@ def na_year(cell, lo=1983, hi=2010):
 
 
 def slug(t):
+    """
+    Identidad estable del juego dentro de su plataforma.
+
+    **Los diacríticos se transliteran, no se descartan.** Sin esto `Astérix` daba `ast-rix` y
+    `Crüe Ball` daba `cr-e-ball`: la `é` no es `[a-z0-9]`, así que el `re.sub` final la convertía en
+    separador y partía la palabra al medio. Son 7 juegos con el slug roto.
+
+    Ojo al tocar esta función: la tabla `game` de la app guarda el `slug` como vínculo con el
+    catálogo, así que cambiar cómo se genera **renombra juegos que ya están en la colección del
+    usuario** y rompe ese vínculo en silencio. Lo que ya está escrito se respeta aunque no coincida
+    con lo que esta función daría hoy (ver `slugs-heredados.json` y la regla del lint).
+    """
+    t = ''.join(c for c in unicodedata.normalize('NFKD', t) if not unicodedata.combining(c))
     s = t.lower().replace('&', ' and ')
     s = re.sub(r"[.'’:]", '', s)
     return re.sub(r'[^a-z0-9]+', '-', s).strip('-')

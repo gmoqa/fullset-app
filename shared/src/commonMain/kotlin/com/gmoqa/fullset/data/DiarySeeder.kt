@@ -65,6 +65,14 @@ class DiarySeeder(
     }
 
     /**
+     * Clave para reconocer un juego por su nombre: minúsculas, sin acentos y sin puntuación.
+     * Tolera que el catálogo escriba "Heavy Metal: Geomatrix" y la colección "Heavy Metal Geomatrix".
+     */
+    private fun titleKey(raw: String): String = buildString {
+        for (c in raw.lowercase()) if (c.isLetterOrDigit()) append(c)
+    }
+
+    /**
      * Vuelve a cruzar la colección con los catálogos y completa **solo lo que esté vacío**
      * (catalog number, editora, género, año).
      *
@@ -88,10 +96,30 @@ class DiarySeeder(
             }
             platform.name to entries
         }
+        // Índice de respaldo por título normalizado. El `slug` es la identidad, pero se genera a
+        // partir del título y esa generación cambió con el tiempo (los acentos se transliteran, el
+        // "&" pasó a "and"). Cuando un catálogo se corrige, el juego que el usuario ya tenía queda
+        // apuntando a un slug que ya no existe y **deja de recibir actualizaciones en silencio**,
+        // porque acá abajo había un `?: continue` y nada más. Con esto se reconoce por título y se
+        // le repara el slug, así el problema se arregla solo la próxima vez que corra.
+        val byTitle = registry.all().associate { platform ->
+            val entries = HashMap<String, CatalogEntry>()
+            for (region in RegionFilter.entries) {
+                catalog.entries(platform, region).forEach { entries.putIfAbsent(titleKey(it.title), it) }
+            }
+            platform.name to entries
+        }
         repo.database.transaction {
             for (game in repo.games()) {
                 if (game.slug.isBlank()) continue
-                val entry = bySlug[game.platform]?.get(game.slug) ?: continue
+                val entry = bySlug[game.platform]?.get(game.slug)
+                    ?: byTitle[game.platform]?.get(titleKey(game.name))?.also { found ->
+                        repo.linkCatalog(
+                            name = game.name, platform = game.platform, slug = found.slug,
+                            publisher = found.publisher, serial = found.serial, year = found.year,
+                        )
+                    }
+                    ?: continue
                 repo.fillFromCatalog(
                     game.id,
                     serial = entry.serial,

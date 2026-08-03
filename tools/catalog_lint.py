@@ -30,6 +30,9 @@ Uso:  python3 tools/catalog_lint.py
 """
 import json, os, re, sys, urllib.parse
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from catalog_common import slug as slugify  # noqa: E402
+
 CAT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs")
 
 CANON_KEYS = ["title", "platform", "region", "year", "releaseDate", "publisher", "genre", "slug", "serial", "coverUrl", "rating"]
@@ -134,6 +137,15 @@ def lint_semantica(data, lanzamiento):
         # 2011 y Japón tuvo Dreamcast hasta 2004.
         if e.get("year") and lanzamiento and e["year"] < lanzamiento:
             errs.append(f"{donde}: año {e['year']} anterior al lanzamiento de la consola ({lanzamiento})")
+
+        # El slug se deriva del título. Se admite un sufijo extra porque a veces hace falta
+        # desambiguar a mano —`Street Fighter Zero 2` y `Street Fighter Zero 2'` darían el mismo,
+        # y el segundo lleva su catalog number pegado— pero no que sea otra cosa. Sin esta regla,
+        # cambiar `slug()` renombraba juegos en silencio y los desvinculaba de la colección.
+        esperado = slugify(e.get("title") or "")
+        actual_slug = e.get("slug") or ""
+        if esperado and actual_slug != esperado and not actual_slug.startswith(esperado + "-"):
+            errs.append(f"{donde}: slug {actual_slug!r} no deriva del título (esperado {esperado!r})")
 
         serial = (e.get("serial") or "").strip()
         m = re.match(r"^[A-Za-z]+", serial)
