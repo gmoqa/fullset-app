@@ -35,6 +35,7 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 | `serial` (consolas de disco) | **Redump**, vía `libretro-database/metadat/redump/` | `tools/enrich_serials_redump.py`, tomando la entrada de la región del catálogo |
 | `coverUrl` (PS3) | **SteamGridDB** | `tools/enrich_covers_steamgriddb.py`, **solo con título idéntico**; libretro publica apenas 67 tapas de PS3 |
 | `releaseDate` (no-Sega) | **Wikipedia**, listas "List of … games" | `tools/enrich_dates_wikipedia.py`; la columna de región se lee de la cabecera de la tabla, no se asume |
+| `releaseDate` (huecos) | **Wikipedia**, ficha del artículo de cada juego | `tools/enrich_dates_wikipedia_infobox.py`, leyendo `{{Video game release\|NA\|…\|EU\|…}}` acotado al bloque de la consola |
 | `coverUrl` | **libretro-thumbnails** (`Named_Boxarts/`) | match por título, región más cercana a NTSC-U, evitando Beta/Proto |
 | `publisher` / `genre` | **libretro-database** (`metadat/publisher/`, `metadat/genre/`, CC BY-SA 4.0) | `tools/enrich_meta_libretro.py`, prefiriendo la etiqueta de región del DAT |
 | `publisher` (consolas de disco) | **Sega Retro**, tabla `companies` | rol `Publisher(US/JP/EU)` según la región, con respaldo al `Publisher` genérico |
@@ -103,7 +104,7 @@ serial (`SCES`/`SLES`), así que Wikipedia lo lista en **una sola columna** y co
 
 | Catálogo | Juegos | fecha | editora | serial | cover |
 |---|---|---|---|---|---|
-| `psx-usa.json` | 1344 | 77% | 100% | 87% | 87% |
+| `psx-usa.json` | 1344 | 91% (1222 al día) | 100% | 87% | 87% |
 | `psx-jp.json` | 3148 | **100%** (3145 al día) | 98% | 54% | 59% |
 | `psx-eu.json` | 1287 | **100%** (790 al día) | 99% | 65% | 68% |
 
@@ -126,17 +127,22 @@ otra razón para leer la cabecera en vez de fijar el índice.
 pone **una sola** —la del primer lanzamiento, etiquetada con su mercado (`2005-11-23{{sup|JP}}`)— y
 tres columnas que son apenas una tilde de "salió acá".
 
-De ahí sale el hueco de fechas: la fecha se copia **solo si su etiqueta coincide con la región del
-catálogo**. Un juego que debutó en Japón en 2003 y llegó a Europa en 2005 tiene una única fecha, la
-japonesa; ponérsela al europeo le inventaría dos años de antigüedad. Por eso `ps2-eu` queda en 28%:
-casi nada debutó en Europa. Es un vacío honesto, no un error — se llena cuando aparezca una fuente
-con fechas PAL propias.
+De ahí venía el hueco de fechas: la fecha de la tabla se copia **solo si su etiqueta coincide con la
+región del catálogo**. Un juego que debutó en Japón en 2003 y llegó a Europa en 2005 tiene una única
+fecha, la japonesa; ponérsela al europeo le inventaría dos años de antigüedad. Con eso solo, `ps2-eu`
+quedaba en **28%** —casi nada debutó en Europa—, y como la app ordena por lanzamiento, tres de cada
+cuatro juegos caían al fondo de la estantería.
+
+Las que faltaban salen de la **ficha del artículo de cada juego**
+(`enrich_dates_wikipedia_infobox.py`), que sí trae las tres regiones. El artículo se saca del enlace
+de la propia tabla, no adivinando la URL: hay desambiguaciones (`Killzone (video game)`) que no se
+derivan del título.
 
 | Catálogo | Juegos | fecha | editora | serial | cover |
 |---|---|---|---|---|---|
-| `ps2-usa.json` | 1815 | 64% (1175 al día) | 100% | 90% | 90% |
-| `ps2-jp.json` | 2975 | 80% (2384 al día) | 100% | 51% | 57% |
-| `ps2-eu.json` | 2226 | 28% (633 al día) | 100% | 80% | 88% |
+| `ps2-usa.json` | 1815 | 91% (1653 al día) | 100% | 90% | 90% |
+| `ps2-jp.json` | 2975 | 85% (2550 al día) | 100% | 51% | 57% |
+| `ps2-eu.json` | 2226 | 72% (1593 al día) | 100% | 80% | 88% |
 
 Otra particularidad de esa tabla: las filas **omiten las celdas vacías del final**, así que un
 exclusivo europeo escribe seis celdas y no siete. Exigir un largo fijo descartaba justamente a los
