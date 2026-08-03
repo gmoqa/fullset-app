@@ -20,7 +20,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from catalog_common import slug, write_catalog  # noqa: E402
-from enrich_dates_wikipedia import wikitext, region_column  # noqa: E402
+from enrich_dates_wikipedia import wikitext, region_column, region_base, row_cells  # noqa: E402
 
 
 def clean_cell(text: str) -> str:
@@ -87,15 +87,15 @@ def publisher_column(text: str) -> int | None:
 def parse(text: str, column: int, publisher_at: int | None) -> list[dict]:
     """Filas con fecha en la columna pedida: título, editora y fecha ISO de precisión variable."""
     out = []
+    # Se indexa por **celda real**, no por "la enésima plantilla de fecha de la fila": varias listas
+    # meten una columna `First released` antes de las de región (ver `region_base`).
+    base = region_base(text)
     for block in text.split("\n|-")[1:]:
-        # Case-insensitive: la lista de PlayStation escribe `{{unreleased}}` y la de GameCube
-        # `{{Unreleased}}`. Saltear una desplazaría los índices y le asignaría a cada juego la
-        # fecha de otra región.
-        cells = re.findall(
-            r"(\{\{unreleased\}\}|\{\{dts\|[^}]+\}\}|\{\{n/a[^}]*\}\})", block, re.I)
-        if len(cells) <= column:
+        cells = row_cells(block)
+        if len(cells) <= base + column:
             continue
-        m = re.match(r"\{\{dts\|(\d{4})(?:\|(\d{1,2}))?(?:\|(\d{1,2}))?", cells[column])
+        m = re.search(r"\{\{dts\|(\d{4})(?:\|(\d{1,2}))?(?:\|(\d{1,2}))?",
+                      cells[base + column], re.I)
         if not m:
             continue  # `unreleased` en esta región: el juego no salió acá
         year, month, day = m.group(1), m.group(2), m.group(3)
@@ -117,17 +117,6 @@ def parse(text: str, column: int, publisher_at: int | None) -> list[dict]:
 
 # Etiqueta de región tal como la escribe la columna "First released" de la lista de PS2.
 FIRST_RELEASED_TAG = {"NTSC-U": "NA", "NTSC-J": "JP", "PAL": "EU"}
-
-
-def row_cells(block: str) -> list[str]:
-    """Celdas de una fila: cada línea que abre con `|` es una celda y `||` separa varias en la misma."""
-    out = []
-    for line in block.split("\n"):
-        line = line.strip()
-        if not line.startswith("|") or line.startswith("|-"):
-            continue
-        out.extend(line[1:].split("||"))
-    return out
 
 
 def parse_checkmarks(text: str, region: str) -> list[dict]:

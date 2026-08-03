@@ -266,6 +266,18 @@ def date_for(text: str, platform: str, region: str) -> str:
     return ""
 
 
+def refines(old: str, new: str) -> bool:
+    """
+    Si [new] es la **misma** fecha que [old] pero más precisa.
+
+    Se exige que una sea prefijo de la otra: `1991-06` → `1991-06-11` sí, `1991` → `1991-08-13`
+    también. Pero `1991-06` → `1991-08-13` **no**, aunque tenga más dígitos: ahí las dos fuentes se
+    contradicen en el mes, y elegir la más larga sería confundir precisión con certeza. Esos casos
+    se quedan como están y se reportan aparte, que es donde vale la pena mirar a mano.
+    """
+    return len(new) > len(old) and new.startswith(old)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("catalog")
@@ -274,6 +286,9 @@ def main() -> None:
     ap.add_argument("--cache", help="carpeta donde cachear el wikitext de las listas")
     ap.add_argument("--fill", default="releaseDate",
                     help="campos a completar, separados por coma: releaseDate, publisher")
+    ap.add_argument("--refine", action="store_true",
+                    help="además de rellenar vacías, subir la precisión de las que ya tienen fecha "
+                         "(1991 o 1991-06 -> 1991-06-11) cuando la ficha coincide")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -282,8 +297,16 @@ def main() -> None:
     links = article_links(args.pages, args.cache)
 
     fields = args.fill.split(",")
-    missing = [e for e in catalog
-               if any(not e[f].strip() for f in fields if f in ("releaseDate", "publisher"))]
+
+    def incomplete(e: dict) -> bool:
+        if "publisher" in fields and not e["publisher"].strip():
+            return True
+        if "releaseDate" not in fields:
+            return False
+        # Con --refine también entran las que ya tienen fecha pero sin día.
+        return len(e["releaseDate"].strip()) < (10 if args.refine else 1)
+
+    missing = [e for e in catalog if incomplete(e)]
     wanted, unlinked = {}, 0
     for entry in missing:
         art = links.get(core(entry["title"]))
@@ -293,32 +316,47 @@ def main() -> None:
             unlinked += 1
     print(f"{len(missing)} incompletos · {len(wanted)} con artículo · {unlinked} sin enlace")
 
-    filled = day = pubs = 0
+    filled = day = pubs = refined = 0
+    conflicts: list[tuple[str, str, str]] = []
     titles = list(wanted)
     for i in range(0, len(titles), BATCH):
         chunk = titles[i:i + BATCH]
         for name, text in fetch(chunk).items():
             for entry in wanted.get(name, []):
-                if "releaseDate" in fields and not entry["releaseDate"].strip():
-                    iso = date_for(text, args.platform, region)
-                    if iso:
+                if "releaseDate" in fields:
+                    old = entry["releaseDate"].strip()
+                    iso = date_for(text, args.platform, region) if (not old or args.refine) else ""
+                    if iso and not old:
                         entry["releaseDate"] = iso
                         entry["year"] = int(iso[:4])
                         filled += 1
                         day += len(iso) == 10
+                    elif iso and refines(old, iso):
+                        entry["releaseDate"] = iso
+                        refined += 1
+                        day += len(iso) == 10
+                    elif iso and iso != old and not old.startswith(iso):
+                        conflicts.append((entry["title"], old, iso))
                 if "publisher" in fields and not entry["publisher"].strip():
                     who = publisher_for(text, region)
                     if who:
                         entry["publisher"] = who
                         pubs += 1
-        print(f"   {min(i + BATCH, len(titles))}/{len(titles)} · +{filled} fechas · +{pubs} editoras",
-              flush=True)
+        print(f"   {min(i + BATCH, len(titles))}/{len(titles)} · +{filled} fechas · "
+              f"{refined} afinadas · +{pubs} editoras", flush=True)
 
     total = len(catalog) or 1
     have = sum(1 for e in catalog if e["releaseDate"].strip())
     hpub = sum(1 for e in catalog if e["publisher"].strip())
-    print(f"{os.path.basename(args.catalog)}: +{filled} fechas ({day} al día) · +{pubs} editoras")
-    print(f"   releaseDate {have * 100 // total}% · publisher {hpub * 100 // total}%")
+    exact = sum(1 for e in catalog if len(e["releaseDate"].strip()) == 10)
+    print(f"{os.path.basename(args.catalog)}: +{filled} fechas · {refined} afinadas a día · "
+          f"+{pubs} editoras")
+    print(f"   releaseDate {have * 100 // total}% (al día {exact * 100 // total}%) · "
+          f"publisher {hpub * 100 // total}%")
+    if conflicts:
+        print(f"   ⚠ {len(conflicts)} en conflicto con la ficha (se dejaron como estaban):")
+        for title, old, new in conflicts[:10]:
+            print(f"       {title[:44]:<46} tabla {old:<10} ficha {new}")
 
     if args.dry_run:
         print("   (dry-run: no se escribió)")
