@@ -52,7 +52,39 @@ def clean_cell(text: str) -> str:
     return re.sub(r"\s+", " ", s).strip(" |")
 
 
-def parse(text: str, column: int) -> list[dict]:
+def publisher_column(text: str) -> int | None:
+    """
+    Índice de la columna "Publisher" entre las celdas de una fila, o None si la tabla no la trae.
+
+    No todas las listas la tienen: PlayStation y GameCube ponen `Título | Desarrolladora | Editora`,
+    pero PS3 va directo de la desarrolladora a las fechas. Asumir un índice fijo hacía que la editora
+    de PS3 saliera del contenido de una celda de región.
+    """
+    # Se ancla a la tabla de JUEGOS, que es la que tiene las columnas de región: varias páginas
+    # abren con otra tabla antes (GameCube empieza con una leyenda de códigos de región), así que
+    # tomar la primera `{|` de la página leería las cabeceras equivocadas.
+    span = re.search(r'colspan="3"', text)
+    if not span:
+        return None
+    start = text.rfind("{|", 0, span.start())
+    if start < 0:
+        return None
+    # El primer bloque de líneas `!` es la cabecera principal; el segundo son las sub-cabeceras de
+    # región, que no nos interesan.
+    names = []
+    for line in text[start:].split("\n")[1:]:
+        line = line.strip()
+        if line.startswith("!"):
+            names.append(line.lstrip("!").split("|")[-1])
+        elif line.startswith("|-") and names:
+            break
+    for i, cell in enumerate(names):
+        if "publisher" in cell.lower():
+            return i
+    return None
+
+
+def parse(text: str, column: int, publisher_at: int | None) -> list[dict]:
     """Filas con fecha en la columna pedida: título, editora y fecha ISO de precisión variable."""
     out = []
     for block in text.split("\n|-")[1:]:
@@ -74,10 +106,68 @@ def parse(text: str, column: int) -> list[dict]:
         title = clean_cell(fields[0]) if fields else ""
         if not title:
             continue
-        publisher = clean_cell(fields[2]) if len(fields) > 2 else ""
+        publisher = ""
+        if publisher_at is not None and len(fields) > publisher_at:
+            publisher = clean_cell(fields[publisher_at])
         # Varias editoras separadas por coma: nos quedamos con la primera, como el resto del dataset.
         publisher = publisher.split(",")[0].strip()
         out.append({"title": title, "publisher": publisher, "releaseDate": iso, "year": int(year)})
+    return out
+
+
+# Etiqueta de región tal como la escribe la columna "First released" de la lista de PS2.
+FIRST_RELEASED_TAG = {"NTSC-U": "NA", "NTSC-J": "JP", "PAL": "EU"}
+
+
+def row_cells(block: str) -> list[str]:
+    """Celdas de una fila: cada línea que abre con `|` es una celda y `||` separa varias en la misma."""
+    out = []
+    for line in block.split("\n"):
+        line = line.strip()
+        if not line.startswith("|") or line.startswith("|-"):
+            continue
+        out.extend(line[1:].split("||"))
+    return out
+
+
+def parse_checkmarks(text: str, region: str) -> list[dict]:
+    """
+    Layout de la lista de **PS2**: `Título | Desarrolladora | Editora | First released | JP | EU | NA`,
+    donde las tres últimas son solo una tilde de "salió acá" y la fecha es **una sola**, la del
+    primer lanzamiento, etiquetada con su mercado (`2005-11-23{{sup|JP}}`).
+
+    Dos cosas de esta tabla que hay que respetar:
+
+    - Las filas **omiten las celdas vacías del final**: un juego solo europeo escribe `|||{{Ya}}`, que
+      son seis celdas, no siete. Por eso no se exige un largo fijo — que descartaría justamente a los
+      exclusivos de EU y JP — sino que exista la celda de *esta* región; si no llega hasta ahí, es
+      que no salió acá.
+    - La fecha se copia **solo si su etiqueta coincide con la región del catálogo**. Un juego que
+      debutó en Japón en 2003 y llegó a Europa en 2005 tiene una sola fecha, la japonesa: ponérsela
+      al europeo le inventaría dos años de antigüedad. Se prefiere entrar sin fecha y que la complete
+      después otra fuente.
+    """
+    tag = FIRST_RELEASED_TAG.get(region)
+    col = {"JP": 4, "EU": 5, "NA": 6}.get(tag)
+    if col is None:
+        return []
+    out = []
+    for block in text.split("\n|-")[1:]:
+        cells = row_cells(block)
+        # `> col` y no `>= 7`: ver arriba. El mínimo de 4 descarta la fila de cabecera y las notas.
+        if len(cells) < 4 or len(cells) <= col or "{{ya}}" not in cells[col].lower():
+            continue
+        title = clean_cell(cells[0])
+        if not title:
+            continue
+        m = re.match(r"\s*(\d{4})-(\d{2})-(\d{2})\s*\{\{sup\|([A-Z]+)", cells[3])
+        ours = bool(m) and m.group(4) == tag
+        iso = f"{m.group(1)}-{m.group(2)}-{m.group(3)}" if ours else ""
+        # La editora va en un índice fijo porque este layout lo define esta misma función; el
+        # `publisher_column()` genérico se ancla a un `colspan="3"` que esta tabla no tiene.
+        publisher = clean_cell(cells[2])
+        out.append({"title": title, "publisher": publisher.split(",")[0].strip(),
+                    "releaseDate": iso, "year": int(m.group(1)) if ours else None})
     return out
 
 
@@ -88,6 +178,9 @@ def main() -> None:
     ap.add_argument("--platform", required=True)
     ap.add_argument("--region", required=True)
     ap.add_argument("--cache", help="carpeta donde cachear el wikitext (evita volver a pedirlo)")
+    ap.add_argument("--layout", choices=("regions-dated", "checkmarks"), default="regions-dated",
+                    help="'regions-dated': una fecha por región (PlayStation, GameCube, PS3). "
+                         "'checkmarks': una fecha de primer lanzamiento + tildes por región (PS2).")
     args = ap.parse_args()
 
     rows = []
@@ -101,11 +194,16 @@ def main() -> None:
             text = wikitext(page)
             if cached:
                 open(cached, "w", encoding="utf-8").write(text)
-        column = region_column(text, args.region)
-        if column is None:
-            raise SystemExit(f"no encontré la columna de {args.region} en '{page}'")
-        found = parse(text, column)
-        print(f"   {page}: columna {column} · {len(found)} juegos", file=sys.stderr)
+        column = None
+        if args.layout == "checkmarks":
+            found = parse_checkmarks(text, args.region)
+        else:
+            column = region_column(text, args.region)
+            if column is None:
+                raise SystemExit(f"no encontré la columna de {args.region} en '{page}'")
+            found = parse(text, column, publisher_column(text))
+        where = f"columna {column} · " if column is not None else ""
+        print(f"   {page}: {where}{len(found)} juegos", file=sys.stderr)
         rows.extend(found)
 
     entries, seen = [], set()
@@ -123,9 +221,10 @@ def main() -> None:
 
     n = len(entries) or 1
     day = sum(1 for e in entries if len(e["releaseDate"]) == 10)
+    dated = sum(1 for e in entries if e["releaseDate"])
     pub = sum(1 for e in entries if e["publisher"])
     print(f"{os.path.basename(args.out)}: {len(entries)} juegos · "
-          f"fecha 100% ({day} al día) · editora {pub * 100 // n}%")
+          f"fecha {dated * 100 // n}% ({day} al día) · editora {pub * 100 // n}%")
 
 
 if __name__ == "__main__":

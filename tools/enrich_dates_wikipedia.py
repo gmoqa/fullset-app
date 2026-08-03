@@ -35,7 +35,14 @@ REGION_HEADERS = {
 }
 
 
-def wikitext(page: str) -> str:
+def wikitext(page: str, _depth: int = 0) -> str:
+    """
+    Wikitext de una página, siguiendo redirecciones.
+
+    Varias listas existen con guion y con raya larga en el título ("(A-C)" y "(A–C)"), y una de las
+    dos es solo un `#REDIRECT` a la otra. Sin seguirlo se cachearía una página de 381 bytes creyendo
+    que es la lista.
+    """
     url = f"{API}?" + urllib.parse.urlencode({
         "action": "parse", "page": page, "prop": "wikitext",
         "format": "json", "formatversion": "2",
@@ -45,7 +52,11 @@ def wikitext(page: str) -> str:
         data = json.load(r)
     if "error" in data:
         raise SystemExit(f"Wikipedia: {data['error'].get('info', 'página no encontrada')} — {page}")
-    return data["parse"]["wikitext"]
+    text = data["parse"]["wikitext"]
+    target = re.match(r"\s*#REDIRECT\s*\[\[:?([^\]|]+)", text, re.I)
+    if target and _depth < 3:
+        return wikitext(target.group(1).strip(), _depth + 1)
+    return text
 
 
 def region_column(text: str, region: str) -> int | None:
@@ -67,6 +78,9 @@ def region_column(text: str, region: str) -> int | None:
     names = [n.strip().lower() for n in re.findall(r"^!.*?\|(.+)$", sub.group(1), re.M)]
     wanted = REGION_HEADERS.get(region, ())
     for i, name in enumerate(names):
+        # La lista de PS3 titula las columnas con `{{abbr|NA|North America}}`: hay que quedarse con
+        # el primer argumento, no borrar la plantilla entera (dejaría la cabecera vacía).
+        name = re.sub(r"\{\{abbr\|([^|}]+)[^}]*\}\}", r"\1", name, flags=re.I)
         clean = re.sub(r"\{\{[^}]*\}\}|\s", "", name).replace("&nbsp;", "")
         if any(w.replace(" ", "") in clean for w in wanted):
             return i

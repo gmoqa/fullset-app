@@ -220,6 +220,72 @@
     }
   },
   {
+    "file": "ps2-eu.json",
+    "platform": "PlayStation 2",
+    "games": 2226,
+    "coverage": {
+      "year": 28,
+      "publisher": 100,
+      "serial": 80,
+      "coverUrl": 88
+    }
+  },
+  {
+    "file": "ps2-jp.json",
+    "platform": "PlayStation 2",
+    "games": 2975,
+    "coverage": {
+      "year": 80,
+      "publisher": 100,
+      "serial": 51,
+      "coverUrl": 57
+    }
+  },
+  {
+    "file": "ps2-usa.json",
+    "platform": "PlayStation 2",
+    "games": 1815,
+    "coverage": {
+      "year": 64,
+      "publisher": 100,
+      "serial": 90,
+      "coverUrl": 90
+    }
+  },
+  {
+    "file": "ps3-eu.json",
+    "platform": "PlayStation 3",
+    "games": 1836,
+    "coverage": {
+      "year": 100,
+      "publisher": 0,
+      "serial": 50,
+      "coverUrl": 77
+    }
+  },
+  {
+    "file": "ps3-jp.json",
+    "platform": "PlayStation 3",
+    "games": 1182,
+    "coverage": {
+      "year": 100,
+      "publisher": 0,
+      "serial": 43,
+      "coverUrl": 67
+    }
+  },
+  {
+    "file": "ps3-usa.json",
+    "platform": "PlayStation 3",
+    "games": 1894,
+    "coverage": {
+      "year": 100,
+      "publisher": 0,
+      "serial": 50,
+      "coverUrl": 78
+    }
+  },
+  {
     "file": "psx-eu.json",
     "platform": "PlayStation",
     "games": 1286,

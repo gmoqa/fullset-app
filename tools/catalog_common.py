@@ -182,13 +182,18 @@ def apply_overrides(by_slug, out):
     """
     Aplica `tools/overrides/<cat>.json` = `{slug: {campo: valor, ...}}`. Se aplica al final y
     **pisa** el valor auto-derivado, así tus correcciones sobreviven un rebuild desde cero.
+
+    Las claves que empiezan con `_` (`_source`, `_note`, `_date`) documentan **de dónde salió** la
+    corrección y se quedan en el archivo de overrides: no viajan al catálogo, que tiene que cumplir
+    el esquema de 11 campos. Copiarlas rompía el lint —42 errores en `snes-usa.json`— y además
+    duraban poco, porque el primer enriquecedor que pasara las borraba al canonicalizar.
     """
     p = overrides_path(out)
     if not os.path.exists(p):
         return
     for s, fields in json.load(open(p, encoding="utf-8")).items():
         if s in by_slug:
-            by_slug[s].update(fields)
+            by_slug[s].update({k: v for k, v in fields.items() if not k.startswith("_")})
         else:
             print(f"  ⚠ override sin match (slug {s!r})")
 

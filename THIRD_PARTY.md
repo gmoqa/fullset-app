@@ -52,11 +52,16 @@ está en [`docs/CATALOGS.md`](docs/CATALOGS.md); las correcciones puntuales anot
   libretro-database no cubre, tomados de la tabla de etiquetas de cartucho de cada ficha. Se
   consultaron solo las fichas de los títulos faltantes, respetando el `Crawl-delay` de su
   robots.txt.
-- **Wikipedia** — listas de títulos de NES, SNES, N64, PlayStation, Master System y Dreamcast, y
-  las editoras de las consolas de cartucho. **CC BY-SA 4.0**.
+- **Wikipedia** — listas de títulos de NES, SNES, N64, PlayStation, PlayStation 2, PlayStation 3,
+  GameCube, Master System y Dreamcast, y las editoras de las consolas de cartucho. **CC BY-SA 4.0**.
+- **[Redump](http://redump.org)**, vía los DAT que republica libretro-database — catalog numbers de
+  las consolas de disco (PlayStation, PS2, PS3, GameCube, Saturn, Sega CD, Dreamcast).
+- **[SteamGridDB](https://www.steamgriddb.com)** — carátulas de las plataformas que
+  libretro-thumbnails no cubre (de PlayStation 3 publica solo 67). La app también la consulta en
+  vivo al agregar juegos de PS5. Requiere una clave de API propia, que no viaja en el repo.
 - **Carátulas**: NO se incluyen en el repo ni en el APK. Se cargan en tiempo de
-  ejecución por URL desde [libretro-thumbnails](https://github.com/libretro-thumbnails)
-  y archive.org. Son propiedad de sus respectivos dueños; su uso aquí es para
+  ejecución por URL desde [libretro-thumbnails](https://github.com/libretro-thumbnails),
+  SteamGridDB y archive.org. Son propiedad de sus respectivos dueños; su uso aquí es para
   identificación de cada juego.
 
 ## Marcas (trademarks)

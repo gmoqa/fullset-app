@@ -77,7 +77,11 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     // Jewel case alta y angosta (medido en Libretro = 0.59; antes estaba en 0.72 y dejaba banda).
     "Sega Saturn" to PlatformStyle(pad("ic_pad_saturn"), Color(0xFF2A2E45), 0.60f),           // slate
     "Dreamcast" to PlatformStyle(pad("ic_pad_dreamcast"), Color(0xFF24384A), 1.00f),          // steel blue (jewel case cuadrada, medido en Libretro = 1.00)
-    "PlayStation 2" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1E2038), 0.70f),   // azul oscuro
+    "PlayStation 2" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1E2038), 0.71f),   // azul oscuro
+    // Reusa el pad de PS2: el DualShock 3 conserva la silueta del 2 (el control "boomerang" que se
+    // mostró en 2005 nunca salió), así que no es otro control como sí lo sería el del N64.
+    // Sus tapas vienen de SteamGridDB, que las entrega todas en 600×900 = 0.67.
+    "PlayStation 3" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1A1A1A), 0.67f),   // negro piano
 )
 
 /** Color de la franja del header de cada plataforma (o `null` → color neutro del tema). */

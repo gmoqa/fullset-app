@@ -33,11 +33,21 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 | `serial` | **libretro-database** DAT (`metadat/serial/…`, CC BY-SA 4.0) | match por título/región; no todas las plataformas tienen DAT |
 | `serial` (SNES, huecos) | **[SNES Central](https://snescentral.com)** | tabla "Cartridge label information", fila Americas/USA; consulta puntual respetando su `Crawl-delay: 10` |
 | `serial` (consolas de disco) | **Redump**, vía `libretro-database/metadat/redump/` | `tools/enrich_serials_redump.py`, tomando la entrada de la región del catálogo |
+| `coverUrl` (PS3) | **SteamGridDB** | `tools/enrich_covers_steamgriddb.py`, **solo con título idéntico**; libretro publica apenas 67 tapas de PS3 |
 | `releaseDate` (no-Sega) | **Wikipedia**, listas "List of … games" | `tools/enrich_dates_wikipedia.py`; la columna de región se lee de la cabecera de la tabla, no se asume |
 | `coverUrl` | **libretro-thumbnails** (`Named_Boxarts/`) | match por título, región más cercana a NTSC-U, evitando Beta/Proto |
 | `publisher` / `genre` | **libretro-database** (`metadat/publisher/`, `metadat/genre/`, CC BY-SA 4.0) | `tools/enrich_meta_libretro.py`, prefiriendo la etiqueta de región del DAT |
 | `publisher` (consolas de disco) | **Sega Retro**, tabla `companies` | rol `Publisher(US/JP/EU)` según la región, con respaldo al `Publisher` genérico |
 | `condition` | manual | lo carga el usuario desde la app |
+
+**Elegir la edición de tienda en Redump.** El DAT ordena alfabéticamente, y `Título (Europe) (…)`
+viene antes que `Título (Europe, Australia) (…)`, así que quedarse con la primera coincidencia daba
+el disco promocional: *Gran Turismo 4* europeo salía con el serial del **disco de demostración de
+BMW** y *Killzone* con el de su Bonus Disc. `enrich_serials_redump.py` ahora puntúa cada candidata y
+prefiere la de nombre más simple —la edición normal es `Título (Región) (Idiomas)`, las promocionales
+agregan un grupo— y desempata descartando los prefijos `SCED`/`SLED`, que son promocionales de PAL y
+comparten número con el retail (*My Street* es SCED-51677 **y** SCES-51677). Corrigió **77 seriales**
+repartidos en PlayStation, PS2, PS3 y GameCube.
 
 ### Estado por catálogo (auditado 2026-07-29)
 
@@ -111,6 +121,50 @@ otra razón para leer la cabecera en vez de fijar el índice.
 | `gamecube-jp.json` | 274 | 100% (274 al día) | 100% | 42% | 74% |
 | `gamecube-eu.json` | 433 | 100% (432 al día) | 100% | 81% | 81% |
 
+**PlayStation 2: la tabla no trae fecha por región.** Es la única lista con otro layout, y por eso
+`build_catalog_from_wikipedia.py` tiene un `--layout checkmarks`. En vez de tres columnas de fecha,
+pone **una sola** —la del primer lanzamiento, etiquetada con su mercado (`2005-11-23{{sup|JP}}`)— y
+tres columnas que son apenas una tilde de "salió acá".
+
+De ahí sale el hueco de fechas: la fecha se copia **solo si su etiqueta coincide con la región del
+catálogo**. Un juego que debutó en Japón en 2003 y llegó a Europa en 2005 tiene una única fecha, la
+japonesa; ponérsela al europeo le inventaría dos años de antigüedad. Por eso `ps2-eu` queda en 28%:
+casi nada debutó en Europa. Es un vacío honesto, no un error — se llena cuando aparezca una fuente
+con fechas PAL propias.
+
+| Catálogo | Juegos | fecha | editora | serial | cover |
+|---|---|---|---|---|---|
+| `ps2-usa.json` | 1815 | 64% (1175 al día) | 100% | 90% | 90% |
+| `ps2-jp.json` | 2975 | 80% (2384 al día) | 100% | 51% | 57% |
+| `ps2-eu.json` | 2226 | 28% (633 al día) | 100% | 80% | 88% |
+
+Otra particularidad de esa tabla: las filas **omiten las celdas vacías del final**, así que un
+exclusivo europeo escribe seis celdas y no siete. Exigir un largo fijo descartaba justamente a los
+exclusivos de EU y JP.
+
+**PlayStation 3: carátulas por SteamGridDB.** El catálogo sale de la misma tabla por región que
+PlayStation y GameCube, pero su lista **no tiene columna de editora** (va `Title | Developer |
+regiones | Options | Ref`), de ahí el 0%.
+
+El problema real fueron las tapas: libretro-thumbnails publica **67 carátulas de PS3**, contra 8.503
+de PS2 y 9.351 de PlayStation, así que el enriquecedor habitual dejaba el catálogo en 2%. Se resuelve
+con `enrich_covers_steamgriddb.py`, la misma fuente que la app ya consulta en vivo para PS5.
+
+Ese script **solo acepta coincidencia exacta de título**. Tomar el primer resultado del buscador daba
+un 97% de "aciertos" que incluía tapas de otro juego: *Goosebumps: The Game* traía la de *Attack of
+the Mutant*, y *Saint Seiya: Brave Soldiers* la de *Soldiers' Soul*, que es su secuela. En un
+catálogo de colección una tapa equivocada es peor que ninguna, porque se ve legítima.
+
+| Catálogo | Juegos | fecha | editora | serial | cover |
+|---|---|---|---|---|---|
+| `ps3-usa.json` | 1894 | **100%** (1893 al día) | 0% | 50% | 78% |
+| `ps3-jp.json` | 1182 | **100%** (1181 al día) | 0% | 43% | 67% |
+| `ps3-eu.json` | 1836 | **100%** (1836 al día) | 0% | 50% | 77% |
+
+El género queda vacío en las cuatro consolas de Sony y en GameCube: libretro publica `metadat/genre/`
+y `metadat/releaseyear/` **solo de PSP** entre las plataformas de PlayStation, y de GameCube no
+publica ninguno. No es un bug del enriquecedor, es que la fuente no lo cubre.
+
 **No-Sega (pendientes de una fuente con procedencia — ver roadmap E):**
 
 | Catálogo | Builder | Fuente títulos | Serial | año/ed/serial/cover |
@@ -124,7 +178,8 @@ Repos de carátula (libretro-thumbnails): NES `Nintendo_-_Nintendo_Entertainment
 `Sony_-_PlayStation`, Genesis `Sega_-_Mega_Drive_-_Genesis`, Master System
 `Sega_-_Master_System_-_Mark_III`, Game Gear `Sega_-_Game_Gear`, Sega CD
 `Sega_-_Mega-CD_-_Sega_CD`, 32X `Sega_-_32X`, Saturn `Sega_-_Saturn`, Dreamcast `Sega_-_Dreamcast`,
-SG-1000 `Sega_-_SG-1000`.
+SG-1000 `Sega_-_SG-1000`, GameCube `Nintendo_-_GameCube`, PS2 `Sony_-_PlayStation_2`. PS3 no usa
+libretro (solo tiene 67 tapas): va por SteamGridDB.
 
 ## Sega Retro — la fuente insignia (y el patrón por consola)
 

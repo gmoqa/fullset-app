@@ -311,9 +311,13 @@
   {
     "id": "playstation-2",
     "name": "PlayStation 2",
-    "catalog": "",
+    "catalogs": {
+      "NTSC-U": "catalogs/ps2-usa.json",
+      "NTSC-J": "catalogs/ps2-jp.json",
+      "PAL": "catalogs/ps2-eu.json"
+    },
     "libretroRepo": "Sony_-_PlayStation_2",
-    "enabled": false,
+    "enabled": true,
     "info": {
       "manufacturer": "Sony",
       "generation": 6,
@@ -327,6 +331,31 @@
       "unitsSold": "155M+",
       "cpu": "Emotion Engine @ 294 MHz — 128-bit",
       "description": "Sony's sixth-generation console and the best-selling of all time, doubling as an affordable DVD player."
+    }
+  },
+  {
+    "id": "playstation-3",
+    "name": "PlayStation 3",
+    "catalogs": {
+      "NTSC-U": "catalogs/ps3-usa.json",
+      "NTSC-J": "catalogs/ps3-jp.json",
+      "PAL": "catalogs/ps3-eu.json"
+    },
+    "libretroRepo": "Sony_-_PlayStation_3",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sony",
+      "generation": 7,
+      "media": "Blu-ray Disc",
+      "released": {
+        "ntsc-j": 2006,
+        "ntsc": 2006,
+        "pal": 2007
+      },
+      "discontinued": 2017,
+      "unitsSold": "87.4M",
+      "cpu": "Cell Broadband Engine @ 3.2 GHz — 1 PPE + 7 SPE",
+      "description": "Sony's seventh-generation console, the first to standardise on Blu-ray and to ship with free online play."
     }
   },
   {

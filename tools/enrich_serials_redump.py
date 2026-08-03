@@ -55,9 +55,33 @@ def keys_for(title: str) -> list[str]:
     return out
 
 
+# Nombres que no son el lanzamiento comercial. "(Bonus Disc" y "(Promo" importan tanto como
+# "(Beta": el DAT lista `Killzone (Europe) (…) (Bonus Disc)` **antes** que el juego, porque ordena
+# alfabéticamente y "Europe)" viene antes que "Europe,".
+REJECT = ("(Beta", "(Proto", "(Demo", "(Sample", "(Pirate", "(Unl",
+          "(Bonus Disc", "(Promo", "(Kiosk", "(Preview", "(Trade")
+
+# Prefijos de disco promocional/demo en PAL. Comparten el número con el retail —My Street es
+# SCED-51677 y SCES-51677— así que ni el nombre ni el orden alcanzan para distinguirlos.
+PROMO_PREFIXES = ("SCED", "SLED")
+
+
+def rank(full_name: str, serial: str) -> tuple[int, int]:
+    """
+    Qué tan probable es que esta entrada sea **la edición de tienda**. Menor es mejor.
+
+    El lanzamiento normal se llama `Título (Región) (Idiomas)`; las ediciones promocionales agregan
+    un grupo más —`(BMW 1 Series Virtual Test Drive)`— y a veces solo cambian el prefijo del serial.
+    Sin esto, `Gran Turismo 4` europeo se quedaba con el serial del disco de demostración de BMW.
+    """
+    groups = full_name.count("(")
+    promo = 1 if serial.split("-")[0].upper() in PROMO_PREFIXES else 0
+    return (groups, promo)
+
+
 def parse_dat(text: str, tags: list[str]) -> dict[str, str]:
     """`{título normalizado: serial}` de las entradas de las regiones pedidas, por prioridad."""
-    by_region: dict[str, dict[str, str]] = {t: {} for t in tags}
+    by_region: dict[str, dict[str, tuple[tuple[int, int], str]]] = {t: {} for t in tags}
     for block in re.findall(r"game\s*\((.*?)\n\)", text, re.S):
         name = re.search(r'name\s+"([^"]+)"', block)
         serial = re.search(r'\n\tserial\s+"([^"]+)"', block)
@@ -68,18 +92,20 @@ def parse_dat(text: str, tags: list[str]) -> dict[str, str]:
         if tag not in by_region:
             continue
         full = name.group(1)
-        # Descartar lo que no es el lanzamiento comercial.
-        if any(bad in full for bad in ("(Beta", "(Proto", "(Demo", "(Sample", "(Pirate", "(Unl")):
+        if any(bad in full for bad in REJECT):
             continue
         # Un juego multi-disco repite serial; y algunos traen varios separados por coma.
         value = serial.group(1).split(",")[0].strip()
         title = re.sub(r"\s*\(.*$", "", full)
+        score = rank(full, value)
         for key in keys_for(title):
-            by_region[tag].setdefault(key, value)
+            best = by_region[tag].get(key)
+            if best is None or score < best[0]:
+                by_region[tag][key] = (score, value)
 
     merged: dict[str, str] = {}
     for tag in reversed(tags):          # la primera de la lista debe ganar
-        merged.update(by_region[tag])
+        merged.update({k: v for k, (_, v) in by_region[tag].items()})
     return merged
 
 
@@ -87,6 +113,10 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("catalog")
     ap.add_argument("dat", help='nombre del DAT, p. ej. "Sony - PlayStation"')
+    ap.add_argument("--overwrite", action="store_true",
+                    help="recalcular también los seriales ya cargados. Solo para catálogos cuyos "
+                         "seriales salen enteros de Redump (PlayStation, PS2, PS3, GameCube): en los "
+                         "de Sega vienen de Sega Retro y esto los pisaría.")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -99,19 +129,26 @@ def main() -> None:
     with urllib.request.urlopen(req, timeout=180) as r:
         serials = parse_dat(r.read().decode("utf-8", "replace"), tags)
 
-    filled = 0
+    filled = changed = 0
     for entry in catalog:
-        if entry["serial"].strip():
+        had = entry["serial"].strip()
+        if had and not args.overwrite:
             continue
         for key in keys_for(entry["title"]):
             if key in serials:
-                entry["serial"] = serials[key]
-                filled += 1
+                if had:
+                    if serials[key] != had:
+                        entry["serial"] = serials[key]
+                        changed += 1
+                else:
+                    entry["serial"] = serials[key]
+                    filled += 1
                 break
 
     total = len(catalog) or 1
     have = sum(1 for e in catalog if e["serial"].strip())
-    print(f"{os.path.basename(args.catalog)}: {len(catalog)} juegos · +{filled} seriales")
+    print(f"{os.path.basename(args.catalog)}: {len(catalog)} juegos · +{filled} seriales"
+          + (f" · {changed} corregidos" if changed else ""))
     print(f"   serial {have}/{total} ({have * 100 // total}%) · fuente: Redump {tags[0]}")
 
     if args.dry_run:

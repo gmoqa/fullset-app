@@ -33,19 +33,23 @@ def coverage(rows, key):
 
 
 def main():
-    manifest = []
     for fname, dat, repo in CATALOGS:
-        out = os.path.join(CAT, fname)
         print(f"== {fname} ==")
-        normalize(out, dat, repo)
-        rows = json.load(open(out, encoding="utf-8"))
+        normalize(os.path.join(CAT, fname), dat, repo)
+
+    # El manifest se arma leyendo el **directorio**, no la lista de arriba: esa lista son solo los
+    # catálogos legacy que este script rehornea. Armarlo desde ella dejaba fuera a los 31 que
+    # construyen los builders regionales, y como el archivo se reescribe entero, correr esto los
+    # borraba del manifest.
+    manifest = []
+    for fname in sorted(f for f in os.listdir(CAT) if f.endswith(".json") and f != "manifest.json"):
+        rows = json.load(open(os.path.join(CAT, fname), encoding="utf-8"))
         manifest.append({
             "file": fname,
             "platform": rows[0]["platform"] if rows else "",
             "games": len(rows),
             "coverage": {k: coverage(rows, k) for k in ("year", "publisher", "serial", "coverUrl")},
         })
-    manifest.sort(key=lambda m: m["file"])
     with open(os.path.join(CAT, "manifest.json"), "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
         f.write("\n")

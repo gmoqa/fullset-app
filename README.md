@@ -61,7 +61,7 @@ SG-1000 es JP only). Sigue aceptándose el formato viejo `"catalog": "…"` como
 `releaseDate` = ISO de **precisión variable** (`"1991"` | `"1991-06"` | `"1991-06-11"`) ·
 desconocidos = `""`.
 
-Hoy son **26 catálogos con 9256 juegos**. De dónde sale cada dato, con qué fuente y con qué
+Hoy son **37 catálogos con 26.862 juegos**. De dónde sale cada dato, con qué fuente y con qué
 cobertura: **[docs/CATALOGS.md](docs/CATALOGS.md)**.
 
 ```bash

@@ -36,3 +36,6 @@ __pycache__/
 # producto y no se versionan. Las **fuentes** que generan (tools/sources/*.json) sí se versionan,
 # porque son el registro con procedencia del que salen los catálogos.
 /tools/local/
+
+# Caché local del resolvedor de carátulas de SteamGridDB
+tools/.steamgriddb-cache.json
