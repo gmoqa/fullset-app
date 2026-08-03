@@ -87,6 +87,20 @@ o sea después de toda la era que catalogamos (la Dreamcast se discontinuó en 2
 europeo es ELSPA salvo lanzamientos tardíos. En Japón, antes de CERO (2002) regía la autorregulación
 de Sega: 全年齢 (todas las edades), 18禁 y la marca X. En EE.UU., VRC hasta 1994 y ESRB después.
 
+**PlayStation: las tres regiones.** A diferencia de Sega —que reparte Europa entre UK, Alemania,
+Francia, España, Australia y Brasil— Sony distribuyó PAL de forma unificada, con un único prefijo de
+serial (`SCES`/`SLES`), así que Wikipedia lo lista en **una sola columna** y con un catálogo alcanza.
+
+| Catálogo | Juegos | fecha | editora | serial | cover |
+|---|---|---|---|---|---|
+| `psx-usa.json` | 1344 | 77% | 100% | 87% | 87% |
+| `psx-jp.json` | 3148 | **100%** (3145 al día) | 98% | 54% | 59% |
+| `psx-eu.json` | 1287 | **100%** (790 al día) | 99% | 65% | 68% |
+
+Los regionales salen enteros de la tabla de Wikipedia (`build_catalog_from_wikipedia.py`): un juego
+entra si su columna tiene **fecha**, porque la tabla marca `{{unreleased}}` donde no salió — la fecha
+es a la vez el dato y la prueba de que se publicó ahí. Por eso llegan al 100%.
+
 **No-Sega (pendientes de una fuente con procedencia — ver roadmap E):**
 
 | Catálogo | Builder | Fuente títulos | Serial | año/ed/serial/cover |
@@ -94,7 +108,6 @@ de Sega: 全年齢 (todas las edades), 18禁 y la marca X. En EE.UU., VRC hasta 
 | `nes-usa.json` | `build_nes_catalog.py` | Wikipedia NES (col 5) | libretro DAT | 100/100/93/95 |
 | `snes-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | libretro DAT + **SNES Central** | 100/100/**98**/92 |
 | `n64-usa.json` | `build_n64_catalog.py` | Wikipedia N64 (col 5) | libretro DAT | 100/100/96/100 |
-| `psx-usa.json` | `build_psx_catalog.py` | Wikipedia PS (A–L / M–Z) | **Redump** | 100/100/**87**/87 · +releaseDate **77%** (972 al día) |
 
 Repos de carátula (libretro-thumbnails): NES `Nintendo_-_Nintendo_Entertainment_System`, SNES
 `Nintendo_-_Super_Nintendo_Entertainment_System`, N64 `Nintendo_-_Nintendo_64`, PSX

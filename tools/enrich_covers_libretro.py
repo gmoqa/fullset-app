@@ -12,7 +12,16 @@ from catalog_common import fetch, core, COVER_HOST, write_catalog
 
 
 def cover_index(repo: str, prefer: str) -> dict:
-    tree = json.loads(fetch(f"https://api.github.com/repos/libretro-thumbnails/{repo}/git/trees/master?recursive=1"))["tree"]
+    # Se pide SOLO el subárbol de carátulas, no el recursivo del repo entero: en los repos grandes
+    # (PlayStation tiene decenas de miles de archivos entre boxarts, snaps y títulos) la API
+    # responde 500. Además baja una fracción de los datos, porque lo demás no lo usamos.
+    root = json.loads(fetch(f"https://api.github.com/repos/libretro-thumbnails/{repo}/git/trees/master"))
+    boxarts = next((e for e in root["tree"] if e["path"] == "Named_Boxarts"), None)
+    if boxarts is None:
+        raise SystemExit(f"{repo}: no tiene carpeta Named_Boxarts")
+    tree = json.loads(fetch(
+        f"https://api.github.com/repos/libretro-thumbnails/{repo}/git/trees/{boxarts['sha']}"
+    ))["tree"]
     host = COVER_HOST.format(repo)
     prefs = [prefer, "(World", "(USA", "(Europe", "(Brazil"]
 
@@ -26,9 +35,9 @@ def cover_index(repo: str, prefer: str) -> dict:
     idx = {}
     for t in tree:
         p = t["path"]
-        if not (p.startswith("Named_Boxarts/") and p.endswith(".png")):
+        if not p.endswith(".png"):
             continue
-        name = p[len("Named_Boxarts/"):-4]
+        name = p[:-4]
         k = core(name)
         if k not in idx or rank(name) > rank(idx[k][1]):
             idx[k] = (host + urllib.parse.quote(name + ".png"), name)

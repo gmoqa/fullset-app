@@ -261,7 +261,11 @@
   {
     "id": "playstation",
     "name": "PlayStation",
-    "catalog": "catalogs/psx-usa.json",
+    "catalogs": {
+      "NTSC-U": "catalogs/psx-usa.json",
+      "NTSC-J": "catalogs/psx-jp.json",
+      "PAL": "catalogs/psx-eu.json"
+    },
     "libretroRepo": "Sony_-_PlayStation",
     "enabled": true,
     "info": {
