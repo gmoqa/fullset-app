@@ -4,6 +4,17 @@
 iOS necesita macOS y Xcode), así que todo lo de acá se escribió a ciegas: compila conceptualmente
 pero **nunca se ejecutó**. Asumí que hay errores de cinterop esperando.
 
+El dataset creció bastante desde que se escribió esto: **37 catálogos con 26.862 juegos** en 17
+plataformas, **9,4 MB** de assets. No hay nada que agregar al proyecto de Xcode —`project.yml` los
+referencia como `type: folder`, así que los archivos nuevos entran solos— pero sí conviene mirar el
+**tiempo del primer arranque**, que es cuando `DiarySeeder` los recorre entero. En Android eso hizo
+falta envolverlo en `NonCancellable` porque el `viewModelScope` se cancelaba al bloquear la pantalla
+y las migraciones quedaban a medias.
+
+Un detalle del entorno: `project.yml` fija `JAVA_HOME` al JBR que trae Android Studio
+(`/Applications/Android Studio.app/…`). Si en esa Mac no está instalado ahí, el script de pre-build
+falla antes de compilar nada y el error no dice mucho.
+
 La app Android está completa y es la referencia de comportamiento. Cuando haya duda sobre qué debe
 hacer algo, mirá el `actual` de `androidMain` equivalente.
 
@@ -12,7 +23,7 @@ hacer algo, mirá el `actual` de `androidMain` equivalente.
 ```bash
 ./gradlew :shared:compileKotlinIosSimulatorArm64   # ¿compila el .klib?
 ./gradlew :app:assembleDebug                        # Android no se debe romper
-./gradlew :shared:testDebugUnitTest                 # 74 tests, deben seguir verdes
+./gradlew :shared:testDebugUnitTest                 # 80 tests, deben seguir verdes
 cd iosApp && xcodegen generate                      # regenerar el .xcodeproj desde project.yml
 ```
 
@@ -46,7 +57,8 @@ Sospechas concretas, por orden de probabilidad:
 | **`rememberCameraCapture`** | ❌ **stub** | tarea 1 |
 | **`rememberBackupImporter`** | ❌ **no-op** | tarea 2 |
 | **`rememberArchiveExporter`** | ⚠️ exporta solo el JSON | tarea 3 |
-| `IosWhisperModelStore` / `IosTranscriber` | ❌ stubs | tarea 4, la grande |
+| `IosWhisperModelStore` / `IosTranscriber` | ❌ stubs | tarea 5, la grande |
+| clave de SteamGridDB | ❌ `""` fijo | tarea 4 |
 
 ---
 
@@ -110,7 +122,27 @@ El contenido está definido en `commonMain` (`BackupArchive`): entrada `backup.j
 `photos/<nombre>`. **El JSON es idéntico al del respaldo liviano** — esa fue una decisión deliberada
 para que restaurar sea un solo camino de código. No inventar un formato distinto en iOS.
 
-## Tarea 4 — Notas de voz (la grande)
+## Tarea 4 — Clave de SteamGridDB
+
+**Archivo:** `shared/src/iosMain/kotlin/com/gmoqa/fullset/MainViewController.kt:33`
+
+Está cableada a `steamGridKey = ""`, así que **en iOS no funciona el buscador de carátulas**. Se usa
+en dos lugares: al agregar un juego de PlayStation 5 (que no tiene catálogo y se resuelve entero por
+búsqueda) y al agregar juegos digitales de cualquier plataforma.
+
+En Android la clave sale de `local.properties` → `BuildConfig.STEAMGRIDDB_API_KEY`
+(ver `app/build.gradle.kts:15,34`), que es un mecanismo de AGP y no existe del lado de Xcode.
+Opciones, de menos a más trabajo:
+
+1. Una entrada en `Info.plist` poblada desde un `.xcconfig` que no vaya a git, leída con
+   `NSBundle.mainBundle.objectForInfoDictionaryKey`. Es lo más parecido al mecanismo de Android.
+2. Generar un archivo Kotlin en `iosMain` desde Gradle a partir de la misma `local.properties`, para
+   tener una sola fuente para las dos plataformas.
+
+**No la hardcodees en el fuente**: el repo es público y la clave es personal. `local.properties` está
+en `.gitignore` justamente por eso.
+
+## Tarea 5 — Notas de voz (la grande)
 
 `IosVoiceRecorder` **ya está implementado** con `AVAudioRecorder`. Lo que falta es la transcripción:
 `IosWhisperModelStore` e `IosTranscriber` devuelven null/no-op, así que se puede grabar pero la nota
@@ -145,9 +177,9 @@ Cosas que costaron encontrar en Android y que conviene no re-descubrir:
 
 ## Al terminar
 
-- `./gradlew :app:assembleDebug` y los 74 tests deben seguir verdes: si algo compartido cambió para
+- `./gradlew :app:assembleDebug` y los 80 tests deben seguir verdes: si algo compartido cambió para
   que iOS funcione, Android no se puede romper.
 - Actualizar la tabla de estado de este archivo.
-- `docs/KMP-MIGRATION.md` quedó **desactualizado** (habla de una rama ya mergeada y de fases 3 y 4
-  como pendientes, cuando la UI ya está en `commonMain` y el proyecto Xcode existe). Conviene
-  podarlo y dejar este archivo como la fuente de verdad de lo que falta.
+- `docs/KMP-MIGRATION.md` ya está marcado como documento histórico y remite acá. Si al implementar
+  algo descubrís que una de sus **notas / gotchas** dejó de aplicar, corregila ahí: es la parte que
+  todavía se lee.

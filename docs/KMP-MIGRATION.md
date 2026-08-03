@@ -5,7 +5,9 @@
 > `kmp-multiplatform` ya se mergeó a `main`, la UI ya vive en `commonMain` y el proyecto Xcode
 > existe. Para lo que falta hoy, ver **[IOS-PENDIENTE.md](IOS-PENDIENTE.md)**.
 >
-> Lo que sigue vigente y vale la pena leer: **Fronteras `expect/actual`** y **Notas / gotchas**.
+> Lo que sigue vigente y vale la pena leer: **Notas / gotchas**. La tabla de fronteras quedó a
+> medias —varias que figuran pendientes ya están hechas—; el estado real, frontera por frontera,
+> está en [IOS-PENDIENTE.md](IOS-PENDIENTE.md).
 
 Estado de la reestructuración para soportar iOS.
 
@@ -17,15 +19,16 @@ Estado de la reestructuración para soportar iOS.
     `GameCatalog`, `PlatformRegistry`, el esquema **SQLDelight** (`sqldelight/…/*.sq` + migraciones)
     y las declaraciones `expect`.
   - `androidMain` / `iosMain` — los `actual` de cada frontera.
-- **`:app`** — la app Android (Compose/Jetpack). Depende de `:shared`. Todavía tiene la **UI**, el
-  **file IO** de fotos/carátulas (`DiaryRepository`), el `DiaryViewModel` y **whisper** (JNI/NDK).
+- **`:app`** — la app Android. Depende de `:shared`. Hoy le quedan solo `MainActivity`,
+  `FullsetApp` y **whisper** (JNI/NDK): la UI (28 archivos), el `DiaryViewModel` y el file IO de
+  fotos/carátulas ya se mudaron a `commonMain`/`androidMain` de `:shared`.
 
 ## Fronteras resueltas con `expect/actual` (en `:shared`)
 
 | `expect` (commonMain) | Android (`androidMain`) | iOS (`iosMain`) |
 |---|---|---|
 | `createHttpClient()` | Ktor OkHttp | Ktor Darwin |
-| `readTextAsset(path)` | AssetManager vía `AndroidApp` | **stub → null** (pendiente: bundle iOS) |
+| `readTextAsset(path)` | AssetManager vía `AndroidApp` | lee de `NSBundle.mainBundle.resourcePath` |
 | `createSqlDriver()` | `AndroidSqliteDriver` | `NativeSqliteDriver` |
 | `createSettings()` | `SharedPreferencesSettings` | `NSUserDefaultsSettings` |
 
