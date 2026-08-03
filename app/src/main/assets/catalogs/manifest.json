@@ -398,12 +398,12 @@
   {
     "file": "snes-usa.json",
     "platform": "Super Nintendo",
-    "games": 722,
+    "games": 744,
     "coverage": {
       "year": 100,
       "publisher": 100,
-      "serial": 98,
-      "coverUrl": 92
+      "serial": 96,
+      "coverUrl": 91
     }
   }
 ]

@@ -22,7 +22,7 @@ import urllib.parse
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from catalog_common import core, canonical  # noqa: E402
+from catalog_common import core, canonical, clean_cell  # noqa: E402
 
 API = "https://en.wikipedia.org/w/api.php"
 USER_AGENT = "fullset-catalog/0.1 (personal retro game catalog; +https://github.com/gmoqa/fullset-app)"
@@ -125,32 +125,22 @@ def row_cells(block: str) -> list[str]:
     return out
 
 
-def parse_page(text: str, column: int) -> dict[str, str]:
+def parse_page(text: str, column: int, region: str | None = None) -> dict[str, str]:
     """`{título normalizado: fecha ISO}` leyendo la columna de región indicada."""
     out: dict[str, str] = {}
     base = region_base(text)
     for block in text.split("\n|-")[1:]:
-        title_cell = re.search(r"\n\|(?:id=\"[^\"]*\"\|)?\s*(.+)", block)
-        if not title_cell:
-            continue
-        raw = title_cell.group(1)
-        # Una celda puede llevar atributos HTML antes del contenido, separados por `|`
-        # (`data-sort-value="7th Saga, The"|The 7th Saga`, `style="width:12%;"|…`). El `id="…"` de
-        # arriba cubría uno solo; con cualquier otro, el atributo terminaba pegado dentro del
-        # título y esa fila no matcheaba nunca con el catálogo: 60 en la lista de SNES, 69 en la
-        # de NES, todas silenciosamente sin fecha.
-        raw = re.sub(r'^\s*(?:[\w-]+="[^"]*"\s*)+\|', "", raw)
-        title = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", raw)
-        title = re.sub(r"''|<[^>]+>", "", title)
-        # Algunas filas listan tras un "•" el título con que salió en otra región
-        # ("The 7th Saga•Elnard^JP"): el catálogo guarda el principal.
-        title = title.split("•")[0].strip()
-        if not title:
-            continue
         # Se indexa por **celda real** de la fila, no por "la enésima plantilla de fecha": ver
         # `region_base`. La celda puede traer `{{dts|…}}`, `{{unreleased}}` o `{{n/a}}`.
         cells = row_cells(block)
         if len(cells) <= base + column:
+            continue
+        # El título sale del **mismo** `clean_cell` que usa el builder. Cuando cada uno tenía su
+        # versión, el enriquecedor no reconocía los títulos con plantilla anidada o con atributo de
+        # ordenamiento, y esas filas se quedaban con la fecha vieja aunque la lista tuviera una
+        # mejor: 21 juegos de SNES sobrevivían a un `--overwrite` contra su propia fuente.
+        title = clean_cell(cells[0], region)
+        if not title:
             continue
         m = re.search(r"\{\{dts\|(\d{4})(?:\|(\d{1,2}))?(?:\|(\d{1,2}))?",
                       cells[base + column], re.I)
@@ -186,7 +176,7 @@ def main() -> None:
         column = region_column(text, region)
         if column is None:
             raise SystemExit(f"no encontré la columna de {region} en '{page}' — revisá la cabecera")
-        found = parse_page(text, column)
+        found = parse_page(text, column, region)
         print(f"   {page}: columna {column} · {len(found)} fechas", file=sys.stderr)
         dates.update(found)
 

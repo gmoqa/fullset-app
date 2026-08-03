@@ -173,6 +173,63 @@ def canonical(entry):
     return {k: entry.get(k, None if k == "year" else "") for k in CANON_KEYS}
 
 
+# Región del catálogo -> cómo la marca el `<sup>` del título alternativo.
+TITLE_SUP = {"NTSC-U": ("NA", "US", "USA"), "NTSC-J": ("JP", "JPN"), "PAL": ("PAL", "EU", "EUR")}
+
+
+def regional_title(text: str, region: str | None) -> str:
+    """
+    De un título con nombre alternativo, el que corresponde a [region].
+
+    Las listas escriben `Título<br />•Alternativo<sup>NA</sup>`, donde el `<sup>` dice **en qué
+    mercado se usó el otro nombre**. En un catálogo NTSC-U eso importa: *Final Fantasy VI* se vendió
+    como **Final Fantasy III** y *The Chaos Engine* como **Soldiers of Fortune**. Quedarse siempre
+    con el primero no solo pone el nombre equivocado — además duplica, porque el catálogo ya tiene
+    el juego bajo su nombre americano y no se reconocen entre sí.
+
+    Sin `region`, o si ningún alternativo es de la nuestra, vale el principal.
+    """
+    partes = text.split("•")
+    if len(partes) > 1 and region:
+        for alt in partes[1:]:
+            marca = re.search(r"<sup>\s*([A-Za-z/]+)\s*</sup>|\^([A-Za-z]+)", alt)
+            codigo = (marca.group(1) or marca.group(2) or "").upper() if marca else ""
+            if codigo in TITLE_SUP.get(region, ()):
+                # La marca sale acá: más adelante `<sup>` cae con el resto de las etiquetas, pero
+                # el `^JP` no es HTML y quedaría pegado al final del nombre.
+                return re.sub(r"<sup>[^<]*</sup>|\^[A-Za-z]+", "", alt)
+    return partes[0]
+
+
+def clean_cell(text: str, region: str | None = None) -> str:
+    """
+    Quita el wikitext de una celda y deja el texto visible.
+
+    Tres cosas que no son obvias y rompen si faltan:
+      - Las celdas pueden llevar atributos HTML antes del contenido, separados por `|`
+        (`data-sort-value="Legend of Zelda…"|The Legend of Zelda…`, `id="0–9"|…`). Sin quitarlos, el
+        atributo termina dentro del título.
+      - Una fila puede separar celdas con `||` en la misma línea, así que se corta ahí: si no, la
+        desarrolladora se pega al nombre del juego.
+      - El título alternativo tras un "•" puede ser **el de nuestra región**: ver [regional_title].
+    """
+    s = re.sub(r"<ref[^>]*>.*?</ref>|<ref[^>]*/>", "", text, flags=re.S)
+    s = s.split("||")[0]
+    s = re.sub(r'^\s*(?:[\w-]+="[^"]*"\s*)+\|', "", s)
+    # Las plantillas se resuelven ANTES que los enlaces, porque pueden ir adentro:
+    # `[[{{Not a typo|Med|iEvil}}]]`. Si se procesara el enlace primero, su regex cortaría por el
+    # primer `|` de la plantilla y el título quedaría partido. Las de texto (Not a typo, sic…)
+    # concatenan sus argumentos, así que se unen; las de marcado (unreleased, dts…) desaparecen.
+    s = re.sub(r"\{\{(?:not a typo|sic|nowrap|small)\|([^}]*)\}\}",
+               lambda m: m.group(1).replace("|", ""), s, flags=re.I)
+    s = re.sub(r"\{\{[^}]*\}\}", "", s)
+    # El corte por "•" va **antes** de sacar las etiquetas, porque la marca de región vive en un
+    # `<sup>` y quitarla primero dejaría los alternativos indistinguibles entre sí.
+    s = regional_title(s, region)
+    s = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", s)
+    s = re.sub(r"''+|<[^>]+>", "", s)
+    return re.sub(r"\s+", " ", s).strip(" |")
+
 def overrides_path(out):
     """Correcciones a mano por plataforma: tools/overrides/<basename-del-catálogo>.json."""
     return os.path.join(os.path.dirname(__file__), "overrides", os.path.basename(out))

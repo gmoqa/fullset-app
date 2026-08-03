@@ -19,37 +19,8 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from catalog_common import slug, write_catalog  # noqa: E402
+from catalog_common import slug, write_catalog, clean_cell  # noqa: E402
 from enrich_dates_wikipedia import wikitext, region_column, region_base, row_cells  # noqa: E402
-
-
-def clean_cell(text: str) -> str:
-    """
-    Quita el wikitext de una celda y deja el texto visible.
-
-    Dos cosas que no son obvias y rompen si faltan:
-      - Las celdas pueden llevar atributos HTML antes del contenido, separados por `|`
-        (`data-sort-value="Legend of Zelda…"|The Legend of Zelda…`, `id="0–9"|…`). Sin quitarlos, el
-        atributo termina dentro del título.
-      - Una fila puede separar celdas con `||` en la misma línea, así que se corta ahí: si no, la
-        desarrolladora se pega al nombre del juego.
-    """
-    s = re.sub(r"<ref[^>]*>.*?</ref>|<ref[^>]*/>", "", text, flags=re.S)
-    s = s.split("||")[0]
-    s = re.sub(r'^\s*(?:[\w-]+="[^"]*"\s*)+\|', "", s)
-    # Las plantillas se resuelven ANTES que los enlaces, porque pueden ir adentro:
-    # `[[{{Not a typo|Med|iEvil}}]]`. Si se procesara el enlace primero, su regex cortaría por el
-    # primer `|` de la plantilla y el título quedaría partido. Las de texto (Not a typo, sic…)
-    # concatenan sus argumentos, así que se unen; las de marcado (unreleased, dts…) desaparecen.
-    s = re.sub(r"\{\{(?:not a typo|sic|nowrap|small)\|([^}]*)\}\}",
-               lambda m: m.group(1).replace("|", ""), s, flags=re.I)
-    s = re.sub(r"\{\{[^}]*\}\}", "", s)
-    s = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", s)
-    s = re.sub(r"''+|<[^>]+>", "", s)
-    # Algunas filas listan el título alternativo de otra región tras un "•"
-    # ("The Adventures of Lomax•Lomax^PAL"): nos quedamos con el principal.
-    s = s.split("•")[0]
-    return re.sub(r"\s+", " ", s).strip(" |")
 
 
 def publisher_column(text: str) -> int | None:
@@ -84,7 +55,7 @@ def publisher_column(text: str) -> int | None:
     return None
 
 
-def parse(text: str, column: int, publisher_at: int | None) -> list[dict]:
+def parse(text: str, column: int, publisher_at: int | None, region: str | None = None) -> list[dict]:
     """Filas con fecha en la columna pedida: título, editora y fecha ISO de precisión variable."""
     out = []
     # Se indexa por **celda real**, no por "la enésima plantilla de fecha de la fila": varias listas
@@ -103,7 +74,7 @@ def parse(text: str, column: int, publisher_at: int | None) -> list[dict]:
 
         # Las celdas de la fila, en orden: título | desarrolladora | editora | …
         fields = [c for c in re.split(r"\n\|(?!\|)", block) if c.strip()]
-        title = clean_cell(fields[0]) if fields else ""
+        title = clean_cell(fields[0], region) if fields else ""
         if not title:
             continue
         publisher = ""
@@ -146,7 +117,7 @@ def parse_checkmarks(text: str, region: str) -> list[dict]:
         # `> col` y no `>= 7`: ver arriba. El mínimo de 4 descarta la fila de cabecera y las notas.
         if len(cells) < 4 or len(cells) <= col or "{{ya}}" not in cells[col].lower():
             continue
-        title = clean_cell(cells[0])
+        title = clean_cell(cells[0], region)
         if not title:
             continue
         m = re.match(r"\s*(\d{4})-(\d{2})-(\d{2})\s*\{\{sup\|([A-Z]+)", cells[3])
@@ -190,7 +161,7 @@ def main() -> None:
             column = region_column(text, args.region)
             if column is None:
                 raise SystemExit(f"no encontré la columna de {args.region} en '{page}'")
-            found = parse(text, column, publisher_column(text))
+            found = parse(text, column, publisher_column(text), args.region)
         where = f"columna {column} · " if column is not None else ""
         print(f"   {page}: {where}{len(found)} juegos", file=sys.stderr)
         rows.extend(found)

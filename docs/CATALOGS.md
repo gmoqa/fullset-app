@@ -180,7 +180,7 @@ publica ninguno. No es un bug del enriquecedor, es que la fuente no lo cubre.
 | Catálogo | Builder | Fuente títulos | Serial | año/ed/serial/cover |
 |---|---|---|---|---|
 | `nes-usa.json` | `build_nes_catalog.py` | Wikipedia NES (col 5) | libretro DAT | 100/100/93/95 |
-| `snes-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | libretro DAT + **SNES Central** | 100/100/**98**/92 |
+| `snes-usa.json` | `build_snes_catalog.py` | Wikipedia SNES (columna NA) | libretro DAT + **SNES Central** | 100/100/96/91 |
 | `n64-usa.json` | `build_n64_catalog.py` | Wikipedia N64 (col 5) | libretro DAT | 100/100/96/100 |
 
 Repos de carátula (libretro-thumbnails): NES `Nintendo_-_Nintendo_Entertainment_System`, SNES
@@ -330,6 +330,13 @@ claves nuevas no rompe nada.
 - **F. Eje de región** — ✅ **cerrado**: las tres regiones en Sega (8 consolas), PlayStation, PS2,
   PS3 y GameCube. Si alguna vez se quiere drill-down por país dentro de PAL, el modelo lo soporta (la
   key del mapa `catalogs` es texto libre); hoy no compensa porque los países son 95% el mismo listado.
+
+**El título depende de la región.** Las listas escriben `Título<br />•Alternativo<sup>NA</sup>`, y ese
+`<sup>` dice **en qué mercado se usó el otro nombre**. En un catálogo NTSC-U eso decide el título:
+*Final Fantasy VI* se vendió como **Final Fantasy III**, *The Chaos Engine* como **Soldiers of
+Fortune** y *Another World* como **Out of This World**. Quedarse siempre con el principal no solo
+ponía el nombre equivocado — además **duplicaba**, porque el catálogo ya tenía el juego bajo su
+nombre americano y los dos no se reconocían entre sí.
 
 ## Herramientas
 
