@@ -32,14 +32,14 @@ El paquete y el nombre del producto son **fullset** (`com.gmoqa.fullset`).
   se agregan los juegos **digitales** (no cuentan como poseídos: no entran a Collection, llevan
   un badge *DIGITAL*).
 - **Wishlist**: lo que querés conseguir. Se elige del catálogo; dedup por plataforma+juego.
+- **Settings**: tema (System/Light/Dark), región (NTSC-U / NTSC-J / PAL), opciones de vista de
+  Collection, export a CSV, **respaldo y restauración**, idioma de la transcripción, y créditos.
 
 **Compartir una foto hacia la app.** fullset aparece en el menú Compartir del sistema para
 imágenes: al mandarle una captura o una foto, pregunta a cuál de los juegos de **Playing**
 adjuntarla y confirma dónde quedó. Se limita a Playing porque compartir pasa mientras jugás, y
 ofrecer la colección entera convertiría un gesto de dos toques en una búsqueda. Android por ahora;
 en iOS hace falta una Share Extension (ver `docs/IOS-PENDIENTE.md`).
-- **Settings**: tema (System/Light/Dark), región (NTSC-U / NTSC-J / PAL), opciones de vista de
-  Collection, export a CSV, **respaldo y restauración**, idioma de la transcripción, y créditos.
 
 ## Plataformas por configuración
 Se declaran en `data/config/platforms.json`: cada una con `id`, `name`, `libretroRepo` (repo de
