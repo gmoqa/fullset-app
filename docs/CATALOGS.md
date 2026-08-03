@@ -35,7 +35,7 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 | `serial` (consolas de disco) | **Redump**, vía `libretro-database/metadat/redump/` | `tools/enrich_serials_redump.py`, tomando la entrada de la región del catálogo |
 | `coverUrl` (PS3) | **SteamGridDB** | `tools/enrich_covers_steamgriddb.py`, **solo con título idéntico**; libretro publica apenas 67 tapas de PS3 |
 | `releaseDate` (no-Sega) | **Wikipedia**, listas "List of … games" | `tools/enrich_dates_wikipedia.py`; la columna de región se lee de la cabecera de la tabla, no se asume |
-| `releaseDate` (huecos) | **Wikipedia**, ficha del artículo de cada juego | `tools/enrich_dates_wikipedia_infobox.py`, leyendo `{{Video game release\|NA\|…\|EU\|…}}` acotado al bloque de la consola |
+| `releaseDate` / `publisher` (huecos) | **Wikipedia**, ficha del artículo de cada juego | `tools/enrich_infobox_wikipedia.py`, leyendo `{{Video game release\|NA\|…\|EU\|…}}` acotado al bloque de la consola; la editora también sale por región |
 | `coverUrl` | **libretro-thumbnails** (`Named_Boxarts/`) | match por título, región más cercana a NTSC-U, evitando Beta/Proto |
 | `publisher` / `genre` | **libretro-database** (`metadat/publisher/`, `metadat/genre/`, CC BY-SA 4.0) | `tools/enrich_meta_libretro.py`, prefiriendo la etiqueta de región del DAT |
 | `publisher` (consolas de disco) | **Sega Retro**, tabla `companies` | rol `Publisher(US/JP/EU)` según la región, con respaldo al `Publisher` genérico |
@@ -150,7 +150,11 @@ exclusivos de EU y JP.
 
 **PlayStation 3: carátulas por SteamGridDB.** El catálogo sale de la misma tabla por región que
 PlayStation y GameCube, pero su lista **no tiene columna de editora** (va `Title | Developer |
-regiones | Options | Ref`), de ahí el 0%.
+regiones | Options | Ref`), así que las tres regiones salían con 0%. Las completa
+`enrich_infobox_wikipedia.py` desde la ficha de cada artículo, que además distingue por mercado:
+*Demon's Souls* lo publicó Sony en Japón, **Atlus** en América y **Namco Bandai Partners** en Europa.
+Guarda el nombre de la época —*The Last of Us* queda como *Sony Computer Entertainment*, no
+*Interactive*—, que es el que corresponde a un catálogo retro.
 
 El problema real fueron las tapas: libretro-thumbnails publica **67 carátulas de PS3**, contra 8.503
 de PS2 y 9.351 de PlayStation, así que el enriquecedor habitual dejaba el catálogo en 2%. Se resuelve
@@ -163,9 +167,9 @@ catálogo de colección una tapa equivocada es peor que ninguna, porque se ve le
 
 | Catálogo | Juegos | fecha | editora | serial | cover |
 |---|---|---|---|---|---|
-| `ps3-usa.json` | 1894 | **100%** (1893 al día) | 0% | 50% | 78% |
-| `ps3-jp.json` | 1182 | **100%** (1181 al día) | 0% | 43% | 67% |
-| `ps3-eu.json` | 1836 | **100%** (1836 al día) | 0% | 50% | 77% |
+| `ps3-usa.json` | 1894 | **100%** (1893 al día) | 80% | 50% | 78% |
+| `ps3-jp.json` | 1182 | **100%** (1181 al día) | 71% | 43% | 67% |
+| `ps3-eu.json` | 1836 | **100%** (1836 al día) | 79% | 50% | 77% |
 
 El género queda vacío en las cuatro consolas de Sony y en GameCube: libretro publica `metadat/genre/`
 y `metadat/releaseyear/` **solo de PSP** entre las plataformas de PlayStation, y de GameCube no

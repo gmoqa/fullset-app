@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Rellena `releaseDate` leyendo la **ficha del artículo de cada juego** en Wikipedia (CC BY-SA 4.0),
-que trae las fechas por región en `{{Video game release|NA|…|JP|…|EU|…}}`.
+Rellena `releaseDate` y `publisher` leyendo la **ficha del artículo de cada juego** en Wikipedia
+(CC BY-SA 4.0), que trae ambos por región: `{{Video game release|NA|…|JP|…|EU|…}}` para las fechas y
+lo mismo para la editora —*Demon's Souls* lo publicó Sony en Japón, Atlus en América y Namco Bandai
+en Europa—.
 
 Para qué, si ya existe `enrich_dates_wikipedia.py`: aquel lee la **tabla de la lista**, que en la
 mayoría de las consolas tiene una columna de fecha por región. La de **PlayStation 2** no: trae una
@@ -19,7 +21,10 @@ Dos cosas que hay que hacer bien:
 
 Solo completa lo que esté **vacío**.
 
-Uso:  python3 tools/enrich_dates_wikipedia_infobox.py <catalogo.json> --platform "PlayStation 2" \
+La lista de PS3 tampoco tiene columna de editora, así que sus tres catálogos salían con 0%.
+
+Uso:  python3 tools/enrich_infobox_wikipedia.py <catalogo.json> --platform "PlayStation 2" \
+          --fill releaseDate,publisher \
           "List of PlayStation 2 games (A–K)" "List of PlayStation 2 games (L–Z)" [--dry-run]
 """
 import argparse
@@ -118,23 +123,65 @@ def strip_refs(text: str) -> str:
     return re.sub(r"<ref[^>]*/>|<ref[^>]*>.*?</ref>", "", text, flags=re.S)
 
 
-def released_field(text: str) -> str:
+def infobox_field(text: str, name: str) -> str:
     """
-    Valor crudo del campo `released` de la ficha, **sin referencias**.
+    Valor crudo del campo [name] de la ficha (`released`, `publisher`…), **sin referencias**.
 
     Se quitan antes de recortar el campo, no después: una `<ref>{{cite web|…}}</ref>` aporta su
     propio `}}` y su propio `|título=`, y ambos cortaban el valor antes de tiempo. Por eso la ficha
     de *Final Fantasy X* daba la fecha norteamericana pero no la europea — la referencia estaba
     justo en el medio.
     """
-    m = re.search(r"\|\s*released?\s*=(.*?)\n\s*\|\s*[\w\s]+=", strip_refs(text), re.S | re.I)
+    m = re.search(rf"\|\s*{name}\s*=(.*?)\n\s*\|\s*[\w\s]+=", strip_refs(text), re.S | re.I)
     return m.group(1) if m else ""
 
 
+def released_field(text: str) -> str:
+    return infobox_field(text, "released?")
+
+
+def clean_name(raw: str) -> str:
+    """Primer nombre de compañía de una celda, sin enlaces, notas ni listas."""
+    s = re.sub(r"\{\{\s*(?:efn|refn|note|nowrap)[^{}]*\}\}", "", raw, flags=re.I)
+    s = re.sub(r"\{\{\s*(?:ubl|ubil|unbulleted list|plainlist|hlist)\s*\|?", "", s, flags=re.I)
+    s = re.sub(r"<br\s*/?>|\n", "|", s)
+    link = re.search(r"\[\[(?:[^\]|]*\|)?([^\]]+)\]\]", s)
+    if link:
+        return link.group(1).strip()
+    s = re.sub(r"\{\{[^{}]*\}\}|[\[\]{}']", "", s)
+    return s.split("|")[0].split("(")[0].strip(" ,;")
+
+
+def publisher_for(text: str, region: str) -> str:
+    """
+    Editora de [region] según la ficha.
+
+    La ficha suele distinguir por mercado —*Demon's Souls* lo publicó Sony en Japón, Atlus en
+    América y Namco Bandai en Europa—, así que primero se busca el código de nuestra región. Si no
+    la distingue, vale lo que haya **antes** de la primera plantilla regional: *Dark Souls* escribe
+    `[[Bandai Namco]]{{vgr|JP|[[FromSoftware]]}}`, o sea Bandai Namco salvo en Japón.
+    """
+    field = infobox_field(text, "publishers?")
+    if not field:
+        return ""
+    found: dict[str, str] = {}
+    for body in release_templates(field):
+        parts = [p.strip() for p in re.split(r"\|(?![^{}]*\}\})", body)]
+        for i in range(0, len(parts) - 1, 2):
+            code = re.sub(r"[^A-Za-z]", "", parts[i]).upper()
+            if code and code not in found:
+                found[code] = parts[i + 1]
+    for code in REGION_CODES.get(region, []):
+        if code in found:
+            return clean_name(found[code])
+    head = re.split(r"\{\{\s*(?:vgrelease|vgr|video game release)\s*\|", field, flags=re.I)[0]
+    return clean_name(head) or (clean_name(found["WW"]) if "WW" in found else "")
+
+
 def release_templates(field: str) -> list[str]:
-    """Cuerpos de las plantillas `vgrelease`/`Video game release`, con las llaves balanceadas."""
+    """Cuerpos de las plantillas `vgrelease`/`vgr`/`Video game release`, con llaves balanceadas."""
     out = []
-    for m in re.finditer(r"\{\{\s*(?:vgrelease|video game release)\s*\|", field, re.I):
+    for m in re.finditer(r"\{\{\s*(?:vgrelease|vgr|video game release)\s*\|", field, re.I):
         depth, i = 1, m.end()
         while i < len(field) - 1 and depth:
             if field[i:i + 2] == "{{":
@@ -225,6 +272,8 @@ def main() -> None:
     ap.add_argument("pages", nargs="+", help="las listas de las que salen los enlaces a artículos")
     ap.add_argument("--platform", required=True, help='rótulo de la consola en la ficha, p. ej. "PlayStation 2"')
     ap.add_argument("--cache", help="carpeta donde cachear el wikitext de las listas")
+    ap.add_argument("--fill", default="releaseDate",
+                    help="campos a completar, separados por coma: releaseDate, publisher")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -232,7 +281,9 @@ def main() -> None:
     region = catalog[0]["region"] if catalog else "NTSC-U"
     links = article_links(args.pages, args.cache)
 
-    missing = [e for e in catalog if not e["releaseDate"].strip()]
+    fields = args.fill.split(",")
+    missing = [e for e in catalog
+               if any(not e[f].strip() for f in fields if f in ("releaseDate", "publisher"))]
     wanted, unlinked = {}, 0
     for entry in missing:
         art = links.get(core(entry["title"]))
@@ -240,28 +291,34 @@ def main() -> None:
             wanted.setdefault(art, []).append(entry)
         else:
             unlinked += 1
-    print(f"{len(missing)} sin fecha · {len(wanted)} con artículo · {unlinked} sin enlace en la lista")
+    print(f"{len(missing)} incompletos · {len(wanted)} con artículo · {unlinked} sin enlace")
 
-    filled = day = 0
+    filled = day = pubs = 0
     titles = list(wanted)
     for i in range(0, len(titles), BATCH):
         chunk = titles[i:i + BATCH]
         for name, text in fetch(chunk).items():
             for entry in wanted.get(name, []):
-                iso = date_for(text, args.platform, region)
-                if not iso:
-                    continue
-                entry["releaseDate"] = iso
-                entry["year"] = int(iso[:4])
-                filled += 1
-                if len(iso) == 10:
-                    day += 1
-        print(f"   {min(i + BATCH, len(titles))}/{len(titles)} · +{filled} fechas", flush=True)
+                if "releaseDate" in fields and not entry["releaseDate"].strip():
+                    iso = date_for(text, args.platform, region)
+                    if iso:
+                        entry["releaseDate"] = iso
+                        entry["year"] = int(iso[:4])
+                        filled += 1
+                        day += len(iso) == 10
+                if "publisher" in fields and not entry["publisher"].strip():
+                    who = publisher_for(text, region)
+                    if who:
+                        entry["publisher"] = who
+                        pubs += 1
+        print(f"   {min(i + BATCH, len(titles))}/{len(titles)} · +{filled} fechas · +{pubs} editoras",
+              flush=True)
 
     total = len(catalog) or 1
     have = sum(1 for e in catalog if e["releaseDate"].strip())
-    print(f"{os.path.basename(args.catalog)}: +{filled} fechas ({day} al día) · "
-          f"releaseDate {have}/{total} ({have * 100 // total}%)")
+    hpub = sum(1 for e in catalog if e["publisher"].strip())
+    print(f"{os.path.basename(args.catalog)}: +{filled} fechas ({day} al día) · +{pubs} editoras")
+    print(f"   releaseDate {have * 100 // total}% · publisher {hpub * 100 // total}%")
 
     if args.dry_run:
         print("   (dry-run: no se escribió)")
