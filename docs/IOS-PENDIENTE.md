@@ -61,6 +61,7 @@ Sospechas concretas, por orden de probabilidad:
 | **`rememberArchiveExporter`** | ⚠️ exporta solo el JSON | tarea 3 |
 | `IosWhisperModelStore` / `IosTranscriber` | ❌ stubs | tarea 5, la grande |
 | clave de SteamGridDB | ❌ `""` fijo | tarea 4 |
+| recibir fotos compartidas | ❌ falta Share Extension | tarea 6 |
 
 ---
 
@@ -143,6 +144,21 @@ Opciones, de menos a más trabajo:
 
 **No la hardcodees en el fuente**: el repo es público y la clave es personal. `local.properties` está
 en `.gitignore` justamente por eso.
+
+## Tarea 6 — Recibir fotos compartidas
+
+En Android la app figura en el menú Compartir para `image/*`: llega por `ACTION_SEND`, se resuelve
+el `Uri` en `MainActivity.sharedImageOf()` y `App()` muestra `AttachSharedPhotoDialog` para elegir a
+qué juego de Playing adjuntarla. **Todo el diálogo está en `commonMain` y no hay que reescribirlo**;
+lo que falta es el lado nativo.
+
+En iOS eso es un **Share Extension**, que es un target aparte del proyecto de Xcode con su propio
+bundle id y su propio proceso. Dos cosas a tener en cuenta:
+
+1. La extensión no comparte el sandbox con la app: hay que pasar el archivo por un **App Group**
+   (`group.com.gmoqa.fullset`) y despertar a la app, o bien resolver todo dentro de la extensión.
+2. `App()` ya acepta `sharedImage: PlatformImage?` con default `null`, así que hoy compila sin
+   tocar nada; alcanza con pasárselo desde `MainViewController` cuando exista el canal.
 
 ## Tarea 5 — Notas de voz (la grande)
 

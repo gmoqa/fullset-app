@@ -16,14 +16,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DiarioGamer">
 
+        <!-- `singleTop`: al compartir una foto con la app ya abierta se reusa esta instancia y el
+             intent llega por `onNewIntent`, en vez de apilar una segunda copia con su propia BD
+             abierta y su propio estado. -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
+            android:launchMode="singleTop"
             android:theme="@style/Theme.DiarioGamer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Recibir imágenes desde el menú Compartir de cualquier app (galería, navegador,
+                 captura de pantalla). La app pregunta a qué juego de Playing adjuntarla. -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
 

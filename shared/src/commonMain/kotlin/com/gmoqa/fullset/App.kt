@@ -39,11 +39,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.gmoqa.fullset.data.GameCatalog
+import com.gmoqa.fullset.data.PlatformImage
 import com.gmoqa.fullset.data.Platform
 import com.gmoqa.fullset.data.PlatformRegistry
 import com.gmoqa.fullset.data.RegionFilter
 import com.gmoqa.fullset.data.SortOrder
 import com.gmoqa.fullset.data.ThemeMode
+import com.gmoqa.fullset.ui.AttachSharedPhotoDialog
 import com.gmoqa.fullset.resources.Res
 import com.gmoqa.fullset.resources.ic_eye_search
 import com.gmoqa.fullset.resources.ic_shelf
@@ -71,7 +73,16 @@ private enum class AddTarget { LIBRARY, WISHLIST }
  * (con sus impls de voz/whisper y su API key). [isDebug] habilita la sección Developer de Settings.
  */
 @Composable
-fun App(vm: DiaryViewModel, isDebug: Boolean = false) {
+fun App(
+    vm: DiaryViewModel,
+    isDebug: Boolean = false,
+    /**
+     * Imagen que llegó por el menú Compartir del sistema. Cuando no es null se pregunta a qué juego
+     * de Playing adjuntarla. En iOS es siempre null hasta que exista una Share Extension.
+     */
+    sharedImage: PlatformImage? = null,
+    onSharedImageHandled: () -> Unit = {},
+) {
     val catalog = remember { GameCatalog() }
     val registry = remember { PlatformRegistry() }
 
@@ -115,6 +126,17 @@ fun App(vm: DiaryViewModel, isDebug: Boolean = false) {
                     onSortChange = { sortOrder = it; vm.setSortOrder(it) },
                     isDebug = isDebug,
                 )
+                if (sharedImage != null) {
+                    val games by vm.games.collectAsStateWithLifecycle()
+                    AttachSharedPhotoDialog(
+                        playing = games.filter { it.playing },
+                        onPick = { game ->
+                            vm.addPhoto(game.id, sharedImage)
+                            onSharedImageHandled()
+                        },
+                        onDismiss = onSharedImageHandled,
+                    )
+                }
             }
         }
     }

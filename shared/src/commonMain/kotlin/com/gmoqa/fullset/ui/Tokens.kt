@@ -97,5 +97,9 @@ object Tokens {
         val icon = 22.dp
         /** Desenfoque del fondo del hero. */
         val heroBlur = 32.dp
+        /** Miniatura de carátula en una lista de selección (elegir juego al compartir una foto). */
+        val pickerThumb = 40.dp
+        /** Alto máximo de una lista dentro de un diálogo, para que el botón no quede fuera. */
+        val dialogList = 320.dp
     }
 }
