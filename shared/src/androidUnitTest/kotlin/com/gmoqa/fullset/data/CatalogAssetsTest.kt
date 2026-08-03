@@ -99,4 +99,50 @@ class CatalogAssetsTest {
         val usa = catalog.entries(genesis, RegionFilter.NTSC_U).map { it.slug }.toSet()
         assertTrue(pal.any { it.slug !in usa }, "PAL no aporta ningún título propio")
     }
+
+    /**
+     * Cambiar de región en "Add game" tiene que cambiar la lista, no solo el contador: buscás en el
+     * mercado que elegiste. Se verifica sobre los catálogos reales, con y sin texto de búsqueda,
+     * porque la lista vacía toma otro camino (`rank` devuelve los primeros N sin puntuar).
+     */
+    @Test
+    fun `la busqueda del catalogo se limita a la region elegida`() {
+        val catalog = GameCatalog(readAsset)
+        val saturn = registry.all().first { it.id == "sega-saturn" }
+
+        val usa = catalog.search(saturn, RegionFilter.NTSC_U, "")
+        val jp = catalog.search(saturn, RegionFilter.NTSC_J, "")
+        assertTrue(usa.isNotEmpty() && jp.isNotEmpty(), "ambas regiones deben traer juegos")
+        assertTrue(usa.map { it.slug } != jp.map { it.slug }, "la lista sin buscar debe cambiar de región")
+
+        // Un exclusivo japonés no puede aparecer buscando en el catálogo americano.
+        val soloJp = catalog.entries(saturn, RegionFilter.NTSC_J).map { it.slug }.toSet() -
+            catalog.entries(saturn, RegionFilter.NTSC_U).map { it.slug }.toSet()
+        assertTrue(soloJp.isNotEmpty(), "Saturn tiene exclusivos japoneses")
+        val titulo = catalog.entries(saturn, RegionFilter.NTSC_J).first { it.slug in soloJp }.title
+        assertTrue(
+            catalog.search(saturn, RegionFilter.NTSC_U, titulo).none { it.title == titulo },
+            "buscar '$titulo' en NTSC-U no debe encontrar un exclusivo de NTSC-J",
+        )
+        assertTrue(
+            catalog.search(saturn, RegionFilter.NTSC_J, titulo).any { it.title == titulo },
+            "y en NTSC-J sí debe encontrarlo",
+        )
+    }
+
+    /**
+     * Una consola que solo salió en un mercado tiene su catálogo bajo esa región, y `catalogFile`
+     * —que es el americano— queda vacío. Preguntar por él mandaba a la SG-1000 a "cargar a mano"
+     * teniendo sus juegos catalogados.
+     */
+    @Test
+    fun `una consola de una sola region resuelve su catalogo`() {
+        val sg = registry.all().first { it.id == "sg-1000" }
+        assertEquals("", sg.catalogFile, "la SG-1000 no tiene catálogo NTSC-U")
+        assertTrue(sg.catalogFor(RegionFilter.NTSC_J).isNotBlank(), "pero sí japonés")
+        assertTrue(
+            GameCatalog(readAsset).entries(sg, RegionFilter.NTSC_J).isNotEmpty(),
+            "y ese catálogo trae juegos",
+        )
+    }
 }

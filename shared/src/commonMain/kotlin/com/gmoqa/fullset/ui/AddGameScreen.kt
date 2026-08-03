@@ -146,7 +146,11 @@ fun AddGameScreen(
                     platform = platform.name,
                     // Sin catálogo (PS5…) no hay nada que contar: sin badge.
                     count = remember(platform, pickedRegion) {
-                        if (platform.catalogFile.isBlank()) null
+                        // Se pregunta por el catálogo de **esta** región, no por el de NTSC-U:
+                        // `catalogFile` es el americano, y una consola que solo salió en otro
+                        // mercado lo tiene vacío. Así la SG-1000 aparecía como "cargar a mano"
+                        // teniendo sus 79 juegos japoneses catalogados.
+                        if (platform.catalogFor(pickedRegion).isBlank()) null
                         else catalog.entries(platform, pickedRegion).size
                     },
                     onBack = { selected = null },
@@ -170,7 +174,7 @@ fun AddGameScreen(
         Column(modifier = Modifier.fillMaxSize().padding(padding)) {
             if (platform == null) {
                 PlatformStep(platforms = platforms, catalog = catalog, region = region, onSelect = { selected = it })
-            } else if (platform.catalogFile.isNotBlank()) {
+            } else if (platform.catalogFor(pickedRegion).isNotBlank()) {
                 TitleStep(
                     platform = platform, catalog = catalog, region = pickedRegion,
                     marks = marks, onPicked = onPicked,
@@ -222,6 +226,7 @@ private fun PlatformStep(
                     platform = p,
                     // Offline: el conteo sale del JSON de catálogo empaquetado.
                     count = remember(p.id, region) { catalog.entries(p, region).size },
+                    region = region,
                     onClick = { onSelect(p) },
                 )
             } else {
@@ -237,7 +242,7 @@ private fun PlatformStep(
  * el mismo de las franjas de estantería), con el logo blanco centrado y el nombre + conteo al pie.
  */
 @Composable
-private fun PlatformCube(platform: Platform, count: Int, onClick: () -> Unit) {
+private fun PlatformCube(platform: Platform, count: Int, region: RegionFilter, onClick: () -> Unit) {
     val band = platformBandColor(platform.name) ?: MaterialTheme.colorScheme.surfaceVariant
     CubeSurface(container = band, content = Color.White, onClick = onClick) {
         // Ícono proporcional al cubo (no un tamaño fijo): escala con el ancho disponible y se acota
@@ -252,7 +257,7 @@ private fun PlatformCube(platform: Platform, count: Int, onClick: () -> Unit) {
             )
         }
         // Sin catálogo (PS5…) no hay conteo: se anuncia que se carga a mano.
-        val tag = if (platform.catalogFile.isBlank()) "Add by hand" else "$count games"
+        val tag = if (platform.catalogFor(region).isBlank()) "Add by hand" else "$count games"
         CubeCaption(name = platform.name, tag = tag, tagColor = Color.White.copy(alpha = 0.7f))
     }
 }
