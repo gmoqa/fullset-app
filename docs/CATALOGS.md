@@ -104,9 +104,9 @@ serial (`SCES`/`SLES`), así que Wikipedia lo lista en **una sola columna** y co
 
 | Catálogo | Juegos | fecha | editora | serial | cover |
 |---|---|---|---|---|---|
-| `psx-usa.json` | 1344 | 91% (1222 al día) | 100% | 87% | 87% |
+| `psx-usa.json` | 1344 | 91% (1155 al día) | 100% | 87% | 87% |
 | `psx-jp.json` | 3148 | **100%** (3145 al día) | 98% | 54% | 59% |
-| `psx-eu.json` | 1287 | **100%** (790 al día) | 99% | 65% | 68% |
+| `psx-eu.json` | 1286 | **100%** (789 al día) | 99% | 65% | 68% |
 
 Los regionales salen enteros de la tabla de Wikipedia (`build_catalog_from_wikipedia.py`): un juego
 entra si su columna tiene **fecha**, porque la tabla marca `{{unreleased}}` donde no salió — la fecha
@@ -140,7 +140,7 @@ derivan del título.
 
 | Catálogo | Juegos | fecha | editora | serial | cover |
 |---|---|---|---|---|---|
-| `ps2-usa.json` | 1815 | 91% (1653 al día) | 100% | 90% | 90% |
+| `ps2-usa.json` | 1815 | 91% (1652 al día) | 100% | 90% | 90% |
 | `ps2-jp.json` | 2975 | 85% (2550 al día) | 100% | 51% | 57% |
 | `ps2-eu.json` | 2226 | 72% (1593 al día) | 100% | 80% | 88% |
 
