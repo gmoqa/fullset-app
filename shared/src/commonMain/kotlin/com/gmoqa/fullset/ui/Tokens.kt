@@ -36,13 +36,24 @@ object Tokens {
         val giant = 32.dp
     }
 
-    /** Formas. [pill] es la cápsula de chips y toggles; el resto, esquinas de tarjetas y cuadros. */
+    /**
+     * Escala de esquinas, **única para toda la app**: la usan nuestros componentes y también los de
+     * Material, porque `Theme.kt` se la pasa al `MaterialTheme` (ver `AppShapes`). Sin eso, Material
+     * aplicaba sus defaults —4dp en los menús desplegables— y convivían dos redondeos distintos en
+     * la misma pantalla.
+     *
+     * [pill] es la cápsula de chips y toggles; el resto crece de a poco hasta [dialog].
+     */
     object Shape {
         val pill = RoundedCornerShape(50)
         val small = RoundedCornerShape(8.dp)
+        /** Menús desplegables y superficies flotantes chicas. */
+        val menu = RoundedCornerShape(12.dp)
         val medium = RoundedCornerShape(14.dp)
         val large = RoundedCornerShape(18.dp)
         val xlarge = RoundedCornerShape(20.dp)
+        /** Diálogos: el redondeo grande de Material 3, que ya se veía bien. */
+        val dialog = RoundedCornerShape(28.dp)
     }
 
     /**

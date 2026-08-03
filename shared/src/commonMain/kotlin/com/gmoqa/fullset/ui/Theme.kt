@@ -2,6 +2,7 @@ package com.gmoqa.fullset.ui
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Shapes
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
@@ -35,6 +36,22 @@ private val DarkColors = darkColorScheme(
 )
 
 /**
+ * Las formas que usa **Material**: menús, tarjetas, diálogos, hojas y botones flotantes.
+ *
+ * Salen de [Tokens.Shape], la misma escala que usan nuestros componentes, para que no convivan dos
+ * redondeos distintos. El que más se nota es `extraSmall`: Material lo tiene en 4dp y de ahí sacan
+ * su forma los menús desplegables, que quedaban con esquinas visiblemente más filosas que el resto
+ * de la interfaz.
+ */
+private val AppShapes = Shapes(
+    extraSmall = Tokens.Shape.menu,
+    small = Tokens.Shape.small,
+    medium = Tokens.Shape.medium,
+    large = Tokens.Shape.large,
+    extraLarge = Tokens.Shape.dialog,
+)
+
+/**
  * Pinta la barra de estado del sistema según el tema. En Android ajusta color e íconos del status
  * bar (efecto de plataforma); en iOS no hace nada (la status bar la maneja UIKit).
  */
@@ -54,6 +71,7 @@ fun DiarioGamerTheme(
     SystemBarsEffect(statusBarColor = colors.primary, darkTheme = darkTheme)
     MaterialTheme(
         colorScheme = colors,
+        shapes = AppShapes,
         content = content,
     )
 }

@@ -281,7 +281,7 @@ private fun CubeSurface(
     val base = Modifier.fillMaxWidth().aspectRatio(1f)
     val clickable = if (onClick != null) base.clickable(onClick = onClick) else base
     Surface(
-        shape = RoundedCornerShape(16.dp),
+        shape = Tokens.Shape.large,
         color = container,
         contentColor = content,
         modifier = clickable,
