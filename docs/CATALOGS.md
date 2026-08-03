@@ -32,6 +32,8 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 | `title` / `year` / `publisher` | **Wikipedia** "List of \<consola\> games", columna **North America** | scrape del wikitext (`catalog_common.py`), filtrando lanzamientos NA = NTSC-U |
 | `serial` | **libretro-database** DAT (`metadat/serial/…`, CC BY-SA 4.0) | match por título/región; no todas las plataformas tienen DAT |
 | `serial` (SNES, huecos) | **[SNES Central](https://snescentral.com)** | tabla "Cartridge label information", fila Americas/USA; consulta puntual respetando su `Crawl-delay: 10` |
+| `serial` (consolas de disco) | **Redump**, vía `libretro-database/metadat/redump/` | `tools/enrich_serials_redump.py`, tomando la entrada de la región del catálogo |
+| `releaseDate` (no-Sega) | **Wikipedia**, listas "List of … games" | `tools/enrich_dates_wikipedia.py`; la columna de región se lee de la cabecera de la tabla, no se asume |
 | `coverUrl` | **libretro-thumbnails** (`Named_Boxarts/`) | match por título, región más cercana a NTSC-U, evitando Beta/Proto |
 | `publisher` / `genre` | **libretro-database** (`metadat/publisher/`, `metadat/genre/`, CC BY-SA 4.0) | `tools/enrich_meta_libretro.py`, prefiriendo la etiqueta de región del DAT |
 | `publisher` (consolas de disco) | **Sega Retro**, tabla `companies` | rol `Publisher(US/JP/EU)` según la región, con respaldo al `Publisher` genérico |
@@ -92,7 +94,7 @@ de Sega: 全年齢 (todas las edades), 18禁 y la marca X. En EE.UU., VRC hasta 
 | `nes-usa.json` | `build_nes_catalog.py` | Wikipedia NES (col 5) | libretro DAT | 100/100/93/95 |
 | `snes-usa.json` | **⚠️ ninguno (legacy)** | **no documentada** | libretro DAT + **SNES Central** | 100/100/**98**/92 |
 | `n64-usa.json` | `build_n64_catalog.py` | Wikipedia N64 (col 5) | libretro DAT | 100/100/96/100 |
-| `psx-usa.json` | `build_psx_catalog.py` | Wikipedia PS (A–L / M–Z) | sin DAT | 100/100/0/87 |
+| `psx-usa.json` | `build_psx_catalog.py` | Wikipedia PS (A–L / M–Z) | **Redump** | 100/100/**87**/87 · +releaseDate **77%** (972 al día) |
 
 Repos de carátula (libretro-thumbnails): NES `Nintendo_-_Nintendo_Entertainment_System`, SNES
 `Nintendo_-_Super_Nintendo_Entertainment_System`, N64 `Nintendo_-_Nintendo_64`, PSX
