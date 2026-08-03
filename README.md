@@ -50,6 +50,12 @@ python3 tools/build_psx_catalog.py       # requiere internet
 python3 tools/catalog_lint.py            # valida el esquema
 ```
 
+## iOS
+La app comparte UI y lógica vía Compose Multiplatform, pero **iOS todavía no está terminado**: falta
+cámara, restaurar respaldos, el ZIP y la transcripción de voz. El plan detallado, con el estado de
+cada frontera `expect/actual`, está en **[docs/IOS-PENDIENTE.md](docs/IOS-PENDIENTE.md)** — escrito
+para que se pueda retomar desde una Mac (el código iOS no compila en Linux).
+
 ## Estilos centralizados
 Todo el estilo vive en dos archivos de `shared/src/commonMain/kotlin/com/gmoqa/fullset/ui/`, al modo
 de las variables de un SASS: se cambia ahí y se propaga a toda la app.

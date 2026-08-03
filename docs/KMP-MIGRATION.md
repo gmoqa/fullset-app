@@ -1,8 +1,13 @@
 # Migración a Kotlin Multiplatform (iOS)
 
-Estado de la reestructuración para soportar iOS. **Rama: `kmp-multiplatform`** (main queda como
-la app Android estable). Todo lo hecho hasta acá compila y **corre en Android** (verificado en
-dispositivo); los targets iOS están declarados y compilan el `.klib` en macOS.
+> **Documento histórico.** Registra cómo se hizo la migración y los problemas que aparecieron.
+> Las secciones "Lo que falta" y "Verificar en la Mac" quedaron **desactualizadas**: la rama
+> `kmp-multiplatform` ya se mergeó a `main`, la UI ya vive en `commonMain` y el proyecto Xcode
+> existe. Para lo que falta hoy, ver **[IOS-PENDIENTE.md](IOS-PENDIENTE.md)**.
+>
+> Lo que sigue vigente y vale la pena leer: **Fronteras `expect/actual`** y **Notas / gotchas**.
+
+Estado de la reestructuración para soportar iOS.
 
 ## Estructura
 
