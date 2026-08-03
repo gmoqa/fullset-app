@@ -110,6 +110,8 @@ fun PlatformBandHeader(
      *  estantería (Collection/Backlog). */
     bleedIcon: Boolean = false,
     windowInsets: WindowInsets = WindowInsets(0, 0, 0, 0),
+    /** Control extra a la derecha (p. ej. el selector de región al agregar un juego). */
+    trailing: (@Composable () -> Unit)? = null,
 ) {
     val band = platformBandColor(platform) ?: MaterialTheme.colorScheme.surfaceVariant
     val header = onBack != null
@@ -204,6 +206,10 @@ fun PlatformBandHeader(
                     .background(Tokens.Overlay.chipDim)
                     .padding(horizontal = 9.dp, vertical = 2.dp),
             )
+        }
+        if (trailing != null) {
+            Spacer(modifier = Modifier.width(6.dp))
+            trailing()
         }
         if (onInfo != null) {
             IconButton(onClick = onInfo, modifier = Modifier.size(32.dp)) {

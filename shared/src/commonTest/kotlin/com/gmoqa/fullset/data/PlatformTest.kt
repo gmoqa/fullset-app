@@ -1,7 +1,9 @@
 package com.gmoqa.fullset.data
 
+import com.gmoqa.fullset.ui.selectableRegions
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
 /** Elección de catálogo por región, con fallback a NTSC-U (catalogFile). */
 class PlatformTest {
@@ -69,5 +71,29 @@ class PlatformTest {
             libretroRepo = "", enabled = true,
         )
         assertEquals("", none.catalogFor(RegionFilter.NTSC_U))
+    }
+
+    @Test
+    fun ofreceElegirRegionSoloSiHayMasDeUna() {
+        val sega = platform(
+            mapOf(
+                "NTSC-U" to "catalogs/genesis-usa.json",
+                "NTSC-J" to "catalogs/genesis-jp.json",
+                "PAL" to "catalogs/genesis-eu.json",
+            )
+        )
+        assertEquals(
+            listOf(RegionFilter.NTSC_U, RegionFilter.NTSC_J, RegionFilter.PAL),
+            sega.selectableRegions(),
+            "las tres, en el orden del enum",
+        )
+    }
+
+    @Test
+    fun sinAlternativaNoSeOfreceElector() {
+        // Una consola de una sola región (SG-1000) o con el formato viejo de un único catálogo:
+        // mostrar un selector sería mentir, porque todas las opciones darían la misma lista.
+        assertTrue(platform(mapOf("NTSC-J" to "catalogs/sg-1000-jp.json")).selectableRegions().isEmpty())
+        assertTrue(platform().selectableRegions().isEmpty(), "formato legacy sin mapa")
     }
 }

@@ -193,6 +193,8 @@ private fun AppRoot(
                             dot = it.conditionState?.dot,
                             // En la wishlist tenerlo es solo un aviso: podés desear otra copia o región.
                             blocks = current.target == AddTarget.LIBRARY,
+                            // La región de tu copia: tener la americana no bloquea agregar la japonesa.
+                            region = it.region,
                         )
                     }
                     when (current.target) {

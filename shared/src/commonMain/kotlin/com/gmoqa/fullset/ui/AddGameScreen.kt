@@ -90,6 +90,8 @@ data class CatalogMark(
     val dot: Long? = null,
     /** Si además impide volver a tocar la fila (duplicaría el registro). */
     val blocks: Boolean = true,
+    /** Región de la copia que tenés. Vacío = sin dato (cargas viejas o altas a mano). */
+    val region: String = "",
 )
 
 /**
@@ -115,6 +117,9 @@ fun AddGameScreen(
     region: RegionFilter = RegionFilter.NTSC_U,
 ) {
     var selected by remember { mutableStateOf<Platform?>(null) }
+    // Arranca en tu región (la de Settings) y se puede cambiar acá mismo para este alta, sin tocar
+    // la preferencia global: agregar un import japonés no debería obligar a ir y volver de Settings.
+    var pickedRegion by remember(region) { mutableStateOf(region) }
     val platform = selected
     // Ficha técnica de la plataforma elegida (misma ⓘ que en Collection, en la franja del paso 2).
     var showInfo by remember { mutableStateOf(false) }
@@ -140,13 +145,24 @@ fun AddGameScreen(
                 PlatformBandHeader(
                     platform = platform.name,
                     // Sin catálogo (PS5…) no hay nada que contar: sin badge.
-                    count = remember(platform) {
-                        if (platform.catalogFile.isBlank()) null else catalog.entries(platform, region).size
+                    count = remember(platform, pickedRegion) {
+                        if (platform.catalogFile.isBlank()) null
+                        else catalog.entries(platform, pickedRegion).size
                     },
                     onBack = { selected = null },
                     // Misma ficha que en Collection: solo si la plataforma la trae.
                     onInfo = if (platform.info != null) ({ showInfo = true }) else null,
                     windowInsets = WindowInsets.statusBars,
+                    trailing = {
+                        val regions = remember(platform) { platform.selectableRegions() }
+                        if (regions.size > 1) {
+                            RegionPicker(
+                                current = pickedRegion,
+                                options = regions,
+                                onSelect = { pickedRegion = it },
+                            )
+                        }
+                    },
                 )
             }
         },
@@ -155,7 +171,10 @@ fun AddGameScreen(
             if (platform == null) {
                 PlatformStep(platforms = platforms, catalog = catalog, region = region, onSelect = { selected = it })
             } else if (platform.catalogFile.isNotBlank()) {
-                TitleStep(platform = platform, catalog = catalog, region = region, marks = marks, onPicked = onPicked)
+                TitleStep(
+                    platform = platform, catalog = catalog, region = pickedRegion,
+                    marks = marks, onPicked = onPicked,
+                )
             } else {
                 // Plataforma sin catálogo (PS5…): se carga a mano.
                 ManualEntryStep(
@@ -334,7 +353,15 @@ private fun TitleStep(
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         items(results) { entry ->
-            val mark = markIndex[entry.slug] ?: markIndex[entry.title.lowercase()]
+            val owned = markIndex[entry.slug] ?: markIndex[entry.title.lowercase()]
+            // Tener la edición americana no impide querer la japonesa: son piezas distintas. Solo
+            // bloquea la copia de la MISMA región; la de otra se muestra como dato, sin trabar.
+            val sameRegion = owned == null || owned.region.isBlank() || owned.region == entry.region
+            val mark = when {
+                owned == null -> null
+                sameRegion -> owned
+                else -> owned.copy(label = "Have ${owned.region}", blocks = false, dot = null)
+            }
             ResultRow(
                 platform = platform,
                 entry = entry,
