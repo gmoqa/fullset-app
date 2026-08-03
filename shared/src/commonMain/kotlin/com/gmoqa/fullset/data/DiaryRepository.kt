@@ -6,6 +6,7 @@ import app.cash.sqldelight.coroutines.mapToOneOrNull
 import app.cash.sqldelight.db.SqlDriver
 import com.gmoqa.fullset.db.FullsetDatabase
 import com.russhwolf.settings.Settings
+import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
 
@@ -36,8 +37,17 @@ class DiaryRepository(
     fun newVoiceNoteFile(gameId: Long): String =
         "${FileStore.audioDir}/note_${gameId}_${nowMillis()}.wav"
 
-    /** Siembra + migraciones puntuales, fuera del hilo principal. Idempotente (banderas en prefs). */
-    suspend fun seed() = withContext(ioDispatcher) {
+    /**
+     * Siembra + migraciones puntuales, fuera del hilo principal. Idempotente (banderas en prefs).
+     *
+     * Va en [NonCancellable] a propósito: corre en `viewModelScope`, así que si la pantalla se apaga
+     * o el usuario sale enseguida, la actividad se destruye y **cancelaría el trabajo a mitad de
+     * camino**. Como la bandera solo se marca al terminar, la migración se reintenta al próximo
+     * arranque — pero mientras tanto el usuario ve datos a medio completar sin ninguna señal de por
+     * qué. Es trabajo acotado (parsear los catálogos y actualizar la colección), así que conviene
+     * terminarlo antes que dejarlo colgado.
+     */
+    suspend fun seed() = withContext(ioDispatcher + NonCancellable) {
         DiarySeeder(this@DiaryRepository, settings).run()
         pruneOrphanAudio()
     }
