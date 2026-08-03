@@ -36,7 +36,7 @@ SIEMPRE presentes (aunque vacías) — lo valida `tools/catalog_lint.py`:
 | `coverUrl` (PS3) | **SteamGridDB** | `tools/enrich_covers_steamgriddb.py`, **solo con título idéntico**; libretro publica apenas 67 tapas de PS3 |
 | `releaseDate` (no-Sega) | **Wikipedia**, listas "List of … games" | `tools/enrich_dates_wikipedia.py`; la columna de región se lee de la cabecera de la tabla, no se asume |
 | `releaseDate` / `publisher` (huecos) | **Wikipedia**, ficha del artículo de cada juego | `tools/enrich_infobox_wikipedia.py`, leyendo `{{Video game release\|NA\|…\|EU\|…}}` acotado al bloque de la consola; la editora también sale por región |
-| `coverUrl` | **libretro-thumbnails** (`Named_Boxarts/`) | match por título, región más cercana a NTSC-U, evitando Beta/Proto |
+| `coverUrl` | **libretro-thumbnails** (`Named_Boxarts/`) | match por título, prefiriendo la región del catálogo y evitando Beta/Proto |
 | `publisher` / `genre` | **libretro-database** (`metadat/publisher/`, `metadat/genre/`, CC BY-SA 4.0) | `tools/enrich_meta_libretro.py`, prefiriendo la etiqueta de región del DAT |
 | `publisher` (consolas de disco) | **Sega Retro**, tabla `companies` | rol `Publisher(US/JP/EU)` según la región, con respaldo al `Publisher` genérico |
 | `condition` | manual | lo carga el usuario desde la app |
@@ -49,6 +49,17 @@ prefiere la de nombre más simple —la edición normal es `Título (Región) (I
 agregan un grupo— y desempata descartando los prefijos `SCED`/`SLED`, que son promocionales de PAL y
 comparten número con el retail (*My Street* es SCED-51677 **y** SCES-51677). Corrigió **77 seriales**
 repartidos en PlayStation, PS2, PS3 y GameCube.
+
+**La región de la carátula se lee del nombre, no se busca como subcadena.** No-Intro lista varias
+separadas por coma cuando un mismo cartucho salió en más de un mercado, y el 32X compartía el
+americano con Japón: la tapa de EE.UU. de *Doom* se llama `Doom (Japan, USA) (En)`. Buscar `"(USA"`
+—con el paréntesis pegado— no la encontraba, así que ganaba `Doom (Europe)`, que sí calzaba, y el
+catálogo americano terminaba mostrando cajas europeas.
+
+Corregidas **130 carátulas** en 20 catálogos (32X americano 7, Genesis europeo 89, NES 11…). Quedan
+**1.739 que apuntan a otra región y no son un error**: libretro no publica tapa de ese mercado y
+caer a otra es lo único posible. Otras 5 son deliberadas — la única americana disponible es una
+`(Beta)`, y una caja de prototipo no es la que está en el estante.
 
 ### Estado por catálogo (auditado 2026-08-03)
 

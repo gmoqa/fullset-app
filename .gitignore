@@ -39,3 +39,6 @@ __pycache__/
 
 # Caché local del resolvedor de carátulas de SteamGridDB
 tools/.steamgriddb-cache.json
+
+# Caché local del árbol de libretro-thumbnails (se reconstruye solo)
+tools/.libretro-trees/

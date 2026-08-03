@@ -107,10 +107,20 @@ def core(t):
     return re.sub(r'[^a-z0-9]+', '', s)
 
 
+def _regiones(name):
+    """Regiones que declara el nombre de archivo de No-Intro, como conjunto."""
+    m = re.search(r"\(([^)]*)\)", name)
+    return {x.strip().upper() for x in m.group(1).split(",")} if m else set()
+
+
 def _rank(name, prefs):
+    # Se compara contra las regiones **declaradas**, no por subcadena: un cartucho compartido entre
+    # mercados se llama `Doom (Japan, USA) (En)`, donde no aparece la subcadena "(USA" porque el
+    # paréntesis no está pegado. Con la comparación vieja esa tapa era invisible y ganaba la europea.
+    suyas = _regiones(name)
     base = -100 if any(b in name for b in ("(Beta", "(Proto", "(Demo", "(Sample", "(Pirate")) else 0
     for i, r in enumerate(prefs):
-        if r in name:
+        if r.strip("( ").upper() in suyas:
             return base + len(prefs) - i
     return base
 
