@@ -26,6 +26,7 @@ import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -41,6 +42,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
@@ -69,7 +71,9 @@ fun SettingsScreen(
     onDeleteAudioChange: (Boolean) -> Unit,
     exportCsv: () -> String,
     backupJson: () -> String,
-    onRestoreJson: (String) -> Unit,
+    backupArchive: () -> BackupArchive,
+    photoCount: Int,
+    onRestore: (RestoredBackup) -> Unit,
     syncStatus: String?,
     onClearSyncStatus: () -> Unit,
     installedModel: WhisperModel?,
@@ -86,7 +90,9 @@ fun SettingsScreen(
 ) {
     val exportCollection = rememberCollectionExporter(exportCsv)
     val backup = rememberBackupExporter(backupJson)
-    val restore = rememberBackupImporter(onRestoreJson)
+    val backupAll = rememberArchiveExporter(backupArchive)
+    val restore = rememberBackupImporter(onRestore)
+    var askBackupScope by remember { mutableStateOf(false) }
     var deleteAudio by remember { mutableStateOf(deleteAudioAfterTranscription) }
 
     Column(
@@ -181,13 +187,15 @@ fun SettingsScreen(
         SettingsRow(
             icon = Icons.Filled.Backup,
             title = "Back up to a file",
-            subtitle = "Save your lists + notes as a .json to restore later.",
-            onClick = { backup() },
+            subtitle = if (photoCount > 0) "Your lists and notes, with or without photos."
+            else "Save your lists + notes as a .json to restore later.",
+            // Sin fotos que respaldar no hay nada que preguntar: el JSON ES el respaldo completo.
+            onClick = { if (photoCount > 0) askBackupScope = true else backup() },
         )
         SettingsRow(
             icon = Icons.Filled.Restore,
             title = "Restore from a file",
-            subtitle = "Merge a backup into your collection (never deletes).",
+            subtitle = "Merge a backup (.json or .zip) into your collection — never deletes.",
             onClick = { restore() },
         )
         if (syncStatus != null) {
@@ -225,6 +233,75 @@ fun SettingsScreen(
         )
 
         Spacer(modifier = Modifier.height(24.dp))
+    }
+
+    if (askBackupScope) {
+        BackupScopeDialog(
+            photoCount = photoCount,
+            onDismiss = { askBackupScope = false },
+            onDataOnly = { askBackupScope = false; backup() },
+            onEverything = { askBackupScope = false; backupAll() },
+        )
+    }
+}
+
+/**
+ * Qué incluir en el respaldo. Existe porque los dos pesan órdenes de magnitud distintos: el de datos
+ * son unos KB y conviene hacerlo seguido; el completo son cientos de MB y es para cada tanto. El ZIP
+ * lleva **el mismo JSON** más las fotos, así que restaurar cualquiera de los dos es el mismo camino.
+ */
+@Composable
+private fun BackupScopeDialog(
+    photoCount: Int,
+    onDismiss: () -> Unit,
+    onDataOnly: () -> Unit,
+    onEverything: () -> Unit,
+) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("What to back up") },
+        text = {
+            Column {
+                Text(
+                    "Your lists, notes and dates are just a few KB. Photos are the heavy part.",
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+                Spacer(Modifier.height(16.dp))
+                BackupChoice(
+                    title = "Data only",
+                    detail = "Lists, notes, dates and condition — a small .json",
+                    onClick = onDataOnly,
+                )
+                Spacer(Modifier.height(8.dp))
+                BackupChoice(
+                    title = "Everything",
+                    detail = "The same data plus your $photoCount " +
+                        (if (photoCount == 1) "photo" else "photos") + " — a .zip",
+                    onClick = onEverything,
+                )
+            }
+        },
+        confirmButton = {},
+        dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel") } },
+    )
+}
+
+@Composable
+private fun BackupChoice(title: String, detail: String, onClick: () -> Unit) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(Tokens.Shape.medium)
+            .clickable(onClick = onClick)
+            .padding(horizontal = 14.dp, vertical = 12.dp),
+    ) {
+        Text(title, style = MaterialTheme.typography.titleSmall)
+        Text(
+            detail,
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(top = 2.dp),
+        )
     }
 }
 

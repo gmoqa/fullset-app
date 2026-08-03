@@ -380,6 +380,9 @@ private fun HomeContent(
     val modelDownload by vm.modelDownload.collectAsStateWithLifecycle()
     val transcriptionLanguage by vm.transcriptionLanguage.collectAsStateWithLifecycle()
     val syncStatus by vm.syncStatus.collectAsStateWithLifecycle()
+    // Cuántas fotos hay en total: sale de la lista reactiva (cada juego ya trae su conteo), así que
+    // se actualiza sola y no hace falta consultar la BD para decidir si preguntar el alcance.
+    val photoCount = remember(games) { games.sumOf { it.photoCount } }
 
     val compact = isCompactWidth()
 
@@ -464,7 +467,9 @@ private fun HomeContent(
                     onDeleteAudioChange = { vm.setDeleteAudioAfterTranscription(it) },
                     exportCsv = { vm.exportCsv() },
                     backupJson = { vm.exportSnapshotJson() },
-                    onRestoreJson = { vm.importSnapshotJson(it) },
+                    backupArchive = { vm.exportArchive() },
+                    photoCount = photoCount,
+                    onRestore = { vm.importBackup(it) },
                     syncStatus = syncStatus,
                     onClearSyncStatus = { vm.clearSyncStatus() },
                     installedModel = installedModel,

@@ -135,4 +135,81 @@ class SyncSnapshotTest {
         assertEquals(1, result.newGames)
         assertEquals("", dest.games().single().firstPlayed)
     }
+
+    @Test
+    fun elRespaldoDeSoloDatosNoListaFotos() {
+        val repo = seedSource()
+        val id = repo.games().first { it.name == "Super Metroid" }.id
+        val file = java.io.File.createTempFile("foto", ".jpg").apply { writeText("x") }
+        repo.adoptPhoto(id, file.absolutePath, "mi cartucho", 5000)
+
+        // El export por defecto es el liviano: las fotos solo van en el archivo completo.
+        assertTrue(repo.exportSnapshot().games.all { it.photos.isEmpty() })
+        assertEquals(1, repo.exportSnapshot(withPhotos = true).games.sumOf { it.photos.size })
+    }
+
+    @Test
+    fun lasFotosViajanPorNombreNoPorRuta() {
+        val repo = seedSource()
+        val id = repo.games().first { it.name == "Super Metroid" }.id
+        val file = java.io.File.createTempFile("foto", ".jpg").apply { writeText("x") }
+        repo.adoptPhoto(id, file.absolutePath, "", 5000)
+
+        val photo = repo.exportSnapshot(withPhotos = true).games.first { it.photos.isNotEmpty() }.photos.single()
+        // Una ruta absoluta no le sirve a otro dispositivo: en el respaldo va solo el nombre.
+        assertEquals(file.name, photo.name)
+        assertTrue('/' !in photo.name)
+    }
+
+    @Test
+    fun restaurarReVinculaLaFotoASuRutaNueva() {
+        val source = seedSource()
+        val gameId = source.games().first { it.name == "Super Metroid" }.id
+        val original = java.io.File.createTempFile("foto", ".jpg").apply { writeText("x") }
+        source.adoptPhoto(gameId, original.absolutePath, "mi cartucho", 5000)
+        val snapshot = source.exportSnapshot(withPhotos = true)
+
+        // Al restaurar, el archivo ya fue extraído del ZIP a OTRA ruta local.
+        val extracted = java.io.File.createTempFile("extraida", ".jpg").apply { writeText("x") }
+        val dest = repo()
+        val result = dest.importSnapshot(snapshot, mapOf(original.name to extracted.absolutePath))
+
+        assertEquals(1, result.newPhotos)
+        val restored = dest.photos(dest.games().first { it.name == "Super Metroid" }.id).single()
+        assertEquals(extracted.absolutePath, restored.path, "debe apuntar al archivo extraído")
+        assertEquals("mi cartucho", restored.caption)
+        assertEquals(5000, restored.createdAt, "conserva el instante original, no el de la restauración")
+    }
+
+    @Test
+    fun sinLosArchivosNoSeInventanFotos() {
+        // Un .json suelto lista fotos pero no las trae: no hay que crear filas que apunten a la nada.
+        val source = seedSource()
+        val gameId = source.games().first { it.name == "Super Metroid" }.id
+        val file = java.io.File.createTempFile("foto", ".jpg").apply { writeText("x") }
+        source.adoptPhoto(gameId, file.absolutePath, "", 5000)
+
+        val dest = repo()
+        val result = dest.importSnapshot(source.exportSnapshot(withPhotos = true), photoFiles = emptyMap())
+
+        assertEquals(0, result.newPhotos)
+        assertTrue(dest.games().all { dest.photos(it.id).isEmpty() })
+    }
+
+    @Test
+    fun reimportarNoDuplicaLasFotos() {
+        val source = seedSource()
+        val gameId = source.games().first { it.name == "Super Metroid" }.id
+        val original = java.io.File.createTempFile("foto", ".jpg").apply { writeText("x") }
+        source.adoptPhoto(gameId, original.absolutePath, "", 5000)
+        val snapshot = source.exportSnapshot(withPhotos = true)
+        val files = mapOf(original.name to original.absolutePath)
+
+        val dest = repo()
+        dest.importSnapshot(snapshot, files)
+        val second = dest.importSnapshot(snapshot, files)
+
+        assertEquals(0, second.newPhotos)
+        assertEquals(1, dest.photos(dest.games().first { it.name == "Super Metroid" }.id).size)
+    }
 }

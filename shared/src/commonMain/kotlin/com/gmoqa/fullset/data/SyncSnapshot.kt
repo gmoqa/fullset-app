@@ -43,6 +43,20 @@ data class GameSync(
     val coverUrl: String = "",
     val createdAt: Long = 0,
     val notes: List<NoteSync> = emptyList(),
+    /** Vacío en el backup de solo datos; con contenido en el archivo completo. */
+    val photos: List<PhotoSync> = emptyList(),
+)
+
+/**
+ * Una foto del diario dentro del respaldo. Guarda el **nombre del archivo**, no su ruta: las rutas
+ * son absolutas y propias de cada dispositivo, así que no sirven para restaurar en otro. El archivo
+ * viaja en `photos/<name>` dentro del ZIP.
+ */
+@Serializable
+data class PhotoSync(
+    val name: String,
+    val caption: String = "",
+    val createdAt: Long = 0,
 )
 
 @Serializable
@@ -63,8 +77,14 @@ data class WishlistSync(
 )
 
 /** Qué entró en el último merge (para avisarle al usuario). */
-data class SyncMergeResult(val newGames: Int, val newNotes: Int, val newWishlist: Int) {
-    val nothingNew: Boolean get() = newGames == 0 && newNotes == 0 && newWishlist == 0
+data class SyncMergeResult(
+    val newGames: Int,
+    val newNotes: Int,
+    val newWishlist: Int,
+    val newPhotos: Int = 0,
+) {
+    val nothingNew: Boolean
+        get() = newGames == 0 && newNotes == 0 && newWishlist == 0 && newPhotos == 0
 }
 
 // Claves naturales para la unión. Separador = NUL (\u0000): no aparece en nombres/slugs, así que dos
@@ -79,8 +99,14 @@ private fun wishKey(platform: String, slug: String, game: String): String =
 
 private fun noteKey(createdAt: Long, text: String): String = createdAt.toString() + SEP + text.trim()
 
-/** Arma la instantánea de las listas desde la BD (solo texto; excluye notas sin texto). */
-fun DiaryRepository.exportSnapshot(): SyncSnapshot {
+/**
+ * Arma la instantánea de las listas desde la BD.
+ *
+ * [withPhotos] decide si además se listan las fotos del diario. Va apagado por defecto porque el
+ * respaldo de solo datos pesa unos KB y se hace seguido; las fotos son cientos de MB y van en el
+ * archivo completo (ver [DiaryRepository.exportArchive]).
+ */
+fun DiaryRepository.exportSnapshot(withPhotos: Boolean = false): SyncSnapshot {
     val games = games().map { g ->
         GameSync(
             name = g.name, platform = g.platform, slug = g.slug, region = g.region,
@@ -90,6 +116,9 @@ fun DiaryRepository.exportSnapshot(): SyncSnapshot {
             playing = g.playing, backlog = g.backlog, coverUrl = g.coverUrl, createdAt = g.createdAt,
             notes = notes(g.id).filter { it.text.isNotBlank() }
                 .map { NoteSync(it.text, it.createdAt, it.durationMs) },
+            photos = if (!withPhotos) emptyList() else photos(g.id).map {
+                PhotoSync(it.path.substringAfterLast('/'), it.caption, it.createdAt)
+            },
         )
     }
     val wishlist = wishlist().map { WishlistSync(it.platform, it.game, it.slug, it.coverUrl, it.addedAt) }
@@ -100,19 +129,26 @@ fun DiaryRepository.exportSnapshot(): SyncSnapshot {
  * Une [snapshot] con la BD local: agrega juegos, notas y wishlist que falten (por clave natural),
  * sin tocar ni borrar lo que ya existe. Idempotente: reimportar la misma instantánea no agrega nada.
  */
-fun DiaryRepository.importSnapshot(snapshot: SyncSnapshot): SyncMergeResult {
+fun DiaryRepository.importSnapshot(
+    snapshot: SyncSnapshot,
+    /** Fotos ya extraídas del archivo: nombre dentro del respaldo -> ruta local donde quedaron. */
+    photoFiles: Map<String, String> = emptyMap(),
+): SyncMergeResult {
     var newGames = 0
     var newNotes = 0
     var newWish = 0
+    var newPhotos = 0
 
     val local = games()
-    // id local + claves de nota existentes, por clave natural del juego.
+    // id local + claves de nota y foto existentes, por clave natural del juego.
     val idByKey = HashMap<String, Long>()
     val noteKeysByGame = HashMap<String, MutableSet<String>>()
+    val photoKeysByGame = HashMap<String, MutableSet<Long>>()
     for (g in local) {
         val key = gameKey(g.platform, g.slug, g.name)
         idByKey[key] = g.id
         noteKeysByGame[key] = notes(g.id).map { noteKey(it.createdAt, it.text) }.toMutableSet()
+        photoKeysByGame[key] = photos(g.id).map { it.createdAt }.toMutableSet()
     }
 
     for (gs in snapshot.games) {
@@ -130,6 +166,7 @@ fun DiaryRepository.importSnapshot(snapshot: SyncSnapshot): SyncMergeResult {
             if (gs.firstPlayed.isNotBlank()) setFirstPlayed(id, gs.firstPlayed)
             idByKey[key] = id
             noteKeysByGame[key] = mutableSetOf()
+            photoKeysByGame[key] = mutableSetOf()
             newGames++
             id
         }
@@ -141,6 +178,15 @@ fun DiaryRepository.importSnapshot(snapshot: SyncSnapshot): SyncMergeResult {
             addNote(gameId, ns.text, createdAt = ns.createdAt.takeIf { it > 0 } ?: nowMillis(), durationMs = ns.durationMs)
             newNotes++
         }
+
+        // Las fotos solo entran si el archivo las traía: en un respaldo de solo datos la lista viene
+        // vacía y no se toca nada. Se identifican por su instante de captura, único en la práctica.
+        val existingPhotos = photoKeysByGame.getValue(key)
+        for (ps in gs.photos) {
+            val extracted = photoFiles[ps.name] ?: continue
+            if (!existingPhotos.add(ps.createdAt)) continue
+            if (adoptPhoto(gameId, extracted, ps.caption, ps.createdAt)) newPhotos++
+        }
     }
 
     val localWish = wishlist().map { wishKey(it.platform, it.slug, it.game) }.toMutableSet()
@@ -151,7 +197,7 @@ fun DiaryRepository.importSnapshot(snapshot: SyncSnapshot): SyncMergeResult {
         newWish++
     }
 
-    return SyncMergeResult(newGames, newNotes, newWish)
+    return SyncMergeResult(newGames, newNotes, newWish, newPhotos)
 }
 
 /** Serialización JSON de la instantánea (lo que se sube/baja del Drive). */

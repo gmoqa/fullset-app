@@ -25,6 +25,8 @@ import com.gmoqa.fullset.data.TranscriptionLanguage
 import com.gmoqa.fullset.data.VoiceRecorder
 import com.gmoqa.fullset.data.WhisperModel
 import com.gmoqa.fullset.data.WhisperModelStore
+import com.gmoqa.fullset.ui.BackupArchive
+import com.gmoqa.fullset.ui.RestoredBackup
 import com.gmoqa.fullset.data.WishlistItem
 import com.gmoqa.fullset.data.collectionCsv
 import com.gmoqa.fullset.data.ioDispatcher
@@ -354,12 +356,31 @@ class DiaryViewModel(
     /** Serializa la colección (listas + transcripciones) a JSON para respaldar. */
     fun exportSnapshotJson(): String = repo.exportSnapshot().toJson()
 
-    /** Une un respaldo JSON a la colección (nunca borra) y reporta cuántos ítems nuevos entraron. */
-    fun importSnapshotJson(json: String) = io {
-        _syncStatus.value = runCatching { repo.importSnapshot(syncSnapshotFromJson(json)) }.fold(
+    /**
+     * Respaldo completo: el mismo JSON, pero con las fotos listadas, más sus archivos para que la
+     * capa de plataforma los meta en el ZIP.
+     */
+    fun exportArchive(): BackupArchive = BackupArchive(
+        json = repo.exportSnapshot(withPhotos = true).toJson(),
+        photoPaths = repo.allPhotoPaths(),
+    )
+
+    /** Cuántas fotos y cuánto pesan, para poder avisar antes de armar un archivo de cientos de MB. */
+    fun photoCount(): Int = repo.allPhotoPaths().size
+
+    /** Une un respaldo a la colección (nunca borra) y reporta cuántos ítems nuevos entraron. */
+    fun importBackup(backup: RestoredBackup) = io {
+        _syncStatus.value = runCatching {
+            repo.importSnapshot(syncSnapshotFromJson(backup.json), backup.photos)
+        }.fold(
             onSuccess = { r ->
                 if (r.nothingNew) "Backup already in sync — nothing new."
-                else "Restored: +${r.newGames} games, +${r.newNotes} notes, +${r.newWishlist} wishlist."
+                else buildString {
+                    append("Restored: +${r.newGames} games, +${r.newNotes} notes")
+                    append(", +${r.newWishlist} wishlist")
+                    if (r.newPhotos > 0) append(", +${r.newPhotos} photos")
+                    append('.')
+                }
             },
             onFailure = { "Couldn't read that file — is it a fullset backup?" },
         )

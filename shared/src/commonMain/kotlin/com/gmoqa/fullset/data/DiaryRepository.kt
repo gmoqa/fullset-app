@@ -267,6 +267,20 @@ class DiaryRepository(
      * Copia la imagen elegida ([source], del Photo Picker) a almacenamiento interno y guarda la ruta.
      * Devuelve la fila creada, o null si la copia falla.
      */
+    /**
+     * Registra una foto **que ya está en disco** (extraída de un respaldo), sin volver a
+     * procesarla: viene del archivo, así que ya está redimensionada y enderezada. Conserva su
+     * instante original para que el diario mantenga el orden real, no el de la restauración.
+     */
+    fun adoptPhoto(gameId: Long, path: String, caption: String, createdAt: Long): Boolean {
+        if (!FileStore.exists(path)) return false
+        q.insertPhoto(gameId, path, caption.trim(), createdAt.takeIf { it > 0 } ?: nowMillis())
+        return true
+    }
+
+    /** Rutas de todas las fotos del diario, para empaquetarlas en el respaldo completo. */
+    fun allPhotoPaths(): List<String> = games().flatMap { g -> photos(g.id).map { it.path } }
+
     fun addPhoto(gameId: Long, source: PlatformImage, caption: String = ""): Photo? {
         val now = nowMillis()
         val dest = "${FileStore.photosDir}/photo_${gameId}_$now.jpg"
