@@ -151,6 +151,12 @@ class DiaryRepository(
         year: Int?,
     ) = q.linkCatalogByName(slug.trim(), publisher.trim(), serial.trim(), year?.toLong(), name, platform)
 
+    /** Reasigna a su región un juego que se había cruzado con el catálogo de otra. */
+    fun relinkToOwnRegion(
+        platform: String, slug: String, foreignSerial: String,
+        serial: String, releaseDate: String, year: Int?,
+    ) = q.relinkToOwnRegion(serial.trim(), releaseDate.trim(), year?.toLong(), slug, platform, foreignSerial)
+
     /** Pone al día la carátula automática de un juego cuando el catálogo la corrige. */
     fun updateCatalogCover(platform: String, slug: String, new: String) =
         q.updateCatalogCover(new.trim(), slug, platform)

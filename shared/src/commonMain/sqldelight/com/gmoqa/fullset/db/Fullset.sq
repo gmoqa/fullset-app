@@ -117,6 +117,16 @@ UPDATE games SET first_played = ? WHERE id = ?;
 updateSerialIfEquals:
 UPDATE games SET serial = :new WHERE slug = :slug AND platform = :platform AND serial = :old;
 
+-- Reasigna a su región los datos de un juego que se había cruzado con el catálogo de OTRA: una
+-- copia japonesa de Darius Gaiden traía el serial americano, su fecha y su carátula, porque el
+-- índice del refresh aplanaba las tres regiones y ganaba siempre NTSC-U.
+--
+-- Se exige que el valor guardado sea **exactamente** el de la región equivocada. Si lo editaste a
+-- mano ya no coincide y no se toca: el dato tuyo manda.
+relinkToOwnRegion:
+UPDATE games SET serial = :serial, release_date = :releaseDate, release_year = :year
+WHERE slug = :slug AND platform = :platform AND serial = :foreignSerial;
+
 -- Borra el catalog number de los juegos de una plataforma cuyo código sea de otra región. Los
 -- prefijos identifican el mercado (SNSP- = Europa, SHVC- = Japón), así que en una lista NTSC-U son
 -- un dato equivocado: peor que no tener ninguno, porque no coincide con la copia que tenés.

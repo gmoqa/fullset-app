@@ -72,6 +72,12 @@ class DiarySeeder(
         for (c in raw.lowercase()) if (c.isLetterOrDigit()) append(c)
     }
 
+    /** Regiones a consultar para un juego: la suya primero, el resto como respaldo. */
+    private fun regionsFor(region: String): List<RegionFilter> {
+        val propia = RegionFilter.entries.firstOrNull { it.label == region.trim() }
+        return listOfNotNull(propia) + RegionFilter.entries.filter { it != propia }
+    }
+
     /**
      * Vuelve a cruzar la colección con los catálogos: completa **lo que esté vacío** (catalog
      * number, editora, género, año) y **corrige la carátula automática**, que es el único campo que
@@ -91,13 +97,14 @@ class DiarySeeder(
         val registry = PlatformRegistry()
         val catalog = GameCatalog()
         // slug -> entrada, por plataforma. Se arma una vez y sirve para todos los juegos.
+        // Se indexa **por región**, no todo junto. Aplanarlo dejaba ganar siempre a la primera de
+        // `RegionFilter.entries`, que es NTSC-U: una copia japonesa de *Darius Gaiden* de Saturn se
+        // llevaba el serial americano (T-8123H en vez de T-1102G), su fecha y su carátula. El juego
+        // era correcto, el catálogo también, y aun así mostraba los datos del mercado equivocado.
         val bySlug = registry.all().associate { platform ->
-            val entries = HashMap<String, CatalogEntry>()
-            for (region in RegionFilter.entries) {
-                // La primera región que traiga el slug gana; el resto solo agrega los que falten.
-                catalog.entries(platform, region).forEach { entries.putIfAbsent(it.slug, it) }
+            platform.name to RegionFilter.entries.associateWith { region ->
+                catalog.entries(platform, region).associateBy { it.slug }
             }
-            platform.name to entries
         }
         // Índice de respaldo por título normalizado. El `slug` es la identidad, pero se genera a
         // partir del título y esa generación cambió con el tiempo (los acentos se transliteran, el
@@ -106,23 +113,40 @@ class DiarySeeder(
         // porque acá abajo había un `?: continue` y nada más. Con esto se reconoce por título y se
         // le repara el slug, así el problema se arregla solo la próxima vez que corra.
         val byTitle = registry.all().associate { platform ->
-            val entries = HashMap<String, CatalogEntry>()
-            for (region in RegionFilter.entries) {
-                catalog.entries(platform, region).forEach { entries.putIfAbsent(titleKey(it.title), it) }
+            platform.name to RegionFilter.entries.associateWith { region ->
+                catalog.entries(platform, region).associateBy { titleKey(it.title) }
             }
-            platform.name to entries
         }
         repo.database.transaction {
             for (game in repo.games()) {
                 if (game.slug.isBlank()) continue
-                val entry = bySlug[game.platform]?.get(game.slug)
-                    ?: byTitle[game.platform]?.get(titleKey(game.name))?.also { found ->
+                // Primero la región del propio juego; las demás solo como respaldo, porque un
+                // título puede estar catalogado en una sola.
+                val orden = regionsFor(game.region)
+                val entry = orden.firstNotNullOfOrNull { bySlug[game.platform]?.get(it)?.get(game.slug) }
+                    ?: orden.firstNotNullOfOrNull {
+                        byTitle[game.platform]?.get(it)?.get(titleKey(game.name))
+                    }?.also { found ->
                         repo.linkCatalog(
                             name = game.name, platform = game.platform, slug = found.slug,
                             publisher = found.publisher, serial = found.serial, year = found.year,
                         )
                     }
                     ?: continue
+                // Si lo guardado es exactamente el dato de OTRA región, se reasigna a la suya. Sin
+                // esto el arreglo del índice solo servía para juegos nuevos: `fillFromCatalog` no
+                // pisa un serial ni una fecha que ya tienen valor, aunque sean del mercado errado.
+                if (game.serial.isNotBlank() && game.serial != entry.serial) {
+                    val ajeno = orden.drop(1).any { otra ->
+                        bySlug[game.platform]?.get(otra)?.get(game.slug)?.serial == game.serial
+                    }
+                    if (ajeno) {
+                        repo.relinkToOwnRegion(
+                            platform = game.platform, slug = game.slug, foreignSerial = game.serial,
+                            serial = entry.serial, releaseDate = entry.releaseDate, year = entry.year,
+                        )
+                    }
+                }
                 repo.fillFromCatalog(
                     game.id,
                     serial = entry.serial,
@@ -214,7 +238,7 @@ class DiarySeeder(
         private const val SNES_SERIAL_FIX_FLAG = "snes_foreign_serial_fix_v1"
         private const val SNES_DUPLICATE_FIX_FLAG = "snes_duplicate_serial_fix_v1"
         /** Subir la versión cuando los catálogos mejoren, para volver a completar huecos. */
-        private const val CATALOG_REFRESH_FLAG = "catalog_refresh_v11"
+        private const val CATALOG_REFRESH_FLAG = "catalog_refresh_v12"
         private const val GENESIS_BOXART =
             "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Mega_Drive_-_Genesis/master/Named_Boxarts/"
     }
