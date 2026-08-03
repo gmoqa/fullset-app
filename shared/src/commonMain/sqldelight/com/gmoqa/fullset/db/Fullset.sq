@@ -155,6 +155,16 @@ UPDATE games SET cover_url = ? WHERE name = ?;
 fillCoverUrlByName:
 UPDATE games SET cover_url = ? WHERE name = ? AND trim(cover_url) = '';
 
+-- Pone al día la carátula automática cuando el catálogo la corrige (p. ej. la del 32X americano,
+-- que apuntaba a la caja europea). Solo toca las que vienen de libretro: una elegida a mano por
+-- SteamGridDB no lleva ese host y se respeta. Y `cover_path` —la foto propia— ni se menciona,
+-- porque tiene prioridad sobre `cover_url` al mostrar (ver `Game.coverModel`).
+updateCatalogCover:
+UPDATE games SET cover_url = :new
+WHERE slug = :slug AND platform = :platform
+  AND cover_url <> :new
+  AND cover_url LIKE 'https://raw.githubusercontent.com/libretro-thumbnails/%';
+
 renameGameByName:
 UPDATE games SET name = ? WHERE name = ?;
 

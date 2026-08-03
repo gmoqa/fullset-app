@@ -151,6 +151,10 @@ class DiaryRepository(
         year: Int?,
     ) = q.linkCatalogByName(slug.trim(), publisher.trim(), serial.trim(), year?.toLong(), name, platform)
 
+    /** Pone al día la carátula automática de un juego cuando el catálogo la corrige. */
+    fun updateCatalogCover(platform: String, slug: String, new: String) =
+        q.updateCatalogCover(new.trim(), slug, platform)
+
     /** Rellena los metadatos normalizados de un juego por nombre (usado por la siembra). */
     fun setMetadataByName(name: String, region: String, releaseYear: Int?, genre: String, condition: String) =
         q.updateMetadataByName(region.trim(), releaseYear?.toLong(), genre.trim(), condition.trim(), name)

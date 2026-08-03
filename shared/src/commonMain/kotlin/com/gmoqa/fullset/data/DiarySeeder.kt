@@ -73,8 +73,11 @@ class DiarySeeder(
     }
 
     /**
-     * Vuelve a cruzar la colección con los catálogos y completa **solo lo que esté vacío**
-     * (catalog number, editora, género, año).
+     * Vuelve a cruzar la colección con los catálogos: completa **lo que esté vacío** (catalog
+     * number, editora, género, año) y **corrige la carátula automática**, que es el único campo que
+     * se pisa. Va aparte porque un dato faltante se nota y uno equivocado no: una tapa europea en
+     * un juego americano se ve perfectamente normal, así que completar solo lo vacío dejaba el
+     * error a la vista para siempre.
      *
      * Los catálogos son un dataset vivo: cuando una consola estrena lista o una existente se
      * enriquece, los juegos ya cargados se quedan con los datos que había el día que los agregaste.
@@ -128,6 +131,13 @@ class DiarySeeder(
                     releaseDate = entry.releaseDate,
                     year = entry.year,
                 )
+                // La carátula **sí** se pisa, a diferencia del resto: cuando el catálogo corrige
+                // una que apuntaba a la región equivocada —el 32X americano mostraba cajas
+                // europeas— completar solo lo vacío dejaba el error a la vista para siempre. La
+                // consulta se limita a las de libretro, así que una elegida a mano no se toca.
+                if (entry.coverUrl.isNotBlank()) {
+                    repo.updateCatalogCover(game.platform, entry.slug, entry.coverUrl)
+                }
             }
         }
     }
@@ -204,7 +214,7 @@ class DiarySeeder(
         private const val SNES_SERIAL_FIX_FLAG = "snes_foreign_serial_fix_v1"
         private const val SNES_DUPLICATE_FIX_FLAG = "snes_duplicate_serial_fix_v1"
         /** Subir la versión cuando los catálogos mejoren, para volver a completar huecos. */
-        private const val CATALOG_REFRESH_FLAG = "catalog_refresh_v10"
+        private const val CATALOG_REFRESH_FLAG = "catalog_refresh_v11"
         private const val GENESIS_BOXART =
             "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Mega_Drive_-_Genesis/master/Named_Boxarts/"
     }
