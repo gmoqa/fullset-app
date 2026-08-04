@@ -65,15 +65,20 @@ fun ScreenHeader(
     title: String,
     modifier: Modifier = Modifier,
     subtitle: String? = null,
+    /** Acción al principio, para las pantallas que se abren sobre otra (flecha de atrás). */
+    leading: (@Composable RowScope.() -> Unit)? = null,
     trailing: (@Composable RowScope.() -> Unit)? = null,
 ) {
     Row(
         modifier = modifier
             .fillMaxWidth()
             .statusBarsPadding()
-            .padding(start = 20.dp, end = 12.dp, top = 18.dp, bottom = 6.dp),
+            // Con flecha, el padding inicial lo pone el propio IconButton: sumar los 20dp dejaría
+            // el título corrido respecto de las pantallas que no la tienen.
+            .padding(start = if (leading == null) 20.dp else 4.dp, end = 12.dp, top = 18.dp, bottom = 6.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
+        leading?.invoke(this)
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 title,

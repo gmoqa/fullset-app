@@ -55,6 +55,7 @@ import com.gmoqa.fullset.ui.BackHandler
 import com.gmoqa.fullset.ui.CatalogMark
 import com.gmoqa.fullset.ui.DiarioGamerTheme
 import com.gmoqa.fullset.ui.GameDetailScreen
+import com.gmoqa.fullset.ui.TimelineScreen
 import com.gmoqa.fullset.ui.GameListScreen
 import com.gmoqa.fullset.ui.LibraryScreen
 import com.gmoqa.fullset.ui.PlatformScreen
@@ -201,6 +202,16 @@ private fun AppRoot(
                 )
             }
 
+            is Screen.Timeline -> {
+                BackHandler { back() }
+                val todos by vm.games.collectAsStateWithLifecycle()
+                TimelineScreen(
+                    games = todos,
+                    onBack = { back() },
+                    onOpenGame = { open(Screen.Detail(it)) },
+                )
+            }
+
             is Screen.Add -> {
                 BackHandler { back() }
                 // Lo ya registrado, para marcarlo en la lista del catálogo. Se recolecta acá adentro
@@ -315,6 +326,7 @@ private fun AppRoot(
             }
 
             Screen.Home -> HomeContent(
+                onOpenTimeline = { open(Screen.Timeline) },
                 vm = vm,
                 platforms = platforms,
                 tab = tab,
@@ -362,6 +374,8 @@ private sealed interface Screen {
     data object AddDigital : Screen
     /** Vista propia de una plataforma: ficha + juegos por lanzamiento. */
     data class Platform(val platform: String) : Screen
+    /** Los juegos por "primera vez que lo jugué", incluidos los digitales. */
+    data object Timeline : Screen
 }
 
 @Composable
@@ -381,6 +395,7 @@ private fun HomeContent(
     sortOrder: SortOrder,
     onSortChange: (SortOrder) -> Unit,
     onOpenGame: (Long) -> Unit,
+    onOpenTimeline: () -> Unit,
     onOpenPlatform: (String) -> Unit,
     onAddLibrary: () -> Unit,
     onAddWishlist: () -> Unit,
@@ -441,6 +456,7 @@ private fun HomeContent(
         ) { page ->
             when (page) {
                 0 -> LibraryScreen(
+                    onOpenTimeline = onOpenTimeline,
                     games = physical,
                     onOpenGame = onOpenGame,
                     onAddGame = onAddLibrary,

@@ -35,6 +35,11 @@ El paquete y el nombre del producto son **fullset** (`com.gmoqa.fullset`).
 - **Settings**: tema (System/Light/Dark), región (NTSC-U / NTSC-J / PAL), opciones de vista de
   Collection, export a CSV, **respaldo y restauración**, idioma de la transcripción, y créditos.
 
+**Timeline** (ícono del reloj en el header de Collection): tus juegos ordenados por **cuándo los
+jugaste por primera vez**, agrupados por año. Es una pantalla aparte y no un modo de Collection
+porque el alcance es distinto — Collection es la colección física y deja afuera los digitales a
+propósito, pero un juego digital se jugó igual y le corresponde su lugar en la línea de tiempo.
+
 **Compartir una foto hacia la app.** fullset aparece en el menú Compartir del sistema para
 imágenes: al mandarle una captura o una foto, pregunta a cuál de los juegos de **Playing**
 adjuntarla y confirma dónde quedó. Se limita a Playing porque compartir pasa mientras jugás, y
