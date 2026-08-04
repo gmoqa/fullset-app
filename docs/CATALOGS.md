@@ -399,15 +399,18 @@ claves nuevas no rompe nada.
 - **A. Documentar procedencia** — *este documento*. ✅
 - **B. Registro machine-readable** — por catálogo: región, fuentes por campo, builder, overrides,
   cobertura, estado de revisión. Reporta "confirmado por región". El lint/report lo consumen.
-- **C. Evolución de esquema** — precisión de fecha + confianza (aditivo, backward-compatible).
+- **C. Evolución de esquema** — **a medias**: la precisión de fecha está ✅ (`releaseDate` ISO
+  variable, 77% con día exacto), la **confianza por dato no** — hoy no hay forma de distinguir en el
+  JSON un valor scrapeado de uno verificado, salvo mirando si tiene override.
 - **D. Pipeline de corrección con procedencia** — ✅ overrides con `_source`/`_note`/`_date`;
   `catalog_lint.py` **exige** `_source` y valida slug, campos y formato de fecha; `catalog_report.py`
   separa confirmado a mano de auto-derivado. Hoy son **74 correcciones**, todas con fuente citada.
 - **E. Cerrar huecos** — **Sega cerrado** ✅ (8 consolas × 3 regiones) y **GameCube, PS2 y PS3
   cerrados** ✅. La editora de los catálogos Sega ya no está en 0%: va de 77% (Saturn, Sega CD) a 89%
-  (SG-1000). Queda un hueco de fondo: **`snes-usa` sigue sin builder**, o sea que es el único
-  catálogo que no se puede regenerar ni auditar como el resto — y es justo el que resultó tener 149
-  fechas de otra región (ver más abajo).
+  (SG-1000), y **`snes-usa` ya tiene builder** (`build_snes_catalog.py`), que era el último catálogo
+  que no se podía regenerar ni auditar. Lo que queda abierto es el **género en 0%** para las cuatro
+  consolas de Sony y GameCube: 21.927 juegos, el 82% del dataset. No es el enriquecedor, es la
+  fuente — libretro publica `metadat/genre` solo de PSP entre las PlayStation.
 - **F. Eje de región** — ✅ **cerrado**: las tres regiones en Sega (8 consolas), PlayStation, PS2,
   PS3 y GameCube. Si alguna vez se quiere drill-down por país dentro de PAL, el modelo lo soporta (la
   key del mapa `catalogs` es texto libre); hoy no compensa porque los países son 95% el mismo listado.
