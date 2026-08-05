@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fullset — your retro game collection and diary</title>
+<meta name="description" content="An Android app for your physical retro game collection and a diary for every game. Fully offline, no accounts, no backend. Open source.">
+<style>
+  :root {
+    --bg: #12100c;
+    --fg: #f2ece0;
+    --muted: #a49c8c;
+    --amber: #ffc400;
+    --line: #453f2f;
+    --card: #191612;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fffdf7; --fg: #221e16; --muted: #6b6354;
+      --amber: #7a5d00; --line: #e3dac2; --card: #fffaf0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 24px 80px;
+    background: var(--bg); color: var(--fg);
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 660px; margin: 0 auto; }
+  header { padding: 88px 0 8px; }
+  h1 { font-size: 44px; margin: 0; letter-spacing: -0.02em; }
+  h1 span { color: var(--amber); }
+  .tagline { font-size: 21px; color: var(--muted); margin: 12px 0 0; }
+  h2 {
+    font-size: 14px; text-transform: uppercase; letter-spacing: 0.09em;
+    color: var(--amber); margin: 56px 0 12px;
+  }
+  p { margin: 0 0 16px; }
+  ul { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--amber); }
+  strong { color: var(--fg); }
+  .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+  .card { border: 1px solid var(--line); border-radius: 14px; padding: 18px; background: var(--card); }
+  .card h3 { margin: 0 0 6px; font-size: 17px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .note { border-left: 3px solid var(--line); padding-left: 16px; color: var(--muted); }
+  footer {
+    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 15px;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>full<span>set</span></h1>
+    <p class="tagline">Your retro game collection, and a diary for every game.</p>
+  </header>
+
+  <p>
+    fullset keeps track of the games you <strong>own</strong> — shelf by shelf, console by console —
+    and gives each one a place to write down what playing it was like. Notes, photos, voice memos,
+    and the date you first played it.
+  </p>
+  <p>
+    Everything stays on your phone. No account, no server, nothing to sign up for.
+  </p>
+
+  <h2>What it does</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Shelves</h3>
+      <p>Your physical collection grouped by console, with real box art and how complete each copy is
+         — loose, boxed, or complete in box.</p>
+    </div>
+    <div class="card">
+      <h3>A diary per game</h3>
+      <p>Dated notes, photos, and voice memos. Voice is transcribed on the device itself.</p>
+    </div>
+    <div class="card">
+      <h3>Offline catalogs</h3>
+      <p>26,884 games across 37 lists, bundled with the app. Search works with no connection at all.</p>
+    </div>
+    <div class="card">
+      <h3>Region aware</h3>
+      <p>The same game is a different product in each market — its own title, date, and catalog
+         number. fullset keeps them apart.</p>
+    </div>
+  </div>
+
+  <h2>Consoles</h2>
+  <p>
+    NES · Super Nintendo · Nintendo&nbsp;64 · GameCube · PlayStation · PlayStation&nbsp;2 ·
+    PlayStation&nbsp;3 · PlayStation&nbsp;5 · SG-1000 · Master System · Genesis / Mega&nbsp;Drive ·
+    Game&nbsp;Gear · Sega&nbsp;CD · 32X · Saturn · Dreamcast
+  </p>
+  <p class="note">
+    Each one ships with separate lists for North America, Japan and Europe, so your Japanese import
+    shows the box, the release date and the catalog number that actually match the copy on your
+    shelf.
+  </p>
+
+  <h2>Just a diary?</h2>
+  <p>
+    If you don't want to track a collection, the first screen lets you say so and the shelves stay
+    out of your way. You can change your mind later — nothing is deleted either way.
+  </p>
+
+  <h2>Your data is yours</h2>
+  <ul>
+    <li>Stored locally, in a database on your device.</li>
+    <li>Voice notes are transcribed <strong>on the phone</strong>. Audio never leaves it.</li>
+    <li>Export everything as JSON, or as a ZIP with your photos included.</li>
+    <li>The only network calls are for cover images.</li>
+  </ul>
+
+  <h2>Get it</h2>
+  <p>
+    fullset is free and open source under the MIT license. It runs on Android today; an iOS version
+    is in progress.
+  </p>
+  <p>
+    <a href="https://github.com/gmoqa/fullset-app">Source code and releases on GitHub →</a>
+  </p>
+
+  <footer>
+    Game titles, console names and box art belong to their respective owners. fullset is not
+    affiliated with or endorsed by any of them.
+  </footer>
+
+</main>
+</body>
+</html>
