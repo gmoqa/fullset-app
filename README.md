@@ -8,6 +8,9 @@ vez**. Todo local, sin cuentas ni backend.
 
 UI en **inglés**. Licencia **MIT**.
 
+> **[MAPA.md](MAPA.md)** — módulos, funcionalidades y flujos en un solo lugar. Empezá por ahí si
+> querés entender qué hace la app sin leer el código.
+
 ## Stack (KMP-ready)
 - Kotlin 2.0 + Jetpack Compose (Material 3) · minSdk 26 · target/compileSdk 35
 - Librerías **multiplataforma** (pensadas para migrar a Compose Multiplatform → iOS):
