@@ -102,6 +102,7 @@ fun AddDigitalGameScreen(
 
             Button(
                 onClick = { onAdd(platform.trim(), title.trim(), coverUrl, cover) },
+                shape = Tokens.Shape.control,
                 enabled = title.isNotBlank() && platform.isNotBlank(),
                 modifier = Modifier.fillMaxWidth(),
             ) {

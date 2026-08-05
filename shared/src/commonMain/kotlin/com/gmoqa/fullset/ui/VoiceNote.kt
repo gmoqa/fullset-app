@@ -69,7 +69,7 @@ internal fun RecordingBar(
         )
         LevelBar(amplitude = amplitude, modifier = Modifier.weight(1f))
         TextButton(onClick = onDiscard) { Text("Discard") }
-        Button(onClick = onSave) { Text("Save") }
+        Button(onClick = onSave, shape = Tokens.Shape.control) { Text("Save") }
     }
 }
 

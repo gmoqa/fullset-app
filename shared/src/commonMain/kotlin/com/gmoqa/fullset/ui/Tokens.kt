@@ -46,6 +46,13 @@ object Tokens {
      */
     object Shape {
         val pill = RoundedCornerShape(50)
+        /**
+         * Controles que se tocan: botones y segmentados. Material 3 los hace **pastilla completa**
+         * por defecto y ese redondeo no sale de [AppShapes], así que hay que pasarlo a mano en cada
+         * uno. Los chips y badges siguen siendo [pill]: son etiquetas, no controles, y ahí la
+         * pastilla lee como "dato" en vez de "tocá acá".
+         */
+        val control = RoundedCornerShape(12.dp)
         val small = RoundedCornerShape(8.dp)
         /** Menús desplegables y superficies flotantes chicas. */
         val menu = RoundedCornerShape(12.dp)

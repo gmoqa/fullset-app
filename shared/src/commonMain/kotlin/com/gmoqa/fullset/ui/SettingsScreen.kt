@@ -425,7 +425,9 @@ private fun <T> SettingsChoice(
                     selected = selected == value,
                     onClick = { onSelect(value) },
                     enabled = isEnabled(value),
-                    shape = SegmentedButtonDefaults.itemShape(index = index, count = options.size),
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index, count = options.size, baseShape = Tokens.Shape.control,
+                    ),
                 ) {
                     Text(text)
                 }

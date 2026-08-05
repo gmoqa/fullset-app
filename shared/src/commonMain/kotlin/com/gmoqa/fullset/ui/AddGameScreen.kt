@@ -551,7 +551,10 @@ private fun ManualEntryStep(
                     title = "Not in the list",
                     subtitle = "Add it by the name you typed — you can set a cover later.",
                     action = {
-                        FilledTonalButton(onClick = { onAdd(query.trim(), "", null) }) {
+                        FilledTonalButton(
+                            onClick = { onAdd(query.trim(), "", null) },
+                            shape = Tokens.Shape.control,
+                        ) {
                             Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
                             Spacer(Modifier.width(6.dp))
                             Text("Add “${query.trim()}”")
@@ -667,6 +670,7 @@ fun CoverPickerField(
             ) {
                 if (searchEnabled) {
                     Button(
+                        shape = Tokens.Shape.control,
                         onClick = {
                             scope.launch {
                                 searching = true
@@ -685,6 +689,7 @@ fun CoverPickerField(
                 }
                 OutlinedButton(
                     onClick = { pickImage() },
+                    shape = Tokens.Shape.control,
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Icon(Icons.Filled.PhotoLibrary, contentDescription = null, modifier = Modifier.size(18.dp))

@@ -116,6 +116,7 @@ fun LibraryScreen(
                     } else {
                         FilledTonalButton(
                             onClick = onAddGame,
+                            shape = Tokens.Shape.control,
                             contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
                         ) {
                             Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
@@ -134,7 +135,7 @@ fun LibraryScreen(
                 title = "No games yet",
                 subtitle = "Add your first game to start your collection.",
                 action = {
-                    FilledTonalButton(onClick = onAddGame) {
+                    FilledTonalButton(onClick = onAddGame, shape = Tokens.Shape.control) {
                         Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
                         Spacer(Modifier.width(6.dp))
                         Text("Add game")
