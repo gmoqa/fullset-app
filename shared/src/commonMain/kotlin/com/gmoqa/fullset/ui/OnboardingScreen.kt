@@ -4,11 +4,19 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.EditNote
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -16,9 +24,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.gmoqa.fullset.data.TrackingMode
+import com.gmoqa.fullset.resources.Res
+import com.gmoqa.fullset.resources.ic_shelf
+import org.jetbrains.compose.resources.painterResource
 
 /**
  * Primera apertura: qué querés llevar.
@@ -27,6 +41,10 @@ import com.gmoqa.fullset.data.TrackingMode
  * muestran, nunca qué se guarda, y se cambia después en Settings. Por eso no hay botón de "saltar"
  * ni de "atrás" — cualquiera de las dos respuestas es válida y reversible, así que ofrecer una
  * salida solo agregaría una decisión más.
+ *
+ * Dos tarjetas cuadradas, con el ícono de la sección que representan: el estante es el mismo de
+ * Collection y la libreta el de las notas, así que la respuesta se lee de un vistazo sin tener que
+ * leer una descripción.
  */
 @Composable
 fun OnboardingScreen(onPick: (TrackingMode) -> Unit) {
@@ -37,45 +55,60 @@ fun OnboardingScreen(onPick: (TrackingMode) -> Unit) {
                 .safeDrawingPadding()
                 .padding(horizontal = Tokens.Space.huge),
             verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Text(
-                "What do you want to keep?",
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.Bold,
-            )
-            Text(
-                "You can change this later in Settings — nothing is deleted either way.",
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(top = Tokens.Space.md, bottom = Tokens.Space.giant),
-            )
-            ModeCard(
-                title = "Collection and diary",
-                body = "Shelves by console with what you own, plus a wishlist — and notes, " +
-                    "photos and voice memos on every game.",
-                onClick = { onPick(TrackingMode.COLLECTION_AND_DIARY) },
-            )
-            ModeCard(
-                title = "Diary only",
-                body = "Just what you're playing and what's next, with notes, photos and voice " +
-                    "memos. No shelves, no wishlist.",
-                onClick = { onPick(TrackingMode.DIARY_ONLY) },
-                modifier = Modifier.padding(top = Tokens.Space.xl),
-            )
+            // Ancho tope: las tarjetas son cuadradas, así que sin límite en una tablet cada una
+            // ocupa media pantalla y queda un cuadrado gigante con un ícono chiquito perdido en el
+            // medio. Con esto se ven igual en teléfono y no se desbordan en pantalla ancha.
+            Column(Modifier.widthIn(max = Tokens.Size.contentMax)) {
+                Text(
+                    "What do you want to keep?",
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold,
+                )
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(top = Tokens.Space.giant),
+                    horizontalArrangement = Arrangement.spacedBy(Tokens.Space.xl),
+                ) {
+                    ModeCard(
+                        painter = painterResource(Res.drawable.ic_shelf),
+                        title = "Collection",
+                        subtitle = "and diary",
+                        onClick = { onPick(TrackingMode.COLLECTION_AND_DIARY) },
+                    )
+                    ModeCard(
+                        vector = Icons.Filled.EditNote,
+                        title = "Diary",
+                        subtitle = "only",
+                        onClick = { onPick(TrackingMode.DIARY_ONLY) },
+                    )
+                }
+                Text(
+                    "Change it anytime in Settings.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.fillMaxWidth().padding(top = Tokens.Space.xxl),
+                    textAlign = TextAlign.Center,
+                )
+            }
         }
     }
 }
 
 @Composable
-private fun ModeCard(
+private fun RowScope.ModeCard(
     title: String,
-    body: String,
+    subtitle: String,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier,
+    painter: Painter? = null,
+    vector: ImageVector? = null,
 ) {
     Column(
-        modifier = modifier
-            .fillMaxWidth()
+        modifier = Modifier
+            .weight(1f)
+            // Cuadrada: las dos ocupan la mitad del ancho y el alto se iguala solo, así que ninguna
+            // parece la opción principal por ser más grande.
+            .aspectRatio(1f)
             .clip(RoundedCornerShape(Tokens.Space.xxl))
             .border(
                 width = 1.dp,
@@ -83,15 +116,28 @@ private fun ModeCard(
                 shape = RoundedCornerShape(Tokens.Space.xxl),
             )
             .clickable(onClick = onClick)
-            .padding(Tokens.Space.xxl),
-        horizontalAlignment = Alignment.Start,
+            .padding(Tokens.Space.xl),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text(title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+        val iconMod = Modifier.size(Tokens.Size.onboardingIcon)
+        val tint = MaterialTheme.colorScheme.primary
+        when {
+            painter != null -> Icon(painter, contentDescription = null, modifier = iconMod, tint = tint)
+            vector != null -> Icon(vector, contentDescription = null, modifier = iconMod, tint = tint)
+        }
         Text(
-            body,
-            style = MaterialTheme.typography.bodyMedium,
+            title,
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.SemiBold,
+            modifier = Modifier.padding(top = Tokens.Space.xl),
+            textAlign = TextAlign.Center,
+        )
+        Text(
+            subtitle,
+            style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.padding(top = Tokens.Space.sm),
+            textAlign = TextAlign.Center,
         )
     }
 }
