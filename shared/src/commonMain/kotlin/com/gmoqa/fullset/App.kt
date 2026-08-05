@@ -69,7 +69,14 @@ import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
 
 /** Destino del flujo "agregar juego de una plataforma". */
-private enum class AddTarget { LIBRARY, WISHLIST }
+/**
+ * A dónde va el juego que se elige del catálogo.
+ *
+ * [PLAYING] es físico igual que [LIBRARY] —entra a la colección— pero además queda marcado como que
+ * lo estás jugando: si el alta salió desde Playing y el juego no apareciera ahí, la pantalla queda
+ * igual que antes y parece que no pasó nada.
+ */
+private enum class AddTarget { LIBRARY, PLAYING, WISHLIST }
 
 /**
  * Raíz de la app, compartida entre Android e iOS. Recibe el [vm] ya construido por cada plataforma
@@ -239,33 +246,34 @@ private fun AppRoot(
                     val owned = allGames.filter { !it.digital }.map {
                         CatalogMark(
                             platform = it.platform, slug = it.slug, title = it.name,
-                            label = if (current.target == AddTarget.LIBRARY) "Added" else "Owned",
+                            label = if (current.target == AddTarget.WISHLIST) "Owned" else "Added",
                             dot = it.conditionState?.dot,
                             // En la wishlist tenerlo es solo un aviso: podés desear otra copia o región.
-                            blocks = current.target == AddTarget.LIBRARY,
+                            blocks = current.target != AddTarget.WISHLIST,
                             // La región de tu copia: tener la americana no bloquea agregar la japonesa.
                             region = it.region,
                         )
                     }
                     when (current.target) {
-                        AddTarget.LIBRARY -> owned
+                        AddTarget.LIBRARY, AddTarget.PLAYING -> owned
                         AddTarget.WISHLIST -> owned + allWishlist.map {
                             CatalogMark(it.platform, it.slug, it.game, label = "Added")
                         }
                     }
                 }
                 AddGameScreen(
-                    title = if (current.target == AddTarget.LIBRARY) "Add game" else "Add to wishlist",
+                    title = if (current.target == AddTarget.WISHLIST) "Add to wishlist" else "Add game",
                     platforms = platforms,
                     catalog = catalog,
                     onCancel = { back() },
                     onPicked = { platform, entry, coverUrl ->
                         when (current.target) {
-                            AddTarget.LIBRARY ->
+                            AddTarget.LIBRARY, AddTarget.PLAYING ->
                                 vm.addGame(
                                     entry.title, platform.name, coverUrl,
                                     region = entry.region, releaseYear = entry.year, genre = entry.genre,
                                     slug = entry.slug, publisher = entry.publisher,
+                                    playing = current.target == AddTarget.PLAYING,
                                 )
                             AddTarget.WISHLIST ->
                                 vm.addToWishlist(platform.name, entry.title, entry.slug, coverUrl)
@@ -276,8 +284,11 @@ private fun AppRoot(
                     onAddManual = { platform, gameTitle, coverUrl, cover ->
                         // Alta a mano (PS5…): físico → Collection. El digital va aparte, por Playing.
                         when (current.target) {
-                            AddTarget.LIBRARY ->
-                                vm.addManualGame(gameTitle, platform.name, coverUrl, cover, digital = false)
+                            AddTarget.LIBRARY, AddTarget.PLAYING ->
+                                vm.addManualGame(
+                                    gameTitle, platform.name, coverUrl, cover, digital = false,
+                                    playing = current.target == AddTarget.PLAYING,
+                                )
                             AddTarget.WISHLIST -> {
                                 vm.addToWishlist(platform.name, gameTitle, "", coverUrl)
                                 // Volver a Collection dejaría la sensación de que no pasó nada:
@@ -365,6 +376,7 @@ private fun AppRoot(
                 onAddLibrary = { open(Screen.Add(AddTarget.LIBRARY)) },
                 onAddWishlist = { open(Screen.Add(AddTarget.WISHLIST)) },
                 onAddDigital = { open(Screen.AddDigital) },
+                onAddPlaying = { open(Screen.Add(AddTarget.PLAYING)) },
                 isDebug = isDebug,
             )
         }
@@ -434,6 +446,7 @@ private fun HomeContent(
     onAddLibrary: () -> Unit,
     onAddWishlist: () -> Unit,
     onAddDigital: () -> Unit,
+    onAddPlaying: () -> Unit,
     isDebug: Boolean,
 ) {
     // Estado reactivo: agregar/borrar un juego o wishlist refresca la lista sin navegar.
@@ -504,7 +517,6 @@ private fun HomeContent(
                     games = physical,
                     onOpenGame = onOpenGame,
                     onAddPhysical = onAddLibrary,
-                    onAddDigital = onAddDigital,
                     // Al agregar un juego, Collection sube hasta él en vez de dejarte donde estabas.
                     focusGameId = lastAdded,
                     onFocusConsumed = { vm.consumeLastAdded() },
@@ -538,6 +550,7 @@ private fun HomeContent(
                 }
                 HomeTab.PLAYING -> PlayingScreen(
                     onOpenTimeline = onOpenTimeline,
+                    onAddPhysical = onAddPlaying,
                     games = games.filter { it.playing },
                     onOpenGame = onOpenGame,
                     onAddDigital = onAddDigital,

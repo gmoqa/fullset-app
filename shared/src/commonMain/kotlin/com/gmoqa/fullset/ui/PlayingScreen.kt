@@ -27,6 +27,12 @@ import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.FilledTonalIconButton
+import androidx.compose.material3.TextButton
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.VideogameAsset
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -53,6 +59,8 @@ import com.gmoqa.fullset.data.coverModel
 @Composable
 fun PlayingScreen(
     onOpenTimeline: () -> Unit,
+    /** Alta física: se elige del catálogo y queda marcada como que la estás jugando. */
+    onAddPhysical: () -> Unit,
     games: List<Game>,
     onOpenGame: (Long) -> Unit,
     onAddDigital: () -> Unit,
@@ -67,7 +75,7 @@ fun PlayingScreen(
                 IconButton(onClick = onOpenTimeline) {
                     Icon(Icons.Filled.Schedule, contentDescription = "Timeline")
                 }
-                PlayingMenu(onAddDigital = onAddDigital)
+                AddPlayingButton(onAddPhysical = onAddPhysical, onAddDigital = onAddDigital)
             },
         )
         if (games.isEmpty()) {
@@ -93,18 +101,62 @@ fun PlayingScreen(
 }
 
 /** Menú "⋮" del header de Playing: por ahora, dar de alta un juego digital (no poseído). */
+/**
+ * El alta desde Playing pregunta **qué** estás por agregar, porque acá conviven las dos cosas: un
+ * cartucho que tenés en la mano y un juego digital que no poseés. En Collection no hace falta —esa
+ * pantalla *es* la colección física— y por eso ahí el botón va directo al catálogo.
+ *
+ * El físico entra al catálogo y además queda marcado como que lo estás jugando: si no, el alta
+ * saldría desde acá y el juego no aparecería, que se lee como que no pasó nada.
+ */
 @Composable
-private fun PlayingMenu(onAddDigital: () -> Unit) {
+private fun AddPlayingButton(onAddPhysical: () -> Unit, onAddDigital: () -> Unit) {
     var open by remember { mutableStateOf(false) }
-    Box {
-        IconButton(onClick = { open = true }) {
-            Icon(Icons.Filled.MoreVert, contentDescription = "More")
-        }
-        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
-            DropdownMenuItem(
-                text = { Text("Add digital game") },
-                leadingIcon = { Icon(Icons.Filled.CloudQueue, contentDescription = null) },
-                onClick = { open = false; onAddDigital() },
+    FilledTonalIconButton(onClick = { open = true }) {
+        Icon(Icons.Filled.Add, contentDescription = "Add game")
+    }
+    if (open) {
+        AlertDialog(
+            onDismissRequest = { open = false },
+            shape = Tokens.Shape.dialog,
+            title = { Text("Add game") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(Tokens.Space.xs)) {
+                    AddOption(
+                        icon = Icons.Filled.VideogameAsset,
+                        title = "Physical game",
+                        hint = "From our console lists",
+                    ) { open = false; onAddPhysical() }
+                    AddOption(
+                        icon = Icons.Filled.CloudQueue,
+                        title = "Digital game",
+                        hint = "Search cover on SteamGridDB",
+                    ) { open = false; onAddDigital() }
+                }
+            },
+            confirmButton = { TextButton(onClick = { open = false }) { Text("Cancel") } },
+        )
+    }
+}
+
+@Composable
+private fun AddOption(icon: ImageVector, title: String, hint: String, onClick: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(Tokens.Shape.control)
+            .clickable(onClick = onClick)
+            .padding(vertical = Tokens.Space.xl, horizontal = Tokens.Space.md),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(Tokens.Space.xl),
+    ) {
+        Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
+        Column {
+            Text(title, style = MaterialTheme.typography.bodyLarge)
+            Text(
+                hint,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
     }

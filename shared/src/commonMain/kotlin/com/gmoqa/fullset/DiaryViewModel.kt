@@ -106,12 +106,16 @@ class DiaryViewModel(
         genre: String = "",
         slug: String = "",
         publisher: String = "",
+        /** Alta desde Playing: el juego arranca marcado como que lo estás jugando. */
+        playing: Boolean = false,
     ) = io {
-        _lastAdded.value = repo.addGame(
+        val id = repo.addGame(
             title, platform, coverUrl,
             region = region, releaseYear = releaseYear, genre = genre,
             slug = slug, publisher = publisher,
         )
+        if (playing) repo.setPlaying(id, true)
+        _lastAdded.value = id
     }
 
     /**
@@ -126,9 +130,12 @@ class DiaryViewModel(
         coverUrl: String,
         cover: PlatformImage?,
         digital: Boolean,
+        /** Alta desde Playing: el juego arranca marcado como que lo estás jugando. */
+        playing: Boolean = false,
     ) = io {
         val id = repo.addGame(title, platform, coverUrl = coverUrl, digital = digital)
         if (cover != null) repo.setCoverFromImage(id, cover)
+        if (playing) repo.setPlaying(id, true)
         _lastAdded.value = id
     }
 

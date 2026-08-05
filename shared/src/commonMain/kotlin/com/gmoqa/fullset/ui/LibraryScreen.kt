@@ -61,10 +61,12 @@ import com.gmoqa.fullset.data.SortOrder
 fun LibraryScreen(
     games: List<Game>,
     onOpenGame: (Long) -> Unit,
-    /** Alta desde nuestros catálogos: la copia física que tenés en el estante. */
+    /**
+     * Alta desde nuestros catálogos. Acá **siempre es física**: Collection *es* la colección
+     * física, así que no hay nada que preguntar. El alta digital vive en Playing, que es donde un
+     * juego que no poseés tiene sentido.
+     */
     onAddPhysical: () -> Unit,
-    /** Alta buscando la carátula en SteamGridDB: los digitales no están en las listas retro. */
-    onAddDigital: () -> Unit,
     focusGameId: Long? = null,
     onFocusConsumed: () -> Unit = {},
     onOpenPlatform: (String) -> Unit = {},
@@ -109,11 +111,23 @@ fun LibraryScreen(
                     }
                     // En pantallas angostas el botón se queda solo con el "+": junto al título y la
                     // lupa, el texto no entra sin achicar todo lo demás.
-                    AddGameMenu(
-                        compact = isCompactWidth(),
-                        onAddPhysical = onAddPhysical,
-                        onAddDigital = onAddDigital,
-                    )
+                    // En pantallas angostas el botón se queda solo con el "+": junto al título y
+                    // la lupa, el texto no entra sin achicar todo lo demás.
+                    if (isCompactWidth()) {
+                        FilledTonalIconButton(onClick = onAddPhysical) {
+                            Icon(Icons.Filled.Add, contentDescription = "Add game")
+                        }
+                    } else {
+                        FilledTonalButton(
+                            onClick = onAddPhysical,
+                            shape = Tokens.Shape.control,
+                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
+                        ) {
+                            Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+                            Spacer(Modifier.width(6.dp))
+                            Text("Add game")
+                        }
+                    }
                 },
             )
         }
@@ -168,91 +182,6 @@ fun LibraryScreen(
  * Antes el alta digital vivía escondida en el menú de Playing, así que desde Collection no había
  * forma de llegar.
  */
-/**
- * "Add game" abre un **modal** con las dos altas, porque van por caminos distintos: **físico** se
- * elige de nuestras listas por consola, y **digital** se busca en SteamGridDB, que es donde están
- * los juegos modernos que ningún catálogo retro tiene.
- *
- * Modal y no menú desplegable: son dos caminos que llevan a pantallas completas distintas, no dos
- * ajustes del mismo botón. Un diálogo centrado da lugar a explicar de dónde sale cada uno sin que
- * el texto quede apretado contra el borde de la pantalla.
- *
- * Antes el alta digital vivía escondida en el menú de Playing, así que desde Collection no había
- * forma de llegar.
- */
-@Composable
-private fun AddGameMenu(
-    compact: Boolean,
-    onAddPhysical: () -> Unit,
-    onAddDigital: () -> Unit,
-) {
-    var open by remember { mutableStateOf(false) }
-    // En pantallas angostas el botón se queda solo con el "+": junto al título y la lupa, el texto
-    // no entra sin achicar todo lo demás.
-    if (compact) {
-        FilledTonalIconButton(onClick = { open = true }) {
-            Icon(Icons.Filled.Add, contentDescription = "Add game")
-        }
-    } else {
-        FilledTonalButton(
-            onClick = { open = true },
-            shape = Tokens.Shape.control,
-            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
-        ) {
-            Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
-            Spacer(Modifier.width(6.dp))
-            Text("Add game")
-        }
-    }
-    if (open) {
-        AlertDialog(
-            onDismissRequest = { open = false },
-            shape = Tokens.Shape.dialog,
-            title = { Text("Add game") },
-            text = {
-                Column(verticalArrangement = Arrangement.spacedBy(Tokens.Space.xs)) {
-                    AddOption(
-                        icon = Icons.Filled.VideogameAsset,
-                        title = "Physical game",
-                        hint = "From our console lists",
-                    ) { open = false; onAddPhysical() }
-                    AddOption(
-                        icon = Icons.Filled.CloudQueue,
-                        title = "Digital game",
-                        hint = "Search cover on SteamGridDB",
-                    ) { open = false; onAddDigital() }
-                }
-            },
-            confirmButton = {
-                TextButton(onClick = { open = false }) { Text("Cancel") }
-            },
-        )
-    }
-}
-
-@Composable
-private fun AddOption(icon: ImageVector, title: String, hint: String, onClick: () -> Unit) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(Tokens.Shape.control)
-            .clickable(onClick = onClick)
-            .padding(vertical = Tokens.Space.xl, horizontal = Tokens.Space.md),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(Tokens.Space.xl),
-    ) {
-        Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
-        Column {
-            Text(title, style = MaterialTheme.typography.bodyLarge)
-            Text(
-                hint,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-    }
-}
-
 /**
  * Barra de búsqueda que reemplaza al header mientras buscás: así no roba espacio permanente.
  * Toma el foco sola al abrirse para poder tipear de una.
