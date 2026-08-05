@@ -33,6 +33,8 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.VideogameAsset
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.material3.FilledTonalButton
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -61,6 +63,11 @@ fun PlayingScreen(
     onOpenTimeline: () -> Unit,
     /** Alta física: se elige del catálogo y queda marcada como que la estás jugando. */
     onAddPhysical: () -> Unit,
+    /**
+     * Si preguntar físico o digital. En falso —modo "Diary only"— el botón va directo al alta
+     * digital: sin colección, "físico" no significa nada y preguntarlo es una decisión de más.
+     */
+    askGameType: Boolean,
     games: List<Game>,
     onOpenGame: (Long) -> Unit,
     onAddDigital: () -> Unit,
@@ -75,7 +82,11 @@ fun PlayingScreen(
                 IconButton(onClick = onOpenTimeline) {
                     Icon(Icons.Filled.Schedule, contentDescription = "Timeline")
                 }
-                AddPlayingButton(onAddPhysical = onAddPhysical, onAddDigital = onAddDigital)
+                AddPlayingButton(
+                    askGameType = askGameType,
+                    onAddPhysical = onAddPhysical,
+                    onAddDigital = onAddDigital,
+                )
             },
         )
         if (games.isEmpty()) {
@@ -110,10 +121,31 @@ fun PlayingScreen(
  * saldría desde acá y el juego no aparecería, que se lee como que no pasó nada.
  */
 @Composable
-private fun AddPlayingButton(onAddPhysical: () -> Unit, onAddDigital: () -> Unit) {
+private fun AddPlayingButton(
+    askGameType: Boolean,
+    onAddPhysical: () -> Unit,
+    onAddDigital: () -> Unit,
+) {
     var open by remember { mutableStateOf(false) }
-    FilledTonalIconButton(onClick = { open = true }) {
-        Icon(Icons.Filled.Add, contentDescription = "Add game")
+    // Sin colección que llevar, la única alta posible es la digital: se dispara sola. Es el mismo
+    // criterio de `PhotoSourceButton` cuando la plataforma no puede sacar fotos.
+    val alTocar = { if (askGameType) open = true else onAddDigital() }
+    // Mismo botón que en Collection: es la misma acción y tiene que verse igual. En pantallas
+    // angostas se queda con el "+", que es lo que hace allá cuando el texto no entra.
+    if (isCompactWidth()) {
+        FilledTonalIconButton(onClick = alTocar) {
+            Icon(Icons.Filled.Add, contentDescription = "Add game")
+        }
+    } else {
+        FilledTonalButton(
+            onClick = alTocar,
+            shape = Tokens.Shape.control,
+            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
+        ) {
+            Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+            Spacer(Modifier.width(6.dp))
+            Text("Add game")
+        }
     }
     if (open) {
         AlertDialog(
@@ -121,44 +153,26 @@ private fun AddPlayingButton(onAddPhysical: () -> Unit, onAddDigital: () -> Unit
             shape = Tokens.Shape.dialog,
             title = { Text("Add game") },
             text = {
-                Column(verticalArrangement = Arrangement.spacedBy(Tokens.Space.xs)) {
-                    AddOption(
-                        icon = Icons.Filled.VideogameAsset,
-                        title = "Physical game",
-                        hint = "From our console lists",
+                // Tope de ancho: las tarjetas son cuadradas, así que en una tablet el diálogo se
+                // estira y quedan dos cuadrados grandes con el ícono flotando en el medio.
+                Row(
+                    modifier = Modifier.widthIn(max = Tokens.Size.contentMax),
+                    horizontalArrangement = Arrangement.spacedBy(Tokens.Space.xl),
+                ) {
+                    ChoiceCard(
+                        vector = Icons.Filled.VideogameAsset,
+                        title = "Physical",
+                        subtitle = "From our lists",
                     ) { open = false; onAddPhysical() }
-                    AddOption(
-                        icon = Icons.Filled.CloudQueue,
-                        title = "Digital game",
-                        hint = "Search cover on SteamGridDB",
+                    ChoiceCard(
+                        vector = Icons.Filled.CloudQueue,
+                        title = "Digital",
+                        subtitle = "From SteamGridDB",
                     ) { open = false; onAddDigital() }
                 }
             },
             confirmButton = { TextButton(onClick = { open = false }) { Text("Cancel") } },
         )
-    }
-}
-
-@Composable
-private fun AddOption(icon: ImageVector, title: String, hint: String, onClick: () -> Unit) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(Tokens.Shape.control)
-            .clickable(onClick = onClick)
-            .padding(vertical = Tokens.Space.xl, horizontal = Tokens.Space.md),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(Tokens.Space.xl),
-    ) {
-        Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
-        Column {
-            Text(title, style = MaterialTheme.typography.bodyLarge)
-            Text(
-                hint,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
     }
 }
 

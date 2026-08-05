@@ -70,13 +70,13 @@ fun OnboardingScreen(onPick: (TrackingMode) -> Unit) {
                     modifier = Modifier.fillMaxWidth().padding(top = Tokens.Space.giant),
                     horizontalArrangement = Arrangement.spacedBy(Tokens.Space.xl),
                 ) {
-                    ModeCard(
+                    ChoiceCard(
                         painter = painterResource(Res.drawable.ic_shelf),
                         title = "Collection",
                         subtitle = "and diary",
                         onClick = { onPick(TrackingMode.COLLECTION_AND_DIARY) },
                     )
-                    ModeCard(
+                    ChoiceCard(
                         vector = Icons.Filled.EditNote,
                         title = "Diary",
                         subtitle = "only",
@@ -92,52 +92,5 @@ fun OnboardingScreen(onPick: (TrackingMode) -> Unit) {
                 )
             }
         }
-    }
-}
-
-@Composable
-private fun RowScope.ModeCard(
-    title: String,
-    subtitle: String,
-    onClick: () -> Unit,
-    painter: Painter? = null,
-    vector: ImageVector? = null,
-) {
-    Column(
-        modifier = Modifier
-            .weight(1f)
-            // Cuadrada: las dos ocupan la mitad del ancho y el alto se iguala solo, así que ninguna
-            // parece la opción principal por ser más grande.
-            .aspectRatio(1f)
-            .clip(RoundedCornerShape(Tokens.Space.xxl))
-            .border(
-                width = 1.dp,
-                color = MaterialTheme.colorScheme.outlineVariant,
-                shape = RoundedCornerShape(Tokens.Space.xxl),
-            )
-            .clickable(onClick = onClick)
-            .padding(Tokens.Space.xl),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        val iconMod = Modifier.size(Tokens.Size.onboardingIcon)
-        val tint = MaterialTheme.colorScheme.primary
-        when {
-            painter != null -> Icon(painter, contentDescription = null, modifier = iconMod, tint = tint)
-            vector != null -> Icon(vector, contentDescription = null, modifier = iconMod, tint = tint)
-        }
-        Text(
-            title,
-            style = MaterialTheme.typography.titleMedium,
-            fontWeight = FontWeight.SemiBold,
-            modifier = Modifier.padding(top = Tokens.Space.xl),
-            textAlign = TextAlign.Center,
-        )
-        Text(
-            subtitle,
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            textAlign = TextAlign.Center,
-        )
     }
 }
