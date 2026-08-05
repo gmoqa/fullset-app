@@ -41,8 +41,12 @@ import coil3.compose.SubcomposeAsyncImageContent
 
 /**
  * Ancho por debajo del cual la UI se aprieta (teléfonos angostos): la barra de navegación muestra
- * solo iconos y los botones con texto pasan a ser de icono. La tablet (~418dp) queda por encima y
- * conserva las etiquetas.
+ * solo iconos y los botones con texto pasan a ser de icono.
+ *
+ * Es un **piso**, no una clasificación de dispositivo: un S22 mide 411dp y ya queda por encima. Lo
+ * que de verdad cambia con el ancho —cuántas columnas, hasta dónde estirar el texto— se decide con
+ * el ancho disponible en cada pantalla, no con este booleano, porque entre 411dp y los 1069dp de una
+ * tablet en horizontal hay demasiada diferencia para un solo escalón.
  */
 internal const val COMPACT_WIDTH_DP = 400
 

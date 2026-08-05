@@ -2,7 +2,10 @@ package com.gmoqa.fullset.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -98,7 +101,17 @@ fun SettingsScreen(
     var askBackupScope by remember { mutableStateOf(false) }
     var deleteAudio by remember { mutableStateOf(deleteAudioAfterTranscription) }
 
-    Column(Modifier.fillMaxSize()) {
+    // Tope de ancho para **toda** la pantalla, título incluido: son opciones con descripción, y
+    // estiradas a lo ancho de una tablet en horizontal quedan renglones de más de cien caracteres,
+    // donde el ojo pierde el principio de la línea siguiente. El tope va acá afuera y no solo en el
+    // contenido porque si no el título queda contra el borde izquierdo y las opciones en el medio,
+    // como si fueran de dos pantallas distintas.
+    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
+      Column(
+          // `widthIn` **antes** de `fillMaxHeight`: al revés el tope llega tarde, cuando el ancho
+          // ya quedó fijado al del padre.
+          modifier = Modifier.widthIn(max = Tokens.Size.readableMax).fillMaxHeight(),
+      ) {
         // El header no puede irse con el scroll: es el único que aplica el inset del status
         // bar, así que al subir deja el contenido pasando por debajo del reloj y la batería.
         // Fijo, como en el resto de las pantallas.
@@ -258,6 +271,7 @@ fun SettingsScreen(
 
             Spacer(modifier = Modifier.height(24.dp))
         }
+      }
     }
 
     if (askBackupScope) {

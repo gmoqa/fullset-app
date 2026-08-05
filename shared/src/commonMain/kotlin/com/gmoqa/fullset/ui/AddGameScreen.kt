@@ -207,29 +207,39 @@ private fun PlatformStep(
     // app la perdió. Hoy esto deja afuera a la PS5, que se carga a mano desde Playing.
     val conCatalogo = remember(platforms) { platforms.filter { it.hasCatalog } }
 
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(3),
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        itemsIndexed(conCatalogo) { _, p ->
-            if (p.enabled) {
-                PlatformCube(
-                    platform = p,
-                    // Offline: el conteo sale del JSON de catálogo empaquetado.
-                    count = remember(p.id, region) { catalog.entries(p, region).size },
-                    region = region,
-                    onClick = { onSelect(p) },
-                )
-            } else {
-                // Bloqueada: sin catálogo aún, no se toca su JSON ni se puede seleccionar.
-                LockedCube(platform = p)
+    // Las columnas salen del ancho, no de un número fijo. Con `Fixed(3)` la tablet en horizontal
+    // (>1000dp) daba cubos de ~315dp: un glifo enorme flotando en el medio. Tres es el piso, así que
+    // en teléfono no cambia nada; a partir de ahí entra una columna cada `CUBO_MIN`.
+    BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
+        val columnas = maxOf(3, ((maxWidth - 32.dp) / CUBO_MIN).toInt())
+
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(columnas),
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            itemsIndexed(conCatalogo) { _, p ->
+                if (p.enabled) {
+                    PlatformCube(
+                        platform = p,
+                        // Offline: el conteo sale del JSON de catálogo empaquetado.
+                        count = remember(p.id, region) { catalog.entries(p, region).size },
+                        region = region,
+                        onClick = { onSelect(p) },
+                    )
+                } else {
+                    // Bloqueada: sin catálogo aún, no se toca su JSON ni se puede seleccionar.
+                    LockedCube(platform = p)
+                }
             }
         }
     }
 }
+
+/** Ancho al que un cubo de consola se ve bien: por debajo el glifo queda chico, por encima flota. */
+private val CUBO_MIN = 150.dp
 
 /**
  * Cubo de una plataforma soportada: se pinta con **su color de identidad** ([platformBandColor],

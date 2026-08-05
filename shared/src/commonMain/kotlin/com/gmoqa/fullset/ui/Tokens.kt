@@ -112,5 +112,12 @@ object Tokens {
         val onboardingIcon = 44.dp
         /** Ancho tope de un bloque centrado, para que no se estire en tablet. */
         val contentMax = 420.dp
+
+        /**
+         * Ancho máximo de una columna de **texto corrido**. Más que esto y el renglón se pasa de los
+         * ~75 caracteres donde el ojo todavía encuentra el principio de la línea siguiente. Es más
+         * generoso que [contentMax] porque acá hay descripciones, no controles sueltos.
+         */
+        val readableMax = 640.dp
     }
 }
