@@ -3,6 +3,7 @@ package com.gmoqa.fullset.data
 import com.gmoqa.fullset.ui.selectableRegions
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 /** Elección de catálogo por región, con fallback a NTSC-U (catalogFile). */
@@ -71,6 +72,24 @@ class PlatformTest {
             libretroRepo = "", enabled = true,
         )
         assertEquals("", none.catalogFor(RegionFilter.NTSC_U))
+    }
+
+    @Test
+    fun soloTieneCatalogoLaQueTraeAlgunaLista() {
+        // `hasCatalog` es lo que decide si una consola aparece en el alta de la colección. Una con
+        // lista en una sola región cuenta: si mirara solo la región activa, la SG-1000 desaparecería
+        // de la grilla al pasar a NTSC-U.
+        val jpOnly = Platform(
+            id = "sg-1000", name = "SG-1000", catalogFile = "",
+            libretroRepo = "Sega_-_SG-1000", enabled = true,
+            catalogs = mapOf("NTSC-J" to "catalogs/sg-1000-jp.json"),
+        )
+        val ps5 = Platform(
+            id = "playstation-5", name = "PlayStation 5", catalogFile = "",
+            libretroRepo = "", enabled = true,
+        )
+        assertTrue(jpOnly.hasCatalog)
+        assertFalse(ps5.hasCatalog)
     }
 
     @Test

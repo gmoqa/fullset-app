@@ -281,26 +281,6 @@ private fun AppRoot(
                         // No cerramos: quedás en la lista, el juego pasa a "Added" y podés seguir.
                     },
                     marks = marks,
-                    onAddManual = { platform, gameTitle, coverUrl, cover ->
-                        // Alta a mano (PS5…): físico → Collection. El digital va aparte, por Playing.
-                        when (current.target) {
-                            AddTarget.LIBRARY, AddTarget.PLAYING ->
-                                vm.addManualGame(
-                                    gameTitle, platform.name, coverUrl, cover, digital = false,
-                                    playing = current.target == AddTarget.PLAYING,
-                                )
-                            AddTarget.WISHLIST -> {
-                                vm.addToWishlist(platform.name, gameTitle, "", coverUrl)
-                                // Volver a Collection dejaría la sensación de que no pasó nada:
-                                // aterrizamos en la wishlist, donde se ve lo que acabás de agregar.
-                                tab = HomeTab.WISHLIST
-                            }
-                        }
-                        back()
-                    },
-                    coverSearchEnabled = vm.coverSearchEnabled,
-                    onSearchGames = { vm.searchGames(it) },
-                    onCoversFor = { vm.coversFor(it) },
                     region = regionFilter,
                 )
             }

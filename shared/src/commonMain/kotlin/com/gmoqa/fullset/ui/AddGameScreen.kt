@@ -96,9 +96,11 @@ data class CatalogMark(
 
 /**
  * Flujo "elegir un juego" en **2 pasos**. La usan la Biblioteca y la Wishlist:
- *  1. Plataforma — grilla de cubos cuadrados.
- *  2a. Título — buscador del catálogo (plataformas con catálogo: retro), entrega vía [onPicked].
- *  2b. A mano — título + carátula opcional (plataformas sin catálogo, como PS5), vía [onAddManual].
+ *  1. Plataforma — grilla de cubos cuadrados, solo las que tienen catálogo.
+ *  2. Título — buscador del catálogo, entrega vía [onPicked].
+ *
+ * Sin catálogo no hay nada que elegir, así que esas consolas (la PS5) no aparecen acá: se cargan a
+ * mano desde Playing, que es donde vive lo que jugás sin poseerlo.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -110,10 +112,6 @@ fun AddGameScreen(
     onPicked: (platform: Platform, entry: CatalogEntry, coverUrl: String) -> Unit,
     /** Lo ya registrado: se marca en la lista del catálogo (punto + etiqueta). */
     marks: List<CatalogMark> = emptyList(),
-    onAddManual: (platform: Platform, title: String, coverUrl: String, cover: PlatformImage?) -> Unit,
-    coverSearchEnabled: Boolean = false,
-    onSearchGames: suspend (title: String) -> List<SteamGridGame> = { emptyList() },
-    onCoversFor: suspend (gameId: Int) -> List<String> = { emptyList() },
     region: RegionFilter = RegionFilter.NTSC_U,
 ) {
     var selected by remember { mutableStateOf<Platform?>(null) }
@@ -174,19 +172,10 @@ fun AddGameScreen(
         Column(modifier = Modifier.fillMaxSize().padding(padding)) {
             if (platform == null) {
                 PlatformStep(platforms = platforms, catalog = catalog, region = region, onSelect = { selected = it })
-            } else if (platform.catalogFor(pickedRegion).isNotBlank()) {
+            } else {
                 TitleStep(
                     platform = platform, catalog = catalog, region = pickedRegion,
                     marks = marks, onPicked = onPicked,
-                )
-            } else {
-                // Plataforma sin catálogo (PS5…): se carga a mano.
-                ManualEntryStep(
-                    platform = platform,
-                    coverSearchEnabled = coverSearchEnabled,
-                    onSearchGames = onSearchGames,
-                    onCoversFor = onCoversFor,
-                    onAdd = { t, url, uri -> onAddManual(platform, t, url, uri) },
                 )
             }
         }
@@ -213,6 +202,11 @@ private fun PlatformStep(
     region: RegionFilter,
     onSelect: (Platform) -> Unit,
 ) {
+    // Solo las que tienen de dónde elegir. Se filtra por catálogo en **cualquier** región y no en la
+    // que está puesta: si no, una consola desaparecería al cambiar de región, que se lee como que la
+    // app la perdió. Hoy esto deja afuera a la PS5, que se carga a mano desde Playing.
+    val conCatalogo = remember(platforms) { platforms.filter { it.hasCatalog } }
+
     LazyVerticalGrid(
         columns = GridCells.Fixed(3),
         modifier = Modifier.fillMaxSize(),
@@ -220,7 +214,7 @@ private fun PlatformStep(
         horizontalArrangement = Arrangement.spacedBy(12.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        itemsIndexed(platforms) { _, p ->
+        itemsIndexed(conCatalogo) { _, p ->
             if (p.enabled) {
                 PlatformCube(
                     platform = p,
@@ -450,189 +444,6 @@ private fun ResultRow(
                     else MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-        }
-    }
-}
-
-// ------------------------------------------- Paso 2 (sin catálogo): a mano
-
-/**
- * Alta de un juego físico para plataformas sin catálogo (PS5…), con la **misma forma** que las de
- * catálogo: un buscador arriba y la lista de juegos de SteamGridDB debajo. Elegís el juego, después
- * una de sus carátulas (o "sin carátula"), y entra a la colección. El destino digital va aparte,
- * desde Playing.
- */
-@Composable
-private fun ManualEntryStep(
-    platform: Platform,
-    coverSearchEnabled: Boolean,
-    onSearchGames: suspend (String) -> List<SteamGridGame>,
-    onCoversFor: suspend (Int) -> List<String>,
-    onAdd: (title: String, coverUrl: String, cover: PlatformImage?) -> Unit,
-) {
-    var query by remember { mutableStateOf("") }
-    var games by remember { mutableStateOf<List<SteamGridGame>>(emptyList()) }
-    var chosen by remember { mutableStateOf<SteamGridGame?>(null) }
-    var covers by remember { mutableStateOf<List<String>>(emptyList()) }
-    var loading by remember { mutableStateOf(false) }
-    val scope = rememberCoroutineScope()
-
-    // Viendo las carátulas, "atrás" vuelve a la lista de juegos (no sale del flujo).
-    BackHandler(enabled = chosen != null) { chosen = null; covers = emptyList() }
-
-    // Busca mientras escribís, con una pausa para no pegarle a la API en cada tecla.
-    LaunchedEffect(query) {
-        chosen = null
-        covers = emptyList()
-        val q = query.trim()
-        if (!coverSearchEnabled || q.length < 2) {
-            games = emptyList()
-            return@LaunchedEffect
-        }
-        delay(350)
-        loading = true
-        games = onSearchGames(q)
-        loading = false
-    }
-
-    Column(modifier = Modifier.fillMaxSize()) {
-        OutlinedTextField(
-            value = query,
-            onValueChange = { query = it },
-            label = { Text("Search ${platform.name}…") },
-            leadingIcon = { Icon(Icons.Filled.Search, contentDescription = null) },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
-        )
-
-        Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
-            when {
-                // Juego elegido → elegí una de sus carátulas (o agregá sin ninguna).
-                chosen != null -> ChooseCoverStep(
-                    game = chosen!!,
-                    covers = covers,
-                    loading = loading,
-                    onPick = { url -> onAdd(chosen!!.name, url, null) },
-                    onSkip = { onAdd(chosen!!.name, "", null) },
-                )
-
-                loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    CircularProgressIndicator()
-                }
-
-                // La lista de juegos que coinciden: tocás el correcto → trae sus carátulas.
-                games.isNotEmpty() -> LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(horizontal = 16.dp),
-                ) {
-                    items(games) { game ->
-                        Text(
-                            game.name,
-                            style = MaterialTheme.typography.bodyLarge,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    chosen = game
-                                    scope.launch {
-                                        loading = true
-                                        covers = onCoversFor(game.id)
-                                        loading = false
-                                    }
-                                }
-                                .padding(vertical = 14.dp),
-                        )
-                        HorizontalDivider(color = MaterialTheme.colorScheme.surfaceVariant)
-                    }
-                }
-
-                // Escribiste algo pero no hay match (o no hay buscador): agregar por el nombre tipeado.
-                query.trim().length >= 2 -> EmptyState(
-                    modifier = Modifier.fillMaxSize(),
-                    icon = Icons.Filled.SearchOff,
-                    title = "Not in the list",
-                    subtitle = "Add it by the name you typed — you can set a cover later.",
-                    action = {
-                        FilledTonalButton(
-                            onClick = { onAdd(query.trim(), "", null) },
-                            shape = Tokens.Shape.control,
-                        ) {
-                            Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
-                            Spacer(Modifier.width(6.dp))
-                            Text("Add “${query.trim()}”")
-                        }
-                    },
-                )
-
-                else -> EmptyState(
-                    modifier = Modifier.fillMaxSize(),
-                    icon = Icons.Filled.Search,
-                    title = "Search ${platform.name}",
-                    subtitle = "Type a game name to find it and pick a cover.",
-                )
-            }
-        }
-    }
-}
-
-/** Paso final del alta sin catálogo: elegir una carátula del juego (o agregarlo sin ninguna). */
-@Composable
-private fun ChooseCoverStep(
-    game: SteamGridGame,
-    covers: List<String>,
-    loading: Boolean,
-    onPick: (String) -> Unit,
-    onSkip: () -> Unit,
-) {
-    Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
-        Text(
-            "Pick a cover for “${game.name}”",
-            style = MaterialTheme.typography.titleSmall,
-        )
-        Spacer(Modifier.height(12.dp))
-        when {
-            loading -> Box(Modifier.fillMaxWidth().weight(1f), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator()
-            }
-
-            covers.isEmpty() -> Text(
-                "No covers found for this game.",
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.weight(1f),
-            )
-
-            else -> LazyVerticalGrid(
-                columns = GridCells.Fixed(3),
-                modifier = Modifier.weight(1f),
-                horizontalArrangement = Arrangement.spacedBy(10.dp),
-                verticalArrangement = Arrangement.spacedBy(10.dp),
-            ) {
-                // Las carátulas de SteamGridDB son 600×900 (2:3).
-                itemsIndexed(covers) { _, url ->
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .aspectRatio(2f / 3f)
-                            .background(MaterialTheme.colorScheme.surfaceVariant)
-                            .clickable { onPick(url) },
-                    ) {
-                        AsyncImage(
-                            model = url,
-                            contentDescription = null,
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier.fillMaxSize(),
-                        )
-                    }
-                }
-            }
-        }
-        TextButton(
-            onClick = onSkip,
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-        ) {
-            Text("Add without a cover")
         }
     }
 }

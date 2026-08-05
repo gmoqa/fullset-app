@@ -119,27 +119,6 @@ class DiaryViewModel(
     }
 
     /**
-     * Agrega un juego cargado a mano (plataformas sin catálogo, como PS5). [digital] decide si es
-     * físico (va a Collection) o digital (no lo poseés). La carátula puede venir de una URL elegida
-     * en el buscador ([coverUrl], p. ej. SteamGridDB) o de una imagen de la galería ([cover]).
-     * Corre entero en IO para tener el id antes de asociar la imagen local.
-     */
-    fun addManualGame(
-        title: String,
-        platform: String,
-        coverUrl: String,
-        cover: PlatformImage?,
-        digital: Boolean,
-        /** Alta desde Playing: el juego arranca marcado como que lo estás jugando. */
-        playing: Boolean = false,
-    ) = io {
-        val id = repo.addGame(title, platform, coverUrl = coverUrl, digital = digital)
-        if (cover != null) repo.setCoverFromImage(id, cover)
-        if (playing) repo.setPlaying(id, true)
-        _lastAdded.value = id
-    }
-
-    /**
      * Agrega un juego **digital** (no lo poseés). Entra directo a **Playing** (`digital=true`,
      * `playing=true`) y **no** aparece en Collection, que es tu colección física. La carátula puede
      * venir del buscador ([coverUrl]) o de la galería ([cover]).

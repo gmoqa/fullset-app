@@ -29,6 +29,15 @@ data class Platform(
             ?: catalogFile.takeIf { it.isNotBlank() }
             ?: catalogs.values.firstOrNull { it.isNotBlank() }
             ?: ""
+
+    /**
+     * Si tiene lista de dónde elegir, en la región que sea.
+     *
+     * Es lo que separa una consola que se agrega a la **colección** de una que no: sin catálogo no
+     * hay nada retro que buscar, y ese juego se carga a mano desde Playing (con su carátula de
+     * SteamGridDB) porque en la práctica es digital. Hoy solo la PS5 cae de este lado.
+     */
+    val hasCatalog: Boolean get() = catalogFor(RegionFilter.entries.first()).isNotBlank()
 }
 
 /**
