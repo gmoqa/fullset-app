@@ -26,9 +26,11 @@ import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.VideogameAsset
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material.icons.filled.CloudQueue
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.foundation.layout.Box
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.TextButton
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.draw.clip
 import androidx.compose.material3.FilledTonalIconButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -166,19 +168,18 @@ fun LibraryScreen(
  * Antes el alta digital vivía escondida en el menú de Playing, así que desde Collection no había
  * forma de llegar.
  */
-/** Ítem de menú con una segunda línea que dice de dónde sale el juego. */
-@Composable
-private fun MenuLabel(title: String, hint: String) {
-    Column {
-        Text(title)
-        Text(
-            hint,
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-    }
-}
-
+/**
+ * "Add game" abre un **modal** con las dos altas, porque van por caminos distintos: **físico** se
+ * elige de nuestras listas por consola, y **digital** se busca en SteamGridDB, que es donde están
+ * los juegos modernos que ningún catálogo retro tiene.
+ *
+ * Modal y no menú desplegable: son dos caminos que llevan a pantallas completas distintas, no dos
+ * ajustes del mismo botón. Un diálogo centrado da lugar a explicar de dónde sale cada uno sin que
+ * el texto quede apretado contra el borde de la pantalla.
+ *
+ * Antes el alta digital vivía escondida en el menú de Playing, así que desde Collection no había
+ * forma de llegar.
+ */
 @Composable
 private fun AddGameMenu(
     compact: Boolean,
@@ -186,34 +187,67 @@ private fun AddGameMenu(
     onAddDigital: () -> Unit,
 ) {
     var open by remember { mutableStateOf(false) }
-    Box {
-        // En pantallas angostas el botón se queda solo con el "+": junto al título y la lupa, el
-        // texto no entra sin achicar todo lo demás.
-        if (compact) {
-            FilledTonalIconButton(onClick = { open = true }) {
-                Icon(Icons.Filled.Add, contentDescription = "Add game")
-            }
-        } else {
-            FilledTonalButton(
-                onClick = { open = true },
-                shape = Tokens.Shape.control,
-                contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
-            ) {
-                Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
-                Spacer(Modifier.width(6.dp))
-                Text("Add game")
-            }
+    // En pantallas angostas el botón se queda solo con el "+": junto al título y la lupa, el texto
+    // no entra sin achicar todo lo demás.
+    if (compact) {
+        FilledTonalIconButton(onClick = { open = true }) {
+            Icon(Icons.Filled.Add, contentDescription = "Add game")
         }
-        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
-            DropdownMenuItem(
-                text = { MenuLabel("Physical game", "From our console lists") },
-                leadingIcon = { Icon(Icons.Filled.VideogameAsset, contentDescription = null) },
-                onClick = { open = false; onAddPhysical() },
-            )
-            DropdownMenuItem(
-                text = { MenuLabel("Digital game", "Search cover on SteamGridDB") },
-                leadingIcon = { Icon(Icons.Filled.CloudQueue, contentDescription = null) },
-                onClick = { open = false; onAddDigital() },
+    } else {
+        FilledTonalButton(
+            onClick = { open = true },
+            shape = Tokens.Shape.control,
+            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
+        ) {
+            Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+            Spacer(Modifier.width(6.dp))
+            Text("Add game")
+        }
+    }
+    if (open) {
+        AlertDialog(
+            onDismissRequest = { open = false },
+            shape = Tokens.Shape.dialog,
+            title = { Text("Add game") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(Tokens.Space.xs)) {
+                    AddOption(
+                        icon = Icons.Filled.VideogameAsset,
+                        title = "Physical game",
+                        hint = "From our console lists",
+                    ) { open = false; onAddPhysical() }
+                    AddOption(
+                        icon = Icons.Filled.CloudQueue,
+                        title = "Digital game",
+                        hint = "Search cover on SteamGridDB",
+                    ) { open = false; onAddDigital() }
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { open = false }) { Text("Cancel") }
+            },
+        )
+    }
+}
+
+@Composable
+private fun AddOption(icon: ImageVector, title: String, hint: String, onClick: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(Tokens.Shape.control)
+            .clickable(onClick = onClick)
+            .padding(vertical = Tokens.Space.xl, horizontal = Tokens.Space.md),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(Tokens.Space.xl),
+    ) {
+        Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
+        Column {
+            Text(title, style = MaterialTheme.typography.bodyLarge)
+            Text(
+                hint,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
     }
