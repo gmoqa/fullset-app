@@ -7,129 +7,237 @@
 <meta name="description" content="An Android app for your physical retro game collection and a diary for every game. Fully offline, no accounts, no backend. Open source.">
 <style>
   :root {
-    --bg: #12100c;
-    --fg: #f2ece0;
-    --muted: #a49c8c;
+    --bg: #100e0a;
+    --fg: #f4efe4;
+    --muted: #a8a091;
     --amber: #ffc400;
-    --line: #453f2f;
-    --card: #191612;
+    --amber-dim: #9c8a55;
+    --line: #3a3527;
+    --card: #191510;
+    --shelf: #2a2419;
   }
   @media (prefers-color-scheme: light) {
     :root {
-      --bg: #fffdf7; --fg: #221e16; --muted: #6b6354;
-      --amber: #7a5d00; --line: #e3dac2; --card: #fffaf0;
+      --bg: #fdfaf2; --fg: #201c14; --muted: #6d6555;
+      --amber: #8a6800; --amber-dim: #a89152; --line: #e6dcc2;
+      --card: #fffdf7; --shelf: #e0d5b8;
     }
   }
   * { box-sizing: border-box; }
   body {
-    margin: 0; padding: 0 24px 80px;
-    background: var(--bg); color: var(--fg);
+    margin: 0; background: var(--bg); color: var(--fg);
     font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
-  main { max-width: 660px; margin: 0 auto; }
-  header { padding: 88px 0 8px; }
-  h1 { font-size: 44px; margin: 0; letter-spacing: -0.02em; }
-  h1 span { color: var(--amber); }
-  .tagline { font-size: 21px; color: var(--muted); margin: 12px 0 0; }
-  h2 {
-    font-size: 14px; text-transform: uppercase; letter-spacing: 0.09em;
-    color: var(--amber); margin: 56px 0 12px;
-  }
-  p { margin: 0 0 16px; }
-  ul { margin: 0 0 16px; padding-left: 22px; }
-  li { margin-bottom: 8px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
   a { color: var(--amber); }
   strong { color: var(--fg); }
-  .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
-  .card { border: 1px solid var(--line); border-radius: 14px; padding: 18px; background: var(--card); }
-  .card h3 { margin: 0 0 6px; font-size: 17px; }
-  .card p { margin: 0; color: var(--muted); font-size: 15px; }
-  .note { border-left: 3px solid var(--line); padding-left: 16px; color: var(--muted); }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 96px 0 72px; text-align: center; }
+  h1 { font-size: clamp(52px, 11vw, 96px); margin: 0; letter-spacing: -0.045em; font-weight: 800; }
+  h1 span { color: var(--amber); }
+  .tagline {
+    font-size: clamp(19px, 3.4vw, 26px); color: var(--muted);
+    margin: 18px auto 0; max-width: 30ch; line-height: 1.35;
+  }
+
+  /* ---------- Estante: la idea de la app, dibujada con CSS ---------- */
+  .shelf { margin: 56px 0 0; }
+  .row { display: flex; align-items: flex-end; justify-content: center; gap: clamp(6px, 1.4vw, 14px); }
+  .box {
+    width: clamp(38px, 7.4vw, 76px); border-radius: 3px;
+    background: linear-gradient(160deg, rgba(255,255,255,.16), rgba(0,0,0,.28));
+    box-shadow: 0 8px 14px rgba(0,0,0,.42);
+    position: relative;
+  }
+  .box::after {           /* brillo del borde superior: da volumen sin dibujar nada */
+    content: ""; position: absolute; inset: 0 0 auto; height: 32%;
+    background: linear-gradient(rgba(255,255,255,.15), transparent); border-radius: 3px 3px 0 0;
+  }
+  .plank {
+    height: 8px; border-radius: 2px; background: var(--shelf);
+    box-shadow: 0 5px 16px rgba(0,0,0,.5);
+    max-width: 940px; margin: 0 auto;
+  }
+  .reflection {
+    height: 26px; max-width: 940px; margin: 0 auto;
+    background: linear-gradient(var(--shelf), transparent); opacity: .35;
+  }
+
+  /* ---------- Bloques ---------- */
+  section { padding: 76px 0; border-top: 1px solid var(--line); }
+  h2 {
+    font-size: 13px; text-transform: uppercase; letter-spacing: .13em;
+    color: var(--amber); margin: 0 0 28px; font-weight: 700;
+  }
+  .lead { font-size: 21px; line-height: 1.55; margin: 0 auto; max-width: 42ch; text-align: center; }
+  p { margin: 0 0 16px; }
+
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .card {
+    border: 1px solid var(--line); border-radius: 16px; padding: 24px; background: var(--card);
+  }
+  .card h3 { margin: 0 0 8px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  .stats { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); text-align: center; }
+  .stat b { display: block; font-size: 40px; color: var(--amber); letter-spacing: -.02em; }
+  .stat span { color: var(--muted); font-size: 15px; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 9px; }
+  .chip {
+    border: 1px solid var(--amber-dim); border-radius: 999px;
+    padding: 6px 15px; font-size: 14.5px; color: var(--fg); white-space: nowrap;
+  }
+
+  .two { display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  ul { margin: 0; padding-left: 22px; }
+  li { margin-bottom: 10px; color: var(--muted); }
+  li strong { color: var(--fg); }
+
+  .cta { text-align: center; }
+  .btn {
+    display: inline-block; margin-top: 10px; padding: 15px 30px; border-radius: 12px;
+    background: var(--amber); color: #2e2200; font-weight: 700; text-decoration: none;
+  }
+  @media (prefers-color-scheme: light) { .btn { color: #fff; } }
+
   footer {
-    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line);
-    color: var(--muted); font-size: 15px;
+    border-top: 1px solid var(--line); padding: 32px 0 64px;
+    color: var(--muted); font-size: 14.5px; text-align: center;
   }
 </style>
 </head>
 <body>
-<main>
 
-  <header>
+<div class="wrap">
+  <div class="hero">
     <h1>full<span>set</span></h1>
     <p class="tagline">Your retro game collection, and a diary for every game.</p>
-  </header>
 
-  <p>
-    fullset keeps track of the games you <strong>own</strong> — shelf by shelf, console by console —
-    and gives each one a place to write down what playing it was like. Notes, photos, voice memos,
-    and the date you first played it.
-  </p>
-  <p>
-    Everything stays on your phone. No account, no server, nothing to sign up for.
-  </p>
-
-  <h2>What it does</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Shelves</h3>
-      <p>Your physical collection grouped by console, with real box art and how complete each copy is
-         — loose, boxed, or complete in box.</p>
-    </div>
-    <div class="card">
-      <h3>A diary per game</h3>
-      <p>Dated notes, photos, and voice memos. Voice is transcribed on the device itself.</p>
-    </div>
-    <div class="card">
-      <h3>Offline catalogs</h3>
-      <p>26,884 games across 37 lists, bundled with the app. Search works with no connection at all.</p>
-    </div>
-    <div class="card">
-      <h3>Region aware</h3>
-      <p>The same game is a different product in each market — its own title, date, and catalog
-         number. fullset keeps them apart.</p>
+    <!-- Un estante, que es de lo que trata la app. Los colores son los de las consolas. -->
+    <div class="shelf" aria-hidden="true">
+      <div class="row">
+        <div class="box" style="height:104px;background-color:#472a28"></div>
+        <div class="box" style="height:118px;background-color:#302c48"></div>
+        <div class="box" style="height:96px;background-color:#243a2a"></div>
+        <div class="box" style="height:126px;background-color:#3b2a55"></div>
+        <div class="box" style="height:110px;background-color:#26262e"></div>
+        <div class="box" style="height:100px;background-color:#383840"></div>
+        <div class="box" style="height:122px;background-color:#1b3a6b"></div>
+        <div class="box" style="height:92px;background-color:#2a2e45"></div>
+        <div class="box" style="height:114px;background-color:#24384a"></div>
+        <div class="box" style="height:106px;background-color:#3a2530"></div>
+      </div>
+      <div class="plank"></div>
+      <div class="reflection"></div>
     </div>
   </div>
+</div>
 
-  <h2>Consoles</h2>
-  <p>
-    NES · Super Nintendo · Nintendo&nbsp;64 · GameCube · PlayStation · PlayStation&nbsp;2 ·
-    PlayStation&nbsp;3 · PlayStation&nbsp;5 · SG-1000 · Master System · Genesis / Mega&nbsp;Drive ·
-    Game&nbsp;Gear · Sega&nbsp;CD · 32X · Saturn · Dreamcast
-  </p>
-  <p class="note">
-    Each one ships with separate lists for North America, Japan and Europe, so your Japanese import
-    shows the box, the release date and the catalog number that actually match the copy on your
-    shelf.
-  </p>
+<div class="wrap">
 
-  <h2>Just a diary?</h2>
-  <p>
-    If you don't want to track a collection, the first screen lets you say so and the shelves stay
-    out of your way. You can change your mind later — nothing is deleted either way.
-  </p>
+  <section style="border-top:none">
+    <p class="lead">
+      fullset keeps track of the games you <strong>own</strong> — shelf by shelf, console by console —
+      and gives each one a place to write down what playing it was like.
+      Everything stays on your phone.
+    </p>
+  </section>
 
-  <h2>Your data is yours</h2>
-  <ul>
-    <li>Stored locally, in a database on your device.</li>
-    <li>Voice notes are transcribed <strong>on the phone</strong>. Audio never leaves it.</li>
-    <li>Export everything as JSON, or as a ZIP with your photos included.</li>
-    <li>The only network calls are for cover images.</li>
-  </ul>
+  <section>
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Shelves</h3>
+        <p>Your collection grouped by console, with real box art and how complete each copy is —
+           loose, boxed, or complete in box.</p>
+      </div>
+      <div class="card">
+        <h3>A diary per game</h3>
+        <p>Dated notes, photos and voice memos. Voice is transcribed on the device itself.</p>
+      </div>
+      <div class="card">
+        <h3>Offline catalogs</h3>
+        <p>Bundled with the app. Searching for a title works with no connection at all.</p>
+      </div>
+      <div class="card">
+        <h3>Region aware</h3>
+        <p>The same game is a different product in each market — its own title, date and catalog
+           number.</p>
+      </div>
+    </div>
+  </section>
 
-  <h2>Get it</h2>
-  <p>
-    fullset is free and open source under the MIT license. It runs on Android today; an iOS version
-    is in progress.
-  </p>
-  <p>
-    <a href="https://github.com/gmoqa/fullset-app">Source code and releases on GitHub →</a>
-  </p>
+  <section>
+    <h2>In numbers</h2>
+    <div class="stats">
+      <div class="stat"><b>26,884</b><span>games catalogued</span></div>
+      <div class="stat"><b>37</b><span>regional lists</span></div>
+      <div class="stat"><b>16</b><span>consoles</span></div>
+      <div class="stat"><b>0</b><span>accounts needed</span></div>
+    </div>
+  </section>
 
-  <footer>
-    Game titles, console names and box art belong to their respective owners. fullset is not
-    affiliated with or endorsed by any of them.
-  </footer>
+  <section>
+    <h2>Consoles</h2>
+    <div class="chips">
+      <span class="chip">NES</span><span class="chip">Super Nintendo</span>
+      <span class="chip">Nintendo 64</span><span class="chip">GameCube</span>
+      <span class="chip">PlayStation</span><span class="chip">PlayStation 2</span>
+      <span class="chip">PlayStation 3</span><span class="chip">PlayStation 5</span>
+      <span class="chip">SG-1000</span><span class="chip">Master System</span>
+      <span class="chip">Genesis / Mega Drive</span><span class="chip">Game Gear</span>
+      <span class="chip">Sega CD</span><span class="chip">32X</span>
+      <span class="chip">Saturn</span><span class="chip">Dreamcast</span>
+    </div>
+    <p style="color:var(--muted);margin-top:22px;max-width:62ch">
+      Each one ships with separate lists for North America, Japan and Europe, so your Japanese import
+      shows the box, the release date and the catalog number that match the copy on your shelf.
+    </p>
+  </section>
 
-</main>
+  <section>
+    <div class="two">
+      <div>
+        <h2>Your data is yours</h2>
+        <ul>
+          <li>Stored <strong>locally</strong>, in a database on your device.</li>
+          <li>Voice notes are transcribed <strong>on the phone</strong>. Audio never leaves it.</li>
+          <li>Export everything as JSON, or as a ZIP with your photos.</li>
+          <li>The only network calls are for cover images.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Just a diary?</h2>
+        <p style="color:var(--muted)">
+          If you don't want to track a collection, the first screen lets you say so and the shelves
+          stay out of your way.
+        </p>
+        <p style="color:var(--muted)">
+          You can change your mind later — nothing is deleted either way.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Get it</h2>
+    <p style="color:var(--muted)">
+      Free and open source under the MIT license.<br>
+      Android today; an iOS version is in progress.
+    </p>
+    <a class="btn" href="https://github.com/gmoqa/fullset-app">View on GitHub</a>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    Game titles, console names and box art belong to their respective owners.<br>
+    fullset is not affiliated with or endorsed by any of them.
+  </div>
+</footer>
+
 </body>
 </html>
