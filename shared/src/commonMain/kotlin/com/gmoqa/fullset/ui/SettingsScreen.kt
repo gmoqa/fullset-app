@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.dp
 import com.gmoqa.fullset.data.ModelDownloadState
 import com.gmoqa.fullset.data.RegionFilter
 import com.gmoqa.fullset.data.ThemeMode
+import com.gmoqa.fullset.data.TrackingMode
 import com.gmoqa.fullset.data.TranscriptionLanguage
 import com.gmoqa.fullset.data.WhisperModel
 
@@ -59,6 +60,8 @@ private val ICON_SLOT = 40.dp  // ancho reservado al icono: alinea los textos au
 
 @Composable
 fun SettingsScreen(
+    trackingMode: TrackingMode,
+    onTrackingModeChange: (TrackingMode) -> Unit,
     themeMode: ThemeMode,
     onThemeChange: (ThemeMode) -> Unit,
     regionFilter: RegionFilter,
@@ -101,6 +104,22 @@ fun SettingsScreen(
             .verticalScroll(rememberScrollState()),
     ) {
         ScreenHeader(title = "Settings", subtitle = "fullset · v1.0")
+
+        SettingsSection(
+            "What you keep",
+            "“Diary only” hides Collection and Wishlist. Nothing is deleted — switch back and " +
+                "everything is there again.",
+        )
+        SettingsChoice(
+            label = "Sections",
+            options = listOf(
+                TrackingMode.COLLECTION_AND_DIARY to "Collection + diary",
+                TrackingMode.DIARY_ONLY to "Diary only",
+            ),
+            selected = trackingMode,
+            onSelect = onTrackingModeChange,
+        )
+        SectionDivider()
 
         SettingsSection("Appearance")
         SettingsChoice(

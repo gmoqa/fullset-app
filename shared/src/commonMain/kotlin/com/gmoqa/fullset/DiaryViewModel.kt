@@ -20,6 +20,7 @@ import com.gmoqa.fullset.data.SteamGridDb
 import com.gmoqa.fullset.data.SteamGridGame
 import com.gmoqa.fullset.data.SortOrder
 import com.gmoqa.fullset.data.ThemeMode
+import com.gmoqa.fullset.data.TrackingMode
 import com.gmoqa.fullset.data.Transcriber
 import com.gmoqa.fullset.data.TranscriptionLanguage
 import com.gmoqa.fullset.data.VoiceRecorder
@@ -333,6 +334,10 @@ class DiaryViewModel(
 
     // ---- Ajustes (SharedPreferences: rápido y seguro en el main) ----
 
+    fun trackingMode(): TrackingMode = repo.trackingMode()
+    fun setTrackingMode(mode: TrackingMode) = repo.setTrackingMode(mode)
+    fun onboardingDone(): Boolean = repo.onboardingDone()
+    fun setOnboardingDone() = repo.setOnboardingDone()
     fun themeMode(): ThemeMode = repo.themeMode()
     fun setThemeMode(mode: ThemeMode) = repo.setThemeMode(mode)
     fun regionFilter(): RegionFilter = repo.regionFilter()

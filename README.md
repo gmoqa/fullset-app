@@ -22,6 +22,15 @@ UI en **inglés**. Licencia **MIT**.
 
 El paquete y el nombre del producto son **fullset** (`com.gmoqa.fullset`).
 
+## Qué llevás: colección + diario, o solo diario
+En la primera apertura la app pregunta qué querés llevar. **«Diary only»** esconde *Collection* y
+*Wishlist* —las dos secciones sobre *poseer*— y deja Backlog, Playing y Settings. Se cambia cuando
+quieras desde **Settings → What you keep**.
+
+Es un filtro de **presentación, no de datos**: no borra nada y volver al modo completo devuelve todo
+tal cual estaba. Las funciones de diario (notas, fotos, notas de voz, primera vez jugado) andan
+sobre cualquier juego y no dependen del modo.
+
 ## Secciones (bottom nav: Collection · Backlog · Playing · Wishlist · Settings)
 - **Collection**: tu colección **física**, en estanterías por plataforma, con buscador y un punto
   de color por juego que indica su estado de conservación (loose / loose+manual / boxed / complete).

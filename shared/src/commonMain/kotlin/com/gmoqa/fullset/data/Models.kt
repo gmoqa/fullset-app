@@ -133,6 +133,25 @@ private val Game.releaseKey: String
     get() = releaseDate.ifBlank { releaseYear?.toString().orEmpty() }
 
 /** Modo de tema elegido por el usuario. */
+/**
+ * Qué lleva la app: la colección **y** el diario, o solo el diario.
+ *
+ * Se elige en el primer arranque y se puede cambiar en Settings. Es un filtro de **presentación**,
+ * no de datos: [DIARY_ONLY] esconde Collection y Wishlist —las dos secciones sobre *poseer*— pero
+ * no borra nada, así que volver a [COLLECTION_AND_DIARY] devuelve todo tal cual estaba. Las
+ * funciones de diario (notas, fotos, notas de voz, primera vez jugado) andan sobre cualquier juego
+ * y no dependen del modo.
+ */
+enum class TrackingMode(val key: String) {
+    COLLECTION_AND_DIARY("collection_and_diary"),
+    DIARY_ONLY("diary_only");
+
+    companion object {
+        fun fromKey(key: String?): TrackingMode =
+            entries.firstOrNull { it.key == key } ?: COLLECTION_AND_DIARY
+    }
+}
+
 enum class ThemeMode(val key: String) {
     SYSTEM("system"),
     LIGHT("light"),

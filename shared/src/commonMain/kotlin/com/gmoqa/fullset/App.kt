@@ -45,6 +45,7 @@ import com.gmoqa.fullset.data.PlatformRegistry
 import com.gmoqa.fullset.data.RegionFilter
 import com.gmoqa.fullset.data.SortOrder
 import com.gmoqa.fullset.data.ThemeMode
+import com.gmoqa.fullset.data.TrackingMode
 import com.gmoqa.fullset.ui.AttachSharedPhotoDialog
 import com.gmoqa.fullset.resources.Res
 import com.gmoqa.fullset.resources.ic_eye_search
@@ -55,6 +56,7 @@ import com.gmoqa.fullset.ui.BackHandler
 import com.gmoqa.fullset.ui.CatalogMark
 import com.gmoqa.fullset.ui.DiarioGamerTheme
 import com.gmoqa.fullset.ui.GameDetailScreen
+import com.gmoqa.fullset.ui.OnboardingScreen
 import com.gmoqa.fullset.ui.TimelineScreen
 import com.gmoqa.fullset.ui.GameListScreen
 import com.gmoqa.fullset.ui.LibraryScreen
@@ -93,6 +95,9 @@ fun App(
     var showLabels by remember { mutableStateOf(vm.showCollectionLabels()) }
     var showConsoleTitles by remember { mutableStateOf(vm.showConsoleTitles()) }
     var sortOrder by remember { mutableStateOf(vm.sortOrder()) }
+    var trackingMode by remember { mutableStateOf(vm.trackingMode()) }
+    // Solo en el primer arranque: después queda elegido y se cambia desde Settings.
+    var needsOnboarding by remember { mutableStateOf(!vm.onboardingDone()) }
     val darkTheme = when (themeMode) {
         ThemeMode.LIGHT -> false
         ThemeMode.DARK -> true
@@ -104,7 +109,15 @@ fun App(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background,
         ) {
-            if (!ready) {
+            if (needsOnboarding) {
+                // Va después del gate de `ready` para no preguntar sobre una app a medio sembrar.
+                OnboardingScreen(onPick = { mode ->
+                    trackingMode = mode
+                    vm.setTrackingMode(mode)
+                    vm.setOnboardingDone()
+                    needsOnboarding = false
+                })
+            } else if (!ready) {
                 // Carga breve mientras siembra (solo perceptible en la primera instalación).
                 Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     CircularProgressIndicator()
@@ -125,6 +138,8 @@ fun App(
                     onShowConsoleTitlesChange = { showConsoleTitles = it; vm.setShowConsoleTitles(it) },
                     sortOrder = sortOrder,
                     onSortChange = { sortOrder = it; vm.setSortOrder(it) },
+                    trackingMode = trackingMode,
+                    onTrackingModeChange = { trackingMode = it; vm.setTrackingMode(it) },
                     isDebug = isDebug,
                 )
                 if (sharedImage != null) {
@@ -158,9 +173,11 @@ private fun AppRoot(
     onShowConsoleTitlesChange: (Boolean) -> Unit,
     sortOrder: SortOrder,
     onSortChange: (SortOrder) -> Unit,
+    trackingMode: TrackingMode,
+    onTrackingModeChange: (TrackingMode) -> Unit,
     isDebug: Boolean,
 ) {
-    var tab by rememberSaveable { mutableStateOf(0) }
+    var tab by rememberSaveable { mutableStateOf(HomeTab.COLLECTION) }
     // Pila de navegación sobre Home. Home es el fondo (el pager con las tabs); cada pantalla que se
     // abre (detalle, plataforma, agregar) se apila encima y "back" desapila UNA. Así volver desde el
     // detalle de un juego regresa a la vista de plataforma desde la que se abrió, no siempre a Home.
@@ -265,7 +282,7 @@ private fun AppRoot(
                                 vm.addToWishlist(platform.name, gameTitle, "", coverUrl)
                                 // Volver a Collection dejaría la sensación de que no pasó nada:
                                 // aterrizamos en la wishlist, donde se ve lo que acabás de agregar.
-                                tab = HOME_TAB_WISHLIST
+                                tab = HomeTab.WISHLIST
                             }
                         }
                         back()
@@ -327,6 +344,8 @@ private fun AppRoot(
 
             Screen.Home -> HomeContent(
                 onOpenTimeline = { open(Screen.Timeline) },
+                trackingMode = trackingMode,
+                onTrackingModeChange = onTrackingModeChange,
                 vm = vm,
                 platforms = platforms,
                 tab = tab,
@@ -353,18 +372,31 @@ private fun AppRoot(
 }
 
 /** Una pestaña del home, en el mismo orden que las páginas del pager. */
-private class HomeTab(val label: String, val icon: @Composable (contentDescription: String?) -> Unit)
+/**
+ * Las secciones del bottom nav. Se identifican por **nombre**, no por posición: el juego de
+ * pestañas cambia con el modo (en `DIARY_ONLY` no están Collection ni Wishlist), y guardar el índice
+ * hacía que al cambiar de modo el número apuntara a otra sección — el 2 es Playing con cinco
+ * pestañas y Settings con tres.
+ */
+private enum class HomeTab(val label: String) {
+    COLLECTION("Collection"), BACKLOG("Backlog"), PLAYING("Playing"),
+    WISHLIST("Wishlist"), SETTINGS("Settings");
+}
 
-/** Índice de la pestaña Wishlist dentro de [HOME_TABS] (para aterrizar ahí tras agregar). */
-private const val HOME_TAB_WISHLIST = 3
+@Composable
+private fun HomeTab.icon(contentDescription: String?) = when (this) {
+    HomeTab.COLLECTION -> Icon(painterResource(Res.drawable.ic_shelf), contentDescription)
+    HomeTab.BACKLOG -> Icon(Icons.AutoMirrored.Filled.PlaylistPlay, contentDescription)
+    HomeTab.PLAYING -> Icon(Icons.Filled.SportsEsports, contentDescription)
+    HomeTab.WISHLIST -> Icon(painterResource(Res.drawable.ic_eye_search), contentDescription)
+    HomeTab.SETTINGS -> Icon(Icons.Filled.Settings, contentDescription)
+}
 
-private val HOME_TABS = listOf(
-    HomeTab("Collection") { Icon(painterResource(Res.drawable.ic_shelf), it) },
-    HomeTab("Backlog") { Icon(Icons.AutoMirrored.Filled.PlaylistPlay, it) },
-    HomeTab("Playing") { Icon(Icons.Filled.SportsEsports, it) },
-    HomeTab("Wishlist") { Icon(painterResource(Res.drawable.ic_eye_search), it) },
-    HomeTab("Settings") { Icon(Icons.Filled.Settings, it) },
-)
+/** Las pestañas visibles con este modo. Collection y Wishlist son las dos sobre *poseer*. */
+private fun tabsFor(mode: TrackingMode): List<HomeTab> = when (mode) {
+    TrackingMode.COLLECTION_AND_DIARY -> HomeTab.entries
+    TrackingMode.DIARY_ONLY -> listOf(HomeTab.BACKLOG, HomeTab.PLAYING, HomeTab.SETTINGS)
+}
 
 /** Pantalla principal actual dentro de la navegación. */
 private sealed interface Screen {
@@ -382,8 +414,8 @@ private sealed interface Screen {
 private fun HomeContent(
     vm: DiaryViewModel,
     platforms: List<Platform>,
-    tab: Int,
-    onTabChange: (Int) -> Unit,
+    tab: HomeTab,
+    onTabChange: (HomeTab) -> Unit,
     themeMode: ThemeMode,
     onThemeChange: (ThemeMode) -> Unit,
     regionFilter: RegionFilter,
@@ -396,6 +428,8 @@ private fun HomeContent(
     onSortChange: (SortOrder) -> Unit,
     onOpenGame: (Long) -> Unit,
     onOpenTimeline: () -> Unit,
+    trackingMode: TrackingMode,
+    onTrackingModeChange: (TrackingMode) -> Unit,
     onOpenPlatform: (String) -> Unit,
     onAddLibrary: () -> Unit,
     onAddWishlist: () -> Unit,
@@ -427,21 +461,32 @@ private fun HomeContent(
 
     // El pager es la fuente de verdad del tab. Se puede deslizar entre páginas (swipe) y la
     // bottom nav anima hacia la página elegida. Se persiste el índice para restaurarlo.
-    val pagerState = rememberPagerState(initialPage = tab, pageCount = { HOME_TABS.size })
+    val tabs = remember(trackingMode) { tabsFor(trackingMode) }
+    // La pestaña guardada es una **identidad**, no un número: al cambiar de modo la lista se achica
+    // y un índice viejo apuntaría a otra sección. Si la guardada ya no está visible, se cae a la
+    // primera del modo actual en vez de quedar fuera de rango.
+    val pagerState = rememberPagerState(
+        initialPage = tabs.indexOf(tab).coerceAtLeast(0),
+        pageCount = { tabs.size },
+    )
     val scope = rememberCoroutineScope()
-    LaunchedEffect(pagerState.currentPage) { onTabChange(pagerState.currentPage) }
+    LaunchedEffect(pagerState.currentPage) { onTabChange(tabs[pagerState.currentPage]) }
+    // Cambiar de modo con una pestaña que desaparece: el pager se reencuadra solo.
+    LaunchedEffect(tabs) {
+        if (tab !in tabs) pagerState.scrollToPage(0)
+    }
 
     Scaffold(
         bottomBar = {
             NavigationBar {
-                HOME_TABS.forEachIndexed { index, tab ->
+                tabs.forEachIndexed { index, item ->
                     NavigationBarItem(
                         selected = pagerState.currentPage == index,
                         onClick = { scope.launch { pagerState.animateScrollToPage(index) } },
                         // El nombre va siempre como descripción accesible, se muestre o no.
-                        icon = { tab.icon(tab.label) },
+                        icon = { item.icon(item.label) },
                         // En pantallas angostas, solo iconos: cinco etiquetas no entran sin apretarse.
-                        label = if (compact) null else ({ Text(tab.label) }),
+                        label = if (compact) null else ({ Text(item.label) }),
                     )
                 }
             }
@@ -454,8 +499,8 @@ private fun HomeContent(
             modifier = Modifier.fillMaxSize().padding(bottom = padding.calculateBottomPadding()),
             key = { it },
         ) { page ->
-            when (page) {
-                0 -> LibraryScreen(
+            when (tabs[page]) {
+                HomeTab.COLLECTION -> LibraryScreen(
                     onOpenTimeline = onOpenTimeline,
                     games = physical,
                     onOpenGame = onOpenGame,
@@ -471,10 +516,17 @@ private fun HomeContent(
                     sortOrder = sortOrder,
                     onSortChange = onSortChange,
                 )
-                1 -> GameListScreen(
+                HomeTab.BACKLOG -> {
+                    // En modo diario los juegos se cargan como digitales (no hay Collection), así
+                    // que filtrar por físicos dejaría el Backlog siempre vacío. Ahí entran todos.
+                    val pendientes = remember(games, physical, trackingMode) {
+                        val fuente = if (trackingMode == TrackingMode.DIARY_ONLY) games else physical
+                        fuente.filter { it.backlog }
+                    }
+                    GameListScreen(
                     title = "Backlog",
-                    subtitle = "${physical.count { it.backlog }} to play",
-                    games = physical.filter { it.backlog },
+                    subtitle = "${pendientes.size} to play",
+                    games = pendientes,
                     emptyIcon = Icons.Filled.Bookmarks,
                     emptyTitle = "Backlog is empty",
                     emptySubtitle = "Mark games as backlog from their details.",
@@ -482,19 +534,22 @@ private fun HomeContent(
                     onAddGame = null,
                     sortOrder = sortOrder,
                     onSortChange = onSortChange,
-                )
-                2 -> PlayingScreen(
+                    )
+                }
+                HomeTab.PLAYING -> PlayingScreen(
                     games = games.filter { it.playing },
                     onOpenGame = onOpenGame,
                     onAddDigital = onAddDigital,
                 )
-                3 -> WishlistScreen(
+                HomeTab.WISHLIST -> WishlistScreen(
                     items = wishlist,
                     onAddWishlist = onAddWishlist,
                     onRemove = { vm.removeFromWishlist(it) },
                     onClear = { vm.clearWishlist() },
                 )
-                else -> SettingsScreen(
+                HomeTab.SETTINGS -> SettingsScreen(
+                    trackingMode = trackingMode,
+                    onTrackingModeChange = onTrackingModeChange,
                     themeMode = themeMode,
                     onThemeChange = onThemeChange,
                     regionFilter = regionFilter,
