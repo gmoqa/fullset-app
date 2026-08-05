@@ -98,160 +98,166 @@ fun SettingsScreen(
     var askBackupScope by remember { mutableStateOf(false) }
     var deleteAudio by remember { mutableStateOf(deleteAudioAfterTranscription) }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState()),
-    ) {
+    Column(Modifier.fillMaxSize()) {
+        // El header no puede irse con el scroll: es el único que aplica el inset del status
+        // bar, así que al subir deja el contenido pasando por debajo del reloj y la batería.
+        // Fijo, como en el resto de las pantallas.
         ScreenHeader(title = "Settings", subtitle = "fullset · v1.0")
 
-        SettingsSection(
-            "What you keep",
-            "“Diary only” hides Collection and Wishlist. Nothing is deleted — switch back and " +
-                "everything is there again.",
-        )
-        SettingsChoice(
-            label = "Sections",
-            options = listOf(
-                TrackingMode.COLLECTION_AND_DIARY to "Collection + diary",
-                TrackingMode.DIARY_ONLY to "Diary only",
-            ),
-            selected = trackingMode,
-            onSelect = onTrackingModeChange,
-        )
-        SectionDivider()
-
-        SettingsSection("Appearance")
-        SettingsChoice(
-            label = "Theme",
-            options = listOf(
-                ThemeMode.SYSTEM to "System",
-                ThemeMode.LIGHT to "Light",
-                ThemeMode.DARK to "Dark",
-            ),
-            selected = themeMode,
-            onSelect = onThemeChange,
-        )
-
-        SectionDivider()
-
-        SettingsSection("Collection")
-        SettingsRow(
-            icon = Icons.Filled.Title,
-            title = "Show game titles",
-            subtitle = "Names under each cover.",
-            onClick = { onShowLabelsChange(!showLabels) },
-            trailing = { Switch(checked = showLabels, onCheckedChange = onShowLabelsChange) },
-        )
-        SettingsRow(
-            icon = Icons.Filled.ViewAgenda,
-            title = "Show console headers",
-            subtitle = "Platform name bands between shelves.",
-            onClick = { onShowConsoleTitlesChange(!showConsoleTitles) },
-            trailing = { Switch(checked = showConsoleTitles, onCheckedChange = onShowConsoleTitlesChange) },
-        )
-
-        SectionDivider()
-
-        SettingsSection("Library")
-        SettingsChoice(
-            label = "Default region",
-            description = "Which regional list you browse. NTSC-J available on Genesis; PAL soon.",
-            options = RegionFilter.entries.map { it to it.label },
-            selected = regionFilter,
-            onSelect = onRegionChange,
-            isEnabled = { it.supported },
-        )
-
-        SectionDivider()
-
-        SettingsSection("Voice notes", "Transcribed here — nothing leaves this device.")
-        VoiceModels(
-            installedModel = installedModel,
-            download = modelDownload,
-            onDownload = onDownloadModel,
-            onCancel = onCancelModelDownload,
-            onDelete = onDeleteModel,
-            onDismissError = onDismissModelError,
-        )
-        SettingsChoice(
-            label = "Input language",
-            description = "Picking one beats Auto on short notes.",
-            options = TranscriptionLanguage.entries.map { it to it.label },
-            selected = transcriptionLanguage,
-            onSelect = onLanguageChange,
-        )
-        SettingsRow(
-            icon = Icons.Filled.MicOff,
-            title = "Delete recording after transcribing",
-            subtitle = "Keep only the text — frees space and keeps recordings off any sync.",
-            onClick = { deleteAudio = !deleteAudio; onDeleteAudioChange(deleteAudio) },
-            trailing = {
-                Switch(
-                    checked = deleteAudio,
-                    onCheckedChange = { deleteAudio = it; onDeleteAudioChange(it) },
-                )
-            },
-        )
-
-        SectionDivider()
-
-        SettingsSection("Data")
-        SettingsRow(
-            icon = Icons.Filled.FileDownload,
-            title = "Export collection",
-            subtitle = "Save as CSV.",
-            onClick = { exportCollection() },
-        )
-        SettingsRow(
-            icon = Icons.Filled.Backup,
-            title = "Back up to a file",
-            subtitle = if (photoCount > 0) "Your lists and notes, with or without photos."
-            else "Save your lists + notes as a .json to restore later.",
-            // Sin fotos que respaldar no hay nada que preguntar: el JSON ES el respaldo completo.
-            onClick = { if (photoCount > 0) askBackupScope = true else backup() },
-        )
-        SettingsRow(
-            icon = Icons.Filled.Restore,
-            title = "Restore from a file",
-            subtitle = "Merge a backup (.json or .zip) into your collection — never deletes.",
-            onClick = { restore() },
-        )
-        if (syncStatus != null) {
-            SettingsRow(
-                title = syncStatus,
-                onClick = onClearSyncStatus,
-                trailing = { TextButton(onClick = onClearSyncStatus) { Text("OK") } },
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState()),
+        ) {
+            SettingsSection(
+                "What you keep",
+                "“Diary only” hides Collection and Wishlist. Nothing is deleted — switch back and " +
+                    "everything is there again.",
             )
-        }
-
-        if (onPreviewEmptyChange != null) {
+            SettingsChoice(
+                label = "Sections",
+                options = listOf(
+                    TrackingMode.COLLECTION_AND_DIARY to "Collection + diary",
+                    TrackingMode.DIARY_ONLY to "Diary only",
+                ),
+                selected = trackingMode,
+                onSelect = onTrackingModeChange,
+            )
             SectionDivider()
-            SettingsSection("Developer")
+
+            SettingsSection("Appearance")
+            SettingsChoice(
+                label = "Theme",
+                options = listOf(
+                    ThemeMode.SYSTEM to "System",
+                    ThemeMode.LIGHT to "Light",
+                    ThemeMode.DARK to "Dark",
+                ),
+                selected = themeMode,
+                onSelect = onThemeChange,
+            )
+
+            SectionDivider()
+
+            SettingsSection("Collection")
             SettingsRow(
-                icon = Icons.Filled.VisibilityOff,
-                title = "Preview empty state",
-                subtitle = "Temporarily hide all games to check the empty screens.",
-                onClick = { onPreviewEmptyChange(!previewEmpty) },
+                icon = Icons.Filled.Title,
+                title = "Show game titles",
+                subtitle = "Names under each cover.",
+                onClick = { onShowLabelsChange(!showLabels) },
+                trailing = { Switch(checked = showLabels, onCheckedChange = onShowLabelsChange) },
+            )
+            SettingsRow(
+                icon = Icons.Filled.ViewAgenda,
+                title = "Show console headers",
+                subtitle = "Platform name bands between shelves.",
+                onClick = { onShowConsoleTitlesChange(!showConsoleTitles) },
+                trailing = { Switch(checked = showConsoleTitles, onCheckedChange = onShowConsoleTitlesChange) },
+            )
+
+            SectionDivider()
+
+            SettingsSection("Library")
+            SettingsChoice(
+                label = "Default region",
+                description = "Which regional list you browse. Not every console has all three — " +
+                "the picker in each list shows what it ships with.",
+                options = RegionFilter.entries.map { it to it.label },
+                selected = regionFilter,
+                onSelect = onRegionChange,
+                isEnabled = { it.supported },
+            )
+
+            SectionDivider()
+
+            SettingsSection("Voice notes", "Transcribed here — nothing leaves this device.")
+            VoiceModels(
+                installedModel = installedModel,
+                download = modelDownload,
+                onDownload = onDownloadModel,
+                onCancel = onCancelModelDownload,
+                onDelete = onDeleteModel,
+                onDismissError = onDismissModelError,
+            )
+            SettingsChoice(
+                label = "Input language",
+                description = "Picking one beats Auto on short notes.",
+                options = TranscriptionLanguage.entries.map { it to it.label },
+                selected = transcriptionLanguage,
+                onSelect = onLanguageChange,
+            )
+            SettingsRow(
+                icon = Icons.Filled.MicOff,
+                title = "Delete recording after transcribing",
+                subtitle = "Keep only the text — frees space and keeps recordings off any sync.",
+                onClick = { deleteAudio = !deleteAudio; onDeleteAudioChange(deleteAudio) },
                 trailing = {
-                    Switch(checked = previewEmpty, onCheckedChange = onPreviewEmptyChange)
+                    Switch(
+                        checked = deleteAudio,
+                        onCheckedChange = { deleteAudio = it; onDeleteAudioChange(it) },
+                    )
                 },
             )
+
+            SectionDivider()
+
+            SettingsSection("Data")
+            SettingsRow(
+                icon = Icons.Filled.FileDownload,
+                title = "Export collection",
+                subtitle = "Save as CSV.",
+                onClick = { exportCollection() },
+            )
+            SettingsRow(
+                icon = Icons.Filled.Backup,
+                title = "Back up to a file",
+                subtitle = if (photoCount > 0) "Your lists and notes, with or without photos."
+                else "Save your lists + notes as a .json to restore later.",
+                // Sin fotos que respaldar no hay nada que preguntar: el JSON ES el respaldo completo.
+                onClick = { if (photoCount > 0) askBackupScope = true else backup() },
+            )
+            SettingsRow(
+                icon = Icons.Filled.Restore,
+                title = "Restore from a file",
+                subtitle = "Merge a backup (.json or .zip) into your collection — never deletes.",
+                onClick = { restore() },
+            )
+            if (syncStatus != null) {
+                SettingsRow(
+                    title = syncStatus,
+                    onClick = onClearSyncStatus,
+                    trailing = { TextButton(onClick = onClearSyncStatus) { Text("OK") } },
+                )
+            }
+
+            if (onPreviewEmptyChange != null) {
+                SectionDivider()
+                SettingsSection("Developer")
+                SettingsRow(
+                    icon = Icons.Filled.VisibilityOff,
+                    title = "Preview empty state",
+                    subtitle = "Temporarily hide all games to check the empty screens.",
+                    onClick = { onPreviewEmptyChange(!previewEmpty) },
+                    trailing = {
+                        Switch(checked = previewEmpty, onCheckedChange = onPreviewEmptyChange)
+                    },
+                )
+            }
+
+            SectionDivider()
+
+            // Los créditos van al pie, de corrido y en gris: son atribución, no una opción más.
+            Text(
+                "Covers from Libretro Thumbnails · lists from Wikipedia and No-Intro · controller icons " +
+                    "from Controllercons by Kieran McClung (SIL OFL 1.1) · speech to text by Whisper via " +
+                    "whisper.cpp (MIT). Box art and titles belong to their owners. Personal use.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
+                modifier = Modifier.padding(horizontal = GUTTER, vertical = 16.dp),
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
         }
-
-        SectionDivider()
-
-        // Los créditos van al pie, de corrido y en gris: son atribución, no una opción más.
-        Text(
-            "Covers from Libretro Thumbnails · lists from Wikipedia and No-Intro · controller icons " +
-                "from Controllercons by Kieran McClung (SIL OFL 1.1) · speech to text by Whisper via " +
-                "whisper.cpp (MIT). Box art and titles belong to their owners. Personal use.",
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
-            modifier = Modifier.padding(horizontal = GUTTER, vertical = 16.dp),
-        )
-
-        Spacer(modifier = Modifier.height(24.dp))
     }
 
     if (askBackupScope) {

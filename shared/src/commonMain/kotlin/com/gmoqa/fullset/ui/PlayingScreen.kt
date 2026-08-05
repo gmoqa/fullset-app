@@ -5,6 +5,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -162,12 +164,12 @@ private fun AddPlayingButton(
                     ChoiceCard(
                         vector = Icons.Filled.VideogameAsset,
                         title = "Physical",
-                        subtitle = "From our lists",
+                        subtitle = "Our lists",
                     ) { open = false; onAddPhysical() }
                     ChoiceCard(
                         vector = Icons.Filled.CloudQueue,
                         title = "Digital",
-                        subtitle = "From SteamGridDB",
+                        subtitle = "SteamGridDB",
                     ) { open = false; onAddDigital() }
                 }
             },
@@ -176,6 +178,7 @@ private fun AddPlayingButton(
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun PlayingCard(game: Game, onClick: () -> Unit) {
     val model = game.coverModel
@@ -235,8 +238,10 @@ private fun PlayingCard(game: Game, onClick: () -> Unit) {
                     if (game.noteCount > 0) add(plural(game.noteCount, "note"))
                     if (game.photoCount > 0) add(plural(game.photoCount, "photo"))
                 }.joinToString("  ·  ")
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
+                // FlowRow y no Row: en un teléfono angosto "PlayStation 5" más "5 notes · 2 photos"
+                // no entran juntos, y en una fila el conteo se cortaba a "2 …". Que baje de línea.
+                FlowRow(
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
                     if (game.platform.isNotBlank()) {

@@ -302,10 +302,13 @@ private fun CubeSurface(
 @Composable
 private fun CubeCaption(name: String, tag: String, tagColor: Color, modifier: Modifier = Modifier) {
     Column(modifier) {
+        // Dos líneas: en teléfono la grilla de tres deja ~110dp y "Sega Game Gear" cortaba justo la
+        // palabra que lo distingue. El glifo tiene `weight`, así que la segunda línea lo encoge un
+        // poco en vez de desbordar el cubo.
         Text(
             name,
             style = MaterialTheme.typography.titleSmall,
-            maxLines = 1,
+            maxLines = 2,
             overflow = TextOverflow.Ellipsis,
         )
         Text(tag, style = MaterialTheme.typography.bodySmall, color = tagColor)

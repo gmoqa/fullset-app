@@ -59,6 +59,9 @@ fun TimelineScreen(
             .groupBy { it.firstPlayed.take(4) }
     }
     val total = remember(porAnio) { porAnio.values.sumOf { it.size } }
+    // Si nadie cargó mes —lo normal al principio, donde solo se recuerda el año— la columna de la
+    // fecha queda vacía en todas las filas y son 46dp de margen muerto en un teléfono angosto.
+    val conMes = remember(games) { games.any { it.firstPlayed.length >= 7 } }
 
     Column(Modifier.fillMaxSize()) {
         ScreenHeader(
@@ -78,7 +81,7 @@ fun TimelineScreen(
                 porAnio.forEach { (anio, delAnio) ->
                     item(key = "y$anio") { YearHeader(anio, delAnio.size) }
                     items(delAnio, key = { it.id }) { game ->
-                        TimelineRow(game) { onOpenGame(game.id) }
+                        TimelineRow(game, conMes) { onOpenGame(game.id) }
                     }
                 }
             }
@@ -121,7 +124,7 @@ private fun YearHeader(anio: String, cuantos: Int) {
 }
 
 @Composable
-private fun TimelineRow(game: Game, onClick: () -> Unit) {
+private fun TimelineRow(game: Game, conMes: Boolean, onClick: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -131,13 +134,16 @@ private fun TimelineRow(game: Game, onClick: () -> Unit) {
         horizontalArrangement = Arrangement.spacedBy(Tokens.Space.xl),
     ) {
         // El día/mes solo se muestra si la fecha lo tiene: inventar "01" donde el usuario escribió
-        // apenas el año sería fabricar precisión que nadie confirmó.
-        Text(
-            text = monthDayLabel(game.firstPlayed),
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.width(46.dp),
-        )
+        // apenas el año sería fabricar precisión que nadie confirmó. Y la columna solo se reserva si
+        // alguna fila de la lista la va a usar, para que las demás sigan alineadas entre sí.
+        if (conMes) {
+            Text(
+                text = monthDayLabel(game.firstPlayed),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.width(46.dp),
+            )
+        }
         Box(
             Modifier
                 .size(Tokens.Size.pickerThumb)

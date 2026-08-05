@@ -19,6 +19,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 
 /**
@@ -46,7 +47,7 @@ fun RowScope.ChoiceCard(
             .clip(Tokens.Shape.large)
             .border(1.dp, MaterialTheme.colorScheme.outline, Tokens.Shape.large)
             .clickable(onClick = onClick)
-            .padding(Tokens.Space.xl),
+            .padding(Tokens.Space.lg),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
@@ -56,18 +57,24 @@ fun RowScope.ChoiceCard(
             painter != null -> Icon(painter, contentDescription = null, modifier = iconMod, tint = tint)
             vector != null -> Icon(vector, contentDescription = null, modifier = iconMod, tint = tint)
         }
+        // Una línea cada uno, sin excepción: el alto lo fija el `aspectRatio`, así que un texto que
+        // se parta en dos no empuja — se derrama fuera del borde. Antes que eso, que corte.
         Text(
             title,
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.SemiBold,
-            modifier = Modifier.padding(top = Tokens.Space.xl),
+            modifier = Modifier.padding(top = Tokens.Space.md),
             textAlign = TextAlign.Center,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
         )
         Text(
             subtitle,
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
         )
     }
 }
