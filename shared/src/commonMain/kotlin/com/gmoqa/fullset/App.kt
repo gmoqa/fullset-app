@@ -503,7 +503,8 @@ private fun HomeContent(
                 HomeTab.COLLECTION -> LibraryScreen(
                     games = physical,
                     onOpenGame = onOpenGame,
-                    onAddGame = onAddLibrary,
+                    onAddPhysical = onAddLibrary,
+                    onAddDigital = onAddDigital,
                     // Al agregar un juego, Collection sube hasta él en vez de dejarte donde estabas.
                     focusGameId = lastAdded,
                     onFocusConsumed = { vm.consumeLastAdded() },

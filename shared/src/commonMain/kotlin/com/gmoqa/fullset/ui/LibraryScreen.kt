@@ -25,6 +25,10 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.VideogameAsset
 import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material.icons.filled.CloudQueue
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.FilledTonalIconButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -55,7 +59,10 @@ import com.gmoqa.fullset.data.SortOrder
 fun LibraryScreen(
     games: List<Game>,
     onOpenGame: (Long) -> Unit,
-    onAddGame: () -> Unit,
+    /** Alta desde nuestros catálogos: la copia física que tenés en el estante. */
+    onAddPhysical: () -> Unit,
+    /** Alta buscando la carátula en SteamGridDB: los digitales no están en las listas retro. */
+    onAddDigital: () -> Unit,
     focusGameId: Long? = null,
     onFocusConsumed: () -> Unit = {},
     onOpenPlatform: (String) -> Unit = {},
@@ -100,21 +107,11 @@ fun LibraryScreen(
                     }
                     // En pantallas angostas el botón se queda solo con el "+": junto al título y la
                     // lupa, el texto no entra sin achicar todo lo demás.
-                    if (isCompactWidth()) {
-                        FilledTonalIconButton(onClick = onAddGame) {
-                            Icon(Icons.Filled.Add, contentDescription = "Add game")
-                        }
-                    } else {
-                        FilledTonalButton(
-                            onClick = onAddGame,
-                            shape = Tokens.Shape.control,
-                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
-                        ) {
-                            Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
-                            Spacer(Modifier.width(6.dp))
-                            Text("Add game")
-                        }
-                    }
+                    AddGameMenu(
+                        compact = isCompactWidth(),
+                        onAddPhysical = onAddPhysical,
+                        onAddDigital = onAddDigital,
+                    )
                 },
             )
         }
@@ -126,7 +123,7 @@ fun LibraryScreen(
                 title = "No games yet",
                 subtitle = "Add your first game to start your collection.",
                 action = {
-                    FilledTonalButton(onClick = onAddGame, shape = Tokens.Shape.control) {
+                    FilledTonalButton(onClick = onAddPhysical, shape = Tokens.Shape.control) {
                         Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
                         Spacer(Modifier.width(6.dp))
                         Text("Add game")
@@ -156,6 +153,67 @@ fun LibraryScreen(
                 showGameLabels = showLabels,
                 showPlatformTitles = showConsoleTitles,
                 sortOrder = sortOrder,
+            )
+        }
+    }
+}
+
+/**
+ * "Add game" abre un menú en vez de ir directo al catálogo, porque las dos altas van por caminos
+ * distintos: **físico** se elige de nuestras listas por consola, y **digital** se busca en
+ * SteamGridDB, que es donde están los juegos modernos que ningún catálogo retro tiene.
+ *
+ * Antes el alta digital vivía escondida en el menú de Playing, así que desde Collection no había
+ * forma de llegar.
+ */
+/** Ítem de menú con una segunda línea que dice de dónde sale el juego. */
+@Composable
+private fun MenuLabel(title: String, hint: String) {
+    Column {
+        Text(title)
+        Text(
+            hint,
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+}
+
+@Composable
+private fun AddGameMenu(
+    compact: Boolean,
+    onAddPhysical: () -> Unit,
+    onAddDigital: () -> Unit,
+) {
+    var open by remember { mutableStateOf(false) }
+    Box {
+        // En pantallas angostas el botón se queda solo con el "+": junto al título y la lupa, el
+        // texto no entra sin achicar todo lo demás.
+        if (compact) {
+            FilledTonalIconButton(onClick = { open = true }) {
+                Icon(Icons.Filled.Add, contentDescription = "Add game")
+            }
+        } else {
+            FilledTonalButton(
+                onClick = { open = true },
+                shape = Tokens.Shape.control,
+                contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
+            ) {
+                Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(Modifier.width(6.dp))
+                Text("Add game")
+            }
+        }
+        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            DropdownMenuItem(
+                text = { MenuLabel("Physical game", "From our console lists") },
+                leadingIcon = { Icon(Icons.Filled.VideogameAsset, contentDescription = null) },
+                onClick = { open = false; onAddPhysical() },
+            )
+            DropdownMenuItem(
+                text = { MenuLabel("Digital game", "Search cover on SteamGridDB") },
+                leadingIcon = { Icon(Icons.Filled.CloudQueue, contentDescription = null) },
+                onClick = { open = false; onAddDigital() },
             )
         }
     }
