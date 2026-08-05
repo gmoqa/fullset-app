@@ -23,6 +23,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CloudQueue
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PlayCircle
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -51,6 +52,7 @@ import com.gmoqa.fullset.data.coverModel
 
 @Composable
 fun PlayingScreen(
+    onOpenTimeline: () -> Unit,
     games: List<Game>,
     onOpenGame: (Long) -> Unit,
     onAddDigital: () -> Unit,
@@ -59,7 +61,14 @@ fun PlayingScreen(
         ScreenHeader(
             title = "Playing",
             subtitle = if (games.isEmpty()) null else "${games.size} in progress",
-            trailing = { PlayingMenu(onAddDigital = onAddDigital) },
+            trailing = {
+                // El timeline vive acá y no en Collection: es una vista del **diario**, y en modo
+                // "Diary only" Collection no existe — ahí quedaba inalcanzable.
+                IconButton(onClick = onOpenTimeline) {
+                    Icon(Icons.Filled.Schedule, contentDescription = "Timeline")
+                }
+                PlayingMenu(onAddDigital = onAddDigital)
+            },
         )
         if (games.isEmpty()) {
             EmptyState(

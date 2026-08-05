@@ -501,7 +501,6 @@ private fun HomeContent(
         ) { page ->
             when (tabs[page]) {
                 HomeTab.COLLECTION -> LibraryScreen(
-                    onOpenTimeline = onOpenTimeline,
                     games = physical,
                     onOpenGame = onOpenGame,
                     onAddGame = onAddLibrary,
@@ -537,6 +536,7 @@ private fun HomeContent(
                     )
                 }
                 HomeTab.PLAYING -> PlayingScreen(
+                    onOpenTimeline = onOpenTimeline,
                     games = games.filter { it.playing },
                     onOpenGame = onOpenGame,
                     onAddDigital = onAddDigital,

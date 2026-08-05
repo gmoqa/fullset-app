@@ -21,9 +21,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.VideogameAsset
 import androidx.compose.material3.FilledTonalButton
@@ -58,8 +56,6 @@ fun LibraryScreen(
     games: List<Game>,
     onOpenGame: (Long) -> Unit,
     onAddGame: () -> Unit,
-    /** Abre el timeline. Null en las pantallas que reusan este listado sin esa vista. */
-    onOpenTimeline: (() -> Unit)? = null,
     focusGameId: Long? = null,
     onFocusConsumed: () -> Unit = {},
     onOpenPlatform: (String) -> Unit = {},
@@ -97,11 +93,6 @@ fun LibraryScreen(
                 subtitle = "${games.size} games · $platformCount platforms",
                 trailing = {
                     if (games.isNotEmpty()) {
-                        if (onOpenTimeline != null) {
-                            IconButton(onClick = onOpenTimeline) {
-                                Icon(Icons.Filled.Schedule, contentDescription = "Timeline")
-                            }
-                        }
                         SortMenu(current = sortOrder, onSelect = onSortChange)
                         IconButton(onClick = { searchOpen = true }) {
                             Icon(Icons.Filled.Search, contentDescription = "Search collection")
