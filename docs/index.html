@@ -14,13 +14,14 @@
     --amber-dim: #9c8a55;
     --line: #3a3527;
     --card: #191510;
-    --shelf: #2a2419;
+    --shelf: #6b5533;
+    --shelf-dark: #3b2e1b;
   }
   @media (prefers-color-scheme: light) {
     :root {
       --bg: #fdfaf2; --fg: #201c14; --muted: #6d6555;
       --amber: #8a6800; --amber-dim: #a89152; --line: #e6dcc2;
-      --card: #fffdf7; --shelf: #e0d5b8;
+      --card: #fffdf7; --shelf: #c9a76d; --shelf-dark: #9d7f4c;
     }
   }
   * { box-sizing: border-box; }
@@ -33,7 +34,7 @@
   strong { color: var(--fg); }
 
   /* ---------- Hero ---------- */
-  .hero { padding: 96px 0 72px; text-align: center; }
+  .hero { padding: 88px 0 40px; text-align: center; }
   h1 { font-size: clamp(52px, 11vw, 96px); margin: 0; letter-spacing: -0.045em; font-weight: 800; }
   h1 span { color: var(--amber); }
   .tagline {
@@ -42,26 +43,40 @@
   }
 
   /* ---------- Estante: la idea de la app, dibujada con CSS ---------- */
-  .shelf { margin: 56px 0 0; }
-  .row { display: flex; align-items: flex-end; justify-content: center; gap: clamp(6px, 1.4vw, 14px); }
+  .shelf { margin: 52px 0 0; }
+  .row {
+    display: flex; align-items: flex-end; justify-content: center;
+    gap: clamp(3px, .7vw, 7px);   /* apretadas: en un estante lleno las cajas se tocan */
+    max-width: 940px; margin: 0 auto; padding: 0 14px;
+  }
+  /* Cada caja es un lomo visto de frente. Tres detalles la separan de una barra de gráfico:
+     el canto iluminado a la izquierda, la franja del título y el degradado que la curva. */
   .box {
-    width: clamp(38px, 7.4vw, 76px); border-radius: 3px;
-    background: linear-gradient(160deg, rgba(255,255,255,.16), rgba(0,0,0,.28));
-    box-shadow: 0 8px 14px rgba(0,0,0,.42);
-    position: relative;
+    width: clamp(30px, 6vw, 62px); border-radius: 2px 2px 0 0; position: relative;
+    background-image: linear-gradient(100deg,
+      rgba(255,255,255,.26) 0 4%, rgba(255,255,255,.05) 4% 9%,
+      rgba(255,255,255,.03) 55%, rgba(0,0,0,.34) 92%, rgba(0,0,0,.5));
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), 0 12px 20px rgba(0,0,0,.55);
+  }
+  .box.thin { width: clamp(20px, 4vw, 42px); }   /* cartuchos entre cajas */
+  .box::before {          /* la franja del título, lo que hace que se lea como caja */
+    content: ""; position: absolute; left: 16%; right: 16%; top: 13%; height: 8%;
+    background: rgba(255,255,255,.17); border-radius: 1px;
   }
   .box::after {           /* brillo del borde superior: da volumen sin dibujar nada */
-    content: ""; position: absolute; inset: 0 0 auto; height: 32%;
-    background: linear-gradient(rgba(255,255,255,.15), transparent); border-radius: 3px 3px 0 0;
+    content: ""; position: absolute; inset: 0 0 auto; height: 5px;
+    background: linear-gradient(rgba(255,255,255,.34), rgba(255,255,255,.04));
+    border-radius: 2px 2px 0 0;
   }
-  .plank {
-    height: 8px; border-radius: 2px; background: var(--shelf);
-    box-shadow: 0 5px 16px rgba(0,0,0,.5);
+  .plank {                /* la tabla: canto claro arriba, sombra del grosor abajo */
+    height: 15px; border-radius: 2px;
+    background: linear-gradient(180deg, var(--shelf) 0 45%, var(--shelf-dark) 45%);
+    box-shadow: 0 14px 26px rgba(0,0,0,.6);
     max-width: 940px; margin: 0 auto;
   }
   .reflection {
-    height: 26px; max-width: 940px; margin: 0 auto;
-    background: linear-gradient(var(--shelf), transparent); opacity: .35;
+    height: 34px; max-width: 900px; margin: 0 auto;
+    background: linear-gradient(var(--shelf-dark), transparent); opacity: .45;
   }
 
   /* ---------- Bloques ---------- */
@@ -118,16 +133,18 @@
     <!-- Un estante, que es de lo que trata la app. Los colores son los de las consolas. -->
     <div class="shelf" aria-hidden="true">
       <div class="row">
-        <div class="box" style="height:104px;background-color:#472a28"></div>
-        <div class="box" style="height:118px;background-color:#302c48"></div>
-        <div class="box" style="height:96px;background-color:#243a2a"></div>
-        <div class="box" style="height:126px;background-color:#3b2a55"></div>
-        <div class="box" style="height:110px;background-color:#26262e"></div>
-        <div class="box" style="height:100px;background-color:#383840"></div>
-        <div class="box" style="height:122px;background-color:#1b3a6b"></div>
-        <div class="box" style="height:92px;background-color:#2a2e45"></div>
-        <div class="box" style="height:114px;background-color:#24384a"></div>
-        <div class="box" style="height:106px;background-color:#3a2530"></div>
+        <div class="box" style="height:112px;background-color:#6b3a36"></div>
+        <div class="box thin" style="height:126px;background-color:#46406b"></div>
+        <div class="box" style="height:100px;background-color:#2f5a42"></div>
+        <div class="box" style="height:134px;background-color:#56397e"></div>
+        <div class="box thin" style="height:118px;background-color:#35353f"></div>
+        <div class="box" style="height:104px;background-color:#4d4d59"></div>
+        <div class="box" style="height:130px;background-color:#23538f"></div>
+        <div class="box thin" style="height:96px;background-color:#3b4266"></div>
+        <div class="box" style="height:122px;background-color:#34566e"></div>
+        <div class="box" style="height:108px;background-color:#5a3746"></div>
+        <div class="box thin" style="height:128px;background-color:#7a5a2c"></div>
+        <div class="box" style="height:114px;background-color:#2c6157"></div>
       </div>
       <div class="plank"></div>
       <div class="reflection"></div>
@@ -137,7 +154,7 @@
 
 <div class="wrap">
 
-  <section style="border-top:none">
+  <section style="border-top:none;padding-top:36px">
     <p class="lead">
       fullset keeps track of the games you <strong>own</strong> — shelf by shelf, console by console —
       and gives each one a place to write down what playing it was like.
