@@ -18,21 +18,73 @@ import androidx.compose.ui.graphics.Color
  * plataforma) y las capas sobre carátula ([Tokens.Overlay], que van sobre una imagen y por eso no
  * dependen del tema).
  */
+/**
+ * El ámbar del badge *DIGITAL* como color de marca. Antes acá vivía `0xFF6750A4`, que es
+ * literalmente el morado de ejemplo de la documentación de Material 3: no era una decisión, era la
+ * plantilla sin tocar.
+ *
+ * No alcanza con cambiar `primary`: Material lo usa como **fondo** de los botones rellenos y pone
+ * `onPrimary` encima. Con el morado ese contraste lo daba texto blanco; sobre amarillo el blanco no
+ * se lee. Por eso va la familia completa —contenedores y "on" incluidos— y por eso el claro usa un
+ * ámbar más oscuro: el amarillo brillante sobre blanco no tiene contraste suficiente para texto.
+ */
 object Palette {
-    val primaryLight = Color(0xFF6750A4)
-    val secondaryLight = Color(0xFF625B71)
-    val primaryDark = Color(0xFFD0BCFF)
-    val secondaryDark = Color(0xFFCCC2DC)
+    // Oscuro: el amarillo va al frente, con texto negro encima.
+    val primaryDark = Color(0xFFFFC400)
+    val onPrimaryDark = Color(0xFF3D2E00)
+    val primaryContainerDark = Color(0xFF574500)
+    val onPrimaryContainerDark = Color(0xFFFFE08A)
+    val secondaryDark = Color(0xFFD7C68C)
+    val onSecondaryDark = Color(0xFF3A3000)
+    // El "seleccionado" de segmentados y del nav. Un amarillo oscurecido a secas (0xFF524600) daba
+    // mostaza sucia: el amarillo pierde su carácter al bajarle luz y queda verdoso. Se desatura
+    // hacia un marrón cálido, que convive con el ámbar sin competirle.
+    val secondaryContainerDark = Color(0xFF453B26)
+    val onSecondaryContainerDark = Color(0xFFFFE8AE)
+    // Bordes de controles (segmentados, tarjetas de elección): ámbar apagado, para que la línea se
+    // lea como del mismo material que el acento y no como un gris prestado.
+    val outlineDark = Color(0xFF9C8A55)
+    // Divisores: el MISMO color en Material alimenta bordes y separadores. Un ámbar visible en una
+    // línea de 1dp que cruza toda la pantalla grita; acá va casi neutro, apenas cálido.
+    val outlineVariantDark = Color(0xFF453F2F)
+
+    // Claro: el mismo tono pero oscurecido, para que se lea sobre blanco.
+    val primaryLight = Color(0xFF745B00)
+    val onPrimaryLight = Color(0xFFFFFFFF)
+    val primaryContainerLight = Color(0xFFFFE08A)
+    val onPrimaryContainerLight = Color(0xFF241A00)
+    val secondaryLight = Color(0xFF695D3F)
+    val onSecondaryLight = Color(0xFFFFFFFF)
+    val secondaryContainerLight = Color(0xFFF2E1BB)
+    val onSecondaryContainerLight = Color(0xFF231B04)
+    val outlineLight = Color(0xFF7D7440)
+    val outlineVariantLight = Color(0xFFD8C9A4)
 }
 
 private val LightColors = lightColorScheme(
     primary = Palette.primaryLight,
+    onPrimary = Palette.onPrimaryLight,
+    primaryContainer = Palette.primaryContainerLight,
+    onPrimaryContainer = Palette.onPrimaryContainerLight,
     secondary = Palette.secondaryLight,
+    onSecondary = Palette.onSecondaryLight,
+    secondaryContainer = Palette.secondaryContainerLight,
+    onSecondaryContainer = Palette.onSecondaryContainerLight,
+    outline = Palette.outlineLight,
+    outlineVariant = Palette.outlineVariantLight,
 )
 
 private val DarkColors = darkColorScheme(
     primary = Palette.primaryDark,
+    onPrimary = Palette.onPrimaryDark,
+    primaryContainer = Palette.primaryContainerDark,
+    onPrimaryContainer = Palette.onPrimaryContainerDark,
     secondary = Palette.secondaryDark,
+    onSecondary = Palette.onSecondaryDark,
+    secondaryContainer = Palette.secondaryContainerDark,
+    onSecondaryContainer = Palette.onSecondaryContainerDark,
+    outline = Palette.outlineDark,
+    outlineVariant = Palette.outlineVariantDark,
 )
 
 /**

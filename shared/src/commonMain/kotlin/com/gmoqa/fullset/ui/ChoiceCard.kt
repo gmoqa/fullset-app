@@ -44,7 +44,7 @@ fun RowScope.ChoiceCard(
             .weight(1f)
             .aspectRatio(1f)
             .clip(Tokens.Shape.large)
-            .border(1.dp, MaterialTheme.colorScheme.outlineVariant, Tokens.Shape.large)
+            .border(1.dp, MaterialTheme.colorScheme.outline, Tokens.Shape.large)
             .clickable(onClick = onClick)
             .padding(Tokens.Space.xl),
         verticalArrangement = Arrangement.Center,
