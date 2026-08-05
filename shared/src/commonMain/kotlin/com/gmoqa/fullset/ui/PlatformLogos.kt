@@ -58,7 +58,9 @@ private fun pad(name: String): DrawableResource? = Res.allDrawableResources[name
 // consistente dentro de cada una). Reserva un alto estable en las listas para que el tile no salte
 // al pasar del placeholder a la imagen cargada, sin bandas negras (el aspecto coincide con el real).
 private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
-    "NES" to PlatformStyle(pad("ic_pad_nes"), Color(0xFF472A28), 0.70f),                       // rojo ladrillo
+    // El rojo de Nintendo tal cual (#E60012). Verificado: da 4.8:1 con el texto blanco de la
+    // franja, o sea que pasa contraste sin tener que apagarlo.
+    "NES" to PlatformStyle(pad("ic_pad_nes"), Color(0xFFE60012), 0.70f),                       // rojo Nintendo
     "Sega Master System" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF3A2530), 0.70f), // granate
     "Super Nintendo" to PlatformStyle(pad("ic_pad_snes"), Color(0xFF302C48), 1.41f),          // índigo
     "Nintendo 64" to PlatformStyle(pad("ic_pad_n64"), Color(0xFF243A2A), 1.40f),              // verde
