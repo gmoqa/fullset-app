@@ -93,6 +93,7 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 PLATFORMS = os.path.join(os.path.dirname(__file__), "..", "data", "config", "platforms.json")
 BASELINE = os.path.join(os.path.dirname(__file__), "baseline-semantica.json")
+MANIFEST_PATH = os.path.join(CAT_DIR, "manifest.json")
 
 # Prefijos de catalog number que identifican la región sin ambigüedad. Solo Sony y Nintendo: en
 # Sega la misma `T` aparece en las tres regiones, así que ahí no dice nada.
@@ -261,6 +262,19 @@ def main():
     # quedar vieja sin que nada se rompa: la app mostraría "668 games" para siempre. Se verifica acá
     # y no en un test de Kotlin porque quien agrega juegos corre el lint, no la suite.
     total_errs += lint_conteos(plats.values())
+
+    # El manifest lleva el hash de cada archivo: es lo que va a decidir, cuando haya sincronización,
+    # si un cliente tiene que bajar algo. Un hash viejo no rompe nada hoy y por eso se olvidaría solo.
+    from catalog_manifest import construir, diferencias
+    esperado = json.load(open(MANIFEST_PATH, encoding="utf-8")) if os.path.exists(MANIFEST_PATH) else None
+    real = construir()
+    if esperado != real:
+        print("\nmanifest: DESACTUALIZADO → correr: python3 tools/catalog_manifest.py")
+        for d in diferencias(esperado, real)[:10]:
+            print(f"    - {d}")
+        total_errs += 1
+    else:
+        print(f"manifest: OK (schema {real['schema']}, versión {real['version']})")
 
     fuera = sum(actual.values())
     if not base:

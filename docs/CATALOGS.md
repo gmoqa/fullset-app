@@ -457,8 +457,34 @@ carpeta en `project.yml`).
 | `enrich_covers_steamgriddb.py` | `coverUrl` | SteamGridDB (PS3, que libretro no cubre) |
 | `enrich_from_segaretro.py` | fechas, serial, rating | Sega Retro |
 
-`normalize_catalogs.py` rehornea los catálogos legacy y regenera `manifest.json` leyendo el
-directorio entero. **Pisa los catálogos**: correr solo con confirmación.
+`normalize_catalogs.py` rehornea los catálogos legacy. **Pisa los catálogos**: correr solo con
+confirmación.
 
 > **Nota:** los catálogos son documentación curada a mano. No se regeneran a la ligera (el script los
 > pisa). Las mejoras van por override (con procedencia) o edición puntual documentada.
+
+## El manifest
+
+`data/catalogs/manifest.json` es el índice del dataset: qué archivos lo componen, cuánto pesan, qué
+contienen y **el sha256 de cada uno**. Lo arma `catalog_manifest.py`, que solo lee y escribe el
+manifest — no toca los catálogos, así que se puede correr sin miedo:
+
+```
+python3 tools/catalog_manifest.py           # lo reescribe
+python3 tools/catalog_manifest.py --check   # falla si quedó desfasado
+```
+
+El lint lo verifica en cada corrida y dice **qué archivo** cambió, no solo que algo cambió.
+
+Tres decisiones que no se ven en el archivo:
+
+- **`schema`** describe la *forma* del dato, no su contenido. Existe para que un cliente que
+  entienda hasta el esquema N pueda **negarse** a leer un manifest N+1 en vez de intentarlo y
+  romperse. Hoy es 1 y solo sube si un cliente viejo dejara de poder leer el dato nuevo — cosa que
+  agregar o quitar campos *no* provoca: el parser de la app ignora claves desconocidas y todos los
+  campos del catálogo tienen valor por defecto.
+- **`version`** sale del hash de los hashes, no de un timestamp. Correr el generador dos veces sin
+  tocar nada no ensucia el repo, y el diff sigue reflejando avance real.
+- **`config/platforms.json` está en el manifest** aunque no sea un catálogo. Lleva los conteos por
+  consola, que son una copia del tamaño de cada catálogo: si viajaran por separado, un día los
+  catálogos cambiarían y los conteos no, y la app mostraría un número que no corresponde.
