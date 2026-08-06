@@ -5,6 +5,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -60,6 +61,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import coil3.compose.SubcomposeAsyncImageContent
+import coil3.compose.SubcomposeAsyncImage
+import coil3.compose.AsyncImagePainter
+import androidx.compose.runtime.collectAsState
 import com.gmoqa.fullset.data.Game
 import com.gmoqa.fullset.data.coverModel
 
@@ -108,6 +113,11 @@ fun PlayingScreen(
             // Filas sobre el fondo, separadas por un filete: la card gris redondeada era un
             // contenedor que no contenía nada —más del 60% era vacío— y siete de esas apiladas se
             // leen como bloques, no como una lista.
+            // El ancho se mide **una vez** y no por fila: 600dp es el escalón de Material donde
+            // deja de ser un teléfono. Debajo, la fila es cover + título + una línea; encima entra
+            // una segunda columna, porque a 668dp más de la mitad del ancho quedaba vacío.
+            BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
+            val conColumnas = maxWidth >= 600.dp
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
                 contentPadding = PaddingValues(bottom = 24.dp),
@@ -123,10 +133,12 @@ fun PlayingScreen(
                     }
                     PlayingCard(
                         game = game,
+                        conColumnas = conColumnas,
                         onClick = { onOpenGame(game.id) },
                         onOpenCover = { visorCaratula.show(game.coverModel, game.name) },
                     )
                 }
+            }
             }
         }
     }
@@ -187,7 +199,12 @@ private fun AddPlayingButton(
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun PlayingCard(game: Game, onClick: () -> Unit, onOpenCover: () -> Unit) {
+private fun PlayingCard(
+    game: Game,
+    conColumnas: Boolean,
+    onClick: () -> Unit,
+    onOpenCover: () -> Unit,
+) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -203,26 +220,39 @@ private fun PlayingCard(game: Game, onClick: () -> Unit, onOpenCover: () -> Unit
         // a la apaisada de Genesis, y sin ranura fija cada fila arrancaría a una altura distinta y
         // el borde izquierdo de la lista zigzaguearía.
         Box(
-            modifier = Modifier.size(width = COVER_ANCHO, height = COVER_ALTO),
+            modifier = Modifier
+                .size(width = COVER_ANCHO, height = COVER_ALTO)
+                // La ranura se pinta aunque no haya tapa. Sin fondo, una fila sin carátula deja un
+                // hueco invisible y se lee como desalineada, no como "todavía sin tapa" — y el
+                // ícono de reserva a media opacidad sobre un fondo casi negro no se ve.
+                .background(MaterialTheme.colorScheme.surfaceVariant),
             contentAlignment = Alignment.Center,
         ) {
             val model = game.coverModel
-            if (model != null) {
-                AsyncImage(
-                    model = model,
-                    contentDescription = game.name,
-                    contentScale = ContentScale.Fit,
-                    // Sin redondear: es el escaneo de un objeto con esquinas rectas. Redondearlo
-                    // decora contradiciendo al dato.
-                    modifier = Modifier.fillMaxSize().clickable(onClick = onOpenCover),
-                )
-            } else {
-                Icon(
-                    Icons.Filled.SportsEsports,
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f),
-                    modifier = Modifier.size(24.dp),
-                )
+            // `SubcomposeAsyncImage` y no `AsyncImage`: hay que distinguir "sin carátula" de
+            // "la carátula no cargó". Con `AsyncImage`, una URL que falla no dibuja nada y la
+            // ranura queda en gris liso para siempre, sin decir por qué.
+            SubcomposeAsyncImage(
+                model = model,
+                contentDescription = game.name,
+                contentScale = ContentScale.Fit,
+                // Sin redondear: es el escaneo de un objeto con esquinas rectas. Redondearlo
+                // decora contradiciendo al dato.
+                modifier = Modifier.fillMaxSize().clickable(onClick = onOpenCover),
+            ) {
+                val estado by painter.state.collectAsState()
+                if (estado is AsyncImagePainter.State.Success) {
+                    SubcomposeAsyncImageContent()
+                } else {
+                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        Icon(
+                            Icons.Filled.SportsEsports,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.55f),
+                            modifier = Modifier.size(22.dp),
+                        )
+                    }
+                }
             }
         }
 
@@ -242,6 +272,10 @@ private fun PlayingCard(game: Game, onClick: () -> Unit, onOpenCover: () -> Unit
             val secundario = buildList {
                 if (game.platform.isNotBlank()) add(game.platform)
                 if (game.digital) add("Digital")
+                // Con columna aparte, el año y la región salen de acá: repetirlos sería ruido.
+                if (!conColumnas) {
+                    game.releaseYear?.takeIf { it > 0 }?.let { add(it.toString()) }
+                }
                 if (game.noteCount > 0) add(plural(game.noteCount, "note"))
                 if (game.photoCount > 0) add(plural(game.photoCount, "photo"))
             }.joinToString("  ·  ")
@@ -254,6 +288,35 @@ private fun PlayingCard(game: Game, onClick: () -> Unit, onOpenCover: () -> Unit
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.padding(top = 3.dp),
                 )
+            }
+        }
+
+        // Columna de identidad, alineada a la derecha: el año arriba y la región debajo. Va a la
+        // derecha y no pegada al título para que se pueda **recorrer en vertical** —es lo que hace
+        // una discografía con el año— y para que el nombre del juego siga siendo lo único que
+        // manda el borde izquierdo del bloque de texto.
+        if (conColumnas) {
+            val anio = game.releaseYear?.takeIf { it > 0 }?.toString()
+            val region = game.region.takeIf { it.isNotBlank() }
+            if (anio != null || region != null) {
+                Spacer(Modifier.width(16.dp))
+                Column(horizontalAlignment = Alignment.End) {
+                    if (anio != null) {
+                        Text(
+                            anio,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    if (region != null) {
+                        Text(
+                            region,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
+                            modifier = Modifier.padding(top = 2.dp),
+                        )
+                    }
+                }
             }
         }
     }
