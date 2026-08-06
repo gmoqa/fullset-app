@@ -521,6 +521,9 @@ private fun EditableConditionChip(current: Condition?, onSelect: (Condition?) ->
             trailing = {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (current != null) {
+                        // Aire antes del punto: pegado a la palabra se lee "Loose●", como si el
+                        // punto fuera parte del nombre.
+                        Spacer(Modifier.width(8.dp))
                         Box(Modifier.size(8.dp).clip(CircleShape).background(Color(current.dot)))
                         Spacer(Modifier.width(6.dp))
                     }
