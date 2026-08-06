@@ -32,18 +32,24 @@
   strong { color: var(--fg); }
 
   /* ---------- Hero ---------- */
-  .hero { padding: 88px 0 40px; text-align: center; }
-  h1 { font-size: clamp(52px, 11vw, 96px); margin: 0; letter-spacing: -0.045em; font-weight: 800; }
+  /* Los espacios del hero miran la **altura** del viewport, no solo el ancho: una tablet en
+     horizontal es ancha pero baja, y con medidas fijas el título solo llenaba la pantalla y las
+     capturas nacían debajo del pliegue. */
+  .hero { padding: clamp(30px, 8vh, 88px) 0 clamp(18px, 4vh, 40px); text-align: center; }
+  h1 {
+    font-size: clamp(52px, min(11vw, 14vh), 96px);
+    margin: 0; letter-spacing: -0.045em; font-weight: 800;
+  }
   h1 span { color: var(--amber); }
   .tagline {
-    font-size: clamp(19px, 3.4vw, 26px); color: var(--muted);
-    margin: 18px auto 0; max-width: 30ch; line-height: 1.35;
+    font-size: clamp(19px, min(3.4vw, 4vh), 26px); color: var(--muted);
+    margin: clamp(10px, 2vh, 18px) auto 0; max-width: 30ch; line-height: 1.35;
   }
 
   /* ---------- Capturas: la app de verdad, no un dibujo ---------- */
   .shots {
     display: flex; align-items: flex-end; justify-content: center;
-    gap: clamp(12px, 2.4vw, 30px); margin: 56px 0 0;
+    gap: clamp(12px, 2.4vw, 30px); margin: clamp(22px, 5vh, 56px) 0 0;
   }
   .shots figure { margin: 0; }
   .shots img {
