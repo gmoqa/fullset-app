@@ -52,6 +52,7 @@
     gap: clamp(12px, 2.4vw, 30px); margin: clamp(22px, 5vh, 56px) 0 0;
   }
   .shots figure { margin: 0; }
+  .shots picture { display: block; }   /* inline por defecto: dejaría un hueco de línea base */
   .shots img {
     display: block; width: clamp(190px, 26vw, 265px); height: auto;
     border-radius: 14px; border: 1px solid var(--line);
@@ -120,19 +121,34 @@
     <p class="tagline">Your retro game collection, and a diary for every game.</p>
 
     <div class="shots">
+      <!--
+        Dos juegos de capturas, y el navegador elige por ancho: en un teléfono se ve la app tal
+        como se va a ver en ese teléfono (3 columnas de consolas), y en pantalla ancha la de la
+        tablet (6 columnas). Mostrar la captura de tablet a alguien que entra desde el teléfono
+        sería enseñarle un layout que no va a tener.
+      -->
       <figure>
-        <img src="img/consoles.jpg" width="720" height="1107" loading="lazy"
-             alt="Grid of console tiles — NES, Super Nintendo, Nintendo 64, GameCube, Sega and PlayStation — each with its game count.">
+        <picture>
+          <source media="(max-width: 700px)" srcset="img/consoles-phone.jpg" width="640" height="1327">
+          <img src="img/consoles.jpg" width="720" height="1107" loading="lazy"
+               alt="Grid of console tiles — NES, Super Nintendo, Nintendo 64, GameCube, Sega and PlayStation — each with its game count.">
+        </picture>
         <figcaption>Pick a console</figcaption>
       </figure>
       <figure class="big">
-        <img src="img/collection.jpg" width="720" height="1107"
-             alt="Shelves of box art grouped by console: Nintendo 64, Sega Genesis and NES, with the game title under each cover.">
+        <picture>
+          <source media="(max-width: 700px)" srcset="img/collection-phone.jpg" width="640" height="1327">
+          <img src="img/collection.jpg" width="720" height="1107"
+               alt="Shelves of box art grouped by console, with the game title under each cover.">
+        </picture>
         <figcaption>Your shelves</figcaption>
       </figure>
       <figure>
-        <img src="img/playing.jpg" width="720" height="1107" loading="lazy"
-             alt="Cards for the games in progress, each with its box art, console and note count. Digital ones carry a yellow badge.">
+        <picture>
+          <source media="(max-width: 700px)" srcset="img/playing-phone.jpg" width="640" height="1327">
+          <img src="img/playing.jpg" width="720" height="1107" loading="lazy"
+               alt="Cards for the games in progress, each with its box art, console and note count. Digital ones carry a yellow badge.">
+        </picture>
         <figcaption>What you're playing</figcaption>
       </figure>
     </div>
