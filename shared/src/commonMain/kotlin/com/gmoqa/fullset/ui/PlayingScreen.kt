@@ -1,6 +1,7 @@
 package com.gmoqa.fullset.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -176,55 +177,34 @@ private fun AddPlayingButton(
 @Composable
 private fun PlayingCard(game: Game, onClick: () -> Unit, onOpenCover: () -> Unit) {
     val model = game.coverModel
+    // Antes el fondo era la propia carátula desenfocada a 28dp con un degradado negro encima. La
+    // idea era darle a cada card el color del juego; lo que daba era barro, distinto en cada una, y
+    // la misma imagen apareciendo dos veces —borrosa de fondo y nítida al costado—. Superficie
+    // sólida: se gana contraste para el texto y la lista recupera ritmo.
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(180.dp)
-            .clip(Tokens.Shape.xlarge)
+            .height(112.dp)
+            .clip(Tokens.Shape.control)
             .background(MaterialTheme.colorScheme.surfaceVariant)
             .clickable(onClick = onClick),
     ) {
-        // --- Fondo: carátula difuminada y oscurecida (ambiente + color del juego) ---
-        if (model != null) {
-            AsyncImage(
-                model = model,
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize().blur(28.dp),
-            )
-        }
-        // Opacidad sobre la imagen: más oscuro a la izquierda (donde va el texto).
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(
-                    Brush.horizontalGradient(
-                        0f to Color.Black.copy(alpha = 0.82f),
-                        0.6f to Color.Black.copy(alpha = 0.55f),
-                        1f to Tokens.Overlay.scrimMid,
-                    )
-                ),
-        )
-
-        // --- Contenido: texto (izq.) + carátula completa en su proporción (der.) ---
         Row(
-            modifier = Modifier.fillMaxSize().padding(16.dp),
+            modifier = Modifier.fillMaxSize().padding(12.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(
                 modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(10.dp),
+                verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
-                // No hay badge "PLAYING": ya estás en la pantalla Playing. Solo se marca el digital,
-                // porque eso sí importa (no lo poseés).
-                if (game.digital) DigitalBadge()
-                // El nombre es el protagonista de la tarjeta.
+                // El nombre es el protagonista, y por eso el badge va **después**: relleno ámbar y
+                // arriba del título, le ganaba en peso visual a lo único que importa leer. Además no
+                // todos los juegos lo llevan, así que arriba desalineaba los títulos entre cards.
                 Text(
                     game.name,
-                    style = MaterialTheme.typography.titleLarge,
+                    style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color.White,
-                    maxLines = 3,
+                    maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                 )
                 // Metadata sutil en una línea: plataforma (logo) + notas/fotos.
@@ -236,22 +216,23 @@ private fun PlayingCard(game: Game, onClick: () -> Unit, onOpenCover: () -> Unit
                 // no entran juntos, y en una fila el conteo se cortaba a "2 …". Que baje de línea.
                 FlowRow(
                     verticalArrangement = Arrangement.spacedBy(4.dp),
-                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
                 ) {
                     if (game.platform.isNotBlank()) {
                         PlatformLabel(
                             platform = game.platform,
-                            iconSize = 16.dp,
-                            tint = Tokens.Overlay.icon,
+                            iconSize = 14.dp,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
                             nameStyle = MaterialTheme.typography.labelMedium,
-                            nameColor = Tokens.Overlay.icon,
+                            nameColor = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
+                    if (game.digital) DigitalBadge()
                     if (counts.isNotBlank()) {
                         Text(
                             counts,
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color.White.copy(alpha = 0.6f),
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
                         )
@@ -261,10 +242,10 @@ private fun PlayingCard(game: Game, onClick: () -> Unit, onOpenCover: () -> Unit
 
             Spacer(Modifier.width(12.dp))
 
-            // Carátula con ancho acotado (weight): así no se come el ancho del texto en pantallas
-            // angostas cuando la carátula es apaisada. La imagen se ajusta (Fit) dentro del hueco.
+            // Ancho acotado (weight) y no fijo: una tapa apaisada —Sega CD, algunos PC— si no se
+            // come el ancho del texto. Se ajusta (Fit) dentro del hueco.
             Box(
-                modifier = Modifier.weight(0.72f).fillMaxHeight(),
+                modifier = Modifier.weight(0.42f).fillMaxHeight(),
                 contentAlignment = Alignment.CenterEnd,
             ) {
                 if (model != null) {
@@ -275,7 +256,10 @@ private fun PlayingCard(game: Game, onClick: () -> Unit, onOpenCover: () -> Unit
                         alignment = Alignment.CenterEnd,
                         // Clickable propio: gana sobre el de la card entera, así que tocar la tapa
                         // la amplía en vez de abrir el juego.
-                        modifier = Modifier.fillMaxSize().clickable(onClick = onOpenCover),
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .clip(Tokens.Shape.small)
+                            .clickable(onClick = onOpenCover),
                     )
                 } else {
                     Box(
@@ -297,19 +281,23 @@ private fun PlayingCard(game: Game, onClick: () -> Unit, onOpenCover: () -> Unit
 
 private fun plural(n: Int, noun: String): String = "$n $noun" + if (n == 1) "" else "s"
 
-/** Badge amarillo bien visible: este juego es digital, no lo poseés (no está en tu colección). */
+/**
+ * Marca de que el juego es **digital** —no lo poseés, no está en tu colección—.
+ *
+ * Contorno y no relleno: es una nota al pie sobre la procedencia, y en ámbar sólido con negrita
+ * máxima le ganaba en peso al título del juego, que es lo único que se lee de verdad en la lista.
+ */
 @Composable
 private fun DigitalBadge() {
     Text(
         "DIGITAL",
-        style = MaterialTheme.typography.titleMedium,
-        fontWeight = FontWeight.Black,
-        color = Color.Black,
+        style = MaterialTheme.typography.labelSmall,
+        fontWeight = FontWeight.SemiBold,
+        color = MaterialTheme.colorScheme.primary,
         maxLines = 1,
         softWrap = false,
         modifier = Modifier
-            .clip(Tokens.Shape.small)
-            .background(Color(0xFFFFC400))
-            .padding(horizontal = 12.dp, vertical = 6.dp),
+            .border(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.6f), Tokens.Shape.small)
+            .padding(horizontal = 6.dp, vertical = 2.dp),
     )
 }
