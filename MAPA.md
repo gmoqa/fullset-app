@@ -32,7 +32,7 @@ Barra inferior de 5, o de 3 según el modo (ver §6).
 |---|---|---|
 | **Collection** | Tu colección **física**, en estanterías por consola | Botón directo al catálogo — acá siempre es física |
 | **Backlog** | Lo pendiente por jugar (`games.backlog`) | No se agrega desde acá; se marca en el detalle |
-| **Playing** | Lo que estás jugando (`games.playing`), en cards anchas | Modal: **física** (del catálogo) o **digital** (SteamGridDB) |
+| **Playing** | Lo que estás jugando (`games.playing`), como lista de catálogo | Modal: **física** (del catálogo) o **digital** (SteamGridDB) |
 | **Wishlist** | Lo que querés conseguir | Mismo botón que las otras; vaciarla vive en el menú "⋮" |
 | **Settings** | Preferencias, respaldo, créditos | — |
 

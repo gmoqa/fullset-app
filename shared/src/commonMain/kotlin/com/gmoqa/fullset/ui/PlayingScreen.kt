@@ -21,6 +21,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CloudQueue
@@ -103,12 +105,22 @@ fun PlayingScreen(
             )
         } else {
             // Todo mezclado (sin agrupar), un card a todo el ancho por juego.
+            // Filas sobre el fondo, separadas por un filete: la card gris redondeada era un
+            // contenedor que no contenía nada —más del 60% era vacío— y siete de esas apiladas se
+            // leen como bloques, no como una lista.
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 24.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp),
+                contentPadding = PaddingValues(bottom = 24.dp),
             ) {
-                items(games, key = { it.id }) { game ->
+                itemsIndexed(games, key = { _, g -> g.id }) { i, game ->
+                    if (i > 0) {
+                        HorizontalDivider(
+                            // Sangrado hasta donde empieza el texto: el filete acompaña a la
+                            // columna, no corta la página al medio.
+                            modifier = Modifier.padding(start = 20.dp + COVER_ANCHO + 16.dp),
+                            color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f),
+                        )
+                    }
                     PlayingCard(
                         game = game,
                         onClick = { onOpenGame(game.id) },
@@ -176,108 +188,83 @@ private fun AddPlayingButton(
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun PlayingCard(game: Game, onClick: () -> Unit, onOpenCover: () -> Unit) {
-    val model = game.coverModel
-    // Antes el fondo era la propia carátula desenfocada a 28dp con un degradado negro encima. La
-    // idea era darle a cada card el color del juego; lo que daba era barro, distinto en cada una, y
-    // la misma imagen apareciendo dos veces —borrosa de fondo y nítida al costado—. Superficie
-    // sólida: se gana contraste para el texto y la lista recupera ritmo.
-    Box(
+    Row(
         modifier = Modifier
             .fillMaxWidth()
-            .height(112.dp)
-            .clip(Tokens.Shape.control)
-            .background(MaterialTheme.colorScheme.surfaceVariant)
-            .clickable(onClick = onClick),
+            .clickable(onClick = onClick)
+            .padding(horizontal = 20.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-        Row(
-            modifier = Modifier.fillMaxSize().padding(12.dp),
-            verticalAlignment = Alignment.CenterVertically,
+        // La carátula, a la izquierda y en una ranura de tamaño **fijo**. Antes estaba pegada al
+        // borde opuesto al título, con el ancho del juego entre medio: el ojo tenía que cruzar un
+        // vacío para relacionar un nombre con su tapa. Acá se leen juntos.
+        //
+        // La ranura es fija y la imagen se ajusta dentro: las tapas van de la caja vertical de NES
+        // a la apaisada de Genesis, y sin ranura fija cada fila arrancaría a una altura distinta y
+        // el borde izquierdo de la lista zigzaguearía.
+        Box(
+            modifier = Modifier.size(width = COVER_ANCHO, height = COVER_ALTO),
+            contentAlignment = Alignment.Center,
         ) {
-            Column(
-                modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(6.dp),
-            ) {
-                // El nombre es el protagonista, y por eso el badge va **después**: relleno ámbar y
-                // arriba del título, le ganaba en peso visual a lo único que importa leer. Además no
-                // todos los juegos lo llevan, así que arriba desalineaba los títulos entre cards.
-                Text(
-                    game.name,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
+            val model = game.coverModel
+            if (model != null) {
+                AsyncImage(
+                    model = model,
+                    contentDescription = game.name,
+                    contentScale = ContentScale.Fit,
+                    // Sin redondear: es el escaneo de un objeto con esquinas rectas. Redondearlo
+                    // decora contradiciendo al dato.
+                    modifier = Modifier.fillMaxSize().clickable(onClick = onOpenCover),
                 )
-                // Metadata sutil en una línea: plataforma (logo) + notas/fotos.
-                val counts = buildList {
-                    if (game.noteCount > 0) add(plural(game.noteCount, "note"))
-                    if (game.photoCount > 0) add(plural(game.photoCount, "photo"))
-                }.joinToString("  ·  ")
-                // FlowRow y no Row: en un teléfono angosto "PlayStation 5" más "5 notes · 2 photos"
-                // no entran juntos, y en una fila el conteo se cortaba a "2 …". Que baje de línea.
-                FlowRow(
-                    verticalArrangement = Arrangement.spacedBy(4.dp),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp),
-                ) {
-                    if (game.platform.isNotBlank()) {
-                        PlatformLabel(
-                            platform = game.platform,
-                            iconSize = 14.dp,
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                            nameStyle = MaterialTheme.typography.labelMedium,
-                            nameColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                    }
-                    if (game.digital) DigitalBadge()
-                    if (counts.isNotBlank()) {
-                        Text(
-                            counts,
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                        )
-                    }
-                }
+            } else {
+                Icon(
+                    Icons.Filled.SportsEsports,
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f),
+                    modifier = Modifier.size(24.dp),
+                )
             }
+        }
 
-            Spacer(Modifier.width(12.dp))
+        Spacer(Modifier.width(16.dp))
 
-            // Ancho acotado (weight) y no fijo: una tapa apaisada —Sega CD, algunos PC— si no se
-            // come el ancho del texto. Se ajusta (Fit) dentro del hueco.
-            Box(
-                modifier = Modifier.weight(0.42f).fillMaxHeight(),
-                contentAlignment = Alignment.CenterEnd,
-            ) {
-                if (model != null) {
-                    AsyncImage(
-                        model = model,
-                        contentDescription = game.name,
-                        contentScale = ContentScale.Fit,
-                        alignment = Alignment.CenterEnd,
-                        // Clickable propio: gana sobre el de la card entera, así que tocar la tapa
-                        // la amplía en vez de abrir el juego.
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .clip(Tokens.Shape.small)
-                            .clickable(onClick = onOpenCover),
-                    )
-                } else {
-                    Box(
-                        modifier = Modifier.fillMaxHeight().aspectRatio(0.75f),
-                        contentAlignment = Alignment.Center,
-                    ) {
-                        Icon(
-                            Icons.Filled.SportsEsports,
-                            contentDescription = null,
-                            tint = Tokens.Overlay.placeholderIcon,
-                            modifier = Modifier.size(32.dp),
-                        )
-                    }
-                }
+        Column(modifier = Modifier.weight(1f)) {
+            // Toda la jerarquía la hace el tipo: el nombre a plena intensidad, lo demás un escalón
+            // abajo y apagado. Sin cajas, sin color, sin badges compitiendo.
+            Text(
+                game.name,
+                style = MaterialTheme.typography.titleMedium,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+            )
+            // Una sola línea para todo lo secundario, separada por puntos medios. "DIGITAL" entra
+            // como una palabra más y no como una etiqueta: es un adjetivo del juego, no una alarma.
+            val secundario = buildList {
+                if (game.platform.isNotBlank()) add(game.platform)
+                if (game.digital) add("Digital")
+                if (game.noteCount > 0) add(plural(game.noteCount, "note"))
+                if (game.photoCount > 0) add(plural(game.photoCount, "photo"))
+            }.joinToString("  ·  ")
+            if (secundario.isNotEmpty()) {
+                Text(
+                    secundario,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.padding(top = 3.dp),
+                )
             }
         }
     }
 }
+
+/**
+ * Ranura de la carátula. Fija para que todas las filas midan lo mismo y la lista tenga pulso: es lo
+ * que separa un catálogo de una pila de recuadros.
+ */
+private val COVER_ANCHO = 52.dp
+private val COVER_ALTO = 68.dp
 
 private fun plural(n: Int, noun: String): String = "$n $noun" + if (n == 1) "" else "s"
 
