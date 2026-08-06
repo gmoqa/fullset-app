@@ -103,16 +103,20 @@ class DiaryViewModel(
         coverUrl: String,
         region: String = "",
         releaseYear: Int? = null,
+        /** Fecha ISO de precisión variable del catálogo. Sin esto el juego nace solo con el año. */
+        releaseDate: String = "",
         genre: String = "",
         slug: String = "",
         publisher: String = "",
+        /** Catalog number impreso en el cartucho o disco: identifica **esta** edición. */
+        serial: String = "",
         /** Alta desde Playing: el juego arranca marcado como que lo estás jugando. */
         playing: Boolean = false,
     ) = io {
         val id = repo.addGame(
             title, platform, coverUrl,
-            region = region, releaseYear = releaseYear, genre = genre,
-            slug = slug, publisher = publisher,
+            region = region, releaseYear = releaseYear, releaseDate = releaseDate, genre = genre,
+            slug = slug, publisher = publisher, serial = serial,
         )
         if (playing) repo.setPlaying(id, true)
         _lastAdded.value = id

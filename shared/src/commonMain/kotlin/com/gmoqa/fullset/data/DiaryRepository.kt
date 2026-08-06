@@ -126,6 +126,7 @@ class DiaryRepository(
         createdAt: Long = nowMillis(),
         region: String = "",
         releaseYear: Int? = null,
+        releaseDate: String = "",
         genre: String = "",
         condition: String = "",
         slug: String = "",
@@ -135,7 +136,7 @@ class DiaryRepository(
     ): Long = database.transactionWithResult {
         q.insertGame(
             name.trim(), platform.trim(), coverUrl.trim(), createdAt,
-            region.trim(), releaseYear?.toLong(), genre.trim(), condition.trim(),
+            region.trim(), releaseYear?.toLong(), releaseDate.trim(), genre.trim(), condition.trim(),
             slug.trim(), publisher.trim(), serial.trim(), if (digital) 1L else 0L,
         )
         q.lastInsertRowId().executeAsOne()

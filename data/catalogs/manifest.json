@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "23b79e12bd96",
+  "version": "6c6527b89abc",
   "files": [
     {
       "path": "catalogs/platforms.json",
@@ -453,8 +453,8 @@
       "path": "catalogs/saturn-jp.json",
       "platform": "Sega Saturn",
       "games": 1091,
-      "bytes": 420699,
-      "sha256": "73c747184b8f22907112f7d6c99ab0de0aa200e692de099f9ab815a901346e41",
+      "bytes": 420677,
+      "sha256": "74ceaba798a4758a51e1a4b453b3611ff1e47a9a26bcfcab2d2ec772c599045c",
       "coverage": {
         "year": 99,
         "publisher": 83,

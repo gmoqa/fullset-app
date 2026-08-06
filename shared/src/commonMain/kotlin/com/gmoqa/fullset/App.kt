@@ -276,7 +276,12 @@ private fun AppRoot(
                             AddTarget.LIBRARY, AddTarget.PLAYING ->
                                 vm.addGame(
                                     entry.title, platform.name, coverUrl,
-                                    region = entry.region, releaseYear = entry.year, genre = entry.genre,
+                                    region = entry.region, releaseYear = entry.year,
+                                    // Serial y fecha **también**: el catálogo los trae y el alta los
+                                    // estaba tirando, así que el juego nacía sin catalog number y sin
+                                    // fecha precisa hasta que corriera una migración del seeder.
+                                    releaseDate = entry.releaseDate, serial = entry.serial,
+                                    genre = entry.genre,
                                     slug = entry.slug, publisher = entry.publisher,
                                     playing = current.target == AddTarget.PLAYING,
                                 )

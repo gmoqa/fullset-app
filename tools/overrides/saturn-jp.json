@@ -1,0 +1,14 @@
+{
+  "darius-gaiden": {
+    "_date": "2026-08-06",
+    "_note": "el archivo '(2M)' contiene el escaneo EUROPEO —es byte a byte idéntico a 'Darius Gaiden (Europe).png'—; la versión sin sufijo sí es la japonesa (Taito, texto en japonés)",
+    "_source": "libretro-thumbnails/Sega_-_Saturn, Named_Boxarts/Darius Gaiden (Japan).png",
+    "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Saturn/master/Named_Boxarts/Darius%20Gaiden%20%28Japan%29.png"
+  },
+  "panzer-dragoon": {
+    "_date": "2026-08-06",
+    "_note": "mismo caso: el '(2M)' es la caja europea de lomo negro; la sin sufijo es la japonesa (estuche cuadrado, texto en japonés)",
+    "_source": "libretro-thumbnails/Sega_-_Saturn, Named_Boxarts/Panzer Dragoon (Japan).png",
+    "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sega_-_Saturn/master/Named_Boxarts/Panzer%20Dragoon%20%28Japan%29.png"
+  }
+}

@@ -82,10 +82,12 @@ SELECT g.id, g.name, g.platform, g.cover_url, g.cover_path, g.playing, g.backlog
 FROM games g
 WHERE g.id = ?;
 
+-- `release_date` va en el INSERT y no solo en la migración: agregar un juego del catálogo perdía
+-- su fecha precisa, y hasta que corriera un refresh el juego mostraba el año a secas.
 insertGame:
-INSERT INTO games(name, platform, cover_url, created_at, region, release_year, genre, condition,
-    slug, publisher, serial, digital)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+INSERT INTO games(name, platform, cover_url, created_at, region, release_year, release_date, genre,
+    condition, slug, publisher, serial, digital)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
 -- Asocia un juego ya cargado con su entrada del catálogo. El año solo se completa si falta,
 -- para no pisar lo que hayas anotado a mano.
