@@ -126,8 +126,11 @@ fun PlayingScreen(
                     if (i > 0) {
                         HorizontalDivider(
                             // Sangrado hasta donde empieza el texto: el filete acompaña a la
-                            // columna, no corta la página al medio.
-                            modifier = Modifier.padding(start = 20.dp + COVER_ANCHO + 16.dp),
+                            // columna, no corta la página al medio. Sigue a la ranura, que cambia
+                            // de tamaño con el ancho.
+                            modifier = Modifier.padding(
+                                start = 20.dp + (if (conColumnas) COVER_ANCHO_AMPLIO else COVER_ANCHO) + 16.dp,
+                            ),
                             color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f),
                         )
                     }
@@ -221,7 +224,10 @@ private fun PlayingCard(
         // el borde izquierdo de la lista zigzaguearía.
         Box(
             modifier = Modifier
-                .size(width = COVER_ANCHO, height = COVER_ALTO)
+                .size(
+                    width = if (conColumnas) COVER_ANCHO_AMPLIO else COVER_ANCHO,
+                    height = if (conColumnas) COVER_ALTO_AMPLIO else COVER_ALTO,
+                )
                 // La ranura se pinta aunque no haya tapa. Sin fondo, una fila sin carátula deja un
                 // hueco invisible y se lee como desalineada, no como "todavía sin tapa" — y el
                 // ícono de reserva a media opacidad sobre un fondo casi negro no se ve.
@@ -323,11 +329,17 @@ private fun PlayingCard(
 }
 
 /**
- * Ranura de la carátula. Fija para que todas las filas midan lo mismo y la lista tenga pulso: es lo
- * que separa un catálogo de una pila de recuadros.
+ * Ranura de la carátula: **fija dentro de un ancho, distinta entre anchos**.
+ *
+ * Fija, para que todas las filas midan lo mismo y la lista tenga pulso — es lo que separa un
+ * catálogo de una pila de recuadros. Pero fija en 52dp para todos, la tapa pasaba del 12,7% del
+ * ancho en un teléfono al 7,8% en la tablet y al 4,9% en horizontal: se achicaba justo cuando había
+ * más lugar. En una lista donde la carátula es el ancla, eso la degrada a viñeta.
  */
 private val COVER_ANCHO = 52.dp
 private val COVER_ALTO = 68.dp
+private val COVER_ANCHO_AMPLIO = 76.dp
+private val COVER_ALTO_AMPLIO = 100.dp
 
 private fun plural(n: Int, noun: String): String = "$n $noun" + if (n == 1) "" else "s"
 

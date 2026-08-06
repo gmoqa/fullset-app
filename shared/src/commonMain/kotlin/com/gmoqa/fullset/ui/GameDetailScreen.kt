@@ -5,6 +5,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -342,7 +343,10 @@ private fun HeroHeader(
     // Fondo de página, no una superficie propia: con `surfaceVariant` el hero quedaba como un
     // bloque gris pegado sobre el negro de las notas, o sea la misma card que sacamos de la lista.
     // La ficha no necesita contenedor, se sostiene con la alineación.
-    Box(modifier = Modifier.fillMaxWidth()) {
+    BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
+        // 600dp, el mismo escalón que usa la lista. `isCompactWidth()` no sirve acá: su umbral son
+        // 400dp y un teléfono de 411 ya lo pasa, así que le daría el tamaño de tablet.
+        val amplio = maxWidth >= 600.dp
         // Antes el fondo era la carátula desenfocada con un degradado encima. El texto quedaba
         // sobre una imagen de brillo variable: "Condition" caía sobre una mancha verde clara y no
         // se leía, mientras el nombre de la consola caía sobre negro. El contraste no puede
@@ -462,7 +466,13 @@ private fun HeroHeader(
                 Box(
                     modifier = Modifier
                         .weight(if (compactWidth) 0.6f else 0.8f)
-                        .height(if (compactWidth) Tokens.Size.heroCoverCompact else Tokens.Size.heroCover),
+                        .height(
+                            when {
+                                compactWidth -> Tokens.Size.heroCoverCompact
+                                amplio -> Tokens.Size.heroCoverWide
+                                else -> Tokens.Size.heroCover
+                            },
+                        ),
                     // Arriba, para que acompañe al logo y al título: alineada al fondo quedaba
                     // colgando con un hueco encima cuando el ancho es el que la limita.
                     contentAlignment = Alignment.TopEnd,

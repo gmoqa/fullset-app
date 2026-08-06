@@ -97,6 +97,12 @@ object Tokens {
         val coverTileCompact = 120.dp
         /** Alto de la carátula del hero en el detalle. */
         val heroCover = 180.dp
+        /**
+         * En pantalla ancha la tapa tiene sitio de sobra —283dp en la tablet— pero el alto la
+         * ataba a 180dp, y como la imagen se ajusta, el alto es el que manda: usaba dos tercios
+         * del hueco que tenía.
+         */
+        val heroCoverWide = 260.dp
         val heroCoverCompact = 150.dp
         /** Ícono chico dentro de un chip o botón. */
         val iconSmall = 18.dp
