@@ -196,6 +196,29 @@ def lint_override(path):
     return len(data), errs
 
 
+def lint_conteos(plataformas):
+    """Verifica que `platforms.json.counts` coincida con el tamaño real de cada catálogo.
+
+    Reusa `platform_counts.py` en vez de recalcular acá: si la cascada de regiones se implementara
+    dos veces, tarde o temprano una de las dos se olvidaría de un caso —la SG-1000, que solo salió
+    en Japón y muestra su catálogo japonés en las tres regiones— y el lint aprobaría un conteo malo.
+    """
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from platform_counts import conteos
+
+    plataformas = list(plataformas)
+    esperado = conteos(plataformas)
+    errs = 0
+    for p in plataformas:
+        real, tiene = esperado.get(p["id"]), p.get("counts")
+        if tiene != real:
+            print(f"platforms.json  {p['id']}: counts {tiene} → debería ser {real}")
+            errs += 1
+    print(f"\nconteos de plataformas: {'OK' if not errs else f'{errs} DESFASADOS'}"
+          + ("" if not errs else " → correr: python3 tools/platform_counts.py"))
+    return errs
+
+
 def main():
     # manifest.json no es un catálogo de juegos: se saltea.
     files = sorted(f for f in os.listdir(CAT_DIR) if f.endswith(".json") and f != "manifest.json")
@@ -234,6 +257,11 @@ def main():
             for e in errs[:15]:
                 print(f"    - {e}")
             total_errs += len(errs)
+    # Los conteos de `platforms.json` son una copia del tamaño de cada catálogo, y una copia puede
+    # quedar vieja sin que nada se rompa: la app mostraría "668 games" para siempre. Se verifica acá
+    # y no en un test de Kotlin porque quien agrega juegos corre el lint, no la suite.
+    total_errs += lint_conteos(plats.values())
+
     fuera = sum(actual.values())
     if not base:
         json.dump(actual, open(BASELINE, "w", encoding="utf-8"), indent=2, sort_keys=True)

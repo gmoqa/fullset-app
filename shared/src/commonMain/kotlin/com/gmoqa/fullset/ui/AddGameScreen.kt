@@ -142,15 +142,10 @@ fun AddGameScreen(
                 // Paso 2: la franja de la plataforma ES el encabezado, con la flecha adentro.
                 PlatformBandHeader(
                     platform = platform.name,
-                    // Sin catálogo (PS5…) no hay nada que contar: sin badge.
-                    count = remember(platform, pickedRegion) {
-                        // Se pregunta por el catálogo de **esta** región, no por el de NTSC-U:
-                        // `catalogFile` es el americano, y una consola que solo salió en otro
-                        // mercado lo tiene vacío. Así la SG-1000 aparecía como "cargar a mano"
-                        // teniendo sus 79 juegos japoneses catalogados.
-                        if (platform.catalogFor(pickedRegion).isBlank()) null
-                        else catalog.entries(platform, pickedRegion).size
-                    },
+                    // Precalculado en el config: contarlo acá obligaba a parsear el catálogo de la
+                    // región solo para poner un número en la franja, y esa lista todavía no hacía
+                    // falta. Null (la PS5) = sin catálogo, sin badge.
+                    count = platform.countFor(pickedRegion),
                     onBack = { selected = null },
                     // Misma ficha que en Collection: solo si la plataforma la trae.
                     onInfo = if (platform.info != null) ({ showInfo = true }) else null,
@@ -171,7 +166,7 @@ fun AddGameScreen(
     ) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding)) {
             if (platform == null) {
-                PlatformStep(platforms = platforms, catalog = catalog, region = region, onSelect = { selected = it })
+                PlatformStep(platforms = platforms, region = region, onSelect = { selected = it })
             } else {
                 TitleStep(
                     platform = platform, catalog = catalog, region = pickedRegion,
@@ -198,7 +193,6 @@ fun AddGameScreen(
 @Composable
 private fun PlatformStep(
     platforms: List<Platform>,
-    catalog: GameCatalog,
     region: RegionFilter,
     onSelect: (Platform) -> Unit,
 ) {
@@ -224,8 +218,6 @@ private fun PlatformStep(
                 if (p.enabled) {
                     PlatformCube(
                         platform = p,
-                        // Offline: el conteo sale del JSON de catálogo empaquetado.
-                        count = remember(p.id, region) { catalog.entries(p, region).size },
                         region = region,
                         onClick = { onSelect(p) },
                     )
@@ -246,7 +238,7 @@ private val CUBO_MIN = 150.dp
  * el mismo de las franjas de estantería), con el logo blanco centrado y el nombre + conteo al pie.
  */
 @Composable
-private fun PlatformCube(platform: Platform, count: Int, region: RegionFilter, onClick: () -> Unit) {
+private fun PlatformCube(platform: Platform, region: RegionFilter, onClick: () -> Unit) {
     val band = platformBandColor(platform.name) ?: MaterialTheme.colorScheme.surfaceVariant
     CubeSurface(container = band, content = Color.White, onClick = onClick) {
         // Ícono proporcional al cubo (no un tamaño fijo): escala con el ancho disponible y se acota
@@ -260,8 +252,9 @@ private fun PlatformCube(platform: Platform, count: Int, region: RegionFilter, o
                 fallback = { Icon(Icons.Filled.SportsEsports, contentDescription = null, modifier = Modifier.size(glyphSize)) },
             )
         }
-        // Sin catálogo (PS5…) no hay conteo: se anuncia que se carga a mano.
-        val tag = if (platform.catalogFor(region).isBlank()) "Add by hand" else "$count games"
+        // El conteo viene del config, ya calculado: abrir los quince catálogos solo para poner
+        // "668 games" congelaba la grilla casi medio segundo. Sin conteo (la PS5) se carga a mano.
+        val tag = platform.countFor(region)?.let { "$it games" } ?: "Add by hand"
         CubeCaption(name = platform.name, tag = tag, tagColor = Color.White.copy(alpha = 0.7f))
     }
 }

@@ -18,6 +18,11 @@
       "unitsSold": "61.9M",
       "cpu": "Ricoh 2A03 (MOS 6502) @ 1.79 MHz — 8-bit",
       "description": "Nintendo's 8-bit console that revived the home market after the 1983 crash, home to Super Mario Bros. and The Legend of Zelda."
+    },
+    "counts": {
+      "NTSC-U": 668,
+      "NTSC-J": 668,
+      "PAL": 668
     }
   },
   {
@@ -39,6 +44,11 @@
       "unitsSold": "49.1M",
       "cpu": "Ricoh 5A22 (65C816) @ 3.58 MHz — 16-bit",
       "description": "Nintendo's 16-bit successor to the NES, with Mode 7 scaling and a deep RPG and platformer library."
+    },
+    "counts": {
+      "NTSC-U": 744,
+      "NTSC-J": 744,
+      "PAL": 744
     }
   },
   {
@@ -60,6 +70,11 @@
       "unitsSold": "32.9M",
       "cpu": "NEC VR4300 (MIPS) @ 93.75 MHz — 64-bit",
       "description": "Nintendo's 64-bit console and its last home system on cartridges. Super Mario 64 pioneered analog-stick 3D control."
+    },
+    "counts": {
+      "NTSC-U": 296,
+      "NTSC-J": 296,
+      "PAL": 296
     }
   },
   {
@@ -85,6 +100,11 @@
       "unitsSold": "21.7M",
       "cpu": "IBM PowerPC Gekko @ 485 MHz + ATI Flipper",
       "description": "Nintendo's compact sixth-generation console, the first to drop cartridges for optical discs."
+    },
+    "counts": {
+      "NTSC-U": 537,
+      "NTSC-J": 274,
+      "PAL": 433
     }
   },
   {
@@ -106,6 +126,11 @@
       "unitsSold": "2M",
       "cpu": "Zilog Z80 @ 3.58 MHz — 8-bit",
       "description": "Sega's first home console, launched in Japan the same day as the Famicom."
+    },
+    "counts": {
+      "NTSC-U": 79,
+      "NTSC-J": 79,
+      "PAL": 79
     }
   },
   {
@@ -131,6 +156,11 @@
       "unitsSold": "~13M",
       "cpu": "Zilog Z80 @ 3.58 MHz — 8-bit",
       "description": "Sega's 8-bit console, technically ahead of the NES but a distant second in most markets — and hugely popular in Brazil."
+    },
+    "counts": {
+      "NTSC-U": 114,
+      "NTSC-J": 84,
+      "PAL": 363
     }
   },
   {
@@ -156,6 +186,11 @@
       "unitsSold": "~30.8M",
       "cpu": "Motorola 68000 @ 7.6 MHz + Z80 — 16-bit",
       "description": "Sega's 16-bit console, sold as 'Genesis' in North America. Sonic and its Blast Processing drove the 16-bit console war."
+    },
+    "counts": {
+      "NTSC-U": 711,
+      "NTSC-J": 435,
+      "PAL": 747
     }
   },
   {
@@ -181,6 +216,11 @@
       "unitsSold": "10.6M",
       "cpu": "Zilog Z80 @ 3.58 MHz — 8-bit",
       "description": "Sega's colour-screen handheld, built on Master System hardware, fielded against the Game Boy."
+    },
+    "counts": {
+      "NTSC-U": 234,
+      "NTSC-J": 199,
+      "PAL": 208
     }
   },
   {
@@ -206,6 +246,11 @@
       "unitsSold": "2.24M",
       "cpu": "Motorola 68000 @ 12.5 MHz — 16-bit (add-on)",
       "description": "CD add-on for the Mega Drive/Genesis: full-motion video, CD audio and bigger games."
+    },
+    "counts": {
+      "NTSC-U": 146,
+      "NTSC-J": 116,
+      "PAL": 109
     }
   },
   {
@@ -231,6 +276,11 @@
       "unitsSold": "0.8M",
       "cpu": "2× Hitachi SH-2 @ 23 MHz — 32-bit (add-on)",
       "description": "Short-lived 32-bit add-on for the Genesis, released months before the Saturn."
+    },
+    "counts": {
+      "NTSC-U": 31,
+      "NTSC-J": 18,
+      "PAL": 26
     }
   },
   {
@@ -256,6 +306,11 @@
       "unitsSold": "9.3M",
       "cpu": "2× Hitachi SH-2 @ 28.6 MHz — 32-bit (dual)",
       "description": "Sega's dual-CPU 32-bit console. Strong in Japan but held back by a complex architecture and a rushed US launch."
+    },
+    "counts": {
+      "NTSC-U": 251,
+      "NTSC-J": 1091,
+      "PAL": 247
     }
   },
   {
@@ -281,6 +336,11 @@
       "unitsSold": "9.1M",
       "cpu": "Hitachi SH-4 @ 200 MHz",
       "description": "Sega's final console and the first with a built-in modem for online play. Acclaimed but discontinued early."
+    },
+    "counts": {
+      "NTSC-U": 248,
+      "NTSC-J": 545,
+      "PAL": 224
     }
   },
   {
@@ -306,6 +366,11 @@
       "unitsSold": "102.5M",
       "cpu": "MIPS R3000A @ 33.9 MHz — 32-bit",
       "description": "Sony's debut console and the first to ship over 100 million units, moving the industry from cartridges to CD-ROM."
+    },
+    "counts": {
+      "NTSC-U": 1344,
+      "NTSC-J": 3148,
+      "PAL": 1286
     }
   },
   {
@@ -331,6 +396,11 @@
       "unitsSold": "155M+",
       "cpu": "Emotion Engine @ 294 MHz — 128-bit",
       "description": "Sony's sixth-generation console and the best-selling of all time, doubling as an affordable DVD player."
+    },
+    "counts": {
+      "NTSC-U": 1815,
+      "NTSC-J": 2975,
+      "PAL": 2226
     }
   },
   {
@@ -356,6 +426,11 @@
       "unitsSold": "87.4M",
       "cpu": "Cell Broadband Engine @ 3.2 GHz — 1 PPE + 7 SPE",
       "description": "Sony's seventh-generation console, the first to standardise on Blu-ray and to ship with free online play."
+    },
+    "counts": {
+      "NTSC-U": 1894,
+      "NTSC-J": 1182,
+      "PAL": 1836
     }
   },
   {

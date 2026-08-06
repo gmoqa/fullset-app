@@ -13,6 +13,8 @@ private data class PlatformDto(
     val catalogs: Map<String, String> = emptyMap(),
     val libretroRepo: String = "",
     val enabled: Boolean = false,
+    /** Cuántos juegos tiene cada región. Lo escribe `tools/platform_counts.py`. */
+    val counts: Map<String, Int> = emptyMap(),
     val info: PlatformInfoDto? = null,
 )
 
@@ -52,6 +54,7 @@ class PlatformRegistry(private val readAsset: (String) -> String? = ::readTextAs
                     )
                 },
                 catalogs = cats,
+                counts = dto.counts,
             )
         }
     }

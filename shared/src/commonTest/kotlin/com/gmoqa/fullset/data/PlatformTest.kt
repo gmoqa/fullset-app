@@ -4,6 +4,7 @@ import com.gmoqa.fullset.ui.selectableRegions
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
+import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 /** Elección de catálogo por región, con fallback a NTSC-U (catalogFile). */
@@ -72,6 +73,26 @@ class PlatformTest {
             libretroRepo = "", enabled = true,
         )
         assertEquals("", none.catalogFor(RegionFilter.NTSC_U))
+    }
+
+    @Test
+    fun elConteoSaleDelConfigYNoDelCatalogo() {
+        // Contarlo abriendo el catálogo congelaba la grilla de alta: quince JSON, 9,4 MB, en el
+        // hilo principal. Viene precalculado, y sin conteo (la PS5) devuelve null —no cero— para
+        // que la UI pueda decir "se carga a mano" en vez de "0 games".
+        val genesis = Platform(
+            id = "sega-genesis", name = "Sega Genesis", catalogFile = "catalogs/genesis-usa.json",
+            libretroRepo = "", enabled = true,
+            counts = mapOf("NTSC-U" to 711, "NTSC-J" to 435, "PAL" to 747),
+        )
+        assertEquals(711, genesis.countFor(RegionFilter.NTSC_U))
+        assertEquals(435, genesis.countFor(RegionFilter.NTSC_J))
+
+        val ps5 = Platform(
+            id = "playstation-5", name = "PlayStation 5", catalogFile = "",
+            libretroRepo = "", enabled = true,
+        )
+        assertNull(ps5.countFor(RegionFilter.NTSC_U))
     }
 
     @Test

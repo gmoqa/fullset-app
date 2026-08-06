@@ -16,6 +16,14 @@ data class Platform(
     val info: PlatformInfo? = null,
     /** Catálogos por región (label de [RegionFilter] → archivo): `{"NTSC-U": "...", "PAL": "..."}`. */
     val catalogs: Map<String, String> = emptyMap(),
+    /**
+     * Cuántos juegos tiene cada región, **precalculado**.
+     *
+     * Está acá y no se cuenta en el momento porque contarlo obliga a parsear el catálogo entero, y
+     * la grilla de alta necesita el número de las quince consolas a la vez: eran 9,4 MB de JSON en
+     * el hilo principal. Lo escribe `tools/platform_counts.py` y el lint verifica que no mienta.
+     */
+    val counts: Map<String, Int> = emptyMap(),
 ) {
     /**
      * Archivo de catálogo para [region].
@@ -38,6 +46,12 @@ data class Platform(
      * SteamGridDB) porque en la práctica es digital. Hoy solo la PS5 cae de este lado.
      */
     val hasCatalog: Boolean get() = catalogFor(RegionFilter.entries.first()).isNotBlank()
+
+    /**
+     * Cuántos juegos hay en [region], sin abrir el catálogo. `null` si esta consola no tiene lista
+     * (la PS5): quien lo muestre tiene que decir "se carga a mano", no "0 games".
+     */
+    fun countFor(region: RegionFilter): Int? = counts[region.label]
 }
 
 /**
