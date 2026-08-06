@@ -1,5 +1,6 @@
 package com.gmoqa.fullset.ui
 
+import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalDateTime
@@ -7,6 +8,7 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format.MonthNames
 import kotlinx.datetime.format.Padding
 import kotlinx.datetime.toLocalDateTime
+import kotlinx.datetime.todayIn
 
 // Formatos multiplataforma (kotlinx-datetime): "Jul 20, 2026" y "Jul 20, 2026 · 16:30".
 private val datePart = LocalDate.Format {
@@ -54,6 +56,14 @@ fun formatReleaseDate(iso: String, fallbackYear: Int? = null): String {
 }
 
 /** ISO de precisión variable: "1994" | "1994-06" | "1994-06-08" (el día requiere mes). */
+/**
+ * Hoy en ISO (`"2026-08-06"`), en la zona del dispositivo.
+ *
+ * Va en la zona local y no en UTC porque lo que se registra es *el día en que la persona jugó*: a
+ * las 22:00 en Chile, UTC ya está en mañana y la fecha saldría corrida un día.
+ */
+fun todayIso(): String = Clock.System.todayIn(TimeZone.currentSystemDefault()).toString()
+
 internal fun partialIso(year: Int, month: Int?, day: Int?): String = buildString {
     append(year)
     if (month != null) {

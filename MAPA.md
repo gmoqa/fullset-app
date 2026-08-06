@@ -58,7 +58,8 @@ Todo esto vive en **Detail** salvo donde se aclare.
 - **Condición** (solo físicos): `LOOSE` · `LOOSE_MANUAL` · `BOXED` · `COMPLETE`. Se ve como punto de
   color en Collection.
 - **Primera vez jugado**: fecha ISO de precisión variable (`1994`, `1994-06`, `1994-06-08`). Es lo
-  que alimenta el Timeline.
+  que alimenta el Timeline. Al marcar un juego como *playing*, si todavía no tiene fecha la app
+  **ofrece la de hoy** — un toque. Nunca la pone sola: si decís que no, el dato queda vacío.
 
 **Diario**
 - **Notas** de texto, fechadas, editables.
@@ -232,5 +233,6 @@ Lo que hoy **no** está, para no buscarlo:
   whisper.cpp por CMake, así que una regresión en `app/src/main/cpp/` o en los recursos de Android
   no se detecta sola.
 - **Sin fusionar** las colecciones de dos dispositivos.
-- **`first_played` casi sin cargar**, así que el Timeline nace vacío. Cargar la fecha hoy exige
-  entrar al detalle de cada juego.
+- **`first_played` de lo ya cargado sigue vacío.** Marcar un juego como *playing* ahora ofrece la
+  fecha, así que el Timeline se llena con el uso, pero los juegos que ya estaban no se completan
+  solos: para esos hay que entrar al detalle uno por uno.

@@ -104,6 +104,8 @@ fun GameDetailScreen(
     val installedModel by vm.installedModel.collectAsStateWithLifecycle()
 
     var showDeleteDialog by remember { mutableStateOf(false) }
+    // Se ofrece la fecha al marcar el juego como jugando, si todavía no tiene ninguna.
+    var askFirstPlayed by remember { mutableStateOf(false) }
     var showAddNote by remember { mutableStateOf(false) }
     // Compartir las notas del juego como JSON (para pegarlas en un LLM, guardarlas, etc.).
     val shareText = rememberTextSharer()
@@ -125,7 +127,14 @@ fun GameDetailScreen(
                 game = game,
                 onBack = onBack,
                 onDelete = { showDeleteDialog = true },
-                onTogglePlaying = { vm.setPlaying(gameId, game?.playing != true) },
+                onTogglePlaying = {
+                    val empieza = game?.playing != true
+                    vm.setPlaying(gameId, empieza)
+                    // Preguntar la fecha **acá** y no en otro lado: empezar a jugar algo es el único
+                    // momento en que se sabe sin pensarlo. Después nadie entra al detalle de cada
+                    // juego a cargarla, y por eso el Timeline nacía prácticamente vacío.
+                    if (empieza && game?.firstPlayed.isNullOrBlank()) askFirstPlayed = true
+                },
                 onToggleBacklog = { vm.setBacklog(gameId, game?.backlog != true) },
                 onChangeCover = { pickCover() },
                 onShootCover = { takeCover.launch() },
@@ -222,6 +231,33 @@ fun GameDetailScreen(
             onConfirm = { text ->
                 vm.editNote(note.id, text)
                 editingNote = null
+            },
+        )
+    }
+
+    if (askFirstPlayed) {
+        // Dos botones y no tres: en un teléfono angosto "Not now / Another date / Today" no entra en
+        // una fila, y hoy es la respuesta en la enorme mayoría de los casos. Para cualquier otra
+        // fecha está el chip, en esta misma pantalla.
+        AlertDialog(
+            onDismissRequest = { askFirstPlayed = false },
+            shape = Tokens.Shape.dialog,
+            title = { Text("First time playing it?") },
+            text = {
+                Text(
+                    "Recording the date puts it on your timeline. If you started it another day, " +
+                        "set it with the date chip below.",
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    // Solo la fecha de hoy, nunca inventada: si dice que no, el dato queda vacío.
+                    vm.setFirstPlayed(gameId, todayIso())
+                    askFirstPlayed = false
+                }) { Text("Started today") }
+            },
+            dismissButton = {
+                TextButton(onClick = { askFirstPlayed = false }) { Text("Not now") }
             },
         )
     }
