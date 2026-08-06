@@ -40,7 +40,7 @@ Pantallas que se abren **encima** de las secciones:
 
 | Pantalla | Desde | Qué hace |
 |---|---|---|
-| **Detail** | Tocar cualquier juego | El diario del juego: notas, fotos, voz, estado, primera vez jugado |
+| **Detail** | Tocar cualquier juego | Ficha del juego (año, región, editora, género, catalog number, condición, primera vez jugado) + su diario |
 | **Add** | Collection y Playing | Elegir consola —solo las que tienen catálogo— → elegir del catálogo. Tres destinos: colección, colección+jugando, wishlist |
 | **AddDigital** | Playing | Título a mano + carátula buscada en SteamGridDB |
 | **Platform** | Tocar la franja de una consola | Ficha técnica + sus juegos por lanzamiento |

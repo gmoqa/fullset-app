@@ -1,6 +1,7 @@
 package com.gmoqa.fullset.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -338,31 +339,14 @@ private fun HeroHeader(
     val model = game?.coverModel
     val hasCustomCover = game?.coverPath?.isNotBlank() == true
     val compactWidth = isCompactWidth()
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.surfaceVariant),
-    ) {
-        if (model != null) {
-            AsyncImage(
-                model = model,
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.matchParentSize().blur(Tokens.Size.heroBlur),
-            )
-        }
-        // Scrim: oscuro arriba (para los iconos) y abajo (para el texto).
-        Box(
-            modifier = Modifier
-                .matchParentSize()
-                .background(
-                    Brush.verticalGradient(
-                        0f to Tokens.Overlay.scrimTop,
-                        0.45f to Tokens.Overlay.scrimMid,
-                        1f to Tokens.Overlay.scrimBottom,
-                    )
-                ),
-        )
+    // Fondo de página, no una superficie propia: con `surfaceVariant` el hero quedaba como un
+    // bloque gris pegado sobre el negro de las notas, o sea la misma card que sacamos de la lista.
+    // La ficha no necesita contenedor, se sostiene con la alineación.
+    Box(modifier = Modifier.fillMaxWidth()) {
+        // Antes el fondo era la carátula desenfocada con un degradado encima. El texto quedaba
+        // sobre una imagen de brillo variable: "Condition" caía sobre una mancha verde clara y no
+        // se leía, mientras el nombre de la consola caía sobre negro. El contraste no puede
+        // depender de qué parte de la tapa quedó detrás.
 
         Column(
             // Sin alto mínimo: el hero mide lo que ocupa su contenido. Forzar 320dp dejaba un
@@ -377,7 +361,7 @@ private fun HeroHeader(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 IconButton(onClick = onBack) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = Color.White)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                 }
                 Spacer(Modifier.weight(1f))
                 Box {
@@ -428,42 +412,39 @@ private fun HeroHeader(
                     game?.platform?.takeIf { it.isNotBlank() }?.let { plat ->
                         PlatformLabel(
                             platform = plat,
-                            iconSize = 20.dp,
-                            tint = Color.White,
-                            nameStyle = MaterialTheme.typography.titleSmall,
-                            nameColor = Color.White,
-                            modifier = Modifier.padding(bottom = 10.dp),
+                            iconSize = 18.dp,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                            nameStyle = MaterialTheme.typography.labelLarge,
+                            nameColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(bottom = 8.dp),
                         )
                     }
                     Text(
                         game?.name ?: "Game",
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color.White,
                         maxLines = 3,
                         overflow = TextOverflow.Ellipsis,
                     )
-                    FlowRow(
-                        modifier = Modifier.padding(top = 10.dp),
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                        verticalArrangement = Arrangement.spacedBy(6.dp),
-                    ) {
-                        game?.releaseYear?.let { MetaChip(it.toString()) }
-                        // La región va junto al año y antes que el resto porque es **identidad**,
-                        // no un dato más: el mismo juego es otro producto en cada mercado, con otro
-                        // título, otra fecha y otro catalog number. Sin esto, dos copias del mismo
-                        // juego se ven idénticas en pantalla y no hay forma de saber cuál registraste.
-                        game?.region?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
-                        game?.publisher?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
-                        game?.genre?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
-                        // Condición editable: tocá para elegir loose/boxed/complete; el punto de
-                        // color se refleja en Collection (la lista es reactiva).
+                    // Ficha, no pastillas. Siete pastillas idénticas mezclaban **datos** —año,
+                    // región, editora, género, catalog number— con **controles** —condición,
+                    // primera vez jugado—: misma forma y mismo peso, así que no había manera de
+                    // saber qué se toca. Y `1535` a secas podía ser un año o un precio.
+                    //
+                    // Etiqueta a la izquierda en columna fija, valor a la derecha: es la anatomía
+                    // de una ficha de catálogo y hace que los valores se recorran en vertical.
+                    Column(modifier = Modifier.padding(top = 14.dp)) {
+                        game?.releaseYear?.takeIf { it > 0 }?.let { FichaFila("Year", it.toString()) }
+                        // La región es **identidad**: el mismo juego es otro producto en cada
+                        // mercado, con otro título, otra fecha y otro catalog number.
+                        game?.region?.takeIf { it.isNotBlank() }?.let { FichaFila("Region", it) }
+                        game?.publisher?.takeIf { it.isNotBlank() }?.let { FichaFila("Publisher", it) }
+                        game?.genre?.takeIf { it.isNotBlank() }?.let { FichaFila("Genre", it) }
+                        game?.serial?.takeIf { it.isNotBlank() }?.let { FichaFila("Catalog no.", it) }
+                        // Los dos editables van al final y **con flecha**: es lo único que los
+                        // distingue de un dato, y ahora se distinguen.
                         EditableConditionChip(game?.conditionState, onSetCondition)
-                        // Primera vez que lo jugaste: EL dato de diario. Editable, con precisión
-                        // variable (el año alcanza; mes y día si los recordás).
                         FirstPlayedChip(game?.firstPlayed ?: "", onSetFirstPlayed)
-                        // Código impreso en el cartucho/disco: identifica la copia física.
-                        game?.serial?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
                     }
                     // FlowRow: en pantallas angostas los toggles bajan a otra línea en vez de cortarse.
                     FlowRow(
@@ -516,28 +497,32 @@ private fun HeroHeader(
     }
 }
 
-/** Chip de condición editable: punto de color + label (o "Condition" si vacío) → menú de opciones. */
+/** Estado de conservación, como fila de la ficha: la flecha es lo que dice que se toca. */
 @Composable
 private fun EditableConditionChip(current: Condition?, onSelect: (Condition?) -> Unit) {
     var open by remember { mutableStateOf(false) }
     Box {
-        Row(
-            modifier = Modifier
-                .clip(Tokens.Shape.pill)
-                .background(Tokens.Overlay.chip)
-                .clickable { open = true }
-                .padding(start = 10.dp, end = 4.dp, top = 4.dp, bottom = 4.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            if (current != null) {
-                Box(Modifier.size(8.dp).clip(CircleShape).background(Color(current.dot)))
-                Spacer(Modifier.width(6.dp))
-                Text(current.label, style = MaterialTheme.typography.labelMedium, color = Color.White, maxLines = 1)
-            } else {
-                Text("Condition", style = MaterialTheme.typography.labelMedium, color = Tokens.Overlay.textDim)
-            }
-            Icon(Icons.Filled.ArrowDropDown, contentDescription = "Set condition", tint = Color.White, modifier = Modifier.size(18.dp))
-        }
+        FichaFila(
+            etiqueta = "Condition",
+            // Vacío se dice con una raya y no dejando el renglón en blanco: en una ficha, el hueco
+            // sin marcar se lee como un error de impresión.
+            valor = current?.label ?: "—",
+            onClick = { open = true },
+            trailing = {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    if (current != null) {
+                        Box(Modifier.size(8.dp).clip(CircleShape).background(Color(current.dot)))
+                        Spacer(Modifier.width(6.dp))
+                    }
+                    Icon(
+                        Icons.Filled.ArrowDropDown,
+                        contentDescription = "Set condition",
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(18.dp),
+                    )
+                }
+            },
+        )
         DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
             Condition.entries.forEach { c ->
                 DropdownMenuItem(
@@ -554,31 +539,23 @@ private fun EditableConditionChip(current: Condition?, onSelect: (Condition?) ->
     }
 }
 
-/** Chip "First played": cuándo lo jugaste por primera vez (editable; vacío = "First played"). */
+/** Primera vez jugado, como fila de la ficha. Es EL dato de diario del juego. */
 @Composable
 private fun FirstPlayedChip(current: String, onSet: (String) -> Unit) {
     var open by remember { mutableStateOf(false) }
-    Row(
-        modifier = Modifier
-            .clip(Tokens.Shape.pill)
-            .background(Tokens.Overlay.chip)
-            .clickable { open = true }
-            .padding(horizontal = 10.dp, vertical = 4.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Icon(
-            Icons.Filled.Event,
-            contentDescription = "First played",
-            tint = Color.White.copy(alpha = if (current.isBlank()) 0.75f else 1f),
-            modifier = Modifier.size(14.dp),
-        )
-        Spacer(Modifier.width(5.dp))
-        if (current.isBlank()) {
-            Text("First played", style = MaterialTheme.typography.labelMedium, color = Tokens.Overlay.textDim)
-        } else {
-            Text(formatReleaseDate(current), style = MaterialTheme.typography.labelMedium, color = Color.White, maxLines = 1)
-        }
-    }
+    FichaFila(
+        etiqueta = "First played",
+        valor = if (current.isBlank()) "—" else formatReleaseDate(current),
+        onClick = { open = true },
+        trailing = {
+            Icon(
+                Icons.Filled.Event,
+                contentDescription = "First played",
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.size(16.dp),
+            )
+        },
+    )
     if (open) {
         FirstPlayedDialog(
             initial = current,
@@ -719,6 +696,52 @@ private fun DatePartPicker(
     }
 }
 
+/**
+ * Una línea de la ficha: etiqueta a la izquierda en columna de ancho fijo, valor a la derecha.
+ *
+ * El ancho fijo de la etiqueta es lo que hace la ficha: alinea todos los valores en una vertical y
+ * deja recorrerlos de un vistazo, como el reverso de una carátula o una entrada de catálogo. Con la
+ * etiqueta ajustada al texto, cada valor arrancaría en otro lado y no habría columna.
+ */
+@Composable
+private fun FichaFila(
+    etiqueta: String,
+    valor: String,
+    onClick: (() -> Unit)? = null,
+    trailing: (@Composable () -> Unit)? = null,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
+            .padding(vertical = 5.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            etiqueta,
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.width(FICHA_ETIQUETA),
+        )
+        Text(
+            valor,
+            style = MaterialTheme.typography.bodyMedium,
+            color = if (onClick != null && trailing == null) {
+                MaterialTheme.colorScheme.onSurfaceVariant
+            } else {
+                MaterialTheme.colorScheme.onSurface
+            },
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.weight(1f, fill = false),
+        )
+        trailing?.invoke()
+    }
+}
+
+/** Ancho de la columna de etiquetas. "Catalog no." es la más larga y define la medida. */
+private val FICHA_ETIQUETA = 104.dp
+
 @Composable
 private fun MetaChip(text: String, accent: Boolean = false) {
     Text(
@@ -739,23 +762,34 @@ private fun MetaChip(text: String, accent: Boolean = false) {
 /** Pill de toggle (Playing/Backlog) estilizado para verse sobre la carátula del hero. */
 @Composable
 private fun HeroToggle(label: String, icon: ImageVector, selected: Boolean, onClick: () -> Unit) {
-    val bg = if (selected) MaterialTheme.colorScheme.primary else Color.White.copy(alpha = 0.16f)
-    val fg = if (selected) MaterialTheme.colorScheme.onPrimary else Color.White
+    // Eran dos pastillas enormes, una en ámbar sólido: lo más pesado de la pantalla después del
+    // título, para dos interruptores. Contorno cuando está apagado, relleno tenue cuando está
+    // encendido, y del tamaño de un control y no de un titular.
+    val bg = if (selected) MaterialTheme.colorScheme.secondaryContainer else Color.Transparent
+    val fg = if (selected) {
+        MaterialTheme.colorScheme.onSecondaryContainer
+    } else {
+        MaterialTheme.colorScheme.onSurfaceVariant
+    }
     Row(
         modifier = Modifier
-            .clip(Tokens.Shape.pill)
+            .clip(Tokens.Shape.control)
             .background(bg)
+            .then(
+                if (selected) Modifier
+                else Modifier.border(1.dp, MaterialTheme.colorScheme.outlineVariant, Tokens.Shape.control)
+            )
             .clickable(onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = 8.dp),
+            .padding(horizontal = 12.dp, vertical = 7.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         Icon(icon, contentDescription = null, tint = fg, modifier = Modifier.size(16.dp))
         Text(
             label,
-            style = MaterialTheme.typography.labelLarge,
+            style = MaterialTheme.typography.labelMedium,
             color = fg,
-            fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
+            fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal,
         )
     }
 }

@@ -81,8 +81,11 @@ internal fun DiaryEntryCard(
      *  la transcripción de una nota de voz. */
     onEdit: (() -> Unit)? = null,
 ) {
-    Card(modifier = modifier.fillMaxWidth()) {
-        Column(modifier = Modifier.padding(start = 16.dp, end = 4.dp, top = 10.dp, bottom = 14.dp)) {
+    // Entrada sobre el fondo, sin tarjeta: una losa redondeada por nota repite el contenedor que
+    // sacamos de las listas, y acá además compite con la ficha del juego que tiene arriba. La
+    // fecha en ámbar ya separa una entrada de la siguiente.
+    Box(modifier = modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.padding(start = 4.dp, end = 4.dp, top = 10.dp, bottom = 14.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     formatDateTime(entry.createdAt),
