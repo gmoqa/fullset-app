@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -32,7 +33,9 @@ import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.EditNote
+import androidx.compose.material.icons.filled.EditCalendar
 import androidx.compose.material.icons.filled.Event
+import androidx.compose.material.icons.filled.Today
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.Refresh
@@ -106,6 +109,8 @@ fun GameDetailScreen(
     var showDeleteDialog by remember { mutableStateOf(false) }
     // Se ofrece la fecha al marcar el juego como jugando, si todavía no tiene ninguna.
     var askFirstPlayed by remember { mutableStateOf(false) }
+    // Segundo paso, si elige "otro día": el selector de precisión variable.
+    var pickFirstPlayed by remember { mutableStateOf(false) }
     var showAddNote by remember { mutableStateOf(false) }
     // Compartir las notas del juego como JSON (para pegarlas en un LLM, guardarlas, etc.).
     val shareText = rememberTextSharer()
@@ -236,29 +241,50 @@ fun GameDetailScreen(
     }
 
     if (askFirstPlayed) {
-        // Dos botones y no tres: en un teléfono angosto "Not now / Another date / Today" no entra en
-        // una fila, y hoy es la respuesta en la enorme mayoría de los casos. Para cualquier otra
-        // fecha está el chip, en esta misma pantalla.
+        // Misma forma que el alta desde Playing: dos tarjetas cuadradas y Cancel. Los modales de la
+        // app preguntan todos igual, así que la respuesta se lee de un vistazo sin leer texto.
+        //
+        // Como tarjetas entran las dos opciones que **sí** son equivalentes —hoy u otro día—, y
+        // "ahora no" queda donde corresponde: en el Cancel. Con botones de texto en una fila las
+        // tres no entraban en un teléfono angosto y había que sacrificar la fecha a medida.
         AlertDialog(
             onDismissRequest = { askFirstPlayed = false },
             shape = Tokens.Shape.dialog,
             title = { Text("First time playing it?") },
             text = {
-                Text(
-                    "Recording the date puts it on your timeline. If you started it another day, " +
-                        "set it with the date chip below.",
-                )
+                Row(
+                    modifier = Modifier.widthIn(max = Tokens.Size.contentMax),
+                    horizontalArrangement = Arrangement.spacedBy(Tokens.Space.xl),
+                ) {
+                    ChoiceCard(
+                        vector = Icons.Filled.Today,
+                        title = "Today",
+                        subtitle = formatReleaseDate(todayIso()),
+                    ) {
+                        askFirstPlayed = false
+                        vm.setFirstPlayed(gameId, todayIso())
+                    }
+                    ChoiceCard(
+                        vector = Icons.Filled.EditCalendar,
+                        title = "Another day",
+                        subtitle = "Pick it",
+                    ) { askFirstPlayed = false; pickFirstPlayed = true }
+                }
             },
+            // Cancelar deja el dato **vacío**: la fecha nunca se pone sola, porque podés estar
+            // catalogando algo que jugás hace meses.
             confirmButton = {
-                TextButton(onClick = {
-                    // Solo la fecha de hoy, nunca inventada: si dice que no, el dato queda vacío.
-                    vm.setFirstPlayed(gameId, todayIso())
-                    askFirstPlayed = false
-                }) { Text("Started today") }
+                TextButton(onClick = { askFirstPlayed = false }) { Text("Cancel") }
             },
-            dismissButton = {
-                TextButton(onClick = { askFirstPlayed = false }) { Text("Not now") }
-            },
+        )
+    }
+
+    if (pickFirstPlayed) {
+        // El mismo selector de precisión variable del chip: el año alcanza, mes y día son opcionales.
+        FirstPlayedDialog(
+            initial = todayIso(),
+            onDismiss = { pickFirstPlayed = false },
+            onSave = { pickFirstPlayed = false; vm.setFirstPlayed(gameId, it) },
         )
     }
 
