@@ -404,7 +404,7 @@ claves nuevas no rompe nada.
   quedaba de la idea original— es la **fuente por campo y el estado de revisión** por catálogo: eso
   hoy vive en la tabla de procedencia de este documento, no en el dato.
 - **C. Evolución de esquema** — **a medias**: la precisión de fecha está ✅ (`releaseDate` ISO
-  variable, 77% con día exacto), la **confianza por dato no** — hoy no hay forma de distinguir en el
+  variable: 94% de los juegos la tienen, y de esos el 82% con día exacto), la **confianza por dato no** — hoy no hay forma de distinguir en el
   JSON un valor scrapeado de uno verificado, salvo mirando si tiene override.
 - **D. Pipeline de corrección con procedencia** — ✅ overrides con `_source`/`_note`/`_date`;
   `catalog_lint.py` **exige** `_source` y valida slug, campos y formato de fecha; `catalog_report.py`
@@ -416,9 +416,13 @@ claves nuevas no rompe nada.
   consolas —PlayStation, PS2, PS3, GameCube, Dreamcast, Saturn y Sega CD—: 22.526 juegos, el 83%
   del dataset. No es el enriquecedor, es la fuente: libretro publica `metadat/genre` solo de PSP
   entre las PlayStation, y nada de las consolas de disco de Sega.
-- **F. Eje de región** — ✅ **cerrado**: las tres regiones en Sega (8 consolas), PlayStation, PS2,
-  PS3 y GameCube. Si alguna vez se quiere drill-down por país dentro de PAL, el modelo lo soporta (la
-  key del mapa `catalogs` es texto libre); hoy no compensa porque los países son 95% el mismo listado.
+- **F. Eje de región** — **a medias**. Tienen las tres regiones 12 consolas: Sega (8), PlayStation,
+  PS2, PS3 y GameCube. Siguen con **una sola lista NES, Super Nintendo y Nintendo 64** —solo NTSC-U,
+  1.708 juegos—, que es justo donde más pesan los imports japoneses. La SG-1000 no cuenta: salió solo
+  en Japón, así que su única lista es correcta. Faltan 6 catálogos (JP y PAL de esas tres).
+
+  El modelo ya soporta el drill-down por país dentro de PAL (la key del mapa `catalogs` es texto
+  libre); eso sí no compensa hoy, porque los países son 95% el mismo listado.
 
 **El título depende de la región.** Las listas escriben `Título<br />•Alternativo<sup>NA</sup>`, y ese
 `<sup>` dice **en qué mercado se usó el otro nombre**. En un catálogo NTSC-U eso decide el título:
