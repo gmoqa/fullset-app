@@ -35,6 +35,9 @@ jobs:
       - name: Tests del lint
         run: python3 tools/test_catalog_lint.py
 
+      - name: Tests de catalog_common
+        run: python3 tools/test_catalog_common.py
+
       - name: Lint de catálogos
         run: python3 tools/catalog_lint.py
 

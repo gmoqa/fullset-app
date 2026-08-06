@@ -196,6 +196,10 @@ def canonical(entry):
     return {k: entry.get(k, None if k == "year" else "") for k in CANON_KEYS}
 
 
+# Lo que separa el título principal de sus nombres alternativos. `<br>` en cualquiera de sus formas
+# (`<br/>`, `<br />`, `<BR>`) y la viñeta que algunas listas agregan además.
+SEPARADOR_TITULO = re.compile(r"<br\s*/?>|•", re.I)
+
 # Región del catálogo -> cómo la marca el `<sup>` del título alternativo.
 TITLE_SUP = {"NTSC-U": ("NA", "US", "USA"), "NTSC-J": ("JP", "JPN"), "PAL": ("PAL", "EU", "EUR")}
 
@@ -210,18 +214,37 @@ def regional_title(text: str, region: str | None) -> str:
     con el primero no solo pone el nombre equivocado — además duplica, porque el catálogo ya tiene
     el juego bajo su nombre americano y no se reconocen entre sí.
 
+    **El separador no siempre es el `•`.** Las listas de Nintendo y PlayStation escriben
+    `''Título''<br/>''Alternativo''<sup>PAL</sup>`, sin viñeta. Partiendo solo por `•` el alternativo
+    no se separaba y quedaba **pegado al principal**, código incluido: así salieron 109 títulos como
+    `Avatar: The Last AirbenderAvatar: The Legend of AangPAL`. El lint no lo veía porque el slug
+    derivaba correctamente de ese título — solo que el título estaba mal.
+
+    Un código que **no** es de las tres regiones —`FRA`, `AUS`, `GER`— no reemplaza nada: un nombre
+    usado solo en Francia no es el nombre del catálogo PAL, que cubre Europa entera.
+
     Sin `region`, o si ningún alternativo es de la nuestra, vale el principal.
     """
-    partes = text.split("•")
+    partes = SEPARADOR_TITULO.split(text)
     if len(partes) > 1 and region:
         for alt in partes[1:]:
             marca = re.search(r"<sup>\s*([A-Za-z/]+)\s*</sup>|\^([A-Za-z]+)", alt)
             codigo = (marca.group(1) or marca.group(2) or "").upper() if marca else ""
             if codigo in TITLE_SUP.get(region, ()):
-                # La marca sale acá: más adelante `<sup>` cae con el resto de las etiquetas, pero
-                # el `^JP` no es HTML y quedaría pegado al final del nombre.
-                return re.sub(r"<sup>[^<]*</sup>|\^[A-Za-z]+", "", alt)
-    return partes[0]
+                return _sin_marca(alt)
+    # El principal también puede traer marca —`''Mia Hamm Soccer 64''<sup>NA</sup><br/>…`— y hay que
+    # sacársela igual: si no, queda "Mia Hamm Soccer 64NA".
+    return _sin_marca(partes[0])
+
+
+def _sin_marca(texto: str) -> str:
+    """Saca el `<sup>XX</sup>` o `^XX` que marca el mercado.
+
+    Más adelante `<sup>` cae con el resto de las etiquetas HTML, pero el `^JP` no es HTML y quedaría
+    pegado al final del nombre; y para el principal la limpieza tiene que pasar **acá**, porque su
+    marca va antes del `<br>` y no la toca nadie más.
+    """
+    return re.sub(r"<sup>[^<]*</sup>|\^[A-Za-z]+", "", texto)
 
 
 def clean_cell(text: str, region: str | None = None) -> str:

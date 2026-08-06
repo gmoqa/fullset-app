@@ -2,7 +2,11 @@
   {
     "id": "nes",
     "name": "NES",
-    "catalog": "catalogs/nes-usa.json",
+    "catalogs": {
+      "NTSC-U": "catalogs/nes-usa.json",
+      "NTSC-J": "catalogs/nes-jp.json",
+      "PAL": "catalogs/nes-eu.json"
+    },
     "libretroRepo": "Nintendo_-_Nintendo_Entertainment_System",
     "enabled": true,
     "info": {
@@ -21,14 +25,18 @@
     },
     "counts": {
       "NTSC-U": 668,
-      "NTSC-J": 668,
-      "PAL": 668
+      "NTSC-J": 1041,
+      "PAL": 346
     }
   },
   {
     "id": "super-nintendo",
     "name": "Super Nintendo",
-    "catalog": "catalogs/snes-usa.json",
+    "catalogs": {
+      "NTSC-U": "catalogs/snes-usa.json",
+      "NTSC-J": "catalogs/snes-jp.json",
+      "PAL": "catalogs/snes-eu.json"
+    },
     "libretroRepo": "Nintendo_-_Super_Nintendo_Entertainment_System",
     "enabled": true,
     "info": {
@@ -47,14 +55,18 @@
     },
     "counts": {
       "NTSC-U": 744,
-      "NTSC-J": 744,
-      "PAL": 744
+      "NTSC-J": 1284,
+      "PAL": 394
     }
   },
   {
     "id": "nintendo-64",
     "name": "Nintendo 64",
-    "catalog": "catalogs/n64-usa.json",
+    "catalogs": {
+      "NTSC-U": "catalogs/n64-usa.json",
+      "NTSC-J": "catalogs/n64-jp.json",
+      "PAL": "catalogs/n64-eu.json"
+    },
     "libretroRepo": "Nintendo_-_Nintendo_64",
     "enabled": true,
     "info": {
@@ -73,8 +85,8 @@
     },
     "counts": {
       "NTSC-U": 296,
-      "NTSC-J": 296,
-      "PAL": 296
+      "NTSC-J": 194,
+      "PAL": 237
     }
   },
   {
