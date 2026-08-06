@@ -5,10 +5,16 @@ iOS necesita macOS y Xcode), así que todo lo de acá se escribió a ciegas: com
 pero **nunca se ejecutó**. Asumí que hay errores de cinterop esperando.
 
 El dataset creció bastante desde que se escribió esto: **37 catálogos con 26.884 juegos** en 16
-plataformas, **9,4 MB** de assets, que ahora viven en **`data/` en la raíz** y ya no dentro del
-módulo de Android: `project.yml` apunta a `../data/catalogs` y no a `../app/src/main/assets/…`. No
-hay nada que agregar al proyecto —los referencia como `type: folder`, así que los archivos nuevos
-entran solos— pero sí conviene mirar el
+plataformas, **9,3 MB** de assets, que ahora viven en **`data/` en la raíz** y ya no dentro del
+módulo de Android: `project.yml` apunta a `../data/catalogs` y no a `../app/src/main/assets/…`.
+
+**Ojo con esto si venías de una copia anterior:** `data/config/` ya no existe. `platforms.json` se
+mudó a `data/catalogs/platforms.json`, así que `project.yml` declara **dos** carpetas y no tres, y
+`readTextAsset` pide `catalogs/platforms.json`. Si el `.xcodeproj` está generado de antes, regenerarlo
+con `xcodegen`; si no, la app arranca sin ninguna consola y sin un error claro.
+
+Fuera de eso no hay nada que agregar al proyecto —los referencia como `type: folder`, así que los
+archivos nuevos entran solos— pero sí conviene mirar el
 **tiempo del primer arranque**, que es cuando `DiarySeeder` los recorre entero. En Android eso hizo
 falta envolverlo en `NonCancellable` porque el `viewModelScope` se cancelaba al bloquear la pantalla
 y las migraciones quedaban a medias.
@@ -25,7 +31,7 @@ hacer algo, mirá el `actual` de `androidMain` equivalente.
 ```bash
 ./gradlew :shared:compileKotlinIosSimulatorArm64   # ¿compila el .klib?
 ./gradlew :app:assembleDebug                        # Android no se debe romper
-./gradlew :shared:testDebugUnitTest                 # 80 tests, deben seguir verdes
+./gradlew :shared:testDebugUnitTest                 # 84 tests, deben seguir verdes
 cd iosApp && xcodegen generate                      # regenerar el .xcodeproj desde project.yml
 ```
 
@@ -130,8 +136,11 @@ para que restaurar sea un solo camino de código. No inventar un formato distint
 **Archivo:** `shared/src/iosMain/kotlin/com/gmoqa/fullset/MainViewController.kt:33`
 
 Está cableada a `steamGridKey = ""`, así que **en iOS no funciona el buscador de carátulas**. Se usa
-en dos lugares: al agregar un juego de PlayStation 5 (que no tiene catálogo y se resuelve entero por
-búsqueda) y al agregar juegos digitales de cualquier plataforma.
+en un solo lugar: el alta de un juego **digital** desde Playing (título a mano + carátula buscada).
+
+Antes también intervenía en el alta física de la PS5, pero esa consola salió de la grilla de "Add
+game": sin catálogo no hay nada que elegir, así que ahora se carga desde Playing como digital. El
+paso "a mano" de `AddGameScreen` se borró con ella.
 
 En Android la clave sale de `local.properties` → `BuildConfig.STEAMGRIDDB_API_KEY`
 (ver `app/build.gradle.kts:15,34`), que es un mecanismo de AGP y no existe del lado de Xcode.
@@ -195,7 +204,7 @@ Cosas que costaron encontrar en Android y que conviene no re-descubrir:
 
 ## Al terminar
 
-- `./gradlew :app:assembleDebug` y los 80 tests deben seguir verdes: si algo compartido cambió para
+- `./gradlew :app:assembleDebug` y los 84 tests deben seguir verdes: si algo compartido cambió para
   que iOS funcione, Android no se puede romper.
 - Actualizar la tabla de estado de este archivo.
 - `docs/KMP-MIGRATION.md` ya está marcado como documento histórico y remite acá. Si al implementar

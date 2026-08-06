@@ -397,8 +397,12 @@ claves nuevas no rompe nada.
 ## Roadmap (cimientos → calidad)
 
 - **A. Documentar procedencia** — *este documento*. ✅
-- **B. Registro machine-readable** — por catálogo: región, fuentes por campo, builder, overrides,
-  cobertura, estado de revisión. Reporta "confirmado por región". El lint/report lo consumen.
+- **B. Registro machine-readable** — ✅ **el manifest** (`data/catalogs/manifest.json`, ver arriba):
+  por archivo lleva plataforma, cantidad de juegos, tamaño, cobertura por campo y **sha256**, más un
+  `schema` y una `version` derivada del contenido. Lo genera `catalog_manifest.py` y **el lint lo
+  verifica en cada corrida**, diciendo qué archivo cambió. Lo que todavía no está —y es lo que
+  quedaba de la idea original— es la **fuente por campo y el estado de revisión** por catálogo: eso
+  hoy vive en la tabla de procedencia de este documento, no en el dato.
 - **C. Evolución de esquema** — **a medias**: la precisión de fecha está ✅ (`releaseDate` ISO
   variable, 77% con día exacto), la **confianza por dato no** — hoy no hay forma de distinguir en el
   JSON un valor scrapeado de uno verificado, salvo mirando si tiene override.
@@ -408,9 +412,10 @@ claves nuevas no rompe nada.
 - **E. Cerrar huecos** — **Sega cerrado** ✅ (8 consolas × 3 regiones) y **GameCube, PS2 y PS3
   cerrados** ✅. La editora de los catálogos Sega ya no está en 0%: va de 77% (Saturn, Sega CD) a 89%
   (SG-1000), y **`snes-usa` ya tiene builder** (`build_snes_catalog.py`), que era el último catálogo
-  que no se podía regenerar ni auditar. Lo que queda abierto es el **género en 0%** para las cuatro
-  consolas de Sony y GameCube: 21.927 juegos, el 82% del dataset. No es el enriquecedor, es la
-  fuente — libretro publica `metadat/genre` solo de PSP entre las PlayStation.
+  que no se podía regenerar ni auditar. Lo que queda abierto es el **género en 0%** en 7
+  consolas —PlayStation, PS2, PS3, GameCube, Dreamcast, Saturn y Sega CD—: 22.526 juegos, el 83%
+  del dataset. No es el enriquecedor, es la fuente: libretro publica `metadat/genre` solo de PSP
+  entre las PlayStation, y nada de las consolas de disco de Sega.
 - **F. Eje de región** — ✅ **cerrado**: las tres regiones en Sega (8 consolas), PlayStation, PS2,
   PS3 y GameCube. Si alguna vez se quiere drill-down por país dentro de PAL, el modelo lo soporta (la
   key del mapa `catalogs` es texto libre); hoy no compensa porque los países son 95% el mismo listado.

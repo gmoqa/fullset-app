@@ -59,10 +59,19 @@ ofrecer la colección entera convertiría un gesto de dos toques en una búsqued
 en iOS hace falta una Share Extension (ver `docs/IOS-PENDIENTE.md`).
 
 ## Plataformas por configuración
-Se declaran en `data/catalogs/platforms.json`: cada una con `id`, `name`, `libretroRepo` (repo de
-carátulas), `enabled` y sus catálogos. Agregar una consola = una entrada en ese JSON + su catálogo,
-sin tocar código (lo carga `PlatformRegistry`). Las consolas sin catálogo aparecen bloqueadas
-("Soon") o, si son current-gen (PS5), se cargan a mano.
+Se declaran en `data/catalogs/platforms.json`, al lado de los catálogos que describen: cada una con
+`id`, `name`, `libretroRepo` (repo de carátulas), `enabled`, sus catálogos por región y cuántos
+juegos tiene cada uno. Agregar una consola = una entrada en ese JSON + su catálogo, sin tocar código
+(lo carga `PlatformRegistry`).
+
+Las consolas sin catálogo **no aparecen** en el alta de la colección: sin lista no hay nada que
+elegir, así que la PS5 se carga desde Playing como juego digital. Las que están declaradas pero
+todavía sin datos se muestran bloqueadas ("Soon").
+
+**El conteo viene precalculado.** `counts` guarda cuántos juegos tiene cada consola en cada región,
+y lo escribe `tools/platform_counts.py`. Descubrirlo en tiempo de ejecución obligaba a parsear los
+quince catálogos —9,3 MB— en el hilo principal solo para poner "668 games" bajo cada cubo: medido en
+un S22, 50 fotogramas perdidos al abrir la grilla.
 
 **Un catálogo por región.** La consola mapea región → archivo; `catalogFor()` cae a NTSC-U cuando
 esa región no tiene lista propia, y a cualquiera disponible si la consola salió en una sola (la

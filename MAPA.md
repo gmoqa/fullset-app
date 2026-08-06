@@ -41,7 +41,7 @@ Pantallas que se abren **encima** de las secciones:
 | Pantalla | Desde | Qué hace |
 |---|---|---|
 | **Detail** | Tocar cualquier juego | El diario del juego: notas, fotos, voz, estado, primera vez jugado |
-| **Add** | Collection y Playing | Elegir consola → elegir del catálogo. Tres destinos: colección, colección+jugando, wishlist |
+| **Add** | Collection y Playing | Elegir consola —solo las que tienen catálogo— → elegir del catálogo. Tres destinos: colección, colección+jugando, wishlist |
 | **AddDigital** | Playing | Título a mano + carátula buscada en SteamGridDB |
 | **Platform** | Tocar la franja de una consola | Ficha técnica + sus juegos por lanzamiento |
 | **Timeline** | Ícono del reloj en **Playing** | Los juegos por *primera vez jugado*, agrupados por año. **Incluye digitales** |
@@ -86,7 +86,8 @@ Tres fuentes, y la diferencia importa:
    Búsqueda **100% sin conexión**. Es lo que se usa para todo lo retro.
 2. **SteamGridDB** — en vivo, para lo que ningún catálogo retro tiene: juegos modernos, digitales y
    las carátulas de PS3. Requiere clave de API propia.
-3. **A mano** — plataformas sin catálogo (PS5), escribiendo el título.
+3. **A mano** — el título lo escribís vos. Es el camino de los digitales, desde Playing; una consola
+   sin catálogo (la PS5) va por acá y **no aparece** en el alta de la colección.
 
 Los catálogos son **datos versionados** con procedencia por campo y validación semántica; eso es
 territorio de [`docs/CATALOGS.md`](docs/CATALOGS.md) y no se repite acá.
@@ -188,6 +189,9 @@ iosApp/      proyecto Xcode (project.yml, xcodegen)
 ```
 Collection → "Add game" → elegir consola → (selector de región) → elegir del catálogo
   → entra a la colección, marcado según su condición
+
+La grilla muestra solo las consolas con lista. El conteo bajo cada cubo sale de `platforms.json`,
+precalculado: contarlo abriendo los catálogos congelaba la pantalla medio segundo.
 ```
 
 **Agregar algo que estás jugando**
@@ -219,10 +223,11 @@ Playing → ícono del reloj → Timeline, por año de primera vez jugado (inclu
 
 Lo que hoy **no** está, para no buscarlo:
 
-- **Género vacío** en las cuatro consolas de Sony y GameCube: 21.927 juegos, el 82% del dataset. Es
-  la fuente, no el enriquecedor.
-- **iOS incompleto**: cámara, restaurar respaldo, ZIP, transcripción y la clave de SteamGridDB.
-- **Sin CI**: hay 82 tests, un lint con invariantes semánticos y su propio test, y nada corre solo.
+- **Género vacío** en 7 consolas —las tres PlayStation con catálogo, GameCube, Dreamcast, Saturn y
+  Sega CD—: 22.526 juegos, el 83% del dataset. Es la fuente, no el enriquecedor.
+- **iOS incompleto**: cámara, restaurar respaldo, ZIP, transcripción, la clave de SteamGridDB y la
+  Share Extension para recibir fotos. Seis tareas, detalladas en [`docs/IOS-PENDIENTE.md`](docs/IOS-PENDIENTE.md).
+- **Sin CI**: hay 84 tests, un lint con invariantes semánticos y su propio test, y nada corre solo.
 - **Sin fusionar** las colecciones de dos dispositivos.
 - **`first_played` casi sin cargar**, así que el Timeline nace vacío. Cargar la fecha hoy exige
   entrar al detalle de cada juego.
