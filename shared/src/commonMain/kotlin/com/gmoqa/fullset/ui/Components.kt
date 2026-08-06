@@ -1,5 +1,10 @@
 package com.gmoqa.fullset.ui
 
+import androidx.compose.material3.FilledTonalIconButton
+import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -219,6 +224,33 @@ fun CoverThumb(
                 colorFilter = filter,
                 modifier = Modifier.fillMaxSize(),
             )
+        }
+    }
+}
+
+/**
+ * Botón "Add game" de la cabecera. **Uno solo para las tres secciones** que dan de alta —Collection,
+ * Playing y Wishlist—: estaba copiado en cada una, con el comentario duplicado y todo, y así es como
+ * terminan divergiendo.
+ *
+ * En pantalla angosta se queda con el "+": junto al título y la lupa, el texto no entra sin achicar
+ * todo lo demás.
+ */
+@Composable
+fun AddGameButton(onClick: () -> Unit, description: String = "Add game", label: String = "Add game") {
+    if (isCompactWidth()) {
+        FilledTonalIconButton(onClick = onClick) {
+            Icon(Icons.Filled.Add, contentDescription = description)
+        }
+    } else {
+        FilledTonalButton(
+            onClick = onClick,
+            shape = Tokens.Shape.control,
+            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
+        ) {
+            Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+            Spacer(Modifier.width(6.dp))
+            Text(label)
         }
     }
 }

@@ -33,7 +33,7 @@ Barra inferior de 5, o de 3 según el modo (ver §6).
 | **Collection** | Tu colección **física**, en estanterías por consola | Botón directo al catálogo — acá siempre es física |
 | **Backlog** | Lo pendiente por jugar (`games.backlog`) | No se agrega desde acá; se marca en el detalle |
 | **Playing** | Lo que estás jugando (`games.playing`), en cards anchas | Modal: **física** (del catálogo) o **digital** (SteamGridDB) |
-| **Wishlist** | Lo que querés conseguir | Se elige del catálogo; dedup por plataforma+juego |
+| **Wishlist** | Lo que querés conseguir | Mismo botón que las otras; vaciarla vive en el menú "⋮" |
 | **Settings** | Preferencias, respaldo, créditos | — |
 
 Pantallas que se abren **encima** de las secciones:
@@ -57,6 +57,8 @@ Todo esto vive en **Detail** salvo donde se aclare.
 - Marcar/desmarcar *playing* y *backlog*.
 - **Condición** (solo físicos): `LOOSE` · `LOOSE_MANUAL` · `BOXED` · `COMPLETE`. Se ve como punto de
   color en Collection.
+- **Región y catalog number** se muestran como chips junto al año: son la identidad de *esa* copia,
+  no un detalle. Dos ediciones del mismo juego se veían idénticas en pantalla.
 - **Primera vez jugado**: fecha ISO de precisión variable (`1994`, `1994-06`, `1994-06-08`). Es lo
   que alimenta el Timeline. Al marcar un juego como *playing*, si todavía no tiene fecha la app
   **ofrece la de hoy** — un toque. Nunca la pone sola: si decís que no, el dato queda vacío.

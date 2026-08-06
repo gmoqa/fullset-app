@@ -440,6 +440,11 @@ private fun HeroHeader(
                         verticalArrangement = Arrangement.spacedBy(6.dp),
                     ) {
                         game?.releaseYear?.let { MetaChip(it.toString()) }
+                        // La región va junto al año y antes que el resto porque es **identidad**,
+                        // no un dato más: el mismo juego es otro producto en cada mercado, con otro
+                        // título, otra fecha y otro catalog number. Sin esto, dos copias del mismo
+                        // juego se ven idénticas en pantalla y no hay forma de saber cuál registraste.
+                        game?.region?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
                         game?.publisher?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
                         game?.genre?.takeIf { it.isNotBlank() }?.let { MetaChip(it) }
                         // Condición editable: tocá para elegir loose/boxed/complete; el punto de

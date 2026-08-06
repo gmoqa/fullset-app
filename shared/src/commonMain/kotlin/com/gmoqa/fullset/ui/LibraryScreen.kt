@@ -109,25 +109,7 @@ fun LibraryScreen(
                             Icon(Icons.Filled.Search, contentDescription = "Search collection")
                         }
                     }
-                    // En pantallas angostas el botón se queda solo con el "+": junto al título y la
-                    // lupa, el texto no entra sin achicar todo lo demás.
-                    // En pantallas angostas el botón se queda solo con el "+": junto al título y
-                    // la lupa, el texto no entra sin achicar todo lo demás.
-                    if (isCompactWidth()) {
-                        FilledTonalIconButton(onClick = onAddPhysical) {
-                            Icon(Icons.Filled.Add, contentDescription = "Add game")
-                        }
-                    } else {
-                        FilledTonalButton(
-                            onClick = onAddPhysical,
-                            shape = Tokens.Shape.control,
-                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
-                        ) {
-                            Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
-                            Spacer(Modifier.width(6.dp))
-                            Text("Add game")
-                        }
-                    }
+                    AddGameButton(onClick = onAddPhysical)
                 },
             )
         }

@@ -21,7 +21,10 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -48,22 +51,33 @@ fun WishlistScreen(
     onClear: () -> Unit,
 ) {
     var showClearDialog by remember { mutableStateOf(false) }
+    var menuAbierto by remember { mutableStateOf(false) }
 
-    Scaffold(
-        contentWindowInsets = WindowInsets(0, 0, 0, 0),
-        floatingActionButton = {
-            FloatingActionButton(onClick = onAddWishlist) {
-                Icon(Icons.Filled.Add, contentDescription = "Add to wishlist")
-            }
-        },
-    ) { _ ->
+    Scaffold(contentWindowInsets = WindowInsets(0, 0, 0, 0)) { _ ->
         Column(modifier = Modifier.fillMaxSize()) {
             ScreenHeader(
                 title = "Wishlist",
                 subtitle = if (items.isEmpty()) null else "${items.size} wanted",
-                trailing = if (items.isNotEmpty()) {
-                    { TextButton(onClick = { showClearDialog = true }) { Text("Clear") } }
-                } else null,
+                trailing = {
+                    // "Clear" **borra la lista entera** y estaba justo donde Collection y Playing
+                    // ponen "Add game": venías de otra pestaña con la memoria muscular puesta ahí y
+                    // el toque de agregar te vaciaba la wishlist. Ahora el alta está en su lugar de
+                    // siempre y lo destructivo queda un toque más adentro, en el menú.
+                    if (items.isNotEmpty()) {
+                        Box {
+                            IconButton(onClick = { menuAbierto = true }) {
+                                Icon(Icons.Filled.MoreVert, contentDescription = "More")
+                            }
+                            DropdownMenu(expanded = menuAbierto, onDismissRequest = { menuAbierto = false }) {
+                                DropdownMenuItem(
+                                    text = { Text("Clear wishlist") },
+                                    onClick = { menuAbierto = false; showClearDialog = true },
+                                )
+                            }
+                        }
+                    }
+                    AddGameButton(onClick = onAddWishlist, description = "Add to wishlist")
+                },
             )
 
             if (items.isEmpty()) {

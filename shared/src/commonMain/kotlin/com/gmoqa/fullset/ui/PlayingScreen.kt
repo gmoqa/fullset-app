@@ -132,23 +132,7 @@ private fun AddPlayingButton(
     // Sin colección que llevar, la única alta posible es la digital: se dispara sola. Es el mismo
     // criterio de `PhotoSourceButton` cuando la plataforma no puede sacar fotos.
     val alTocar = { if (askGameType) open = true else onAddDigital() }
-    // Mismo botón que en Collection: es la misma acción y tiene que verse igual. En pantallas
-    // angostas se queda con el "+", que es lo que hace allá cuando el texto no entra.
-    if (isCompactWidth()) {
-        FilledTonalIconButton(onClick = alTocar) {
-            Icon(Icons.Filled.Add, contentDescription = "Add game")
-        }
-    } else {
-        FilledTonalButton(
-            onClick = alTocar,
-            shape = Tokens.Shape.control,
-            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp),
-        ) {
-            Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
-            Spacer(Modifier.width(6.dp))
-            Text("Add game")
-        }
-    }
+    AddGameButton(onClick = alTocar)
     if (open) {
         AlertDialog(
             onDismissRequest = { open = false },
