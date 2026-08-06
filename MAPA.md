@@ -227,7 +227,10 @@ Lo que hoy **no** está, para no buscarlo:
   Sega CD—: 22.526 juegos, el 83% del dataset. Es la fuente, no el enriquecedor.
 - **iOS incompleto**: cámara, restaurar respaldo, ZIP, transcripción, la clave de SteamGridDB y la
   Share Extension para recibir fotos. Seis tareas, detalladas en [`docs/IOS-PENDIENTE.md`](docs/IOS-PENDIENTE.md).
-- **Sin CI**: hay 84 tests, un lint con invariantes semánticos y su propio test, y nada corre solo.
+- **CI parcial**: `.github/workflows/ci.yml` corre en cada push los 84 tests, la compilación de
+  Kotlin y el lint de catálogos con sus 12 casos. **No arma el APK**: eso dispara la compilación de
+  whisper.cpp por CMake, así que una regresión en `app/src/main/cpp/` o en los recursos de Android
+  no se detecta sola.
 - **Sin fusionar** las colecciones de dos dispositivos.
 - **`first_played` casi sin cargar**, así que el Timeline nace vacío. Cargar la fecha hoy exige
   entrar al detalle de cada juego.

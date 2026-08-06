@@ -1,0 +1,76 @@
+# Corre solo lo que ya se corría a mano. Esta sesión el lint atajó dos defectos reales —un archivo
+# que no era catálogo reventando el recorrido, y un conteo que había quedado viejo— y los dos se
+# encontraron porque alguien se acordó de correrlo. Esto es para no depender de eso.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Si se pushea dos veces seguidas, la corrida vieja no tiene por qué terminar.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  datos:
+    name: Datos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Los tres primeros son segundos y dicen exactamente qué se desincronizó; el lint completo
+      # los repite, pero acá cada uno falla con su propio nombre y se ve de un vistazo cuál fue.
+      - name: Manifest al día
+        run: python3 tools/catalog_manifest.py --check
+
+      - name: Conteos por consola al día
+        run: python3 tools/platform_counts.py --check
+
+      - name: Tests del lint
+        run: python3 tools/test_catalog_lint.py
+
+      - name: Lint de catálogos
+        run: python3 tools/catalog_lint.py
+
+  app:
+    name: App
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # jvmTarget del proyecto es 17 (app y shared).
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      # Acepta las licencias del SDK: sin esto Gradle se planta pidiéndolas y no hay quién responda.
+      - uses: android-actions/setup-android@v3
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Tests
+        run: ./gradlew :shared:testDebugUnitTest
+
+      # `compileDebugKotlin` y no `assembleDebug` a propósito: armar el APK dispara la compilación
+      # de whisper.cpp por CMake, que son diez minutos para cubrir un módulo nativo que casi nunca
+      # cambia. Esto valida todo el Kotlin, incluido `:app`, en una fracción del tiempo.
+      #
+      # El hueco que queda: una regresión en `app/src/main/cpp/` o en los recursos de Android no se
+      # detecta acá. Si se toca whisper, correr `./gradlew :app:assembleDebug` a mano.
+      - name: Compilar Kotlin
+        run: ./gradlew :app:compileDebugKotlin
+
+      - name: Reportes de tests
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reportes-de-tests
+          path: shared/build/reports/tests/
+          retention-days: 7
