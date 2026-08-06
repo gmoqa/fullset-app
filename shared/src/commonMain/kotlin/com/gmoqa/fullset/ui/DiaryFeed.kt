@@ -21,6 +21,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -191,11 +192,10 @@ internal fun DiaryComposer(
     cameraAvailable: Boolean,
     modifier: Modifier = Modifier,
 ) {
-    Surface(
-        modifier = modifier.fillMaxWidth(),
-        color = MaterialTheme.colorScheme.surfaceContainerHigh,
-        tonalElevation = 3.dp,
-    ) {
+    // Mismo criterio que la barra inferior: filete y fondo de página, no una superficie elevada
+    // de otro color. Dos bloques grises apilados al pie competían entre sí.
+    Column(modifier = modifier.fillMaxWidth()) {
+        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -208,8 +208,10 @@ internal fun DiaryComposer(
             Box(
                 modifier = Modifier
                     .weight(1f)
-                    .clip(Tokens.Shape.pill)
-                    .background(MaterialTheme.colorScheme.surface)
+                    // 12dp, el mismo radio que los botones y los menús. La pastilla completa era
+                    // el único control de la app que seguía en cápsula.
+                    .clip(Tokens.Shape.control)
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
                     .clickable(onClick = onWrite)
                     .padding(horizontal = 16.dp, vertical = 12.dp),
             ) {

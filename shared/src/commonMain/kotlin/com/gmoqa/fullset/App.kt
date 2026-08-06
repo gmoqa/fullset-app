@@ -9,6 +9,8 @@ import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
+import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
@@ -21,6 +23,9 @@ import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.NavigationBarItemDefaults
+import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
@@ -471,16 +476,33 @@ private fun HomeContent(
 
     Scaffold(
         bottomBar = {
-            NavigationBar {
-                tabs.forEachIndexed { index, item ->
-                    NavigationBarItem(
-                        selected = pagerState.currentPage == index,
-                        onClick = { scope.launch { pagerState.animateScrollToPage(index) } },
-                        // El nombre va siempre como descripción accesible, se muestre o no.
-                        icon = { item.icon(item.label) },
-                        // En pantallas angostas, solo iconos: cinco etiquetas no entran sin apretarse.
-                        label = if (compact) null else ({ Text(item.label) }),
-                    )
+            Column {
+                // Filete en vez de una superficie más clara: la barra se separa de la página con
+                // una línea, no con un bloque de otro color. Es lo mismo que hacen las listas.
+                HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
+                NavigationBar(
+                    containerColor = MaterialTheme.colorScheme.background,
+                    tonalElevation = 0.dp,
+                ) {
+                    tabs.forEachIndexed { index, item ->
+                        NavigationBarItem(
+                            selected = pagerState.currentPage == index,
+                            onClick = { scope.launch { pagerState.animateScrollToPage(index) } },
+                            // El nombre va siempre como descripción accesible, se muestre o no.
+                            icon = { item.icon(item.label) },
+                            // En pantallas angostas, solo iconos: cinco etiquetas no entran sin apretarse.
+                            label = if (compact) null else ({ Text(item.label) }),
+                            // Sin la pastilla rellena detrás del ícono activo. Es la firma de
+                            // Material You y fecha la app en su año; el estado activo se dice con
+                            // el color, que es como se viene diciendo desde que existen las barras
+                            // de pestañas.
+                            colors = NavigationBarItemDefaults.colors(
+                                indicatorColor = Color.Transparent,
+                                selectedIconColor = MaterialTheme.colorScheme.primary,
+                                selectedTextColor = MaterialTheme.colorScheme.primary,
+                            ),
+                        )
+                    }
                 }
             }
         },
