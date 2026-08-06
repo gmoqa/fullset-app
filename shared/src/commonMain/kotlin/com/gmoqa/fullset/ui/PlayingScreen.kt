@@ -74,6 +74,8 @@ fun PlayingScreen(
     onOpenGame: (Long) -> Unit,
     onAddDigital: () -> Unit,
 ) {
+    val visorCaratula = rememberCoverViewer()
+
     Column(modifier = Modifier.fillMaxSize()) {
         ScreenHeader(
             title = "Playing",
@@ -106,10 +108,18 @@ fun PlayingScreen(
                 verticalArrangement = Arrangement.spacedBy(16.dp),
             ) {
                 items(games, key = { it.id }) { game ->
-                    PlayingCard(game = game, onClick = { onOpenGame(game.id) })
+                    PlayingCard(
+                        game = game,
+                        onClick = { onOpenGame(game.id) },
+                        onOpenCover = { visorCaratula.show(game.coverModel, game.name) },
+                    )
                 }
             }
         }
+    }
+
+    if (visorCaratula.model != null) {
+        CoverViewer(visorCaratula.model, visorCaratula.description) { visorCaratula.dismiss() }
     }
 }
 
@@ -164,7 +174,7 @@ private fun AddPlayingButton(
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun PlayingCard(game: Game, onClick: () -> Unit) {
+private fun PlayingCard(game: Game, onClick: () -> Unit, onOpenCover: () -> Unit) {
     val model = game.coverModel
     Box(
         modifier = Modifier
@@ -263,7 +273,9 @@ private fun PlayingCard(game: Game, onClick: () -> Unit) {
                         contentDescription = game.name,
                         contentScale = ContentScale.Fit,
                         alignment = Alignment.CenterEnd,
-                        modifier = Modifier.fillMaxSize(),
+                        // Clickable propio: gana sobre el de la card entera, así que tocar la tapa
+                        // la amplía en vez de abrir el juego.
+                        modifier = Modifier.fillMaxSize().clickable(onClick = onOpenCover),
                     )
                 } else {
                     Box(

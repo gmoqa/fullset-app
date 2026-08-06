@@ -74,6 +74,9 @@ Todo esto vive en **Detail** salvo donde se aclare.
 **Carátula**
 - Automática del catálogo, o propia (foto/galería), o buscada en SteamGridDB.
 - La propia **gana** sobre la automática al mostrar.
+- **Tocarla la abre a pantalla completa**, con pellizco y doble toque para acercar (hasta 5×). En el
+  estante mide 140dp: alcanza para reconocer el juego, no para leer el catalog number del lomo ni el
+  sello. Anda desde el detalle y desde las cards de Playing.
 
 **Salidas**
 - Compartir las notas como texto.

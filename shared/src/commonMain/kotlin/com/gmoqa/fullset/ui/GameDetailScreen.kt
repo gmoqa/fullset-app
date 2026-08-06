@@ -107,6 +107,9 @@ fun GameDetailScreen(
     val installedModel by vm.installedModel.collectAsStateWithLifecycle()
 
     var showDeleteDialog by remember { mutableStateOf(false) }
+    // Tocar la carátula la abre a pantalla completa: en el hero mide unos 140dp y no se lee
+    // el sello ni el catalog number del lomo, que es lo que se quiere mirar de una copia física.
+    val visorCaratula = rememberCoverViewer()
     // Se ofrece la fecha al marcar el juego como jugando, si todavía no tiene ninguna.
     var askFirstPlayed by remember { mutableStateOf(false) }
     // Segundo paso, si elige "otro día": el selector de precisión variable.
@@ -147,6 +150,7 @@ fun GameDetailScreen(
                 onResetCover = { vm.clearCustomCover(gameId) },
                 onShareText = { shareText(vm.gameNotesText(gameId)) },
                 onShareJson = { shareText(vm.gameNotesJson(gameId)) },
+                onOpenCover = { visorCaratula.show(game?.coverModel, game?.name) },
                 onSetCondition = { vm.setCondition(gameId, it?.key ?: "") },
                 onSetFirstPlayed = { vm.setFirstPlayed(gameId, it) },
             )
@@ -240,6 +244,10 @@ fun GameDetailScreen(
         )
     }
 
+    if (visorCaratula.model != null) {
+        CoverViewer(visorCaratula.model, visorCaratula.description) { visorCaratula.dismiss() }
+    }
+
     if (askFirstPlayed) {
         // Misma forma que el alta desde Playing: dos tarjetas cuadradas y Cancel. Los modales de la
         // app preguntan todos igual, así que la respuesta se lee de un vistazo sin leer texto.
@@ -324,6 +332,7 @@ private fun HeroHeader(
     onShareJson: () -> Unit,
     onSetCondition: (Condition?) -> Unit,
     onSetFirstPlayed: (String) -> Unit,
+    onOpenCover: () -> Unit,
 ) {
     var shareMenu by remember { mutableStateOf(false) }
     val model = game?.coverModel
@@ -483,7 +492,7 @@ private fun HeroHeader(
                             contentDescription = game?.name,
                             contentScale = ContentScale.Fit,
                             alignment = Alignment.TopEnd,
-                            modifier = Modifier.fillMaxSize(),
+                            modifier = Modifier.fillMaxSize().clickable(onClick = onOpenCover),
                         )
                     } else {
                         Box(
