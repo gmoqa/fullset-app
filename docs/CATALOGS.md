@@ -485,6 +485,6 @@ Tres decisiones que no se ven en el archivo:
   campos del catálogo tienen valor por defecto.
 - **`version`** sale del hash de los hashes, no de un timestamp. Correr el generador dos veces sin
   tocar nada no ensucia el repo, y el diff sigue reflejando avance real.
-- **`config/platforms.json` está en el manifest** aunque no sea un catálogo. Lleva los conteos por
+- **`platforms.json` está en el manifest** aunque no sea un catálogo. Lleva los conteos por
   consola, que son una copia del tamaño de cada catálogo: si viajaran por separado, un día los
   catálogos cambiarían y los conteos no, y la app mostraría un número que no corresponde.

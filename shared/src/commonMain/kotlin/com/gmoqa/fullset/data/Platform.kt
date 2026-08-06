@@ -2,7 +2,7 @@ package com.gmoqa.fullset.data
 
 /**
  * Plataforma configurable: se define por datos, no por código. Para agregar una consola basta con
- * una entrada en `config/platforms.json` + su JSON de catálogo en `assets/catalogs/`. La carga
+ * una entrada en `catalogs/platforms.json` + su JSON de catálogo al lado. La carga
  * (que lee assets) vive en `PlatformRegistry`, del lado de cada plataforma.
  */
 data class Platform(
@@ -55,7 +55,7 @@ data class Platform(
 }
 
 /**
- * Ficha técnica de una consola (bloque `info` en `config/platforms.json`). Todos los campos son
+ * Ficha técnica de una consola (bloque `info` en `catalogs/platforms.json`). Todos los campos son
  * opcionales: se muestra solo lo presente. [released] mapea región → año, con las mismas keys que
  * [RegionFilter] (`ntsc-j`/`ntsc`/`pal`).
  */

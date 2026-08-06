@@ -3,7 +3,7 @@ package com.gmoqa.fullset.data
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-/** DTO de `config/platforms.json`. */
+/** DTO de `catalogs/platforms.json`. */
 @Serializable
 private data class PlatformDto(
     val id: String = "",
@@ -31,7 +31,7 @@ private data class PlatformInfoDto(
 )
 
 /**
- * Carga y consulta las plataformas declaradas en `config/platforms.json`. Multiplataforma.
+ * Carga y consulta las plataformas declaradas en `catalogs/platforms.json`. Multiplataforma.
  *
  * [readAsset] es inyectable para tests (leer los assets del repo desde la JVM); por defecto usa la
  * frontera `expect/actual` real de cada plataforma.
@@ -39,7 +39,7 @@ private data class PlatformInfoDto(
 class PlatformRegistry(private val readAsset: (String) -> String? = ::readTextAsset) {
 
     private val platforms: List<Platform> by lazy {
-        val text = readAsset("config/platforms.json") ?: return@lazy emptyList()
+        val text = readAsset("catalogs/platforms.json") ?: return@lazy emptyList()
         AppJson.decodeFromString<List<PlatformDto>>(text).map { dto ->
             // Soporta ambos formatos: el mapa `catalogs` nuevo, o el legacy `catalog` (= NTSC-U).
             val cats = dto.catalogs.ifEmpty {

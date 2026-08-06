@@ -24,7 +24,7 @@ import sys
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-CONFIG = RAIZ / "data" / "config" / "platforms.json"
+CONFIG = RAIZ / "data" / "catalogs" / "platforms.json"
 DATOS = RAIZ / "data"
 
 # Las mismas etiquetas que `RegionFilter.label` en Kotlin. El orden es el de la app.

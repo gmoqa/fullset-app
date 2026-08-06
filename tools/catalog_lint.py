@@ -31,7 +31,7 @@ Uso:  python3 tools/catalog_lint.py
 import json, os, re, sys, urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from catalog_common import slug as slugify  # noqa: E402
+from catalog_common import NO_SON_CATALOGOS, slug as slugify  # noqa: E402
 
 CAT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs")
 
@@ -91,7 +91,7 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 # americano y seriales del disco promocional. Una fecha de otra región es estructuralmente
 # impecable. Lo que sigue valida el **significado**, que es donde vivieron todos esos defectos.
 
-PLATFORMS = os.path.join(os.path.dirname(__file__), "..", "data", "config", "platforms.json")
+PLATFORMS = os.path.join(CAT_DIR, "platforms.json")
 BASELINE = os.path.join(os.path.dirname(__file__), "baseline-semantica.json")
 MANIFEST_PATH = os.path.join(CAT_DIR, "manifest.json")
 
@@ -221,8 +221,8 @@ def lint_conteos(plataformas):
 
 
 def main():
-    # manifest.json no es un catálogo de juegos: se saltea.
-    files = sorted(f for f in os.listdir(CAT_DIR) if f.endswith(".json") and f != "manifest.json")
+    files = sorted(f for f in os.listdir(CAT_DIR)
+                   if f.endswith(".json") and f not in NO_SON_CATALOGOS)
     plats = {p["name"]: p for p in json.load(open(PLATFORMS, encoding="utf-8"))}
     base = json.load(open(BASELINE, encoding="utf-8")) if os.path.exists(BASELINE) else {}
     actual = {}

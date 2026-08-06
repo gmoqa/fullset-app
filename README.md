@@ -59,7 +59,7 @@ ofrecer la colección entera convertiría un gesto de dos toques en una búsqued
 en iOS hace falta una Share Extension (ver `docs/IOS-PENDIENTE.md`).
 
 ## Plataformas por configuración
-Se declaran en `data/config/platforms.json`: cada una con `id`, `name`, `libretroRepo` (repo de
+Se declaran en `data/catalogs/platforms.json`: cada una con `id`, `name`, `libretroRepo` (repo de
 carátulas), `enabled` y sus catálogos. Agregar una consola = una entrada en ese JSON + su catálogo,
 sin tocar código (lo carga `PlatformRegistry`). Las consolas sin catálogo aparecen bloqueadas
 ("Soon") o, si son current-gen (PS5), se cargan a mano.

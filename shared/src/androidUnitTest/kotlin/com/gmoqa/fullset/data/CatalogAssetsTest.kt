@@ -23,7 +23,7 @@ class CatalogAssetsTest {
     private val catalog = GameCatalog(readAsset)
 
     private fun platforms() = registry.all().also {
-        assertTrue(it.isNotEmpty(), "no se pudo leer config/platforms.json desde ${assets.absolutePath}")
+        assertTrue(it.isNotEmpty(), "no se pudo leer catalogs/platforms.json desde ${assets.absolutePath}")
     }
 
     @Test

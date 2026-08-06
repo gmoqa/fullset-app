@@ -338,3 +338,10 @@ def normalize(out, dat_name, repo):
         if not str(e.get("coverUrl", "")).strip():
             e["coverUrl"] = covers.get(core(e["title"]), "")
     write_catalog(out, entries)
+
+
+# Archivos que viven en `data/catalogs/` pero **no son catálogos**: no son una lista de juegos y
+# recorrerlos como tal revienta (`data[0]["platform"]`). Está acá y no en cada script porque el
+# lint, el generador del manifest y los builders recorren el mismo directorio; con la definición
+# repetida, agregar un archivo nuevo rompía el que se hubiera olvidado de actualizar.
+NO_SON_CATALOGOS = {"manifest.json", "platforms.json"}

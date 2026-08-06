@@ -19,7 +19,7 @@ private data class CatalogEntryDto(
 
 /**
  * Lee los catálogos JSON empaquetados en assets y permite buscarlos. Las plataformas se declaran en
- * `config/platforms.json` (ver [PlatformRegistry]); agregar una consola es solo config + su JSON de
+ * `catalogs/platforms.json` (ver [PlatformRegistry]); agregar una consola es solo config + su JSON de
  * catálogo. Multiplataforma: los assets se leen con [readTextAsset] (expect/actual), inyectable para
  * poder testear el parseo real contra los catálogos del repo.
  */

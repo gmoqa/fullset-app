@@ -167,7 +167,7 @@ dispositivos — decisión explícita de la v1.
              androidMain → actual de cada frontera
              iosMain     → actual de cada frontera (incompleto, ver docs/IOS-PENDIENTE.md)
 :app         MainActivity, FullsetApp, whisper (JNI/NDK)
-data/        catalogs/ · config/platforms.json · seed/   ← compartido por Android e iOS
+data/        catalogs/ (los 37 JSON + platforms.json + manifest.json) · seed/   ← Android e iOS
 tools/       generadores y enriquecedores de catálogo (Python) + lint
 iosApp/      proyecto Xcode (project.yml, xcodegen)
 ```

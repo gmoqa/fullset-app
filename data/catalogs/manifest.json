@@ -3,7 +3,7 @@
   "version": "616199313342",
   "files": [
     {
-      "path": "config/platforms.json",
+      "path": "catalogs/platforms.json",
       "bytes": 12019,
       "sha256": "c974515793566b22e6ac49ebfc6e489c58d70100fb137d7f3d0b1fbf3eb9ad0f"
     },

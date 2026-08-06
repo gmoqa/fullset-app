@@ -18,10 +18,10 @@ Qué agrega respecto del anterior, y por qué:
 - **`version`.** Sale del hash de los hashes, no de un timestamp. Así el diff sigue reflejando avance
   real —criterio que ya traía el generador viejo— y correr esto dos veces sin tocar nada no ensucia
   el repo.
-- **`config/platforms.json` entra al manifest.** No es un catálogo, pero lleva los conteos por
-  consola, que son una copia del tamaño de cada catálogo. Si viajaran por separado, un día los
-  catálogos se actualizarían y los conteos no, y la app mostraría un número que no corresponde.
-  Van juntos o no van.
+- **`platforms.json` entra al manifest.** No es un catálogo, pero lleva los conteos por consola,
+  que son una copia del tamaño de cada catálogo. Si viajaran por separado, un día los catálogos se
+  actualizarían y los conteos no, y la app mostraría un número que no corresponde. Van juntos o no
+  van — y por eso además viven en la misma carpeta.
 """
 
 from __future__ import annotations
@@ -31,6 +31,9 @@ import hashlib
 import json
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from catalog_common import NO_SON_CATALOGOS  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 DATOS = RAIZ / "data"
@@ -62,15 +65,17 @@ def construir() -> dict:
 
     # El config va primero y a propósito: es el que decide qué consolas existen, así que quien
     # sincronice tiene que aplicarlo antes que los catálogos que describe.
-    config = DATOS / "config" / "platforms.json"
+    config = CATALOGOS / "platforms.json"
     archivos.append({
-        "path": "config/platforms.json",
+        "path": f"catalogs/{config.name}",
         "bytes": config.stat().st_size,
         "sha256": sha256(config),
     })
 
     for ruta in sorted(CATALOGOS.glob("*.json")):
-        if ruta.name == "manifest.json":
+        # `manifest.json` es este archivo y `platforms.json` ya entró arriba; ninguno es una
+        # lista de juegos, así que parsearlos como catálogo reventaría en `filas[0]["platform"]`.
+        if ruta.name in NO_SON_CATALOGOS:
             continue
         filas = json.loads(ruta.read_text(encoding="utf-8"))
         archivos.append({
