@@ -416,10 +416,9 @@ claves nuevas no rompe nada.
   consolas —PlayStation, PS2, PS3, GameCube, Dreamcast, Saturn y Sega CD—: 22.526 juegos, el 83%
   del dataset. No es el enriquecedor, es la fuente: libretro publica `metadat/genre` solo de PSP
   entre las PlayStation, y nada de las consolas de disco de Sega.
-- **F. Eje de región** — **a medias**. Tienen las tres regiones 12 consolas: Sega (8), PlayStation,
-  PS2, PS3 y GameCube. Siguen con **una sola lista NES, Super Nintendo y Nintendo 64** —solo NTSC-U,
-  1.708 juegos—, que es justo donde más pesan los imports japoneses. La SG-1000 no cuenta: salió solo
-  en Japón, así que su única lista es correcta. Faltan 6 catálogos (JP y PAL de esas tres).
+- **F. Eje de región** — ✅ **cerrado**. Las 14 consolas con catálogo multirregional tienen las tres:
+  Sega (8), PlayStation, PS2, PS3, GameCube y, desde los seis catálogos nuevos, NES, Super Nintendo
+  y Nintendo 64. La SG-1000 queda con una sola a propósito: salió solo en Japón. Son 30.380 juegos.
 
   El modelo ya soporta el drill-down por país dentro de PAL (la key del mapa `catalogs` es texto
   libre); eso sí no compensa hoy, porque los países son 95% el mismo listado.
