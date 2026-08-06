@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "56d8e4fb7b15",
+  "version": "23b79e12bd96",
   "files": [
     {
       "path": "catalogs/platforms.json",
@@ -128,8 +128,8 @@
       "path": "catalogs/gamecube-eu.json",
       "platform": "GameCube",
       "games": 433,
-      "bytes": 169931,
-      "sha256": "74cb51d4a1c50c4c4a12cd3af202b8dff392d87f6524fd9812307b4a00007794",
+      "bytes": 168417,
+      "sha256": "8ebe4040c37b836952d92e9a700cd4aaff96fa728979ffeb0f29a30ad26d91ec",
       "coverage": {
         "year": 100,
         "publisher": 100,
@@ -141,8 +141,8 @@
       "path": "catalogs/gamecube-jp.json",
       "platform": "GameCube",
       "games": 274,
-      "bytes": 100459,
-      "sha256": "f4f540a7d83ddcaa7b344bca4748b49ed77d252cad1be4555f812c3953b0fab7",
+      "bytes": 99460,
+      "sha256": "6d83b6c36aef5346c37f823025fa84d705ba9c8867d1769841555b1a37483d08",
       "coverage": {
         "year": 100,
         "publisher": 100,
@@ -154,8 +154,8 @@
       "path": "catalogs/gamecube-usa.json",
       "platform": "GameCube",
       "games": 537,
-      "bytes": 203707,
-      "sha256": "2e4fbbea9c33c3824c0084ea77fb1026dc1f20a76f63250092ebea82bae3fdad",
+      "bytes": 202116,
+      "sha256": "ed41f7724d7db3d84246c0c7ae814491792ef0cee3d2a806e2d7045ffd8fd854",
       "coverage": {
         "year": 100,
         "publisher": 100,
@@ -401,8 +401,8 @@
       "path": "catalogs/psx-eu.json",
       "platform": "PlayStation",
       "games": 1286,
-      "bytes": 480025,
-      "sha256": "d04ca1fd3c2ef830b3ef078220ecb3e3a5df000925d113907322cb77c0a0ea05",
+      "bytes": 478771,
+      "sha256": "94eb408eb21aaa3b3af32ec53ef43ee64245515caa4f34fc02fc70a6ce6d4be0",
       "coverage": {
         "year": 100,
         "publisher": 99,
@@ -414,8 +414,8 @@
       "path": "catalogs/psx-jp.json",
       "platform": "PlayStation",
       "games": 3148,
-      "bytes": 1112643,
-      "sha256": "3577b924dce221fd791505146d46e0312ce5b1f234ee718648ac1180e8451e19",
+      "bytes": 1113954,
+      "sha256": "7319592265e72f6183b62682600e31c080eb05422a5cd3a6965a7f2ce604ab4a",
       "coverage": {
         "year": 100,
         "publisher": 98,
