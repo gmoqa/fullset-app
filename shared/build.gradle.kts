@@ -1,3 +1,5 @@
+import java.util.Properties
+
 // Módulo multiplataforma: dominio y lógica portable, compartida entre Android e iOS.
 // La UI y las fronteras de plataforma se irán migrando acá con expect/actual.
 plugins {
@@ -14,6 +16,28 @@ sqldelight {
         create("FullsetDatabase") {
             packageName.set("com.gmoqa.fullset.db")
         }
+    }
+}
+
+// Clave de SteamGridDB para iOS: se genera un Kotlin desde `local.properties` —la misma fuente que
+// usa Android vía BuildConfig—, así hay una sola fuente para las dos plataformas. El archivo generado
+// vive en build/ (gitignored): la clave nunca se versiona. Vacía → el buscador de carátulas queda off.
+val steamGridApiKey: String = Properties().apply {
+    val f = rootProject.file("local.properties")
+    if (f.exists()) f.inputStream().use { load(it) }
+}.getProperty("STEAMGRIDDB_API_KEY", "")
+
+val steamGridGenDir = layout.buildDirectory.dir("generated/steamgrid/kotlin")
+val generateSteamGridConfig = tasks.register("generateSteamGridConfig") {
+    outputs.dir(steamGridGenDir)
+    inputs.property("key", steamGridApiKey) // regenera si cambia la clave
+    doLast {
+        val escaped = steamGridApiKey.replace("\\", "\\\\").replace("\"", "\\\"")
+        val file = steamGridGenDir.get().file("com/gmoqa/fullset/SteamGridConfig.kt").asFile
+        file.parentFile.mkdirs()
+        file.writeText(
+            "package com.gmoqa.fullset\n\ninternal const val STEAMGRIDDB_API_KEY: String = \"$escaped\"\n",
+        )
     }
 }
 
@@ -100,6 +124,13 @@ kotlin {
             }
         }
     }
+}
+
+// El Kotlin generado con la clave de SteamGridDB entra al source set de iOS; los compiladores de iOS
+// dependen del task que lo genera.
+kotlin.sourceSets.getByName("iosMain").kotlin.srcDir(steamGridGenDir)
+tasks.matching { it.name.startsWith("compileKotlinIos") }.configureEach {
+    dependsOn(generateSteamGridConfig)
 }
 
 // Recursos de Compose Multiplatform: la clase generada `Res` (drawables) queda pública y en un

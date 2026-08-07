@@ -13,8 +13,8 @@ import platform.UIKit.UIViewController
 
 /**
  * Entry point de la UI en iOS: el proyecto Xcode (iosApp) lo llama desde Swift y monta este
- * UIViewController. Construye el [DiaryViewModel] con los stubs iOS de voz/whisper y sin API key de
- * SteamGridDB (el buscador de carátulas queda inactivo por ahora), y levanta la `App()` compartida.
+ * UIViewController. Construye el [DiaryViewModel] con los stubs iOS de voz/whisper y la clave de
+ * SteamGridDB ([STEAMGRIDDB_API_KEY], generada desde local.properties), y levanta la `App()` compartida.
  */
 fun MainViewController(): UIViewController {
     // Coil no auto-registra el fetcher de red fuera de Android: lo agregamos al ImageLoader singleton
@@ -30,7 +30,7 @@ fun MainViewController(): UIViewController {
                 recorder = IosVoiceRecorder(),
                 modelStore = IosWhisperModelStore(),
                 transcriber = IosTranscriber(),
-                steamGridKey = "",
+                steamGridKey = STEAMGRIDDB_API_KEY,
             )
         }
         App(vm, isDebug = false)

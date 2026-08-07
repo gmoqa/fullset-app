@@ -45,8 +45,9 @@ Sospechas concretas, por orden de probabilidad:
   cómo Kotlin/Native maneja los structs de CoreGraphics.
 - **`Database.ios.kt`**: el `onConfiguration` que activa foreign keys.
 - **`ImagePicker.ios.kt`**: retiene el delegate en una lista global porque `PHPicker.delegate` es
-  weak. Si el picker se cierra sin elegir nada, **el delegate nunca se saca de `activeDelegates`** —
-  hay una fuga ahí que conviene arreglar de paso (implementar también el caso cancelado).
+  weak. ~~Fuga al cancelar~~ **verificado en la Mac: no hay fuga.** `picker:didFinishPicking:` se
+  dispara también al cancelar (con `results` vacío) y ahí se saca el delegate de `activeDelegates` y
+  se llama `onPicked(null)`. El caso cancelado ya está cubierto.
 
 ## Estado actual, frontera por frontera
 
@@ -66,7 +67,7 @@ Sospechas concretas, por orden de probabilidad:
 | **`rememberBackupImporter`** | ❌ **no-op** | tarea 2 |
 | **`rememberArchiveExporter`** | ⚠️ exporta solo el JSON | tarea 3 |
 | `IosWhisperModelStore` / `IosTranscriber` | ❌ stubs | tarea 5, la grande |
-| clave de SteamGridDB | ❌ `""` fijo | tarea 4 |
+| clave de SteamGridDB | ✅ generada desde `local.properties` | tarea 4 hecha |
 | recibir fotos compartidas | ❌ falta Share Extension | tarea 6 |
 
 ---
@@ -131,7 +132,15 @@ El contenido está definido en `commonMain` (`BackupArchive`): entrada `backup.j
 `photos/<nombre>`. **El JSON es idéntico al del respaldo liviano** — esa fue una decisión deliberada
 para que restaurar sea un solo camino de código. No inventar un formato distinto en iOS.
 
-## Tarea 4 — Clave de SteamGridDB
+## Tarea 4 — Clave de SteamGridDB ✅ HECHA
+
+Resuelta con la **opción 2** (una sola fuente para las dos plataformas): un task de Gradle
+(`generateSteamGridConfig` en `shared/build.gradle.kts`) lee `STEAMGRIDDB_API_KEY` de la **misma
+`local.properties`** que usa Android y genera `SteamGridConfig.kt` en `build/generated/` (gitignored,
+la clave no se versiona). `MainViewController` usa `STEAMGRIDDB_API_KEY` en vez de `""`. Con la clave
+vacía el buscador queda off, igual que antes; al ponerla en `local.properties` entra en ambas plataformas.
+
+<details><summary>Notas originales de la tarea</summary>
 
 **Archivo:** `shared/src/iosMain/kotlin/com/gmoqa/fullset/MainViewController.kt:33`
 
@@ -153,6 +162,8 @@ Opciones, de menos a más trabajo:
 
 **No la hardcodees en el fuente**: el repo es público y la clave es personal. `local.properties` está
 en `.gitignore` justamente por eso.
+
+</details>
 
 ## Tarea 6 — Recibir fotos compartidas
 
