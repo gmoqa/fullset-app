@@ -64,7 +64,7 @@ Sospechas concretas, por orden de probabilidad:
 | `BackHandler` | ⚪ no-op **a propósito** | iOS no tiene botón atrás global |
 | `rememberMicPermission` | ⚠️ pasa directo | AVAudioSession pide el permiso al grabar |
 | **`rememberCameraCapture`** | ❌ **stub** | tarea 1 |
-| **`rememberBackupImporter`** | ❌ **no-op** | tarea 2 |
+| `rememberBackupImporter` | ✅ JSON (ZIP → alert, va con tarea 3) | tarea 2 |
 | **`rememberArchiveExporter`** | ⚠️ exporta solo el JSON | tarea 3 |
 | `IosWhisperModelStore` / `IosTranscriber` | ❌ stubs | tarea 5, la grande |
 | clave de SteamGridDB | ✅ generada desde `local.properties` | tarea 4 hecha |
@@ -95,7 +95,17 @@ photo / Choose from gallery", sin tocar nada compartido.
 
 No hace falta redimensionar acá: la foto pasa por `FileStore.copyImage`, que ya lo hace.
 
-## Tarea 2 — Restaurar respaldo
+## Tarea 2 — Restaurar respaldo ⚠️ JSON hecho, ZIP con la tarea 3
+
+`rememberBackupImporter` ya está implementado para el caso **JSON** (`FileBackup.ios.kt`):
+`UIDocumentPickerViewController(asCopy = true)` deja una copia temporal en el sandbox (sin el baile
+de `startAccessingSecurityScopedResource`), se detecta el formato por los primeros bytes (`PK` = ZIP)
+y el `.json` de solo datos se restaura entero vía `onBackup(RestoredBackup(text))`. **Falta probarlo a
+mano** en el simulador (Settings → *Restore from a file* → elegir un `.json`). El caso **ZIP** (con
+fotos) muestra un alert y queda para cuando entre la lib de ZIP de la tarea 3 (esa lib sirve para leer
+y escribir, así que import-ZIP y export-ZIP van juntos).
+
+<details><summary>Notas originales de la tarea</summary>
 
 **Archivo:** `shared/src/iosMain/kotlin/com/gmoqa/fullset/ui/FileBackup.ios.kt`
 **Referencia:** `androidMain/.../FileBackup.android.kt` → `readBackup()`
@@ -116,6 +126,8 @@ forma de traer una colección desde otro dispositivo. Es lo más útil de esta l
    `name.substringAfterLast('/')`.
 
 El merge en sí ya está en `commonMain` (`importSnapshot`) y tiene 5 tests: no hay que tocarlo.
+
+</details>
 
 ## Tarea 3 — Respaldo completo (ZIP)
 
