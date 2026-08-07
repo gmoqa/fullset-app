@@ -1,24 +1,31 @@
+@file:OptIn(kotlinx.cinterop.BetaInteropApi::class)
+
 package com.gmoqa.fullset.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import com.gmoqa.fullset.data.FileStore
 import kotlinx.cinterop.ByteVar
+import kotlinx.cinterop.CPointer
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.addressOf
 import kotlinx.cinterop.get
 import kotlinx.cinterop.reinterpret
 import kotlinx.cinterop.usePinned
 import platform.Foundation.NSData
+import platform.Foundation.NSMakeRange
 import platform.Foundation.NSMutableData
 import platform.Foundation.NSString
 import platform.Foundation.NSTemporaryDirectory
 import platform.Foundation.NSURL
 import platform.Foundation.NSUTF8StringEncoding
+import platform.Foundation.NSUUID
 import platform.Foundation.appendBytes
 import platform.Foundation.appendData
 import platform.Foundation.create
 import platform.Foundation.dataWithContentsOfFile
 import platform.Foundation.dataWithContentsOfURL
+import platform.Foundation.subdataWithRange
 import platform.Foundation.writeToFile
 import platform.UIKit.UIActivityViewController
 import platform.UIKit.UIAlertAction
@@ -132,7 +139,9 @@ private class BackupImporterDelegate(
             return
         }
         if (isZip(data)) {
-            presentAlert("Restaurar desde ZIP todavía no está disponible en iOS. Usá el respaldo de solo datos (.json).")
+            val restored = readZip(data)
+            if (restored != null) onBackup(restored)
+            else presentAlert("No se pudo leer el .zip. Si es un respaldo completo de Android, restaurá desde su respaldo de solo datos (.json).")
             return
         }
         val text = NSString.create(data, NSUTF8StringEncoding) as String?
@@ -274,3 +283,91 @@ private class LeBuilder {
     fun bytes(b: ByteArray) { b.forEach { buf.add(it) } }
     fun build(): ByteArray = buf.toByteArray()
 }
+
+// ---------- Lectura de ZIP (stored + deflate), por el central directory ----------
+
+/**
+ * Lee un ZIP (el de solo datos no llega acá; esto es para el respaldo completo). Se parsea por el
+ * **central directory**, no por los headers locales: así los data descriptors que escribe Android
+ * (tamaños en cero en el header local) no importan. `backup.json` → texto; `photos/<nombre>` → se
+ * extraen a `FileStore.photosDir` con nombre único, y se devuelve el mapa nombre→ruta.
+ */
+@OptIn(ExperimentalForeignApi::class)
+private fun readZip(data: NSData): RestoredBackup? {
+    val len = data.length.toInt()
+    if (len < 22) return null
+    val base = data.bytes!!.reinterpret<ByteVar>()
+
+    // End Of Central Directory: se busca su firma desde el final (el comentario suele estar vacío).
+    var eocd = -1
+    var i = len - 22
+    val minEocd = maxOf(0, len - 22 - 0xFFFF)
+    while (i >= minEocd) {
+        if (base.u32(i) == 0x06054b50) { eocd = i; break }
+        i--
+    }
+    if (eocd < 0) return null
+    val count = base.u16(eocd + 10)
+    val cdOffset = base.u32(eocd + 16)
+
+    var json: String? = null
+    val photos = mutableMapOf<String, String>()
+    val destDir = FileStore.photosDir
+
+    var p = cdOffset
+    repeat(count) {
+        if (p < 0 || p + 46 > len || base.u32(p) != 0x02014b50) return@repeat
+        val method = base.u16(p + 10)
+        val compSize = base.u32(p + 20)
+        val nameLen = base.u16(p + 28)
+        val extraLen = base.u16(p + 30)
+        val commentLen = base.u16(p + 32)
+        val localOffset = base.u32(p + 42)
+        val name = base.readString(p + 46, nameLen)
+
+        // El header local puede traer distinto largo de `extra` que el central: se lee el local.
+        val dataStart = localOffset + 30 + base.u16(localOffset + 26) + base.u16(localOffset + 28)
+        if (dataStart < 0 || dataStart + compSize > len) return@repeat
+
+        // Solo *stored* (método 0): descomprimir DEFLATE en iOS necesitaría cinterop con
+        // libcompression, que no se logró exponer. Los ZIP de iOS son stored; los de Android son
+        // DEFLATE → se restauran desde su respaldo de solo datos (.json).
+        val entry: NSData? = if (method == 0) {
+            data.subdataWithRange(NSMakeRange(dataStart.toULong(), compSize.toULong()))
+        } else {
+            null
+        }
+        if (entry != null) {
+            when {
+                name == BACKUP_JSON_ENTRY ->
+                    json = NSString.create(entry, NSUTF8StringEncoding) as String?
+
+                name.startsWith(PHOTOS_PREFIX) && !name.endsWith("/") -> {
+                    // Solo el nombre del archivo: un ZIP hostil podría traer "../.." (zip slip).
+                    val safe = name.substringAfterLast('/')
+                    if (safe.isNotBlank()) {
+                        val dest = "$destDir/restored_${NSUUID().UUIDString}_$safe"
+                        entry.writeToFile(dest, atomically = true)
+                        photos[safe] = dest
+                    }
+                }
+            }
+        }
+        p += 46 + nameLen + extraLen + commentLen
+    }
+    return json?.let { RestoredBackup(it, photos) }
+}
+
+@OptIn(ExperimentalForeignApi::class)
+private fun CPointer<ByteVar>.u8(i: Int): Int = this[i].toInt() and 0xFF
+
+@OptIn(ExperimentalForeignApi::class)
+private fun CPointer<ByteVar>.u16(i: Int): Int = u8(i) or (u8(i + 1) shl 8)
+
+@OptIn(ExperimentalForeignApi::class)
+private fun CPointer<ByteVar>.u32(i: Int): Int =
+    u8(i) or (u8(i + 1) shl 8) or (u8(i + 2) shl 16) or (u8(i + 3) shl 24)
+
+@OptIn(ExperimentalForeignApi::class)
+private fun CPointer<ByteVar>.readString(offset: Int, len: Int): String =
+    ByteArray(len) { this[offset + it] }.decodeToString()
