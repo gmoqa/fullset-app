@@ -38,6 +38,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Para fotografiar tus juegos y agregarlos a tu diario.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Para grabar notas de voz en tus juegos.</string>
 	<key>NSPhotoLibraryUsageDescription</key>

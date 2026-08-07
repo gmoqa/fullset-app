@@ -63,7 +63,7 @@ Sospechas concretas, por orden de probabilidad:
 | `copyImage` (resize) | ⚠️ escrito, sin probar | |
 | `BackHandler` | ⚪ no-op **a propósito** | iOS no tiene botón atrás global |
 | `rememberMicPermission` | ⚠️ pasa directo | AVAudioSession pide el permiso al grabar |
-| **`rememberCameraCapture`** | ❌ **stub** | tarea 1 |
+| `rememberCameraCapture` | ✅ UIImagePickerController (.camera) | tarea 1 hecha — probar en dispositivo real (simulador no tiene cámara) |
 | `rememberBackupImporter` | ✅ JSON + ZIP *stored* (DEFLATE de Android: pendiente) | tarea 2 |
 | `rememberArchiveExporter` | ✅ ZIP real (stored, JSON + fotos) | tarea 3 hecha |
 | `IosWhisperModelStore` / `IosTranscriber` | ✅ whisper.cpp real (cinterop) | tarea 5 hecha — falta probar transcripción con modelo+audio en dispositivo |
@@ -72,28 +72,19 @@ Sospechas concretas, por orden de probabilidad:
 
 ---
 
-## Tarea 1 — Cámara
+## Tarea 1 — Cámara — ✅ HECHA
 
 **Archivo:** `shared/src/iosMain/kotlin/com/gmoqa/fullset/ui/CameraCapture.ios.kt`
-**Referencia:** `androidMain/.../CameraCapture.android.kt`
 
-Hoy devuelve `CameraCapture(available = false)`, y la UI —que ya está lista— simplemente no ofrece
-la opción: el botón de foto abre la galería directo. Al implementarlo aparece solo el menú "Take
-photo / Choose from gallery", sin tocar nada compartido.
+`rememberCameraCapture` usa `UIImagePickerController` con `sourceType = .camera`. El delegate
+(`UIImagePickerControllerDelegateProtocol` + `UINavigationControllerDelegateProtocol`) toma el
+`UIImage`, lo escribe a `NSTemporaryDirectory()` como JPEG (0.9) y devuelve `PlatformImage(ruta)`
+—el mismo patrón de `ImagePicker.ios.kt`, reteniendo el delegate mientras el picker está abierto—.
+`available` es `isSourceTypeAvailable(.camera)`. Se agregó `NSCameraUsageDescription` al Info.plist.
 
-1. `UIImagePickerController` con `sourceType = UIImagePickerControllerSourceTypeCamera`.
-2. `available` = `UIImagePickerController.isSourceTypeAvailable(.camera)` — en el simulador da false,
-   así que **hay que probar en un dispositivo real**.
-3. El delegate (`UIImagePickerControllerDelegateProtocol` + `UINavigationControllerDelegateProtocol`)
-   entrega un `UIImage`; escribirlo a `NSTemporaryDirectory()` como JPEG y devolver un
-   `PlatformImage(ruta)`. `ImagePicker.ios.kt` ya hace exactamente eso en `writeTemp()` — copiar ese
-   patrón, incluyendo **retener el delegate** mientras el picker está abierto.
-4. **`NSCameraUsageDescription` en `iosApp/iosApp/Info.plist`**. Sin esa clave la app **crashea** al
-   abrir la cámara, no falla suave. Ya están `NSMicrophoneUsageDescription` y
-   `NSPhotoLibraryUsageDescription`, agregar la de cámara al lado con un texto del estilo
-   *"Para fotografiar tus juegos y agregarlos a tu diario."*
-
-No hace falta redimensionar acá: la foto pasa por `FileStore.copyImage`, que ya lo hace.
+Compila, linkea y la app arranca. **Falta probar en un dispositivo real:** el simulador no tiene
+cámara, así que ahí `available` da false y la UI no ofrece la opción (comportamiento correcto). No
+hace falta redimensionar acá: la foto pasa por `FileStore.copyImage`, que ya lo hace.
 
 ## Tarea 2 — Restaurar respaldo ⚠️ JSON + ZIP stored hechos, falta DEFLATE
 
