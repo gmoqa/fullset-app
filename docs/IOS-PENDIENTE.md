@@ -64,8 +64,8 @@ Sospechas concretas, por orden de probabilidad:
 | `BackHandler` | ⚪ no-op **a propósito** | iOS no tiene botón atrás global |
 | `rememberMicPermission` | ⚠️ pasa directo | AVAudioSession pide el permiso al grabar |
 | **`rememberCameraCapture`** | ❌ **stub** | tarea 1 |
-| `rememberBackupImporter` | ✅ JSON (ZIP → alert, va con tarea 3) | tarea 2 |
-| **`rememberArchiveExporter`** | ⚠️ exporta solo el JSON | tarea 3 |
+| `rememberBackupImporter` | ✅ JSON (ZIP import → alert, ver tarea 2) | tarea 2 |
+| `rememberArchiveExporter` | ✅ ZIP real (stored, JSON + fotos) | tarea 3 hecha |
 | `IosWhisperModelStore` / `IosTranscriber` | ❌ stubs | tarea 5, la grande |
 | clave de SteamGridDB | ✅ generada desde `local.properties` | tarea 4 hecha |
 | recibir fotos compartidas | ❌ falta Share Extension | tarea 6 |
@@ -129,7 +129,20 @@ El merge en sí ya está en `commonMain` (`importSnapshot`) y tiene 5 tests: no 
 
 </details>
 
-## Tarea 3 — Respaldo completo (ZIP)
+## Tarea 3 — Respaldo completo (ZIP) ✅ HECHA (export)
+
+`rememberArchiveExporter` ya arma un **ZIP real** (`backup.json` + `photos/<nombre>`) y lo comparte
+por el share sheet. Se eligió **escribir el ZIP a mano en formato *stored*** (sin compresión), no
+ZIPFoundation: una lib de Swift no se puede llamar desde Kotlin/Native, y el `actual` vive en
+iosMain. Stored es válido —los JPEG ya vienen comprimidos y el JSON es chico—, `ZipInputStream` de
+Android lo restaura igual, y los nombres de entrada coinciden con los que escribe Android. El writer
+(`StoredZip` + CRC-32, en `FileBackup.ios.kt`) se validó byte-a-byte contra `zipfile`/`unzip`.
+
+Dos límites conocidos: se construye **en memoria** (alcanza para los tamaños actuales de iOS; si más
+adelante hay backups de cientos de MB conviene streamear a archivo) y **no lee** ZIPs con DEFLATE
+(los que escribe Android) — eso es el import-ZIP de la tarea 2, que sí necesita `inflate`.
+
+<details><summary>Notas originales de la tarea</summary>
 
 **Archivo:** el mismo. Hoy `rememberArchiveExporter` exporta **solo el JSON**, así que en iOS "Todo"
 y "Solo datos" dan el mismo archivo. No se pierden datos, pero las fotos no se respaldan.
@@ -143,6 +156,8 @@ Foundation no trae escritura de ZIP, así que hay que elegir:
 El contenido está definido en `commonMain` (`BackupArchive`): entrada `backup.json` más
 `photos/<nombre>`. **El JSON es idéntico al del respaldo liviano** — esa fue una decisión deliberada
 para que restaurar sea un solo camino de código. No inventar un formato distinto en iOS.
+
+</details>
 
 ## Tarea 4 — Clave de SteamGridDB ✅ HECHA
 
