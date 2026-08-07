@@ -1,0 +1,3 @@
+package = whispercpp
+headers = whisper_shim.h
+compilerOpts = -I/Users/gmoqa/fullset-app/iosApp/whisper -I/Users/gmoqa/fullset-app/app/src/main/cpp/whisper/include -I/Users/gmoqa/fullset-app/app/src/main/cpp/whisper/ggml/include

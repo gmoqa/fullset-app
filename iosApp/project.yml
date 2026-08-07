@@ -31,6 +31,10 @@ targets:
         FRAMEWORK_SEARCH_PATHS:
           - $(inherited)
           - $(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)
+        # Estáticas de whisper.cpp (transcripción), por plataforma.
+        LIBRARY_SEARCH_PATHS:
+          - $(inherited)
+          - $(SRCROOT)/whisper/lib/$(PLATFORM_NAME)
         OTHER_LDFLAGS:
           - $(inherited)
           - -framework
@@ -38,9 +42,16 @@ targets:
           # El framework es estático: la app linkea SQLite del sistema (lo usa el driver nativo de
           # SQLDelight/sqliter).
           - -lsqlite3
+          # whisper.cpp + ggml (transcripción de notas de voz) y su runtime C++.
+          - -lwhisper_all
+          - -lc++
         # Necesario para que el script de pre-build pueda ejecutar Gradle (escribe fuera del sandbox).
         ENABLE_USER_SCRIPT_SANDBOXING: NO
     preBuildScripts:
+      - name: Build whisper.cpp static libs
+        basedOnDependencyAnalysis: false
+        script: |
+          "$SRCROOT/whisper/build-whisper.sh"
       - name: Compile Kotlin Framework
         basedOnDependencyAnalysis: false
         script: |

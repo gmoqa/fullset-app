@@ -42,3 +42,7 @@ tools/.steamgriddb-cache.json
 
 # Caché local del árbol de libretro-thumbnails (se reconstruye solo)
 tools/.libretro-trees/
+
+# --- whisper.cpp iOS (artefactos de build; se regeneran con iosApp/whisper/build-whisper.sh) ---
+/iosApp/whisper/build/
+/iosApp/whisper/lib/

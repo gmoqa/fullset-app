@@ -59,6 +59,8 @@ kotlin {
             baseName = "Shared"
             isStatic = true
         }
+        // cinterop con whisper.cpp (transcripción de notas de voz). El .a se linkea en iosApp.
+        target.compilations.getByName("main").cinterops.create("whispercpp")
     }
 
     sourceSets {

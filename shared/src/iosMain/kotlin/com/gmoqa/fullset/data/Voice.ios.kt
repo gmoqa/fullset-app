@@ -102,15 +102,3 @@ class IosVoiceRecorder : VoiceRecorder {
     private fun dbToLinear(db: Float): Float =
         if (db < -60f) 0f else (10f.pow(db / 20f)).coerceIn(0f, 1f)
 }
-
-class IosWhisperModelStore : WhisperModelStore {
-    override fun installed(): WhisperModel? = null
-    override fun isInstalled(model: WhisperModel): Boolean = false
-    override suspend fun download(model: WhisperModel, onProgress: (Float) -> Unit) {}
-    override fun delete(model: WhisperModel) {}
-}
-
-class IosTranscriber : Transcriber {
-    override fun transcribe(wavPath: String, language: TranscriptionLanguage): String? = null
-    override fun release() {}
-}

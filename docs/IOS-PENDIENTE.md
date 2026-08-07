@@ -66,7 +66,7 @@ Sospechas concretas, por orden de probabilidad:
 | **`rememberCameraCapture`** | ❌ **stub** | tarea 1 |
 | `rememberBackupImporter` | ✅ JSON + ZIP *stored* (DEFLATE de Android: pendiente) | tarea 2 |
 | `rememberArchiveExporter` | ✅ ZIP real (stored, JSON + fotos) | tarea 3 hecha |
-| `IosWhisperModelStore` / `IosTranscriber` | ❌ stubs | tarea 5, la grande |
+| `IosWhisperModelStore` / `IosTranscriber` | ✅ whisper.cpp real (cinterop) | tarea 5 hecha — falta probar transcripción con modelo+audio en dispositivo |
 | clave de SteamGridDB | ✅ generada desde `local.properties` | tarea 4 hecha |
 | recibir fotos compartidas | ❌ falta Share Extension | tarea 6 |
 
@@ -216,21 +216,37 @@ bundle id y su propio proceso. Dos cosas a tener en cuenta:
 2. `App()` ya acepta `sharedImage: PlatformImage?` con default `null`, así que hoy compila sin
    tocar nada; alcanza con pasárselo desde `MainViewController` cuando exista el canal.
 
-## Tarea 5 — Notas de voz (la grande)
+## Tarea 5 — Notas de voz (la grande) — ✅ HECHA
 
-`IosVoiceRecorder` **ya está implementado** con `AVAudioRecorder`. Lo que falta es la transcripción:
-`IosWhisperModelStore` e `IosTranscriber` devuelven null/no-op, así que se puede grabar pero la nota
-queda sin texto.
+`IosVoiceRecorder` (AVAudioRecorder) ya estaba. Ahora la transcripción corre con whisper.cpp real en
+el dispositivo, vía cinterop sobre un shim C. Compila, linkea y la app arranca con las estáticas
+adentro (~86 MB el `.app` de simulador en Debug).
 
-1. Compilar `whisper.cpp` como XCFramework y linkearlo (en Android es JNI, ver `app/src/main/cpp/`).
-2. `IosWhisperModelStore`: descargar el modelo a Documents y **verificar el sha256**, como hace
-   Android — es una descarga remota que se ejecuta como código nativo.
-3. `IosTranscriber`: llamar a whisper sobre el WAV.
-4. `rememberMicPermission`: hoy pasa directo. AVAudioSession pide el permiso al grabar, así que
-   funciona, pero conviene pedirlo explícito para que el diálogo aparezca en un momento entendible.
+Cómo quedó armado:
 
-Es la tarea más pesada y la menos urgente: sin ella la app iOS funciona entera salvo la
-transcripción automática.
+1. **whisper.cpp + ggml** se compilan como estáticas por SDK (`iphonesimulator` + `iphoneos` arm64)
+   reutilizando el mismo código vendido que usa Android (`app/src/main/cpp/whisper/`). Lo hace
+   `iosApp/whisper/build-whisper.sh` (CMake, sin Metal/BLAS/OpenMP; combina con `libtool` en
+   `lib/<sdk>/libwhisper_all.a`). El script es un pre-build en Xcode y se saltea si el `.a` ya existe.
+   Las estáticas están gitignoreadas (`iosApp/whisper/lib/`, `build/`): se regeneran del fuente.
+2. **Shim C** (`iosApp/whisper/whisper_shim.{h,c}`): API chica y estable
+   (`fullset_whisper_init/transcribe/n_segments/segment_text/free`) que el cinterop bindea. Se hizo
+   con header propio a propósito — bindear el header del sistema no funcionó (ver nota de
+   `libcompression` en tarea 2).
+3. **cinterop** `whispercpp` (`shared/src/nativeInterop/cinterop/whispercpp.def`), enganchado en
+   `shared/build.gradle.kts`.
+4. **`IosWhisperModelStore`**: descarga el modelo a `Documents/models` con Ktor/Darwin, **verifica el
+   sha256** (SHA-256 en Kotlin puro), escribe a `.part` y recién renombra si el checksum coincide.
+5. **`IosTranscriber`**: lee el WAV (PCM16 mono, saltea el header de 44 bytes → floats), mantiene el
+   modelo cargado entre notas y llama a whisper.
+6. Link en `iosApp/project.yml`: `LIBRARY_SEARCH_PATHS` por `$(PLATFORM_NAME)` + `-lwhisper_all -lc++`.
+
+**Falta probar en vivo:** descargar un modelo (~60 MB el chico) y transcribir una nota real. El link y
+que la app arranque ya están verificados en simulador; la transcripción end-to-end necesita ese paso
+manual (red + micrófono).
+
+`rememberMicPermission` sigue pasando directo: AVAudioSession pide el permiso al grabar. Conviene
+pedirlo explícito para que el diálogo salga en un momento entendible.
 
 ---
 

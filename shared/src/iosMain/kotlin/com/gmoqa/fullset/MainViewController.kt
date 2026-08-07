@@ -26,10 +26,11 @@ fun MainViewController(): UIViewController {
     }
     return ComposeUIViewController {
         val vm = viewModel {
+            val whisperStore = IosWhisperModelStore()
             DiaryViewModel(
                 recorder = IosVoiceRecorder(),
-                modelStore = IosWhisperModelStore(),
-                transcriber = IosTranscriber(),
+                modelStore = whisperStore,
+                transcriber = IosTranscriber(whisperStore),
                 steamGridKey = STEAMGRIDDB_API_KEY,
             )
         }
