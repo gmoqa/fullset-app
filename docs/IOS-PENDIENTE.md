@@ -68,7 +68,7 @@ Sospechas concretas, por orden de probabilidad:
 | `rememberArchiveExporter` | ✅ ZIP real (stored, JSON + fotos) | tarea 3 hecha |
 | `IosWhisperModelStore` / `IosTranscriber` | ✅ whisper.cpp real (cinterop) | tarea 5 hecha — falta probar transcripción con modelo+audio en dispositivo |
 | clave de SteamGridDB | ✅ generada desde `local.properties` | tarea 4 hecha |
-| recibir fotos compartidas | ❌ falta Share Extension | tarea 6 |
+| recibir fotos compartidas | ✅ Share Extension + App Group | tarea 6 hecha — probar el share sheet real desde Fotos |
 
 ---
 
@@ -192,20 +192,31 @@ en `.gitignore` justamente por eso.
 
 </details>
 
-## Tarea 6 — Recibir fotos compartidas
+## Tarea 6 — Recibir fotos compartidas — ✅ HECHA
 
-En Android la app figura en el menú Compartir para `image/*`: llega por `ACTION_SEND`, se resuelve
-el `Uri` en `MainActivity.sharedImageOf()` y `App()` muestra `AttachSharedPhotoDialog` para elegir a
-qué juego de Playing adjuntarla. **Todo el diálogo está en `commonMain` y no hay que reescribirlo**;
-lo que falta es el lado nativo.
+En Android la app figura en el menú Compartir para `image/*` y `App()` muestra
+`AttachSharedPhotoDialog`. En iOS eso es un **Share Extension**: un target aparte con su propio
+proceso. Como la extensión no comparte sandbox con la app, la foto viaja por un **App Group**.
 
-En iOS eso es un **Share Extension**, que es un target aparte del proyecto de Xcode con su propio
-bundle id y su propio proceso. Dos cosas a tener en cuenta:
+Cómo quedó armado:
 
-1. La extensión no comparte el sandbox con la app: hay que pasar el archivo por un **App Group**
-   (`group.com.gmoqa.fullset`) y despertar a la app, o bien resolver todo dentro de la extensión.
-2. `App()` ya acepta `sharedImage: PlatformImage?` con default `null`, así que hoy compila sin
-   tocar nada; alcanza con pasárselo desde `MainViewController` cuando exista el canal.
+1. **Target `ShareExtension`** (`iosApp/ShareExtension/`, app-extension) declarado en `project.yml`,
+   embebido en la app. `ShareViewController.swift` toma la imagen compartida (URL/UIImage/Data), la
+   escribe como `shared_incoming.jpg` en el contenedor del App Group `group.com.gmoqa.fullset` y
+   despierta la app con `fullset://shared` (recorriendo la responder chain, porque `UIApplication`
+   no está disponible en una extensión). No muestra UI: procesa y cierra.
+2. **App Group** `group.com.gmoqa.fullset` en los entitlements de ambos targets
+   (`iosApp.entitlements`, `ShareExtension.entitlements`). En simulador el contenedor resuelve sin
+   firma con team.
+3. **Lado app** (`SharedImageInbox.kt`, iosMain): `checkPending()` lee el contenedor, mueve la foto a
+   un temporal de la app (dejando el App Group limpio) y la publica en un `StateFlow`.
+   `MainViewController` lo observa y se lo pasa a `App(sharedImage = ...)`; `onSharedImageHandled`
+   lo limpia. Swift dispara `checkPendingSharedImage()` en `onAppear`, `onOpenURL` y
+   `didBecomeActive` (URL scheme `fullset` declarado en el Info.plist del host).
+
+Compila, linkea, la extensión queda embebida y el App Group resuelve en runtime. Probado el camino
+de recepción end-to-end (dejando un archivo en el contenedor → aparece `AttachSharedPhotoDialog`).
+**Falta probar el share sheet real** compartiendo una foto desde la app Fotos.
 
 ## Tarea 5 — Notas de voz (la grande) — ✅ HECHA
 

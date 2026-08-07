@@ -27,6 +27,18 @@
 	<!-- Requerido por Compose Multiplatform (PlistSanityCheck): habilita frame rate alto (ProMotion). -->
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<!-- La Share Extension despierta la app con fullset://shared tras dejar la foto en el App Group. -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.gmoqa.fullset</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fullset</string>
+			</array>
+		</dict>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

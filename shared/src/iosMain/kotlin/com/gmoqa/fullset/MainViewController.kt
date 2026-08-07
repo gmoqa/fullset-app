@@ -1,6 +1,8 @@
 package com.gmoqa.fullset
 
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.window.ComposeUIViewController
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.ImageLoader
 import coil3.PlatformContext
@@ -34,6 +36,20 @@ fun MainViewController(): UIViewController {
                 steamGridKey = STEAMGRIDDB_API_KEY,
             )
         }
-        App(vm, isDebug = false)
+        // Foto que llegó por Compartir (Share Extension), vía el App Group. Swift dispara
+        // checkPendingSharedImage() al volver la app a primer plano y esto recompone.
+        val shared by SharedImageInbox.image.collectAsStateWithLifecycle()
+        App(
+            vm,
+            isDebug = false,
+            sharedImage = shared,
+            onSharedImageHandled = { SharedImageInbox.clear() },
+        )
     }
 }
+
+/**
+ * Puente para Swift (`MainViewControllerKt.checkPendingSharedImage()`): lo llama el ciclo de vida de
+ * la app al volver a primer plano, para levantar la foto que dejó la Share Extension en el App Group.
+ */
+fun checkPendingSharedImage() = SharedImageInbox.checkPending()
