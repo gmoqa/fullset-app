@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "6c6527b89abc",
+  "version": "d1c4e1650e6d",
   "files": [
     {
       "path": "catalogs/platforms.json",
@@ -89,8 +89,8 @@
       "path": "catalogs/game-gear-eu.json",
       "platform": "Sega Game Gear",
       "games": 208,
-      "bytes": 80205,
-      "sha256": "3bb6819b13df9d49039679af4473c8eb94435e92fda19543fc85e4761145f619",
+      "bytes": 80186,
+      "sha256": "b528cabed33f522e101342d40bb49172a4e1ccbf0efde274ad07d29dc9fbf4df",
       "coverage": {
         "year": 95,
         "publisher": 89,
@@ -102,8 +102,8 @@
       "path": "catalogs/game-gear-jp.json",
       "platform": "Sega Game Gear",
       "games": 199,
-      "bytes": 74016,
-      "sha256": "e5b9bffbd88c5e180f7537778193abb8c9ec9e8051e121d6aa81dfb227f9740c",
+      "bytes": 73984,
+      "sha256": "2672e1bf6ae7e83c75ee7d906c211ce230b69b5c10cdde0691be79a0eb001593",
       "coverage": {
         "year": 98,
         "publisher": 82,
@@ -115,8 +115,8 @@
       "path": "catalogs/game-gear-usa.json",
       "platform": "Sega Game Gear",
       "games": 234,
-      "bytes": 91670,
-      "sha256": "faa3b132e0a0aa964947d633ed5ba546f2403ae5a00c186cfdafd01e8abbfe51",
+      "bytes": 91638,
+      "sha256": "f70ab70edaee12418aefc2654b6ff6eb59c708e2731750823573a8ec28ffb2aa",
       "coverage": {
         "year": 99,
         "publisher": 93,
@@ -128,8 +128,8 @@
       "path": "catalogs/gamecube-eu.json",
       "platform": "GameCube",
       "games": 433,
-      "bytes": 168417,
-      "sha256": "8ebe4040c37b836952d92e9a700cd4aaff96fa728979ffeb0f29a30ad26d91ec",
+      "bytes": 168366,
+      "sha256": "bcc9223a163b04134e5dbd281b4329bf8e81e12e20c867e900a5d64936d98d42",
       "coverage": {
         "year": 100,
         "publisher": 100,
@@ -141,8 +141,8 @@
       "path": "catalogs/gamecube-jp.json",
       "platform": "GameCube",
       "games": 274,
-      "bytes": 99460,
-      "sha256": "6d83b6c36aef5346c37f823025fa84d705ba9c8867d1769841555b1a37483d08",
+      "bytes": 99332,
+      "sha256": "e988ef2ac160473e595ff401412fe9ea997bf855fbbc78fcb5c85afdf200f8a5",
       "coverage": {
         "year": 100,
         "publisher": 100,
@@ -154,8 +154,8 @@
       "path": "catalogs/gamecube-usa.json",
       "platform": "GameCube",
       "games": 537,
-      "bytes": 202116,
-      "sha256": "ed41f7724d7db3d84246c0c7ae814491792ef0cee3d2a806e2d7045ffd8fd854",
+      "bytes": 201794,
+      "sha256": "5c95e6b3676fe4d1a1f64218faaa457c7cbdb1f3abc0359ed5ffb34592d06dc1",
       "coverage": {
         "year": 100,
         "publisher": 100,
@@ -167,8 +167,8 @@
       "path": "catalogs/genesis-eu.json",
       "platform": "Sega Genesis",
       "games": 747,
-      "bytes": 278294,
-      "sha256": "dfc9429fae2bc86bcdceb83798cecbf05a7451f9ff1a53812c204a2f49bc0a5c",
+      "bytes": 278255,
+      "sha256": "6441b4b16dd92300adfd81d77a4bb4a8e2f972ed7f0db37438f905fcad53a8e4",
       "coverage": {
         "year": 88,
         "publisher": 77,
@@ -271,8 +271,8 @@
       "path": "catalogs/n64-usa.json",
       "platform": "Nintendo 64",
       "games": 296,
-      "bytes": 118848,
-      "sha256": "51e571a768408a7a433b23c7fa6a92cbf7db64dab1399e4726f273e162bea9fd",
+      "bytes": 118211,
+      "sha256": "5beb21ac29ff07b5bb2b7f6ba4c71ce743c7c1a0b4e2ede65c8b4d2b2b00074e",
       "coverage": {
         "year": 100,
         "publisher": 100,
@@ -310,8 +310,8 @@
       "path": "catalogs/nes-usa.json",
       "platform": "NES",
       "games": 668,
-      "bytes": 260954,
-      "sha256": "d8755cd342866b69e81df47edb0450ea33ec8621ec5f9d63ebcec393a1bef38f",
+      "bytes": 260927,
+      "sha256": "ad0d3b483eca3eec2ea3d1af4c0f9fe7cc0e0657292481f95bb5d785a1799508",
       "coverage": {
         "year": 100,
         "publisher": 100,
@@ -349,8 +349,8 @@
       "path": "catalogs/ps2-usa.json",
       "platform": "PlayStation 2",
       "games": 1815,
-      "bytes": 701967,
-      "sha256": "803b5942cc0bf0f62c62a79b8b056d3e750f4bdd5f5414c3df17ab73bfb29d4f",
+      "bytes": 701935,
+      "sha256": "e9c5a7b6341d5e6386d4a6602f758d0d2eaead03bb4795627540e94b88541e36",
       "coverage": {
         "year": 90,
         "publisher": 100,
@@ -401,8 +401,8 @@
       "path": "catalogs/psx-eu.json",
       "platform": "PlayStation",
       "games": 1286,
-      "bytes": 478771,
-      "sha256": "94eb408eb21aaa3b3af32ec53ef43ee64245515caa4f34fc02fc70a6ce6d4be0",
+      "bytes": 478554,
+      "sha256": "abafeb4f18fa30da901e00b13c5c0f65dfcb9264dda40d13bc34f6402b6c5516",
       "coverage": {
         "year": 100,
         "publisher": 99,
@@ -414,8 +414,8 @@
       "path": "catalogs/psx-jp.json",
       "platform": "PlayStation",
       "games": 3148,
-      "bytes": 1113954,
-      "sha256": "7319592265e72f6183b62682600e31c080eb05422a5cd3a6965a7f2ce604ab4a",
+      "bytes": 1113519,
+      "sha256": "5c206884c0ead0067c10b67ce2aebb8706b2ced3a84413b60cf43b75669bb982",
       "coverage": {
         "year": 100,
         "publisher": 98,
@@ -427,8 +427,8 @@
       "path": "catalogs/psx-usa.json",
       "platform": "PlayStation",
       "games": 1344,
-      "bytes": 497420,
-      "sha256": "06fdd68d1ec7a8c154f9ce78364dc41ded200c96a88749859e68b8023b220225",
+      "bytes": 496784,
+      "sha256": "06dc7ada6be51ae31a0ae7cb9c09e6858391601fd2cf9692faad926b50bbf466",
       "coverage": {
         "year": 99,
         "publisher": 100,
@@ -505,8 +505,8 @@
       "path": "catalogs/sega-cd-usa.json",
       "platform": "Sega CD",
       "games": 146,
-      "bytes": 56989,
-      "sha256": "acacf951faee1351e2d43088a16b17eac7a1a18772eef0549618c06b2b7119ba",
+      "bytes": 56960,
+      "sha256": "ad83956a20e1093ecd7898f7ebe22a6fe132dace079047cbe62733207607b7af",
       "coverage": {
         "year": 100,
         "publisher": 88,
@@ -557,8 +557,8 @@
       "path": "catalogs/snes-usa.json",
       "platform": "Super Nintendo",
       "games": 744,
-      "bytes": 303320,
-      "sha256": "bcb1be03e86df9397c76c663afc59d2511158cfc68fb8109eb42656a24f43358",
+      "bytes": 302623,
+      "sha256": "b76fee9f8b310154c07b4fa47bbaefd42d7306e3502de4b9c17ac25a146359f8",
       "coverage": {
         "year": 100,
         "publisher": 100,
