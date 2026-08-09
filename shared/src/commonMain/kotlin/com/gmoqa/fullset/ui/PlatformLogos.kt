@@ -98,8 +98,15 @@ private val COVER_ASPECT_BY_REGION: Map<Pair<String, String>, Float> = mapOf(
     ("Sega Saturn" to "NTSC-U") to 0.60f,   // caja alta
     ("Sega Saturn" to "NTSC-J") to 1.00f,   // jewel case cuadrado
     ("Sega Saturn" to "PAL") to 0.65f,
-    ("Sega CD" to "NTSC-U") to 0.68f,       // convivieron long box y jewel case: es el más parejo
+    // Medido sobre 43 carátulas al azar del catálogo: mediana 0.60, cuartiles 0.59–0.71. El 0.68
+    // que había era un promedio entre la caja alta y el jewel case que no le quedaba bien a
+    // ninguno: reservaba más ancho del que la caja alta necesita y las dejaba con hueco a los
+    // lados. La caja alta es la abrumadora mayoría, así que manda ella.
+    ("Sega CD" to "NTSC-U") to 0.60f,
     ("Sega CD" to "NTSC-J") to 1.00f,
+    // PAL es genuinamente **bimodal** —cuartiles 0.71 y 1.29 sobre 45 medidas—: en Europa
+    // convivieron la caja alta y la ancha. 1.18 es la mediana; ningún número le va a quedar bien a
+    // las dos mitades, y no hay dato en el catálogo que distinga una de otra.
     ("Sega CD" to "PAL") to 1.18f,
 )
 
