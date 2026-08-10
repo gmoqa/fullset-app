@@ -463,5 +463,60 @@
       "cpu": "AMD Zen 2 8-core @ 3.5 GHz + RDNA 2 GPU",
       "description": "Sony's ninth-generation console, built around a custom AMD CPU and an SSD for near-instant loading."
     }
+  },
+  {
+    "id": "turbografx-16",
+    "name": "TurboGrafx-16",
+    "catalogs": {
+      "NTSC-U": "catalogs/turbografx-16-usa.json",
+      "NTSC-J": "catalogs/turbografx-16-jp.json"
+    },
+    "libretroRepo": "NEC_-_PC_Engine_-_TurboGrafx_16",
+    "enabled": true,
+    "info": {
+      "manufacturer": "NEC",
+      "generation": 4,
+      "media": "HuCard",
+      "released": {
+        "ntsc-j": 1987,
+        "ntsc": 1989
+      },
+      "discontinued": 1994,
+      "unitsSold": "10M",
+      "cpu": "Hudson HuC6280 @ 7.16 MHz",
+      "description": "NEC's 8-bit console with a 16-bit graphics chip, sold as PC Engine in Japan. Europe never got an official release: the machines sold there were grey-market Japanese imports."
+    },
+    "counts": {
+      "NTSC-U": 93,
+      "NTSC-J": 288,
+      "PAL": 93
+    }
+  },
+  {
+    "id": "turbografx-cd",
+    "name": "TurboGrafx-CD",
+    "catalogs": {
+      "NTSC-U": "catalogs/turbografx-cd-usa.json",
+      "NTSC-J": "catalogs/turbografx-cd-jp.json"
+    },
+    "libretroRepo": "NEC_-_PC_Engine_CD_-_TurboGrafx-CD",
+    "enabled": true,
+    "info": {
+      "manufacturer": "NEC",
+      "generation": 4,
+      "media": "CD-ROM",
+      "released": {
+        "ntsc-j": 1988,
+        "ntsc": 1989
+      },
+      "discontinued": 1994,
+      "cpu": "Hudson HuC6280 @ 7.16 MHz + CD-ROM² unit",
+      "description": "The CD add-on for the PC Engine, and the first CD-based console anywhere. Its library is bigger than the HuCard one and almost entirely Japanese."
+    },
+    "counts": {
+      "NTSC-U": 43,
+      "NTSC-J": 395,
+      "PAL": 43
+    }
   }
 ]

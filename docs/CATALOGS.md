@@ -179,6 +179,69 @@ o sea después de toda la era que catalogamos (la Dreamcast se discontinuó en 2
 europeo es ELSPA salvo lanzamientos tardíos. En Japón, antes de CERO (2002) regía la autorregulación
 de Sega: 全年齢 (todas las edades), 18禁 y la marca X. En EE.UU., VRC hasta 1994 y ESRB después.
 
+**NEC: dos regiones, y es lo correcto.** PC Engine (Japón, 1987) y TurboGrafx-16 (Norteamérica,
+1989) son la misma consola con dos nombres, más su periférico de CD —el **primer CD de consola de la
+historia**—. Se arman de una sola página de Wikipedia (`List of TurboGrafx-16 games`), que mezcla en
+**una tabla** el cartucho y el CD y los distingue por una columna `Format`: de ahí salen los cuatro
+catálogos, filtrando por formato con `--format-cell` / `--format`.
+
+| Catálogo | Juegos | año/editora/cover |
+|---|---|---|
+| `turbografx-16-usa.json` | 93 | 100/100/95 |
+| `turbografx-16-jp.json` | 288 | 100/100/65 |
+| `turbografx-cd-usa.json` | 43 | 100/100/90 |
+| `turbografx-cd-jp.json` | 395 | 100/100/51 |
+
+**El emparejamiento de carátulas por región, corregido (2026-08-10).** Preguntando por qué *R-Type*
+mostraba la tapa americana en el catálogo japonés salieron **tres defectos que afectaban a todo el
+dataset**, no solo a NEC:
+
+1. **La región podía estar en el segundo paréntesis.** `_regiones()` leía solo el primero, así que
+   para `Splash Lake (NEC Avenue) (Japan)` la región era «NEC AVENUE», no se reconocía como japonesa
+   y perdía contra `Splash Lake (USA)`. Ahora se leen todos.
+2. **El japonés casi siempre lleva subtítulo y el americano no.** `Dead Moon` vs `Dead Moon - Getsu
+   Sekai no Akumu (Japan)`: el calce exacto solo encontraba el archivo `(USA)`. Se agregó un índice
+   por la parte anterior al `" - "`, más el caso inverso (el catálogo dice `Ys III: Wanderers from
+   Ys` y el archivo japonés es `Ys III (Japan)`), y ambos exigen que el archivo **empiece
+   literalmente** por el título — sin eso `Ys I & II` y `Ys III` colapsan a la misma clave y se
+   roban la tapa entre ellos.
+3. **A igual región ganaba la variante, no el lanzamiento base.** `(Rev 1)` ordena antes que el
+   nombre pelado, y las variantes son justo las que libretro guarda como **symlink** —que
+   `raw.githubusercontent` sirve como texto y la app no puede decodificar—. Se agregó desempate por
+   nombre más corto: reintroducía los symlinks que `fix_covers_symlink.py` ya había resuelto.
+
+Resultado sobre los 47 catálogos: **367 carátulas pasaron a la región correcta**, 1801 pasaron de
+una variante al nombre canónico y la cobertura total subió a **25.246/31.199 (80%)**. El contador de
+`catalog_lint` bajó de 1999 a **1660** carátulas de otra región y la línea base se rebajó a ese valor.
+
+Los que **no** tienen arreglo automático viven en `tools/overrides/`: *R-Type* japonés (en Japón se
+partió en dos HuCards, `R-Type I` y `R-Type II`, no existe un `R-Type (Japan)`), *Gate of Thunder*
+americano (solo se vendió en el CD triple del Duo), *SideArms*, *J.B. Harold* y *Sherlock Holmes
+Vol. II*. *The Davis Cup Tennis* se queda con la tapa americana: libretro no tiene la japonesa.
+
+**Sin PAL, a propósito.** NEC nunca lanzó la consola en Europa: las máquinas que se vendieron ahí
+eran importaciones japonesas de mercado gris, modificadas para el mercado local. La página de juegos
+no menciona Europa en ninguna fila, y el bloque de regiones de su tabla tiene **dos** columnas, no
+tres —por eso `region_base`/`region_column` aceptan `colspan="2"` además de `colspan="3"`—. Inventar
+un `turbografx-16-eu.json` sería fabricar un catálogo que nunca existió.
+
+**Serial en 0%.** Ni No-Intro ni Redump publican el catalog number de HuCard/CD-ROM² en un formato
+que podamos cruzar por título, así que las cuatro listas quedan sin serial. Es un hueco conocido,
+no un error de parseo.
+
+**Dos defectos de parseo que aparecieron acá y afectaban a todo el dataset:**
+
+- **Editora por mercado.** La celda trae las dos juntas: `[[NEC]] (US)<br>[[Hudson Soft]] (JP)`.
+  Quedarse con la primera le ponía la editora **americana al catálogo japonés**, con el `(US)`
+  pegado — el japonés repetía las mismas 57 «NEC (US)» del americano. Lo resuelve
+  `regional_publisher()`, hermano de `regional_title()` pero con el mercado entre paréntesis en vez
+  de en un `<sup>`. *Aero Blasters* ahora dice **NEC** en el americano y **Hudson Soft** en el japonés.
+- **`<br>` que no separa nombres.** A veces solo parte un título largo en dos renglones y el primer
+  trozo queda colgando de su conector: `''Adventure Quiz: Capcom World /''<br/>''Hatena no
+  Daibōken''`. Se detecta por el conector suelto al final y se vuelve a unir. Buscando esto apareció
+  además que la lista de PS2 escribe el tag **partido por un salto de línea** (`<br /\n>`), que el
+  separador no reconocía: por eso `ps2-eu` tenía dos entradas literales `Club Football<br /`.
+
 **PlayStation: las tres regiones.** A diferencia de Sega —que reparte Europa entre UK, Alemania,
 Francia, España, Australia y Brasil— Sony distribuyó PAL de forma unificada, con un único prefijo de
 serial (`SCES`/`SLES`), así que Wikipedia lo lista en **una sola columna** y con un catálogo alcanza.
@@ -363,7 +426,10 @@ a NTSC-U** cuando esa región no tiene lista. `GameCatalog` carga/cachea por arc
 
 **Estado:** **todas las consolas Sega tienen las tres regiones** (la SG-1000 solo NTSC-J: nunca salió
 de Japón — en Europa su lugar lo ocupó el Master System). Las no-Sega (NES, SNES, N64, PSX) siguen
-solo con NTSC-U y caen a esa lista en las otras regiones. `catalogFor` cae a cualquier catálogo
+solo con NTSC-U y caen a esa lista en las otras regiones. **TurboGrafx-16 y TurboGrafx-CD tienen dos**
+(NTSC-J y NTSC-U) y **no llevan PAL a propósito**: NEC nunca la lanzó en Europa, donde las máquinas
+que se vendieron eran importaciones japonesas de mercado gris modificadas para el mercado local. El
+selector de región solo ofrece las regiones **declaradas**, así que ahí muestra dos opciones, no tres. `catalogFor` cae a cualquier catálogo
 disponible cuando la región pedida no tiene lista ni hay default, para que una consola de una sola
 región no se vea vacía.
 

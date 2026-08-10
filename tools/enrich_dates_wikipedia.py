@@ -68,7 +68,7 @@ def region_column(text: str, region: str) -> int | None:
     """
     # La fila del `colspan` sigue con otras cabeceras (Ref., etc.) hasta un `|-`; las sub-cabeceras
     # de región vienen recién en la fila siguiente.
-    span = re.search(r'colspan="3"\s*\|', text)
+    span = re.search(r'colspan="?[23]"?\s*\|', text)
     if not span:
         return None
     rest = text[span.end():]
@@ -104,7 +104,10 @@ def region_base(text: str) -> int:
     tiene la misma columna pero escrita en texto plano (`2002-07-19<sup>JP</sup>`), que el regex de
     plantillas no ve — ahí los índices calzaban de casualidad.
     """
-    span = re.search(r'colspan="?3"?\s*\|', text)
+    # 2 o 3: casi todas las listas abren el bloque con tres regiones, pero la de TurboGrafx-16 solo
+    # tiene Japón y Norteamérica —en Europa la consola se vendió como importación gris, no como
+    # producto propio— y ahí el bloque es de dos.
+    span = re.search(r'colspan="?[23]"?\s*\|', text)
     if not span:
         return 0
     start = text.rfind("{|", 0, span.start())

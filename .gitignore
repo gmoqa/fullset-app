@@ -46,3 +46,10 @@ tools/.libretro-trees/
 # --- whisper.cpp iOS (artefactos de build; se regeneran con iosApp/whisper/build-whisper.sh) ---
 /iosApp/whisper/build/
 /iosApp/whisper/lib/
+
+# Firma de sideload: la clave con la que se firman los APK que se comparten a mano.
+# Si se pierde, los amigos que ya instalaron no pueden actualizar (Android rechaza
+# una firma distinta para el mismo applicationId). Va fuera del repo, con respaldo aparte.
+/keystore.properties
+*.jks
+*.keystore

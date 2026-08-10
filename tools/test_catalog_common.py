@@ -8,7 +8,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from catalog_common import regional_title, slug  # noqa: E402
+from catalog_common import regional_publisher, regional_title, slug  # noqa: E402
 
 # (nombre, texto crudo del wikitext, región, resultado esperado)
 CASOS_TITULO = [
@@ -61,6 +61,27 @@ CASOS_TITULO = [
 
 # El slug se deriva del título: si el título viene sucio, el slug también, y el lint no lo ve
 # porque para él son coherentes entre sí.
+CASOS_TITULO += [
+    ("título envuelto en dos renglones se reúne",
+     "''Adventure Quiz: Capcom World /''<br/>''Hatena no Daibōken''", "NTSC-J",
+     "''Adventure Quiz: Capcom World / Hatena no Daibōken''"),
+    ("tag <br> partido por salto de línea igual separa",
+     "''[[Club Football]]''<br /\n>•''Club Football Ajax''", "PAL", "''[[Club Football]]''"),
+    ("guión legítimo del título no dispara la reunión",
+     "''Guilty Gear Xrd -SIGN-''", "PAL", "''Guilty Gear Xrd -SIGN-''"),
+]
+
+CASOS_PUBLISHER = [
+    ("una sola editora, sin marca", "[[Hudson Soft]]", "NTSC-J", "[[Hudson Soft]]"),
+    ("elige la japonesa", "[[NEC]] (US)<br>[[Hudson Soft]] (JP)", "NTSC-J", "[[Hudson Soft]]"),
+    ("elige la americana", "[[NEC]] (US)<br>[[Hudson Soft]] (JP)", "NTSC-U", "[[NEC]]"),
+    ("región sin marca propia: cae en la primera",
+     "[[NEC]] (US)<br>[[Hudson Soft]] (JP)", "PAL", "[[NEC]]"),
+    ("sin región: la primera, sin el paréntesis", "[[NEC]] (US)<br>[[Hudson]] (JP)", None, "[[NEC]]"),
+    ("marca sola sin alternativa: igual se saca", "[[TTI]] (US)", "NTSC-U", "[[TTI]]"),
+    ("paréntesis que no es de región no se toca", "Sunsoft (Japan)", "NTSC-J", "Sunsoft (Japan)"),
+]
+
 CASOS_SLUG = [
     ("diacríticos se transliteran", "Astérix", "asterix"),
     ("ampersand como 'and'", "Chip & Dale", "chip-and-dale"),
@@ -78,6 +99,15 @@ def main() -> int:
         if not ok:
             print(f"          esperaba {esperado!r}, vino {real!r}")
 
+    print("  regional_publisher")
+    for nombre, texto, region, esperado in CASOS_PUBLISHER:
+        real = regional_publisher(texto, region)
+        ok = real == esperado
+        fallos += not ok
+        print(f"    {'OK   ' if ok else 'FALLA'} {nombre}")
+        if not ok:
+            print(f"          esperaba {esperado!r}, vino {real!r}")
+
     print("  slug")
     for nombre, texto, esperado in CASOS_SLUG:
         real = slug(texto)
@@ -87,7 +117,7 @@ def main() -> int:
         if not ok:
             print(f"          esperaba {esperado!r}, vino {real!r}")
 
-    total = len(CASOS_TITULO) + len(CASOS_SLUG)
+    total = len(CASOS_TITULO) + len(CASOS_PUBLISHER) + len(CASOS_SLUG)
     print(f"\n  {total - fallos}/{total} casos")
     return 1 if fallos else 0
 

@@ -19,7 +19,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from catalog_common import slug, write_catalog, clean_cell  # noqa: E402
+from catalog_common import slug, write_catalog, clean_cell, regional_publisher  # noqa: E402
 from enrich_dates_wikipedia import wikitext, region_column, region_base, row_cells  # noqa: E402
 
 
@@ -34,7 +34,7 @@ def publisher_column(text: str) -> int | None:
     # Se ancla a la tabla de JUEGOS, que es la que tiene las columnas de región: varias páginas
     # abren con otra tabla antes (GameCube empieza con una leyenda de códigos de región), así que
     # tomar la primera `{|` de la página leería las cabeceras equivocadas.
-    span = re.search(r'colspan="3"', text)
+    span = re.search(r'colspan="?[23]"?', text)
     if not span:
         return None
     start = text.rfind("{|", 0, span.start())
@@ -50,12 +50,15 @@ def publisher_column(text: str) -> int | None:
         elif line.startswith("|-") and names:
             break
     for i, cell in enumerate(names):
-        if "publisher" in cell.lower():
+        # "Distributor" además de "Publisher": la lista de TurboGrafx-16 usa esa palabra para la
+        # misma columna, y buscar solo "publisher" la dejaba con la editora en 0%.
+        if "publisher" in cell.lower() or "distributor" in cell.lower():
             return i
     return None
 
 
-def parse(text: str, column: int, publisher_at: int | None, region: str | None = None) -> list[dict]:
+def parse(text: str, column: int, publisher_at: int | None, region: str | None = None,
+          formato_en: int | None = None, formato: str | None = None) -> list[dict]:
     """Filas con fecha en la columna pedida: título, editora y fecha ISO de precisión variable."""
     out = []
     # Se indexa por **celda real**, no por "la enésima plantilla de fecha de la fila": varias listas
@@ -74,12 +77,21 @@ def parse(text: str, column: int, publisher_at: int | None, region: str | None =
 
         # Las celdas de la fila, en orden: título | desarrolladora | editora | …
         fields = [c for c in re.split(r"\n\|(?!\|)", block) if c.strip()]
+        # Filtro por formato: la lista de TurboGrafx-16 mezcla en una sola tabla el cartucho
+        # (HuCard) con los tres formatos de CD, que son consolas distintas —el mismo criterio por
+        # el que Genesis y Sega CD están separadas, y tienen repositorios de carátula distintos—.
+        if formato is not None:
+            celda = clean_cell(fields[formato_en]) if len(fields) > formato_en else ""
+            if not re.search(formato, celda, re.I):
+                continue
         title = clean_cell(fields[0], region) if fields else ""
         if not title:
             continue
         publisher = ""
         if publisher_at is not None and len(fields) > publisher_at:
-            publisher = clean_cell(fields[publisher_at])
+            # Antes de limpiar, hay que elegir: la celda puede traer una editora por mercado
+            # (`[[NEC]] (US)<br>[[Hudson Soft]] (JP)`) y `clean_cell` se come el `<br>` que las separa.
+            publisher = clean_cell(regional_publisher(fields[publisher_at], region))
         # Varias editoras separadas por coma: nos quedamos con la primera, como el resto del dataset.
         publisher = publisher.split(",")[0].strip()
         out.append({"title": title, "publisher": publisher, "releaseDate": iso, "year": int(year)})
@@ -138,6 +150,9 @@ def main() -> None:
     ap.add_argument("--platform", required=True)
     ap.add_argument("--region", required=True)
     ap.add_argument("--cache", help="carpeta donde cachear el wikitext (evita volver a pedirlo)")
+    ap.add_argument("--format-cell", type=int,
+                    help="índice de celda con el formato (TurboGrafx: cartucho vs CD)")
+    ap.add_argument("--format", help="regex que debe cumplir esa celda para incluir la fila")
     ap.add_argument("--layout", choices=("regions-dated", "checkmarks"), default="regions-dated",
                     help="'regions-dated': una fecha por región (PlayStation, GameCube, PS3). "
                          "'checkmarks': una fecha de primer lanzamiento + tildes por región (PS2).")
@@ -161,7 +176,8 @@ def main() -> None:
             column = region_column(text, args.region)
             if column is None:
                 raise SystemExit(f"no encontré la columna de {args.region} en '{page}'")
-            found = parse(text, column, publisher_column(text), args.region)
+            found = parse(text, column, publisher_column(text), args.region,
+                          args.format_cell, args.format)
         where = f"columna {column} · " if column is not None else ""
         print(f"   {page}: {where}{len(found)} juegos", file=sys.stderr)
         rows.extend(found)

@@ -73,6 +73,11 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     // Familia 8-bit: comparten el control del Master System.
     "Sega Game Gear" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF3A2A45), 0.71f), // violeta
     "SG-1000" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF453220), 0.74f),        // marrón
+    // NEC no tiene pad propio todavía: el de Master System es el mando de dos botones de la misma
+    // generación, que es lo que era el de la PC Engine. Aspecto 1.00 medido sobre 40 al azar de
+    // cada uno de los cuatro catálogos —HuCard y CD, japonés y americano, todos dan cuadrado—.
+    "TurboGrafx-16" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF4A2A1E), 1.00f),  // naranja quemado
+    "TurboGrafx-CD" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF2E3350), 1.00f),  // azul acero
     "PlayStation 5" to PlatformStyle(pad("ic_pad_playstation5"), Color(0xFF1E2C5C), 0.80f),   // azul marino
     // Jewel case alta y angosta (medido en Libretro = 0.59; antes estaba en 0.72 y dejaba banda).
     "Sega Saturn" to PlatformStyle(pad("ic_pad_saturn"), Color(0xFF2A2E45), 0.60f),           // slate

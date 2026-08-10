@@ -6,9 +6,9 @@ una región (p. ej. `(Japan` para catálogos NTSC-J, `(Europe` para PAL). Match 
 
 Uso:  python3 tools/enrich_covers_libretro.py <catalogo.json> <repo-libretro> --prefer "(Japan"
 """
-import json, os, re, sys, argparse, urllib.parse
+import json, os, re, sys, argparse, unicodedata, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from catalog_common import fetch, core, COVER_HOST, write_catalog
+from catalog_common import fetch, core, COVER_HOST, write_catalog, _regiones
 
 
 CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".libretro-trees")
@@ -52,28 +52,91 @@ def cover_index(repo: str, prefer: str) -> dict:
     quiero = prefer.strip("( ").upper()
     orden = [quiero, "WORLD", "USA", "EUROPE", "JAPAN", "BRAZIL"]
 
-    def regiones(name: str) -> set[str]:
-        m = re.search(r"\(([^)]*)\)", name)
-        return {x.strip().upper() for x in m.group(1).split(",")} if m else set()
-
     def rank(name: str) -> int:
         base = -100 if any(b in name for b in ("(Beta", "(Proto", "(Demo", "(Sample", "(Pirate")) else 0
-        suyas = regiones(name)
+        suyas = _regiones(name)
         for i, r in enumerate(orden):
             if r in suyas:
                 return base + len(orden) - i
         return base
 
-    idx = {}
+    # Tres índices. `exacto` es el de siempre: el mejor archivo para cada título, venga de donde
+    # venga. Los otros dos solo miran archivos **de la región pedida**, y existen porque el mismo
+    # juego casi nunca se llama igual en los dos mercados:
+    #
+    #   `propio`  el título completo — para cuando sí coincide y solo hay que preferirlo.
+    #   `sinsub`  la parte anterior al " - " — el lanzamiento japonés suele llevar un subtítulo que
+    #             el americano deja afuera (`Dead Moon - Getsu Sekai no Akumu` vs `Dead Moon`), así
+    #             que el emparejamiento exacto solo encontraba el archivo `(USA)` y lo usaba.
+    # `propio` y `sinsub` guardan **todos** los candidatos de cada clave, no el mejor. Quedarse con
+    # uno solo envenena el índice cuando dos títuloscolapsan a la misma clave: `Ys I & II` y `Ys III`
+    # dan los dos `ysiii`, y el primero que entraba se llevaba la clave, así que *Ys III* no
+    # encontraba su propia tapa japonesa aunque existiera. Elegir es tarea de `elegir()`, que sí sabe
+    # qué título se está buscando y puede descartar al impostor.
+    exacto, propio, sinsub = {}, {}, {}
     for t in tree:
         p = t["path"]
         if not p.endswith(".png"):
             continue
         name = p[:-4]
+        url = host + urllib.parse.quote(name + ".png")
         k = core(name)
-        if k not in idx or rank(name) > rank(idx[k][1]):
-            idx[k] = (host + urllib.parse.quote(name + ".png"), name)
-    return {k: v[0] for k, v in idx.items()}
+        # A igual región gana el **nombre más corto**: es el lanzamiento base, y las variantes
+        # (`(Rev 1)`, `(Arcade)`) suelen ser symlinks al canónico, que `raw.githubusercontent` sirve
+        # como texto y la app no puede decodificar. Sin este desempate ganaba la variante —ordena
+        # antes, porque el espacio va antes que el punto— y volvía a meter los symlinks que
+        # `fix_covers_symlink.py` ya había resuelto.
+        if k not in exacto or (rank(name), -len(name)) > (rank(exacto[k][1]), -len(exacto[k][1])):
+            exacto[k] = (url, name)
+        if quiero not in _regiones(name) or rank(name) < 0:
+            continue
+        propio.setdefault(k, []).append((url, name, rank(name)))
+        base = re.split(r"\s+-\s+", re.sub(r"\s*\([^)]*\)", "", name), 1)[0]
+        b = core(base)
+        if b != k:
+            sinsub.setdefault(b, []).append((url, name, rank(name)))
+    return {"exacto": exacto, "propio": propio, "sinsub": sinsub, "quiero": quiero}
+
+
+def _literal(s: str) -> str:
+    """El texto en minúsculas con la puntuación vuelta espacio, **sin aplanarla del todo**."""
+    s = "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+
+
+def _empieza(nombre: str, texto: str) -> bool:
+    """Si el archivo empieza literalmente por [texto], conservando los límites de palabra.
+
+    `core()` borra toda la puntuación, y eso hace colisionar títulos que no tienen nada que ver:
+    `Ys I & II` y `Ys III` colapsan los dos a `ysiii`. Al buscar por título recortado eso le ponía a
+    *Ys III* la tapa de *Ys I & II*. Comparando con los espacios puestos, `ys i ii ...` ya no empieza
+    por `ys iii` y el falso positivo desaparece.
+    """
+    return _literal(nombre).startswith(_literal(texto))
+
+
+def elegir(covers: dict, titulo: str):
+    """URL de la carátula para [titulo], prefiriendo la región pedida sobre el calce exacto.
+
+    El calce exacto manda **solo si el archivo es de nuestra región**. Si no, se buscan alternativas
+    propias antes de conformarse con la extranjera: el mismo título, el título con subtítulo, o el
+    título recortado en los dos puntos (el catálogo dice `Ys III: Wanderers from Ys` y el archivo
+    japonés es `Ys III (Japan)`, o sea al revés: acá el largo es el nuestro).
+    """
+    k = core(titulo)
+    hit = covers["exacto"].get(k)
+    if hit and covers["quiero"] in _regiones(hit[1]):
+        return hit[0]
+    corto = titulo.split(":")[0]
+    for candidatos, exigir in ((covers["propio"].get(k), titulo),
+                               (covers["sinsub"].get(k), titulo),
+                               (covers["propio"].get(core(corto)), corto)):
+        # De los que de verdad empiezan por el título buscado, el mejor rankeado; el desempate va
+        # por nombre más corto, que es el lanzamiento base y no una reedición.
+        validos = [c for c in (candidatos or []) if _empieza(c[1], exigir)]
+        if validos:
+            return max(validos, key=lambda c: (c[2], -len(c[1])))[0]
+    return hit[0] if hit else None
 
 
 def main():
@@ -93,7 +156,7 @@ def main():
     filled = changed = 0
     ejemplos = []
     for e in cat:
-        url = covers.get(core(e["title"]))
+        url = elegir(covers, e["title"])
         if not url:
             continue
         actual = str(e.get("coverUrl") or "").strip()

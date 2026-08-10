@@ -28,6 +28,16 @@ CATALOGS = [
 
 
 def main():
+    # Este script **pisa los catálogos**, que son documentación curada a mano. No tiene argparse, así
+    # que cualquier flag —`--help` incluido— lo ignoraba y corría igual: así se rehornearon sin
+    # querer `nes-usa` y `snes-usa`, restaurando seriales que estaban vaciados a propósito. Ahora
+    # hay que decirlo explícitamente.
+    if "--si-pisar-catalogos" not in sys.argv:
+        print(__doc__)
+        print("PISA LOS CATÁLOGOS. Para correrlo de verdad:")
+        print("    python3 tools/normalize_catalogs.py --si-pisar-catalogos")
+        return
+
     for fname, dat, repo in CATALOGS:
         print(f"== {fname} ==")
         normalize(os.path.join(CAT, fname), dat, repo)

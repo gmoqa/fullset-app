@@ -1,0 +1,14 @@
+{
+  "gate-of-thunder": {
+    "_date": "2026-08-10",
+    "_note": "en EE.UU. no se vendió suelto: venía en el CD triple que acompañaba al Duo, y esa es su única tapa americana",
+    "_source": "libretro-thumbnails/NEC_-_PC_Engine_CD_-_TurboGrafx-CD, Named_Boxarts/Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA).png",
+    "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/NEC_-_PC_Engine_CD_-_TurboGrafx-CD/master/Named_Boxarts/Gate%20of%20Thunder%20%2B%20Bonk%27s%20Adventure%20%2B%20Bonk%27s%20Revenge%20%28USA%29.png"
+  },
+  "sherlock-holmes-consulting-detective-vol-ii": {
+    "_date": "2026-08-10",
+    "_note": "el archivo americano escribe `Volume 2` donde el catálogo dice `Vol. II`",
+    "_source": "libretro-thumbnails/NEC_-_PC_Engine_CD_-_TurboGrafx-CD, Named_Boxarts/Sherlock Holmes - Consulting Detective - Volume 2 (USA).png",
+    "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/NEC_-_PC_Engine_CD_-_TurboGrafx-CD/master/Named_Boxarts/Sherlock%20Holmes%20-%20Consulting%20Detective%20-%20Volume%202%20%28USA%29.png"
+  }
+}

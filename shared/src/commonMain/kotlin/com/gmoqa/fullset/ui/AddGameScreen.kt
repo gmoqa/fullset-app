@@ -403,10 +403,14 @@ private fun ResultRow(
             .padding(vertical = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
+        // Alto fijo, ancho según el aspecto real de la plataforma y región: el ritmo de la lista se
+        // mantiene parejo, pero una carátula cuadrada (PC Engine, jewel case) no se recorta dentro
+        // de un hueco alto pensado para un cartucho. El 46×62 fijo que había recortaba los lados.
+        val alto = 62.dp
         CoverThumb(
             model = entry.coverUrl.ifBlank { CoverArt.primaryUrl(platform, entry.title) },
             contentDescription = null,
-            modifier = Modifier.size(width = 46.dp, height = 62.dp),
+            modifier = Modifier.size(width = alto * coverAspectRatio(platform.name, entry.region), height = alto),
         )
         Column(modifier = Modifier.weight(1f).padding(start = 12.dp)) {
             Text(

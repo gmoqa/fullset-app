@@ -114,8 +114,11 @@ COVER_REGION = {"NTSC-U": "USA", "NTSC-J": "JAPAN", "PAL": "EUROPE"}
 def _regiones_archivo(url):
     """Regiones que declara el nombre de archivo de No-Intro, como conjunto."""
     nombre = urllib.parse.unquote(url.rsplit("/", 1)[-1])
-    m = re.search(r"\(([^)]*)\)", nombre)
-    return {x.strip().upper() for x in m.group(1).split(",")} if m else set()
+    # Todos los paréntesis: la región puede ir en el segundo si el primero desambigua por editora
+    # (`Splash Lake (NEC Avenue) (Japan)`). Ver `catalog_common._regiones`.
+    return {x.strip().upper()
+            for grupo in re.findall(r"\(([^)]*)\)", nombre)
+            for x in grupo.split(",")}
 
 
 def lint_semantica(data, lanzamiento):

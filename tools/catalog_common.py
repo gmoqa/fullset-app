@@ -121,9 +121,16 @@ def core(t):
 
 
 def _regiones(name):
-    """Regiones que declara el nombre de archivo de No-Intro, como conjunto."""
-    m = re.search(r"\(([^)]*)\)", name)
-    return {x.strip().upper() for x in m.group(1).split(",")} if m else set()
+    """Regiones que declara el nombre de archivo de No-Intro, como conjunto.
+
+    Se leen **todos** los paréntesis, no solo el primero: cuando el nombre desambigua por editora,
+    la región queda en el segundo —`Splash Lake (NEC Avenue) (Japan)`— y mirando solo el primero la
+    región de ese archivo salía «NEC AVENUE». Al no reconocerse como japonés perdía contra
+    `Splash Lake (USA)`, y un catálogo japonés terminaba con la tapa americana.
+    """
+    return {x.strip().upper()
+            for grupo in re.findall(r"\(([^)]*)\)", name)
+            for x in grupo.split(",")}
 
 
 def _rank(name, prefs):
@@ -198,7 +205,16 @@ def canonical(entry):
 
 # Lo que separa el título principal de sus nombres alternativos. `<br>` en cualquiera de sus formas
 # (`<br/>`, `<br />`, `<BR>`) y la viñeta que algunas listas agregan además.
-SEPARADOR_TITULO = re.compile(r"<br\s*/?>|•", re.I)
+#
+# El `\s*` antes del `>` no es adorno: la lista de PS2 escribe el tag **partido por un salto de
+# línea** (`<br /\n>`). Sin eso no separaba, el título se cortaba en el salto y quedaban entradas
+# literales como `Club Football<br /`.
+SEPARADOR_TITULO = re.compile(r"<br\s*/?\s*>|•", re.I)
+
+# Un `<br>` no siempre separa dos nombres: a veces solo parte un título largo en dos renglones, y
+# entonces el primer trozo queda colgando de su conector —`''Adventure Quiz: Capcom World /''<br/>
+# ''Hatena no Daibōken''`—. Cortar ahí deja el título mutilado, con la barra al final.
+CONECTOR_COLGANDO = re.compile(r"[/:,-]\s*(?:'')?\s*$")
 
 # Región del catálogo -> cómo la marca el `<sup>` del título alternativo.
 TITLE_SUP = {"NTSC-U": ("NA", "US", "USA"), "NTSC-J": ("JP", "JPN"), "PAL": ("PAL", "EU", "EUR")}
@@ -226,6 +242,13 @@ def regional_title(text: str, region: str | None) -> str:
     Sin `region`, o si ningún alternativo es de la nuestra, vale el principal.
     """
     partes = SEPARADOR_TITULO.split(text)
+    # Título partido en dos renglones, no dos nombres: se vuelve a unir antes de elegir nada.
+    while len(partes) > 1 and CONECTOR_COLGANDO.search(partes[0]):
+        # Se descartan las comillas de cursiva que cerraban un renglón y abrían el otro: al unir
+        # los dos trozos sobran en el medio, y sin sacarlas quedan en mitad del título.
+        izq = partes[0].rstrip().rstrip("'").rstrip()
+        der = partes[1].lstrip().lstrip("'").lstrip()
+        partes = [f"{izq} {der}"] + partes[2:]
     if len(partes) > 1 and region:
         for alt in partes[1:]:
             marca = re.search(r"<sup>\s*([A-Za-z/]+)\s*</sup>|\^([A-Za-z]+)", alt)
@@ -235,6 +258,42 @@ def regional_title(text: str, region: str | None) -> str:
     # El principal también puede traer marca —`''Mia Hamm Soccer 64''<sup>NA</sup><br/>…`— y hay que
     # sacársela igual: si no, queda "Mia Hamm Soccer 64NA".
     return _sin_marca(partes[0])
+
+
+# Región del catálogo -> cómo la marca el paréntesis que acompaña a cada editora.
+PUBLISHER_PAREN = {"NTSC-U": ("US", "NA", "USA"), "NTSC-J": ("JP", "JPN"), "PAL": ("EU", "PAL", "EUR")}
+
+
+def regional_publisher(text: str, region: str | None) -> str:
+    """
+    De una celda con **varias editoras marcadas por mercado**, la que corresponde a [region].
+
+    Un juego podía salir con distinta editora en cada región, y la lista lo escribe todo junto:
+
+        [[NEC]] (US)<br>[[Hudson Soft]] (JP)
+
+    Quedarse siempre con la primera le ponía a *Aero Blasters* la editora americana **también en el
+    catálogo japonés** —y con el `(US)` pegado—, así que el catálogo japonés repetía las 57 «NEC
+    (US)» y 16 «TTI (US)» del americano. Es el mismo problema que [regional_title] resuelve para el
+    nombre, pero acá el mercado va entre paréntesis en vez de en un `<sup>`.
+
+    Si no hay marcas, o ninguna es de nuestra región, vale la primera: una sola editora para todos
+    los mercados es el caso normal.
+    """
+    partes = [p for p in SEPARADOR_TITULO.split(text) if p.strip()]
+    if not partes:
+        return text
+    if region and len(partes) > 1:
+        for parte in partes:
+            marca = re.search(r"\(([A-Za-z]{2,3})\)\s*$", parte.strip())
+            if marca and marca.group(1).upper() in PUBLISHER_PAREN.get(region, ()):
+                return _sin_paren(parte)
+    return _sin_paren(partes[0])
+
+
+def _sin_paren(texto: str) -> str:
+    """Saca el `(US)`/`(JP)` final: es un marcador de mercado, no parte del nombre de la editora."""
+    return re.sub(r"\s*\((?:US|NA|USA|JP|JPN|EU|PAL|EUR)\)\s*$", "", texto.strip(), flags=re.I)
 
 
 def _sin_marca(texto: str) -> str:
