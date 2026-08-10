@@ -13,11 +13,18 @@ prevalecen sobre la de este proyecto para las partes correspondientes.
 
 ## Íconos
 
-- **Controllercons** — `app/src/main/res/drawable/ic_pad_*.xml`
-  Íconos de control por consola (NES, SNES, N64, Genesis, Master System, PlayStation, etc.),
-  convertidos de SVG a vector drawables de Android. Copyright (c) 2023 Kieran McClung, bajo
-  **SIL Open Font License 1.1**. Ver `LICENSES-controllercons.txt` y
-  https://controllercons.github.io. Reemplazan a los logos de marca de las consolas.
+- **Controllercons** — `shared/src/commonMain/composeResources/drawable/ic_pad_*.xml`
+  Íconos de control por consola (Atari 2600, NES, SNES, N64, GameCube, Genesis, Master System,
+  Saturn, Dreamcast, PlayStation 1/2/3/5), convertidos del SVG **solid** de la v2.1 a vector
+  drawables. Copyright (c) 2023 Kieran McClung, bajo **SIL Open Font License 1.1**. Ver
+  `LICENSES-controllercons.txt` y https://controllercons.github.io. Reemplazan a los logos de marca
+  de las consolas, que son marca registrada.
+
+  El set trae **30 íconos** y usamos 13. Las consolas sin ícono propio reusan el de su familia
+  —Sega CD y 32X el del Genesis; Game Gear, SG-1000 y las dos TurboGrafx el del Master System—
+  porque compartían el control o eran accesorios de la misma máquina. Antes de dar por sentado que
+  falta uno, conviene mirar el inventario: `atari-2600`, `gamecube` y `ps3` estuvieron ahí todo el
+  tiempo mientras la app dibujaba un mando genérico en su lugar.
 
 ## Dependencias (resueltas por Gradle, no incluidas en el repo)
 

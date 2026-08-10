@@ -59,9 +59,8 @@ private fun pad(name: String): DrawableResource? = Res.allDrawableResources[name
 // consistente dentro de cada una). Reserva un alto estable en las listas para que el tile no salte
 // al pasar del placeholder a la imagen cargada, sin bandas negras (el aspecto coincide con el real).
 private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
-    // Controllercons no trae el joystick de la 2600, así que cae al mando genérico de
-    // `PlatformGlyph`. El color es el negro cálido de la consola —plástico negro sobre el panel de
-    // madera—, y siendo la única de 2ª generación abre la grilla siendo también la más oscura.
+    // El color es el negro cálido de la consola —plástico negro sobre el panel de madera—, y siendo
+    // la única de 2ª generación abre la grilla siendo también la más oscura.
     // Aspecto 0.735 medido sobre 38 carátulas al azar, con p10 y p90 los dos en 0.74: rarísimo de
     // parejo, la caja de la 2600 no cambió nunca.
     "Atari 2600" to PlatformStyle(pad("ic_pad_atari2600"), Color(0xFF33261F), 0.74f),          // negro cálido
@@ -69,9 +68,6 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     "Sega Master System" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF3A2530), 0.70f), // granate
     "Super Nintendo" to PlatformStyle(pad("ic_pad_snes"), Color(0xFF302C48), 1.41f),          // índigo
     "Nintendo 64" to PlatformStyle(pad("ic_pad_n64"), Color(0xFF243A2A), 1.40f),              // verde
-    // Sin ícono propio en Controllercons. `pad()` devuelve null y cae al **mando genérico** de
-    // `PlatformGlyph` — no al del N64, que sería mentir: es otro control. El genérico no afirma
-    // nada, y dejar el cubo sin glifo se leería como que la consola está rota.
     // El aspecto es parejo en las tres regiones (medido ~0.71).
     "GameCube" to PlatformStyle(pad("ic_pad_gamecube"), Color(0xFF3B2A55), 0.71f),            // violeta
     "PlayStation" to PlatformStyle(pad("ic_pad_playstation"), Color(0xFF26262E), 1.00f),      // gris
@@ -92,10 +88,8 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     "Sega Saturn" to PlatformStyle(pad("ic_pad_saturn"), Color(0xFF2A2E45), 0.60f),           // slate
     "Dreamcast" to PlatformStyle(pad("ic_pad_dreamcast"), Color(0xFF24384A), 1.00f),          // steel blue (jewel case cuadrada, medido en Libretro = 1.00)
     "PlayStation 2" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1E2038), 0.71f),   // azul oscuro
-    // Reusa el pad de PS2: el DualShock 3 conserva la silueta del 2 (el control "boomerang" que se
-    // mostró en 2005 nunca salió), así que no es otro control como sí lo sería el del N64.
     // Sus tapas vienen de SteamGridDB, que las entrega todas en 600×900 = 0.67.
-    "PlayStation 3" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1A1A1A), 0.67f),   // negro piano
+    "PlayStation 3" to PlatformStyle(pad("ic_pad_playstation3"), Color(0xFF1A1A1A), 0.67f),   // negro piano
 )
 
 /** Color de la franja del header de cada plataforma (o `null` → color neutro del tema). */
@@ -324,9 +318,10 @@ fun PlatformGlyph(
      * mismo tinte**.
      *
      * El tinte va acá y no en cada llamada porque exigirlo afuera es pedir que nadie se olvide, y
-     * alguien se olvidó: la GameCube no tiene `ic_pad_gamecube`, caía a este mando, y el fallback lo
-     * pintaba en blanco puro mientras los otros diecisiete iban atenuados. Un solo cubo gritando en
-     * la grilla y ninguna forma de notarlo leyendo el sitio del error.
+     * alguien se olvidó: la GameCube caía a este mando —le faltaba el suyo— y el fallback lo pintaba
+     * en blanco puro mientras los otros diecisiete iban atenuados. Un solo cubo gritando en la
+     * grilla y ninguna forma de notarlo leyendo el sitio del error. Hoy ninguna plataforma con
+     * catálogo cae acá, pero el default sigue siendo la red de contención de la próxima.
      */
     fallback: @Composable () -> Unit = {
         Icon(
