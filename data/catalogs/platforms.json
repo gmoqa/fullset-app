@@ -1,5 +1,32 @@
 [
   {
+    "id": "atari-2600",
+    "name": "Atari 2600",
+    "catalogs": {
+      "NTSC-U": "catalogs/atari-2600-usa.json"
+    },
+    "libretroRepo": "Atari_-_2600",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Atari",
+      "generation": 2,
+      "media": "Cartridge",
+      "released": {
+        "ntsc": 1977,
+        "pal": 1978
+      },
+      "discontinued": 1992,
+      "unitsSold": "30M",
+      "cpu": "MOS 6507 @ 1.19 MHz",
+      "description": "The console that made the cartridge the standard: before it, a machine played the games built into it. Its 128 bytes of RAM forced programmers to draw the screen line by line as the beam swept it, a technique they called racing the beam. In Japan it was sold as the Atari 2800."
+    },
+    "counts": {
+      "NTSC-U": 471,
+      "NTSC-J": 471,
+      "PAL": 471
+    }
+  },
+  {
     "id": "nes",
     "name": "NES",
     "catalogs": {

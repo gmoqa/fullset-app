@@ -179,6 +179,41 @@ o sea después de toda la era que catalogamos (la Dreamcast se discontinuó en 2
 europeo es ELSPA salvo lanzamientos tardíos. En Japón, antes de CERO (2002) regía la autorregulación
 de Sega: 全年齢 (todas las edades), 18禁 y la marca X. En EE.UU., VRC hasta 1994 y ESRB después.
 
+**Atari 2600: una sola región, y eso es un hueco, no un dato.** La consola que convirtió el
+cartucho en el estándar (1977) abre el dataset por abajo: es la única de **2ª generación**.
+
+| Catálogo | Juegos | año/editora/género/cover |
+|---|---|---|
+| `atari-2600-usa.json` | 471 | 93/99/**92**/96 |
+
+**El género al 92% es la excepción del dataset.** En siete consolas ese campo está en 0% porque
+libretro no publica `metadat/genre` para ellas. Para la 2600 lo publica —703 entradas— *y además*
+Wikipedia lo trae en columna, así que sale de las dos fuentes en merge.
+
+**Tiene builder propio** (`build_atari2600_catalog.py`) porque su página **no tiene eje de región**:
+donde las demás listas traen un bloque `colspan` con Japón / Norteamérica / Europa y una fecha por
+mercado, esta trae una sola columna `Year`. El `build()` genérico se ancla justo a ese bloque. Son
+además dos tablas con columnas distintas: de la de Atari y Sears sale el **serial** (el número CX
+impreso en el cartucho, 10%) y de la de terceros el **género**.
+
+**Solo NTSC-U, y hay que decirlo como lo que es.** La 2600 sí tuvo mercado PAL —libretro tiene 139
+carátulas europeas, y 25 japonesas de la **Atari 2800**, que es como se vendió allá— pero esa página
+no distingue mercados y no hay de dónde sacar esas listas. Es **distinto** de la SG-1000 (que solo
+existió en Japón) y de la TurboGrafx (que nunca se vendió en Europa): ahí la región única es la
+verdad; acá es lo que tenemos. Si aparece una fuente regional, el modelo ya la admite sin cambios.
+
+**De las seis tablas de la página entran dos.** Quedan afuera `Homebrew games` y `Prototypes` (no se
+vendieron en su época), `Official aftermarket releases` y `Multi-game cartridges` (reediciones de los
+2020 para la Atari 2600+), `Xonox double-sided cartridges` (cartuchos 2-en-1 cuyos juegos, dice la
+propia sección, "were also available individually": ya están en la tabla de terceros, entrarían
+duplicados bajo títulos compuestos) y `Non-game cartridges` (`Color Bar Generator`, `Venetian
+Blinds`).
+
+Ojo con el corte de secciones: las cuatro primeras que se excluyen son de **nivel 3** y cuelgan de
+las dos que sí queremos, así que hay que cortar en el próximo encabezado **de cualquier nivel**.
+Cortando en el próximo nivel 2 se colaban enteras: la primera versión traía 581 juegos con
+multicarts y homebrew de AtariAge adentro, con la cobertura hundida (carátula 81% contra 96%).
+
 **NEC: dos regiones, y es lo correcto.** PC Engine (Japón, 1987) y TurboGrafx-16 (Norteamérica,
 1989) son la misma consola con dos nombres, más su periférico de CD —el **primer CD de consola de la
 historia**—. Se arman de una sola página de Wikipedia (`List of TurboGrafx-16 games`), que mezcla en

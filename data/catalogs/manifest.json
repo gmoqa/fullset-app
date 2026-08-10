@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "2429eca0ada4",
+  "version": "0d63189c1778",
   "files": [
     {
       "path": "catalogs/platforms.json",
-      "bytes": 13914,
-      "sha256": "5e2eaa7014d8e384b793ba96fe3d404b385494efa386ca14344b3c10405feb10"
+      "bytes": 14748,
+      "sha256": "55869b7f6854ba49ddd974cee0bae54cbb1fd799a6bb26864d74886049812b68"
     },
     {
       "path": "catalogs/32x-eu.json",
@@ -44,6 +44,19 @@
         "publisher": 87,
         "serial": 96,
         "coverUrl": 87
+      }
+    },
+    {
+      "path": "catalogs/atari-2600-usa.json",
+      "platform": "Atari 2600",
+      "games": 471,
+      "bytes": 163080,
+      "sha256": "8549260dede8098b5a76e60796db447e21604be5b05818213720f1df8edba79d",
+      "coverage": {
+        "year": 93,
+        "publisher": 99,
+        "serial": 10,
+        "coverUrl": 96
       }
     },
     {

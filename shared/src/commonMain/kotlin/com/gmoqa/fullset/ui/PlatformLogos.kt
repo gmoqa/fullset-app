@@ -59,6 +59,12 @@ private fun pad(name: String): DrawableResource? = Res.allDrawableResources[name
 // consistente dentro de cada una). Reserva un alto estable en las listas para que el tile no salte
 // al pasar del placeholder a la imagen cargada, sin bandas negras (el aspecto coincide con el real).
 private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
+    // Controllercons no trae el joystick de la 2600, así que cae al mando genérico de
+    // `PlatformGlyph`. El color es el negro cálido de la consola —plástico negro sobre el panel de
+    // madera—, y siendo la única de 2ª generación abre la grilla siendo también la más oscura.
+    // Aspecto 0.735 medido sobre 38 carátulas al azar, con p10 y p90 los dos en 0.74: rarísimo de
+    // parejo, la caja de la 2600 no cambió nunca.
+    "Atari 2600" to PlatformStyle(pad("ic_pad_atari2600"), Color(0xFF33261F), 0.74f),          // negro cálido
     "NES" to PlatformStyle(pad("ic_pad_nes"), Color(0xFF472A28), 0.70f),                       // rojo ladrillo
     "Sega Master System" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF3A2530), 0.70f), // granate
     "Super Nintendo" to PlatformStyle(pad("ic_pad_snes"), Color(0xFF302C48), 1.41f),          // índigo
