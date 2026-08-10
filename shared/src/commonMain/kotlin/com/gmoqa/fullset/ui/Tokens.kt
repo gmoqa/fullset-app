@@ -115,7 +115,7 @@ object Tokens {
         /** Alto máximo de una lista dentro de un diálogo, para que el botón no quede fuera. */
         val dialogList = 320.dp
         /** Ícono grande de una tarjeta de elección (la pregunta del primer arranque). */
-        val onboardingIcon = 44.dp
+        val choiceIcon = 44.dp
         /** Ancho tope de un bloque centrado, para que no se estire en tablet. */
         val contentMax = 420.dp
 

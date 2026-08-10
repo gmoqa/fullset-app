@@ -51,7 +51,7 @@ fun RowScope.ChoiceCard(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        val iconMod = Modifier.size(Tokens.Size.onboardingIcon)
+        val iconMod = Modifier.size(Tokens.Size.choiceIcon)
         val tint = MaterialTheme.colorScheme.primary
         when {
             painter != null -> Icon(painter, contentDescription = null, modifier = iconMod, tint = tint)

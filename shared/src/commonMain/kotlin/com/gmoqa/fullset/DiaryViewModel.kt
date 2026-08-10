@@ -333,8 +333,6 @@ class DiaryViewModel(
 
     fun trackingMode(): TrackingMode = repo.trackingMode()
     fun setTrackingMode(mode: TrackingMode) = repo.setTrackingMode(mode)
-    fun onboardingDone(): Boolean = repo.onboardingDone()
-    fun setOnboardingDone() = repo.setOnboardingDone()
     fun themeMode(): ThemeMode = repo.themeMode()
     fun setThemeMode(mode: ThemeMode) = repo.setThemeMode(mode)
     fun regionFilter(): RegionFilter = repo.regionFilter()

@@ -354,13 +354,6 @@ class DiaryRepository(
         settings.putString(TRACKING_KEY, mode.key)
     }
 
-    /** Si ya se eligió modo alguna vez. Falso solo en el primer arranque. */
-    fun onboardingDone(): Boolean = settings.getBoolean(ONBOARDING_KEY, false)
-
-    fun setOnboardingDone() {
-        settings.putBoolean(ONBOARDING_KEY, true)
-    }
-
     fun themeMode(): ThemeMode = ThemeMode.fromKey(settings.getStringOrNull(THEME_KEY))
 
     fun setThemeMode(mode: ThemeMode) {
@@ -411,7 +404,6 @@ class DiaryRepository(
 
     companion object {
         private const val TRACKING_KEY = "tracking_mode"
-        private const val ONBOARDING_KEY = "onboarding_done"
         private const val THEME_KEY = "theme_mode"
         private const val REGION_KEY = "region_filter"
         private const val LANGUAGE_KEY = "transcription_language"

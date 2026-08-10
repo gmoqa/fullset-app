@@ -61,7 +61,6 @@ import com.gmoqa.fullset.ui.BackHandler
 import com.gmoqa.fullset.ui.CatalogMark
 import com.gmoqa.fullset.ui.DiarioGamerTheme
 import com.gmoqa.fullset.ui.GameDetailScreen
-import com.gmoqa.fullset.ui.OnboardingScreen
 import com.gmoqa.fullset.ui.TimelineScreen
 import com.gmoqa.fullset.ui.GameListScreen
 import com.gmoqa.fullset.ui.LibraryScreen
@@ -107,9 +106,12 @@ fun App(
     var showLabels by remember { mutableStateOf(vm.showCollectionLabels()) }
     var showConsoleTitles by remember { mutableStateOf(vm.showConsoleTitles()) }
     var sortOrder by remember { mutableStateOf(vm.sortOrder()) }
+    // Arranca en COLLECTION_AND_DIARY —lo que devuelve `TrackingMode.fromKey(null)`— y se cambia
+    // en Settings. **No se pregunta al abrir por primera vez.** Preguntarlo ahí obligaba a decidir
+    // antes de haber visto nada: el modo solo esconde secciones, no cambia qué se guarda, así que
+    // no hay nada que la app necesite saber de antemano. Mostrar todo y dejar que se recorte
+    // después le da a la pregunta el contexto que le faltaba.
     var trackingMode by remember { mutableStateOf(vm.trackingMode()) }
-    // Solo en el primer arranque: después queda elegido y se cambia desde Settings.
-    var needsOnboarding by remember { mutableStateOf(!vm.onboardingDone()) }
     val darkTheme = when (themeMode) {
         ThemeMode.LIGHT -> false
         ThemeMode.DARK -> true
@@ -121,15 +123,7 @@ fun App(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background,
         ) {
-            if (needsOnboarding) {
-                // Va después del gate de `ready` para no preguntar sobre una app a medio sembrar.
-                OnboardingScreen(onPick = { mode ->
-                    trackingMode = mode
-                    vm.setTrackingMode(mode)
-                    vm.setOnboardingDone()
-                    needsOnboarding = false
-                })
-            } else if (!ready) {
+            if (!ready) {
                 // Carga breve mientras siembra (solo perceptible en la primera instalación).
                 Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     CircularProgressIndicator()
