@@ -24,8 +24,8 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -121,9 +121,6 @@ fun AddGameScreen(
     region: RegionFilter = RegionFilter.NTSC_U,
 ) {
     var selected by remember { mutableStateOf<Platform?>(null) }
-    // Arranca en tu región (la de Settings) y se puede cambiar acá mismo para este alta, sin tocar
-    // la preferencia global: agregar un import japonés no debería obligar a ir y volver de Settings.
-    var pickedRegion by remember(region) { mutableStateOf(region) }
     val platform = selected
     // Ficha técnica de la plataforma elegida (misma ⓘ que en Collection, en la franja del paso 2).
     var showInfo by remember { mutableStateOf(false) }
@@ -148,24 +145,15 @@ fun AddGameScreen(
                 // Paso 2: la franja de la plataforma ES el encabezado, con la flecha adentro.
                 PlatformBandHeader(
                     platform = platform.name,
-                    // Precalculado en el config: contarlo acá obligaba a parsear el catálogo de la
-                    // región solo para poner un número en la franja, y esa lista todavía no hacía
-                    // falta. Null (la PS5) = sin catálogo, sin badge.
-                    count = platform.countFor(pickedRegion),
+                    // El total de la consola, sumando sus regiones: la lista de abajo las muestra
+                    // todas de corrido, así que el número tiene que contar lo mismo que se ve.
+                    // Sale del config precalculado; contarlo acá obligaba a parsear los catálogos
+                    // solo para poner un número. Null (la PS5) = sin catálogo, sin badge.
+                    count = catalog.countAllRegions(platform).takeIf { it > 0 },
                     onBack = { selected = null },
                     // Misma ficha que en Collection: solo si la plataforma la trae.
                     onInfo = if (platform.info != null) ({ showInfo = true }) else null,
                     windowInsets = WindowInsets.statusBars,
-                    trailing = {
-                        val regions = remember(platform) { platform.selectableRegions() }
-                        if (regions.size > 1) {
-                            RegionPicker(
-                                current = pickedRegion,
-                                options = regions,
-                                onSelect = { pickedRegion = it },
-                            )
-                        }
-                    },
                 )
             }
         },
@@ -174,10 +162,7 @@ fun AddGameScreen(
             if (platform == null) {
                 PlatformStep(platforms = platforms, region = region, onSelect = { selected = it })
             } else {
-                TitleStep(
-                    platform = platform, catalog = catalog, region = pickedRegion,
-                    marks = marks, onPicked = onPicked,
-                )
+                TitleStep(platform = platform, catalog = catalog, marks = marks, onPicked = onPicked)
             }
         }
 
@@ -260,6 +245,33 @@ private val CUBO_MIN = 150.dp
  */
 private const val GLIFO_ALPHA = 0.68f
 
+/**
+ * Encabezado de una región dentro del catálogo de una consola. Mismo idioma que el de generación:
+ * ámbar para el rótulo, apagado para el dato de apoyo.
+ *
+ * Marca dónde termina una lista y empieza la otra. Sin él la transición sería invisible —el título
+ * 93 es americano y el 94 japonés— y se leería como que la lista se desordenó sola.
+ */
+@Composable
+private fun RegionSectionHeader(region: String, count: Int) {
+    Row(
+        modifier = Modifier.fillMaxWidth().padding(top = 14.dp, bottom = 2.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Text(
+            region.ifBlank { "Sin región" },
+            style = MaterialTheme.typography.titleSmall,
+            color = MaterialTheme.colorScheme.primary,
+        )
+        Text(
+            "$count games",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+}
+
 /** Encabezado de generación: el mismo idioma que las secciones de Settings (ámbar + apoyo apagado). */
 @Composable
 private fun GenerationHeader(grupo: PlatformGeneration) {
@@ -315,10 +327,13 @@ private fun PlatformCube(platform: Platform, region: RegionFilter, onClick: () -
                 tint = Color.White.copy(alpha = GLIFO_ALPHA),
             )
         }
-        // El conteo viene del config, ya calculado: abrir los quince catálogos solo para poner
-        // "668 games" congelaba la grilla casi medio segundo. Sin conteo (la PS5) se carga a mano.
-        val tag = platform.countFor(region)?.let { "$it games" } ?: "Add by hand"
-        CubeCaption(name = platform.name, tag = tag, tagColor = Color.White.copy(alpha = 0.7f))
+        // El total de la consola, no el de una región: es lo que se ve al entrar. Viene del config
+        // ya calculado — abrir los dieciocho catálogos solo para poner "668 games" congelaba la
+        // grilla casi medio segundo. Sin conteo (la PS5) se carga a mano.
+        val tag = platform.totalCount().takeIf { it > 0 }?.let { "$it games" } ?: "Add by hand"
+        // El mismo rótulo doble que la franja de adentro: si el cubo dice "TurboGrafx-16" y al
+        // entrar dice "PC Engine / TurboGrafx-16", el que busca la PC Engine no la encuentra acá.
+        CubeCaption(name = platformDisplayName(platform.name), tag = tag, tagColor = Color.White.copy(alpha = 0.7f))
     }
 }
 
@@ -391,14 +406,28 @@ private fun CubeCaption(name: String, tag: String, tagColor: Color, modifier: Mo
 private fun TitleStep(
     platform: Platform,
     catalog: GameCatalog,
-    region: RegionFilter,
     marks: List<CatalogMark>,
     onPicked: (platform: Platform, entry: CatalogEntry, coverUrl: String) -> Unit,
 ) {
     var query by remember { mutableStateOf("") }
     var saving by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
-    val results = remember(platform, query, region) { catalog.search(platform, region, query) }
+    // Sin texto tipeado se recorre **la consola entera**, región por región y en orden (NTSC-U,
+    // NTSC-J, PAL), con un encabezado por bloque. Con texto se busca sobre todas juntas y el
+    // resultado sale por relevancia, sin separar: quien escribe "castlevania" quiere ver los
+    // Castlevania, no recorrer tres bloques para encontrarlos.
+    val buscando = query.isNotBlank()
+    val results = remember(platform, query) {
+        if (buscando) catalog.searchAllRegions(platform, query) else catalog.entriesAllRegions(platform)
+    }
+    // Dónde arranca cada región dentro de la lista, para poner el encabezado justo ahí. Solo tiene
+    // sentido navegando: buscando, el orden es el del ranking y las regiones quedan entremezcladas.
+    val cortes = remember(results, buscando) {
+        if (buscando) emptyMap() else results.withIndex()
+            .groupBy { it.value.region }
+            .mapNotNull { (region, items) -> items.first().index to (region to items.size) }
+            .toMap()
+    }
     // Lo ya registrado de esta plataforma, indexado por slug y por título (los juegos viejos del
     // Excel pueden no tener slug). Como `marks` es reactivo, al agregar uno la etiqueta sale sola.
     // Las que bloquean se indexan últimas: si un juego está en la colección y en la wishlist, manda
@@ -430,7 +459,10 @@ private fun TitleStep(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        items(results) { entry ->
+        itemsIndexed(results) { indice, entry ->
+            cortes[indice]?.let { (region, cuantos) ->
+                RegionSectionHeader(region = region, count = cuantos)
+            }
             val owned = markIndex[entry.slug] ?: markIndex[entry.title.lowercase()]
             // Tener la edición americana no impide querer la japonesa: son piezas distintas. Solo
             // bloquea la copia de la MISMA región; la de otra se muestra como dato, sin trabar.

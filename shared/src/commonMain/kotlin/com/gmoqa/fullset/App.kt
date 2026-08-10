@@ -315,9 +315,12 @@ private fun AppRoot(
                 val platformObj = remember(current.platform) {
                     platforms.firstOrNull { it.name == current.platform }
                 }
-                // Catálogo completo de la consola: la vista marca cuáles tenés y cuáles faltan.
+                // Catálogo completo de la consola —**todas sus regiones**, en orden—: la vista
+                // marca cuáles tenés y cuáles faltan. Antes traía solo la región por defecto, así
+                // que un juego japonés de tu colección aparecía como "extra" fuera de la lista de
+                // su propia consola.
                 val catalogEntries = remember(platformObj) {
-                    platformObj?.let { catalog.entries(it, regionFilter) } ?: emptyList()
+                    platformObj?.let { catalog.entriesAllRegions(it) } ?: emptyList()
                 }
                 PlatformScreen(
                     platform = current.platform,

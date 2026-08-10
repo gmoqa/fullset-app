@@ -57,7 +57,35 @@ class GameCatalog(private val readAsset: (String) -> String? = ::readTextAsset) 
         }
     }
 
-    /** Mismo buscador difuso que la colección: tolera acentos, orden de palabras y typos. */
-    fun search(platform: Platform, region: RegionFilter, query: String, limit: Int = 60): List<CatalogEntry> =
-        GameSearch.rank(entries(platform, region), query, limit) { it.title }
+    /**
+     * **Todas** las listas de la consola, una detrás de otra: primero NTSC-U, después NTSC-J, al
+     * final PAL.
+     *
+     * La consola es una sola máquina aunque haya tenido dos nombres, así que su catálogo se lee de
+     * corrido y no cambiando de solapa. El mismo juego puede aparecer más de una vez —la edición
+     * americana y la japonesa son dos piezas distintas, con su tapa, su año y su editora— y eso es
+     * a propósito: son dos cosas que se pueden tener por separado.
+     *
+     * Se recorren las regiones **declaradas** y no las tres: [Platform.catalogFor] tiene respaldo, y
+     * pedirle PAL a la TurboGrafx devolvería el archivo americano de nuevo.
+     */
+    fun entriesAllRegions(platform: Platform): List<CatalogEntry> {
+        val regiones = platform.declaredRegions()
+        if (regiones.isEmpty()) return entries(platform)
+        return regiones.flatMap { entries(platform, it) }
+    }
+
+    /** Cuántos juegos suman todas las listas de la consola. */
+    fun countAllRegions(platform: Platform): Int =
+        platform.totalCount().takeIf { it > 0 } ?: entriesAllRegions(platform).size
+
+    /**
+     * Mismo buscador difuso que la colección: tolera acentos, orden de palabras y typos.
+     *
+     * Busca sobre las listas juntas. Con texto tipeado el resultado sale **ordenado por relevancia
+     * y sin separar por región**: quien escribe "castlevania" quiere ver los Castlevania, no
+     * recorrer tres bloques para encontrarlos.
+     */
+    fun searchAllRegions(platform: Platform, query: String, limit: Int = 60): List<CatalogEntry> =
+        GameSearch.rank(entriesAllRegions(platform), query, limit) { it.title }
 }

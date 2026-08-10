@@ -61,6 +61,22 @@ data class Platform(
      * grilla se reacomodaría sola al cambiar la región por defecto, que se lee como un error.
      */
     val debutYear: Int? get() = info?.released?.values?.minOrNull()
+
+    /**
+     * Las regiones que esta consola **declara**, en el orden en que se muestran: NTSC-U, NTSC-J, PAL.
+     *
+     * A diferencia de [catalogFor], acá **no hay respaldo**: si la TurboGrafx no declara PAL, PAL no
+     * está. Eso importa cuando se juntan las listas de todas las regiones, porque el respaldo
+     * devolvería el archivo americano otra vez y el mismo juego aparecería dos veces bajo dos
+     * banderas distintas.
+     */
+    fun declaredRegions(): List<RegionFilter> = RegionFilter.entries.filter { it.label in catalogs }
+
+    /**
+     * Cuántos juegos suman **todas** sus listas. Es lo que se ve al entrar, así que es lo que tiene
+     * que decir el cubo de la grilla: mostrar solo el americano prometía 93 y adentro había 381.
+     */
+    fun totalCount(): Int = declaredRegions().sumOf { countFor(it) ?: 0 }
 }
 
 /** Una generación de consolas y las que le pertenecen, ya ordenadas por año de debut. */

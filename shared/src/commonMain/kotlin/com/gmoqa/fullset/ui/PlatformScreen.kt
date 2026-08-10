@@ -94,7 +94,10 @@ fun PlatformScreen(
         (fromCatalog + extras)
             .sortedWith(compareBy({ it.releaseDate.ifBlank { it.year?.toString() ?: "9999" } }, { it.title.lowercase() }))
     }
-    val ownedCount = rows.count { it.ownedId != null }
+    // Por juego **distinto**, no por fila: al juntar las regiones, una misma copia matchea por slug
+    // en la lista americana y en la japonesa, y contando filas "3 of 381" pasaba a decir "6 of 381"
+    // sin que hubieras agregado nada.
+    val ownedCount = rows.mapNotNull { it.ownedId }.distinct().size
     // Con catálogo: "X de Y" (completitud). Sin catálogo (PS5…): solo el conteo de los que tenés.
     val countLabel = if (catalog.isEmpty()) "${rows.size} · by release"
     else "$ownedCount of ${rows.size} · by release"
@@ -209,7 +212,14 @@ private fun PlatformGameRow(
                 model = row.coverModel,
                 contentDescription = row.title,
                 grayscale = !owned,
-                modifier = Modifier.height(56.dp).aspectRatio(coverAspectRatio(platform, region.label)),
+                // El aspecto sale de la región **de esta fila**, no de la global: la lista mezcla
+                // las regiones de la consola y en algunas la caja cambió de forma —la Sega CD
+                // japonesa es un jewel case cuadrado y la americana una caja alta—. Con un solo
+                // número, media lista queda con banda a los costados. Sin entrada de catálogo (un
+                // alta a mano) se usa la región que tenés puesta, que es el mejor dato disponible.
+                modifier = Modifier
+                    .height(56.dp)
+                    .aspectRatio(coverAspectRatio(platform, row.entry?.region ?: region.label)),
             )
             if (owned) {
                 // ✓ en la esquina para los que tenés (disco de color con halo para leerse siempre).

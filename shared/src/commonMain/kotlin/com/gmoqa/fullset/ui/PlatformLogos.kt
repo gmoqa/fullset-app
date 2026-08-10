@@ -48,6 +48,16 @@ private data class PlatformStyle(
     val padIcon: DrawableResource?,
     val bandColor: Color,
     val coverAspect: Float,
+    /**
+     * Cómo se rotula la consola cuando tuvo **dos nombres según el mercado**, con el japonés
+     * primero: es el original —todas salieron antes allá— y además es el que corresponde a la
+     * mitad de la lista que de otro modo quedaría mal nombrada.
+     *
+     * Es **solo el rótulo**. La identidad sigue siendo [name], que es lo que queda guardado en cada
+     * juego y la clave de este mapa: renombrarla dejaría huérfanos los juegos ya cargados, sin
+     * color ni glifo.
+     */
+    val displayName: String? = null,
 )
 
 // Los íconos de control viven como recursos de Compose Multiplatform (composeResources/drawable);
@@ -64,25 +74,25 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     // Aspecto 0.735 medido sobre 38 carátulas al azar, con p10 y p90 los dos en 0.74: rarísimo de
     // parejo, la caja de la 2600 no cambió nunca.
     "Atari 2600" to PlatformStyle(pad("ic_pad_atari2600"), Color(0xFF33261F), 0.74f),          // negro cálido
-    "NES" to PlatformStyle(pad("ic_pad_nes"), Color(0xFF472A28), 0.70f),                       // rojo ladrillo
+    "NES" to PlatformStyle(pad("ic_pad_nes"), Color(0xFF472A28), 0.70f, "Famicom / NES"),                       // rojo ladrillo
     "Sega Master System" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF3A2530), 0.70f), // granate
-    "Super Nintendo" to PlatformStyle(pad("ic_pad_snes"), Color(0xFF302C48), 1.41f),          // índigo
+    "Super Nintendo" to PlatformStyle(pad("ic_pad_snes"), Color(0xFF302C48), 1.41f, "Super Famicom / Super Nintendo"),          // índigo
     "Nintendo 64" to PlatformStyle(pad("ic_pad_n64"), Color(0xFF243A2A), 1.40f),              // verde
     // El aspecto es parejo en las tres regiones (medido ~0.71).
     "GameCube" to PlatformStyle(pad("ic_pad_gamecube"), Color(0xFF3B2A55), 0.71f),            // violeta
     "PlayStation" to PlatformStyle(pad("ic_pad_playstation"), Color(0xFF26262E), 1.00f),      // gris
-    "Sega Genesis" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF383840), 0.71f),         // gris
-    "Sega CD" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1B3A6B), 0.68f),              // azul (usa pad de Genesis)
+    "Sega Genesis" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF383840), 0.71f, "Mega Drive / Genesis"),         // gris
+    "Sega CD" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1B3A6B), 0.68f, "Mega-CD / Sega CD"),              // azul (usa pad de Genesis)
     // Add-ons del Genesis: comparten su control. El 32X usa caja de cartón como el Genesis.
-    "Sega 32X" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1F3A38), 0.73f),             // verde petróleo
+    "Sega 32X" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF1F3A38), 0.73f, "Super 32X / Sega 32X"),             // verde petróleo
     // Familia 8-bit: comparten el control del Master System.
     "Sega Game Gear" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF3A2A45), 0.71f), // violeta
     "SG-1000" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF453220), 0.74f),        // marrón
     // NEC no tiene pad propio todavía: el de Master System es el mando de dos botones de la misma
     // generación, que es lo que era el de la PC Engine. Aspecto 1.00 medido sobre 40 al azar de
     // cada uno de los cuatro catálogos —HuCard y CD, japonés y americano, todos dan cuadrado—.
-    "TurboGrafx-16" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF4A2A1E), 1.00f),  // naranja quemado
-    "TurboGrafx-CD" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF2E3350), 1.00f),  // azul acero
+    "TurboGrafx-16" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF4A2A1E), 1.00f, "PC Engine / TurboGrafx-16"),  // naranja quemado
+    "TurboGrafx-CD" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF2E3350), 1.00f, "CD-ROM² / TurboGrafx-CD"),  // azul acero
     "PlayStation 5" to PlatformStyle(pad("ic_pad_playstation5"), Color(0xFF1E2C5C), 0.80f),   // azul marino
     // Jewel case alta y angosta (medido en Libretro = 0.59; antes estaba en 0.72 y dejaba banda).
     "Sega Saturn" to PlatformStyle(pad("ic_pad_saturn"), Color(0xFF2A2E45), 0.60f),           // slate
@@ -91,6 +101,16 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     // Sus tapas vienen de SteamGridDB, que las entrega todas en 600×900 = 0.67.
     "PlayStation 3" to PlatformStyle(pad("ic_pad_playstation3"), Color(0xFF1A1A1A), 0.67f),   // negro piano
 )
+
+/**
+ * Cómo se rotula la consola. Con los dos nombres si tuvo dos —`Mega Drive / Genesis`—, y si no, el
+ * suyo tal cual.
+ *
+ * Recibe el nombre **guardado** y no un [Platform] porque quien rotula casi siempre tiene solo eso:
+ * la franja de una estantería se arma agrupando juegos por su campo `platform`, que es texto.
+ */
+fun platformDisplayName(platform: String): String =
+    PLATFORM_STYLES[platform]?.displayName ?: platform
 
 /** Color de la franja del header de cada plataforma (o `null` → color neutro del tema). */
 fun platformBandColor(platform: String): Color? = PLATFORM_STYLES[platform]?.bandColor
@@ -175,7 +195,10 @@ fun PlatformBandHeader(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    platform.ifBlank { "Unknown" },
+                    // El rótulo, no la identidad: ver [platformDisplayName]. Este camino dibuja su
+                    // propio texto en vez de usar [PlatformLabel] —no lleva ícono— así que hay que
+                    // acordarse de los dos.
+                    platformDisplayName(platform).ifBlank { "Unknown" },
                     style = MaterialTheme.typography.titleSmall,
                     color = Color.White,
                     maxLines = 1,
@@ -293,7 +316,8 @@ fun PlatformLabel(
         PlatformGlyph(platform = platform, size = iconSize, tint = tint, fallback = {})
         if (PLATFORM_STYLES[platform]?.padIcon != null) Spacer(Modifier.width(8.dp))
         Text(
-            platform.ifBlank { "Unknown" },
+            // El rótulo, no la identidad: las consolas que tuvieron dos nombres se leen con los dos.
+            platformDisplayName(platform).ifBlank { "Unknown" },
             style = nameStyle,
             color = nameColor,
             maxLines = 1,
