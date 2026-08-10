@@ -75,30 +75,15 @@
     font-size: 13px; text-transform: uppercase; letter-spacing: .13em;
     color: var(--amber); margin: 0 0 28px; font-weight: 700;
   }
-  .lead { font-size: 21px; line-height: 1.55; margin: 0 auto; max-width: 42ch; text-align: center; }
-  p { margin: 0 0 16px; }
+  /* Medida de lectura: más de ~68 caracteres y el ojo pierde el principio del renglón. El bloque
+     va centrado —el texto adentro sigue alineado a la izquierda, como en un libro— porque el hero,
+     las capturas y el botón lo están, y una columna pegada al margen izquierdo desequilibra. */
+  section p { max-width: 68ch; margin: 0 auto 20px; font-size: 18px; line-height: 1.7; }
+  .cta p { max-width: none; }
 
-  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-  .card {
-    border: 1px solid var(--line); border-radius: 16px; padding: 24px; background: var(--card);
-  }
-  .card h3 { margin: 0 0 8px; font-size: 18px; }
-  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
 
-  .stats { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); text-align: center; }
-  .stat b { display: block; font-size: 40px; color: var(--amber); letter-spacing: -.02em; }
-  .stat span { color: var(--muted); font-size: 15px; }
 
-  .chips { display: flex; flex-wrap: wrap; gap: 9px; }
-  .chip {
-    border: 1px solid var(--amber-dim); border-radius: 999px;
-    padding: 6px 15px; font-size: 14.5px; color: var(--fg); white-space: nowrap;
-  }
 
-  .two { display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-  ul { margin: 0; padding-left: 22px; }
-  li { margin-bottom: 10px; color: var(--muted); }
-  li strong { color: var(--fg); }
 
   .cta { text-align: center; }
   .btn {
@@ -157,92 +142,29 @@
 
 <div class="wrap">
 
-  <section style="border-top:none;padding-top:36px">
-    <p class="lead">
-      fullset keeps track of the games you <strong>own</strong> — shelf by shelf, console by console —
-      and gives each one a place to write down what playing it was like.
-      Everything stays on your phone.
+  <section style="border-top:none;padding-top:40px">
+    <p>
+      fullset keeps track of the games you <strong>own</strong> — shelf by shelf, console by
+      console — and gives each one a place to write down what playing it was like.
     </p>
-  </section>
-
-  <section>
-    <h2>What it does</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Shelves</h3>
-        <p>Your collection grouped by console, with real box art and how complete each copy is —
-           loose, boxed, or complete in box.</p>
-      </div>
-      <div class="card">
-        <h3>A diary per game</h3>
-        <p>Dated notes, photos and voice memos. Voice is transcribed on the device itself.</p>
-      </div>
-      <div class="card">
-        <h3>Offline catalogs</h3>
-        <p>Bundled with the app. Searching for a title works with no connection at all.</p>
-      </div>
-      <div class="card">
-        <h3>Region aware</h3>
-        <p>The same game is a different product in each market — its own title, date and catalog
-           number.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>In numbers</h2>
-    <div class="stats">
-      <div class="stat"><b>26,884</b><span>games catalogued</span></div>
-      <div class="stat"><b>37</b><span>regional lists</span></div>
-      <div class="stat"><b>16</b><span>consoles</span></div>
-      <div class="stat"><b>0</b><span>accounts needed</span></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Consoles</h2>
-    <div class="chips">
-      <span class="chip">NES</span><span class="chip">Super Nintendo</span>
-      <span class="chip">Nintendo 64</span><span class="chip">GameCube</span>
-      <span class="chip">PlayStation</span><span class="chip">PlayStation 2</span>
-      <span class="chip">PlayStation 3</span><span class="chip">PlayStation 5</span>
-      <span class="chip">SG-1000</span><span class="chip">Master System</span>
-      <span class="chip">Genesis / Mega Drive</span><span class="chip">Game Gear</span>
-      <span class="chip">Sega CD</span><span class="chip">32X</span>
-      <span class="chip">Saturn</span><span class="chip">Dreamcast</span>
-    </div>
-    <p style="color:var(--muted);margin-top:22px;max-width:62ch">
-      Each one ships with separate lists for North America, Japan and Europe, so your Japanese import
-      shows the box, the release date and the catalog number that match the copy on your shelf.
+    <p>
+      The catalogs ship inside the app: <strong>30,380 games across 15 consoles</strong>, with
+      separate lists for North America, Japan and Europe. Searching works with no connection at
+      all, and a Japanese import shows the box, the release date and the catalog number of the
+      copy on your shelf — not the American ones.
     </p>
-  </section>
-
-  <section>
-    <div class="two">
-      <div>
-        <h2>Your data is yours</h2>
-        <ul>
-          <li>Stored <strong>locally</strong>, in a database on your device.</li>
-          <li>Voice notes are transcribed <strong>on the phone</strong>. Audio never leaves it.</li>
-          <li>Export everything as JSON, or as a ZIP with your photos.</li>
-          <li>The only network calls are for cover images.</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Just a diary?</h2>
-        <p style="color:var(--muted)">
-          If you don't want to track a collection, the first screen lets you say so and the shelves
-          stay out of your way.
-        </p>
-        <p style="color:var(--muted)">
-          You can change your mind later — nothing is deleted either way.
-        </p>
-      </div>
-    </div>
+    <p>
+      Every game has a diary: dated notes, photos, and voice memos transcribed on the device
+      itself. Audio never leaves the phone.
+    </p>
+    <p>
+      It all lives in a database on your device. No account, no server, and you can export
+      everything to a file whenever you want. If you only want the diary and not the shelves, the
+      first screen lets you say so.
+    </p>
   </section>
 
   <section class="cta">
-    <h2>Get it</h2>
     <p style="color:var(--muted)">
       Free and open source under the MIT license.<br>
       Android today; an iOS version is in progress.
