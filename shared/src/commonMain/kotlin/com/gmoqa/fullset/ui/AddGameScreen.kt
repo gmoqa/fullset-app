@@ -21,7 +21,9 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
@@ -61,17 +63,21 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.takeOrElse
 import coil3.compose.AsyncImage
 import com.gmoqa.fullset.data.CatalogEntry
 import com.gmoqa.fullset.data.CoverArt
 import com.gmoqa.fullset.data.Game
 import com.gmoqa.fullset.data.GameCatalog
 import com.gmoqa.fullset.data.Platform
+import com.gmoqa.fullset.data.PlatformGeneration
 import com.gmoqa.fullset.data.PlatformImage
+import com.gmoqa.fullset.data.groupedByGeneration
 import com.gmoqa.fullset.data.RegionFilter
 import com.gmoqa.fullset.data.SteamGridGame
 import kotlinx.coroutines.delay
@@ -201,6 +207,9 @@ private fun PlatformStep(
     // app la perdió. Hoy esto deja afuera a la PS5, que se carga a mano desde Playing.
     val conCatalogo = remember(platforms) { platforms.filter { it.hasCatalog } }
 
+    // Por generación y no por fabricante: ver `groupedByGeneration`.
+    val generaciones = remember(conCatalogo) { conCatalogo.groupedByGeneration() }
+
     // Las columnas salen del ancho, no de un número fijo. Con `Fixed(3)` la tablet en horizontal
     // (>1000dp) daba cubos de ~315dp: un glifo enorme flotando en el medio. Tres es el piso, así que
     // en teléfono no cambia nada; a partir de ahí entra una columna cada `CUBO_MIN`.
@@ -214,16 +223,23 @@ private fun PlatformStep(
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            itemsIndexed(conCatalogo) { _, p ->
-                if (p.enabled) {
-                    PlatformCube(
-                        platform = p,
-                        region = region,
-                        onClick = { onSelect(p) },
-                    )
-                } else {
-                    // Bloqueada: sin catálogo aún, no se toca su JSON ni se puede seleccionar.
-                    LockedCube(platform = p)
+            generaciones.forEach { grupo ->
+                // El encabezado ocupa la fila entera. Sin él el reordenamiento sería invisible: se
+                // vería una grilla barajada y nadie sabría por qué la SG-1000 va primera.
+                item(span = { GridItemSpan(maxLineSpan) }) {
+                    GenerationHeader(grupo)
+                }
+                items(grupo.platforms) { p ->
+                    if (p.enabled) {
+                        PlatformCube(
+                            platform = p,
+                            region = region,
+                            onClick = { onSelect(p) },
+                        )
+                    } else {
+                        // Bloqueada: sin catálogo aún, no se toca su JSON ni se puede seleccionar.
+                        LockedCube(platform = p)
+                    }
                 }
             }
         }
@@ -232,6 +248,54 @@ private fun PlatformStep(
 
 /** Ancho al que un cubo de consola se ve bien: por debajo el glifo queda chico, por encima flota. */
 private val CUBO_MIN = 150.dp
+
+/**
+ * Opacidad del mando dibujado en cada cubo.
+ *
+ * En blanco puro competía con el nombre de la consola, que es el dato que se lee para elegir: los
+ * colores de identidad son oscuros y desaturados, así que un blanco al 100% sobre ellos es el
+ * contraste más alto de toda la pantalla —dieciocho veces— y el glifo terminaba pesando más que el
+ * texto. Bajarlo lo devuelve a lo que es: la marca que te dice de qué consola se trata sin que
+ * tengas que leer, no el titular del cubo.
+ */
+private const val GLIFO_ALPHA = 0.68f
+
+/** Encabezado de generación: el mismo idioma que las secciones de Settings (ámbar + apoyo apagado). */
+@Composable
+private fun GenerationHeader(grupo: PlatformGeneration) {
+    val años = when {
+        grupo.firstYear == null -> ""
+        grupo.firstYear == grupo.lastYear -> "${grupo.firstYear}"
+        else -> "${grupo.firstYear}–${grupo.lastYear}"
+    }
+    Row(
+        modifier = Modifier.fillMaxWidth().padding(top = 12.dp, bottom = 2.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Text(
+            grupo.generation?.let { "${ordinal(it)} generation" } ?: "Other",
+            style = MaterialTheme.typography.titleSmall,
+            color = MaterialTheme.colorScheme.primary,
+        )
+        // El rango de años **explica el orden**: sin él el encabezado nombra el grupo pero no dice
+        // por qué va donde va.
+        if (años.isNotEmpty()) {
+            Text(
+                años,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+    }
+}
+
+private fun ordinal(n: Int): String = when (n) {
+    1 -> "1st"
+    2 -> "2nd"
+    3 -> "3rd"
+    else -> "${n}th"
+}
 
 /**
  * Cubo de una plataforma soportada: se pinta con **su color de identidad** ([platformBandColor],
@@ -248,8 +312,7 @@ private fun PlatformCube(platform: Platform, region: RegionFilter, onClick: () -
             PlatformGlyph(
                 platform = platform.name,
                 size = glyphSize,
-                tint = Color.White,
-                fallback = { Icon(Icons.Filled.SportsEsports, contentDescription = null, modifier = Modifier.size(glyphSize)) },
+                tint = Color.White.copy(alpha = GLIFO_ALPHA),
             )
         }
         // El conteo viene del config, ya calculado: abrir los quince catálogos solo para poner
@@ -298,16 +361,26 @@ private fun CubeSurface(
 
 @Composable
 private fun CubeCaption(name: String, tag: String, tagColor: Color, modifier: Modifier = Modifier) {
+    val estilo = MaterialTheme.typography.titleSmall
+    // El nombre ocupa **siempre** dos líneas de alto, tenga una o dos, y se apoya abajo.
+    //
+    // Antes crecía y el glifo, que tiene `weight`, se comía la diferencia: en un teléfono la grilla
+    // de tres columnas deja cubos de ~110dp, ahí "Super Nintendo" y "Sega Master System" ocupan dos
+    // líneas y "NES" una, y sus glifos terminaban con casi el doble de tamaño unos que otros. La
+    // grilla se veía desalineada sin que se pudiera señalar qué estaba mal. Reservando el alto, el
+    // hueco del glifo mide igual en los dieciocho cubos; apoyando el texto abajo, un nombre de una
+    // línea sigue pegado a su contador y no queda un renglón vacío en el medio.
+    // El `+6dp` no es decorativo: un párrafo de dos líneas mide **más** que dos interlineados,
+    // porque suma el ascenso de la primera y el descenso de la última. Con la altura exacta,
+    // Compose ve que la segunda línea no entra, la descarta y elipsiza — "Sega Master System"
+    // quedaba en "Sega Master …" con un renglón vacío arriba.
+    val dosLineas = with(LocalDensity.current) {
+        (estilo.lineHeight.takeOrElse { estilo.fontSize * 1.4f } * 2).toDp() + 6.dp
+    }
     Column(modifier) {
-        // Dos líneas: en teléfono la grilla de tres deja ~110dp y "Sega Game Gear" cortaba justo la
-        // palabra que lo distingue. El glifo tiene `weight`, así que la segunda línea lo encoge un
-        // poco en vez de desbordar el cubo.
-        Text(
-            name,
-            style = MaterialTheme.typography.titleSmall,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-        )
+        Box(modifier = Modifier.height(dosLineas), contentAlignment = Alignment.BottomStart) {
+            Text(name, style = estilo, maxLines = 2, overflow = TextOverflow.Ellipsis)
+        }
         Text(tag, style = MaterialTheme.typography.bodySmall, color = tagColor)
     }
 }

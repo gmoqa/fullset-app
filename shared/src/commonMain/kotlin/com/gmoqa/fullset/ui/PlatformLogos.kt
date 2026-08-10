@@ -14,6 +14,7 @@ import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.outlined.Info
@@ -62,8 +63,10 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     "Sega Master System" to PlatformStyle(pad("ic_pad_master_system"), Color(0xFF3A2530), 0.70f), // granate
     "Super Nintendo" to PlatformStyle(pad("ic_pad_snes"), Color(0xFF302C48), 1.41f),          // índigo
     "Nintendo 64" to PlatformStyle(pad("ic_pad_n64"), Color(0xFF243A2A), 1.40f),              // verde
-    // Sin ícono propio en Controllercons: se muestra solo con su nombre. Reusar el del N64 sería
-    // mentir — es otro control. El aspecto es parejo en las tres regiones (medido ~0.71).
+    // Sin ícono propio en Controllercons. `pad()` devuelve null y cae al **mando genérico** de
+    // `PlatformGlyph` — no al del N64, que sería mentir: es otro control. El genérico no afirma
+    // nada, y dejar el cubo sin glifo se leería como que la consola está rota.
+    // El aspecto es parejo en las tres regiones (medido ~0.71).
     "GameCube" to PlatformStyle(pad("ic_pad_gamecube"), Color(0xFF3B2A55), 0.71f),            // violeta
     "PlayStation" to PlatformStyle(pad("ic_pad_playstation"), Color(0xFF26262E), 1.00f),      // gris
     "Sega Genesis" to PlatformStyle(pad("ic_pad_genesis"), Color(0xFF383840), 0.71f),         // gris
@@ -309,8 +312,24 @@ fun PlatformGlyph(
     platform: String,
     size: Dp,
     tint: Color,
-    fallback: @Composable () -> Unit,
     modifier: Modifier = Modifier,
+    /**
+     * Qué dibujar cuando esa consola no tiene glifo propio. Por defecto, un mando genérico **con el
+     * mismo tinte**.
+     *
+     * El tinte va acá y no en cada llamada porque exigirlo afuera es pedir que nadie se olvide, y
+     * alguien se olvidó: la GameCube no tiene `ic_pad_gamecube`, caía a este mando, y el fallback lo
+     * pintaba en blanco puro mientras los otros diecisiete iban atenuados. Un solo cubo gritando en
+     * la grilla y ninguna forma de notarlo leyendo el sitio del error.
+     */
+    fallback: @Composable () -> Unit = {
+        Icon(
+            Icons.Filled.SportsEsports,
+            contentDescription = platform,
+            tint = tint,
+            modifier = modifier.size(size),
+        )
+    },
 ) {
     val icon = PLATFORM_STYLES[platform]?.padIcon
     if (icon == null) {

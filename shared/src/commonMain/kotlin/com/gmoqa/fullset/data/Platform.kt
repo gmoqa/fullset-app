@@ -52,7 +52,52 @@ data class Platform(
      * (la PS5): quien lo muestre tiene que decir "se carga a mano", no "0 games".
      */
     fun countFor(region: RegionFilter): Int? = counts[region.label]
+
+    /**
+     * Año en que la consola salió **por primera vez**, en el mercado que fuera.
+     *
+     * A propósito no depende de la región que estés mirando: la posición de una consola en la
+     * historia es un hecho sobre la consola, no sobre tu mercado. Si ordenara por el año local, la
+     * grilla se reacomodaría sola al cambiar la región por defecto, que se lee como un error.
+     */
+    val debutYear: Int? get() = info?.released?.values?.minOrNull()
 }
+
+/** Una generación de consolas y las que le pertenecen, ya ordenadas por año de debut. */
+data class PlatformGeneration(
+    /** `null` = la entrada no declara generación; van juntas al final. */
+    val generation: Int?,
+    val platforms: List<Platform>,
+) {
+    val firstYear: Int? get() = platforms.mapNotNull { it.debutYear }.minOrNull()
+    val lastYear: Int? get() = platforms.mapNotNull { it.debutYear }.maxOrNull()
+}
+
+/**
+ * Las plataformas por **generación** y, dentro de cada una, por año de debut.
+ *
+ * El orden de `platforms.json` es por fabricante —las cuatro Nintendo, después las ocho Sega, las
+ * Sony, las NEC—, que es cómodo para mantener el archivo y malo para elegir: pone la NES de 1983
+ * al lado de la GameCube de 2001 y manda la Master System, su contemporánea, veinte casilleros más
+ * abajo. Quien busca "la consola de esa época" tiene que saber de antemano quién la fabricó.
+ *
+ * Los empates de año se resuelven solos: `sortedWith` es **estable**, así que dos consolas del
+ * mismo año conservan el orden del archivo en vez de barajarse en cada build.
+ */
+fun List<Platform>.groupedByGeneration(): List<PlatformGeneration> =
+    sortedWith(
+        compareBy(
+            { it.info?.generation ?: Int.MAX_VALUE },
+            { it.debutYear ?: Int.MAX_VALUE },
+            // Desempate por fabricante: cuando dos consolas comparten año, dejarlas al azar separa
+            // una máquina de su propio accesorio. La TurboGrafx-CD (1988) y la Genesis (1988)
+            // empatan, y sin esto la CD caía entre la Genesis y la SNES, lejos de la TurboGrafx-16
+            // con la que forma un solo aparato.
+            { it.info?.manufacturer ?: "" },
+        ),
+    )
+        .groupBy { it.info?.generation }
+        .map { (gen, list) -> PlatformGeneration(gen, list) }
 
 /**
  * Ficha técnica de una consola (bloque `info` en `catalogs/platforms.json`). Todos los campos son
