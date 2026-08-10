@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "0d63189c1778",
+  "version": "244fcb15ee63",
   "files": [
     {
       "path": "catalogs/platforms.json",
@@ -50,12 +50,12 @@
       "path": "catalogs/atari-2600-usa.json",
       "platform": "Atari 2600",
       "games": 471,
-      "bytes": 163080,
-      "sha256": "8549260dede8098b5a76e60796db447e21604be5b05818213720f1df8edba79d",
+      "bytes": 162690,
+      "sha256": "ea82d4f534dd36b02048ec294ac6b9cdbc231978d64e4125b7e9de98b1fc42bf",
       "coverage": {
         "year": 93,
         "publisher": 99,
-        "serial": 10,
+        "serial": 26,
         "coverUrl": 96
       }
     },

@@ -84,7 +84,15 @@ def seccion(texto: str, nombre: str) -> str:
 def filas(texto: str, campos: dict[str, int]) -> list[dict]:
     out = []
     for bloque in texto.split("\n|-")[1:]:
-        celdas = [c for c in re.split(r"\n\|(?!\|)", bloque) if c.strip()]
+        # **Las celdas vacías cuentan.** Se descarta solo el primer trozo, que es lo que hay antes
+        # del primer `|` de la fila; el resto va tal cual, huecos incluidos.
+        #
+        # Filtrarlas —que es lo que parece natural— corre todos los índices hacia la izquierda, y
+        # como acá se accede por posición (`genre` es la celda 4) el corrimiento mete la columna
+        # equivocada en el campo. Pasó: de 347 filas de terceros, 262 tienen alguna celda vacía, y
+        # en todas ellas el género terminó guardando la nota al pie — `genre` decía cosas como
+        # "Kid Vid Voice Module required to function" o directamente "}".
+        celdas = re.split(r"\n\|(?!\|)", bloque)[1:]
         # La fila de cabecera vuelve a aparecer al partir por `|-`: sus celdas empiezan con `!`.
         if not celdas or celdas[0].strip().startswith("!"):
             continue
