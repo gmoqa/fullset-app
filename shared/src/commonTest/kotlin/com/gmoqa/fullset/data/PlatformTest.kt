@@ -1,6 +1,5 @@
 package com.gmoqa.fullset.data
 
-import com.gmoqa.fullset.ui.selectableRegions
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -114,7 +113,7 @@ class PlatformTest {
     }
 
     @Test
-    fun ofreceElegirRegionSoloSiHayMasDeUna() {
+    fun declaraSusRegionesEnOrden() {
         val sega = platform(
             mapOf(
                 "NTSC-U" to "catalogs/genesis-usa.json",
@@ -124,16 +123,22 @@ class PlatformTest {
         )
         assertEquals(
             listOf(RegionFilter.NTSC_U, RegionFilter.NTSC_J, RegionFilter.PAL),
-            sega.selectableRegions(),
-            "las tres, en el orden del enum",
+            sega.declaredRegions(),
+            "las tres, en el orden del enum: es el orden en que se leen las listas",
         )
     }
 
     @Test
-    fun sinAlternativaNoSeOfreceElector() {
-        // Una consola de una sola región (SG-1000) o con el formato viejo de un único catálogo:
-        // mostrar un selector sería mentir, porque todas las opciones darían la misma lista.
-        assertTrue(platform(mapOf("NTSC-J" to "catalogs/sg-1000-jp.json")).selectableRegions().isEmpty())
-        assertTrue(platform().selectableRegions().isEmpty(), "formato legacy sin mapa")
+    fun soloDeclaraLasRegionesQueTiene() {
+        // Lo que importa acá es que **no haya respaldo**: `catalogFor` sí lo tiene —pedirle PAL a
+        // una consola que no lo tuvo devuelve el americano— y al juntar las listas eso metería el
+        // mismo catálogo dos veces, la segunda bajo una bandera que nunca existió.
+        val soloJp = platform(mapOf("NTSC-J" to "catalogs/sg-1000-jp.json"))
+        assertEquals(listOf(RegionFilter.NTSC_J), soloJp.declaredRegions())
+        // `catalogFor(PAL)` igual devuelve algo —el `catalogFile`, que es el americano— aunque esta
+        // consola no haya tenido PAL. Ese respaldo está bien para no dejar una vista vacía, y es
+        // exactamente por lo que no sirve para juntar listas: metería el mismo archivo dos veces.
+        assertEquals("catalogs/genesis-usa.json", soloJp.catalogFor(RegionFilter.PAL))
+        assertTrue(platform().declaredRegions().isEmpty(), "formato legacy sin mapa")
     }
 }

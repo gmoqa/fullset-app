@@ -101,32 +101,79 @@ class CatalogAssetsTest {
     }
 
     /**
-     * Cambiar de región en "Add game" tiene que cambiar la lista, no solo el contador: buscás en el
-     * mercado que elegiste. Se verifica sobre los catálogos reales, con y sin texto de búsqueda,
-     * porque la lista vacía toma otro camino (`rank` devuelve los primeros N sin puntuar).
+     * El catálogo de una consola se lee **de corrido**: sus regiones una detrás de otra, en orden
+     * (NTSC-U, NTSC-J, PAL). Antes se navegaba con un selector y la lista mostraba una sola.
+     *
+     * Se verifica sobre los catálogos reales porque lo que puede romperse es el **orden** y que no
+     * falte ni sobre ninguna región, y eso depende de cómo esté escrito `platforms.json`.
      */
     @Test
-    fun `la busqueda del catalogo se limita a la region elegida`() {
+    fun `el catalogo junta todas las regiones en orden`() {
         val catalog = GameCatalog(readAsset)
         val saturn = registry.all().first { it.id == "sega-saturn" }
 
-        val usa = catalog.search(saturn, RegionFilter.NTSC_U, "")
-        val jp = catalog.search(saturn, RegionFilter.NTSC_J, "")
-        assertTrue(usa.isNotEmpty() && jp.isNotEmpty(), "ambas regiones deben traer juegos")
-        assertTrue(usa.map { it.slug } != jp.map { it.slug }, "la lista sin buscar debe cambiar de región")
+        val todas = catalog.entriesAllRegions(saturn)
+        val usa = catalog.entries(saturn, RegionFilter.NTSC_U)
+        val jp = catalog.entries(saturn, RegionFilter.NTSC_J)
+        val pal = catalog.entries(saturn, RegionFilter.PAL)
 
-        // Un exclusivo japonés no puede aparecer buscando en el catálogo americano.
+        assertEquals(usa.size + jp.size + pal.size, todas.size, "tienen que estar las tres enteras")
+        assertEquals(usa.map { it.slug }, todas.take(usa.size).map { it.slug }, "NTSC-U va primero")
+        assertEquals(
+            jp.map { it.slug },
+            todas.drop(usa.size).take(jp.size).map { it.slug },
+            "NTSC-J va segundo",
+        )
+        // Los bloques salen en el orden de RegionFilter, sin intercalarse.
+        assertEquals(
+            listOf("NTSC-U", "NTSC-J", "PAL"),
+            todas.map { it.region }.distinct(),
+            "las regiones no se mezclan entre sí",
+        )
+    }
+
+    /**
+     * Una consola que **no declara** una región no la trae repetida.
+     *
+     * `catalogFor` tiene respaldo: pedirle PAL a la TurboGrafx devuelve el archivo americano. Al
+     * juntar las listas eso metería el catálogo de EE.UU. dos veces, la segunda bajo la bandera
+     * equivocada. Por eso se recorren las regiones **declaradas** y no las tres.
+     */
+    @Test
+    fun `una region no declarada no duplica el catalogo`() {
+        val catalog = GameCatalog(readAsset)
+        val tg = registry.all().first { it.id == "turbografx-16" }
+
+        assertEquals(
+            listOf(RegionFilter.NTSC_U, RegionFilter.NTSC_J),
+            tg.declaredRegions(),
+            "la TurboGrafx no tuvo lanzamiento PAL",
+        )
+        val todas = catalog.entriesAllRegions(tg)
+        assertEquals(
+            catalog.entries(tg, RegionFilter.NTSC_U).size + catalog.entries(tg, RegionFilter.NTSC_J).size,
+            todas.size,
+            "no debe aparecer una tercera copia por el respaldo de catalogFor",
+        )
+        assertTrue(todas.none { it.region == "PAL" }, "ninguna entrada puede decir PAL")
+    }
+
+    /**
+     * Buscando, el resultado sale por relevancia sobre **todas** las listas: un exclusivo japonés
+     * tiene que aparecer sin que haga falta cambiar de región primero.
+     */
+    @Test
+    fun `la busqueda encuentra exclusivos de cualquier region`() {
+        val catalog = GameCatalog(readAsset)
+        val saturn = registry.all().first { it.id == "sega-saturn" }
+
         val soloJp = catalog.entries(saturn, RegionFilter.NTSC_J).map { it.slug }.toSet() -
             catalog.entries(saturn, RegionFilter.NTSC_U).map { it.slug }.toSet()
         assertTrue(soloJp.isNotEmpty(), "Saturn tiene exclusivos japoneses")
         val titulo = catalog.entries(saturn, RegionFilter.NTSC_J).first { it.slug in soloJp }.title
         assertTrue(
-            catalog.search(saturn, RegionFilter.NTSC_U, titulo).none { it.title == titulo },
-            "buscar '$titulo' en NTSC-U no debe encontrar un exclusivo de NTSC-J",
-        )
-        assertTrue(
-            catalog.search(saturn, RegionFilter.NTSC_J, titulo).any { it.title == titulo },
-            "y en NTSC-J sí debe encontrarlo",
+            catalog.searchAllRegions(saturn, titulo).any { it.title == titulo },
+            "buscar '$titulo' tiene que encontrarlo aunque tu región sea otra",
         )
     }
 
