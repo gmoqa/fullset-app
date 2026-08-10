@@ -112,11 +112,18 @@ class DiaryViewModel(
         serial: String = "",
         /** Alta desde Playing: el juego arranca marcado como que lo estás jugando. */
         playing: Boolean = false,
+        /**
+         * "No lo poseo". En modo **Diary only** el alta sale del catálogo igual que siempre, pero no
+         * afirma posesión: ahí la app es solo el diario. Si se marcara como poseído, al volver a
+         * "Collection + diary" —que el propio ajuste ofrece, porque no borra nada— aparecería de
+         * golpe una colección de juegos que nunca dijiste tener.
+         */
+        digital: Boolean = false,
     ) = io {
         val id = repo.addGame(
             title, platform, coverUrl,
             region = region, releaseYear = releaseYear, releaseDate = releaseDate, genre = genre,
-            slug = slug, publisher = publisher, serial = serial,
+            slug = slug, publisher = publisher, serial = serial, digital = digital,
         )
         if (playing) repo.setPlaying(id, true)
         _lastAdded.value = id

@@ -71,13 +71,14 @@ import com.gmoqa.fullset.data.coverModel
 @Composable
 fun PlayingScreen(
     onOpenTimeline: () -> Unit,
-    /** Alta física: se elige del catálogo y queda marcada como que la estás jugando. */
+    /** Alta desde el catálogo: se elige de nuestras listas y queda marcada como que la estás jugando. */
     onAddPhysical: () -> Unit,
     /**
-     * Si preguntar físico o digital. En falso —modo "Diary only"— el botón va directo al alta
-     * digital: sin colección, "físico" no significa nada y preguntarlo es una decisión de más.
+     * Si la app lleva colección. Solo cambia **cómo se llama** cada opción del alta —físico/digital
+     * con colección, de-la-lista/a-mano sin ella—: las dos existen siempre, porque elegir del
+     * catálogo no es un lujo de la colección, es de donde salen el año, la editora y la carátula.
      */
-    askGameType: Boolean,
+    collectionEnabled: Boolean,
     games: List<Game>,
     onOpenGame: (Long) -> Unit,
     onAddDigital: () -> Unit,
@@ -95,7 +96,7 @@ fun PlayingScreen(
                     Icon(Icons.Filled.Schedule, contentDescription = "Timeline")
                 }
                 AddPlayingButton(
-                    askGameType = askGameType,
+                    collectionEnabled = collectionEnabled,
                     onAddPhysical = onAddPhysical,
                     onAddDigital = onAddDigital,
                 )
@@ -151,26 +152,30 @@ fun PlayingScreen(
     }
 }
 
-/** Menú "⋮" del header de Playing: por ahora, dar de alta un juego digital (no poseído). */
 /**
- * El alta desde Playing pregunta **qué** estás por agregar, porque acá conviven las dos cosas: un
- * cartucho que tenés en la mano y un juego digital que no poseés. En Collection no hace falta —esa
- * pantalla *es* la colección física— y por eso ahí el botón va directo al catálogo.
+ * El alta desde Playing **siempre pregunta de dónde sale el juego**, porque las dos formas de
+ * cargarlo no son intercambiables: una lo elige de nuestras listas —con año, editora, región y
+ * carátula ya resueltas— y la otra lo escribe a mano.
  *
- * El físico entra al catálogo y además queda marcado como que lo estás jugando: si no, el alta
- * saldría desde acá y el juego no aparecería, que se lee como que no pasó nada.
+ * Lo que cambia con el modo es **la pregunta**, no si se hace. Con colección la disyuntiva es
+ * *físico o digital*: dice si el juego entra o no a Collection. En "Diary only" esa pregunta no
+ * significa nada —no hay colección— pero la otra sí sigue: **de la lista o a mano**. Antes se
+ * asumía que sin colección no quedaba nada que preguntar y el botón iba derecho a escribir a mano,
+ * y eso dejaba las 18 consolas del catálogo **inalcanzables** justo en el modo donde la app es solo
+ * el diario. Ese era el bug.
+ *
+ * El alta desde la lista además marca el juego como que lo estás jugando: si no, el alta saldría
+ * desde acá y el juego no aparecería, que se lee como que no pasó nada.
  */
 @Composable
 private fun AddPlayingButton(
-    askGameType: Boolean,
+    /** Con colección la pregunta es físico/digital; sin ella, de la lista o a mano. */
+    collectionEnabled: Boolean,
     onAddPhysical: () -> Unit,
     onAddDigital: () -> Unit,
 ) {
     var open by remember { mutableStateOf(false) }
-    // Sin colección que llevar, la única alta posible es la digital: se dispara sola. Es el mismo
-    // criterio de `PhotoSourceButton` cuando la plataforma no puede sacar fotos.
-    val alTocar = { if (askGameType) open = true else onAddDigital() }
-    AddGameButton(onClick = alTocar)
+    AddGameButton(onClick = { open = true })
     if (open) {
         AlertDialog(
             onDismissRequest = { open = false },
@@ -185,13 +190,13 @@ private fun AddPlayingButton(
                 ) {
                     ChoiceCard(
                         vector = Icons.Filled.VideogameAsset,
-                        title = "Physical",
+                        title = if (collectionEnabled) "Physical" else "From a list",
                         subtitle = "Our lists",
                     ) { open = false; onAddPhysical() }
                     ChoiceCard(
                         vector = Icons.Filled.CloudQueue,
-                        title = "Digital",
-                        subtitle = "SteamGridDB",
+                        title = if (collectionEnabled) "Digital" else "Not listed",
+                        subtitle = "Type it in",
                     ) { open = false; onAddDigital() }
                 }
             },

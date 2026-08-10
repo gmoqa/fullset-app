@@ -284,6 +284,8 @@ private fun AppRoot(
                                     genre = entry.genre,
                                     slug = entry.slug, publisher = entry.publisher,
                                     playing = current.target == AddTarget.PLAYING,
+                                    // Sin colección no se afirma posesión: ver `addGame(digital=)`.
+                                    digital = trackingMode == TrackingMode.DIARY_ONLY,
                                 )
                             AddTarget.WISHLIST ->
                                 vm.addToWishlist(platform.name, entry.title, entry.slug, coverUrl)
@@ -558,7 +560,7 @@ private fun HomeContent(
                 HomeTab.PLAYING -> PlayingScreen(
                     onOpenTimeline = onOpenTimeline,
                     onAddPhysical = onAddPlaying,
-                    askGameType = trackingMode == TrackingMode.COLLECTION_AND_DIARY,
+                    collectionEnabled = trackingMode == TrackingMode.COLLECTION_AND_DIARY,
                     games = games.filter { it.playing },
                     onOpenGame = onOpenGame,
                     onAddDigital = onAddDigital,
