@@ -517,6 +517,33 @@ claves nuevas no rompe nada.
   consolas —PlayStation, PS2, PS3, GameCube, Dreamcast, Saturn y Sega CD—: 22.526 juegos, el 83%
   del dataset. No es el enriquecedor, es la fuente: libretro publica `metadat/genre` solo de PSP
   entre las PlayStation, y nada de las consolas de disco de Sega.
+- **G. Vocabularios controlados** — **pendiente, medido el 2026-08-10.** El lint garantiza la
+  **forma** (11 claves, orden, tipos, slug único, ordenado) y cuatro invariantes de significado,
+  pero **no mira el vocabulario**: atrapa un serial japonés en un catálogo americano y no atrapa
+  `Ubi Soft` conviviendo con `Ubisoft`. Auditoría sobre las 31.670 entradas:
+
+  **Editoras — 1.726 formas distintas para 28.473 juegos, con 60 grupos que son la misma escrita
+  de dos maneras.** Los de más peso: `Ubi Soft` (144) / `Ubisoft` (381) = 525 juegos partidos al
+  medio; `D3 Publisher` (362) / `D3Publisher` (50); `Square Enix` (152) / `Square-Enix` (3);
+  `From Software` (1) / `FromSoftware` (65); `Sammy` (62) / `Sammy Corporation` (8); `Namco JP` /
+  `NamcoJP`; `Capcom JP/NA` / `CapcomJP/NA`. La normalización que las agrupa es simple —minúsculas,
+  sacar `Inc/Ltd/Co/Corp/GmbH`, sacar puntuación— así que el canon se puede derivar y revisar a
+  mano una sola vez.
+
+  Aparte, **44 valores (0,15%) no parecen editoras**: 39 son editoras multi-región pegadas sin
+  separador (`MajescoNAHudson SoftJPVivendi Universal Game`), que es el caso que
+  [regional_publisher] resuelve cuando el marcador va entre paréntesis pero no cuando va en
+  `<sup>NA</sup>` sin `<br>`; 4 son texto de nota (`Original Version`) y 1 es un número (`9003`).
+
+  **Géneros — 60 valores para 4.796 juegos, de tres vocabularios que conviven.** Hay diferencias de
+  sola mayúscula (`Role-Playing (RPG)` / `Role-playing (RPG)`, `Shooter` / `shooter`), cuatro formas
+  de decir lo mismo (`Shooter`, `Shoot'em Up`, `Fixed shooter`, `Scrolling shoot'em up`) y valores
+  compuestos (`Action, Simulation, Sports`) mezclados con simples. El género existe en **17 de 48**
+  catálogos; el rating, en 19 de 48.
+
+  El orden natural del trabajo es **editoras primero** —son 60 grupos, acotado y verificable— y que
+  el lint pase a rechazar formas fuera del canon, que es lo que impide que vuelva a abrirse.
+
 - **F. Eje de región** — ✅ **cerrado**. Las 14 consolas con catálogo multirregional tienen las tres:
   Sega (8), PlayStation, PS2, PS3, GameCube y, desde los seis catálogos nuevos, NES, Super Nintendo
   y Nintendo 64. La SG-1000 queda con una sola a propósito: salió solo en Japón. Son 30.380 juegos.
