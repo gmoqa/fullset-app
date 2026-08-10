@@ -56,3 +56,6 @@ tools/.libretro-trees/
 
 # APKs armados para compartir a mano: son salida de build, no fuente.
 /dist/
+
+# Vista previa del icono: la genera tools/make_app_icon.py, no es fuente.
+/tools/icono-preview.svg
