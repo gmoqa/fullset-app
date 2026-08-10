@@ -115,7 +115,7 @@ fun SettingsScreen(
         // El header no puede irse con el scroll: es el único que aplica el inset del status
         // bar, así que al subir deja el contenido pasando por debajo del reloj y la batería.
         // Fijo, como en el resto de las pantallas.
-        ScreenHeader(title = "Settings", subtitle = "fullset · v1.0")
+        ScreenHeader(title = "Settings", subtitle = "Fullset · v1.0")
 
         Column(
             modifier = Modifier
