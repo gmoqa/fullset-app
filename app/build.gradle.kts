@@ -9,10 +9,15 @@ plugins {
 
 // La API key de SteamGridDB (carátulas de plataformas modernas) vive en local.properties,
 // fuera del control de versiones. Sin ella, el buscador de carátulas queda inactivo.
-val steamGridDbKey: String = Properties().apply {
-    val f = rootProject.file("local.properties")
-    if (f.exists()) f.inputStream().use { load(it) }
-}.getProperty("STEAMGRIDDB_API_KEY", "")
+//
+// `-PsteamGridDbKey=` la deja vacía a propósito. Hace falta para los APK que se comparten: la clave
+// se hornea en BuildConfig, o sea que termina en el dex y **cualquiera que descomprima el APK puede
+// leerla**. En una build para uno mismo da igual; en una que se reparte, es regalar la credencial.
+val steamGridDbKey: String = (findProperty("steamGridDbKey") as String?)
+    ?: Properties().apply {
+        val f = rootProject.file("local.properties")
+        if (f.exists()) f.inputStream().use { load(it) }
+    }.getProperty("STEAMGRIDDB_API_KEY", "")
 
 // El esquema SQLDelight y el driver viven en :shared (multiplataforma). Acá solo se consumen.
 

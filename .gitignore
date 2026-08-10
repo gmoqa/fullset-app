@@ -53,3 +53,6 @@ tools/.libretro-trees/
 /keystore.properties
 *.jks
 *.keystore
+
+# APKs armados para compartir a mano: son salida de build, no fuente.
+/dist/
