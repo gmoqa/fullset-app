@@ -36,7 +36,9 @@ android {
         applicationId = "com.gmoqa.fullset"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
+        // `versionCode` tiene que subir en cada APK que se reparta: Android rechaza instalar encima
+        // uno con un número igual o menor, y como estos van a mano no hay quien lo lleve por vos.
+        versionCode = 2
         versionName = "1.0"
 
         // whisper.cpp (transcripción local). Solo arm64-v8a: cubre los dispositivos reales y
