@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "244fcb15ee63",
+  "version": "259b1a214cc3",
   "files": [
     {
       "path": "catalogs/platforms.json",
-      "bytes": 14748,
-      "sha256": "55869b7f6854ba49ddd974cee0bae54cbb1fd799a6bb26864d74886049812b68"
+      "bytes": 15736,
+      "sha256": "5f8d9a86185dbc5c93abe5d86552c3f80fe3c97f04782a3bd8df8baf46bd1b1b"
     },
     {
       "path": "catalogs/32x-eu.json",
@@ -44,6 +44,45 @@
         "publisher": 87,
         "serial": 96,
         "coverUrl": 87
+      }
+    },
+    {
+      "path": "catalogs/3ds-eu.json",
+      "platform": "Nintendo 3DS",
+      "games": 547,
+      "bytes": 231071,
+      "sha256": "a0fc89e126fb651d3170eee9d5d9bf2278d0bd37a5a054e6545ebaa04d2abf4d",
+      "coverage": {
+        "year": 43,
+        "publisher": 33,
+        "serial": 100,
+        "coverUrl": 93
+      }
+    },
+    {
+      "path": "catalogs/3ds-jp.json",
+      "platform": "Nintendo 3DS",
+      "games": 661,
+      "bytes": 277053,
+      "sha256": "902f32eb21a28f969d6e9a4a10eaaa47c34e3e6ac7fafa9d52e3004710791cbf",
+      "coverage": {
+        "year": 27,
+        "publisher": 25,
+        "serial": 100,
+        "coverUrl": 96
+      }
+    },
+    {
+      "path": "catalogs/3ds-usa.json",
+      "platform": "Nintendo 3DS",
+      "games": 419,
+      "bytes": 168014,
+      "sha256": "d8b201606fe7c7cd83f60cd708da297264ca86d55d3e70189024abcf54875155",
+      "coverage": {
+        "year": 51,
+        "publisher": 38,
+        "serial": 100,
+        "coverUrl": 93
       }
     },
     {

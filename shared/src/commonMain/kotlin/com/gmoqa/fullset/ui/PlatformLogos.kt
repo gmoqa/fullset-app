@@ -100,6 +100,11 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     "PlayStation 2" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1E2038), 0.71f),   // azul oscuro
     // Sus tapas vienen de SteamGridDB, que las entrega todas en 600×900 = 0.67.
     "PlayStation 3" to PlatformStyle(pad("ic_pad_playstation3"), Color(0xFF1A1A1A), 0.67f),   // negro piano
+    // Controllercons no trae la 3DS —revisado el inventario de 30— así que cae al mando genérico.
+    // Se deja el nombre igual: el día que exista el drawable, entra solo.
+    // **Aspecto 1.13, apaisado**: es la única del dataset más ancha que alta. La caja de 3DS se
+    // guarda acostada. Medido sobre 40 al azar, p10 1.09 y p90 1.14.
+    "Nintendo 3DS" to PlatformStyle(pad("ic_pad_3ds"), Color(0xFF17414A), 1.13f),             // aqua blue
 )
 
 /**

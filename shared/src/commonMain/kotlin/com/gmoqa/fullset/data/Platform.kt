@@ -77,6 +77,9 @@ data class Platform(
      * que decir el cubo de la grilla: mostrar solo el americano prometía 93 y adentro había 381.
      */
     fun totalCount(): Int = declaredRegions().sumOf { countFor(it) ?: 0 }
+
+    /** De bolsillo. Ver [PlatformInfo.handheld]. */
+    val isHandheld: Boolean get() = info?.handheld == true
 }
 
 /** Una generación de consolas y las que le pertenecen, ya ordenadas por año de debut. */
@@ -123,6 +126,12 @@ fun List<Platform>.groupedByGeneration(): List<PlatformGeneration> =
 data class PlatformInfo(
     val manufacturer: String = "",
     val generation: Int? = null,
+    /**
+     * Si es una consola de bolsillo. Separa la grilla de alta en dos solapas, porque una portátil no
+     * compite con una de sobremesa: se compran, se guardan y se buscan aparte. Mezcladas por año, la
+     * Game Gear caía entre la Genesis y la SNES y la 3DS quedaba sola en una generación.
+     */
+    val handheld: Boolean = false,
     val media: String = "",
     val released: Map<String, Int> = emptyMap(),
     val discontinued: Int? = null,

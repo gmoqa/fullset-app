@@ -192,12 +192,23 @@ private fun PlatformStep(
     // app la perdió. Hoy esto deja afuera a la PS5, que se carga a mano desde Playing.
     val conCatalogo = remember(platforms) { platforms.filter { it.hasCatalog } }
 
-    // Por generación y no por fabricante: ver `groupedByGeneration`.
-    val generaciones = remember(conCatalogo) { conCatalogo.groupedByGeneration() }
+    // Sobremesa y portátiles en solapas separadas. No es una taxonomía: es que se buscan aparte.
+    // Ordenadas juntas por año, la Game Gear caía entre la Genesis y la SNES —correcto y difícil de
+    // encontrar— y la 3DS quedaba sola inaugurando una 8ª generación con una sola consola.
+    var portatiles by remember { mutableStateOf(false) }
+    val visibles = remember(conCatalogo, portatiles) {
+        conCatalogo.filter { it.isHandheld == portatiles }
+    }
+    val generaciones = remember(visibles) { visibles.groupedByGeneration() }
 
     // Las columnas salen del ancho, no de un número fijo. Con `Fixed(3)` la tablet en horizontal
     // (>1000dp) daba cubos de ~315dp: un glifo enorme flotando en el medio. Tres es el piso, así que
     // en teléfono no cambia nada; a partir de ahí entra una columna cada `CUBO_MIN`.
+    Column(modifier = Modifier.fillMaxSize()) {
+        // Solo si de verdad hay de las dos: con una sola familia la solapa sería una decisión falsa.
+        if (conCatalogo.any { it.isHandheld } && conCatalogo.any { !it.isHandheld }) {
+            PlatformFormTabs(handhelds = portatiles, onSelect = { portatiles = it })
+        }
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
         val columnas = maxOf(3, ((maxWidth - 32.dp) / CUBO_MIN).toInt())
 
@@ -226,6 +237,48 @@ private fun PlatformStep(
                         LockedCube(platform = p)
                     }
                 }
+            }
+        }
+    }
+    }
+}
+
+/**
+ * Las dos solapas del paso 1: de sobremesa y de bolsillo.
+ *
+ * Se usa el mismo control segmentado que Settings —tema, región, modelo de voz— en vez de un
+ * `TabRow`: acá no se navega entre secciones, se **filtra la misma grilla**, que es exactamente lo
+ * que ese control significa en el resto de la app.
+ */
+@Composable
+private fun PlatformFormTabs(handhelds: Boolean, onSelect: (Boolean) -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 16.dp, end = 16.dp, top = 12.dp)
+            .clip(Tokens.Shape.pill)
+            .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f)),
+    ) {
+        listOf(false to "Consoles", true to "Handhelds").forEach { (esPortatil, texto) ->
+            val activa = handhelds == esPortatil
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .clip(Tokens.Shape.pill)
+                    .background(
+                        if (activa) MaterialTheme.colorScheme.primary.copy(alpha = 0.22f)
+                        else Color.Transparent,
+                    )
+                    .clickable { onSelect(esPortatil) }
+                    .padding(vertical = 10.dp),
+                contentAlignment = Alignment.Center,
+            ) {
+                Text(
+                    texto,
+                    style = MaterialTheme.typography.labelLarge,
+                    color = if (activa) MaterialTheme.colorScheme.primary
+                    else MaterialTheme.colorScheme.onSurfaceVariant,
+                )
             }
         }
     }

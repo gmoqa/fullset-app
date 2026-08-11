@@ -254,7 +254,8 @@
       "discontinued": 1997,
       "unitsSold": "10.6M",
       "cpu": "Zilog Z80 @ 3.58 MHz — 8-bit",
-      "description": "Sega's colour-screen handheld, built on Master System hardware, fielded against the Game Boy."
+      "description": "Sega's colour-screen handheld, built on Master System hardware, fielded against the Game Boy.",
+      "handheld": true
     },
     "counts": {
       "NTSC-U": 234,
@@ -544,6 +545,37 @@
       "NTSC-U": 43,
       "NTSC-J": 395,
       "PAL": 43
+    }
+  },
+  {
+    "id": "nintendo-3ds",
+    "name": "Nintendo 3DS",
+    "catalogs": {
+      "NTSC-U": "catalogs/3ds-usa.json",
+      "NTSC-J": "catalogs/3ds-jp.json",
+      "PAL": "catalogs/3ds-eu.json"
+    },
+    "libretroRepo": "Nintendo_-_Nintendo_3DS",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Nintendo",
+      "generation": 8,
+      "handheld": true,
+      "media": "Cartridge",
+      "released": {
+        "ntsc-j": 2011,
+        "ntsc": 2011,
+        "pal": 2011
+      },
+      "discontinued": 2020,
+      "unitsSold": "75.9M",
+      "cpu": "ARM11 MPCore @ 268 MHz",
+      "description": "Nintendo's handheld with glasses-free 3D. Region-locked, so a Japanese cartridge will not run on an American console — the region of a copy is part of what it is. Its library is listed here as physical cartridges only; the eShop-only half never existed in plastic."
+    },
+    "counts": {
+      "NTSC-U": 419,
+      "NTSC-J": 661,
+      "PAL": 547
     }
   }
 ]

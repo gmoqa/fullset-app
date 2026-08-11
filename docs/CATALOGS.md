@@ -179,6 +179,47 @@ o sea después de toda la era que catalogamos (la Dreamcast se discontinuó en 2
 europeo es ELSPA salvo lanzamientos tardíos. En Japón, antes de CERO (2002) regía la autorregulación
 de Sega: 全年齢 (todas las edades), 18禁 y la marca X. En EE.UU., VRC hasta 1994 y ESRB después.
 
+**Nintendo 3DS: el primero que se arma desde el DAT y no desde Wikipedia.** Es también el primero
+con **serial al 100%** y el único **apaisado** (aspecto 1.13; el resto del dataset es vertical).
+
+| Catálogo | Cartuchos | año/editora/serial/cover |
+|---|---|---|
+| `3ds-usa.json` | 419 | 51/38/**100**/93 |
+| `3ds-jp.json` | 661 | 27/25/**100**/96 |
+| `3ds-eu.json` | 547 | 43/33/**100**/93 |
+
+**Por qué se invirtieron las fuentes.** La lista de Wikipedia tiene 1.078 juegos y **más de la mitad
+son de eShop**, que nunca existieron en cartucho. Para una app de colección física eso no es un juego
+que puedas tener, y además hundía la cobertura de carátulas al **42%**: libretro-thumbnails sigue a
+No-Intro, que cataloga volcados de cartucho, así que un título solo-descarga no tiene tapa porque no
+tuvo caja. Se verificó con casos conocidos —los 7 retail probados aparecen y 5 de 7 de eShop no; los
+2 que sí (BOXBOY!, Shovel Knight) tuvieron edición física después—.
+
+La fuente principal pasa a ser el DAT de **No-Intro** (`metadat/no-intro/`), que es literalmente la
+lista de cartuchos y trae el `serial` de la etiqueta (`CTR-P-BP4J`). Wikipedia queda como
+enriquecedor de año y editora, por título.
+
+**El precio, y por qué se pagó.** Los títulos vienen en formato de volcado y hay que convertirlos
+(`Sims 3, The (USA) (En,Fr,Es)` → `The Sims 3`; el guión con espacios es como No-Intro escribe los
+dos puntos, que no pueden ir en un nombre de archivo). Y el año y la editora solo aparecen donde el
+título cruza con Wikipedia: **51% / 27% / 43%**. La alternativa —Wikipedia primero, filtrando por el
+DAT— daba cada entrada completa pero **la mitad de los cartuchos**: 216 contra 419 en NTSC-U, porque
+los dos catálogos nombran distinto (`Disney Frozen - Olaf's Quest` contra `Frozen: Olaf's Quest`).
+En una app que mide completitud —"148 of 1893"— el denominador tiene que ser la biblioteca real: un
+juego sin año se puede tener igual, uno que no está en la lista no.
+
+**Regiones.** El DAT reparte por país, así que PAL se arma como **unión de territorios** igual que en
+Sega: Europa + Alemania, Francia, España, Italia, Países Bajos, Reino Unido, Rusia y Australia.
+Canadá va a NTSC-U. **Corea (102) y Taiwán (31) quedan afuera** porque no tenemos región para ellos,
+y meterlos en otra sería mentir sobre dónde salió ese cartucho.
+
+Del DAT se filtra lo que no es un cartucho vendido —eShop, beta, proto, demo, kiosk: 21 de 2.076— y
+se **deduplica por título**, porque las 259 `(Rev N)` son el mismo cartucho reimpreso.
+
+**Portátiles aparte.** La 3DS y la Game Gear llevan `info.handheld` y viven en su propia solapa del
+paso 1 de Add game. No es una taxonomía: ordenadas junto a las de sobremesa por año, la Game Gear
+caía entre la Genesis y la SNES y la 3DS quedaba sola inaugurando una 8ª generación de una consola.
+
 **Atari 2600: una sola región, y eso es un hueco, no un dato.** La consola que convirtió el
 cartucho en el estándar (1977) abre el dataset por abajo: es la única de **2ª generación**.
 

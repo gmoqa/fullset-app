@@ -22,6 +22,7 @@ private data class PlatformDto(
 private data class PlatformInfoDto(
     val manufacturer: String = "",
     val generation: Int? = null,
+    val handheld: Boolean = false,
     val media: String = "",
     val released: Map<String, Int> = emptyMap(),
     val discontinued: Int? = null,
@@ -48,9 +49,18 @@ class PlatformRegistry(private val readAsset: (String) -> String? = ::readTextAs
             Platform(
                 dto.id, dto.name, cats["NTSC-U"] ?: dto.catalogFile, dto.libretroRepo, dto.enabled,
                 info = dto.info?.let {
+                    // Por nombre y no por posición: agregar un campo en el medio de `PlatformInfo`
+                    // reasignaba en silencio los que venían después.
                     PlatformInfo(
-                        it.manufacturer, it.generation, it.media, it.released,
-                        it.discontinued, it.unitsSold, it.cpu, it.description,
+                        manufacturer = it.manufacturer,
+                        generation = it.generation,
+                        handheld = it.handheld,
+                        media = it.media,
+                        released = it.released,
+                        discontinued = it.discontinued,
+                        unitsSold = it.unitsSold,
+                        cpu = it.cpu,
+                        description = it.description,
                     )
                 },
                 catalogs = cats,
