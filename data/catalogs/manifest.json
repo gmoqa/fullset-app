@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "eb05b430aac5",
+  "version": "23f0cb4a1eed",
   "files": [
     {
       "path": "catalogs/platforms.json",
@@ -375,11 +375,11 @@
       "path": "catalogs/n64-eu.json",
       "platform": "Nintendo 64",
       "games": 237,
-      "bytes": 87372,
-      "sha256": "f0ade2ae83b8e67a7d34a6c9cf61a33ed82efa6725573e683167ec3f1acdf915",
+      "bytes": 90841,
+      "sha256": "d49f7b0499fea2e7d0372ef2989da1542113de1f96cad838c4c8dd9c6ba9d765",
       "coverage": {
         "year": 100,
-        "publisher": 0,
+        "publisher": 94,
         "serial": 0,
         "coverUrl": 95
       }
@@ -388,11 +388,11 @@
       "path": "catalogs/n64-jp.json",
       "platform": "Nintendo 64",
       "games": 194,
-      "bytes": 66010,
-      "sha256": "f55483c48fadb7e9f9606723a5b5b26c5a45be4896b91ae2b31685c9355928d8",
+      "bytes": 68338,
+      "sha256": "fdf232e33f1a7ae86bd8d7749559f54c879eec1a61b011e3b213aa1ba767136b",
       "coverage": {
         "year": 100,
-        "publisher": 0,
+        "publisher": 73,
         "serial": 0,
         "coverUrl": 74
       }
@@ -414,8 +414,8 @@
       "path": "catalogs/nes-eu.json",
       "platform": "NES",
       "games": 346,
-      "bytes": 130338,
-      "sha256": "cbd1feb96d8f62f35ef301702c81e1c3650e80e4fb896743a70c046f5597967c",
+      "bytes": 132992,
+      "sha256": "0ab0c4e0267f12fe9f6242dbf9a8a8851e96ac93d5afe7a5839a17b047efbedf",
       "coverage": {
         "year": 100,
         "publisher": 100,
@@ -427,8 +427,8 @@
       "path": "catalogs/nes-jp.json",
       "platform": "NES",
       "games": 1041,
-      "bytes": 361049,
-      "sha256": "bc6aac0bb51891198a9dddf6141a3594fc0c4881f5a5492eb9722ef2762d32c9",
+      "bytes": 367338,
+      "sha256": "26dbe3d5cd5bd5a92fb14b474d5a557c62b95a9cb907843fa0b1fa3f58f117b9",
       "coverage": {
         "year": 100,
         "publisher": 99,
@@ -661,11 +661,11 @@
       "path": "catalogs/snes-eu.json",
       "platform": "Super Nintendo",
       "games": 394,
-      "bytes": 153641,
-      "sha256": "08fc37f63203ccfc23c9cb9acd257f9ee1ed02b89d0d58ba811c158b734e8454",
+      "bytes": 157663,
+      "sha256": "90da55c4d2c9b8e57f2b27e63d2faba8b19dc5e43235725815883018236c8148",
       "coverage": {
         "year": 100,
-        "publisher": 61,
+        "publisher": 99,
         "serial": 0,
         "coverUrl": 93
       }
@@ -674,11 +674,11 @@
       "path": "catalogs/snes-jp.json",
       "platform": "Super Nintendo",
       "games": 1284,
-      "bytes": 478199,
-      "sha256": "b5140f11d4ef8a3dfc903ad0d888308b426b13efc95ff89b20d29e93681a031b",
+      "bytes": 489363,
+      "sha256": "27f64c0be7262fad2149a20bbd62488452a5513e9bee986fe64f73ee9e49c173",
       "coverage": {
         "year": 100,
-        "publisher": 67,
+        "publisher": 93,
         "serial": 0,
         "coverUrl": 73
       }
@@ -700,8 +700,8 @@
       "path": "catalogs/turbografx-16-jp.json",
       "platform": "TurboGrafx-16",
       "games": 288,
-      "bytes": 97760,
-      "sha256": "d58cd8f18337c9613695a40ad5a628a0946153a652280bf630c9cc08f5577062",
+      "bytes": 99283,
+      "sha256": "fa925898f6391c43fc7baa46694cbd3082b02cc68b080524ae0df5981118f537",
       "coverage": {
         "year": 100,
         "publisher": 100,
@@ -713,8 +713,8 @@
       "path": "catalogs/turbografx-16-usa.json",
       "platform": "TurboGrafx-16",
       "games": 93,
-      "bytes": 33310,
-      "sha256": "fdf064c9407d096bd40d9fdd3a86d5c6ab0c1367cc1a04ff6d8645e343940dad",
+      "bytes": 34052,
+      "sha256": "02d7b99bdc173c44afdc9332a3cb38c6abfd79f0752eb98fa1fb29a36c707547",
       "coverage": {
         "year": 100,
         "publisher": 100,

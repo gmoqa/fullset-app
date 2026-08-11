@@ -601,6 +601,31 @@ claves nuevas no rompe nada.
   consolas —PlayStation, PS2, PS3, GameCube, Dreamcast, Saturn y Sega CD—: 22.526 juegos, el 83%
   del dataset. No es el enriquecedor, es la fuente: libretro publica `metadat/genre` solo de PSP
   entre las PlayStation, y nada de las consolas de disco de Sega.
+- **E2. Género fuera de NTSC-U** — ✅ **cerrado el 2026-08-11.** El género estaba en 0% en NES, SNES
+  y N64 **japonés y europeo**, mientras el americano de las mismas consolas iba al 93–96%. No era
+  límite de la fuente: libretro publica `metadat/genre` para las tres —NES 3.301 entradas, SNES
+  3.851, N64 2.064— y `enrich_meta_libretro.py` elige la de la región. Simplemente nunca se había
+  corrido sobre esos seis catálogos. Corrido, además, sobre TurboGrafx-16, que también tiene DAT
+  (442 entradas).
+
+  | | género | editora |
+  |---|---|---|
+  | `nes-jp` | 0 → **66%** | 99% |
+  | `nes-eu` | 0 → **95%** | 100% |
+  | `snes-jp` | 0 → **72%** | 67 → **93%** |
+  | `snes-eu` | 0 → **94%** | 61 → **99%** |
+  | `n64-jp` | 0 → **72%** | **0 → 73%** |
+  | `n64-eu` | 0 → **94%** | **0 → 94%** |
+  | `turbografx-16-usa` | 0 → **97%** | 100% |
+  | `turbografx-16-jp` | 0 → **65%** | 100% |
+
+  Los que **siguen** en 0% no son olvido: se verificó consola por consola que libretro no publica
+  nada para GameCube, PlayStation 1/2/3, Saturn, Dreamcast ni PC Engine CD, y que para DS y 3DS
+  tiene ~100 entradas y **0** de año. Ahí el hueco es de la fuente.
+
+  **Moraleja para la próxima consola:** antes de anotar un campo como "sin fuente", consultar
+  `metadat/<campo>/<DAT>.dat`. Cuesta un `curl` y acá valía ocho catálogos.
+
 - **G. Vocabularios controlados** — **pendiente, medido el 2026-08-10.** El lint garantiza la
   **forma** (11 claves, orden, tipos, slug único, ordenado) y cuatro invariantes de significado,
   pero **no mira el vocabulario**: atrapa un serial japonés en un catálogo americano y no atrapa
