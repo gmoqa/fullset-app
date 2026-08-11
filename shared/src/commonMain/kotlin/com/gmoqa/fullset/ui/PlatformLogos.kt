@@ -100,7 +100,11 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     "PlayStation 2" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1E2038), 0.71f),   // azul oscuro
     // Sus tapas vienen de SteamGridDB, que las entrega todas en 600×900 = 0.67.
     "PlayStation 3" to PlatformStyle(pad("ic_pad_playstation3"), Color(0xFF1A1A1A), 0.67f),   // negro piano
-    // Controllercons no trae 3DS, así que este glifo lo dibujamos nosotros
+    // Ciruela: la paleta tenía su hueco más grande entre el granate del Master System y el violeta
+    // de la Game Gear, y la DS Lite en Noble Pink es un modelo real y reconocible.
+    // Aspecto 1.11 medido sobre 40 al azar (p10 1.09, p90 1.12): apaisada como la 3DS.
+    "Nintendo DS" to PlatformStyle(pad("ic_pad_ds"), Color(0xFF3E2540), 1.11f),                // ciruela
+    // Controllercons no trae DS ni 3DS, así que estos dos glifos los dibujamos nosotros
     // (`tools/draw_3ds_glyph.py`): la consola abierta, que es como se la reconoce.
     // **Aspecto 1.13, apaisado**: es la única del dataset más ancha que alta. La caja de 3DS se
     // guarda acostada. Medido sobre 40 al azar, p10 1.09 y p90 1.14.

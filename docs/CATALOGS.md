@@ -179,6 +179,28 @@ o sea después de toda la era que catalogamos (la Dreamcast se discontinuó en 2
 europeo es ELSPA salvo lanzamientos tardíos. En Japón, antes de CERO (2002) regía la autorregulación
 de Sega: 全年齢 (todas las edades), 18禁 y la marca X. En EE.UU., VRC hasta 1994 y ESRB después.
 
+**Nintendo DS: la biblioteca más grande del dataset.** 6.092 cartuchos entre las tres regiones —más
+que la PS2 y la SNES juntas—, por el mismo camino que la 3DS: DAT primero, Wikipedia como
+enriquecedor. La maquinaria común de los DAT de No-Intro vive en `tools/nointro.py`.
+
+| Catálogo | Cartuchos | año/editora/serial/cover |
+|---|---|---|
+| `ds-usa.json` | 1782 | 54/82/**100**/93 |
+| `ds-jp.json` | 1875 | 45/48/**100**/95 |
+| `ds-eu.json` | 2435 | 24/57/**100**/91 |
+
+**Por qué el año de PAL queda en 24%.** Las cuatro páginas de DS traen `Título | Desarrolladora |
+Editora | First released | JP | NA | EU | AU`, donde las cuatro últimas son **tildes** y la fecha es
+**una sola**: la del primer mercado que lo recibió, con su región adentro de la plantilla
+(`{{#invoke:vgrtbl|main|EU|2008-10-31}}`).
+
+Esa fecha se asigna **solo a la región que la plantilla nombra**. Repartirla a las tres daría casi
+100% de cobertura, pero estaría afirmando que un juego japonés de 2005 salió en Europa en 2005, y en
+todo el resto del dataset `releaseDate` significa "salió en ESTA región en esta fecha". Como casi
+ningún juego debutó en Europa, PAL se queda con pocas. Es un hueco honesto, no un dato inventado.
+
+La editora sí es una sola columna para todo el juego, así que se aplica a las tres regiones.
+
 **Nintendo 3DS: el primero que se arma desde el DAT y no desde Wikipedia.** Es también el primero
 con **serial al 100%** y el único **apaisado** (aspecto 1.13; el resto del dataset es vertical).
 

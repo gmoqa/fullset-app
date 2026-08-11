@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
-"""Dibuja el glifo de la Nintendo 3DS en el estilo de Controllercons (solid, viewBox 64x64).
+"""Dibuja los glifos de las portátiles de Nintendo en el estilo de Controllercons (solid, 64x64).
 
-La silueta es la consola **abierta**, que es como se la reconoce: dos paneles con sus pantallas, el
-de arriba más ancho. Los detalles van en negativo (huecos), igual que el resto del paquete.
+Controllercons no trae ninguna de las dos —revisadas sus cuatro versiones y los 30 glifos que
+declara su CSS—, así que se dibujan acá.
+
+La silueta es la consola **abierta**, que es como se la reconoce: dos paneles con sus pantallas. Lo
+que las distingue entre sí es real y no un adorno: la **DS** tiene las dos pantallas iguales, en 4:3,
+y cruceta; la **3DS** tiene la de arriba panorámica y un Circle Pad encima de la cruceta.
+
+Los detalles van en negativo (huecos), igual que el resto del paquete.
 
 Sin arcos: todo se emite con cúbicas. `A` está soportado por VectorDrawable pero las curvas de Bézier
 funcionan en cualquier renderer sin depender de eso.
@@ -35,6 +41,28 @@ def circ(cx, cy, r):
     )
 
 
+def cruz(cx, cy, largo, ancho):
+    """Cruceta: un polígono de doce puntos, en sentido antihorario para que `evenOdd` la recorte."""
+    l, a = largo / 2, ancho / 2
+    p = [(-a, -l), (a, -l), (a, -a), (l, -a), (l, a), (a, a),
+         (a, l), (-a, l), (-a, a), (-l, a), (-l, -a), (-a, -a)]
+    p = [(cx + x, cy + y) for x, y in reversed(p)]
+    return "M" + " L".join(f"{x},{y}" for x, y in p) + " Z"
+
+
+def glifo_ds():
+    """Nintendo DS: dos pantallas 4:3 del mismo tamaño, cruceta a la izquierda."""
+    p = []
+    p.append(rrect(9, 5, 46, 27, 3.5))
+    p.append(rrect(20, 9.5, 24, 18, 1.5))      # pantalla de arriba, 4:3
+    p.append(rrect(9, 34, 46, 25, 3.5))
+    p.append(rrect(22, 38, 20, 15, 1.5))       # táctil, mismo 4:3
+    p.append(cruz(15.5, 45.5, 9, 3.2))
+    for dx, dy in ((0, -3.6), (-3.6, 0), (3.6, 0), (0, 3.6)):
+        p.append(circ(48.5 + dx, 45.5 + dy, 1.7))
+    return " ".join(p)
+
+
 def glifo():
     p = []
     # Panel de arriba y su pantalla ancha (la 3D es 16:9).
@@ -57,11 +85,11 @@ def glifo():
 
 if __name__ == "__main__":
     import pathlib, sys
-    d = glifo()
     S = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else ".")
-    (S / "3ds.svg").write_text(
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">'
-        f'<path fill="#e8e4dc" fill-rule="evenodd" d="{d}"/></svg>'
-    )
-    (S / "3ds.path").write_text(d)
-    print(f"  {len(d)} chars de path")
+    for nombre, d in (("3ds", glifo()), ("ds", glifo_ds())):
+        (S / f"{nombre}.svg").write_text(
+            f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">'
+            f'<path fill="#e8e4dc" fill-rule="evenodd" d="{d}"/></svg>'
+        )
+        (S / f"{nombre}.path").write_text(d)
+        print(f"  {nombre}: {len(d)} chars de path")

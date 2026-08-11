@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "259b1a214cc3",
+  "version": "30eb05ff17ff",
   "files": [
     {
       "path": "catalogs/platforms.json",
-      "bytes": 15736,
-      "sha256": "5f8d9a86185dbc5c93abe5d86552c3f80fe3c97f04782a3bd8df8baf46bd1b1b"
+      "bytes": 16683,
+      "sha256": "8540549c8392d72db139e6377f08c62f2e6d54e974e755d8d77e033da79169a6"
     },
     {
       "path": "catalogs/32x-eu.json",
@@ -135,6 +135,45 @@
         "publisher": 100,
         "serial": 93,
         "coverUrl": 99
+      }
+    },
+    {
+      "path": "catalogs/ds-eu.json",
+      "platform": "Nintendo DS",
+      "games": 2435,
+      "bytes": 980920,
+      "sha256": "003e9df7ab5ce1b864fc913f9db9c51e96c7a0169c1edcc35253b2273a094381",
+      "coverage": {
+        "year": 24,
+        "publisher": 57,
+        "serial": 100,
+        "coverUrl": 91
+      }
+    },
+    {
+      "path": "catalogs/ds-jp.json",
+      "platform": "Nintendo DS",
+      "games": 1875,
+      "bytes": 804048,
+      "sha256": "bdea63d1f2dc0a3030a2e52253f2817fdc786ab46700ba5fd1eefb641c35c8c3",
+      "coverage": {
+        "year": 45,
+        "publisher": 48,
+        "serial": 100,
+        "coverUrl": 95
+      }
+    },
+    {
+      "path": "catalogs/ds-usa.json",
+      "platform": "Nintendo DS",
+      "games": 1782,
+      "bytes": 706491,
+      "sha256": "2d2eebd4482168a83ab7ea1e04431c295d69946c40cc6b7385264d6286c90d35",
+      "coverage": {
+        "year": 54,
+        "publisher": 82,
+        "serial": 100,
+        "coverUrl": 93
       }
     },
     {

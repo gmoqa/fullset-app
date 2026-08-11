@@ -39,6 +39,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from catalog_common import core, fetch, slug, write_catalog  # noqa: E402
+from nointro import REGIONES, cartuchos as cartuchos_dat  # noqa: E402
 from enrich_dates_wikipedia import wikitext, row_cells  # noqa: E402
 
 DAT = ("https://raw.githubusercontent.com/libretro/libretro-database/master/"
@@ -47,20 +48,7 @@ PAGINA = "List of Nintendo 3DS games"
 PLATAFORMA = "Nintendo 3DS"
 SALIDA = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs")
 
-# Región del DAT -> la nuestra. PAL es una **unión de territorios**, igual que en los catálogos Sega:
-# un cartucho alemán o australiano es PAL. Corea (102) y Taiwán (31) quedan afuera porque no tenemos
-# región para ellos — dejarlos caer en otra sería mentir sobre dónde salió ese cartucho.
-REGIONES = {
-    "NTSC-U": {"USA", "Canada"},
-    "NTSC-J": {"Japan"},
-    "PAL": {"Europe", "Germany", "France", "Spain", "Italy", "Australia", "Netherlands",
-            "United Kingdom", "Russia"},
-}
 ARCHIVOS = {"NTSC-U": "3ds-usa.json", "NTSC-J": "3ds-jp.json", "PAL": "3ds-eu.json"}
-
-# Lo que hay en el DAT y **no** es un cartucho que se vendió: son 21 de 2.076. Ojo que `(Rev 1)` no
-# entra acá: una revisión sigue siendo el mismo cartucho, y se resuelve deduplicando por título.
-RUIDO = re.compile(r"\(.*(eShop|Virtual Console|Demo|Beta|Proto|Kiosk|Sample|Debug).*\)", re.I)
 
 # Fechas de Wikipedia. Esta lista no usa `{{dts}}` como el resto sino el módulo de ordenamiento.
 FECHA = re.compile(r"\{\{#invoke:Date table sorting\|main\|(\d{4})(?:\|(\d{1,2}))?(?:\|(\d{1,2}))?")
@@ -68,42 +56,12 @@ FECHA = re.compile(r"\{\{#invoke:Date table sorting\|main\|(\d{4})(?:\|(\d{1,2})
 COLUMNA = {"NTSC-J": 3, "NTSC-U": 4, "PAL": 6}
 
 
-def titulo_retail(nombre: str) -> str:
-    """El nombre de volcado convertido en el título como se lee en la caja.
-
-    Tres reglas, y alcanzan: se van los paréntesis técnicos —región, idiomas, revisión—, el artículo
-    pospuesto vuelve al frente (`Sims 3, The` -> `The Sims 3`) y el guión rodeado de espacios, que es
-    como No-Intro escribe los dos puntos porque `:` no puede ir en un nombre de archivo, vuelve a ser
-    `: ` (`Zero Escape - Zero Time Dilemma` -> `Zero Escape: Zero Time Dilemma`).
-    """
-    n = re.sub(r"\s*\([^)]*\)", "", nombre)
-    n = re.sub(r"^(.*?), (The|A|An)\b", r"\2 \1", n)
-    return re.sub(r"\s+-\s+", ": ", n).strip()
-
-
 def cartuchos() -> dict[str, list[dict]]:
     """Los cartuchos del DAT, por región nuestra, ya deduplicados y con su serial."""
     texto = fetch(DAT)
     if isinstance(texto, bytes):
         texto = texto.decode("utf-8", "replace")
-    de_region = {r: reg for reg, paises in REGIONES.items() for r in paises}
-
-    out: dict[str, list[dict]] = {r: [] for r in REGIONES}
-    vistos: dict[str, set] = {r: set() for r in REGIONES}
-    patron = re.compile(r'game\s*\(\s*name\s+"([^"]+)"\s*\n\s*region\s+"([^"]+)"\s*\n\s*serial\s+"([^"]+)"')
-    for nombre, pais, serial in patron.findall(texto):
-        region = de_region.get(pais)
-        if region is None or RUIDO.search(nombre):
-            continue
-        titulo = titulo_retail(nombre)
-        clave = core(titulo)
-        # Deduplicar por título: las `(Rev N)` son el mismo cartucho reimpreso, no otro juego. Se
-        # queda la primera, que es la revisión original.
-        if not clave or clave in vistos[region]:
-            continue
-        vistos[region].add(clave)
-        out[region].append({"title": titulo, "serial": serial.strip()})
-    return out
+    return cartuchos_dat(texto, core)
 
 
 def desde_wikipedia() -> dict[str, dict]:

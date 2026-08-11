@@ -548,6 +548,37 @@
     }
   },
   {
+    "id": "nintendo-ds",
+    "name": "Nintendo DS",
+    "catalogs": {
+      "NTSC-U": "catalogs/ds-usa.json",
+      "NTSC-J": "catalogs/ds-jp.json",
+      "PAL": "catalogs/ds-eu.json"
+    },
+    "libretroRepo": "Nintendo_-_Nintendo_DS",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Nintendo",
+      "generation": 7,
+      "handheld": true,
+      "media": "Game Card",
+      "released": {
+        "ntsc": 2004,
+        "ntsc-j": 2004,
+        "pal": 2005
+      },
+      "discontinued": 2014,
+      "unitsSold": "154.0M",
+      "cpu": "ARM946E-S @ 67 MHz + ARM7TDMI @ 33 MHz",
+      "description": "Two screens, one of them touch, and the best-selling handheld ever made. Unlike the 3DS that followed it, the DS is region-free: a Japanese card runs on any console. Listed here as physical cards only; DSiWare never existed in plastic."
+    },
+    "counts": {
+      "NTSC-U": 1782,
+      "NTSC-J": 1875,
+      "PAL": 2435
+    }
+  },
+  {
     "id": "nintendo-3ds",
     "name": "Nintendo 3DS",
     "catalogs": {
