@@ -120,6 +120,25 @@ def core(t):
     return re.sub(r'[^a-z0-9]+', '', s)
 
 
+# Sufijo de región del catalog number de Nintendo, que es donde de verdad está: el prefijo (`NUS`,
+# `NES`) es el **producto** y es igual en los tres mercados. Incluye los códigos por país europeo,
+# que son PAL: `UKV` (Reino Unido), `NOE` (Alemania), `FAH` (Francia/Holanda), `SCN` (Escandinavia),
+# `ANZ`/`AUS` (Australia y Nueva Zelanda).
+SERIAL_SUFFIX = {
+    "USA": "NTSC-U",
+    "JPN": "NTSC-J",
+    "EUR": "PAL", "EUU": "PAL", "EEC": "PAL", "UKV": "PAL", "NOE": "PAL", "GER": "PAL",
+    "FRA": "PAL", "ESP": "PAL", "ITA": "PAL", "HOL": "PAL", "SCN": "PAL", "FAH": "PAL",
+    "AUS": "PAL", "ANZ": "PAL",
+}
+
+
+def region_de_serial(serial):
+    """La región que declara el **sufijo** del catalog number, o None si no dice nada."""
+    s = (serial or "").strip()
+    return SERIAL_SUFFIX.get(s.rsplit("-", 1)[-1].upper()) if "-" in s else None
+
+
 def _regiones(name):
     """Regiones que declara el nombre de archivo de No-Intro, como conjunto.
 

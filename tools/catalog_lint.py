@@ -31,7 +31,7 @@ Uso:  python3 tools/catalog_lint.py
 import json, os, re, sys, urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from catalog_common import NO_SON_CATALOGOS, slug as slugify  # noqa: E402
+from catalog_common import NO_SON_CATALOGOS, region_de_serial, slug as slugify  # noqa: E402
 
 CAT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs")
 
@@ -99,13 +99,18 @@ MANIFEST_PATH = os.path.join(CAT_DIR, "manifest.json")
 # Sega la misma `T` aparece en las tres regiones, así que ahí no dice nada.
 SERIAL_REGION = {
     "SLUS": "NTSC-U", "SCUS": "NTSC-U", "SKUS": "NTSC-U", "BLUS": "NTSC-U", "BCUS": "NTSC-U",
-    "SNS": "NTSC-U", "NES": "NTSC-U", "NUS": "NTSC-U",
+    "SNS": "NTSC-U",
     "SLES": "PAL", "SCES": "PAL", "SCED": "PAL", "SLED": "PAL", "BLES": "PAL", "BCES": "PAL",
     "SLPS": "NTSC-J", "SLPM": "NTSC-J", "SCPS": "NTSC-J", "SIPS": "NTSC-J", "PAPX": "NTSC-J",
     "PBPX": "NTSC-J", "BLJM": "NTSC-J", "BLJS": "NTSC-J", "BCJS": "NTSC-J",
     "SHVC": "NTSC-J", "HVC": "NTSC-J",
 }
 # `BLAS`/`BCAS`/`BLKS`/`BCKS` (Asia y Corea) aparecen en las tres regiones de PS3: no diagnostican.
+#
+# `NUS` (Nintendo 64) y `NES` **tampoco**, y estuvieron acá hasta que los catálogos japonés y europeo
+# tuvieron seriales: son códigos de **producto**, iguales en los tres mercados —`NUS-NGEJ-JPN`,
+# `NUS-NSAP-EUR`— y la región va en el **sufijo**. Mientras solo el americano tenía números, la regla
+# parecía correcta porque todo terminaba en `-USA`.
 
 REGION_KEY = {"NTSC-U": "ntsc", "NTSC-J": "ntsc-j", "PAL": "pal"}
 COVER_REGION = {"NTSC-U": "USA", "NTSC-J": "JAPAN", "PAL": "EUROPE"}
@@ -153,10 +158,12 @@ def lint_semantica(data, lanzamiento):
 
         serial = (e.get("serial") or "").strip()
         m = re.match(r"^[A-Za-z]+", serial)
-        if m:
-            esperada = SERIAL_REGION.get(m.group(0).upper())
-            if esperada and esperada != e.get("region"):
-                errs.append(f"{donde}: serial {serial!r} es de {esperada}, no de {e.get('region')}")
+        esperada = SERIAL_REGION.get(m.group(0).upper()) if m else None
+        # El sufijo manda sobre el prefijo: en Nintendo el prefijo es el producto y el sufijo el
+        # mercado, así que cuando los dos opinan, el que sabe es el de atrás.
+        esperada = region_de_serial(serial) or esperada
+        if esperada and esperada != e.get("region"):
+            errs.append(f"{donde}: serial {serial!r} es de {esperada}, no de {e.get('region')}")
 
         url = (e.get("coverUrl") or "").strip()
         if url and "steamgriddb" not in url:

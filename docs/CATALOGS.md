@@ -626,6 +626,35 @@ claves nuevas no rompe nada.
   **Moraleja para la próxima consola:** antes de anotar un campo como "sin fuente", consultar
   `metadat/<campo>/<DAT>.dat`. Cuesta un `curl` y acá valía ocho catálogos.
 
+- **E3. Serial fuera de NTSC-U** — ✅ **cerrado el 2026-08-11**, y de paso destapó un defecto del
+  propio lint. Mismo patrón que el género: NES, SNES y N64 tenían serial 0% en japonés y europeo
+  mientras el americano iba al 93–96%, y `metadat/serial` sí los trae (NES 942 japoneses + 253
+  europeos; SNES 1.566 + 509; N64 222 + 258).
+
+  No servía `catalog_common.dat_serials`, que elige **uno** por título prefiriendo el americano
+  porque se usa al construir catálogos NTSC-U. Va un enriquecedor propio,
+  `enrich_serials_cartridge.py`, hermano del de Redump pero para la otra forma de DAT: los de
+  cartucho traen `comment "Título (Japan)"` en vez de un campo `region`.
+
+  | | serial |
+  |---|---|
+  | `nes-jp` / `nes-eu` | 0 → **52% / 68%** |
+  | `snes-jp` / `snes-eu` | 0 → **69% / 85%** |
+  | `n64-jp` / `n64-eu` | 0 → **51% / 92%** |
+
+  **El lint tenía mal la regla.** `SERIAL_REGION` mapeaba `NUS` → NTSC-U y `NES` → NTSC-U, pero esos
+  son códigos de **producto**, iguales en los tres mercados: la región va en el **sufijo**
+  (`NUS-NGEJ-JPN`, `NUS-NSAP-EUR`, `NES-38-UKV`). Mientras solo el catálogo americano tenía números
+  la regla parecía correcta, porque todo terminaba en `-USA`. Ahora manda el sufijo, con
+  `region_de_serial()` en `catalog_common` como única verdad para el lint y para el enriquecedor.
+
+  Eso hizo visibles **8 seriales de otra región que ya estaban cargados** —7 en `n64-usa` y 1 en
+  `nes-usa`, todos invisibles para la regla vieja— que se repararon con `--fix-region`.
+
+  Y una trampa del respaldo a `(World)`: `Hogan's Alley (World)` trae `NES-HA-USA`, o sea el número
+  de la caja **americana**. Tomarlo para el catálogo japonés le pone el catalog number de otro país;
+  el cartucho será el mismo, el número impreso no. El enriquecedor ahora lo descarta.
+
 - **G. Vocabularios controlados** — **pendiente, medido el 2026-08-10.** El lint garantiza la
   **forma** (11 claves, orden, tipos, slug único, ordenado) y cuatro invariantes de significado,
   pero **no mira el vocabulario**: atrapa un serial japonés en un catálogo americano y no atrapa
