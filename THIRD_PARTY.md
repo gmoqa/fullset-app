@@ -20,6 +20,12 @@ prevalecen sobre la de este proyecto para las partes correspondientes.
   `LICENSES-controllercons.txt` y https://controllercons.github.io. Reemplazan a los logos de marca
   de las consolas, que son marca registrada.
 
+  **`ic_pad_3ds.xml` no es de Controllercons.** El paquete no trae 3DS: revisadas sus cuatro
+  versiones y los 30 glifos que declara el CSS de la v2.1, no hay ninguna mención a `3ds`, `game
+  boy` ni `nintendo-ds` en sus 201 archivos. Ese lo dibujamos nosotros con
+  `tools/draw_3ds_glyph.py`, en el mismo estilo —silueta maciza, detalles en negativo, viewBox 64—
+  para que conviva con los otros. Va bajo la **MIT** del repo, no bajo la OFL.
+
   El set trae **30 íconos** y usamos 13. Las consolas sin ícono propio reusan el de su familia
   —Sega CD y 32X el del Genesis; Game Gear, SG-1000 y las dos TurboGrafx el del Master System—
   porque compartían el control o eran accesorios de la misma máquina. Antes de dar por sentado que
