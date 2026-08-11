@@ -49,6 +49,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SegmentedButton
+import androidx.compose.material3.SegmentedButtonDefaults
+import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -246,39 +249,26 @@ private fun PlatformStep(
 /**
  * Las dos solapas del paso 1: de sobremesa y de bolsillo.
  *
- * Se usa el mismo control segmentado que Settings —tema, región, modelo de voz— en vez de un
- * `TabRow`: acá no se navega entre secciones, se **filtra la misma grilla**, que es exactamente lo
- * que ese control significa en el resto de la app.
+ * El **mismo control segmentado** que el tema, la región y el modelo de voz en Settings, con su
+ * `Tokens.Shape.control`. Acá no se navega entre secciones, se filtra la misma grilla — que es
+ * exactamente lo que ese control significa en el resto de la app— y reusarlo evita inventar una
+ * forma nueva para decir lo mismo.
  */
 @Composable
 private fun PlatformFormTabs(handhelds: Boolean, onSelect: (Boolean) -> Unit) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 16.dp, end = 16.dp, top = 12.dp)
-            .clip(Tokens.Shape.pill)
-            .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f)),
+    val opciones = listOf(false to "Consoles", true to "Handhelds")
+    SingleChoiceSegmentedButtonRow(
+        modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 12.dp),
     ) {
-        listOf(false to "Consoles", true to "Handhelds").forEach { (esPortatil, texto) ->
-            val activa = handhelds == esPortatil
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .clip(Tokens.Shape.pill)
-                    .background(
-                        if (activa) MaterialTheme.colorScheme.primary.copy(alpha = 0.22f)
-                        else Color.Transparent,
-                    )
-                    .clickable { onSelect(esPortatil) }
-                    .padding(vertical = 10.dp),
-                contentAlignment = Alignment.Center,
+        opciones.forEachIndexed { index, (esPortatil, texto) ->
+            SegmentedButton(
+                selected = handhelds == esPortatil,
+                onClick = { onSelect(esPortatil) },
+                shape = SegmentedButtonDefaults.itemShape(
+                    index = index, count = opciones.size, baseShape = Tokens.Shape.control,
+                ),
             ) {
-                Text(
-                    texto,
-                    style = MaterialTheme.typography.labelLarge,
-                    color = if (activa) MaterialTheme.colorScheme.primary
-                    else MaterialTheme.colorScheme.onSurfaceVariant,
-                )
+                Text(texto)
             }
         }
     }
