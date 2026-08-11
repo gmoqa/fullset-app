@@ -548,6 +548,37 @@
     }
   },
   {
+    "id": "game-boy-advance",
+    "name": "Game Boy Advance",
+    "catalogs": {
+      "NTSC-U": "catalogs/gba-usa.json",
+      "NTSC-J": "catalogs/gba-jp.json",
+      "PAL": "catalogs/gba-eu.json"
+    },
+    "libretroRepo": "Nintendo_-_Game_Boy_Advance",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Nintendo",
+      "generation": 6,
+      "handheld": true,
+      "media": "Cartridge",
+      "released": {
+        "ntsc-j": 2001,
+        "ntsc": 2001,
+        "pal": 2001
+      },
+      "discontinued": 2010,
+      "unitsSold": "81.5M",
+      "cpu": "ARM7TDMI @ 16.8 MHz",
+      "description": "The 32-bit Game Boy, and the last Nintendo handheld with no screen to fold. It plays Game Boy and Game Boy Color cartridges too. The Japanese box is a wide cardboard sleeve; the American and European ones are almost square."
+    },
+    "counts": {
+      "NTSC-U": 982,
+      "NTSC-J": 797,
+      "PAL": 845
+    }
+  },
+  {
     "id": "nintendo-ds",
     "name": "Nintendo DS",
     "catalogs": {

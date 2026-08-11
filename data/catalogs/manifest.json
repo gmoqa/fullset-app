@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "30eb05ff17ff",
+  "version": "eb05b430aac5",
   "files": [
     {
       "path": "catalogs/platforms.json",
-      "bytes": 16683,
-      "sha256": "8540549c8392d72db139e6377f08c62f2e6d54e974e755d8d77e033da79169a6"
+      "bytes": 17613,
+      "sha256": "791c322e782566eed70f2ef9fb14291658c28650a86c82b4422cd88ca67835ba"
     },
     {
       "path": "catalogs/32x-eu.json",
@@ -252,6 +252,45 @@
         "publisher": 100,
         "serial": 83,
         "coverUrl": 88
+      }
+    },
+    {
+      "path": "catalogs/gba-eu.json",
+      "platform": "Game Boy Advance",
+      "games": 845,
+      "bytes": 363790,
+      "sha256": "00b87413baad8aab3fe7bfe8c2a63cf36982b3da0e83de1578a7ef802a85cb94",
+      "coverage": {
+        "year": 74,
+        "publisher": 98,
+        "serial": 100,
+        "coverUrl": 94
+      }
+    },
+    {
+      "path": "catalogs/gba-jp.json",
+      "platform": "Game Boy Advance",
+      "games": 797,
+      "bytes": 347695,
+      "sha256": "beb18b9ed46d145f9eaf59d6846f3d7f338cdf775b8889e3734b8fdc7f6c6390",
+      "coverage": {
+        "year": 92,
+        "publisher": 95,
+        "serial": 100,
+        "coverUrl": 96
+      }
+    },
+    {
+      "path": "catalogs/gba-usa.json",
+      "platform": "Game Boy Advance",
+      "games": 982,
+      "bytes": 413550,
+      "sha256": "4c2d85e8fe336fe853577342a7eb17ddb3e4ed901824a7ef7cb79ff4ae98b71f",
+      "coverage": {
+        "year": 80,
+        "publisher": 98,
+        "serial": 100,
+        "coverUrl": 96
       }
     },
     {

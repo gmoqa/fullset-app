@@ -179,6 +179,27 @@ o sea después de toda la era que catalogamos (la Dreamcast se discontinuó en 2
 europeo es ELSPA salvo lanzamientos tardíos. En Japón, antes de CERO (2002) regía la autorregulación
 de Sega: 全年齢 (todas las edades), 18禁 y la marca X. En EE.UU., VRC hasta 1994 y ESRB después.
 
+**Game Boy Advance: el DAT sin Wikipedia.** 2.624 cartuchos, y el único de los tres portátiles de
+Nintendo que **no necesita** enriquecerse desde Wikipedia.
+
+| Catálogo | Cartuchos | año/editora/género/serial/cover |
+|---|---|---|
+| `gba-usa.json` | 982 | 80/98/**98**/100/96 |
+| `gba-jp.json` | 797 | 92/95/**88**/100/96 |
+| `gba-eu.json` | 845 | 74/98/**97**/100/94 |
+
+Dos diferencias con DS y 3DS, y las dos cambian el camino:
+
+- **La GBA no tuvo tienda**, así que el DAT no se usa para separar lo físico de lo digital —todo
+  salió en cartucho— sino porque es la lista más completa y la única con el `serial` de la etiqueta.
+- **libretro sí publica sus metadatos**: género 3.110, editora 3.188 y año 2.088 entradas, contra
+  ~100 y **0** para DS y 3DS. Con eso alcanza, así que el builder es de **una sola fuente** —menos
+  superficie donde equivocarse— y el género queda arriba del 88%, que solo el Atari 2600 supera.
+
+**La caja japonesa es apaisada y la occidental no.** Medido sobre 90 al azar: 35 de 35 cuadradas en
+NTSC-U, 31 de 31 en PAL, y 20 de 24 **anchas (1.59)** en NTSC-J. Va a `COVER_ASPECT_BY_REGION`, como
+la Saturn y la Sega CD. Un solo número dejaba media biblioteca con banda a los costados.
+
 **Nintendo DS: la biblioteca más grande del dataset.** 6.092 cartuchos entre las tres regiones —más
 que la PS2 y la SNES juntas—, por el mismo camino que la 3DS: DAT primero, Wikipedia como
 enriquecedor. La maquinaria común de los DAT de No-Intro vive en `tools/nointro.py`.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dibuja los glifos de las portátiles de Nintendo en el estilo de Controllercons (solid, 64x64).
+"""Dibuja los glifos de las portátiles de Nintendo (GBA, DS, 3DS) en el estilo de Controllercons (solid, 64x64).
 
 Controllercons no trae ninguna de las dos —revisadas sus cuatro versiones y los 30 glifos que
 declara su CSS—, así que se dibujan acá.
@@ -50,6 +50,21 @@ def cruz(cx, cy, largo, ancho):
     return "M" + " L".join(f"{x},{y}" for x, y in p) + " Z"
 
 
+def glifo_gba():
+    """Game Boy Advance: cuerpo apaisado de extremos redondos, pantalla 3:2 al centro.
+
+    Lo que la identifica de un vistazo es la **horizontalidad** —es la única de las tres que no se
+    abre— y los dos botones en diagonal a la derecha, que es como están en la consola real.
+    """
+    p = []
+    p.append(rrect(3, 18, 58, 28, 13))
+    p.append(rrect(22, 25, 20, 14, 1.5))       # pantalla 3:2
+    p.append(cruz(13, 32, 10, 3.4))
+    p.append(circ(49.5, 29.5, 2.7))            # B
+    p.append(circ(55, 35, 2.7))                # A
+    return " ".join(p)
+
+
 def glifo_ds():
     """Nintendo DS: dos pantallas 4:3 del mismo tamaño, cruceta a la izquierda."""
     p = []
@@ -86,7 +101,7 @@ def glifo():
 if __name__ == "__main__":
     import pathlib, sys
     S = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else ".")
-    for nombre, d in (("3ds", glifo()), ("ds", glifo_ds())):
+    for nombre, d in (("3ds", glifo()), ("ds", glifo_ds()), ("gba", glifo_gba())):
         (S / f"{nombre}.svg").write_text(
             f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">'
             f'<path fill="#e8e4dc" fill-rule="evenodd" d="{d}"/></svg>'

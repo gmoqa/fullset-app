@@ -100,6 +100,10 @@ private val PLATFORM_STYLES: Map<String, PlatformStyle> = mapOf(
     "PlayStation 2" to PlatformStyle(pad("ic_pad_playstation2"), Color(0xFF1E2038), 0.71f),   // azul oscuro
     // Sus tapas vienen de SteamGridDB, que las entrega todas en 600×900 = 0.67.
     "PlayStation 3" to PlatformStyle(pad("ic_pad_playstation3"), Color(0xFF1A1A1A), 0.67f),   // negro piano
+    // Verde de la pantalla del Game Boy original (#9BBC0F) oscurecido: cae en 74°, el centro del
+    // hueco más grande que quedaba en la paleta (29°→136°), y es el color de la familia.
+    // Aspecto **por región**: la caja japonesa es apaisada y la americana/europea cuadrada.
+    "Game Boy Advance" to PlatformStyle(pad("ic_pad_gba"), Color(0xFF37401A), 1.00f),          // verde DMG
     // Ciruela: la paleta tenía su hueco más grande entre el granate del Master System y el violeta
     // de la Game Gear, y la DS Lite en Noble Pink es un modelo real y reconocible.
     // Aspecto 1.11 medido sobre 40 al azar (p10 1.09, p90 1.12): apaisada como la 3DS.
@@ -145,6 +149,11 @@ private val COVER_ASPECT_BY_REGION: Map<Pair<String, String>, Float> = mapOf(
     // convivieron la caja alta y la ancha. 1.18 es la mediana; ningún número le va a quedar bien a
     // las dos mitades, y no hay dato en el catálogo que distinga una de otra.
     ("Sega CD" to "PAL") to 1.18f,
+    // La caja japonesa de GBA es un cartón **apaisado**; la americana y la europea, casi cuadradas.
+    // Medido sobre 90 al azar: 35/35 cuadradas en NTSC-U, 31/31 en PAL, 20 de 24 anchas en NTSC-J.
+    ("Game Boy Advance" to "NTSC-J") to 1.59f,
+    ("Game Boy Advance" to "NTSC-U") to 1.00f,
+    ("Game Boy Advance" to "PAL") to 1.00f,
 )
 
 /**
