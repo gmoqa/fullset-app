@@ -58,7 +58,8 @@ import com.gmoqa.fullset.resources.ic_shelf
 import com.gmoqa.fullset.ui.AddDigitalGameScreen
 import com.gmoqa.fullset.ui.AddGameScreen
 import com.gmoqa.fullset.ui.BackHandler
-import com.gmoqa.fullset.ui.CatalogMark
+import com.gmoqa.fullset.domain.CatalogMark
+import com.gmoqa.fullset.domain.pendientes
 import com.gmoqa.fullset.ui.DiarioGamerTheme
 import com.gmoqa.fullset.ui.GameDetailScreen
 import com.gmoqa.fullset.ui.TimelineScreen
@@ -535,16 +536,14 @@ private fun HomeContent(
                     onSortChange = onSortChange,
                 )
                 HomeTab.BACKLOG -> {
-                    // En modo diario los juegos se cargan como digitales (no hay Collection), así
-                    // que filtrar por físicos dejaría el Backlog siempre vacío. Ahí entran todos.
-                    val pendientes = remember(games, physical, trackingMode) {
-                        val fuente = if (trackingMode == TrackingMode.DIARY_ONLY) games else physical
-                        fuente.filter { it.backlog }
+                    // La regla —y por qué el modo importa— vive en `domain/Backlog.kt`.
+                    val delBacklog = remember(games, physical, trackingMode) {
+                        pendientes(games, physical, trackingMode)
                     }
                     GameListScreen(
                     title = "Backlog",
-                    subtitle = "${pendientes.size} to play",
-                    games = pendientes,
+                    subtitle = "${delBacklog.size} to play",
+                    games = delBacklog,
                     emptyIcon = Icons.Filled.Bookmarks,
                     emptyTitle = "Backlog is empty",
                     emptySubtitle = "Mark games as backlog from their details.",

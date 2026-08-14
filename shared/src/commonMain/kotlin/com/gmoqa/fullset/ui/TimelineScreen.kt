@@ -32,6 +32,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import com.gmoqa.fullset.data.Game
+import com.gmoqa.fullset.domain.lineaDeTiempo
 import com.gmoqa.fullset.data.coverModel
 
 /**
@@ -51,17 +52,11 @@ fun TimelineScreen(
     onBack: () -> Unit,
     onOpenGame: (Long) -> Unit,
 ) {
-    // Orden lexicográfico sobre la fecha ISO: con precisión variable "1994" queda antes que
-    // "1994-06", que es lo que se quiere — lo que solo sabemos que fue ese año abre el año.
-    val porAnio = remember(games) {
-        games.filter { it.firstPlayed.isNotBlank() }
-            .sortedBy { it.firstPlayed }
-            .groupBy { it.firstPlayed.take(4) }
-    }
-    val total = remember(porAnio) { porAnio.values.sumOf { it.size } }
-    // Si nadie cargó mes —lo normal al principio, donde solo se recuerda el año— la columna de la
-    // fecha queda vacía en todas las filas y son 46dp de margen muerto en un teléfono angosto.
-    val conMes = remember(games) { games.any { it.firstPlayed.length >= 7 } }
+    // La regla vive en `domain/LineaDeTiempo.kt`, con sus tests.
+    val linea = remember(games) { lineaDeTiempo(games) }
+    val porAnio = linea.porAnio
+    val total = linea.total
+    val conMes = linea.conMes
 
     Column(Modifier.fillMaxSize()) {
         ScreenHeader(

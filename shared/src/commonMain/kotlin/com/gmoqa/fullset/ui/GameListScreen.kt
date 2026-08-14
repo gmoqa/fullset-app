@@ -45,6 +45,7 @@ import coil3.compose.SubcomposeAsyncImage
 import coil3.compose.SubcomposeAsyncImageContent
 import com.gmoqa.fullset.data.Condition
 import com.gmoqa.fullset.data.Game
+import com.gmoqa.fullset.domain.estanterias
 import com.gmoqa.fullset.data.SortOrder
 import com.gmoqa.fullset.data.sortedBy
 import com.gmoqa.fullset.data.coverModel
@@ -119,9 +120,7 @@ fun GameShelves(
     /** Orden de los juegos **dentro de cada estante**; la agrupación por consola no cambia. */
     sortOrder: SortOrder = SortOrder.DEFAULT,
 ) {
-    val shelves = remember(games, sortOrder) {
-        games.groupBy { it.platform }.mapValues { (_, list) -> list.sortedBy(sortOrder) }
-    }
+    val shelves = remember(games, sortOrder) { estanterias(games, sortOrder) }
     // En teléfonos angostos achicamos el tile: con 140dp apenas entraban dos carátulas y media.
     val tileWidth = if (isCompactWidth()) Tokens.Size.coverTileCompact else Tokens.Size.coverTile
     val columnState = rememberLazyListState()

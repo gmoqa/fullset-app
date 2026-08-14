@@ -74,6 +74,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.takeOrElse
 import coil3.compose.AsyncImage
 import com.gmoqa.fullset.data.CatalogEntry
+import com.gmoqa.fullset.domain.CatalogMark
+import com.gmoqa.fullset.domain.cortesPorRegion
+import com.gmoqa.fullset.domain.indiceDeMarcas
 import com.gmoqa.fullset.data.CoverArt
 import com.gmoqa.fullset.data.Game
 import com.gmoqa.fullset.data.GameCatalog
@@ -86,22 +89,6 @@ import com.gmoqa.fullset.data.SteamGridGame
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-/**
- * Algo que ya está registrado (en la colección o en la wishlist) y que se marca en la lista del
- * catálogo para no agregarlo dos veces. [dot] es el color del punto (estado de conservación); si
- * es null el punto va neutro, porque lo que importa es que ya lo tenés anotado.
- */
-data class CatalogMark(
-    val platform: String,
-    val slug: String,
-    val title: String,
-    val label: String,
-    val dot: Long? = null,
-    /** Si además impide volver a tocar la fila (duplicaría el registro). */
-    val blocks: Boolean = true,
-    /** Región de la copia que tenés. Vacío = sin dato (cargas viejas o altas a mano). */
-    val region: String = "",
-)
 
 /**
  * Flujo "elegir un juego" en **2 pasos**. La usan la Biblioteca y la Wishlist:
@@ -466,23 +453,13 @@ private fun TitleStep(
     // Dónde arranca cada región dentro de la lista, para poner el encabezado justo ahí. Solo tiene
     // sentido navegando: buscando, el orden es el del ranking y las regiones quedan entremezcladas.
     val cortes = remember(results, buscando) {
-        if (buscando) emptyMap() else results.withIndex()
-            .groupBy { it.value.region }
-            .mapNotNull { (region, items) -> items.first().index to (region to items.size) }
-            .toMap()
+        if (buscando) emptyMap() else cortesPorRegion(results)
     }
     // Lo ya registrado de esta plataforma, indexado por slug y por título (los juegos viejos del
     // Excel pueden no tener slug). Como `marks` es reactivo, al agregar uno la etiqueta sale sola.
     // Las que bloquean se indexan últimas: si un juego está en la colección y en la wishlist, manda
     // la marca del destino en el que estás.
-    val markIndex = remember(marks, platform) {
-        val index = HashMap<String, CatalogMark>()
-        marks.filter { it.platform == platform.name }.sortedBy { it.blocks }.forEach { mark ->
-            mark.slug.ifBlank { null }?.let { index[it] = mark }
-            index[mark.title.lowercase()] = mark
-        }
-        index
-    }
+    val markIndex = remember(marks, platform) { indiceDeMarcas(marks, platform.name) }
 
     OutlinedTextField(
         value = query,

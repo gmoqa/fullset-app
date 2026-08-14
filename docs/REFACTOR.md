@@ -55,18 +55,23 @@ hay una decisión de diseño distinta detrás: son las que se escribieron apurad
 Ordenadas por retorno sobre riesgo. Cada una es un commit que compila y anda; ninguna cambia el
 comportamiento.
 
-### Fase 1 — Las reglas salen a `domain/` · riesgo bajo, retorno alto
+### Fase 1 — Las reglas salen a `domain/` · ✅ **hecha el 2026-08-14**
 
 Extraer a funciones puras, **cada una con su test**:
 
-| dónde está hoy | qué decide | nombre propuesto |
-|---|---|---|
-| `PlatformScreen.kt:64` (35 líneas) | fusiona catálogo con tu colección, marca lo que tenés y ordena por lanzamiento | `completitudDe(catalogo, coleccion)` |
-| `GameListScreen.kt:122` | agrupa en estanterías y las ordena | `estanterias(juegos, orden)` |
-| `AddGameScreen.kt:478` | qué juego ya está registrado y si bloquea | `indiceDeMarcas(marcas, plataforma)` |
-| `AddGameScreen.kt:468` | dónde corta cada región en la lista unida | `cortesPorRegion(entradas)` |
-| `App.kt` (~542) | qué entra al Backlog según el modo | `pendientes(juegos, modo)` |
-| `TimelineScreen.kt:56` | agrupa el diario por año | `porAnio(juegos)` |
+| qué decide | dónde vive ahora |
+|---|---|
+| fusiona catálogo con tu colección, marca lo tuyo y ordena por lanzamiento | `domain/Completitud.kt` |
+| agrupa en estanterías, ordenando dentro de cada una | `domain/Estanterias.kt` |
+| qué juego ya está registrado y cuál marca gana | `domain/AltaDeJuego.kt` |
+| dónde corta cada región en la lista unida | `domain/AltaDeJuego.kt` |
+| qué entra al Backlog según el modo | `domain/Backlog.kt` |
+| agrupa el diario por año | `domain/LineaDeTiempo.kt` |
+
+**Resultado:** 212 líneas de reglas con nombre, **18 tests** que antes no existían, y los
+filtros/ordenamientos sueltos en la UI bajaron de **17 a 8** (los que quedan son de presentación:
+qué plataformas tienen catálogo, qué juegos están jugándose). `CatalogMark` se mudó a `domain/`
+porque es un concepto del dominio, no de una pantalla.
 
 **Por qué esta primero:** es la única que agrega red de seguridad en vez de gastarla. Al terminar,
 la regla de completitud —el corazón de la app, ese «148 of 1893»— se puede probar sin levantar
