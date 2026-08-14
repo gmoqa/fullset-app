@@ -61,45 +61,61 @@ import com.gmoqa.fullset.data.WhisperModel
 private val GUTTER = 20.dp     // margen lateral de todo el contenido
 private val ICON_SLOT = 40.dp  // ancho reservado al icono: alinea los textos aunque no haya uno
 
+/**
+ * Lo que Settings **muestra**.
+ *
+ * Estado y acciones van separados a propósito: la pantalla recibía 30 parámetros sueltos, y con esa
+ * cantidad la firma dejó de ser un contrato para volverse una lista de compras — agregar un ajuste
+ * obligaba a tocar cuatro firmas en cascada. Partido en dos, la pantalla se lee como "esto es lo que
+ * muestro, esto es lo que puedo hacer", que es la pregunta que uno se hace al abrir un archivo que
+ * no escribió.
+ */
+data class SettingsUiState(
+    val trackingMode: TrackingMode,
+    val themeMode: ThemeMode,
+    val regionFilter: RegionFilter,
+    val showLabels: Boolean,
+    val showConsoleTitles: Boolean,
+    val deleteAudioAfterTranscription: Boolean,
+    val photoCount: Int,
+    val syncStatus: String?,
+    val installedModel: WhisperModel?,
+    val modelDownload: ModelDownloadState,
+    val transcriptionLanguage: TranscriptionLanguage,
+    val previewEmpty: Boolean = false,
+)
+
+/** Lo que Settings **puede hacer**. */
+data class SettingsActions(
+    val onTrackingModeChange: (TrackingMode) -> Unit,
+    val onThemeChange: (ThemeMode) -> Unit,
+    val onRegionChange: (RegionFilter) -> Unit,
+    val onShowLabelsChange: (Boolean) -> Unit,
+    val onShowConsoleTitlesChange: (Boolean) -> Unit,
+    val onDeleteAudioChange: (Boolean) -> Unit,
+    val exportCsv: () -> String,
+    val backupJson: () -> String,
+    val backupArchive: () -> BackupArchive,
+    val onRestore: (RestoredBackup) -> Unit,
+    val onClearSyncStatus: () -> Unit,
+    val onDownloadModel: (WhisperModel) -> Unit,
+    val onCancelModelDownload: () -> Unit,
+    val onDeleteModel: (WhisperModel) -> Unit,
+    val onDismissModelError: () -> Unit,
+    val onLanguageChange: (TranscriptionLanguage) -> Unit,
+    /** Solo en builds debug: si es null, la sección Developer no se muestra. */
+    val onPreviewEmptyChange: ((Boolean) -> Unit)? = null,
+)
+
+
 @Composable
-fun SettingsScreen(
-    trackingMode: TrackingMode,
-    onTrackingModeChange: (TrackingMode) -> Unit,
-    themeMode: ThemeMode,
-    onThemeChange: (ThemeMode) -> Unit,
-    regionFilter: RegionFilter,
-    onRegionChange: (RegionFilter) -> Unit,
-    showLabels: Boolean,
-    onShowLabelsChange: (Boolean) -> Unit,
-    showConsoleTitles: Boolean,
-    onShowConsoleTitlesChange: (Boolean) -> Unit,
-    deleteAudioAfterTranscription: Boolean,
-    onDeleteAudioChange: (Boolean) -> Unit,
-    exportCsv: () -> String,
-    backupJson: () -> String,
-    backupArchive: () -> BackupArchive,
-    photoCount: Int,
-    onRestore: (RestoredBackup) -> Unit,
-    syncStatus: String?,
-    onClearSyncStatus: () -> Unit,
-    installedModel: WhisperModel?,
-    modelDownload: ModelDownloadState,
-    onDownloadModel: (WhisperModel) -> Unit,
-    onCancelModelDownload: () -> Unit,
-    onDeleteModel: (WhisperModel) -> Unit,
-    onDismissModelError: () -> Unit,
-    transcriptionLanguage: TranscriptionLanguage,
-    onLanguageChange: (TranscriptionLanguage) -> Unit,
-    previewEmpty: Boolean = false,
-    // Solo en builds debug: si es null, la sección Developer no se muestra.
-    onPreviewEmptyChange: ((Boolean) -> Unit)? = null,
-) {
-    val exportCollection = rememberCollectionExporter(exportCsv)
-    val backup = rememberBackupExporter(backupJson)
-    val backupAll = rememberArchiveExporter(backupArchive)
-    val restore = rememberBackupImporter(onRestore)
+fun SettingsScreen(state: SettingsUiState, actions: SettingsActions) {
+    val exportCollection = rememberCollectionExporter(actions.exportCsv)
+    val backup = rememberBackupExporter(actions.backupJson)
+    val backupAll = rememberArchiveExporter(actions.backupArchive)
+    val restore = rememberBackupImporter(actions.onRestore)
     var askBackupScope by remember { mutableStateOf(false) }
-    var deleteAudio by remember { mutableStateOf(deleteAudioAfterTranscription) }
+    var deleteAudio by remember { mutableStateOf(state.deleteAudioAfterTranscription) }
 
     // Tope de ancho para **toda** la pantalla, título incluido: son opciones con descripción, y
     // estiradas a lo ancho de una tablet en horizontal quedan renglones de más de cien caracteres,
@@ -133,8 +149,8 @@ fun SettingsScreen(
                     TrackingMode.COLLECTION_AND_DIARY to "Collection + diary",
                     TrackingMode.DIARY_ONLY to "Diary only",
                 ),
-                selected = trackingMode,
-                onSelect = onTrackingModeChange,
+                selected = state.trackingMode,
+                onSelect = actions.onTrackingModeChange,
             )
             SectionDivider()
 
@@ -146,8 +162,8 @@ fun SettingsScreen(
                     ThemeMode.LIGHT to "Light",
                     ThemeMode.DARK to "Dark",
                 ),
-                selected = themeMode,
-                onSelect = onThemeChange,
+                selected = state.themeMode,
+                onSelect = actions.onThemeChange,
             )
 
             SectionDivider()
@@ -157,15 +173,15 @@ fun SettingsScreen(
                 icon = Icons.Filled.Title,
                 title = "Show game titles",
                 subtitle = "Names under each cover.",
-                onClick = { onShowLabelsChange(!showLabels) },
-                trailing = { Switch(checked = showLabels, onCheckedChange = onShowLabelsChange) },
+                onClick = { actions.onShowLabelsChange(!state.showLabels) },
+                trailing = { Switch(checked = state.showLabels, onCheckedChange = actions.onShowLabelsChange) },
             )
             SettingsRow(
                 icon = Icons.Filled.ViewAgenda,
                 title = "Show console headers",
                 subtitle = "Platform name bands between shelves.",
-                onClick = { onShowConsoleTitlesChange(!showConsoleTitles) },
-                trailing = { Switch(checked = showConsoleTitles, onCheckedChange = onShowConsoleTitlesChange) },
+                onClick = { actions.onShowConsoleTitlesChange(!state.showConsoleTitles) },
+                trailing = { Switch(checked = state.showConsoleTitles, onCheckedChange = actions.onShowConsoleTitlesChange) },
             )
 
             SectionDivider()
@@ -176,8 +192,8 @@ fun SettingsScreen(
                 description = "Which regional list you browse. Not every console has all three — " +
                 "the picker in each list shows what it ships with.",
                 options = RegionFilter.entries.map { it to it.label },
-                selected = regionFilter,
-                onSelect = onRegionChange,
+                selected = state.regionFilter,
+                onSelect = actions.onRegionChange,
                 isEnabled = { it.supported },
             )
 
@@ -185,29 +201,29 @@ fun SettingsScreen(
 
             SettingsSection("Voice notes", "Transcribed here — nothing leaves this device.")
             VoiceModels(
-                installedModel = installedModel,
-                download = modelDownload,
-                onDownload = onDownloadModel,
-                onCancel = onCancelModelDownload,
-                onDelete = onDeleteModel,
-                onDismissError = onDismissModelError,
+                installedModel = state.installedModel,
+                download = state.modelDownload,
+                onDownload = actions.onDownloadModel,
+                onCancel = actions.onCancelModelDownload,
+                onDelete = actions.onDeleteModel,
+                onDismissError = actions.onDismissModelError,
             )
             SettingsChoice(
                 label = "Input language",
                 description = "Picking one beats Auto on short notes.",
                 options = TranscriptionLanguage.entries.map { it to it.label },
-                selected = transcriptionLanguage,
-                onSelect = onLanguageChange,
+                selected = state.transcriptionLanguage,
+                onSelect = actions.onLanguageChange,
             )
             SettingsRow(
                 icon = Icons.Filled.MicOff,
                 title = "Delete recording after transcribing",
                 subtitle = "Keep only the text — frees space and keeps recordings off any sync.",
-                onClick = { deleteAudio = !deleteAudio; onDeleteAudioChange(deleteAudio) },
+                onClick = { deleteAudio = !deleteAudio; actions.onDeleteAudioChange(deleteAudio) },
                 trailing = {
                     Switch(
                         checked = deleteAudio,
-                        onCheckedChange = { deleteAudio = it; onDeleteAudioChange(it) },
+                        onCheckedChange = { deleteAudio = it; actions.onDeleteAudioChange(it) },
                     )
                 },
             )
@@ -224,10 +240,10 @@ fun SettingsScreen(
             SettingsRow(
                 icon = Icons.Filled.Backup,
                 title = "Back up to a file",
-                subtitle = if (photoCount > 0) "Your lists and notes, with or without photos."
+                subtitle = if (state.photoCount > 0) "Your lists and notes, with or without photos."
                 else "Save your lists + notes as a .json to restore later.",
                 // Sin fotos que respaldar no hay nada que preguntar: el JSON ES el respaldo completo.
-                onClick = { if (photoCount > 0) askBackupScope = true else backup() },
+                onClick = { if (state.photoCount > 0) askBackupScope = true else backup() },
             )
             SettingsRow(
                 icon = Icons.Filled.Restore,
@@ -235,24 +251,24 @@ fun SettingsScreen(
                 subtitle = "Merge a backup (.json or .zip) into your collection — never deletes.",
                 onClick = { restore() },
             )
-            if (syncStatus != null) {
+            if (state.syncStatus != null) {
                 SettingsRow(
-                    title = syncStatus,
-                    onClick = onClearSyncStatus,
-                    trailing = { TextButton(onClick = onClearSyncStatus) { Text("OK") } },
+                    title = state.syncStatus,
+                    onClick = actions.onClearSyncStatus,
+                    trailing = { TextButton(onClick = actions.onClearSyncStatus) { Text("OK") } },
                 )
             }
 
-            if (onPreviewEmptyChange != null) {
+            if (actions.onPreviewEmptyChange != null) {
                 SectionDivider()
                 SettingsSection("Developer")
                 SettingsRow(
                     icon = Icons.Filled.VisibilityOff,
                     title = "Preview empty state",
                     subtitle = "Temporarily hide all games to check the empty screens.",
-                    onClick = { onPreviewEmptyChange(!previewEmpty) },
+                    onClick = { actions.onPreviewEmptyChange(!state.previewEmpty) },
                     trailing = {
-                        Switch(checked = previewEmpty, onCheckedChange = onPreviewEmptyChange)
+                        Switch(checked = state.previewEmpty, onCheckedChange = actions.onPreviewEmptyChange)
                     },
                 )
             }
@@ -276,7 +292,7 @@ fun SettingsScreen(
 
     if (askBackupScope) {
         BackupScopeDialog(
-            photoCount = photoCount,
+            photoCount = state.photoCount,
             onDismiss = { askBackupScope = false },
             onDataOnly = { askBackupScope = false; backup() },
             onEverything = { askBackupScope = false; backupAll() },

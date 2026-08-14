@@ -80,15 +80,26 @@ Compose. Hoy no.
 **Cómo se verifica:** test nuevo por función + la app abre y muestra los mismos números. Los tests
 son la prueba de que el refactor no cambió nada.
 
-### Fase 2 — Un estado por pantalla · riesgo medio
+### Fase 2 — Un estado por pantalla · ✅ **hecha el 2026-08-14**
 
-`SettingsScreen(30 parámetros)` → `SettingsScreen(state: SettingsUiState, actions: SettingsActions)`.
-Después `HomeContent` (24) y `AppRoot` (16), que caen casi solos una vez hecho el primero.
+| | antes | ahora |
+|---|---|---|
+| `SettingsScreen` | 30 | **2** — `SettingsUiState` + `SettingsActions` |
+| `HomeContent` | 24 | **8** — `Preferencias` + `PreferenciasActions` + `Navegacion` |
+| `AppRoot` | 16 | **6** — los mismos dos paquetes |
+
+Los doce parámetros de preferencias —seis valores y sus seis setters— aparecían **sueltos y
+repetidos** en `AppRoot` y otra vez en `HomeContent`, solo para llegar a Settings y a las listas. Un
+solo concepto (`Preferencias` / `PreferenciasActions`) colapsó las dos firmas a la vez.
 
 La pantalla pasa a leerse como **«esto es lo que muestro, esto es lo que puedo hacer»**, que es la
 pregunta que uno se hace al abrir un archivo que no escribió.
 
-**Cómo se verifica:** compila y las tres pantallas se recorren en el dispositivo.
+**Trampa que apareció dos veces:** al prefijar los usos en el cuerpo, el reemplazo también tocaba
+las **etiquetas de los argumentos con nombre** (`installedModel = installedModel` quedaba como
+`state.installedModel = state.installedModel`). La etiqueta nunca se prefija, solo el valor.
+
+**Cómo se verifica:** compila y los tests siguen pasando; falta el recorrido en dispositivo.
 
 ### Fase 3 — Partir `App.kt` · riesgo bajo
 

@@ -67,7 +67,11 @@ import com.gmoqa.fullset.ui.GameListScreen
 import com.gmoqa.fullset.ui.LibraryScreen
 import com.gmoqa.fullset.ui.PlatformScreen
 import com.gmoqa.fullset.ui.PlayingScreen
+import com.gmoqa.fullset.ui.Preferencias
+import com.gmoqa.fullset.ui.PreferenciasActions
+import com.gmoqa.fullset.ui.SettingsActions
 import com.gmoqa.fullset.ui.SettingsScreen
+import com.gmoqa.fullset.ui.SettingsUiState
 import com.gmoqa.fullset.ui.WishlistScreen
 import com.gmoqa.fullset.ui.isCompactWidth
 import kotlinx.coroutines.launch
@@ -135,18 +139,24 @@ fun App(
                     catalog = catalog,
                     // Todas: las deshabilitadas se muestran bloqueadas ("Soon") en el paso 1.
                     platforms = registry.all(),
-                    themeMode = themeMode,
-                    onThemeChange = { themeMode = it; vm.setThemeMode(it) },
-                    regionFilter = region,
-                    onRegionChange = { region = it; vm.setRegionFilter(it) },
-                    showLabels = showLabels,
-                    onShowLabelsChange = { showLabels = it; vm.setShowCollectionLabels(it) },
-                    showConsoleTitles = showConsoleTitles,
-                    onShowConsoleTitlesChange = { showConsoleTitles = it; vm.setShowConsoleTitles(it) },
-                    sortOrder = sortOrder,
-                    onSortChange = { sortOrder = it; vm.setSortOrder(it) },
-                    trackingMode = trackingMode,
-                    onTrackingModeChange = { trackingMode = it; vm.setTrackingMode(it) },
+                    prefs = Preferencias(
+                        themeMode = themeMode,
+                        regionFilter = region,
+                        showLabels = showLabels,
+                        showConsoleTitles = showConsoleTitles,
+                        sortOrder = sortOrder,
+                        trackingMode = trackingMode,
+                    ),
+                    // Cada setter guarda **y** actualiza el estado local: la preferencia se aplica en
+                    // el acto, sin esperar a releer la base.
+                    prefsActions = PreferenciasActions(
+                        onThemeChange = { themeMode = it; vm.setThemeMode(it) },
+                        onRegionChange = { region = it; vm.setRegionFilter(it) },
+                        onShowLabelsChange = { showLabels = it; vm.setShowCollectionLabels(it) },
+                        onShowConsoleTitlesChange = { showConsoleTitles = it; vm.setShowConsoleTitles(it) },
+                        onSortChange = { sortOrder = it; vm.setSortOrder(it) },
+                        onTrackingModeChange = { trackingMode = it; vm.setTrackingMode(it) },
+                    ),
                     isDebug = isDebug,
                 )
                 if (sharedImage != null) {
@@ -170,18 +180,8 @@ private fun AppRoot(
     vm: DiaryViewModel,
     catalog: GameCatalog,
     platforms: List<Platform>,
-    themeMode: ThemeMode,
-    onThemeChange: (ThemeMode) -> Unit,
-    regionFilter: RegionFilter,
-    onRegionChange: (RegionFilter) -> Unit,
-    showLabels: Boolean,
-    onShowLabelsChange: (Boolean) -> Unit,
-    showConsoleTitles: Boolean,
-    onShowConsoleTitlesChange: (Boolean) -> Unit,
-    sortOrder: SortOrder,
-    onSortChange: (SortOrder) -> Unit,
-    trackingMode: TrackingMode,
-    onTrackingModeChange: (TrackingMode) -> Unit,
+    prefs: Preferencias,
+    prefsActions: PreferenciasActions,
     isDebug: Boolean,
 ) {
     var tab by rememberSaveable { mutableStateOf(HomeTab.COLLECTION) }
@@ -280,7 +280,7 @@ private fun AppRoot(
                                     slug = entry.slug, publisher = entry.publisher,
                                     playing = current.target == AddTarget.PLAYING,
                                     // Sin colección no se afirma posesión: ver `addGame(digital=)`.
-                                    digital = trackingMode == TrackingMode.DIARY_ONLY,
+                                    digital = prefs.trackingMode == TrackingMode.DIARY_ONLY,
                                 )
                             AddTarget.WISHLIST ->
                                 vm.addToWishlist(platform.name, entry.title, entry.slug, coverUrl)
@@ -288,7 +288,7 @@ private fun AppRoot(
                         // No cerramos: quedás en la lista, el juego pasa a "Added" y podés seguir.
                     },
                     marks = marks,
-                    region = regionFilter,
+                    region = prefs.regionFilter,
                 )
             }
 
@@ -326,7 +326,7 @@ private fun AppRoot(
                 PlatformScreen(
                     platform = current.platform,
                     info = platformObj?.info,
-                    region = regionFilter,
+                    region = prefs.regionFilter,
                     games = platformGames,
                     catalog = catalogEntries,
                     // El detalle se APILA sobre la plataforma: back desde el juego vuelve acá.
@@ -344,36 +344,41 @@ private fun AppRoot(
             }
 
             Screen.Home -> HomeContent(
-                onOpenTimeline = { open(Screen.Timeline) },
-                trackingMode = trackingMode,
-                onTrackingModeChange = onTrackingModeChange,
                 vm = vm,
                 platforms = platforms,
                 tab = tab,
                 onTabChange = { tab = it },
-                themeMode = themeMode,
-                onThemeChange = onThemeChange,
-                regionFilter = regionFilter,
-                onRegionChange = onRegionChange,
-                showLabels = showLabels,
-                onShowLabelsChange = onShowLabelsChange,
-                showConsoleTitles = showConsoleTitles,
-                onShowConsoleTitlesChange = onShowConsoleTitlesChange,
-                sortOrder = sortOrder,
-                onSortChange = onSortChange,
-                onOpenGame = { open(Screen.Detail(it)) },
-                onOpenPlatform = { open(Screen.Platform(it)) },
-                onAddLibrary = { open(Screen.Add(AddTarget.LIBRARY)) },
-                onAddWishlist = { open(Screen.Add(AddTarget.WISHLIST)) },
-                onAddDigital = { open(Screen.AddDigital) },
-                onAddPlaying = { open(Screen.Add(AddTarget.PLAYING)) },
+                prefs = prefs,
+                prefsActions = prefsActions,
+                nav = Navegacion(
+                    onOpenGame = { open(Screen.Detail(it)) },
+                    onOpenTimeline = { open(Screen.Timeline) },
+                    onOpenPlatform = { open(Screen.Platform(it)) },
+                    onAddLibrary = { open(Screen.Add(AddTarget.LIBRARY)) },
+                    onAddWishlist = { open(Screen.Add(AddTarget.WISHLIST)) },
+                    onAddDigital = { open(Screen.AddDigital) },
+                    onAddPlaying = { open(Screen.Add(AddTarget.PLAYING)) },
+                ),
                 isDebug = isDebug,
             )
         }
     }
 }
 
-/** Una pestaña del home, en el mismo orden que las páginas del pager. */
+/**
+ * A dónde puede ir el home. Son siete callbacks que solo existen para llegar desde una pestaña a una
+ * ruta; sueltos ocupaban un tercio de la firma de [HomeContent].
+ */
+private data class Navegacion(
+    val onOpenGame: (Long) -> Unit,
+    val onOpenTimeline: () -> Unit,
+    val onOpenPlatform: (String) -> Unit,
+    val onAddLibrary: () -> Unit,
+    val onAddWishlist: () -> Unit,
+    val onAddDigital: () -> Unit,
+    val onAddPlaying: () -> Unit,
+)
+
 /**
  * Las secciones del bottom nav. Se identifican por **nombre**, no por posición: el juego de
  * pestañas cambia con el modo (en `DIARY_ONLY` no están Collection ni Wishlist), y guardar el índice
@@ -418,25 +423,9 @@ private fun HomeContent(
     platforms: List<Platform>,
     tab: HomeTab,
     onTabChange: (HomeTab) -> Unit,
-    themeMode: ThemeMode,
-    onThemeChange: (ThemeMode) -> Unit,
-    regionFilter: RegionFilter,
-    onRegionChange: (RegionFilter) -> Unit,
-    showLabels: Boolean,
-    onShowLabelsChange: (Boolean) -> Unit,
-    showConsoleTitles: Boolean,
-    onShowConsoleTitlesChange: (Boolean) -> Unit,
-    sortOrder: SortOrder,
-    onSortChange: (SortOrder) -> Unit,
-    onOpenGame: (Long) -> Unit,
-    onOpenTimeline: () -> Unit,
-    trackingMode: TrackingMode,
-    onTrackingModeChange: (TrackingMode) -> Unit,
-    onOpenPlatform: (String) -> Unit,
-    onAddLibrary: () -> Unit,
-    onAddWishlist: () -> Unit,
-    onAddDigital: () -> Unit,
-    onAddPlaying: () -> Unit,
+    prefs: Preferencias,
+    prefsActions: PreferenciasActions,
+    nav: Navegacion,
     isDebug: Boolean,
 ) {
     // Estado reactivo: agregar/borrar un juego o wishlist refresca la lista sin navegar.
@@ -464,7 +453,7 @@ private fun HomeContent(
 
     // El pager es la fuente de verdad del tab. Se puede deslizar entre páginas (swipe) y la
     // bottom nav anima hacia la página elegida. Se persiste el índice para restaurarlo.
-    val tabs = remember(trackingMode) { tabsFor(trackingMode) }
+    val tabs = remember(prefs.trackingMode) { tabsFor(prefs.trackingMode) }
     // La pestaña guardada es una **identidad**, no un número: al cambiar de modo la lista se achica
     // y un índice viejo apuntaría a otra sección. Si la guardada ya no está visible, se cae a la
     // primera del modo actual en vez de quedar fuera de rango.
@@ -522,23 +511,23 @@ private fun HomeContent(
             when (tabs[page]) {
                 HomeTab.COLLECTION -> LibraryScreen(
                     games = physical,
-                    onOpenGame = onOpenGame,
-                    onAddPhysical = onAddLibrary,
+                    onOpenGame = nav.onOpenGame,
+                    onAddPhysical = nav.onAddLibrary,
                     // Al agregar un juego, Collection sube hasta él en vez de dejarte donde estabas.
                     focusGameId = lastAdded,
                     onFocusConsumed = { vm.consumeLastAdded() },
                     // Tocar una franja abre la vista propia de esa plataforma.
-                    onOpenPlatform = onOpenPlatform,
+                    onOpenPlatform = nav.onOpenPlatform,
                     // Opciones de vista (Settings → Collection): ocultar labels y/o franjas de consola.
-                    showLabels = showLabels,
-                    showConsoleTitles = showConsoleTitles,
-                    sortOrder = sortOrder,
-                    onSortChange = onSortChange,
+                    showLabels = prefs.showLabels,
+                    showConsoleTitles = prefs.showConsoleTitles,
+                    sortOrder = prefs.sortOrder,
+                    onSortChange = prefsActions.onSortChange,
                 )
                 HomeTab.BACKLOG -> {
                     // La regla —y por qué el modo importa— vive en `domain/Backlog.kt`.
-                    val delBacklog = remember(games, physical, trackingMode) {
-                        pendientes(games, physical, trackingMode)
+                    val delBacklog = remember(games, physical, prefs.trackingMode) {
+                        pendientes(games, physical, prefs.trackingMode)
                     }
                     GameListScreen(
                     title = "Backlog",
@@ -547,57 +536,61 @@ private fun HomeContent(
                     emptyIcon = Icons.Filled.Bookmarks,
                     emptyTitle = "Backlog is empty",
                     emptySubtitle = "Mark games as backlog from their details.",
-                    onOpenGame = onOpenGame,
+                    onOpenGame = nav.onOpenGame,
                     onAddGame = null,
-                    sortOrder = sortOrder,
-                    onSortChange = onSortChange,
+                    sortOrder = prefs.sortOrder,
+                    onSortChange = prefsActions.onSortChange,
                     )
                 }
                 HomeTab.PLAYING -> PlayingScreen(
-                    onOpenTimeline = onOpenTimeline,
-                    onAddPhysical = onAddPlaying,
-                    collectionEnabled = trackingMode == TrackingMode.COLLECTION_AND_DIARY,
+                    onOpenTimeline = nav.onOpenTimeline,
+                    onAddPhysical = nav.onAddPlaying,
+                    collectionEnabled = prefs.trackingMode == TrackingMode.COLLECTION_AND_DIARY,
                     games = games.filter { it.playing },
-                    onOpenGame = onOpenGame,
-                    onAddDigital = onAddDigital,
+                    onOpenGame = nav.onOpenGame,
+                    onAddDigital = nav.onAddDigital,
                 )
                 HomeTab.WISHLIST -> WishlistScreen(
                     items = wishlist,
-                    onAddWishlist = onAddWishlist,
+                    onAddWishlist = nav.onAddWishlist,
                     onRemove = { vm.removeFromWishlist(it) },
                     onClear = { vm.clearWishlist() },
                 )
                 HomeTab.SETTINGS -> SettingsScreen(
-                    trackingMode = trackingMode,
-                    onTrackingModeChange = onTrackingModeChange,
-                    themeMode = themeMode,
-                    onThemeChange = onThemeChange,
-                    regionFilter = regionFilter,
-                    onRegionChange = onRegionChange,
-                    showLabels = showLabels,
-                    onShowLabelsChange = onShowLabelsChange,
-                    showConsoleTitles = showConsoleTitles,
-                    onShowConsoleTitlesChange = onShowConsoleTitlesChange,
-                    deleteAudioAfterTranscription = vm.deleteAudioAfterTranscription(),
-                    onDeleteAudioChange = { vm.setDeleteAudioAfterTranscription(it) },
-                    exportCsv = { vm.exportCsv() },
-                    backupJson = { vm.exportSnapshotJson() },
-                    backupArchive = { vm.exportArchive() },
-                    photoCount = photoCount,
-                    onRestore = { vm.importBackup(it) },
-                    syncStatus = syncStatus,
-                    onClearSyncStatus = { vm.clearSyncStatus() },
-                    installedModel = installedModel,
-                    modelDownload = modelDownload,
-                    onDownloadModel = { vm.downloadModel(it) },
-                    onCancelModelDownload = { vm.cancelModelDownload() },
-                    onDeleteModel = { vm.deleteModel(it) },
-                    onDismissModelError = { vm.dismissModelError() },
-                    transcriptionLanguage = transcriptionLanguage,
-                    onLanguageChange = { vm.setTranscriptionLanguage(it) },
-                    // La sección Developer solo aparece en builds debug (callback null → oculta).
-                    previewEmpty = previewEmpty,
-                    onPreviewEmptyChange = if (isDebug) ({ vm.setPreviewEmpty(it) }) else null,
+                    state = SettingsUiState(
+                        trackingMode = prefs.trackingMode,
+                        themeMode = prefs.themeMode,
+                        regionFilter = prefs.regionFilter,
+                        showLabels = prefs.showLabels,
+                        showConsoleTitles = prefs.showConsoleTitles,
+                        deleteAudioAfterTranscription = vm.deleteAudioAfterTranscription(),
+                        photoCount = photoCount,
+                        syncStatus = syncStatus,
+                        installedModel = installedModel,
+                        modelDownload = modelDownload,
+                        transcriptionLanguage = transcriptionLanguage,
+                        previewEmpty = previewEmpty,
+                    ),
+                    actions = SettingsActions(
+                        onTrackingModeChange = prefsActions.onTrackingModeChange,
+                        onThemeChange = prefsActions.onThemeChange,
+                        onRegionChange = prefsActions.onRegionChange,
+                        onShowLabelsChange = prefsActions.onShowLabelsChange,
+                        onShowConsoleTitlesChange = prefsActions.onShowConsoleTitlesChange,
+                        onDeleteAudioChange = { vm.setDeleteAudioAfterTranscription(it) },
+                        exportCsv = { vm.exportCsv() },
+                        backupJson = { vm.exportSnapshotJson() },
+                        backupArchive = { vm.exportArchive() },
+                        onRestore = { vm.importBackup(it) },
+                        onClearSyncStatus = { vm.clearSyncStatus() },
+                        onDownloadModel = { vm.downloadModel(it) },
+                        onCancelModelDownload = { vm.cancelModelDownload() },
+                        onDeleteModel = { vm.deleteModel(it) },
+                        onDismissModelError = { vm.dismissModelError() },
+                        onLanguageChange = { vm.setTranscriptionLanguage(it) },
+                        // La sección Developer solo aparece en builds debug (callback null → oculta).
+                        onPreviewEmptyChange = if (isDebug) ({ vm.setPreviewEmpty(it) }) else null,
+                    ),
                 )
             }
         }
