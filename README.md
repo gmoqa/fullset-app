@@ -104,6 +104,7 @@ hasta `../app/src/main/assets/`.
 
 Hoy son **37 catálogos con 26.884 juegos**. De dónde sale cada dato, con qué fuente y con qué
 cobertura: **[docs/CATALOGS.md](docs/CATALOGS.md)**.
+- [`docs/REFACTOR.md`](docs/REFACTOR.md) — plan de refactor del código (no del dataset): qué se mide mal hoy, en qué orden se arregla y qué no hay que hacer.
 
 ```bash
 python3 tools/catalog_lint.py                       # valida el esquema
