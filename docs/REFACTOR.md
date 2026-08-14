@@ -101,13 +101,25 @@ las **etiquetas de los argumentos con nombre** (`installedModel = installedModel
 
 **Cómo se verifica:** compila y los tests siguen pasando; falta el recorrido en dispositivo.
 
-### Fase 3 — Partir `App.kt` · riesgo bajo
+### Fase 3 — Partir `App.kt` · ✅ **hecha el 2026-08-14**
 
-- `navigation/Screen.kt` — el `sealed interface` de destinos
-- `navigation/Router.kt` — el `when(current)` que hoy vive dentro de `AppRoot`
-- `App.kt` queda como composición raíz, ~60 líneas
+- `navigation/Screen.kt` (21 líneas) — el `sealed interface` de destinos y `AddTarget`
+- `navigation/BackStack.kt` (77) — la pila, "atrás" y la dirección de la animación
+- `ui/HomeScreen.kt` (286) — `HomeContent`, las pestañas y `Navegacion`
+- `App.kt`: **606 → 349 líneas**, arranque + destinos
 
-**Cómo se verifica:** compila; navegación completa a mano una vez.
+**Corrección al plan, hecha al mirarlo de cerca.** Decía sacar el `when(current)` a un `Router.kt` y
+dejar `App.kt` en ~60 líneas. **Eso habría sido un error:** cada rama del `when` usa el contexto de
+la app —vm, catálogo, juegos, marcas, preferencias— así que moverla a otro archivo habría recreado
+exactamente el prop drilling que la fase 2 acababa de eliminar.
+
+Lo que sí se puede separar es el **mecanismo**: qué hay apilado, cómo se entra y se sale, hacia
+dónde anima. Eso no depende de qué pantallas existan y ahora tiene nombre (`BackStack`, `NavHost`).
+Los destinos se quedan donde vive su contexto.
+
+De paso, `Screen` estaba declarado 200 líneas **por debajo** de su primer uso, en medio del archivo.
+
+**Cómo se verifica:** compila y los 18 tests pasan; falta el recorrido en dispositivo.
 
 ### Fase 4 — El ViewModel por facetas · riesgo medio
 
