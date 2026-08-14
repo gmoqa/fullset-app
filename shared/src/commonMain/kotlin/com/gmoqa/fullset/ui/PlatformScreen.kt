@@ -38,6 +38,8 @@ import androidx.compose.ui.unit.dp
 import com.gmoqa.fullset.data.CatalogEntry
 import com.gmoqa.fullset.data.Game
 import com.gmoqa.fullset.data.coverModel
+import com.gmoqa.fullset.domain.PlatformRow
+import com.gmoqa.fullset.domain.completitudDe
 import com.gmoqa.fullset.data.PlatformInfo
 import com.gmoqa.fullset.data.RegionFilter
 
@@ -58,49 +60,13 @@ fun PlatformScreen(
     catalog: List<CatalogEntry> = emptyList(),
     onAddGame: (CatalogEntry) -> Unit = {},
 ) {
-    // Fusiona el catálogo con tu colección: cada entrada del catálogo sabe si la tenés (match por
-    // slug); tus juegos que no están en el catálogo (altas a mano, slug que no matchea) se agregan
-    // igual. Orden cronológico ascendente; sin año va al final; desempate por título.
-    val rows = remember(games, catalog) {
-        val ownedBySlug = games.filter { it.slug.isNotBlank() }.associateBy { it.slug }
-        val fromCatalog = catalog.map { e ->
-            val owned = ownedBySlug[e.slug]
-            PlatformRow(
-                key = "cat:${e.slug.ifBlank { e.title }}",
-                title = owned?.name ?: e.title,
-                year = e.year ?: owned?.releaseYear,
-                releaseDate = e.releaseDate,
-                subtitle = listOfNotNull(e.genre.ifBlank { null }, e.publisher.ifBlank { null })
-                    .joinToString(" · "),
-                coverModel = owned?.coverModel ?: e.coverUrl.ifBlank { null },
-                ownedId = owned?.id,
-                entry = e,
-            )
-        }
-        val catalogSlugs = catalog.mapNotNull { it.slug.ifBlank { null } }.toSet()
-        val extras = games.filter { it.slug.isBlank() || it.slug !in catalogSlugs }.map { g ->
-            PlatformRow(
-                key = "own:${g.id}",
-                title = g.name,
-                year = g.releaseYear,
-                subtitle = listOfNotNull(g.genre.ifBlank { null }, g.publisher.ifBlank { null })
-                    .joinToString(" · "),
-                coverModel = g.coverModel,
-                ownedId = g.id,
-            )
-        }
-        // Orden cronológico real por la fecha precisa (ISO ordena cronológicamente); sin fecha usa el
-        // año; sin nada va al final. Así "1991-06" queda antes que "1991-12" dentro del mismo año.
-        (fromCatalog + extras)
-            .sortedWith(compareBy({ it.releaseDate.ifBlank { it.year?.toString() ?: "9999" } }, { it.title.lowercase() }))
-    }
-    // Por juego **distinto**, no por fila: al juntar las regiones, una misma copia matchea por slug
-    // en la lista americana y en la japonesa, y contando filas "3 of 381" pasaba a decir "6 of 381"
-    // sin que hubieras agregado nada.
-    val ownedCount = rows.mapNotNull { it.ownedId }.distinct().size
+    // La regla vive en `domain/Completitud.kt`, con sus tests: cruza el catálogo con tu colección,
+    // ordena por lanzamiento y cuenta los poseídos **distintos**.
+    val completitud = remember(games, catalog) { completitudDe(catalog, games) }
+    val rows = completitud.filas
     // Con catálogo: "X de Y" (completitud). Sin catálogo (PS5…): solo el conteo de los que tenés.
     val countLabel = if (catalog.isEmpty()) "${rows.size} · by release"
-    else "$ownedCount of ${rows.size} · by release"
+    else "${completitud.poseidos} of ${rows.size} · by release"
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -170,20 +136,6 @@ fun PlatformScreen(
     }
 }
 
-/** Una fila del catálogo de la consola, ya resuelta a "poseído o no". */
-private data class PlatformRow(
-    val key: String,
-    val title: String,
-    val year: Int?,
-    /** Fecha ISO de precisión variable del catálogo ("" si el juego no está en el catálogo). */
-    val releaseDate: String = "",
-    val subtitle: String,
-    val coverModel: Any?,
-    /** Non-null → lo tenés (abre su detalle). Null → falta (en gris, con botón para agregar). */
-    val ownedId: Long?,
-    /** La entrada del catálogo, para poder agregarla si falta. Null en juegos fuera del catálogo. */
-    val entry: CatalogEntry? = null,
-)
 
 /**
  * Fila de juego: carátula + título/subtítulo, con el **año destacado a la derecha** (el criterio de
