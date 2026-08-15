@@ -77,8 +77,9 @@ porque es un concepto del dominio, no de una pantalla.
 la regla de completitud —el corazón de la app, ese «148 of 1893»— se puede probar sin levantar
 Compose. Hoy no.
 
-**Cómo se verifica:** test nuevo por función + la app abre y muestra los mismos números. Los tests
-son la prueba de que el refactor no cambió nada.
+**Verificado en dispositivo el 2026-08-15**: la ficha de Nintendo DS muestra **«1 of 6092 · by
+release»** —el conteo correcto, con la lista en orden cronológico y los no poseídos en gris—, que es
+justo lo que calcula `completitudDe()`.
 
 ### Fase 2 — Un estado por pantalla · ✅ **hecha el 2026-08-14**
 
@@ -99,7 +100,7 @@ pregunta que uno se hace al abrir un archivo que no escribió.
 las **etiquetas de los argumentos con nombre** (`installedModel = installedModel` quedaba como
 `state.installedModel = state.installedModel`). La etiqueta nunca se prefija, solo el valor.
 
-**Cómo se verifica:** compila y los tests siguen pasando; falta el recorrido en dispositivo.
+**Verificado en dispositivo el 2026-08-15**: Settings intacta, y los toggles y controles segmentados responden y **se aplican** —apagar «Show game titles» sacó los nombres en Collection—, o sea que la acción atraviesa `SettingsActions` → `Preferencias` → `HomeContent`.
 
 ### Fase 3 — Partir `App.kt` · ✅ **hecha el 2026-08-14**
 
@@ -119,7 +120,7 @@ Los destinos se quedan donde vive su contexto.
 
 De paso, `Screen` estaba declarado 200 líneas **por debajo** de su primer uso, en medio del archivo.
 
-**Cómo se verifica:** compila y los 18 tests pasan; falta el recorrido en dispositivo.
+**Verificado en dispositivo el 2026-08-15**: navegación apilada (franja → ficha de plataforma) y «atrás» desapilando de vuelta a Collection, con su animación.
 
 ### Fase 4 — El ViewModel por facetas · riesgo medio
 
