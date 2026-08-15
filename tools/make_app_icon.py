@@ -8,8 +8,12 @@ Por qué un script y no un PNG dibujado a mano: el icono adaptativo de Android e
 contornos reales de la fuente con fontTools y se emite el XML, así que si mañana cambia el color o
 la proporción se vuelve a correr en vez de reabrir un editor.
 
+    pip install fonttools                     # única dependencia de terceros del repo
     python3 tools/make_app_icon.py            # escribe los drawables + una vista previa
     python3 tools/make_app_icon.py --preview  # solo la vista previa, no toca el proyecto
+
+Es el **único** script del repo que necesita algo que no venga con Python, y por eso no está en CI:
+el icono se regenera a mano cuando cambia, no en cada push.
 
 **Los dos anchos.** `full` mide 1.633 em y `set` 1.533 em en Noto Sans Bold, así que igualarlos pide
 estirar `set` un 1.07× — imperceptible, muy lejos de la deformación que se nota. Se hace escalando
@@ -30,6 +34,10 @@ import subprocess
 import sys
 from pathlib import Path
 
+try:
+    from fontTools.pens.boundsPen import BoundsPen
+except ModuleNotFoundError:  # noqa: F401 — mensaje útil en vez de un ImportError pelado
+    raise SystemExit("falta fonttools: pip install fonttools")
 from fontTools.pens.boundsPen import BoundsPen
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen

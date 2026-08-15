@@ -86,12 +86,20 @@ dos historias, no un script ejecutable que pisa 57 archivos.
    nada que diga cuál corresponde.
 2. ~~Un aviso en los cuatro builders de la generación 1.~~ **Hecho**, y de paso se arregló que
    ensuciaran el catálogo.
-3. **`build_collection.py`** (314 líneas) importa la colección **desde el Excel personal del autor**.
-   Es la única herramienta del repo que no le sirve a nadie más. O se documenta como "así se armó la
-   colección de ejemplo", o se va.
-4. **`tools/local/`** está gitignoreado y contiene los clientes de Sega Retro y SNES Central. Ningún
-   script versionado lo importa —verificado—, así que el repo clona y funciona. Conviene decirlo
-   explícitamente para que nadie lo busque.
+3. ~~`build_collection.py`.~~ **Movido a `tools/local/`** (gitignoreado). Importaba la colección
+   desde el Excel personal del mantenedor: dependía de una planilla con una estructura de hojas
+   concreta que no está versionada, y de `openpyxl`, que no es dependencia del proyecto. En el repo
+   público `data/seed/collection.json` es el seed **vacío**, que es lo correcto — quien clona
+   arranca con su colección, no con la de otro.
+4. **La única dependencia de terceros es `fonttools`**, y la usa un solo script:
+   `make_app_icon.py`, que regenera el icono de la app a partir de contornos de fuente. No está en
+   CI —el icono se rehace a mano cuando cambia— y ahora avisa con un mensaje claro si falta. Todo
+   lo demás corre con la librería estándar: **un `git clone` y `python3 tools/catalog_lint.py`
+   funciona sin instalar nada.**
+5. **`tools/local/`** está gitignoreado y guarda las herramientas del mantenedor: el recolector de
+   Sega Retro, el de SNES Central y ahora el importador del Excel. **Ningún script versionado lo
+   importa** —verificado—, así que el repo clona y funciona sin esa carpeta. Su propio README
+   explica qué hay adentro.
 
 ---
 
