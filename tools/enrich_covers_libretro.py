@@ -85,7 +85,7 @@ def cover_index(repo: str, prefer: str) -> dict:
         # (`(Rev 1)`, `(Arcade)`) suelen ser symlinks al canónico, que `raw.githubusercontent` sirve
         # como texto y la app no puede decodificar. Sin este desempate ganaba la variante —ordena
         # antes, porque el espacio va antes que el punto— y volvía a meter los symlinks que
-        # `fix_covers_symlink.py` ya había resuelto.
+        # una reparación puntual ya había resuelto (ver docs/CATALOGS.md).
         if k not in exacto or (rank(name), -len(name)) > (rank(exacto[k][1]), -len(exacto[k][1])):
             exacto[k] = (url, name)
         if quiero not in _regiones(name) or rank(name) < 0:

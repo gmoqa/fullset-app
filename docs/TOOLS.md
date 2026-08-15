@@ -22,7 +22,24 @@ que solo aportan configuración:
 **Es la generación más elegante y la más peligrosa.** `build()` escribe **un solo archivo, el
 NTSC-U** —su parámetro es `na_col`, la columna de Norteamérica— pero esas cuatro consolas hoy tienen
 **las tres regiones**. Correr `build_nes_catalog.py` regenera `nes-usa.json` y deja `nes-jp.json` y
-`nes-eu.json` intactos, sin avisar. Quien llegue nuevo va a asumir que reconstruyó la NES.
+`nes-eu.json` intactos. Los cuatro scripts ahora **lo avisan por pantalla** antes de escribir.
+
+**Y hacían algo peor, descubierto al probar ese aviso.** Correr `build_nes_catalog.py` le devolvía a
+*Ice Climber* el serial `HVC-IC` —`HVC` es el prefijo del **Famicom**— dentro del catálogo
+americano. Ese dato ya se había limpiado a mano una vez y volvía solo, porque la limpieza estaba en
+el archivo y no en la función que lo genera.
+
+La causa: `dat_serials()` elegía **un** serial por título por ranking de región, sin verificar que
+el elegido fuera realmente de esa región. Arreglado en el origen — ahora descarta el que contradiga
+—, y `build_nes_catalog.py` corrido dos veces seguidas ya no cambia nada.
+
+De paso quedó **una sola verdad** sobre qué región declara un serial: `region_de_serial()` en
+`catalog_common`, que mira sufijo y prefijo. Antes la regla estaba duplicada —el lint sabía de
+prefijos, el enriquecedor de sufijos— y los datos malos pasaban por la grieta: `HVC-IC` no tiene
+sufijo, así que solo el prefijo lo delata.
+
+**El lint lo cazó las dos veces.** Es la prueba de que el gate sirve, y también de por qué un
+catálogo no debe regenerarse a ciegas.
 
 ### 2. Genérico parametrizado por CLI (generación 2)
 
@@ -52,9 +69,9 @@ familia no necesita nada.
 
 | qué | por qué |
 |---|---|
-| `fix_titulos_pegados.py` (159) | reparación **de un solo uso**, ya consumida: arregló 261 títulos que quedaron con el nombre alternativo pegado. El defecto que los causó está corregido en `regional_title()` **y cubierto por tests**, así que no puede volver. |
-| `fix_covers_symlink.py` (110) | ídem: resolvió 185 carátulas que apuntaban a symlinks. El defecto está corregido en el desempate de `enrich_covers_libretro` y no reaparece. |
-| `catalog_common.build()` + sus 4 builders | superados por la generación 2, y **activamente engañosos**: prometen reconstruir una consola y solo tocan su tercio americano. |
+| ~~`fix_titulos_pegados.py`~~ (159) | **borrado.** Reparación de un solo uso ya consumida: arregló 261 títulos con el nombre alternativo pegado. El defecto está corregido en `regional_title()` **y cubierto por tests**, así que no puede volver. La historia quedó en `CATALOGS.md`. |
+| ~~`fix_covers_symlink.py`~~ (110) | **borrado.** Ídem: resolvió 185 carátulas que apuntaban a symlinks. Corregido en el desempate de `enrich_covers_libretro`. |
+| `catalog_common.build()` + sus 4 builders | **se quedan, con aviso.** Ver abajo. |
 | `DiaryViewModel.photoCount()` | *(fuera de tools, pero del mismo barrido)* código muerto: la UI lo calcula de `games.sumOf { it.photoCount }`. |
 
 Los dos `fix_` valen como **registro histórico** —explican un defecto real y cómo se reparó— pero no
@@ -67,8 +84,8 @@ dos historias, no un script ejecutable que pisa 57 archivos.
 
 1. **Este mapa**, enlazado desde el README. Hoy hay 13 scripts `build_*` con tres arquitecturas y
    nada que diga cuál corresponde.
-2. **Un aviso en los cuatro builders de la generación 1**, o borrarlos. Un script que hace un tercio
-   de lo que su nombre promete es peor que no tenerlo.
+2. ~~Un aviso en los cuatro builders de la generación 1.~~ **Hecho**, y de paso se arregló que
+   ensuciaran el catálogo.
 3. **`build_collection.py`** (314 líneas) importa la colección **desde el Excel personal del autor**.
    Es la única herramienta del repo que no le sirve a nadie más. O se documenta como "así se armó la
    colección de ejemplo", o se va.

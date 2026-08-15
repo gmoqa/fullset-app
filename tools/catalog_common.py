@@ -133,10 +133,41 @@ SERIAL_SUFFIX = {
 }
 
 
+# Prefijos que identifican la región **sin ambigüedad**. Solo Sony y Nintendo: en Sega la misma `T`
+# aparece en las tres regiones, así que ahí no dice nada. Ojo con los que NO están: `NUS` (N64) y
+# `NES` son códigos de **producto**, iguales en los tres mercados, y estuvieron acá hasta que los
+# catálogos japonés y europeo tuvieron seriales.
+SERIAL_PREFIX = {
+    "SLUS": "NTSC-U", "SCUS": "NTSC-U", "SKUS": "NTSC-U", "BLUS": "NTSC-U", "BCUS": "NTSC-U",
+    "SNS": "NTSC-U",
+    "SLES": "PAL", "SCES": "PAL", "SCED": "PAL", "SLED": "PAL", "BLES": "PAL", "BCES": "PAL",
+    "SNSP": "PAL",
+    "SLPS": "NTSC-J", "SLPM": "NTSC-J", "SCPS": "NTSC-J", "SIPS": "NTSC-J", "PAPX": "NTSC-J",
+    "PBPX": "NTSC-J", "BLJM": "NTSC-J", "BLJS": "NTSC-J", "BCJS": "NTSC-J",
+    "SHVC": "NTSC-J", "HVC": "NTSC-J",
+}
+
+
 def region_de_serial(serial):
-    """La región que declara el **sufijo** del catalog number, o None si no dice nada."""
+    """La región que declara un catalog number, o None si no dice nada.
+
+    Mira el **sufijo primero** y el prefijo después, porque cuando los dos opinan el que sabe es el
+    de atrás: en Nintendo el prefijo es el producto (`NUS` = Nintendo 64, igual en los tres
+    mercados) y el sufijo el mercado (`NUS-NGEJ-JPN`). Pero hay seriales viejos **sin sufijo**,
+    como el `HVC-IC` del Famicom, y ahí el prefijo es lo único que hay.
+
+    Es la única verdad sobre esto en el repo: la usan el lint, los enriquecedores y `dat_serials`.
+    Cuando estaba duplicada, cada copia sabía una mitad y los datos malos pasaban por la grieta.
+    """
     s = (serial or "").strip()
-    return SERIAL_SUFFIX.get(s.rsplit("-", 1)[-1].upper()) if "-" in s else None
+    if not s:
+        return None
+    if "-" in s:
+        por_sufijo = SERIAL_SUFFIX.get(s.rsplit("-", 1)[-1].upper())
+        if por_sufijo:
+            return por_sufijo
+    m = re.match(r"^[A-Za-z]+", s)
+    return SERIAL_PREFIX.get(m.group(0).upper()) if m else None
 
 
 def _regiones(name):
@@ -164,7 +195,15 @@ def _rank(name, prefs):
     return base
 
 
-def dat_serials(dat_name):
+def dat_serials(dat_name, region="NTSC-U"):
+    """`{título normalizado: serial}` para un catálogo de [region].
+
+    **Se descarta el serial cuyo sufijo contradiga la región**, aunque la entrada gane el ranking.
+    Sin eso, el volcado marcado `(World)` de `Ice Climber` traía `HVC-IC` —`HVC` es el prefijo del
+    Famicom— y lo metía en el catálogo **americano**. Ese defecto ya se había limpiado a mano una
+    vez; volvió al correr un builder viejo, porque la limpieza estaba en el dato y no en la función.
+    Lo cazó el lint, que valida la región del serial; acá se corta en el origen.
+    """
     # No todas las plataformas tienen DAT de seriales (p. ej. PlayStation): si no está, sin serial.
     try:
         body = fetch(DAT_BASE + urllib.parse.quote(dat_name) + ".dat")
@@ -173,10 +212,14 @@ def dat_serials(dat_name):
         return {}
     idx = {}
     for comment, ser in re.findall(r'game\s*\(\s*comment "([^"]+)"\s*serial "([^"]+)"', body):
+        valor = ser.split(",")[0].strip()
+        dice = region_de_serial(valor)
+        if dice is not None and dice != region:
+            continue
         r = _rank(comment, COVER_PREF)
         k = core(comment)
         if k not in idx or r > idx[k][1]:
-            idx[k] = (ser.split(",")[0].strip(), r)
+            idx[k] = (valor, r)
     return {k: v[0] for k, v in idx.items()}
 
 

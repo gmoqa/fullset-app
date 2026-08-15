@@ -95,23 +95,6 @@ PLATFORMS = os.path.join(CAT_DIR, "platforms.json")
 BASELINE = os.path.join(os.path.dirname(__file__), "baseline-semantica.json")
 MANIFEST_PATH = os.path.join(CAT_DIR, "manifest.json")
 
-# Prefijos de catalog number que identifican la región sin ambigüedad. Solo Sony y Nintendo: en
-# Sega la misma `T` aparece en las tres regiones, así que ahí no dice nada.
-SERIAL_REGION = {
-    "SLUS": "NTSC-U", "SCUS": "NTSC-U", "SKUS": "NTSC-U", "BLUS": "NTSC-U", "BCUS": "NTSC-U",
-    "SNS": "NTSC-U",
-    "SLES": "PAL", "SCES": "PAL", "SCED": "PAL", "SLED": "PAL", "BLES": "PAL", "BCES": "PAL",
-    "SLPS": "NTSC-J", "SLPM": "NTSC-J", "SCPS": "NTSC-J", "SIPS": "NTSC-J", "PAPX": "NTSC-J",
-    "PBPX": "NTSC-J", "BLJM": "NTSC-J", "BLJS": "NTSC-J", "BCJS": "NTSC-J",
-    "SHVC": "NTSC-J", "HVC": "NTSC-J",
-}
-# `BLAS`/`BCAS`/`BLKS`/`BCKS` (Asia y Corea) aparecen en las tres regiones de PS3: no diagnostican.
-#
-# `NUS` (Nintendo 64) y `NES` **tampoco**, y estuvieron acá hasta que los catálogos japonés y europeo
-# tuvieron seriales: son códigos de **producto**, iguales en los tres mercados —`NUS-NGEJ-JPN`,
-# `NUS-NSAP-EUR`— y la región va en el **sufijo**. Mientras solo el americano tenía números, la regla
-# parecía correcta porque todo terminaba en `-USA`.
-
 REGION_KEY = {"NTSC-U": "ntsc", "NTSC-J": "ntsc-j", "PAL": "pal"}
 COVER_REGION = {"NTSC-U": "USA", "NTSC-J": "JAPAN", "PAL": "EUROPE"}
 
@@ -157,11 +140,9 @@ def lint_semantica(data, lanzamiento):
             errs.append(f"{donde}: slug {actual_slug!r} no deriva del título (esperado {esperado!r})")
 
         serial = (e.get("serial") or "").strip()
-        m = re.match(r"^[A-Za-z]+", serial)
-        esperada = SERIAL_REGION.get(m.group(0).upper()) if m else None
-        # El sufijo manda sobre el prefijo: en Nintendo el prefijo es el producto y el sufijo el
-        # mercado, así que cuando los dos opinan, el que sabe es el de atrás.
-        esperada = region_de_serial(serial) or esperada
+        # Qué región declara el serial: sufijo primero, prefijo después. La regla vive en
+        # `catalog_common.region_de_serial` para que el lint y los enriquecedores no discrepen.
+        esperada = region_de_serial(serial)
         if esperada and esperada != e.get("region"):
             errs.append(f"{donde}: serial {serial!r} es de {esperada}, no de {e.get('region')}")
 

@@ -327,7 +327,7 @@ dataset**, no solo a NEC:
 3. **A igual región ganaba la variante, no el lanzamiento base.** `(Rev 1)` ordena antes que el
    nombre pelado, y las variantes son justo las que libretro guarda como **symlink** —que
    `raw.githubusercontent` sirve como texto y la app no puede decodificar—. Se agregó desempate por
-   nombre más corto: reintroducía los symlinks que `fix_covers_symlink.py` ya había resuelto.
+   nombre más corto: reintroducía los symlinks que una reparación puntual ya había resuelto.
 
 Resultado sobre los 47 catálogos: **367 carátulas pasaron a la región correcta**, 1801 pasaron de
 una variante al nombre canónico y la cobertura total subió a **25.246/31.199 (80%)**. El contador de
