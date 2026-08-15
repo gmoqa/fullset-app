@@ -1,6 +1,6 @@
 package com.gmoqa.fullset.ui
 
-import com.gmoqa.fullset.DiaryViewModel
+import com.gmoqa.fullset.roles.PantallaHome
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -107,7 +107,7 @@ internal fun tabsFor(mode: TrackingMode): List<HomeTab> = when (mode) {
 
 @Composable
 internal fun HomeContent(
-    vm: DiaryViewModel,
+    vm: PantallaHome,
     platforms: List<Platform>,
     tab: HomeTab,
     onTabChange: (HomeTab) -> Unit,

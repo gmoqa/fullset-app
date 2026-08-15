@@ -26,6 +26,8 @@ import com.gmoqa.fullset.data.TranscriptionLanguage
 import com.gmoqa.fullset.data.VoiceRecorder
 import com.gmoqa.fullset.data.WhisperModel
 import com.gmoqa.fullset.data.WhisperModelStore
+import com.gmoqa.fullset.roles.PantallaHome
+import com.gmoqa.fullset.roles.BuscadorDeCaratulas
 import com.gmoqa.fullset.ui.BackupArchive
 import com.gmoqa.fullset.ui.RestoredBackup
 import com.gmoqa.fullset.data.WishlistItem
@@ -60,17 +62,17 @@ class DiaryViewModel(
     private val modelStore: WhisperModelStore,
     private val transcriber: Transcriber,
     steamGridKey: String,
-) : ViewModel(), DiarioDeUnJuego {
+) : ViewModel(), DiarioDeUnJuego, PantallaHome, BuscadorDeCaratulas {
 
     private val repo = DiaryRepository()
 
     private val _ready = MutableStateFlow(false)
-    val ready: StateFlow<Boolean> = _ready.asStateFlow()
+    override val ready: StateFlow<Boolean> = _ready.asStateFlow()
 
-    val games: StateFlow<List<Game>> =
+    override val games: StateFlow<List<Game>> =
         repo.gamesFlow().stateIn(viewModelScope, SharingStarted.Eagerly, emptyList())
 
-    val wishlist: StateFlow<List<WishlistItem>> =
+    override val wishlist: StateFlow<List<WishlistItem>> =
         repo.wishlistFlow().stateIn(viewModelScope, SharingStarted.Eagerly, emptyList())
 
     init {
@@ -93,32 +95,25 @@ class DiaryViewModel(
      * franja y corre la fila) en vez de dejarte donde estabas. Se consume una sola vez.
      */
     private val _lastAdded = MutableStateFlow<Long?>(null)
-    val lastAdded: StateFlow<Long?> = _lastAdded.asStateFlow()
+    override val lastAdded: StateFlow<Long?> = _lastAdded.asStateFlow()
 
-    fun consumeLastAdded() { _lastAdded.value = null }
+    override fun consumeLastAdded() { _lastAdded.value = null }
 
-    fun addGame(
+    // Los valores por defecto y el porqué de cada parámetro viven en `roles/Roles.kt`: en Kotlin
+    // los defaults se declaran en la interfaz, no en quien la implementa.
+    override fun addGame(
         title: String,
         platform: String,
         coverUrl: String,
-        region: String = "",
-        releaseYear: Int? = null,
-        /** Fecha ISO de precisión variable del catálogo. Sin esto el juego nace solo con el año. */
-        releaseDate: String = "",
-        genre: String = "",
-        slug: String = "",
-        publisher: String = "",
-        /** Catalog number impreso en el cartucho o disco: identifica **esta** edición. */
-        serial: String = "",
-        /** Alta desde Playing: el juego arranca marcado como que lo estás jugando. */
-        playing: Boolean = false,
-        /**
-         * "No lo poseo". En modo **Diary only** el alta sale del catálogo igual que siempre, pero no
-         * afirma posesión: ahí la app es solo el diario. Si se marcara como poseído, al volver a
-         * "Collection + diary" —que el propio ajuste ofrece, porque no borra nada— aparecería de
-         * golpe una colección de juegos que nunca dijiste tener.
-         */
-        digital: Boolean = false,
+        region: String,
+        releaseYear: Int?,
+        releaseDate: String,
+        genre: String,
+        slug: String,
+        publisher: String,
+        serial: String,
+        playing: Boolean,
+        digital: Boolean,
     ) = io {
         val id = repo.addGame(
             title, platform, coverUrl,
@@ -134,7 +129,7 @@ class DiaryViewModel(
      * `playing=true`) y **no** aparece en Collection, que es tu colección física. La carátula puede
      * venir del buscador ([coverUrl]) o de la galería ([cover]).
      */
-    fun addDigitalGame(title: String, platform: String, coverUrl: String, cover: PlatformImage?) = io {
+    override fun addDigitalGame(title: String, platform: String, coverUrl: String, cover: PlatformImage?) = io {
         val id = repo.addGame(title, platform, coverUrl = coverUrl, digital = true)
         repo.setPlaying(id, true)
         if (cover != null) repo.setCoverFromImage(id, cover)
@@ -146,13 +141,13 @@ class DiaryViewModel(
     private val coverSource = SteamGridDb(steamGridKey)
 
     /** Hay API key configurada: si no, el formulario manual no ofrece el buscador. */
-    val coverSearchEnabled: Boolean get() = coverSource.isEnabled
+    override val coverSearchEnabled: Boolean get() = coverSource.isEnabled
 
     /** Juegos que coinciden con un título (para elegir el correcto antes de ver sus carátulas). */
-    suspend fun searchGames(title: String): List<SteamGridGame> = coverSource.searchGames(title)
+    override suspend fun searchGames(title: String): List<SteamGridGame> = coverSource.searchGames(title)
 
     /** Carátulas (URLs 600×900) del juego elegido; vacío si no tiene o falla la red. */
-    suspend fun coversFor(gameId: Int): List<String> = coverSource.coversForGame(gameId)
+    override suspend fun coversFor(gameId: Int): List<String> = coverSource.coversForGame(gameId)
 
     override fun setPlaying(id: Long, playing: Boolean) = io { repo.setPlaying(id, playing) }
     override fun setBacklog(id: Long, backlog: Boolean) = io { repo.setBacklog(id, backlog) }
@@ -216,9 +211,9 @@ class DiaryViewModel(
     // ---- Transcripción (Whisper local) ----
 
     private val _transcriptionLanguage = MutableStateFlow(repo.transcriptionLanguage())
-    val transcriptionLanguage: StateFlow<TranscriptionLanguage> = _transcriptionLanguage.asStateFlow()
+    override val transcriptionLanguage: StateFlow<TranscriptionLanguage> = _transcriptionLanguage.asStateFlow()
 
-    fun setTranscriptionLanguage(language: TranscriptionLanguage) {
+    override fun setTranscriptionLanguage(language: TranscriptionLanguage) {
         _transcriptionLanguage.value = language
         repo.setTranscriptionLanguage(language)
     }
@@ -267,11 +262,11 @@ class DiaryViewModel(
     }
 
     private val _modelDownload = MutableStateFlow<ModelDownloadState>(ModelDownloadState.Idle)
-    val modelDownload: StateFlow<ModelDownloadState> = _modelDownload.asStateFlow()
+    override val modelDownload: StateFlow<ModelDownloadState> = _modelDownload.asStateFlow()
 
     private var downloadJob: Job? = null
 
-    fun downloadModel(model: WhisperModel) {
+    override fun downloadModel(model: WhisperModel) {
         if (downloadJob?.isActive == true) return
         _modelDownload.value = ModelDownloadState.Downloading(model, 0f)
         downloadJob = viewModelScope.launch {
@@ -295,18 +290,18 @@ class DiaryViewModel(
         }
     }
 
-    fun cancelModelDownload() {
+    override fun cancelModelDownload() {
         downloadJob?.cancel()
         downloadJob = null
         _modelDownload.value = ModelDownloadState.Idle
     }
 
-    fun deleteModel(model: WhisperModel) = io {
+    override fun deleteModel(model: WhisperModel) = io {
         modelStore.delete(model)
         _installedModel.value = modelStore.installed()
     }
 
-    fun dismissModelError() {
+    override fun dismissModelError() {
         _modelDownload.value = ModelDownloadState.Idle
     }
 
@@ -327,44 +322,44 @@ class DiaryViewModel(
     override fun setCover(gameId: Long, image: PlatformImage) = io { repo.setCoverFromImage(gameId, image) }
     override fun clearCustomCover(gameId: Long) = io { repo.clearCustomCover(gameId) }
 
-    fun addToWishlist(platform: String, game: String, slug: String, coverUrl: String) =
+    override fun addToWishlist(platform: String, game: String, slug: String, coverUrl: String) =
         io { repo.addToWishlist(platform, game, slug, coverUrl) }
 
-    fun removeFromWishlist(id: Long) = io { repo.removeFromWishlist(id) }
-    fun clearWishlist() = io { repo.clearWishlist() }
+    override fun removeFromWishlist(id: Long) = io { repo.removeFromWishlist(id) }
+    override fun clearWishlist() = io { repo.clearWishlist() }
 
     // ---- Ajustes (SharedPreferences: rápido y seguro en el main) ----
 
-    fun trackingMode(): TrackingMode = repo.trackingMode()
-    fun setTrackingMode(mode: TrackingMode) = repo.setTrackingMode(mode)
-    fun themeMode(): ThemeMode = repo.themeMode()
-    fun setThemeMode(mode: ThemeMode) = repo.setThemeMode(mode)
-    fun regionFilter(): RegionFilter = repo.regionFilter()
-    fun setRegionFilter(region: RegionFilter) = repo.setRegionFilter(region)
-    fun sortOrder(): SortOrder = repo.sortOrder()
-    fun setSortOrder(order: SortOrder) = repo.setSortOrder(order)
-    fun showCollectionLabels(): Boolean = repo.showCollectionLabels()
-    fun setShowCollectionLabels(show: Boolean) = repo.setShowCollectionLabels(show)
-    fun showConsoleTitles(): Boolean = repo.showConsoleTitles()
-    fun setShowConsoleTitles(show: Boolean) = repo.setShowConsoleTitles(show)
-    fun deleteAudioAfterTranscription(): Boolean = repo.deleteAudioAfterTranscription()
-    fun setDeleteAudioAfterTranscription(on: Boolean) = repo.setDeleteAudioAfterTranscription(on)
+    override fun trackingMode(): TrackingMode = repo.trackingMode()
+    override fun setTrackingMode(mode: TrackingMode) = repo.setTrackingMode(mode)
+    override fun themeMode(): ThemeMode = repo.themeMode()
+    override fun setThemeMode(mode: ThemeMode) = repo.setThemeMode(mode)
+    override fun regionFilter(): RegionFilter = repo.regionFilter()
+    override fun setRegionFilter(region: RegionFilter) = repo.setRegionFilter(region)
+    override fun sortOrder(): SortOrder = repo.sortOrder()
+    override fun setSortOrder(order: SortOrder) = repo.setSortOrder(order)
+    override fun showCollectionLabels(): Boolean = repo.showCollectionLabels()
+    override fun setShowCollectionLabels(show: Boolean) = repo.setShowCollectionLabels(show)
+    override fun showConsoleTitles(): Boolean = repo.showConsoleTitles()
+    override fun setShowConsoleTitles(show: Boolean) = repo.setShowConsoleTitles(show)
+    override fun deleteAudioAfterTranscription(): Boolean = repo.deleteAudioAfterTranscription()
+    override fun setDeleteAudioAfterTranscription(on: Boolean) = repo.setDeleteAudioAfterTranscription(on)
 
     // ---- Respaldo / sync a archivo ----
 
     /** Resultado del último restore, para mostrarlo en Settings; null = nada que mostrar. */
     private val _syncStatus = MutableStateFlow<String?>(null)
-    val syncStatus: StateFlow<String?> = _syncStatus.asStateFlow()
-    fun clearSyncStatus() { _syncStatus.value = null }
+    override val syncStatus: StateFlow<String?> = _syncStatus.asStateFlow()
+    override fun clearSyncStatus() { _syncStatus.value = null }
 
     /** Serializa la colección (listas + transcripciones) a JSON para respaldar. */
-    fun exportSnapshotJson(): String = repo.exportSnapshot().toJson()
+    override fun exportSnapshotJson(): String = repo.exportSnapshot().toJson()
 
     /**
      * Respaldo completo: el mismo JSON, pero con las fotos listadas, más sus archivos para que la
      * capa de plataforma los meta en el ZIP.
      */
-    fun exportArchive(): BackupArchive = BackupArchive(
+    override fun exportArchive(): BackupArchive = BackupArchive(
         json = repo.exportSnapshot(withPhotos = true).toJson(),
         photoPaths = repo.allPhotoPaths(),
     )
@@ -373,7 +368,7 @@ class DiaryViewModel(
     fun photoCount(): Int = repo.allPhotoPaths().size
 
     /** Une un respaldo a la colección (nunca borra) y reporta cuántos ítems nuevos entraron. */
-    fun importBackup(backup: RestoredBackup) = io {
+    override fun importBackup(backup: RestoredBackup) = io {
         _syncStatus.value = runCatching {
             repo.importSnapshot(syncSnapshotFromJson(backup.json), backup.photos)
         }.fold(
@@ -393,11 +388,11 @@ class DiaryViewModel(
     // Solo para probar los estados vacíos (Settings → Developer, visible únicamente en debug): vive
     // en memoria y no toca la BD; al reiniciar vuelve a false para no dejar la app "vacía" por error.
     private val _previewEmpty = MutableStateFlow(false)
-    val previewEmpty: StateFlow<Boolean> = _previewEmpty.asStateFlow()
-    fun setPreviewEmpty(on: Boolean) { _previewEmpty.value = on }
+    override val previewEmpty: StateFlow<Boolean> = _previewEmpty.asStateFlow()
+    override fun setPreviewEmpty(on: Boolean) { _previewEmpty.value = on }
 
     /** Export CSV: acción puntual del usuario; lee la BD en el hilo llamante (colección chica). */
-    fun exportCsv(): String = repo.collectionCsv()
+    override fun exportCsv(): String = repo.collectionCsv()
 
     private inline fun io(crossinline block: () -> Unit) {
         viewModelScope.launch(ioDispatcher) { block() }

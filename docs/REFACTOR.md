@@ -122,7 +122,7 @@ De paso, `Screen` estaba declarado 200 líneas **por debajo** de su primer uso, 
 
 **Verificado en dispositivo el 2026-08-15**: navegación apilada (franja → ficha de plataforma) y «atrás» desapilando de vuelta a Collection, con su animación.
 
-### Fase 4 — Fachadas por rol · en curso desde el **2026-08-15**
+### Fase 4 — Fachadas por rol · ✅ **hecha el 2026-08-15**
 
 **El plan decía otra cosa y estaba mal.** Decía agrupar los 69 miembros en sub-objetos
 (`vm.diario.addNote(…)`). Al medirlo, eso tocaba **81 llamadas** y **ninguna pantalla recibía menos**:
@@ -157,7 +157,31 @@ real: agregar `vm.exportArchive()` en esa pantalla ahora **no compila**
 De paso apareció que `stopVoiceNote()` y `cancelVoiceNote()` devolvían un `Job` que nadie usaba, y
 que **`photoCount()` es código muerto** — la UI lo calcula de `games.sumOf { it.photoCount }`.
 
-Pendientes: `Coleccion` (App) y `Ajustes`/`Respaldo` (HomeScreen).
+Los roles, **agrupados por concepto y no por pantalla** —agruparlos por pantalla los volvería el
+mismo cajón, repartido en tres—:
+
+| rol | qué es |
+|---|---|
+| `DiarioDeUnJuego` | todo lo que hacés parado en un juego (26) |
+| `Coleccion` | qué tenés, qué querés tener, y cómo se agrega |
+| `Ajustes` | las preferencias |
+| `Respaldo` | sacar y devolver tus datos |
+| `ModeloDeVoz` | bajar y borrar el modelo de Whisper |
+| `BuscadorDeCaratulas` | SteamGridDB, para las consolas sin catálogo |
+
+Una pantalla que cruza conceptos declara el compuesto: `PantallaHome : Coleccion, Ajustes,
+Respaldo, ModeloDeVoz`.
+
+**Lo que el compilador enseñó, y no estaba en el plan: la raíz no lleva rol.** Al ponerle uno a
+`AppRoot`, falló — porque construye *todas* las pantallas, así que la unión de lo que necesita **es**
+el ViewModel entero. Un `PantallaRaiz` que herede de los cinco roles es escribir "todo" con más
+palabras.
+
+La segregación se cobra en las **hojas**. El trabajo de la raíz es conocerlo todo, y pelearse con eso
+es ceremonia.
+
+Verificado que la restricción es real en las dos pantallas nuevas: `vm.startVoiceNote(…)` dentro de
+`HomeScreen` **no compila**.
 
 **Costo conocido:** pasar una interfaz a un `@Composable` la vuelve *unstable*. Con Kotlin 2.0.21 el
 *strong skipping* está activo por defecto y el ViewModel es siempre la misma instancia, así que
