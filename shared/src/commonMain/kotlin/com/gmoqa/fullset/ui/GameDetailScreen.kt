@@ -77,7 +77,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
-import com.gmoqa.fullset.DiaryViewModel
+import com.gmoqa.fullset.DiarioDeUnJuego
 import kotlinx.datetime.Clock
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
@@ -89,7 +89,7 @@ import com.gmoqa.fullset.data.coverModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GameDetailScreen(
-    vm: DiaryViewModel,
+    vm: DiarioDeUnJuego,
     gameId: Long,
     onBack: () -> Unit,
     onDelete: () -> Unit,

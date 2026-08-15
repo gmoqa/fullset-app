@@ -122,13 +122,47 @@ De paso, `Screen` estaba declarado 200 líneas **por debajo** de su primer uso, 
 
 **Verificado en dispositivo el 2026-08-15**: navegación apilada (franja → ficha de plataforma) y «atrás» desapilando de vuelta a Collection, con su animación.
 
-### Fase 4 — El ViewModel por facetas · riesgo medio
+### Fase 4 — Fachadas por rol · en curso desde el **2026-08-15**
 
-69 miembros planos → agrupados por área: colección, diario, respaldo, voz, carátulas. Expuestos como
-sub-objetos, no como 69 métodos sueltos.
+**El plan decía otra cosa y estaba mal.** Decía agrupar los 69 miembros en sub-objetos
+(`vm.diario.addNote(…)`). Al medirlo, eso tocaba **81 llamadas** y **ninguna pantalla recibía menos**:
+seguían tomando el ViewModel entero. Ceremonia con forma de orden.
 
-**Ojo:** esto toca todas las pantallas a la vez. Hacerla **después** de la fase 2, porque el estado
-por pantalla reduce la superficie que hay que tocar.
+Lo que la medición mostró es otra cosa. Solo tres archivos usan el ViewModel, tocan 22–26 miembros
+cada uno, y **86–92% de lo que usa cada uno es exclusivo suyo**:
+
+| pantalla | usa | exclusivo |
+|---|---|---|
+| `GameDetailScreen` | 26 | **92%** |
+| `HomeScreen` | 24 | **87%** |
+| `App` | 22 | **86%** |
+
+Entre pares comparten 1–3 miembros. No hay un ViewModel desordenado: hay **tres contratos distintos
+disfrazados de uno**. Eso es una violación del *Interface Segregation Principle*, y el patrón que la
+resuelve es **Facade aplicado por rol** — `DiaryViewModel` ya es una fachada sobre el repositorio,
+SteamGridDB, el grabador y Whisper; el defecto es que hay *una sola* para tres audiencias.
+
+**Patrones descartados, para que no se vuelvan a proponer:** *Command* (paga con undo/cola/log, y no
+hay ninguno), *Strategy* (no hay algoritmo que varíe; el único caso real, `SortOrder`, ya está
+resuelto así), *Adapter* (es para interfaces **incompatibles**; acá son compatibles, solo grandes) y
+*Proxy* (controla acceso, no forma).
+
+**Por qué en Kotlin sale elegante:** el ViewModel implementa los roles, así que **las 81 llamadas no
+se tocan** — `vm.addNote(…)` sigue siendo `vm.addNote(…)`.
+
+Hecho: **`DiarioDeUnJuego`** (26 miembros) para `GameDetailScreen`. Verificado que la restricción es
+real: agregar `vm.exportArchive()` en esa pantalla ahora **no compila**
+(`Unresolved reference`). Antes era legal.
+
+De paso apareció que `stopVoiceNote()` y `cancelVoiceNote()` devolvían un `Job` que nadie usaba, y
+que **`photoCount()` es código muerto** — la UI lo calcula de `games.sumOf { it.photoCount }`.
+
+Pendientes: `Coleccion` (App) y `Ajustes`/`Respaldo` (HomeScreen).
+
+**Costo conocido:** pasar una interfaz a un `@Composable` la vuelve *unstable*. Con Kotlin 2.0.21 el
+*strong skipping* está activo por defecto y el ViewModel es siempre la misma instancia, así que
+compara igual y la pantalla sigue saltando recomposición. **Verificar con métricas** antes de dar la
+fase por cerrada.
 
 ### Fase 5 — Renombrar las capas · riesgo alto, va última
 

@@ -60,7 +60,7 @@ class DiaryViewModel(
     private val modelStore: WhisperModelStore,
     private val transcriber: Transcriber,
     steamGridKey: String,
-) : ViewModel() {
+) : ViewModel(), DiarioDeUnJuego {
 
     private val repo = DiaryRepository()
 
@@ -82,9 +82,9 @@ class DiaryViewModel(
 
     // ---- Lecturas reactivas por juego (recordar con remember(id) en el composable) ----
 
-    fun gameFlow(id: Long): Flow<Game?> = repo.gameFlow(id)
-    fun notesFlow(id: Long): Flow<List<Note>> = repo.notesFlow(id)
-    fun photosFlow(id: Long): Flow<List<Photo>> = repo.photosFlow(id)
+    override fun gameFlow(id: Long): Flow<Game?> = repo.gameFlow(id)
+    override fun notesFlow(id: Long): Flow<List<Note>> = repo.notesFlow(id)
+    override fun photosFlow(id: Long): Flow<List<Photo>> = repo.photosFlow(id)
 
     // ---- Escrituras: fuera del main; los Flows se re-emiten solos ----
 
@@ -154,36 +154,36 @@ class DiaryViewModel(
     /** Carátulas (URLs 600×900) del juego elegido; vacío si no tiene o falla la red. */
     suspend fun coversFor(gameId: Int): List<String> = coverSource.coversForGame(gameId)
 
-    fun setPlaying(id: Long, playing: Boolean) = io { repo.setPlaying(id, playing) }
-    fun setBacklog(id: Long, backlog: Boolean) = io { repo.setBacklog(id, backlog) }
-    fun setCondition(id: Long, condition: String) = io { repo.setCondition(id, condition) }
+    override fun setPlaying(id: Long, playing: Boolean) = io { repo.setPlaying(id, playing) }
+    override fun setBacklog(id: Long, backlog: Boolean) = io { repo.setBacklog(id, backlog) }
+    override fun setCondition(id: Long, condition: String) = io { repo.setCondition(id, condition) }
 
-    fun setFirstPlayed(id: Long, iso: String) = io { repo.setFirstPlayed(id, iso) }
-    fun deleteGame(id: Long) = io { repo.deleteGame(id) }
+    override fun setFirstPlayed(id: Long, iso: String) = io { repo.setFirstPlayed(id, iso) }
+    override fun deleteGame(id: Long) = io { repo.deleteGame(id) }
 
-    fun addNote(gameId: Long, text: String) = io { repo.addNote(gameId, text) }
-    fun editNote(id: Long, text: String) = io { repo.setNoteText(id, text) }
+    override fun addNote(gameId: Long, text: String) = io { repo.addNote(gameId, text) }
+    override fun editNote(id: Long, text: String) = io { repo.setNoteText(id, text) }
 
     /** JSON de las notas de un juego, para compartir (p. ej. pegarlo en un LLM). */
-    fun gameNotesJson(gameId: Long): String = repo.gameNotesJson(gameId)
+    override fun gameNotesJson(gameId: Long): String = repo.gameNotesJson(gameId)
 
     /** Las notas de un juego como texto legible, para compartir/leer/pegar en un chat. */
-    fun gameNotesText(gameId: Long): String = repo.gameNotesText(gameId)
-    fun deleteNote(id: Long) = io { repo.deleteNote(id) }
+    override fun gameNotesText(gameId: Long): String = repo.gameNotesText(gameId)
+    override fun deleteNote(id: Long) = io { repo.deleteNote(id) }
 
     // ---- Notas de voz (Fase 1: grabar y guardar; la transcripción llega después) ----
 
     /** Id del juego que se está grabando ahora, o null si no hay grabación en curso. */
     private val _recordingFor = MutableStateFlow<Long?>(null)
-    val recordingFor: StateFlow<Long?> = _recordingFor.asStateFlow()
+    override val recordingFor: StateFlow<Long?> = _recordingFor.asStateFlow()
 
-    val recordElapsedMs: StateFlow<Long> = recorder.elapsedMs
-    val recordAmplitude: StateFlow<Float> = recorder.amplitude
+    override val recordElapsedMs: StateFlow<Long> = recorder.elapsedMs
+    override val recordAmplitude: StateFlow<Float> = recorder.amplitude
 
     private var pendingAudioPath: String? = null
 
     /** Empieza a grabar una nota para [gameId]. false si el micrófono no pudo abrirse. */
-    fun startVoiceNote(gameId: Long): Boolean {
+    override fun startVoiceNote(gameId: Long): Boolean {
         if (_recordingFor.value != null) return false
         val path = repo.newVoiceNoteFile(gameId)
         if (!recorder.start(path)) return false
@@ -193,22 +193,24 @@ class DiaryViewModel(
     }
 
     /** Detiene y guarda la nota. Descarta grabaciones demasiado cortas. */
-    fun stopVoiceNote() = viewModelScope.launch {
-        val gameId = _recordingFor.value ?: return@launch
-        val path = pendingAudioPath
-        val durationMs = recorder.stop()
-        _recordingFor.value = null
-        pendingAudioPath = null
-        if (path == null) return@launch
-        if (durationMs < MIN_VOICE_NOTE_MS || !FileStore.exists(path)) {
-            withContext(ioDispatcher) { FileStore.delete(path) }
-            return@launch
+    override fun stopVoiceNote() {
+        viewModelScope.launch {
+            val gameId = _recordingFor.value ?: return@launch
+            val path = pendingAudioPath
+            val durationMs = recorder.stop()
+            _recordingFor.value = null
+            pendingAudioPath = null
+            if (path == null) return@launch
+            if (durationMs < MIN_VOICE_NOTE_MS || !FileStore.exists(path)) {
+                withContext(ioDispatcher) { FileStore.delete(path) }
+                return@launch
+            }
+            // Sin texto todavía: si hay modelo, la transcripción lo rellena en segundo plano.
+            val noteId = withContext(ioDispatcher) {
+                repo.addNote(gameId, text = "", audioPath = path, durationMs = durationMs)
+            }
+            transcribeNote(noteId, path)
         }
-        // Sin texto todavía: si hay modelo, la transcripción lo rellena en segundo plano.
-        val noteId = withContext(ioDispatcher) {
-            repo.addNote(gameId, text = "", audioPath = path, durationMs = durationMs)
-        }
-        transcribeNote(noteId, path)
     }
 
     // ---- Transcripción (Whisper local) ----
@@ -223,13 +225,13 @@ class DiaryViewModel(
 
     /** Ids de las notas que se están transcribiendo en este momento. */
     private val _transcribing = MutableStateFlow<Set<Long>>(emptySet())
-    val transcribing: StateFlow<Set<Long>> = _transcribing.asStateFlow()
+    override val transcribing: StateFlow<Set<Long>> = _transcribing.asStateFlow()
 
     /**
      * Transcribe una nota de voz en segundo plano y guarda el resultado en su `text`;
      * como las notas son un Flow, la UI se actualiza sola cuando termina.
      */
-    fun transcribeNote(noteId: Long, audioPath: String) {
+    override fun transcribeNote(noteId: Long, audioPath: String) {
         if (installedModel.value == null || noteId in _transcribing.value) return
         viewModelScope.launch(Dispatchers.Default) {
             _transcribing.value = _transcribing.value + noteId
@@ -254,7 +256,7 @@ class DiaryViewModel(
     }
 
     private val _installedModel = MutableStateFlow<WhisperModel?>(null)
-    val installedModel: StateFlow<WhisperModel?> = _installedModel.asStateFlow()
+    override val installedModel: StateFlow<WhisperModel?> = _installedModel.asStateFlow()
 
     // Este init va acá abajo a propósito: Kotlin inicializa en orden de declaración, así que
     // puesto junto al init de arriba, `_installedModel` todavía sería null.
@@ -309,19 +311,21 @@ class DiaryViewModel(
     }
 
     /** Cancela la grabación en curso y descarta el audio. */
-    fun cancelVoiceNote() = viewModelScope.launch {
-        val path = pendingAudioPath
-        recorder.stop()
-        _recordingFor.value = null
-        pendingAudioPath = null
-        withContext(ioDispatcher) { path?.let { FileStore.delete(it) } }
+    override fun cancelVoiceNote() {
+        viewModelScope.launch {
+            val path = pendingAudioPath
+            recorder.stop()
+            _recordingFor.value = null
+            pendingAudioPath = null
+            withContext(ioDispatcher) { path?.let { FileStore.delete(it) } }
+        }
     }
 
-    fun addPhoto(gameId: Long, image: PlatformImage) = io { repo.addPhoto(gameId, image) }
-    fun deletePhoto(id: Long) = io { repo.deletePhoto(id) }
+    override fun addPhoto(gameId: Long, image: PlatformImage) = io { repo.addPhoto(gameId, image) }
+    override fun deletePhoto(id: Long) = io { repo.deletePhoto(id) }
 
-    fun setCover(gameId: Long, image: PlatformImage) = io { repo.setCoverFromImage(gameId, image) }
-    fun clearCustomCover(gameId: Long) = io { repo.clearCustomCover(gameId) }
+    override fun setCover(gameId: Long, image: PlatformImage) = io { repo.setCoverFromImage(gameId, image) }
+    override fun clearCustomCover(gameId: Long) = io { repo.clearCustomCover(gameId) }
 
     fun addToWishlist(platform: String, game: String, slug: String, coverUrl: String) =
         io { repo.addToWishlist(platform, game, slug, coverUrl) }
