@@ -1,5 +1,10 @@
 # Third-party notices
 
+> **Marcas.** Los nombres de consolas y juegos son marcas de sus respectivos dueños. **fullset no
+> está afiliado ni respaldado por ninguno**, y esos nombres se usan solo para identificar la
+> plataforma de cada juego. **No se usan los logotipos de marca**: la identidad visual de cada
+> plataforma es un ícono de control genérico + su nombre en texto.
+
 fullset se apoya en software y datos de terceros. Sus licencias son propias y
 prevalecen sobre la de este proyecto para las partes correspondientes.
 
