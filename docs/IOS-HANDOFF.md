@@ -34,8 +34,11 @@ ab90e15  iOS: import de ZIP stored — restore iOS<->iOS (tarea 2)
   una nota real. El link y que la app arranque con las estáticas ya están verificados en simulador.
 - **Share sheet real.** Se probó el lado receptor (dejando un archivo en el contenedor del App Group
   aparece `AttachSharedPhotoDialog`). Falta compartir una foto de verdad desde la app Fotos.
-- **`copyImage` (resize) y foreign keys de la DB**: seguían anotados como "escrito, sin probar a
-  fondo". No los toqué en esta tanda.
+- **`copyImage` (resize)**: ✅ **verificado** en el simulador ejecutando el path Kotlin/Native real
+  (el marshaling de `useContents` sobre `CGSize`/`CGRect` era el riesgo): 1200x800 con maxEdge 512
+  da 512x342, JPEG válido. Ya no es una incógnita.
+- **Foreign keys de la DB** (`onConfiguration`): el path corre al arrancar sin crashear, pero no probé
+  la restricción con una violación deliberada. Menor.
 
 ## Límite conocido que sí es código pendiente
 
@@ -44,6 +47,18 @@ ab90e15  iOS: import de ZIP stored — restore iOS<->iOS (tarea 2)
   vacíos. Hoy muestra un alert que sugiere restaurar desde el `.json`. Para cerrarlo: depurar el
   cinterop de `libcompression`/`zlib`, o inflar del lado de Swift y pasar el resultado a Kotlin.
   El patrón de cinterop con header propio (el de whisper) funcionó — puede servir de guía.
+
+## Antes de correr en un iPhone real
+
+- **Firma / provisioning sin configurar** (`project.yml` no tiene `DEVELOPMENT_TEAM` ni estilo de
+  firma). En simulador no hace falta; en device la app no instala sin team + perfiles. Lo más simple:
+  abrir el `.xcodeproj` una vez en Xcode con "Automatically manage signing".
+- **El App Group (tarea 6) necesita cuenta de pago** (Apple Developer Program). Las cuentas
+  personales gratis instalan en device pero **no habilitan App Groups**, así que en un iPhone con
+  cuenta gratis la Share Extension no provisiona. Hay que registrar los dos bundle IDs
+  (`com.gmoqa.fullset`, `com.gmoqa.fullset.ShareExtension`) y el grupo en el portal.
+- **App icon: pendiente en las dos plataformas** (todavía no hay arte). No es un hueco de iOS;
+  `ASSETCATALOG_COMPILER_APPICON_NAME` queda vacío hasta que exista el ícono.
 
 ## Notas de build iOS
 
