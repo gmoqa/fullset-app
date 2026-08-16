@@ -60,7 +60,16 @@ kotlin {
             isStatic = true
         }
         // cinterop con whisper.cpp (transcripción de notas de voz). El .a se linkea en iosApp.
-        target.compilations.getByName("main").cinterops.create("whispercpp")
+        // Los include dirs van acá (relativos a la raíz del repo) y no en el .def: hardcodear rutas
+        // absolutas rompía el cinterop en cualquier máquina que no fuera la del autor (CI incluido).
+        target.compilations.getByName("main").cinterops.create("whispercpp") {
+            val whisperRoot = rootProject.projectDir
+            compilerOpts(
+                "-I${whisperRoot.resolve("iosApp/whisper")}",
+                "-I${whisperRoot.resolve("app/src/main/cpp/whisper/include")}",
+                "-I${whisperRoot.resolve("app/src/main/cpp/whisper/ggml/include")}",
+            )
+        }
     }
 
     sourceSets {
