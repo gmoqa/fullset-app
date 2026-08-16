@@ -681,6 +681,22 @@ claves nuevas no rompe nada.
   una API con cuota, y su cobertura de PS2 japonés obscuro probablemente tampoco sea buena. **Es una
   decisión de gasto, no técnica.**
 
+- **I. El género tampoco tiene fuente para los 29 catálogos en 0%** — investigado el
+  **2026-08-16**, mismo resultado que [H]. Son **30.084 juegos**: toda la familia PlayStation
+  (17.706), DS, 3DS, GameCube, Saturn, Dreamcast, Sega CD y TurboGrafx-CD.
+
+  Las dos fuentes posibles se verificaron y **ninguna lo trae**:
+
+  - **libretro `metadat/genre/`**: 0 entradas para PlayStation 1/2/3, Dreamcast, GameCube, Saturn,
+    Sega CD y TurboGrafx-CD; 42 para 3DS y 98 para DS. Solo cubre los sistemas de cartucho viejos,
+    que son exactamente los 28 catálogos que **ya** tienen género.
+  - **Wikipedia**: las listas de PlayStation no tienen columna de género. La de PS2 es
+    `Title | Developer | Publisher | JP | EU | NA`.
+
+  O sea que el 24% de género del dataset no es un enriquecedor pendiente: es **todo lo que las
+  fuentes publican**. Llenarlo requeriría una fuente nueva (MobyGames, IGDB) con su licencia y su
+  clave, que es una decisión de proyecto y no una tarea.
+
 - **G. Vocabularios controlados** — **pendiente, medido el 2026-08-10.** El lint garantiza la
   **forma** (11 claves, orden, tipos, slug único, ordenado) y cuatro invariantes de significado,
   pero **no mira el vocabulario**: atrapa un serial japonés en un catálogo americano y no atrapa
