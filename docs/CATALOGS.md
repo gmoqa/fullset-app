@@ -655,6 +655,32 @@ claves nuevas no rompe nada.
   de la caja **americana**. Tomarlo para el catálogo japonés le pone el catalog number de otro país;
   el cartucho será el mismo, el número impreso no. El enriquecedor ahora lo descarta.
 
+- **H. Carátulas que faltan: es un techo de la fuente, no un enriquecedor sin correr** — investigado
+  el **2026-08-16**. Quedan **6.577 juegos sin carátula** (83% de cobertura), concentrados en
+  PlayStation y las listas japonesas: `ps2-jp` 1.200, `psx-jp` 836, `ps3-eu` 421.
+
+  Se probaron tres caminos y **los tres dan cero**:
+
+  1. **Volver a correr `enrich_covers_libretro`** sobre `ps2-jp`: `+0`. Ya estaba exprimido.
+  2. **Buscar el título en otra región** del mismo repo: 0 de 1.200.
+  3. **Puente por serial** —catálogo → DAT de redump → nombre romanizado → carátula—, que parecía la
+     jugada ganadora porque **los 1.524 seriales de `ps2-jp` están en redump**. También 0.
+
+  El motivo del hueco es real y estructural: **nuestros títulos vienen traducidos de Wikipedia y
+  libretro usa el romaji**. «2nd Super Robot Wars Alpha» contra `Dai-2-Ji Super Robot Taisen Alpha
+  (Japan)`; «1945 I & II The Arcade Games» contra `Psikyo Shooting Collection Vol. 1 - Strikers 1945
+  I _ II (Japan)`. Ningún emparejamiento difuso cruza eso.
+
+  Pero el puente por serial demostró que **ni siquiera es un problema de nombres**: trazado
+  `SLPS-25017` → redump lo tiene como `A Ressha de Ikou 2001 (Japan)` → **libretro no tiene esa
+  carátula**. La aritmética lo confirma: libretro publica **2.096** carátulas japonesas de PS2 y
+  nuestro catálogo lista **2.975** juegos. El techo está por debajo de lo que necesitamos.
+
+  **Queda una sola opción abierta: SteamGridDB**, que ya tiene enriquecedor
+  (`enrich_covers_steamgriddb.py`) y clave configurada. No se corrió porque son ~6.577 consultas a
+  una API con cuota, y su cobertura de PS2 japonés obscuro probablemente tampoco sea buena. **Es una
+  decisión de gasto, no técnica.**
+
 - **G. Vocabularios controlados** — **pendiente, medido el 2026-08-10.** El lint garantiza la
   **forma** (11 claves, orden, tipos, slug único, ordenado) y cuatro invariantes de significado,
   pero **no mira el vocabulario**: atrapa un serial japonés en un catálogo americano y no atrapa
