@@ -72,7 +72,7 @@ familia no necesita nada.
 | ~~`fix_titulos_pegados.py`~~ (159) | **borrado.** Reparación de un solo uso ya consumida: arregló 261 títulos con el nombre alternativo pegado. El defecto está corregido en `regional_title()` **y cubierto por tests**, así que no puede volver. La historia quedó en `CATALOGS.md`. |
 | ~~`fix_covers_symlink.py`~~ (110) | **borrado.** Ídem: resolvió 185 carátulas que apuntaban a symlinks. Corregido en el desempate de `enrich_covers_libretro`. |
 | `catalog_common.build()` + sus 4 builders | **se quedan, con aviso.** Ver abajo. |
-| `DiaryViewModel.photoCount()` | *(fuera de tools, pero del mismo barrido)* código muerto: la UI lo calcula de `games.sumOf { it.photoCount }`. |
+| ~~`DiaryViewModel.photoCount()`~~ | **borrado.** Código muerto: la UI lo calcula de `games.sumOf { it.photoCount }`. |
 
 Los dos `fix_` valen como **registro histórico** —explican un defecto real y cómo se reparó— pero no
 como herramienta ofrecida a quien clone. Su lugar natural es `docs/CATALOGS.md`, que ya cuenta esas

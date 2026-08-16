@@ -364,9 +364,6 @@ class DiaryViewModel(
         photoPaths = repo.allPhotoPaths(),
     )
 
-    /** Cuántas fotos y cuánto pesan, para poder avisar antes de armar un archivo de cientos de MB. */
-    fun photoCount(): Int = repo.allPhotoPaths().size
-
     /** Une un respaldo a la colección (nunca borra) y reporta cuántos ítems nuevos entraron. */
     override fun importBackup(backup: RestoredBackup) = io {
         _syncStatus.value = runCatching {
