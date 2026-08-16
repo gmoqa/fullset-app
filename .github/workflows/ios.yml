@@ -1,0 +1,50 @@
+# Compila el target iOS del módulo compartido. Vive aparte de ci.yml porque corre en un runner de
+# macOS (~10× el costo de Linux) y solo tiene sentido cuando se toca código que llega a Apple.
+#
+# El job de `app` en ci.yml corre en Linux, donde `:shared:compileKotlinIosSimulatorArm64` sale
+# SKIPPED: Kotlin/Native no compila targets de Apple fuera de macOS. Sin esto, un drift de
+# expect/actual entre commonMain e iosMain no lo caza nadie hasta abrir Xcode a mano.
+name: iOS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "shared/**"
+      - "iosApp/**"
+      - "app/src/main/cpp/whisper/**"   # los headers de whisper que consume el cinterop
+      - ".github/workflows/ios.yml"
+  pull_request:
+    paths:
+      - "shared/**"
+      - "iosApp/**"
+      - "app/src/main/cpp/whisper/**"
+      - ".github/workflows/ios.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compilar-ios:
+    name: Compilar iOS
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # jvmTarget del proyecto es 17 (app y shared); Gradle corre sobre esta JVM aunque el target
+      # sea nativo.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      # Compila Kotlin/Native para el simulador (arm64) y, de paso, corre el cinterop de whisper.cpp
+      # contra los headers versionados. NO linkea el framework ni compila la .a de whisper (eso lo
+      # hace el pre-build de Xcode en iosApp): acá alcanza con validar que todo el Kotlin de iosMain
+      # compila contra commonMain y que el cinterop resuelve sus headers.
+      - name: Compilar shared (iOS simulator arm64)
+        run: ./gradlew :shared:compileKotlinIosSimulatorArm64
