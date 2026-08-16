@@ -1,4 +1,6 @@
-package com.gmoqa.fullset.data
+package com.gmoqa.fullset.domain
+
+import com.gmoqa.fullset.data.Game
 
 /**
  * Búsqueda difusa sobre la colección. Pensada para escribir poco y encontrar rápido:

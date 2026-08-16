@@ -1,5 +1,7 @@
 package com.gmoqa.fullset.data
 
+import com.gmoqa.fullset.domain.GameSearch
+
 import kotlinx.serialization.Serializable
 
 /** DTO del catálogo JSON. Esquema estándar: title/platform/region/year/publisher/genre/slug/serial/coverUrl. */

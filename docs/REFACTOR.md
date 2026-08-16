@@ -188,7 +188,7 @@ Verificado que la restricción es real en las dos pantallas nuevas: `vm.startVoi
 compara igual y la pantalla sigue saltando recomposición. **Verificar con métricas** antes de dar la
 fase por cerrada.
 
-### Fase 5 — Renombrar las capas · riesgo alto, va última
+### Fase 5 — Renombrar las capas · ❌ **descartada el 2026-08-15, con motivo**
 
 ```
 model/     Game, Platform, CatalogEntry, TrackingMode     datos puros, sin dependencias
@@ -202,9 +202,27 @@ ui/        pantallas y componentes
 Regla de dependencias, en una línea: **`ui` → `domain` → `model`**, y `store`/`remote`/`platform`
 solo los toca el ViewModel.
 
-**Por qué va última:** mueve archivos de paquete, o sea que toca imports en todo el repo. Si el
-agente de macOS está trabajando en iOS al mismo tiempo, cada merge va a doler. Hoy nadie más está
-pusheando, pero conviene confirmarlo antes de empezarla.
+**Medida y descartada.** No por pereza: por un riesgo que **no se puede cerrar desde esta máquina**.
+
+- **Costo:** 23 archivos en `commonMain` + sus `actual` en `androidMain`/`iosMain`, y **167 imports**
+  a reescribir (27 internos + 140 de consumidores).
+- **Riesgo:** **10 de los 23** tienen `expect`/`actual` o los referencia iOS. Un par tiene que
+  moverse en las tres fuentes a la vez o rompe, y eso **no se puede verificar acá** —Kotlin/Native
+  no compila targets de Apple en Linux, `compileKotlinIosSimulatorArm64` sale `SKIPPED`— ni **en
+  CI**, que no compila iOS. Se descubriría tarde y en la máquina de otro.
+- **Los límites son opinables:** ¿`Database.kt` es persistencia o plataforma? ¿`GameCatalog.kt` es
+  fuente o regla? Un split con la mitad de las fronteras discutibles ordena menos de lo que promete.
+
+**Lo que sí se hizo:** `GameSearch.kt` pasó de `data/` a `domain/` — era una regla pura viviendo
+entre las fuentes de datos («código puro, ordenado por relevancia», dice su propio comentario). Un
+archivo, sin `expect`, verificable de punta a punta.
+
+Y en su lugar, lo que la fase 5 buscaba de verdad —que se entienda por dónde entrar—:
+**`docs/ARQUITECTURA.md`**, con los paquetes, la regla de dependencias y qué es cada cosa dentro de
+`data/`.
+
+**Condición para retomarla:** tener iOS en CI. Sin eso, mover `expect`/`actual` es escribir un
+cheque que cubre otro.
 
 ---
 

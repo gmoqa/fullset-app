@@ -1,4 +1,6 @@
-package com.gmoqa.fullset.data
+package com.gmoqa.fullset.domain
+
+import com.gmoqa.fullset.data.Game
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
