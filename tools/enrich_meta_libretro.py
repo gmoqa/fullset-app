@@ -49,7 +49,10 @@ def parse(text: str, field: str) -> dict[str, list[tuple[str, str]]]:
     """`{título normalizado: [(región, valor), …]}` — un juego puede estar en varias regiones."""
     out: dict[str, list[tuple[str, str]]] = {}
     for block in re.findall(r"game\s*\((.*?)\n\)", text, re.S):
-        name = re.search(r'comment\s+"([^"]+)"', block)
+        # Los DAT de **cartucho** titulan con `comment`; los de **disco** (PlayStation, Saturn,
+        # Dreamcast) con `name`. Mirando solo `comment`, toda la familia PlayStation daba índice
+        # vacío aunque su DAT trae 4.726 developers — parecía que la fuente no tenía el dato.
+        name = re.search(r'comment\s+"([^"]+)"', block) or re.search(r'name\s+"([^"]+)"', block)
         value = re.search(rf'{field}\s+"([^"]+)"', block)
         if not (name and value):
             continue
