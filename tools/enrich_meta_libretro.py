@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Rellena `publisher`, `genre` y `releaseDate` desde **libretro-database** (CC BY-SA 4.0), que
+Rellena `developer`, `publisher`, `genre` y `releaseDate` desde **libretro-database** (CC BY-SA 4.0), que
 publica esos metadatos por plataforma en `metadat/`. La fecha viene partida en `releaseyear/` y
 `releasemonth/`; se compone al mismo ISO de precisión variable del resto ("1995" o "1995-08").
 
@@ -22,6 +22,7 @@ import os
 import re
 import sys
 import urllib.parse
+import urllib.error
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -84,14 +85,35 @@ def main() -> None:
 
     catalog = json.load(open(args.catalog, encoding="utf-8"))
     region = catalog[0]["region"] if catalog else "NTSC-U"
-    publishers = parse(fetch("publisher", args.dat), "publisher")
-    genres = parse(fetch("genre", args.dat), "genre")
-    years = parse(fetch("releaseyear", args.dat), "releaseyear")
-    months = parse(fetch("releasemonth", args.dat), "releasemonth")
+    def indice(campo: str) -> dict:
+        """El índice de un campo, o vacío si libretro no publica ese DAT para esta consola.
 
-    filled_pub = filled_genre = filled_date = 0
+        No todas las combinaciones existen: hay `developer` de PlayStation pero no `genre`, y ese
+        404 cortaba la corrida entera antes de escribir nada.
+        """
+        try:
+            return parse(fetch(campo, args.dat), campo)
+        except urllib.error.HTTPError as e:
+            if e.code != 404:
+                raise
+            print(f"   (libretro no publica {campo!r} para {args.dat!r})")
+            return {}
+
+    developers = indice("developer")
+    publishers = indice("publisher")
+    genres = indice("genre")
+    years = indice("releaseyear")
+    months = indice("releasemonth")
+
+    filled_dev = filled_pub = filled_genre = filled_date = 0
     for entry in catalog:
         key = core(entry["title"])
+        # Desarrolladora y editora son campos distintos: quién lo hizo y quién lo vendió.
+        if not entry["developer"].strip() and key in developers:
+            value = pick(developers[key], region)
+            if value:
+                entry["developer"] = value
+                filled_dev += 1
         if not entry["publisher"].strip() and key in publishers:
             value = pick(publishers[key], region)
             if value:
@@ -120,8 +142,8 @@ def main() -> None:
     have_genre = sum(1 for e in catalog if e["genre"].strip())
     name = os.path.basename(args.catalog)
     have_date = sum(1 for e in catalog if e["releaseDate"].strip())
-    print(f"{name}: {len(catalog)} juegos · +{filled_pub} editoras, +{filled_genre} géneros, "
-          f"+{filled_date} fechas")
+    print(f"{name}: {len(catalog)} juegos · +{filled_dev} desarrolladoras, +{filled_pub} editoras, "
+          f"+{filled_genre} géneros, +{filled_date} fechas")
     print(f"   editora {have_pub}/{total} ({have_pub * 100 // total}%) · "
           f"género {have_genre}/{total} ({have_genre * 100 // total}%) · "
           f"fecha {have_date}/{total} ({have_date * 100 // total}%)")

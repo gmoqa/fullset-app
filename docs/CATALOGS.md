@@ -723,9 +723,30 @@ claves nuevas no rompe nada.
     Alemania `1986-10-07`, Italia y Países Bajos `1986-11`. Es 1986. Por eso *Great Soccer* de 1986
     parecía imposible y no lo era.
 
-  Los otros catálogos siguen sin `developer`: la clave existe vacía. libretro `metadat/developer/`
-  cubre otro 40% del dataset (PSX 76%, GBA 93%, SNES 82%…) y las tablas de Wikipedia de PS3, Saturn,
-  3DS y DS traen la columna, que hoy se parsea y se descarta.
+  **Completado al resto del dataset el 2026-08-16**: `developer` **86%**, a la par de `publisher`
+  (87%). Dos fuentes, en este orden:
+
+  1. **libretro `metadat/developer/`** — llegó al 48%. Hizo falta arreglar `parse()`, que buscaba el
+     título solo en `comment`: ese campo lo usan los DAT de **cartucho** y los de **disco** titulan
+     con `name`, así que toda la familia PlayStation daba índice vacío. También se hizo tolerante el
+     DAT ausente: no existe `genre` de PlayStation ni `publisher` de PS2, y ese 404 cortaba la
+     corrida antes de escribir nada.
+  2. **`enrich_developer_wikipedia.py`** (nuevo) — subió al 86%. Busca la columna **por su
+     cabecera**, no por índice, igual que el enriquecedor de fechas. Con una salvedad que necesitó
+     `--column`: la tabla de PS3 declara una cabecera `Key` que **no es una columna real**, así que
+     la detección daba 2 donde el dato está en 1.
+
+  | | antes | ahora |
+  |---|---|---|
+  | PlayStation 2 | 0% | **99%** |
+  | PlayStation | 0% | **98%** |
+  | PlayStation 3 | 0% | **99%** |
+  | GameCube | 0% | **89%** |
+  | Nintendo DS | 0% | **62%** |
+
+  Lo que queda bajo tiene motivo conocido: **3DS 35%** y **DS 62%** porque su catálogo sale del DAT
+  de No-Intro (títulos de volcado) y Wikipedia usa el título comercial, así que el cruce falla en la
+  mitad; **TurboGrafx-CD 0%** porque su lista no trae la columna y libretro no publica el DAT.
 
 - **G. Vocabularios controlados** — **pendiente, medido el 2026-08-10.** El lint garantiza la
   **forma** (11 claves, orden, tipos, slug único, ordenado) y cuatro invariantes de significado,
