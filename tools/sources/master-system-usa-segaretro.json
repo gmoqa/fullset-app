@@ -7,67 +7,89 @@
       "title": "Action Fighter",
       "releaseDate": "1986-11",
       "serial": "5055",
-      "rating": ""
+      "rating": "",
+      "developer": "Core Design",
+      "publisher": "Firebird Software"
     },
     {
       "title": "Aerial Assault (Master System)",
       "releaseDate": "1990-07",
       "serial": "7041",
-      "rating": ""
+      "rating": "",
+      "developer": "Sanritsu",
+      "publisher": "Sega of America"
     },
     {
       "title": "After Burner",
       "releaseDate": "1988-03",
       "serial": "9001",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Alex Kidd in Miracle World",
-      "releaseDate": "1986-12",
-      "serial": "5067",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "5067}",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Alex Kidd in Shinobi World",
       "releaseDate": "1990",
       "serial": "7044",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Alex Kidd: High-Tech World",
       "releaseDate": "1989-06",
       "serial": "5116",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Alex Kidd: The Lost Stars",
       "releaseDate": "1988-07",
       "serial": "7005",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "ALF",
       "releaseDate": "1989-05",
       "serial": "5111",
-      "rating": ""
+      "rating": "",
+      "developer": "Nexa",
+      "publisher": "Sega of America"
     },
     {
       "title": "Alien Syndrome",
       "releaseDate": "1988-03",
       "serial": "7006",
-      "rating": ""
+      "rating": "",
+      "developer": "Dempa Micomsoft",
+      "publisher": "Dempa Micomsoft"
     },
     {
       "title": "Altered Beast",
       "releaseDate": "1989-06",
       "serial": "7018",
-      "rating": ""
+      "rating": "",
+      "developer": "Bits Laboratory",
+      "publisher": "Asmik"
     },
     {
       "title": "American Baseball",
       "releaseDate": "1989-03",
       "serial": "7019",
       "rating": "",
+      "developer": "WhiteboardCategory :Live link reference",
+      "publisher": "Sega of America",
       "altTitles": [
         "Reggie Jackson Baseball"
       ]
@@ -77,6 +99,8 @@
       "releaseDate": "1989-09",
       "serial": "7020",
       "rating": "",
+      "developer": "WhiteboardCategory :Live link reference",
+      "publisher": "Sega of America",
       "altTitles": [
         "Walter Payton Football"
       ]
@@ -85,55 +109,73 @@
       "title": "Astro Warrior",
       "releaseDate": "1986-12",
       "serial": "5069",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Aztec Adventure: The Golden Road to Paradise",
       "releaseDate": "1988-03",
       "serial": "5100",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Black Belt",
       "releaseDate": "1986-11",
       "serial": "5054",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Blade Eagle",
       "releaseDate": "1988-09",
       "serial": "8005",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Bomber Raid",
       "releaseDate": "1989-01",
       "serial": "QC-003",
-      "rating": ""
+      "rating": "",
+      "developer": "SanritsuCategory :Live link reference",
+      "publisher": "Activision"
     },
     {
       "title": "California Games",
       "releaseDate": "1989-05",
       "serial": "7014",
-      "rating": ""
+      "rating": "",
+      "developer": "Epyx",
+      "publisher": ""
     },
     {
       "title": "Captain Silver",
       "releaseDate": "1989-09",
       "serial": "5117",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Casino Games",
       "releaseDate": "1989-09",
       "serial": "7021",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Sega of America"
     },
     {
       "title": "Castle of Illusion Starring Mickey Mouse (8-bit)",
-      "releaseDate": "1991-02",
-      "serial": "7053",
+      "releaseDate": "",
+      "serial": "7053}",
       "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "",
       "altTitles": [
         "Castle of Illusion Starring Mickey Mouse"
       ]
@@ -142,127 +184,161 @@
       "title": "Choplifter",
       "releaseDate": "1986-09",
       "serial": "5051",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Cloud Master",
       "releaseDate": "1989-08",
       "serial": "7027",
-      "rating": ""
+      "rating": "",
+      "developer": "HOT-B",
+      "publisher": "Sega of America"
     },
     {
       "title": "Columns",
       "releaseDate": "1990-09",
       "serial": "5120",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Laser Soft"
     },
     {
       "title": "Cyber Police ESWAT",
       "releaseDate": "1990-09",
       "serial": "7042",
-      "rating": ""
+      "rating": "",
+      "developer": "Creative Materials",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Cyborg Hunter",
       "releaseDate": "1989-01",
       "serial": "QC-002",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Activision"
     },
     {
       "title": "Dead Angle",
-      "releaseDate": "1990",
-      "serial": "7030",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "7030}",
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
     },
     {
       "title": "Dick Tracy",
       "releaseDate": "1991-01",
       "serial": "7057",
-      "rating": ""
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "Double Dragon",
       "releaseDate": "1988-11",
       "serial": "7012",
-      "rating": ""
-    },
-    {
-      "title": "Enduro Racer (Master System)",
-      "releaseDate": "1987-08",
-      "serial": "5077",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc System Works",
+      "publisher": "Ballistic"
     },
     {
       "title": "F-16 Fighter",
       "releaseDate": "1986-10",
       "serial": "4005",
-      "rating": ""
+      "rating": "",
+      "developer": "Nexa",
+      "publisher": "Sega of America"
     },
     {
       "title": "Fantasy Zone",
       "releaseDate": "1986-09",
       "serial": "5052",
-      "rating": ""
+      "rating": "",
+      "developer": "Bits Laboratory",
+      "publisher": "Dempa Micomsoft"
     },
     {
       "title": "Fantasy Zone II: The Tears of Opa-Opa",
       "releaseDate": "1987-12",
       "serial": "7004",
-      "rating": ""
+      "rating": "",
+      "developer": "Atelier Double",
+      "publisher": "Pony Canyon"
     },
     {
       "title": "Fantasy Zone: The Maze",
-      "releaseDate": "1988-07",
-      "serial": "5108",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "5108}",
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Galaxy Force",
-      "releaseDate": "1989-10",
-      "serial": "QC-004",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "QC-004}",
+      "rating": "",
+      "developer": "Sega R&D 1",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Gangster Town",
-      "releaseDate": "1987-08",
-      "serial": "5074",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "5074}",
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
     },
     {
       "title": "Ghost House",
       "releaseDate": "1986-09",
       "serial": "4002",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Ghostbusters (Master System)",
-      "releaseDate": "1987-05",
-      "serial": "5065",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "5065}",
+      "rating": "",
+      "developer": "Compile",
+      "publisher": ""
     },
     {
       "title": "Ghouls'n Ghosts",
       "releaseDate": "1991-01",
       "serial": "7055",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc System Works",
+      "publisher": "Capcom"
     },
     {
       "title": "Golden Axe",
       "releaseDate": "1990-03-01",
       "serial": "9004",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Bandai"
     },
     {
       "title": "Golden Axe Warrior",
       "releaseDate": "1991-04",
       "serial": "7505",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Golvellius",
       "releaseDate": "1988-12",
       "serial": "7017",
       "rating": "",
+      "developer": "Compile",
+      "publisher": "Sega of America",
       "altTitles": [
         "Golvellius: Valley of Doom"
       ]
@@ -271,421 +347,553 @@
       "title": "Great Baseball",
       "releaseDate": "1987-03",
       "serial": "5061",
-      "rating": ""
+      "rating": "",
+      "developer": "WhiteboardCategory :Live link reference",
+      "publisher": "Sega of America"
     },
     {
       "title": "Great Basketball",
       "releaseDate": "1987-12",
       "serial": "5071",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Great Football",
       "releaseDate": "1987-07",
       "serial": "5058",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Great Golf",
       "releaseDate": "1987-11",
       "serial": "5057",
-      "rating": ""
+      "rating": "",
+      "developer": "WhiteboardCategory :Live link reference",
+      "publisher": "Sega of America"
     },
     {
       "title": "Great Ice Hockey",
       "releaseDate": "1986-12",
       "serial": "5062",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Great Volleyball",
       "releaseDate": "1987-08",
       "serial": "5070",
-      "rating": ""
+      "rating": "",
+      "developer": "SanritsuCategory :Live link reference",
+      "publisher": "Sega of America"
     },
     {
       "title": "Hang-On / Astro Warrior",
       "releaseDate": "1986-09",
       "serial": "6002",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Hang-On / Safari Hunt",
       "releaseDate": "1986-09",
       "serial": "6001",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Heavyweight Champ (8-bit)",
-      "releaseDate": "1990",
-      "serial": "7063",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "7063}",
+      "rating": "",
+      "developer": "George Foreman",
+      "publisher": "Flying Edge"
     },
     {
       "title": "Joe Montana Football (8-bit)",
       "releaseDate": "1990-12",
       "serial": "7062",
-      "rating": ""
+      "rating": "",
+      "developer": "BlueSky SoftwareCategory :Live link reference",
+      "publisher": "Sega"
     },
     {
       "title": "Kenseiden",
       "releaseDate": "1988-10",
       "serial": "7013",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "King's Quest: Quest for the Crown",
       "releaseDate": "1989-07",
       "serial": "4360",
-      "rating": ""
+      "rating": "",
+      "developer": "Microsmiths",
+      "publisher": "Parker Brothers"
     },
     {
       "title": "Kung Fu Kid",
       "releaseDate": "1987-10",
       "serial": "5078",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Lord of the Sword",
       "releaseDate": "1989-03",
       "serial": "7016",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Marksman Shooting & Trap Shooting",
       "releaseDate": "1986-12",
       "serial": "6003",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega of America",
+      "publisher": "Sega of America"
     },
     {
       "title": "Maze Hunter 3D",
       "releaseDate": "1988-05",
       "serial": "8003",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Michael Jackson's Moonwalker",
       "releaseDate": "1991-05",
       "serial": "7052",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc",
+      "publisher": ""
     },
     {
       "title": "Miracle Warriors: Seal of the Dark Lord",
       "releaseDate": "1988-10",
       "serial": "7500",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Missile Defense 3-D",
       "releaseDate": "1987-08",
       "serial": "8001",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Monopoly",
       "releaseDate": "1988-09",
       "serial": "5500",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Montezuma's Revenge",
       "releaseDate": "1989-06",
       "serial": "4370",
-      "rating": ""
+      "rating": "",
+      "developer": "Parker Brothers",
+      "publisher": "Parker Brothers"
     },
     {
       "title": "My Hero",
       "releaseDate": "1986-09",
       "serial": "4001",
-      "rating": ""
+      "rating": "",
+      "developer": "Coreland",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "OutRun",
       "releaseDate": "1987-10",
       "serial": "7003",
-      "rating": ""
+      "rating": "",
+      "developer": "Hertz",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "Paperboy",
       "releaseDate": "1990",
       "serial": "5121",
-      "rating": ""
+      "rating": "",
+      "developer": "Motivetime",
+      "publisher": "Sega of America"
     },
     {
       "title": "Parlour Games",
       "releaseDate": "1988-05",
       "serial": "5103",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Sega of America"
     },
     {
       "title": "Penguin Land",
       "releaseDate": "1988-01",
       "serial": "5501",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Phantasy Star",
       "releaseDate": "1988-11",
       "serial": "9500",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega of America"
     },
     {
       "title": "Poseidon Wars 3D",
       "releaseDate": "1989-03",
       "serial": "8006",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Power Strike",
       "releaseDate": "1988-12",
       "serial": "5109",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Sega of America"
     },
     {
       "title": "Pro Wrestling",
       "releaseDate": "1986-12",
       "serial": "5056",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Psycho Fox",
       "releaseDate": "1990-05",
       "serial": "7032",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Quartet",
       "releaseDate": "1987-04",
       "serial": "5073",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": "Sega Enterprises, Inc. (USA)"
     },
     {
       "title": "R-Type",
       "releaseDate": "1988-12",
       "serial": "9002",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Irem"
     },
     {
       "title": "R.C. Grand Prix",
-      "releaseDate": "1990-06",
-      "serial": "27007",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "27007}",
+      "rating": "",
+      "developer": "Absolute Entertainment",
+      "publisher": "Absolute Entertainment"
     },
     {
       "title": "Rambo III (Master System)",
-      "releaseDate": "1988-12",
-      "serial": "7015",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "7015}",
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
     },
     {
       "title": "Rambo: First Blood Part II",
       "releaseDate": "1986-12",
       "serial": "5064",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Rampage",
       "releaseDate": "1989-01",
       "serial": "QC-001",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Activision"
     },
     {
       "title": "Rastan",
       "releaseDate": "1989-04",
       "serial": "7022",
-      "rating": ""
+      "rating": "",
+      "developer": "Taito",
+      "publisher": "Sega of America"
     },
     {
       "title": "Rescue Mission",
-      "releaseDate": "1988-04",
-      "serial": "5106",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "5106}",
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
     },
     {
       "title": "Rocky",
       "releaseDate": "1987-07",
       "serial": "7002",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Safari Hunt",
       "releaseDate": "1986",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "SDI: Strategic Defense Initiative",
       "releaseDate": "1988-03",
       "serial": "5102",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 1",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Shanghai",
       "releaseDate": "1988-10",
       "serial": "5110",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Shinobi",
       "releaseDate": "1988-09",
       "serial": "7009",
-      "rating": ""
+      "rating": "",
+      "developer": "Asmik",
+      "publisher": "Asmik"
     },
     {
       "title": "Shooting Gallery",
       "releaseDate": "1987-03",
       "serial": "5072",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Slap Shot",
-      "releaseDate": "1990",
-      "serial": "7035",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "7035}",
+      "rating": "",
+      "developer": "SanritsuCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Snail Maze",
       "releaseDate": "1986-09",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Sonic the Hedgehog (8-bit)",
-      "releaseDate": "1991-11",
-      "serial": "7076",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "7076}",
+      "rating": "",
+      "developer": "Ancient",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Space Harrier",
-      "releaseDate": "",
-      "serial": "",
-      "rating": ""
-    },
-    {
-      "title": "Space Harrier 3D",
-      "releaseDate": "1988-07",
-      "serial": "8004",
-      "rating": ""
+      "releaseDate": "1987-03",
+      "serial": "7001",
+      "rating": "",
+      "developer": "Dempa Micomsoft",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "SpellCaster",
       "releaseDate": "1989-09",
       "serial": "9003",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Spider-Man vs. The Kingpin (8-bit)",
       "releaseDate": "1991-08",
       "serial": "7065",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Sports Pad Football",
       "releaseDate": "1987-08",
       "serial": "5060",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega of America",
+      "publisher": "Sega of America"
     },
     {
       "title": "Spy vs Spy",
       "releaseDate": "1988-10",
       "serial": "4010",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Strider",
       "releaseDate": "1991-06",
       "serial": "9005",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Capcom"
     },
     {
       "title": "Super Monaco GP (8-bit)",
       "releaseDate": "1990-09",
       "serial": "7043",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Super Tennis",
       "releaseDate": "1986-12",
       "serial": "4007",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Teddy Boy Blues",
       "releaseDate": "1986-09",
       "serial": "4003",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "The Ninja",
       "releaseDate": "1986-12",
       "serial": "5066",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Thunder Blade",
-      "releaseDate": "1988-10",
-      "serial": "7011",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "7011}",
+      "rating": "",
+      "developer": "Nova",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "Time Soldiers",
       "releaseDate": "1989-05",
       "serial": "7024",
-      "rating": ""
+      "rating": "",
+      "developer": "Alpha Denshi",
+      "publisher": "Sega of America"
     },
     {
       "title": "TransBot",
       "releaseDate": "1986-10",
       "serial": "4004",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Vigilante",
-      "releaseDate": "1989-05",
-      "serial": "7023",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "7023}",
+      "rating": "",
+      "developer": "Arc System Works",
+      "publisher": ""
     },
     {
       "title": "Wanted",
       "releaseDate": "1989-08",
       "serial": "5118",
-      "rating": ""
+      "rating": "",
+      "developer": "Sanritsu",
+      "publisher": "Sega of America"
     },
     {
       "title": "Where in the World is Carmen Sandiego?",
       "releaseDate": "1988-12",
       "serial": "4350",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts Canada",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Wonder Boy",
       "releaseDate": "1987-06",
       "serial": "5068",
-      "rating": ""
+      "rating": "",
+      "developer": "Escape",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Wonder Boy III: The Dragon's Trap",
       "releaseDate": "1989-09",
       "serial": "7026",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Wonder Boy in Monster Land",
       "releaseDate": "1988-08",
       "serial": "7007",
-      "rating": ""
+      "rating": "",
+      "developer": "Images Software",
+      "publisher": "Activision"
     },
     {
       "title": "World Grand Prix",
       "releaseDate": "1986-10",
       "serial": "5053",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "World Soccer",
       "releaseDate": "1987-10",
       "serial": "5059",
       "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America",
       "altTitles": [
         "Great Soccer"
       ]
@@ -694,25 +902,33 @@
       "title": "Ys: Ancient Ys Vanished Omen",
       "releaseDate": "1989-03",
       "serial": "7501",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Zaxxon 3D",
       "releaseDate": "1988-03",
       "serial": "8002",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Zillion",
       "releaseDate": "1987-11",
       "serial": "5075",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Zillion II: The Tri Formation",
-      "releaseDate": "1988-07",
-      "serial": "5105",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "5105}",
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": ""
     }
   ]
 }

@@ -7,208 +7,276 @@
       "title": "Aerial Assault (Game Gear)",
       "releaseDate": "1992-07",
       "serial": "2320",
-      "rating": ""
+      "rating": "",
+      "developer": "Shimada Kikaku",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Alien 3",
       "releaseDate": "1993-01-05",
       "serial": "T-81048-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": "Arena Entertainment"
     },
     {
       "title": "Alien Syndrome",
       "releaseDate": "1992-12-03",
       "serial": "2324",
-      "rating": ""
+      "rating": "",
+      "developer": "Dempa Micomsoft",
+      "publisher": "Dempa Micomsoft"
     },
     {
       "title": "Andre Agassi Tennis",
       "releaseDate": "1993",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Epyx",
+      "publisher": "Spidersoft"
     },
     {
       "title": "Arena: Maze of Death",
       "releaseDate": "1995-11",
       "serial": "2565-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Eden Entertainment Software",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Ariel the Little Mermaid",
       "releaseDate": "1992-12-26",
       "serial": "2411",
-      "rating": ""
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": "Tec Toy"
     },
     {
       "title": "Astérix and the Great Rescue (8-bit)",
       "releaseDate": "1994",
       "serial": "2520",
-      "rating": ""
+      "rating": "",
+      "developer": "Core Design",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Astérix and the Secret Mission",
       "releaseDate": "1994-01",
       "serial": "2513",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Ax Battler: A Legend of Golden Axe",
       "releaseDate": "1992-04",
       "serial": "2405",
       "rating": "",
+      "developer": "Aspect",
+      "publisher": "Sega Europe",
       "altTitles": [
         "Golden Axe"
       ]
     },
     {
       "title": "Ayrton Senna's Super Monaco GP II (8-bit)",
-      "releaseDate": "1992-08",
-      "serial": "2423",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2423}",
+      "rating": "",
+      "developer": "Sega CS2",
+      "publisher": ""
     },
     {
       "title": "Baku Baku Animal",
       "releaseDate": "1996-06",
       "serial": "2451-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Minato Giken",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Batman Forever (Game Gear)",
       "releaseDate": "1995",
       "serial": "T-81268-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Black Team",
+      "publisher": ""
     },
     {
       "title": "Batman Returns (Game Gear)",
       "releaseDate": "1992",
       "serial": "2416",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega CS2",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Battletoads",
       "releaseDate": "1993",
       "serial": "2436",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc System Works",
+      "publisher": ""
     },
     {
       "title": "Beavis and Butt-Head (Game Gear)",
-      "releaseDate": "1994",
-      "serial": "T-139018-50",
-      "rating": "ELSPA: 11+"
+      "releaseDate": "",
+      "serial": "T-139018-50}",
+      "rating": "ELSPA: 11+",
+      "developer": "NuFX",
+      "publisher": "Viacom New Media"
     },
     {
       "title": "Bonkers Wax Up!",
       "releaseDate": "1994",
       "serial": "2536-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Al Baker & Associates",
+      "publisher": "Tec Toy"
     },
     {
       "title": "Bram Stoker's Dracula (8-bit)",
       "releaseDate": "1993",
       "serial": "T-93018-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Bugs Bunny in Double Trouble",
       "releaseDate": "1996",
       "serial": "7766-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Atod",
+      "publisher": ""
     },
     {
       "title": "Castle of Illusion Starring Mickey Mouse (8-bit)",
-      "releaseDate": "1991-06-29",
-      "serial": "2401",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2401}",
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": ""
     },
     {
       "title": "Chakan (Game Gear)",
       "releaseDate": "1992-12-19",
       "serial": "2414",
-      "rating": ""
+      "rating": "",
+      "developer": "Paul HutchinsonCategory :Live link reference",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Championship Hockey",
       "releaseDate": "1995-06",
       "serial": "79118-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Electronic Arts",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Cheese Cat-Astrophe Starring Speedy Gonzales",
-      "releaseDate": "1995-05",
-      "serial": "2523-50",
-      "rating": "ClassInd: Livre"
+      "releaseDate": "",
+      "serial": "2523-50}",
+      "rating": "ClassInd: Livre",
+      "developer": "Cryo Interactive Entertainment",
+      "publisher": ""
     },
     {
       "title": "Chicago Syndicate",
       "releaseDate": "",
       "serial": "077260",
-      "rating": "ClassInd: Livre"
+      "rating": "ClassInd: Livre",
+      "developer": "Climax Enterprises",
+      "publisher": "Sega of America"
     },
     {
       "title": "Chuck Rock",
       "releaseDate": "1992-10-15",
       "serial": "2430",
-      "rating": ""
+      "rating": "",
+      "developer": "Core Design",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Chuck Rock II: Son of Chuck",
-      "releaseDate": "1993-10",
-      "serial": "T-115018-50",
-      "rating": "ClassInd: Livre"
+      "releaseDate": "",
+      "serial": "T-115018-50}",
+      "rating": "ClassInd: Livre",
+      "developer": "Core Design",
+      "publisher": ""
     },
     {
       "title": "CJ Elephant Fugitive",
       "releaseDate": "1994-03",
       "serial": "16014",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Big Red Software",
+      "publisher": "Codemasters"
     },
     {
       "title": "Columns",
       "releaseDate": "1991-06-29",
       "serial": "2201",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Laser Soft"
     },
     {
       "title": "Cool Spot",
       "releaseDate": "1993",
       "serial": "T-70108-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Virgin Games",
+      "publisher": "Virgin Games"
     },
     {
       "title": "Cosmic Spacehead",
       "releaseDate": "1993",
       "serial": "T-120028-50",
-      "rating": ""
+      "rating": "",
+      "developer": "SuperSonic Software",
+      "publisher": "Codemasters"
     },
     {
       "title": "Crystal Warriors",
       "releaseDate": "1992-05",
       "serial": "2502",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Daffy Duck in Hollywood",
       "releaseDate": "1994",
       "serial": "2550",
-      "rating": "ClassInd: Livre"
+      "rating": "ClassInd: Livre",
+      "developer": "Probe Software",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Deep Duck Trouble Starring Donald Duck",
       "releaseDate": "1994-01",
       "serial": "2514",
-      "rating": ""
+      "rating": "",
+      "developer": "Aspect",
+      "publisher": ""
     },
     {
       "title": "Defenders of Oasis",
-      "releaseDate": "1993-05",
-      "serial": "2503",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2503}",
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega"
     },
     {
       "title": "Desert Speedtrap Starring Road Runner and Wile E. Coyote",
-      "releaseDate": "1993",
-      "serial": "2442",
+      "releaseDate": "",
+      "serial": "2442}",
       "rating": "",
+      "developer": "Probe Software",
+      "publisher": "",
       "altTitles": [
         "Desert Speedtrap Estrelado Road Runner e Wile E. Coyote"
       ]
@@ -217,55 +285,73 @@
       "title": "Desert Strike: Return to the Gulf",
       "releaseDate": "1994-01",
       "serial": "T-88068-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "Domark"
     },
     {
       "title": "Devilish",
       "releaseDate": "1992-07",
       "serial": "2321",
-      "rating": ""
+      "rating": "",
+      "developer": "Genki",
+      "publisher": ""
     },
     {
       "title": "Disney's Aladdin (8-bit)",
       "releaseDate": "1994-02",
       "serial": "2525",
-      "rating": ""
+      "rating": "",
+      "developer": "Disney Software",
+      "publisher": ""
     },
     {
       "title": "Double Dragon (Game Gear)",
       "releaseDate": "1993-05-26",
       "serial": "T-70038-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Technos Japan",
+      "publisher": "Virgin Games"
     },
     {
       "title": "Dr. Robotnik's Mean Bean Machine (8-bit)",
-      "releaseDate": "1994-02",
-      "serial": "2446",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2446}",
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Dragon Crystal",
       "releaseDate": "1991-06-29",
       "serial": "2305",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Dragon: The Bruce Lee Story (8-bit)",
       "releaseDate": "1994-09",
       "serial": "T-70148-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Acclaim Entertainment",
+      "publisher": ""
     },
     {
       "title": "Dropzone",
       "releaseDate": "1994",
       "serial": "T-121007",
-      "rating": ""
+      "rating": "",
+      "developer": "Big Red Software",
+      "publisher": "Codemasters"
     },
     {
       "title": "Dynamite Headdy (8-bit)",
       "releaseDate": "1994-11",
       "serial": "2544-50",
       "rating": "",
+      "developer": "Minato Giken",
+      "publisher": "Tec Toy",
       "altTitles": [
         "Dynamite Headdy"
       ]
@@ -274,19 +360,25 @@
       "title": "Earthworm Jim",
       "releaseDate": "1995-07",
       "serial": "T-70178-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Eurocom Entertainment Software",
+      "publisher": "Virgin Interactive Entertainment"
     },
     {
       "title": "Ecco the Dolphin",
       "releaseDate": "1993-10",
       "serial": "2516",
-      "rating": ""
+      "rating": "",
+      "developer": "Backbone Entertainment",
+      "publisher": "Sega PC"
     },
     {
       "title": "Ecco: The Tides of Time",
       "releaseDate": "1994-11",
       "serial": "2541-50",
       "rating": "ELSPA: 3+",
+      "developer": "M2",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Ecco: Les Marées du Temps"
       ]
@@ -295,37 +387,49 @@
       "title": "Ernie Els Golf",
       "releaseDate": "1994-07",
       "serial": "T-120098-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Evander Holyfield's \"Real Deal\" Boxing (Game Gear)",
       "releaseDate": "1993-01-05",
       "serial": "2419",
-      "rating": ""
+      "rating": "",
+      "developer": "NovotradeCategory :Live link reference",
+      "publisher": "SegaCategory :Live link reference"
     },
     {
       "title": "F-15 Strike Eagle",
       "releaseDate": "1993",
       "serial": "T-104018-50",
-      "rating": ""
+      "rating": "",
+      "developer": "NMS Software",
+      "publisher": "MicroProse UK"
     },
     {
       "title": "F1",
       "releaseDate": "1994-01",
       "serial": "T-88058-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Lankhor",
+      "publisher": "Domark"
     },
     {
       "title": "F1: World Championship Edition (Game Gear)",
       "releaseDate": "1995",
       "serial": "T-88128-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Peakstar Software",
+      "publisher": "Domark"
     },
     {
       "title": "Factory Panic",
       "releaseDate": "1991-11",
       "serial": "2308",
       "rating": "",
+      "developer": "Japan System HouseCategory :Live link reference",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Crazy Company"
       ]
@@ -334,229 +438,305 @@
       "title": "Fantastic Dizzy",
       "releaseDate": "1993-10",
       "serial": "T-20028-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Chameleon",
+      "publisher": "Codemasters"
     },
     {
       "title": "Fantasy Zone Gear",
       "releaseDate": "1992-04",
       "serial": "2319",
-      "rating": ""
+      "rating": "",
+      "developer": "SanritsuCategory :Live link reference",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Fatal Fury Special",
       "releaseDate": "1995-03",
       "serial": "2582-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Funcom",
+      "publisher": "JVC Musical Industries Europe"
     },
     {
       "title": "FIFA International Soccer (8-bit)",
       "releaseDate": "",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Extended Play Productions",
+      "publisher": "Tec Toy"
     },
     {
       "title": "FIFA Soccer 96 (Game Gear)",
       "releaseDate": "1995",
       "serial": "T-100108-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts Canada",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "Frank Thomas Big Hurt Baseball",
       "releaseDate": "",
       "serial": "",
-      "rating": "OFLC: G"
+      "rating": "OFLC: G",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "G-LOC: Air Battle",
       "releaseDate": "1991-06-29",
       "serial": "2301",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Galaga '91",
       "releaseDate": "1993-08",
       "serial": "2322",
-      "rating": ""
+      "rating": "",
+      "developer": "Namco",
+      "publisher": "Namco"
     },
     {
       "title": "Garfield: Caught in the Act (Game Gear)",
       "releaseDate": "1995-11",
       "serial": "2560-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Novotrade Interactive",
+      "publisher": "Sega Europe"
     },
     {
       "title": "GP Rider (Game Gear)",
-      "releaseDate": "1994",
-      "serial": "2528",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2528}",
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Greendog: The Beached Surfer Dude!",
       "releaseDate": "",
       "serial": "075270",
-      "rating": ""
+      "rating": "",
+      "developer": "Interactive Designs",
+      "publisher": ""
     },
     {
       "title": "Halley Wars",
       "releaseDate": "1991-12",
       "serial": "2318",
-      "rating": ""
+      "rating": "",
+      "developer": "ITL",
+      "publisher": ""
     },
     {
       "title": "Heavyweight Champ (8-bit)",
-      "releaseDate": "1992-10-21",
-      "serial": "T-81038-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81038-50}",
+      "rating": "",
+      "developer": "George Foreman",
+      "publisher": "Flying Edge"
     },
     {
       "title": "Home Alone",
       "releaseDate": "1993",
       "serial": "2410",
-      "rating": ""
+      "rating": "",
+      "developer": "Brian A. Rice, Inc.",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Hook",
       "releaseDate": "1993",
       "serial": "T-93028-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Core Design",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Hurricanes",
       "releaseDate": "1994",
       "serial": "T-79138-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Arc Developments",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Indiana Jones and the Last Crusade (8-bit)",
-      "releaseDate": "1992-11-26",
-      "serial": "79028-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "79028-50}",
+      "rating": "",
+      "developer": "Lucasfilm Games",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "James Bond 007: The Duel",
       "releaseDate": "1994-01",
       "serial": "T-88038-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Domark",
+      "publisher": ""
     },
     {
       "title": "James Pond 3: Operation Starfish",
       "releaseDate": "1995-06",
       "serial": "79158-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Millennium Interactive",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "James Pond II: Codename RoboCod",
       "releaseDate": "1993-08",
       "serial": "79068",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Millennium Interactive",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Joe Montana Football (8-bit)",
       "releaseDate": "1991-12",
       "serial": "2403",
-      "rating": ""
+      "rating": "",
+      "developer": "BlueSky SoftwareCategory :Live link reference",
+      "publisher": "Sega"
     },
     {
       "title": "Judge Dredd",
       "releaseDate": "1995-07",
       "serial": "T-81228-50",
-      "rating": "ELSPA: 11+"
+      "rating": "ELSPA: 11+",
+      "developer": "Interactive Studios",
+      "publisher": ""
     },
     {
       "title": "Jungle Strike",
       "releaseDate": "1995",
       "serial": "GGJ194XI",
-      "rating": ""
+      "rating": "",
+      "developer": "Granite Bay Software",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "Jurassic Park (8-bit)",
       "releaseDate": "1993",
       "serial": "2511",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega CS2",
+      "publisher": ""
     },
     {
       "title": "Kawasaki Superbike Challenge (Game Gear)",
       "releaseDate": "1995",
       "serial": "T-88118-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Teque London",
+      "publisher": "Domark"
     },
     {
       "title": "Kick & Rush",
       "releaseDate": "1993-08",
       "serial": "T-48118-50",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Klax (8-bit)",
-      "releaseDate": "1992-12-10",
-      "serial": "T-48048-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-48048-50}",
+      "rating": "",
+      "developer": "Tiertex",
+      "publisher": "Tengen"
     },
     {
       "title": "Krusty's Fun House",
       "releaseDate": "1993",
       "serial": "T-81078-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Audiogenic Software",
+      "publisher": "Flying Edge"
     },
     {
       "title": "Land of Illusion Starring Mickey Mouse",
-      "releaseDate": "1993",
-      "serial": "2509",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2509}",
+      "rating": "",
+      "developer": "Sega CS3",
+      "publisher": ""
     },
     {
       "title": "Legend of Illusion Starring Mickey Mouse",
       "releaseDate": "1995-02",
       "serial": "2533-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Aspect",
+      "publisher": "Tec Toy"
     },
     {
       "title": "Lemmings",
-      "releaseDate": "1992-11-26",
-      "serial": "2431",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2431}",
+      "rating": "",
+      "developer": "DMA Design",
+      "publisher": ""
     },
     {
       "title": "Madden NFL 96",
       "releaseDate": "1995",
       "serial": "T-100118-50",
-      "rating": ""
+      "rating": "",
+      "developer": "High Score Entertainment",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "Magical Puzzle Popils",
       "releaseDate": "1992-10-01",
       "serial": "T-48068-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Tengen",
+      "publisher": "Tengen"
     },
     {
       "title": "Marble Madness",
       "releaseDate": "1992-09-24",
       "serial": "T-48058-50",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": "Tengen"
     },
     {
       "title": "Marko's Magic Football",
       "releaseDate": "1994",
       "serial": "T-88078-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Interactive Studios",
+      "publisher": "Domark"
     },
     {
       "title": "Master of Darkness",
       "releaseDate": "1993",
       "serial": "2437",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Mega Man",
       "releaseDate": "1995",
       "serial": "GGJUG0370",
-      "rating": ""
+      "rating": "",
+      "developer": "Freestyle SoftwareCategory :Live link reference",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Mick & Mack as the Global Gladiators",
       "releaseDate": "1993-05-26",
       "serial": "T-70058-50",
       "rating": "",
+      "developer": "Graftgold",
+      "publisher": "Virgin Games",
       "altTitles": [
         "Global Gladiators"
       ]
@@ -565,187 +745,249 @@
       "title": "Micro Machines",
       "releaseDate": "1994-03",
       "serial": "17001",
-      "rating": ""
+      "rating": "",
+      "developer": "Codemasters",
+      "publisher": "Codemasters"
     },
     {
       "title": "Micro Machines 2: Turbo Tournament",
       "releaseDate": "1995-05",
       "serial": "T-120108-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Big Red Software",
+      "publisher": "Codemasters"
     },
     {
       "title": "Mighty Morphin Power Rangers (Game Gear)",
       "releaseDate": "1994",
       "serial": "2548-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Banpresto",
+      "publisher": "Sega"
     },
     {
       "title": "Mighty Morphin Power Rangers: The Movie (Game Gear)",
       "releaseDate": "1995",
       "serial": "2564-50",
-      "rating": "ClassInd: Livre"
+      "rating": "ClassInd: Livre",
+      "developer": "Banpresto",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Monster Truck Wars",
-      "releaseDate": "1994",
-      "serial": "T-81288-50",
-      "rating": "ELSPA: 3+"
+      "releaseDate": "",
+      "serial": "T-81288-50}",
+      "rating": "ELSPA: 3+",
+      "developer": "Gremlin Graphics Software",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Mortal Kombat (8-bit)",
-      "releaseDate": "1993-09-13",
-      "serial": "T-81198-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81198-50}",
+      "rating": "",
+      "developer": "Grey Team",
+      "publisher": ""
     },
     {
       "title": "Mortal Kombat 3 (8-bit)",
       "releaseDate": "1996",
       "serial": "T-81368-50",
-      "rating": "ELSPA: 11+"
+      "rating": "ELSPA: 11+",
+      "developer": "Midway Manufacturing",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Mortal Kombat II (8-bit)",
       "releaseDate": "1994-09-09",
       "serial": "T-81278-50",
-      "rating": "ELSPA: 15+"
+      "rating": "ELSPA: 15+",
+      "developer": "Probe Software",
+      "publisher": ""
     },
     {
       "title": "NBA Action Starring David Robinson",
       "releaseDate": "",
       "serial": "075390",
-      "rating": "ClassInd: Livre"
+      "rating": "ClassInd: Livre",
+      "developer": "Sega Interactive Development Division",
+      "publisher": "Sega of America"
     },
     {
       "title": "NBA Jam",
       "releaseDate": "1994-03-04",
       "serial": "T-81248-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Iguana Entertainment",
+      "publisher": ""
     },
     {
       "title": "NBA Jam Tournament Edition",
       "releaseDate": "1995-02-23",
       "serial": "T-81308-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "NFL Quarterback Club (Game Gear)",
       "releaseDate": "1994",
       "serial": "T-81208-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Condor",
+      "publisher": ""
     },
     {
       "title": "NHL Hockey (Game Gear)",
       "releaseDate": "1995-04",
       "serial": "T-50048-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Ninja Gaiden (Game Gear)",
       "releaseDate": "1991-12",
       "serial": "2312",
-      "rating": ""
+      "rating": "",
+      "developer": "Japan System HouseCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Olympic Gold",
       "releaseDate": "1992-06",
       "serial": "79018-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Tiertex",
+      "publisher": ""
     },
     {
       "title": "OutRun",
       "releaseDate": "1991-11",
       "serial": "2310",
-      "rating": ""
+      "rating": "",
+      "developer": "Hertz",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "OutRun Europa",
-      "releaseDate": "1992-11-26",
-      "serial": "79038-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "79038-50}",
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Paperboy",
       "releaseDate": "1992-09-24",
       "serial": "T-48028-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Motivetime",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Pengo",
       "releaseDate": "1991-12",
       "serial": "2202",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc System WorksCategory :Live link reference",
+      "publisher": "Atari Corporation"
     },
     {
       "title": "Pete Sampras Tennis",
       "releaseDate": "1994",
       "serial": "T-120078-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Big Red Software",
+      "publisher": "Codemasters"
     },
     {
       "title": "PGA Tour 96",
       "releaseDate": "1995",
       "serial": "T-100078-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Ceris Software",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "PGA Tour Golf",
       "releaseDate": "1993-12",
       "serial": "T-48138-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Polygames",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "PGA Tour Golf II",
       "releaseDate": "1994",
       "serial": "T-48198-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "PolygamesCategory :Live link reference",
+      "publisher": "Time Warner Interactive"
     },
     {
       "title": "Phantom 2040 (Game Gear)",
       "releaseDate": "1995",
       "serial": "T-139028-50",
-      "rating": "ELSPA: 11+"
+      "rating": "ELSPA: 11+",
+      "developer": "Unexpected DevelopmentCategory :Live link reference",
+      "publisher": "Viacom New Media"
     },
     {
       "title": "Power Drive",
       "releaseDate": "1995-06",
       "serial": "79148-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Rage Software",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Power Strike II (Game Gear)",
       "releaseDate": "1993",
       "serial": "2443",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Predator 2",
-      "releaseDate": "1993-05",
-      "serial": "T-81068-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81068-50}",
+      "rating": "",
+      "developer": "Grey Team",
+      "publisher": "Arena Entertainment"
     },
     {
       "title": "Primal Rage",
       "releaseDate": "1995-08-25",
       "serial": "T-48218-50",
-      "rating": "ELSPA: 15+"
+      "rating": "ELSPA: 15+",
+      "developer": "Probe Entertainment",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Prince of Persia",
       "releaseDate": "1992-12-10",
       "serial": "T-88018-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Domark",
+      "publisher": "Domark"
     },
     {
       "title": "Psychic World (Game Gear)",
       "releaseDate": "1991-06-29",
       "serial": "2306",
-      "rating": ""
+      "rating": "",
+      "developer": "SanritsuCategory :Live link reference",
+      "publisher": "Tec Toy"
     },
     {
       "title": "Putt & Putter (Game Gear)",
       "releaseDate": "1991-08",
       "serial": "2307",
       "rating": "",
+      "developer": "SIMS",
+      "publisher": "",
       "altTitles": [
         "Minigolf"
       ]
@@ -754,325 +996,433 @@
       "title": "Quest for the Shaven Yak Starring Ren Hoëk & Stimpy",
       "releaseDate": "1994-03",
       "serial": "2519",
-      "rating": ""
+      "rating": "",
+      "developer": "Realtime Associates",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Rise of the Robots",
       "releaseDate": "1994-11-19",
       "serial": "T-48208-50",
-      "rating": "ELSPA: 11+"
+      "rating": "ELSPA: 11+",
+      "developer": "Data Design Interactive",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Ristar (Game Gear)",
       "releaseDate": "1995-02",
       "serial": "2543-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Japan System HouseCategory :Live link reference",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Road Rash",
       "releaseDate": "1994",
       "serial": "79108-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Electronic Arts",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "RoboCop 3",
       "releaseDate": "1993",
       "serial": "T-81178-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Eden Entertainment Software",
+      "publisher": ""
     },
     {
       "title": "RoboCop Versus The Terminator",
-      "releaseDate": "1994",
-      "serial": "T-70128-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-70128-50}",
+      "rating": "",
+      "developer": "NMS Software",
+      "publisher": ""
     },
     {
       "title": "S.S. Lucifer: Man Overboard!",
       "releaseDate": "1994-10",
       "serial": "T-120088-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Big Red Software",
+      "publisher": "Codemasters"
     },
     {
       "title": "Sega Game Pack 4 in 1",
       "releaseDate": "1992-12",
       "serial": "2425",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Sensible Soccer (8-bit)",
       "releaseDate": "1994-02",
       "serial": "T-93068-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Eurocom Entertainment Software",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Shinobi II: The Silent Fury",
-      "releaseDate": "1993-02",
-      "serial": "2421",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2421}",
+      "rating": "",
+      "developer": "Sega CS2",
+      "publisher": ""
     },
     {
       "title": "Slider",
       "releaseDate": "1992-02",
       "serial": "2315",
-      "rating": ""
+      "rating": "",
+      "developer": "Loriciel",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Smash T.V.",
       "releaseDate": "1992-12-17",
       "serial": "T-81058-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": ""
     },
     {
       "title": "Solitaire Poker",
       "releaseDate": "1991-12",
       "serial": "2316",
-      "rating": ""
+      "rating": "",
+      "developer": "ASCII",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Sonic 2 in 1",
       "releaseDate": "1995-10",
       "serial": "2568",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Sega Europe",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Sonic Blast",
       "releaseDate": "1996-11",
       "serial": "2573-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Aspect",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Sonic Chaos",
       "releaseDate": "1993-11-23",
       "serial": "2515",
-      "rating": ""
+      "rating": "",
+      "developer": "Aspect",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Sonic Drift",
       "releaseDate": "",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc System WorksCategory :Live link reference",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Sonic Drift 2",
       "releaseDate": "1995-04",
       "serial": "2563-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Sega CS5",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Sonic Labyrinth",
       "releaseDate": "1995-10",
       "serial": "2584-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Sonic Spinball (8-bit)",
       "releaseDate": "1994-09",
       "serial": "2526",
-      "rating": "ClassInd: Livre"
+      "rating": "ClassInd: Livre",
+      "developer": "Sega Interactive Development Division",
+      "publisher": "Sega"
     },
     {
       "title": "Sonic the Hedgehog (8-bit)",
-      "releaseDate": "1992-01",
-      "serial": "2408",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2408}",
+      "rating": "",
+      "developer": "Ancient",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Sonic the Hedgehog 2 (8-bit)",
-      "releaseDate": "1992-11-24",
-      "serial": "2507",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2507}",
+      "rating": "",
+      "developer": "Aspect",
+      "publisher": "Sega"
     },
     {
       "title": "Sonic the Hedgehog Triple Trouble",
       "releaseDate": "1994-11",
       "serial": "2530-50",
-      "rating": "ClassInd: Livre"
+      "rating": "ClassInd: Livre",
+      "developer": "Aspect",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Space Harrier",
-      "releaseDate": "",
-      "serial": "",
-      "rating": ""
+      "releaseDate": "1991-12",
+      "serial": "2314",
+      "rating": "",
+      "developer": "Dempa Micomsoft",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "Spider-Man vs. The Kingpin (8-bit)",
       "releaseDate": "1992-06",
       "serial": "T-81028-50",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Spider-Man: Return of the Sinister Six",
-      "releaseDate": "1993-06",
-      "serial": "T-81128-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81128-50}",
+      "rating": "",
+      "developer": "B.I.T.S.",
+      "publisher": "Flying Edge"
     },
     {
       "title": "Star Wars",
-      "releaseDate": "1993-06",
-      "serial": "79098-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "79098-50}",
+      "rating": "",
+      "developer": "Beam Software",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Stargate (Game Gear)",
       "releaseDate": "1995-03",
       "serial": "T-81298-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Grey Team",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Streets of Rage",
       "releaseDate": "1992-12-10",
       "serial": "2417",
-      "rating": ""
+      "rating": "",
+      "developer": "Japan System HouseCategory :Live link reference",
+      "publisher": "Sega"
     },
     {
       "title": "Streets of Rage 2",
       "releaseDate": "1993-08",
       "serial": "2517",
-      "rating": ""
+      "rating": "",
+      "developer": "Ancient",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Strider II",
-      "releaseDate": "1993-08",
-      "serial": "79048-50",
-      "rating": "ELSPA: 3+"
+      "releaseDate": "",
+      "serial": "79048-50}",
+      "rating": "ELSPA: 3+",
+      "developer": "Tiertex",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Striker (Game Gear)",
       "releaseDate": "1995",
       "serial": "2551-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Ecofilmes",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Super Columns",
       "releaseDate": "1995-04",
       "serial": "2449-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Sega CS5",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Super Kick Off (8-bit)",
       "releaseDate": "1992-05",
       "serial": "2415",
-      "rating": ""
+      "rating": "",
+      "developer": "Anco Games",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Super Monaco GP (8-bit)",
       "releaseDate": "1991-06-29",
       "serial": "2304",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Super Off Road",
       "releaseDate": "1992-12-10",
       "serial": "T-70018-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Graftgold Creative Software",
+      "publisher": "Ballistic"
     },
     {
       "title": "Super Space Invaders",
-      "releaseDate": "1993-02-25",
-      "serial": "T-88028-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-88028-50}",
+      "rating": "",
+      "developer": "The Kremlin",
+      "publisher": "Domark"
     },
     {
       "title": "Super Star Wars: Return of the Jedi",
       "releaseDate": "1995-10",
       "serial": "T-100088-50",
-      "rating": ""
+      "rating": "",
+      "developer": "LucasArts",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "Superman: The Man of Steel",
       "releaseDate": "1993-05-26",
       "serial": "T-70068-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Graftgold Creative Software",
+      "publisher": ""
     },
     {
       "title": "Surf Ninjas",
       "releaseDate": "",
       "serial": "077090",
-      "rating": ""
+      "rating": "",
+      "developer": "NuFX",
+      "publisher": "Sega of America"
     },
     {
       "title": "T2: The Arcade Game",
       "releaseDate": "1994-01",
       "serial": "T-81088-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": ""
     },
     {
       "title": "Tails Adventures",
       "releaseDate": "1995-09",
       "serial": "2583-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Aspect",
+      "publisher": "Sega Europe"
     },
     {
       "title": "TaleSpin",
       "releaseDate": "1993",
       "serial": "2412",
-      "rating": ""
+      "rating": "",
+      "developer": "Disney Software",
+      "publisher": "Sega"
     },
     {
       "title": "Tarzan: Lord of the Jungle",
       "releaseDate": "1994",
       "serial": "T-83098-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Eurocom Entertainment Software",
+      "publisher": "GameTek"
     },
     {
       "title": "Taz in Escape from Mars",
       "releaseDate": "1994",
       "serial": "2538-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Al Baker & Associates",
+      "publisher": "Tec Toy"
     },
     {
       "title": "Taz-Mania (Game Gear)",
-      "releaseDate": "1992-12",
-      "serial": "2413",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2413}",
+      "rating": "",
+      "developer": "NuFX",
+      "publisher": ""
     },
     {
       "title": "Telstar Double Value Games: The Lucky Dime Caper Starring Donald Duck/Castle of Illusion Starring Mickey Mouse",
       "releaseDate": "",
       "serial": "TFGC 0026",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": "Telstar Electronic Studios"
     },
     {
       "title": "Telstar Double Value Games: The Lucky Dime Caper Starring Donald Duck/Talespin",
       "releaseDate": "1993-11-01",
       "serial": "TFGC0018",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": "Telstar Electronic Studios"
     },
     {
       "title": "Telstar Double Value Games: The Simpsons: Bart vs. the Space Mutants/Batman Returns",
       "releaseDate": "1993-11-01",
       "serial": "TFGC0017",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": "Telstar Electronic Studios"
     },
     {
       "title": "Tempo Jr.",
       "releaseDate": "1995",
       "serial": "2562-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Sega CS5",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Terminator 2: Judgment Day (8-bit)",
       "releaseDate": "1993",
       "serial": "T-81148-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc Developments",
+      "publisher": ""
     },
     {
       "title": "The Addams Family (8-bit)",
       "releaseDate": "1994",
       "serial": "T-81188-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc DevelopmentsCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "The Adventures of Batman & Robin (Game Gear)",
       "releaseDate": "1995",
       "serial": "2552-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Novotrade Interactive",
+      "publisher": "Sega"
     },
     {
       "title": "The Chessmaster",
       "releaseDate": "1992-03",
       "serial": "2317",
       "rating": "",
+      "developer": "NovaLogic",
+      "publisher": "Sega Europe",
       "altTitles": [
         "Sega Chess"
       ]
@@ -1081,37 +1431,49 @@
       "title": "The Excellent Dizzy Collection",
       "releaseDate": "1994",
       "serial": "T-121003",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Interactive Studios",
+      "publisher": "Codemasters"
     },
     {
       "title": "The GG Shinobi",
       "releaseDate": "1991-06-29",
       "serial": "2402",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "The Incredible Crash Dummies (8-bit)",
-      "releaseDate": "1993-05",
-      "serial": "T-81138-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81138-50}",
+      "rating": "",
+      "developer": "Teeny Weeny Games",
+      "publisher": ""
     },
     {
       "title": "The Incredible Hulk",
       "releaseDate": "1994-06",
       "serial": "79078-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Probe Software",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "The Itchy & Scratchy Game",
       "releaseDate": "1994",
       "serial": "T-81218-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Bits Corporation",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "The Jungle Book",
       "releaseDate": "1994-01",
       "serial": "T-70118-50",
       "rating": "",
+      "developer": "Disney Software",
+      "publisher": "",
       "altTitles": [
         "Das Dschungelbuch",
         "El Libro de la Selva",
@@ -1125,6 +1487,8 @@
       "releaseDate": "1994",
       "serial": "T-70158-05",
       "rating": "ELSPA: 3+",
+      "developer": "Disney Software",
+      "publisher": "Sega Europe",
       "altTitles": [
         "Der König der Löwen",
         "El Rey León",
@@ -1135,33 +1499,43 @@
     },
     {
       "title": "The Lucky Dime Caper Starring Donald Duck",
-      "releaseDate": "1992-02",
-      "serial": "2404",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2404}",
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
     },
     {
       "title": "The Ottifants",
       "releaseDate": "1993",
       "serial": "2444",
-      "rating": ""
+      "rating": "",
+      "developer": "Graftgold",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "The Simpsons: Bart vs. the Space Mutants",
-      "releaseDate": "1993-01-05",
-      "serial": "T-81018-50",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81018-50}",
+      "rating": "",
+      "developer": "Arc Developments",
+      "publisher": "Flying Edge"
     },
     {
       "title": "The Simpsons: Bart vs. the World",
       "releaseDate": "1993-05-26",
       "serial": "T-81098-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc Developments",
+      "publisher": ""
     },
     {
       "title": "The Smurfs",
       "releaseDate": "1995-02",
       "serial": "T-151018-50",
       "rating": "",
+      "developer": "Bit Managers",
+      "publisher": "Infogrames",
       "altTitles": [
         "De Smurfen",
         "Die Schlümpfe",
@@ -1175,9 +1549,11 @@
     },
     {
       "title": "The Smurfs Travel the World",
-      "releaseDate": "1996-11",
-      "serial": "T-151028-50",
+      "releaseDate": "",
+      "serial": "T-151028-50}",
       "rating": "ELSPA: 3+",
+      "developer": "Virtual Studio",
+      "publisher": "Infogrames",
       "altTitles": [
         "De Smurfen Verkennen de Wereld",
         "Die Schlümpfe Reisen um die Welt",
@@ -1191,13 +1567,17 @@
       "title": "The Terminator",
       "releaseDate": "1992-12-03",
       "serial": "T-70048-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": "Virgin Games"
     },
     {
       "title": "Tintin in Tibet",
       "releaseDate": "1996",
       "serial": "T-151038-50",
       "rating": "ELSPA: 3+",
+      "developer": "Bit Managers",
+      "publisher": "Infogrames",
       "altTitles": [
         "Kuifje in Tibet",
         "Tim in Tibet",
@@ -1210,111 +1590,147 @@
     },
     {
       "title": "Tom and Jerry: The Movie",
-      "releaseDate": "1993",
-      "serial": "2434",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "2434}",
+      "rating": "",
+      "developer": "SIMS",
+      "publisher": ""
     },
     {
       "title": "True Lies",
       "releaseDate": "1995-09",
       "serial": "T-81318-50",
-      "rating": "ELSPA: 11+"
+      "rating": "ELSPA: 11+",
+      "developer": "Beam Software",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Ultimate Soccer",
       "releaseDate": "1993",
       "serial": "2441",
-      "rating": ""
+      "rating": "",
+      "developer": "Rage Software",
+      "publisher": ""
     },
     {
       "title": "Virtua Fighter Animation",
-      "releaseDate": "1996-11",
-      "serial": "MK2570-50",
-      "rating": "ELSPA: 3+"
+      "releaseDate": "",
+      "serial": "MK2570-50}",
+      "rating": "ELSPA: 3+",
+      "developer": "Aspect",
+      "publisher": "Tec Toy"
     },
     {
       "title": "VR Troopers",
       "releaseDate": "1995",
       "serial": "2559-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Syrox Developments",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Wimbledon",
       "releaseDate": "1992-08",
       "serial": "2323",
-      "rating": ""
+      "rating": "",
+      "developer": "SIMS",
+      "publisher": ""
     },
     {
       "title": "Winter Olympics",
       "releaseDate": "1994",
       "serial": "79088-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Tiertex",
+      "publisher": ""
     },
     {
       "title": "Wizard Pinball",
       "releaseDate": "1995",
       "serial": "T-88088-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Teque London",
+      "publisher": "Domark"
     },
     {
       "title": "Wolfchild",
       "releaseDate": "1993",
       "serial": "T-70078-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Core Design",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Wonder Boy",
       "releaseDate": "1991-06-29",
       "serial": "2302",
-      "rating": ""
+      "rating": "",
+      "developer": "Escape",
+      "publisher": "Activision"
     },
     {
       "title": "Wonder Boy III: The Dragon's Trap",
       "releaseDate": "1992-07",
       "serial": "2422",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Woody Pop",
       "releaseDate": "1991-11",
       "serial": "2203",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": ""
     },
     {
       "title": "World Class Leader Board",
       "releaseDate": "1991-11",
       "serial": "2406",
-      "rating": ""
+      "rating": "",
+      "developer": "Access Software",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "World Cup USA 94",
       "releaseDate": "1994",
       "serial": "79128-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Tiertex",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "WWF Raw",
       "releaseDate": "1994",
       "serial": "T-81258-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Realtime Associates Seattle Division",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "WWF WrestleMania: Steel Cage Challenge",
       "releaseDate": "1993-06",
       "serial": "T-81108-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Teeny Weeny Games",
+      "publisher": "Flying Edge"
     },
     {
       "title": "X-Men: GamesMaster's Legacy",
       "releaseDate": "1994-12",
       "serial": "2531-50",
-      "rating": "ELSPA: 3+"
+      "rating": "ELSPA: 3+",
+      "developer": "Paul Hutchinson",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Zool (8-bit)",
       "releaseDate": "1994-03",
       "serial": "123018-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Gremlin Graphics Software",
+      "publisher": "Gremlin Graphics Software"
     }
   ]
 }

@@ -8,6 +8,7 @@
       "releaseDate": "2000-10-12",
       "serial": "HDR-0080",
       "rating": "All ages",
+      "developer": "Acclaim Studios Cheltenham",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -15,6 +16,7 @@
       "releaseDate": "2001-12-27",
       "serial": "T-46503M",
       "rating": "All ages",
+      "developer": "PrincessSoft",
       "publisher": "PrincessSoft"
     },
     {
@@ -22,6 +24,7 @@
       "releaseDate": "2001-04-26",
       "serial": "HDR-0158",
       "rating": "",
+      "developer": "Chicken Head",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -29,6 +32,7 @@
       "releaseDate": "2000-06-22",
       "serial": "HDR-0066",
       "rating": "All ages",
+      "developer": "Chicken Head",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -36,6 +40,7 @@
       "releaseDate": "2000-02-24",
       "serial": "T-6804M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "",
       "altTitles": [
         "AeroWings 2: Airstrike"
@@ -46,6 +51,7 @@
       "releaseDate": "2000-11-16",
       "serial": "T-6805M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "CRI"
     },
     {
@@ -53,6 +59,7 @@
       "releaseDate": "2001-02-15",
       "serial": "T-6807M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "CRI"
     },
     {
@@ -60,6 +67,7 @@
       "releaseDate": "2001-08-23",
       "serial": "T-6809M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "CRI"
     },
     {
@@ -67,23 +75,15 @@
       "releaseDate": "2000-01-20",
       "serial": "T-6803M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "CRI"
-    },
-    {
-      "title": "Aero Dancing: featuring Blue Impulse",
-      "releaseDate": "1999-03-04",
-      "serial": "T-6802M",
-      "rating": "All ages",
-      "publisher": "",
-      "altTitles": [
-        "AeroWings"
-      ]
     },
     {
       "title": "After...: Wasureenu Kizuna",
       "releaseDate": "2004-02-26",
       "serial": "T-18706M",
       "rating": "All ages",
+      "developer": "Pionesoft",
       "publisher": "Pionesoft"
     },
     {
@@ -91,6 +91,7 @@
       "releaseDate": "2003-08-07",
       "serial": "T-20130M",
       "rating": "18+",
+      "developer": "HuneX",
       "publisher": "NEC Interchannel"
     },
     {
@@ -98,6 +99,7 @@
       "releaseDate": "2001-09-20",
       "serial": "T-20112M",
       "rating": "All ages",
+      "developer": "Cybelle",
       "publisher": "NEC Interchannel"
     },
     {
@@ -105,6 +107,7 @@
       "releaseDate": "1999-07-29",
       "serial": "T-9502M",
       "rating": "",
+      "developer": "Konami Computer Entertainment Yokohama",
       "publisher": "Konami"
     },
     {
@@ -112,6 +115,7 @@
       "releaseDate": "1999-07-29",
       "serial": "HDR-0019",
       "rating": "All ages",
+      "developer": "WestoneCategory :Live link reference",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -119,6 +123,7 @@
       "releaseDate": "1999",
       "serial": "",
       "rating": "",
+      "developer": "Toyota",
       "publisher": ""
     },
     {
@@ -126,6 +131,7 @@
       "releaseDate": "2001-04-12",
       "serial": "T-20107M",
       "rating": "All ages",
+      "developer": "HuneX",
       "publisher": "NEC Interchannel"
     },
     {
@@ -133,6 +139,7 @@
       "releaseDate": "2005-02-24",
       "serial": "T-18712M",
       "rating": "15+",
+      "developer": "Pionesoft",
       "publisher": "Pionesoft"
     },
     {
@@ -140,6 +147,7 @@
       "releaseDate": "2000-06-15",
       "serial": "T-34101M",
       "rating": "All ages",
+      "developer": "AKI",
       "publisher": "AKI"
     },
     {
@@ -147,20 +155,15 @@
       "releaseDate": "2000-12-07",
       "serial": "HDR-0075",
       "rating": "All ages",
+      "developer": "Sega Corporation (2000-2015)",
       "publisher": "Sega Corporation (2000-2015)"
-    },
-    {
-      "title": "Atsumare! Guru Guru Onsen",
-      "releaseDate": "1999-09-23",
-      "serial": "HDR-0015",
-      "rating": "All ages",
-      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Atsumare! Guru Guru Onsen BB",
       "releaseDate": "2000-10-31",
       "serial": "HDR-0121",
       "rating": "All ages",
+      "developer": "Overworks",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -168,6 +171,7 @@
       "releaseDate": "2000-12-21",
       "serial": "T-3107M",
       "rating": "All ages",
+      "developer": "SNK",
       "publisher": "",
       "altTitles": [
         "The Last Blade 2: Heart of the Samurai"
@@ -178,6 +182,7 @@
       "releaseDate": "1999-12-09",
       "serial": "T-38702M",
       "rating": "All ages",
+      "developer": "Conspiracy Entertainment",
       "publisher": "",
       "altTitles": [
         "Bangai-O"
@@ -188,6 +193,7 @@
       "releaseDate": "2004-10-28",
       "serial": "T-47110M",
       "rating": "18+",
+      "developer": "HuneX",
       "publisher": "Alchemist"
     },
     {
@@ -195,6 +201,7 @@
       "releaseDate": "2000-12-21",
       "serial": "T-5801M",
       "rating": "All ages",
+      "developer": "Visco",
       "publisher": "Visco"
     },
     {
@@ -202,6 +209,7 @@
       "releaseDate": "2001-03-15",
       "serial": "T-43801M",
       "rating": "All ages",
+      "developer": "Studio Wonder Effect",
       "publisher": "Studio Wonder Effect"
     },
     {
@@ -209,6 +217,7 @@
       "releaseDate": "1999-12-16",
       "serial": "T-2101M",
       "rating": "Violence",
+      "developer": "ASCII",
       "publisher": "",
       "altTitles": [
         "Sword of the Berserk: Guts' Rage"
@@ -219,6 +228,7 @@
       "releaseDate": "2000-05-02",
       "serial": "T-41801M",
       "rating": "All ages",
+      "developer": "Sega Toys",
       "publisher": "Sega Toys"
     },
     {
@@ -226,6 +236,7 @@
       "releaseDate": "1999-12-22",
       "serial": "T-1214M",
       "rating": "Violence",
+      "developer": "Capcom",
       "publisher": "Capcom",
       "altTitles": [
         "Resident Evil 2"
@@ -236,6 +247,7 @@
       "releaseDate": "2000-11-16",
       "serial": "T-1222M",
       "rating": "Violence",
+      "developer": "Capcom",
       "publisher": "Capcom",
       "altTitles": [
         "Resident Evil 3: Nemesis"
@@ -246,6 +258,7 @@
       "releaseDate": "2001-03-22",
       "serial": "T-1240M",
       "rating": "Violence",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -253,6 +266,7 @@
       "releaseDate": "2000",
       "serial": "",
       "rating": "",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -260,6 +274,7 @@
       "releaseDate": "1999-12-22",
       "serial": "",
       "rating": "",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -267,6 +282,7 @@
       "releaseDate": "2000-02-03",
       "serial": "T-1207M",
       "rating": "Violence",
+      "developer": "Capcom",
       "publisher": "Capcom",
       "altTitles": [
         "Resident Evil Code: Veronica"
@@ -277,6 +293,7 @@
       "releaseDate": "1999-09-30",
       "serial": "T-20101M",
       "rating": "All ages",
+      "developer": "Flight-Plan‏‎",
       "publisher": "NEC Interchannel"
     },
     {
@@ -284,6 +301,7 @@
       "releaseDate": "1999-03-25",
       "serial": "HDR-0003",
       "rating": "Violence",
+      "developer": "Climax Graphics",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -291,6 +309,7 @@
       "releaseDate": "2003-06-26",
       "serial": "T-23205M",
       "rating": "All ages",
+      "developer": "EMU",
       "publisher": "Ecole"
     },
     {
@@ -298,6 +317,7 @@
       "releaseDate": "2002-01-24",
       "serial": "T-42904M",
       "rating": "All ages",
+      "developer": "Fujicom",
       "publisher": "Fujicom"
     },
     {
@@ -305,6 +325,7 @@
       "releaseDate": "2001-01-25",
       "serial": "T-41802M",
       "rating": "All ages",
+      "developer": "Sega Toys",
       "publisher": "Sega Toys"
     },
     {
@@ -312,6 +333,7 @@
       "releaseDate": "2001-09-20",
       "serial": "T-41202M",
       "rating": "All ages",
+      "developer": "Bimboosoft",
       "publisher": "Bimboosoft"
     },
     {
@@ -319,6 +341,7 @@
       "releaseDate": "2002-09-26",
       "serial": "T-19717M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -326,6 +349,7 @@
       "releaseDate": "2002-01-10",
       "serial": "T-42903M",
       "rating": "",
+      "developer": "Fujicom",
       "publisher": "Fujicom"
     },
     {
@@ -333,6 +357,7 @@
       "releaseDate": "2003-09-25",
       "serial": "T-46703M",
       "rating": "All ages",
+      "developer": "G.rev",
       "publisher": "G.rev"
     },
     {
@@ -340,6 +365,7 @@
       "releaseDate": "2001-05-24",
       "serial": "T-1243M",
       "rating": "All ages",
+      "developer": "Flagship",
       "publisher": "Capcom"
     },
     {
@@ -347,6 +373,7 @@
       "releaseDate": "",
       "serial": "",
       "rating": "",
+      "developer": "Sega",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -354,6 +381,7 @@
       "releaseDate": "1999-07-08",
       "serial": "T-6801M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": ""
     },
     {
@@ -361,6 +389,7 @@
       "releaseDate": "2003-05-29",
       "serial": "T-46513M",
       "rating": "All ages",
+      "developer": "Patissier",
       "publisher": "PrincessSoft"
     },
     {
@@ -368,6 +397,7 @@
       "releaseDate": "2001-08-23",
       "serial": "T-20111M",
       "rating": "All ages",
+      "developer": "Frontwing",
       "publisher": "NEC Interchannel"
     },
     {
@@ -375,6 +405,7 @@
       "releaseDate": "2001-10-25",
       "serial": "HDR-0172",
       "rating": "All ages",
+      "developer": "WOW Entertainment",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -382,6 +413,7 @@
       "releaseDate": "2001-04-05",
       "serial": "T-20108M",
       "rating": "All ages",
+      "developer": "Cocktail Soft",
       "publisher": "NEC Interchannel"
     },
     {
@@ -389,6 +421,7 @@
       "releaseDate": "2001-09-13",
       "serial": "T-1249M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -396,6 +429,7 @@
       "releaseDate": "2001-06-14",
       "serial": "T-1247M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -403,6 +437,7 @@
       "releaseDate": "2000-09-06",
       "serial": "T-1217M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -410,6 +445,7 @@
       "releaseDate": "2000",
       "serial": "",
       "rating": "",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -417,6 +453,7 @@
       "releaseDate": "2002-03-28",
       "serial": "T-44406M",
       "rating": "All ages",
+      "developer": "Abel",
       "publisher": "Abel"
     },
     {
@@ -424,6 +461,7 @@
       "releaseDate": "2000-12-28",
       "serial": "HDR-0115",
       "rating": "All ages",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -431,6 +469,7 @@
       "releaseDate": "2000-02-24",
       "serial": "T-5701M",
       "rating": "Violence",
+      "developer": "Jaleco",
       "publisher": "Jaleco"
     },
     {
@@ -438,6 +477,7 @@
       "releaseDate": "2002-07-11",
       "serial": "T-46901M",
       "rating": "All ages",
+      "developer": "AGREE",
       "publisher": "Symbio Planning"
     },
     {
@@ -445,6 +485,7 @@
       "releaseDate": "2004-12-16",
       "serial": "T-47801M",
       "rating": "All ages",
+      "developer": "Able Corporation",
       "publisher": "Milestone"
     },
     {
@@ -452,6 +493,7 @@
       "releaseDate": "2000-12-07",
       "serial": "T-4402M",
       "rating": "All ages",
+      "developer": "AM2 of CRI",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -459,6 +501,7 @@
       "releaseDate": "2004-04-28",
       "serial": "T-37912M",
       "rating": "12+",
+      "developer": "Takuyo",
       "publisher": "Takuyo"
     },
     {
@@ -466,6 +509,7 @@
       "releaseDate": "2003-12-25",
       "serial": "T-47107M",
       "rating": "All ages",
+      "developer": "HuneX",
       "publisher": "Alchemist"
     },
     {
@@ -473,6 +517,7 @@
       "releaseDate": "1999-07-08",
       "serial": "HDR-0021",
       "rating": "All ages",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -480,6 +525,7 @@
       "releaseDate": "2000-01-13",
       "serial": "T-1206M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom",
       "altTitles": [
         "Tech Romancer"
@@ -490,6 +536,7 @@
       "releaseDate": "1999-12-16",
       "serial": "T-39403M",
       "rating": "All ages",
+      "developer": "Vivarium",
       "publisher": "DigiToys"
     },
     {
@@ -497,6 +544,7 @@
       "releaseDate": "1999-11-11",
       "serial": "HDR-0039",
       "rating": "All ages",
+      "developer": "Binary Hammer",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -504,6 +552,7 @@
       "releaseDate": "2001-06-21",
       "serial": "T-16603M",
       "rating": "All ages",
+      "developer": "Natsume Co., Ltd.",
       "publisher": "Altron"
     },
     {
@@ -511,6 +560,7 @@
       "releaseDate": "1999-09-15",
       "serial": "HDR-0009",
       "rating": "All ages",
+      "developer": "Climax Entertainment",
       "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Time Stalkers"
@@ -521,20 +571,15 @@
       "releaseDate": "2001-04-19",
       "serial": "T-19704M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
-    },
-    {
-      "title": "Comic Party",
-      "releaseDate": "2001-08-09",
-      "serial": "T-38301M",
-      "rating": "All ages",
-      "publisher": "AquaPlus"
     },
     {
       "title": "Confidential Mission",
       "releaseDate": "2001-06-14",
       "serial": "HDR-0160",
       "rating": "All ages",
+      "developer": "Hitmaker",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -542,6 +587,7 @@
       "releaseDate": "1999-08-26",
       "serial": "T-36901M",
       "rating": "All ages",
+      "developer": "UEP Systems",
       "publisher": "",
       "altTitles": [
         "Rippin' Riders"
@@ -552,6 +598,7 @@
       "releaseDate": "2000-08-10",
       "serial": "T-3106M",
       "rating": "All ages",
+      "developer": "SNK",
       "publisher": "SNK"
     },
     {
@@ -559,6 +606,7 @@
       "releaseDate": "2001-09-13",
       "serial": "HDR-0176",
       "rating": "All ages",
+      "developer": "Sega Rosso",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -566,6 +614,7 @@
       "releaseDate": "2001-08-02",
       "serial": "T-45801M",
       "rating": "All ages",
+      "developer": "Hackberry",
       "publisher": "Hackberry"
     },
     {
@@ -573,6 +622,7 @@
       "releaseDate": "2000-01-27",
       "serial": "HDR-0053",
       "rating": "All ages",
+      "developer": "Acclaim Studios Cheltenham",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -580,6 +630,7 @@
       "releaseDate": "2001-05-31",
       "serial": "HDR-0159",
       "rating": "All ages",
+      "developer": "Hitmaker",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -587,6 +638,7 @@
       "releaseDate": "2001-07-12",
       "serial": "T-43903M",
       "rating": "All ages",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -594,6 +646,7 @@
       "releaseDate": "1999-12-23",
       "serial": "T-30006M",
       "rating": "Violence",
+      "developer": "Warp",
       "publisher": "",
       "altTitles": [
         "D-2"
@@ -604,6 +657,7 @@
       "releaseDate": "2001-10-25",
       "serial": "T-46501M",
       "rating": "All ages",
+      "developer": "PrincessSoft",
       "publisher": "PrincessSoft"
     },
     {
@@ -611,6 +665,7 @@
       "releaseDate": "2000-02-17",
       "serial": "T-9506M",
       "rating": "",
+      "developer": "Konami Computer Entertainment Tokyo",
       "publisher": "Konami"
     },
     {
@@ -618,6 +673,7 @@
       "releaseDate": "2000-04-27",
       "serial": "T-9508M",
       "rating": "",
+      "developer": "Konami Computer Entertainment Tokyo",
       "publisher": "Konami"
     },
     {
@@ -625,6 +681,7 @@
       "releaseDate": "1999-09-30",
       "serial": "T-9505M",
       "rating": "",
+      "developer": "Konami Computer Entertainment Tokyo",
       "publisher": "Konami"
     },
     {
@@ -632,6 +689,7 @@
       "releaseDate": "1999-09-02",
       "serial": "T-9504M",
       "rating": "",
+      "developer": "Konami Computer Entertainment Tokyo",
       "publisher": "Konami"
     },
     {
@@ -639,6 +697,7 @@
       "releaseDate": "2000-12-21",
       "serial": "HDR-0106",
       "rating": "All ages",
+      "developer": "Amusement Vision",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -646,6 +705,7 @@
       "releaseDate": "2001-01-01",
       "serial": "HDR-0128",
       "rating": "All ages",
+      "developer": "Smilebit",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -653,6 +713,7 @@
       "releaseDate": "2000-09-28",
       "serial": "T-3602M",
       "rating": "All ages",
+      "developer": "Team Ninja",
       "publisher": "Tecmo"
     },
     {
@@ -660,6 +721,7 @@
       "releaseDate": "1999-11-25",
       "serial": "T-23201M",
       "rating": "Violence",
+      "developer": "Ecole",
       "publisher": "Ecole"
     },
     {
@@ -667,6 +729,7 @@
       "releaseDate": "2001-05-10",
       "serial": "T-23202M",
       "rating": "Violence",
+      "developer": "Ecole",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -674,6 +737,7 @@
       "releaseDate": "2000-12-14",
       "serial": "T-44601M",
       "rating": "All ages",
+      "developer": "Isao",
       "publisher": "Isao"
     },
     {
@@ -681,6 +745,7 @@
       "releaseDate": "1999-11-25",
       "serial": "T-40801M",
       "rating": "All ages",
+      "developer": "Marvelous Entertainment",
       "publisher": "Marvelous Entertainment"
     },
     {
@@ -688,6 +753,7 @@
       "releaseDate": "1999-12-09",
       "serial": "HDR-0040",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Cyber Troopers Virtual-On: Oratorio Tangram M.S.B.S. Ver. 5.4"
@@ -698,6 +764,7 @@
       "releaseDate": "1999-07-22",
       "serial": "T-14305M",
       "rating": "All ages",
+      "developer": "Chance It!",
       "publisher": "Hudson Soft"
     },
     {
@@ -705,6 +772,7 @@
       "releaseDate": "2000-01-20",
       "serial": "T-1102M",
       "rating": "All ages",
+      "developer": "Taito",
       "publisher": "Taito"
     },
     {
@@ -712,6 +780,7 @@
       "releaseDate": "2001-08-09",
       "serial": "HDR-0167",
       "rating": "All ages",
+      "developer": "Land Ho!",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -719,6 +788,7 @@
       "releaseDate": "2000-07-27",
       "serial": "HDR-0084",
       "rating": "All ages",
+      "developer": "Land Ho!",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -726,6 +796,7 @@
       "releaseDate": "2000-09-21",
       "serial": "T-14402M",
       "rating": "Violence",
+      "developer": "Atlus",
       "publisher": "Atlus"
     },
     {
@@ -733,6 +804,7 @@
       "releaseDate": "2001-09-06",
       "serial": "T-46302M",
       "rating": "All ages",
+      "developer": "Westone Bit EntertainmentCategory :Live link reference",
       "publisher": "Broccoli"
     },
     {
@@ -740,6 +812,7 @@
       "releaseDate": "1999-04-08",
       "serial": "T-37001M",
       "rating": "All ages",
+      "developer": "Shouei System",
       "publisher": "Shouei System"
     },
     {
@@ -747,6 +820,7 @@
       "releaseDate": "2000-09-06",
       "serial": "T-1220M",
       "rating": "Violence",
+      "developer": "AvantCategory :Live link reference",
       "publisher": "Capcom"
     },
     {
@@ -754,13 +828,15 @@
       "releaseDate": "2000-08-10",
       "serial": "T-9101M",
       "rating": "All ages",
+      "developer": "Victor Interactive Software",
       "publisher": "Victor Interactive Software"
     },
     {
       "title": "Doki Doki Idol Star Seeker Remix",
-      "releaseDate": "2002-01-31",
-      "serial": "T-46701M",
+      "releaseDate": "",
+      "serial": "T-46701M}",
       "rating": "All ages",
+      "developer": "G.rev",
       "publisher": "G.rev"
     },
     {
@@ -768,6 +844,7 @@
       "releaseDate": "1999",
       "serial": "T-39205M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -775,6 +852,7 @@
       "releaseDate": "2000",
       "serial": "T-39214M",
       "rating": "All ages",
+      "developer": "Sega Corporation (2000-2015)",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -782,6 +860,7 @@
       "releaseDate": "2000",
       "serial": "T-39209M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -789,6 +868,7 @@
       "releaseDate": "1999",
       "serial": "T-39206M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -796,6 +876,7 @@
       "releaseDate": "1999",
       "serial": "T-39201M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -803,6 +884,7 @@
       "releaseDate": "1999",
       "serial": "T-39203M",
       "rating": "",
+      "developer": "CRI",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -810,6 +892,7 @@
       "releaseDate": "1999",
       "serial": "T-39202M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -817,6 +900,7 @@
       "releaseDate": "1999",
       "serial": "T-39204M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -824,6 +908,7 @@
       "releaseDate": "",
       "serial": "T-39213M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -831,6 +916,7 @@
       "releaseDate": "2002-06-27",
       "serial": "T-20113M",
       "rating": "All ages",
+      "developer": "Cybelle",
       "publisher": "NEC Interchannel"
     },
     {
@@ -838,6 +924,7 @@
       "releaseDate": "1998-11-27",
       "serial": "",
       "rating": "All ages",
+      "developer": "Access",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -845,6 +932,7 @@
       "releaseDate": "1999-08-05",
       "serial": "",
       "rating": "All ages",
+      "developer": "Sega Network Contents R&D Dept.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -852,6 +940,7 @@
       "releaseDate": "2000-07-15",
       "serial": "",
       "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -859,6 +948,7 @@
       "releaseDate": "2000-04-29",
       "serial": "",
       "rating": "All ages",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Isao"
     },
     {
@@ -866,6 +956,7 @@
       "releaseDate": "2000-09-14",
       "serial": "",
       "rating": "",
+      "developer": "Isao",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -873,6 +964,7 @@
       "releaseDate": "2001-07",
       "serial": "610-8061",
       "rating": "All ages",
+      "developer": "Isao",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -880,6 +972,7 @@
       "releaseDate": "2001-12-15",
       "serial": "",
       "rating": "",
+      "developer": "",
       "publisher": "Enterbrain"
     },
     {
@@ -887,6 +980,7 @@
       "releaseDate": "1999-12-09",
       "serial": "HDR-0042",
       "rating": "",
+      "developer": "Colabo",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -894,6 +988,7 @@
       "releaseDate": "2000-11-09",
       "serial": "HDR-0114",
       "rating": "All ages",
+      "developer": "Kuusoukagaku",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -901,6 +996,7 @@
       "releaseDate": "1999-05-27",
       "serial": "HDR-0020",
       "rating": "All ages",
+      "developer": "Sega AM1",
       "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Dynamite Cop"
@@ -911,6 +1007,7 @@
       "releaseDate": "2001-01-25",
       "serial": "HDR-0103",
       "rating": "All ages",
+      "developer": "Appaloosa Interactive",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -918,6 +1015,7 @@
       "releaseDate": "1999-07-08",
       "serial": "T-9503M",
       "rating": "",
+      "developer": "Konami Computer Entertainment Tokyo",
       "publisher": "Konami"
     },
     {
@@ -925,6 +1023,7 @@
       "releaseDate": "2000-10-10",
       "serial": "T-1223M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -932,6 +1031,7 @@
       "releaseDate": "2000-12-12",
       "serial": "T-1224M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -939,6 +1039,7 @@
       "releaseDate": "2001-02-02",
       "serial": "T-1225M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -946,6 +1047,7 @@
       "releaseDate": "2001-04-12",
       "serial": "T-1226M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -953,6 +1055,7 @@
       "releaseDate": "2001-06-06",
       "serial": "T-1227M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -960,6 +1063,7 @@
       "releaseDate": "2001-08-08",
       "serial": "T-1228M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -967,6 +1071,7 @@
       "releaseDate": "2001-10-10",
       "serial": "T-1229M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -974,6 +1079,7 @@
       "releaseDate": "1999-05-27",
       "serial": "T-14302M",
       "rating": "All ages",
+      "developer": "Birthday",
       "publisher": ""
     },
     {
@@ -981,6 +1087,7 @@
       "releaseDate": "2002-07-25",
       "serial": "T-20116M",
       "rating": "All ages",
+      "developer": "Cybelle",
       "publisher": "NEC Interchannel"
     },
     {
@@ -988,6 +1095,7 @@
       "releaseDate": "2003-08-07",
       "serial": "T-19720M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -995,6 +1103,7 @@
       "releaseDate": "2001-04-05",
       "serial": "T-45501M",
       "rating": "Violence",
+      "developer": "Four-Some",
       "publisher": "TV Asahi"
     },
     {
@@ -1002,6 +1111,7 @@
       "releaseDate": "1999-09-23",
       "serial": "T-38804M",
       "rating": "All ages",
+      "developer": "Atypical Alchemists Associate",
       "publisher": "",
       "altTitles": [
         "Industrial Spy: Operation Espionage"
@@ -1012,6 +1122,7 @@
       "releaseDate": "2000-10-05",
       "serial": "HDR-0076",
       "rating": "All ages",
+      "developer": "Aspect Digital Entertainment",
       "publisher": "Sega Corporation (2000-2015)",
       "altTitles": [
         "Skies of Arcadia"
@@ -1022,6 +1133,7 @@
       "releaseDate": "2000",
       "serial": "",
       "rating": "",
+      "developer": "Overworks",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1029,6 +1141,7 @@
       "releaseDate": "2001-03-22",
       "serial": "T-39802M",
       "rating": "Violence",
+      "developer": "C's Ware‏‎",
       "publisher": "NetVillage"
     },
     {
@@ -1036,6 +1149,7 @@
       "releaseDate": "2002-08-29",
       "serial": "T-19716M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -1043,6 +1157,7 @@
       "releaseDate": "2003-11-27",
       "serial": "T-19723M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -1050,6 +1165,7 @@
       "releaseDate": "2001-05-31",
       "serial": "T-44404M",
       "rating": "All ages",
+      "developer": "Abel",
       "publisher": "Abel"
     },
     {
@@ -1057,6 +1173,7 @@
       "releaseDate": "2000",
       "serial": "",
       "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1064,6 +1181,7 @@
       "releaseDate": "1999-11-25",
       "serial": "T-3001M",
       "rating": "All ages",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -1071,6 +1189,7 @@
       "releaseDate": "2000-11-22",
       "serial": "T-3002M",
       "rating": "All ages",
+      "developer": "Video System",
       "publisher": "Video System"
     },
     {
@@ -1078,6 +1197,7 @@
       "releaseDate": "2000-08-03",
       "serial": "HDR-0100",
       "rating": "All ages",
+      "developer": "AM2 of CRI",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1085,6 +1205,7 @@
       "releaseDate": "2001-01-18",
       "serial": "HDR-0133",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -1092,6 +1213,7 @@
       "releaseDate": "2001-03-01",
       "serial": "T-18805M",
       "rating": "All ages",
+      "developer": "S-Neo",
       "publisher": "Spike"
     },
     {
@@ -1099,6 +1221,7 @@
       "releaseDate": "2002-08-08",
       "serial": "T-46304M",
       "rating": "",
+      "developer": "Broccoli",
       "publisher": "Broccoli"
     },
     {
@@ -1106,6 +1229,7 @@
       "releaseDate": "2002-08-08",
       "serial": "T-46305M",
       "rating": "All ages",
+      "developer": "Arcadia Entertainer",
       "publisher": "Broccoli"
     },
     {
@@ -1113,6 +1237,7 @@
       "releaseDate": "2001-02-22",
       "serial": "T-9105M",
       "rating": "All ages",
+      "developer": "Westone Bit Entertainment",
       "publisher": "",
       "altTitles": [
         "Reel Fishing: Wild"
@@ -1123,6 +1248,7 @@
       "releaseDate": "2003-07-31",
       "serial": "T-37908M",
       "rating": "All ages",
+      "developer": "Takuyo",
       "publisher": "Takuyo"
     },
     {
@@ -1130,6 +1256,7 @@
       "releaseDate": "2001-07-26",
       "serial": "T-37904M",
       "rating": "All ages",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -1137,6 +1264,7 @@
       "releaseDate": "1999-07-15",
       "serial": "T-34201M",
       "rating": "All ages",
+      "developer": "From Software",
       "publisher": "From Software"
     },
     {
@@ -1144,20 +1272,15 @@
       "releaseDate": "2002-02-07",
       "serial": "HDR-0187",
       "rating": "All ages",
+      "developer": "Chunsoft",
       "publisher": "Sega Corporation (2000-2015)"
-    },
-    {
-      "title": "Gaia Master Kessen! Seikiou Densetsu",
-      "releaseDate": "2001-06-28",
-      "serial": "T-1212M",
-      "rating": "All ages",
-      "publisher": "Capcom"
     },
     {
       "title": "Gakkyuu Ou Yamazaki: Yamazaki Oukoku Daifunsou!",
       "releaseDate": "1999-12-23",
       "serial": "HDR-0050",
       "rating": "All ages",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1165,6 +1288,7 @@
       "releaseDate": "2000-08-31",
       "serial": "T-9511M",
       "rating": "",
+      "developer": "Future Creates",
       "publisher": "Konami",
       "altTitles": [
         "ESPN International Track & Field"
@@ -1175,6 +1299,7 @@
       "releaseDate": "2001-09-27",
       "serial": "T-3108M",
       "rating": "All ages",
+      "developer": "SNK",
       "publisher": "",
       "altTitles": [
         "Fatal Fury: Mark of the Wolves"
@@ -1185,6 +1310,7 @@
       "releaseDate": "2001-08-30",
       "serial": "HDR-0169",
       "rating": "All ages",
+      "developer": "WOW Entertainment",
       "publisher": "Sega Corporation (2000-2015)",
       "altTitles": [
         "Sega Bass Fishing 2"
@@ -1195,6 +1321,7 @@
       "releaseDate": "2000-03-30",
       "serial": "HDR-0071",
       "rating": "All ages",
+      "developer": "Midnight Synergy",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1202,6 +1329,7 @@
       "releaseDate": "1999-04-01",
       "serial": "HDR-0023",
       "rating": "All ages",
+      "developer": "H.I.C.",
       "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Sega Bass Fishing"
@@ -1212,6 +1340,7 @@
       "releaseDate": "2000-08-10",
       "serial": "HDR-0101",
       "rating": "All ages",
+      "developer": "Scarab",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1219,6 +1348,7 @@
       "releaseDate": "1999-06-24",
       "serial": "HDR-0005",
       "rating": "All ages",
+      "developer": "Scarab",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1226,6 +1356,7 @@
       "releaseDate": "1999-11-11",
       "serial": "T-1208M",
       "rating": "All ages",
+      "developer": "Takumi Corporation",
       "publisher": "Capcom"
     },
     {
@@ -1233,6 +1364,7 @@
       "releaseDate": "2001-01-18",
       "serial": "T-1239M",
       "rating": "All ages",
+      "developer": "Takumi Corporation",
       "publisher": "Capcom"
     },
     {
@@ -1240,13 +1372,15 @@
       "releaseDate": "1998-11-27",
       "serial": "HDR-0004",
       "rating": "All ages",
-      "publisher": "Sega Enterprises, Ltd."
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Godzilla Generations Maximum Impact",
       "releaseDate": "1999-12-23",
       "serial": "HDR-0047",
       "rating": "All ages",
+      "developer": "Quintet",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1254,6 +1388,7 @@
       "releaseDate": "2000-02-24",
       "serial": "T-41501M",
       "rating": "All ages",
+      "developer": "CaramelPot",
       "publisher": "CaramelPot"
     },
     {
@@ -1261,6 +1396,7 @@
       "releaseDate": "1999-12-09",
       "serial": "T-40901M",
       "rating": "All ages",
+      "developer": "Bottom Up",
       "publisher": "",
       "altTitles": [
         "Tee Off"
@@ -1271,6 +1407,7 @@
       "releaseDate": "2001-01-25",
       "serial": "T-44501M",
       "rating": "All ages",
+      "developer": "Softmax",
       "publisher": "Softmax"
     },
     {
@@ -1278,6 +1415,7 @@
       "releaseDate": "2000-08-03",
       "serial": "T-40904M",
       "rating": "All ages",
+      "developer": "Softmax",
       "publisher": "Softmax"
     },
     {
@@ -1285,6 +1423,7 @@
       "releaseDate": "2000-06-01",
       "serial": "T-40903M",
       "rating": "All ages",
+      "developer": "Bottom Up",
       "publisher": "Softmax"
     },
     {
@@ -1292,6 +1431,7 @@
       "releaseDate": "2000-08-03",
       "serial": "T-4503M",
       "rating": "All ages",
+      "developer": "Game Arts",
       "publisher": ""
     },
     {
@@ -1299,6 +1439,7 @@
       "releaseDate": "1999-09-30",
       "serial": "HDR-0033",
       "rating": "Violence",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1306,6 +1447,7 @@
       "releaseDate": "1999-11-25",
       "serial": "HDR-0034",
       "rating": "Violence",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1313,6 +1455,7 @@
       "releaseDate": "2000-01-27",
       "serial": "HDR-0035",
       "rating": "Violence",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1320,6 +1463,7 @@
       "releaseDate": "2000-03-30",
       "serial": "HDR-0036",
       "rating": "Violence",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1327,6 +1471,7 @@
       "releaseDate": "2000-05-25",
       "serial": "HDR-0037",
       "rating": "Violence",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1334,6 +1479,7 @@
       "releaseDate": "2000-07-27",
       "serial": "HDR-0038",
       "rating": "Violence",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1341,6 +1487,7 @@
       "releaseDate": "2000-12-14",
       "serial": "T-2402M",
       "rating": "All ages",
+      "developer": "Arc System Works",
       "publisher": "Sammy"
     },
     {
@@ -1348,6 +1495,7 @@
       "releaseDate": "2000-03-09",
       "serial": "T-1213M",
       "rating": "All ages",
+      "developer": "Psikyo",
       "publisher": "Capcom"
     },
     {
@@ -1355,6 +1503,7 @@
       "releaseDate": "2001-06-28",
       "serial": "T-13304M",
       "rating": "All ages",
+      "developer": "BECCategory :Live link reference",
       "publisher": "Bandai"
     },
     {
@@ -1362,6 +1511,7 @@
       "releaseDate": "1999-11",
       "serial": "",
       "rating": "All ages",
+      "developer": "Bandai",
       "publisher": "Bandai"
     },
     {
@@ -1369,6 +1519,7 @@
       "releaseDate": "2000-12-21",
       "serial": "T-1219M",
       "rating": "All ages",
+      "developer": "Psikyo",
       "publisher": "Capcom",
       "altTitles": [
         "Cannon Spike"
@@ -1379,6 +1530,7 @@
       "releaseDate": "2001-08-09",
       "serial": "HDR-0168",
       "rating": "All ages",
+      "developer": "Overworks",
       "publisher": "Sega PC"
     },
     {
@@ -1386,6 +1538,7 @@
       "releaseDate": "2002-03-14",
       "serial": "HDR-0195",
       "rating": "All ages",
+      "developer": "Overworks",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -1393,6 +1546,7 @@
       "releaseDate": "2000-01-06",
       "serial": "HDR-0046",
       "rating": "All ages",
+      "developer": "Red Company",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1400,6 +1554,7 @@
       "releaseDate": "2003-02-27",
       "serial": "T-46512M",
       "rating": "All ages",
+      "developer": "PrincessSoft",
       "publisher": "PrincessSoft"
     },
     {
@@ -1407,6 +1562,7 @@
       "releaseDate": "2001-04-26",
       "serial": "T-19503M",
       "rating": "All ages",
+      "developer": "Fupac",
       "publisher": "Datam Polystar"
     },
     {
@@ -1414,6 +1570,7 @@
       "releaseDate": "2000-09-28",
       "serial": "T-19504M",
       "rating": "All ages",
+      "developer": "Fupac",
       "publisher": "Datam Polystar"
     },
     {
@@ -1421,6 +1578,7 @@
       "releaseDate": "2001-03-22",
       "serial": "T-20106M",
       "rating": "All ages",
+      "developer": "SIMS",
       "publisher": "NEC Interchannel"
     },
     {
@@ -1428,6 +1586,7 @@
       "releaseDate": "2001-07-12",
       "serial": "T-1246M",
       "rating": "Violence",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -1435,6 +1594,7 @@
       "releaseDate": "2000-10-26",
       "serial": "T-2202M",
       "rating": "All ages",
+      "developer": "Micronet",
       "publisher": "Micronet"
     },
     {
@@ -1442,6 +1602,7 @@
       "releaseDate": "1999-10-08",
       "serial": "610-7349",
       "rating": "All ages",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1449,6 +1610,7 @@
       "releaseDate": "2000-04-13",
       "serial": "HDR-0065",
       "rating": "All ages",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1456,6 +1618,7 @@
       "releaseDate": "1999-11-25",
       "serial": "610-7381",
       "rating": "All ages",
+      "developer": "FortyFive",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1463,6 +1626,7 @@
       "releaseDate": "1999-11-25",
       "serial": "HDR-0055",
       "rating": "All ages",
+      "developer": "Midnight Synergy",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1470,6 +1634,7 @@
       "releaseDate": "2000-03-30",
       "serial": "HDR-0070",
       "rating": "All ages",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1477,6 +1642,7 @@
       "releaseDate": "2000-08-10",
       "serial": "HDR-0090",
       "rating": "All ages",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1484,6 +1650,7 @@
       "releaseDate": "2001-07-26",
       "serial": "T-46101M",
       "rating": "All ages",
+      "developer": "Starfish",
       "publisher": "Starfish"
     },
     {
@@ -1491,6 +1658,7 @@
       "releaseDate": "2001-02-15",
       "serial": "HDR-0124",
       "rating": "All ages",
+      "developer": "Smilebit",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -1498,6 +1666,7 @@
       "releaseDate": "1999-09-23",
       "serial": "T-5703M",
       "rating": "All ages",
+      "developer": "Jaleco",
       "publisher": "Jaleco"
     },
     {
@@ -1505,6 +1674,7 @@
       "releaseDate": "2002-09-05",
       "serial": "T-38706M",
       "rating": "All ages",
+      "developer": "Treasure",
       "publisher": "Entertainment Software Publishing"
     },
     {
@@ -1512,6 +1682,7 @@
       "releaseDate": "2001-03-29",
       "serial": "T-45601M",
       "rating": "Violence",
+      "developer": "Crazy Games",
       "publisher": ""
     },
     {
@@ -1519,6 +1690,7 @@
       "releaseDate": "2000-06-29",
       "serial": "T-43501M",
       "rating": "All ages",
+      "developer": "Marionette",
       "publisher": "Global A Entertainment"
     },
     {
@@ -1526,6 +1698,7 @@
       "releaseDate": "1998-12-17",
       "serial": "T-15001M",
       "rating": "All ages",
+      "developer": "Rage Software",
       "publisher": "",
       "altTitles": [
         "Incoming"
@@ -1536,6 +1709,7 @@
       "releaseDate": "2001-11-08",
       "serial": "T-19506M",
       "rating": "All ages",
+      "developer": "Datam Polystar",
       "publisher": "Datam Polystar"
     },
     {
@@ -1543,6 +1717,7 @@
       "releaseDate": "2001-07-05",
       "serial": "T-19505M",
       "rating": "All ages",
+      "developer": "Fupac",
       "publisher": "Datam Polystar"
     },
     {
@@ -1550,6 +1725,7 @@
       "releaseDate": "2003-04-24",
       "serial": "T-20127M",
       "rating": "All ages",
+      "developer": "LONGSHOT",
       "publisher": "NEC Interchannel"
     },
     {
@@ -1557,6 +1733,7 @@
       "releaseDate": "2003-08-07",
       "serial": "T-19721M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -1564,6 +1741,7 @@
       "releaseDate": "2000",
       "serial": "610-7813",
       "rating": "",
+      "developer": "Isao",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1571,6 +1749,7 @@
       "releaseDate": "2004-01-29",
       "serial": "T-46902M",
       "rating": "18+",
+      "developer": "CepiaCategory :Live link reference",
       "publisher": "Symbio PlanningCategory :Live link reference"
     },
     {
@@ -1578,6 +1757,7 @@
       "releaseDate": "2000",
       "serial": "",
       "rating": "All ages",
+      "developer": "",
       "publisher": "J-Data"
     },
     {
@@ -1585,6 +1765,7 @@
       "releaseDate": "2002-02-07",
       "serial": "HDR-0154",
       "rating": "All ages",
+      "developer": "Smilebit",
       "publisher": "Sega Corporation (2000-2015)",
       "altTitles": [
         "90 Minutes: Sega Championship Football"
@@ -1595,6 +1776,7 @@
       "releaseDate": "1999-09-30",
       "serial": "HDR-0028",
       "rating": "All ages",
+      "developer": "Sega Software R&D Dept. 6",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1602,6 +1784,7 @@
       "releaseDate": "2000-08-31",
       "serial": "T-43401M",
       "rating": "All ages",
+      "developer": "Visit",
       "publisher": "Visit"
     },
     {
@@ -1609,6 +1792,7 @@
       "releaseDate": "1999-12-09",
       "serial": "T-40902M",
       "rating": "All ages",
+      "developer": "Bimboosoft",
       "publisher": "",
       "altTitles": [
         "Coaster Works"
@@ -1619,6 +1803,7 @@
       "releaseDate": "2000-11-02",
       "serial": "T-41201M",
       "rating": "All ages",
+      "developer": "Bimboosoft",
       "publisher": "Bimboosoft"
     },
     {
@@ -1626,6 +1811,7 @@
       "releaseDate": "2000-06-29",
       "serial": "HDR-0078",
       "rating": "All ages",
+      "developer": "Sega Software R&D Dept. 6",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1633,6 +1819,7 @@
       "releaseDate": "2000",
       "serial": "",
       "rating": "",
+      "developer": "Smilebit",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1640,6 +1827,7 @@
       "releaseDate": "2000-03-30",
       "serial": "T-9507M",
       "rating": "",
+      "developer": "Konami Computer Entertainment Osaka",
       "publisher": "Konami"
     },
     {
@@ -1647,6 +1835,7 @@
       "releaseDate": "2000-06-22",
       "serial": "T-10301M",
       "rating": "All ages",
+      "developer": "KSW",
       "publisher": "Takara"
     },
     {
@@ -1654,6 +1843,7 @@
       "releaseDate": "2000-09-28",
       "serial": "T-18802M",
       "rating": "All ages",
+      "developer": "Daikoku",
       "publisher": "Sammy Corporation"
     },
     {
@@ -1661,6 +1851,7 @@
       "releaseDate": "1999-11-25",
       "serial": "T-1205M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -1668,6 +1859,7 @@
       "releaseDate": "2000",
       "serial": "T-42501M",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -1675,6 +1867,7 @@
       "releaseDate": "2002",
       "serial": "HDR-0204",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -1682,6 +1875,7 @@
       "releaseDate": "1998-11-27",
       "serial": "T-35401M",
       "rating": "Violence",
+      "developer": "FortyFive",
       "publisher": "FortyFive"
     },
     {
@@ -1689,6 +1883,7 @@
       "releaseDate": "2001-08-02",
       "serial": "T-42802M",
       "rating": "All ages",
+      "developer": "HighwaystarCategory :Live link reference",
       "publisher": "Kobi"
     },
     {
@@ -1696,6 +1891,7 @@
       "releaseDate": "2003-03-06",
       "serial": "T-37910M",
       "rating": "All ages",
+      "developer": "Takuyo",
       "publisher": "Takuyo"
     },
     {
@@ -1703,6 +1899,7 @@
       "releaseDate": "2000-09-14",
       "serial": "T-20105M",
       "rating": "All ages",
+      "developer": "Cybelle",
       "publisher": "NEC Interchannel"
     },
     {
@@ -1710,6 +1907,7 @@
       "releaseDate": "2007-03-08",
       "serial": "T-47803M",
       "rating": "CERO: A",
+      "developer": "Milestone",
       "publisher": "Milestone"
     },
     {
@@ -1717,6 +1915,7 @@
       "releaseDate": "2004-04-15",
       "serial": "T-47501M",
       "rating": "All ages",
+      "developer": "Milksoft",
       "publisher": "Rain Software"
     },
     {
@@ -1724,6 +1923,7 @@
       "releaseDate": "1999-08-26",
       "serial": "T-27901M",
       "rating": "All ages",
+      "developer": "Will",
       "publisher": "Entertainment Software Publishing"
     },
     {
@@ -1731,6 +1931,7 @@
       "releaseDate": "1999-08-26",
       "serial": "T-13302M",
       "rating": "All ages",
+      "developer": "BEC",
       "publisher": "Bandai",
       "altTitles": [
         "Gundam Side Story 0079: Rise from the Ashes"
@@ -1741,6 +1942,7 @@
       "releaseDate": "2000-06-29",
       "serial": "T-13305M",
       "rating": "All ages",
+      "developer": "BECCategory :Live link reference",
       "publisher": "Bandai"
     },
     {
@@ -1748,6 +1950,7 @@
       "releaseDate": "2002-04-11",
       "serial": "T-13306M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Bandai"
     },
     {
@@ -1755,6 +1958,7 @@
       "releaseDate": "2002-09-26",
       "serial": "T-47101M",
       "rating": "All ages",
+      "developer": "HuneX",
       "publisher": "Alchemist"
     },
     {
@@ -1762,6 +1966,7 @@
       "releaseDate": "1999-08-05",
       "serial": "T-14306M",
       "rating": "All ages",
+      "developer": "Hudson Soft",
       "publisher": "Hudson Soft"
     },
     {
@@ -1769,6 +1974,7 @@
       "releaseDate": "1999-03-18",
       "serial": "T-14301M",
       "rating": "All ages",
+      "developer": "Hudson Soft",
       "publisher": "Hudson Soft"
     },
     {
@@ -1776,6 +1982,7 @@
       "releaseDate": "1999-11-18",
       "serial": "T-39801M",
       "rating": "All ages",
+      "developer": "SPS",
       "publisher": "NetVillage"
     },
     {
@@ -1783,6 +1990,7 @@
       "releaseDate": "2000-04-27",
       "serial": "HDR-0064",
       "rating": "All ages",
+      "developer": "Four-Some",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1790,6 +1998,7 @@
       "releaseDate": "2002-11-28",
       "serial": "T-9906M",
       "rating": "All ages",
+      "developer": "Vridge",
       "publisher": "Success"
     },
     {
@@ -1797,20 +2006,15 @@
       "releaseDate": "2001-04-26",
       "serial": "T-9905M",
       "rating": "All ages",
+      "developer": "Vridge",
       "publisher": "Success"
-    },
-    {
-      "title": "Kuon no Kizuna: Sairinshou",
-      "releaseDate": "2000-05-18",
-      "serial": "T-36701M",
-      "rating": "Violence",
-      "publisher": "FOG"
     },
     {
       "title": "L.O.L.",
       "releaseDate": "2000-11-02",
       "serial": "T-2106M",
       "rating": "All ages",
+      "developer": "LOVEDELIC",
       "publisher": "ASCII"
     },
     {
@@ -1818,6 +2022,7 @@
       "releaseDate": "2000-03-23",
       "serial": "T-42401M",
       "rating": "All ages",
+      "developer": "Nexus Interact",
       "publisher": "DaZZ"
     },
     {
@@ -1825,6 +2030,7 @@
       "releaseDate": "1999-11-03",
       "serial": "T-2501M",
       "rating": "All ages",
+      "developer": "NCS",
       "publisher": "Masaya"
     },
     {
@@ -1832,6 +2038,7 @@
       "releaseDate": "2001-03-15",
       "serial": "HDR-0149",
       "rating": "All ages",
+      "developer": "Infogrames Melbourne House",
       "publisher": "",
       "altTitles": [
         "Le Mans 24 Hours (Dreamcast)"
@@ -1842,6 +2049,7 @@
       "releaseDate": "2001-03-29",
       "serial": "HDR-0139",
       "rating": "All ages",
+      "developer": "FortyFive",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -1849,6 +2057,7 @@
       "releaseDate": "2000-09-28",
       "serial": "HDR-0102",
       "rating": "All ages",
+      "developer": "FortyFive",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1856,6 +2065,7 @@
       "releaseDate": "1999-09-23",
       "serial": "T-4401M",
       "rating": "All ages",
+      "developer": "SIMS",
       "publisher": "SIMS"
     },
     {
@@ -1863,6 +2073,7 @@
       "releaseDate": "2001-02-22",
       "serial": "T-21501M",
       "rating": "All ages",
+      "developer": "Warashi",
       "publisher": "Shoeisha"
     },
     {
@@ -1870,6 +2081,7 @@
       "releaseDate": "2001-06-28",
       "serial": "HDR-0116",
       "rating": "All ages",
+      "developer": "Alfa System",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -1877,6 +2089,7 @@
       "releaseDate": "1999-03-04",
       "serial": "T-7601M",
       "rating": "All ages",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -1884,6 +2097,7 @@
       "releaseDate": "2003-06-26",
       "serial": "T-20124M",
       "rating": "18+",
+      "developer": "Frontwing",
       "publisher": "NEC Interchannel"
     },
     {
@@ -1891,6 +2105,7 @@
       "releaseDate": "1999-11-25",
       "serial": "T-14401M",
       "rating": "All ages",
+      "developer": "Atlus",
       "publisher": ""
     },
     {
@@ -1898,6 +2113,7 @@
       "releaseDate": "2001-11-15",
       "serial": "T-44701M",
       "rating": "All ages",
+      "developer": "Kool Kizz",
       "publisher": "Kool Kizz"
     },
     {
@@ -1905,6 +2121,7 @@
       "releaseDate": "1999-10-07",
       "serial": "T-5202M",
       "rating": "All ages",
+      "developer": "Microcabin",
       "publisher": "Microcabin"
     },
     {
@@ -1912,6 +2129,7 @@
       "releaseDate": "2000-05-18",
       "serial": "T-5203M",
       "rating": "All ages",
+      "developer": "Microcabin",
       "publisher": "Microcabin"
     },
     {
@@ -1919,6 +2137,7 @@
       "releaseDate": "1999-07-29",
       "serial": "T-2201M",
       "rating": "All ages",
+      "developer": "Micronet",
       "publisher": "Micronet"
     },
     {
@@ -1926,6 +2145,7 @@
       "releaseDate": "2000-11-09",
       "serial": "T-2204M",
       "rating": "All ages",
+      "developer": "Micronet",
       "publisher": "Micronet"
     },
     {
@@ -1933,6 +2153,7 @@
       "releaseDate": "2000-11-09",
       "serial": "T-1238M",
       "rating": "All ages",
+      "developer": "Takumi Corporation",
       "publisher": "Capcom"
     },
     {
@@ -1940,6 +2161,7 @@
       "releaseDate": "2000-03-30",
       "serial": "T-1215M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -1947,6 +2169,7 @@
       "releaseDate": "2000",
       "serial": "",
       "rating": "",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -1954,6 +2177,7 @@
       "releaseDate": "1999-03-25",
       "serial": "T-1202M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -1961,6 +2185,7 @@
       "releaseDate": "2002-10-24",
       "serial": "T-46510M",
       "rating": "All ages",
+      "developer": "Will",
       "publisher": "PrincessSoft"
     },
     {
@@ -1968,6 +2193,7 @@
       "releaseDate": "2001-09-27",
       "serial": "T-19707M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -1975,6 +2201,7 @@
       "releaseDate": "2000-06-29",
       "serial": "T-19702M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -1982,6 +2209,7 @@
       "releaseDate": "2000-11-16",
       "serial": "T-20103M",
       "rating": "All ages",
+      "developer": "Longshot",
       "publisher": "NEC Interchannel"
     },
     {
@@ -1989,6 +2217,7 @@
       "releaseDate": "2003-07-17",
       "serial": "T-46514M",
       "rating": "Violence",
+      "developer": "WHITE CLARITY",
       "publisher": "PrincessSoft"
     },
     {
@@ -1996,6 +2225,7 @@
       "releaseDate": "2002-06-27",
       "serial": "T-46507M",
       "rating": "All ages",
+      "developer": "PrincessSoft",
       "publisher": "PrincessSoft"
     },
     {
@@ -2003,6 +2233,7 @@
       "releaseDate": "1999",
       "serial": "610-7117",
       "rating": "All ages",
+      "developer": "WebTV Networks",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2010,6 +2241,7 @@
       "releaseDate": "2002-02-28",
       "serial": "T-19713M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -2017,6 +2249,7 @@
       "releaseDate": "2001-06-21",
       "serial": "T-18702M",
       "rating": "All ages",
+      "developer": "Spiel",
       "publisher": "Naxat Soft"
     },
     {
@@ -2024,6 +2257,7 @@
       "releaseDate": "2002-10-24",
       "serial": "T-36703M",
       "rating": "All ages",
+      "developer": "O-TWO",
       "publisher": "FOG"
     },
     {
@@ -2031,6 +2265,7 @@
       "releaseDate": "2003-07-31",
       "serial": "T-36704M",
       "rating": "All ages",
+      "developer": "O-TWO",
       "publisher": "FOG"
     },
     {
@@ -2038,6 +2273,7 @@
       "releaseDate": "2002-01-17",
       "serial": "T-36702M",
       "rating": "All ages",
+      "developer": "O-TWO",
       "publisher": "FOG"
     },
     {
@@ -2045,6 +2281,7 @@
       "releaseDate": "2002-03-07",
       "serial": "T-20114M",
       "rating": "All ages",
+      "developer": "HuneX",
       "publisher": "NEC Interchannel"
     },
     {
@@ -2052,6 +2289,7 @@
       "releaseDate": "2003-12-25",
       "serial": "T-46515M",
       "rating": "All ages",
+      "developer": "KeroQ",
       "publisher": "PrincessSoft"
     },
     {
@@ -2059,6 +2297,7 @@
       "releaseDate": "2000-12-07",
       "serial": "T-1221M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom",
       "altTitles": [
         "Project Justice"
@@ -2069,6 +2308,7 @@
       "releaseDate": "1999-03-11",
       "serial": "T-17701M",
       "rating": "All ages",
+      "developer": "Ubisoft",
       "publisher": "Ubi Soft",
       "altTitles": [
         "Monaco Grand Prix"
@@ -2079,6 +2319,7 @@
       "releaseDate": "1999-04-15",
       "serial": "T-39102M",
       "rating": "All ages",
+      "developer": "Random House",
       "publisher": "Random House"
     },
     {
@@ -2086,6 +2327,7 @@
       "releaseDate": "1999-04-15",
       "serial": "T-39101M",
       "rating": "All ages",
+      "developer": "Random House",
       "publisher": "Random House"
     },
     {
@@ -2093,6 +2335,7 @@
       "releaseDate": "2000-09-28",
       "serial": "HDR-0092",
       "rating": "All ages",
+      "developer": "Smilebit",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2100,6 +2343,7 @@
       "releaseDate": "2000-06-29",
       "serial": "T-1402M",
       "rating": "All ages",
+      "developer": "Namco",
       "publisher": ""
     },
     {
@@ -2107,6 +2351,7 @@
       "releaseDate": "2002-12-26",
       "serial": "T-23203M",
       "rating": "All ages",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -2114,6 +2359,7 @@
       "releaseDate": "2002-04-25",
       "serial": "T-19714M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -2121,6 +2367,7 @@
       "releaseDate": "2003-07-10",
       "serial": "T-19719M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -2128,6 +2375,7 @@
       "releaseDate": "2002-03-28",
       "serial": "T-44702M",
       "rating": "All ages",
+      "developer": "Kool Kizz",
       "publisher": "Kool Kizz"
     },
     {
@@ -2135,6 +2383,7 @@
       "releaseDate": "2000-01-20",
       "serial": "T-7604M",
       "rating": "Violence",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -2142,6 +2391,7 @@
       "releaseDate": "2000-10-19",
       "serial": "HDR-0079",
       "rating": "All ages",
+      "developer": "Chime",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2149,6 +2399,7 @@
       "releaseDate": "2000-03-23",
       "serial": "HDR-0069",
       "rating": "All ages",
+      "developer": "Visual Concepts",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2156,6 +2407,7 @@
       "releaseDate": "2001-03-29",
       "serial": "HDR-0150",
       "rating": "All ages",
+      "developer": "Visual Concepts",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2163,6 +2415,7 @@
       "releaseDate": "2002-05-23",
       "serial": "HDR-0197",
       "rating": "All ages",
+      "developer": "Visual Concepts",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2170,6 +2423,7 @@
       "releaseDate": "2000-10-26",
       "serial": "T-9904M",
       "rating": "All ages",
+      "developer": "LittleWing",
       "publisher": "Success"
     },
     {
@@ -2177,6 +2431,7 @@
       "releaseDate": "2000-07-06",
       "serial": "T-41003M",
       "rating": "All ages",
+      "developer": "Falcon",
       "publisher": "Daikoku Denki"
     },
     {
@@ -2184,6 +2439,7 @@
       "releaseDate": "2000-09-28",
       "serial": "T-41004M",
       "rating": "All ages",
+      "developer": "Falcon",
       "publisher": "Daikoku Denki"
     },
     {
@@ -2191,6 +2447,7 @@
       "releaseDate": "2000-12-14",
       "serial": "T-41005M",
       "rating": "All ages",
+      "developer": "Falcon",
       "publisher": "Daikoku Denki"
     },
     {
@@ -2198,6 +2455,7 @@
       "releaseDate": "2000-12-14",
       "serial": "T-41006M",
       "rating": "All ages",
+      "developer": "Falcon",
       "publisher": "Daikoku Denki"
     },
     {
@@ -2205,6 +2463,7 @@
       "releaseDate": "2001-02-15",
       "serial": "T-41007M",
       "rating": "All ages",
+      "developer": "Falcon",
       "publisher": "Daikoku Denki"
     },
     {
@@ -2212,6 +2471,7 @@
       "releaseDate": "1999-11-06",
       "serial": "T-41002M",
       "rating": "All ages",
+      "developer": "Falcon",
       "publisher": "Daikoku Denki"
     },
     {
@@ -2219,6 +2479,7 @@
       "releaseDate": "2000-07-27",
       "serial": "T-37903M",
       "rating": "All ages",
+      "developer": "FortyFive",
       "publisher": "Takuyo"
     },
     {
@@ -2226,6 +2487,7 @@
       "releaseDate": "2001-05-24",
       "serial": "T-45706M",
       "rating": "All ages",
+      "developer": "Yuki Enterprise",
       "publisher": "Atmark"
     },
     {
@@ -2233,6 +2495,7 @@
       "releaseDate": "2001-05-24",
       "serial": "T-45705M",
       "rating": "All ages",
+      "developer": "Yuki Enterprise",
       "publisher": "Atmark"
     },
     {
@@ -2240,6 +2503,7 @@
       "releaseDate": "2001-05-24",
       "serial": "T-45704M",
       "rating": "All ages",
+      "developer": "Yuki Enterprise",
       "publisher": "Atmark"
     },
     {
@@ -2247,6 +2511,7 @@
       "releaseDate": "2001-05-24",
       "serial": "T-45703M",
       "rating": "All ages",
+      "developer": "Yuki Enterprise",
       "publisher": "Atmark"
     },
     {
@@ -2254,6 +2519,7 @@
       "releaseDate": "2001-05-24",
       "serial": "T-45701M",
       "rating": "All ages",
+      "developer": "Yuki Enterprise",
       "publisher": "Atmark"
     },
     {
@@ -2261,6 +2527,7 @@
       "releaseDate": "2001-05-24",
       "serial": "T-45707M",
       "rating": "All ages",
+      "developer": "Yuki Enterprise",
       "publisher": "Atmark"
     },
     {
@@ -2268,6 +2535,7 @@
       "releaseDate": "2001-05-24",
       "serial": "T-45702M",
       "rating": "All ages",
+      "developer": "Yuki Enterprise",
       "publisher": "Atmark"
     },
     {
@@ -2275,6 +2543,7 @@
       "releaseDate": "2000-10-09",
       "serial": "T-1234M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -2282,6 +2551,7 @@
       "releaseDate": "2000-10-19",
       "serial": "HDR-0006",
       "rating": "All ages",
+      "developer": "Data East",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2289,6 +2559,7 @@
       "releaseDate": "2000-12-21",
       "serial": "T-19703M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -2296,6 +2567,7 @@
       "releaseDate": "2000-01-20",
       "serial": "HDR-0058",
       "rating": "All ages",
+      "developer": "Visual Concepts",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2303,6 +2575,7 @@
       "releaseDate": "2001-03-29",
       "serial": "HDR-0144",
       "rating": "All ages",
+      "developer": "Visual Concepts",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2310,6 +2583,7 @@
       "releaseDate": "2002-03-28",
       "serial": "HDR-0196",
       "rating": "All ages",
+      "developer": "Visual Concepts",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2317,6 +2591,7 @@
       "releaseDate": "2002-07-11",
       "serial": "HDR-0199",
       "rating": "All ages",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -2324,6 +2599,7 @@
       "releaseDate": "1999-11-18",
       "serial": "T-18701M",
       "rating": "All ages",
+      "developer": "Chatnoir",
       "publisher": "Naxat Soft"
     },
     {
@@ -2331,6 +2607,7 @@
       "releaseDate": "2002-02-28",
       "serial": "T-46505M",
       "rating": "Violence",
+      "developer": "KeroQ",
       "publisher": "PrincessSoft"
     },
     {
@@ -2338,6 +2615,7 @@
       "releaseDate": "2001-02-22",
       "serial": "T-44502M",
       "rating": "All ages",
+      "developer": "Softmax",
       "publisher": "Softmax"
     },
     {
@@ -2345,6 +2623,7 @@
       "releaseDate": "1999-12-16",
       "serial": "T-7605M",
       "rating": "All ages",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -2352,6 +2631,7 @@
       "releaseDate": "1999-03-25",
       "serial": "T-7602M",
       "rating": "All ages",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -2359,6 +2639,7 @@
       "releaseDate": "1999-10",
       "serial": "",
       "rating": "",
+      "developer": "wikipedia :Nomura Securities",
       "publisher": "wikipedia :Nomura Securities"
     },
     {
@@ -2366,6 +2647,7 @@
       "releaseDate": "1999-12-09",
       "serial": "T-32801M",
       "rating": "All ages",
+      "developer": "Waka Manufacturing",
       "publisher": "Waka Manufacturing"
     },
     {
@@ -2373,6 +2655,7 @@
       "releaseDate": "2000-02-24",
       "serial": "HDR-0057",
       "rating": "All ages",
+      "developer": "Japan Vistec",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2380,6 +2663,7 @@
       "releaseDate": "2002-11-28",
       "serial": "T-19718M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -2387,6 +2671,7 @@
       "releaseDate": "2004-04-28",
       "serial": "T-18708M",
       "rating": "All ages",
+      "developer": "Pionesoft",
       "publisher": "Pionesoft"
     },
     {
@@ -2394,6 +2679,7 @@
       "releaseDate": "1999-12-16",
       "serial": "T-38704M",
       "rating": "All ages",
+      "developer": "Exe-Create",
       "publisher": "Entertainment Software Publishing"
     },
     {
@@ -2401,6 +2687,7 @@
       "releaseDate": "2001-08-02",
       "serial": "HDR-0118",
       "rating": "All ages",
+      "developer": "AM2 of CRI",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2408,6 +2695,7 @@
       "releaseDate": "2001-07-26",
       "serial": "T-20501M",
       "rating": "All ages",
+      "developer": "Media Entertainment",
       "publisher": "Media Entertainment"
     },
     {
@@ -2415,6 +2703,7 @@
       "releaseDate": "2001-09-27",
       "serial": "T-20502M",
       "rating": "All ages",
+      "developer": "Media Entertainment",
       "publisher": "Media Entertainment"
     },
     {
@@ -2422,6 +2711,7 @@
       "releaseDate": "2001-10-04",
       "serial": "T-5205M",
       "rating": "All ages",
+      "developer": "Microcabin",
       "publisher": "Microcabin"
     },
     {
@@ -2429,6 +2719,7 @@
       "releaseDate": "2002-09-12",
       "serial": "T-20120M",
       "rating": "All ages",
+      "developer": "Pajamas Soft",
       "publisher": "NEC Interchannel"
     },
     {
@@ -2436,6 +2727,7 @@
       "releaseDate": "1999-12-22",
       "serial": "T-2102M",
       "rating": "All ages",
+      "developer": "Shangri-La",
       "publisher": "ASCII"
     },
     {
@@ -2443,6 +2735,7 @@
       "releaseDate": "2004-09-22",
       "serial": "T-18710M",
       "rating": "18+",
+      "developer": "Pionesoft",
       "publisher": "Pionesoft"
     },
     {
@@ -2450,6 +2743,7 @@
       "releaseDate": "1998-11-27",
       "serial": "T-17001M",
       "rating": "All ages",
+      "developer": "",
       "publisher": "General Entertainment"
     },
     {
@@ -2457,6 +2751,7 @@
       "releaseDate": "2000-12-21",
       "serial": "HDR-0129",
       "rating": "All ages",
+      "developer": "Sonic Team",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2464,6 +2759,7 @@
       "releaseDate": "2001-06-07",
       "serial": "HDR-0163",
       "rating": "All ages",
+      "developer": "Sonic Team (company)",
       "publisher": "Sega PC"
     },
     {
@@ -2471,13 +2767,15 @@
       "releaseDate": "2000",
       "serial": "",
       "rating": "",
+      "developer": "Sonic Team (company)",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Pia Carrot e Youkoso!! 2",
-      "releaseDate": "2003-02-06",
-      "serial": "T-20121M",
+      "releaseDate": "",
+      "serial": "T-20121M}",
       "rating": "All ages",
+      "developer": "Stack",
       "publisher": "NEC Interchannel"
     },
     {
@@ -2485,6 +2783,7 @@
       "releaseDate": "2001-06-21",
       "serial": "T-20109M",
       "rating": "All ages",
+      "developer": "Stack",
       "publisher": "NEC Interchannel"
     },
     {
@@ -2492,6 +2791,7 @@
       "releaseDate": "2003-03-27",
       "serial": "T-20122M",
       "rating": "18+",
+      "developer": "NEC Interchannel",
       "publisher": "NEC Interchannel"
     },
     {
@@ -2499,6 +2799,7 @@
       "releaseDate": "2004-06-17",
       "serial": "T-19724M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -2506,6 +2807,7 @@
       "releaseDate": "1999-10-07",
       "serial": "T-37901M",
       "rating": "All ages",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -2513,6 +2815,7 @@
       "releaseDate": "2000-06-08",
       "serial": "T-19501M",
       "rating": "All ages",
+      "developer": "Success",
       "publisher": "Datam Polystar"
     },
     {
@@ -2520,6 +2823,7 @@
       "releaseDate": "1999-02-25",
       "serial": "T-9501M",
       "rating": "",
+      "developer": "Konami Computer Entertainment Yokohama",
       "publisher": "Konami"
     },
     {
@@ -2527,6 +2831,7 @@
       "releaseDate": "1999-09-14",
       "serial": "T-9590M",
       "rating": "",
+      "developer": "Konami Computer Entertainment Yokohama",
       "publisher": "Konami"
     },
     {
@@ -2534,6 +2839,7 @@
       "releaseDate": "2000-02-10",
       "serial": "T-9591M",
       "rating": "",
+      "developer": "Konami Computer Entertainment Yokohama",
       "publisher": "Konami"
     },
     {
@@ -2541,6 +2847,7 @@
       "releaseDate": "2000-10-12",
       "serial": "T-9592M",
       "rating": "",
+      "developer": "Konami",
       "publisher": "Konami"
     },
     {
@@ -2548,6 +2855,7 @@
       "releaseDate": "2001-03-22",
       "serial": "T-6806M",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "CRI"
     },
     {
@@ -2555,6 +2863,7 @@
       "releaseDate": "2001-11-15",
       "serial": "HDR-0177",
       "rating": "All ages",
+      "developer": "Hitmaker",
       "publisher": "Sega Corporation (2000-2015)",
       "altTitles": [
         "Virtua Tennis 2"
@@ -2565,6 +2874,7 @@
       "releaseDate": "1999-02-25",
       "serial": "T-1201M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -2572,6 +2882,7 @@
       "releaseDate": "2000-04-27",
       "serial": "T-1218M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -2579,6 +2890,7 @@
       "releaseDate": "2000-11-23",
       "serial": "HDR-0113",
       "rating": "All ages",
+      "developer": "Hitmaker",
       "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Virtua Tennis"
@@ -2589,6 +2901,7 @@
       "releaseDate": "2003-05-29",
       "serial": "T-47106M",
       "rating": "All ages",
+      "developer": "HuneX",
       "publisher": "Alchemist"
     },
     {
@@ -2596,6 +2909,7 @@
       "releaseDate": "2001-07-19",
       "serial": "T-44801M",
       "rating": "All ages",
+      "developer": "Ninelives",
       "publisher": "GeneX"
     },
     {
@@ -2603,6 +2917,7 @@
       "releaseDate": "2001-11-29",
       "serial": "T-19712M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -2610,6 +2925,7 @@
       "releaseDate": "2000-08-24",
       "serial": "T-22002M",
       "rating": "All ages",
+      "developer": "Arc System Works",
       "publisher": "Arc System Works"
     },
     {
@@ -2617,6 +2933,7 @@
       "releaseDate": "2000-03-30",
       "serial": "T-16801M",
       "rating": "All ages",
+      "developer": "Athena",
       "publisher": "Athena"
     },
     {
@@ -2624,6 +2941,7 @@
       "releaseDate": "2000-08-10",
       "serial": "HDR-0091",
       "rating": "All ages",
+      "developer": "Smilebit",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2631,6 +2949,7 @@
       "releaseDate": "1999-12-23",
       "serial": "HDR-0027",
       "rating": "All ages",
+      "developer": "Sega Software R&D Dept. 6",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2638,6 +2957,7 @@
       "releaseDate": "2001-08-30",
       "serial": "HDR-0173",
       "rating": "All ages",
+      "developer": "Smilebit",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2645,6 +2965,7 @@
       "releaseDate": "1999-08-05",
       "serial": "HDR-0022",
       "rating": "All ages",
+      "developer": "Sega Software R&D Dept. 6",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2652,6 +2973,7 @@
       "releaseDate": "1999-03-04",
       "serial": "T-1101M",
       "rating": "All ages",
+      "developer": "Taito",
       "publisher": "Taito"
     },
     {
@@ -2659,6 +2981,7 @@
       "releaseDate": "2004-02-26",
       "serial": "T-9907M",
       "rating": "All ages",
+      "developer": "Skonec",
       "publisher": "Success"
     },
     {
@@ -2666,6 +2989,7 @@
       "releaseDate": "1999-12-16",
       "serial": "T-6601M",
       "rating": "All ages",
+      "developer": "Compile",
       "publisher": "Compile"
     },
     {
@@ -2673,7 +2997,8 @@
       "releaseDate": "2004-02-24",
       "serial": "HDR-0216",
       "rating": "All ages",
-      "publisher": "Sega PC",
+      "developer": "Digi-mix inc.",
+      "publisher": "Sega Corporation (2000-2015)",
       "altTitles": [
         "Puyo Pop Fever"
       ]
@@ -2683,6 +3008,7 @@
       "releaseDate": "1999-03-04",
       "serial": "HDR-0014",
       "rating": "All ages",
+      "developer": "Compile",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2690,6 +3016,7 @@
       "releaseDate": "2000-03-16",
       "serial": "T-42301M",
       "rating": "All ages",
+      "developer": "Taito",
       "publisher": "",
       "altTitles": [
         "Bust-A-Move 4"
@@ -2700,6 +3027,7 @@
       "releaseDate": "2000-11-30",
       "serial": "HDR-0105",
       "rating": "All ages",
+      "developer": "Sega Software R&D Dept. 1",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2707,6 +3035,7 @@
       "releaseDate": "2006-02-16",
       "serial": "T-47802M",
       "rating": "All ages",
+      "developer": "Milestone",
       "publisher": "Milestone"
     },
     {
@@ -2714,6 +3043,7 @@
       "releaseDate": "2000-01-20",
       "serial": "T-9901M",
       "rating": "All ages",
+      "developer": "Success",
       "publisher": "Success"
     },
     {
@@ -2721,6 +3051,7 @@
       "releaseDate": "2000-03-23",
       "serial": "T-17703M",
       "rating": "All ages",
+      "developer": "Ubi Pictures",
       "publisher": "Ubi Soft",
       "altTitles": [
         "Rayman 2: The Great Escape"
@@ -2731,6 +3062,7 @@
       "releaseDate": "2000-07-13",
       "serial": "T-8101M",
       "rating": "All ages",
+      "developer": "Acclaim Studios London",
       "publisher": ""
     },
     {
@@ -2738,6 +3070,7 @@
       "releaseDate": "2000-01-13",
       "serial": "HDR-0051",
       "rating": "All ages",
+      "developer": "Midway Studios San Diego",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2745,6 +3078,7 @@
       "releaseDate": "1999-03-11",
       "serial": "T-30002M",
       "rating": "",
+      "developer": "Warp",
       "publisher": "Warp"
     },
     {
@@ -2752,6 +3086,7 @@
       "releaseDate": "2000-06-29",
       "serial": "T-27903M",
       "rating": "All ages",
+      "developer": "Entertainment Software Publishing",
       "publisher": "Kadokawa Shoten"
     },
     {
@@ -2759,6 +3094,7 @@
       "releaseDate": "1999-04-29",
       "serial": "T-15002M",
       "rating": "All ages",
+      "developer": "Criterion Software",
       "publisher": "Imagineer"
     },
     {
@@ -2766,6 +3102,7 @@
       "releaseDate": "2000",
       "serial": "",
       "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2773,13 +3110,15 @@
       "releaseDate": "2003-11-27",
       "serial": "T-47602M",
       "rating": "18+",
+      "developer": "Fupac",
       "publisher": "Good Navigate"
     },
     {
       "title": "Rent A Hero No.1",
-      "releaseDate": "2000-05-25",
-      "serial": "HDR-0074",
+      "releaseDate": "",
+      "serial": "HDR-0074}",
       "rating": "All ages",
+      "developer": "Algo-Nicus",
       "publisher": "Coolnet Entertainment"
     },
     {
@@ -2787,6 +3126,7 @@
       "releaseDate": "1999-10-28",
       "serial": "T-1301M",
       "rating": "All ages",
+      "developer": "Data East",
       "publisher": "Data East"
     },
     {
@@ -2794,6 +3134,7 @@
       "releaseDate": "2001-11-22",
       "serial": "HDR-0178",
       "rating": "All ages",
+      "developer": "United Game Artists",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2801,6 +3142,7 @@
       "releaseDate": "2000-02-24",
       "serial": "T-27902M",
       "rating": "Violence",
+      "developer": "Asmik Ace Entertainment",
       "publisher": "",
       "altTitles": [
         "The Ring: Terror's Realm"
@@ -2811,6 +3153,7 @@
       "releaseDate": "2000-01-27",
       "serial": "HDR-0044",
       "rating": "All ages",
+      "developer": "Sega Digital Media",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2818,6 +3161,7 @@
       "releaseDate": "2002-11-21",
       "serial": "T-19508M",
       "rating": "All ages",
+      "developer": "Fupac",
       "publisher": "Datam Polystar"
     },
     {
@@ -2825,6 +3169,7 @@
       "releaseDate": "2000-06-29",
       "serial": "T-19502M",
       "rating": "All ages",
+      "developer": "Fupac",
       "publisher": "Datam Polystar"
     },
     {
@@ -2832,6 +3177,7 @@
       "releaseDate": "2001-09-06",
       "serial": "T-46201M",
       "rating": "All ages",
+      "developer": "Yuki Enterprise",
       "publisher": "Idea Factory"
     },
     {
@@ -2839,6 +3185,7 @@
       "releaseDate": "2000-08-24",
       "serial": "T-40001M",
       "rating": "All ages",
+      "developer": "Noisia",
       "publisher": "Vision"
     },
     {
@@ -2846,6 +3193,7 @@
       "releaseDate": "2000-08-24",
       "serial": "T-14304M",
       "rating": "All ages",
+      "developer": "Hudson Soft",
       "publisher": "Hudson Soft"
     },
     {
@@ -2853,6 +3201,7 @@
       "releaseDate": "2000",
       "serial": "",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -2860,6 +3209,7 @@
       "releaseDate": "2001-12-13",
       "serial": "HDR-0183",
       "rating": "All ages",
+      "developer": "Smilebit",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2867,6 +3217,7 @@
       "releaseDate": "2000-12-21",
       "serial": "HDR-0126",
       "rating": "All ages",
+      "developer": "Smilebit",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2874,6 +3225,7 @@
       "releaseDate": "2000-04-20",
       "serial": "T-40802M",
       "rating": "All ages",
+      "developer": "Psy-Gong",
       "publisher": "Marvelous Entertainment"
     },
     {
@@ -2881,6 +3233,7 @@
       "releaseDate": "2000-05-25",
       "serial": "HDR-0072",
       "rating": "All ages",
+      "developer": "M2",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2888,6 +3241,7 @@
       "releaseDate": "2000-09-21",
       "serial": "HDR-0082",
       "rating": "All ages",
+      "developer": "Overworks",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2895,6 +3249,7 @@
       "releaseDate": "2001-03-22",
       "serial": "HDR-0152",
       "rating": "All ages",
+      "developer": "H.I.C.",
       "publisher": "Sega PC"
     },
     {
@@ -2902,6 +3257,7 @@
       "releaseDate": "2002-03-21",
       "serial": "HDR-0191",
       "rating": "All ages",
+      "developer": "Overworks",
       "publisher": "Sega PC"
     },
     {
@@ -2909,13 +3265,15 @@
       "releaseDate": "2002-03-21",
       "serial": "HDR-0201",
       "rating": "All ages",
-      "publisher": "Sega Corporation (2000-2015)"
+      "developer": "Overworks",
+      "publisher": "Sega"
     },
     {
       "title": "Sakura Taisen Dream Passport 3",
       "releaseDate": "2000-12-28",
       "serial": "",
       "rating": "All ages",
+      "developer": "Isao",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2923,6 +3281,7 @@
       "releaseDate": "2000-12-28",
       "serial": "HDR-0136",
       "rating": "All ages",
+      "developer": "Overworks",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2930,6 +3289,7 @@
       "releaseDate": "2001-12-20",
       "serial": "HDR-0185",
       "rating": "All ages",
+      "developer": "Overworks",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2937,6 +3297,7 @@
       "releaseDate": "2000-04-27",
       "serial": "HDR-0063",
       "rating": "All ages",
+      "developer": "Sega Software R&D Dept. 8",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -2944,6 +3305,7 @@
       "releaseDate": "2000-12-14",
       "serial": "HDR-0131",
       "rating": "All ages",
+      "developer": "Sonic Team (company)",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -2951,6 +3313,7 @@
       "releaseDate": "1999-03-25",
       "serial": "T-7603M",
       "rating": "All ages",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -2958,6 +3321,7 @@
       "releaseDate": "2000-04-06",
       "serial": "T-7607M",
       "rating": "All ages",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -2965,6 +3329,7 @@
       "releaseDate": "2000-09-14",
       "serial": "",
       "rating": "",
+      "developer": "Vivarium",
       "publisher": "Vivarium"
     },
     {
@@ -2972,6 +3337,7 @@
       "releaseDate": "1999-07-29",
       "serial": "T-39402M",
       "rating": "All ages",
+      "developer": "Vivarium",
       "publisher": "DigiToys"
     },
     {
@@ -2979,6 +3345,7 @@
       "releaseDate": "2000-08-10",
       "serial": "T-39405M",
       "rating": "All ages",
+      "developer": "Vivarium",
       "publisher": "Vivarium"
     },
     {
@@ -2986,6 +3353,7 @@
       "releaseDate": "2001-09-06",
       "serial": "HDR-0146",
       "rating": "All ages",
+      "developer": "Innerloop Studios",
       "publisher": ""
     },
     {
@@ -2993,6 +3361,7 @@
       "releaseDate": "2000-02-17",
       "serial": "HDR-0054",
       "rating": "All ages",
+      "developer": "Sega Software R&D Dept. 1",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3000,6 +3369,7 @@
       "releaseDate": "2001-03-29",
       "serial": "HKT-4300",
       "rating": "All ages",
+      "developer": "Sega Music Networks",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -3007,6 +3377,7 @@
       "releaseDate": "2000-10-19",
       "serial": "HDR-0104",
       "rating": "All ages",
+      "developer": "Matrix Interactive",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3014,6 +3385,7 @@
       "releaseDate": "1999-01-28",
       "serial": "HDR-0010",
       "rating": "All ages",
+      "developer": "AM Annex",
       "publisher": "Sega PC"
     },
     {
@@ -3021,6 +3393,7 @@
       "releaseDate": "2000-11-23",
       "serial": "HDR-0073",
       "rating": "All ages",
+      "developer": "Sega Software R&D Dept. 1",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3028,13 +3401,15 @@
       "releaseDate": "2001-05-31",
       "serial": "HDR-0171",
       "rating": "All ages",
-      "publisher": "Sega Corporation (2000-2015)"
+      "developer": "Hitmaker",
+      "publisher": "Sega"
     },
     {
       "title": "Seireiki Rayblade",
       "releaseDate": "2000-09-28",
       "serial": "T-42201M",
       "rating": "All ages",
+      "developer": "Winkysoft",
       "publisher": "Winkysoft"
     },
     {
@@ -3042,6 +3417,7 @@
       "releaseDate": "1999-06-24",
       "serial": "T-15003M",
       "rating": "All ages",
+      "developer": "Rage Software",
       "publisher": "",
       "altTitles": [
         "Expendable"
@@ -3052,6 +3428,7 @@
       "releaseDate": "1999-07-22",
       "serial": "T-39701M",
       "rating": "All ages",
+      "developer": "Hitachi Media Force",
       "publisher": "TBS"
     },
     {
@@ -3059,6 +3436,7 @@
       "releaseDate": "1999-01-14",
       "serial": "T-38801M",
       "rating": "All ages",
+      "developer": "Atypical Alchemists Associate",
       "publisher": "NEC Home Electronics"
     },
     {
@@ -3066,6 +3444,7 @@
       "releaseDate": "1999-12-23",
       "serial": "T-38805M",
       "rating": "All ages",
+      "developer": "Atypical Alchemists Associate",
       "publisher": "NEC Home Electronics"
     },
     {
@@ -3073,6 +3452,7 @@
       "releaseDate": "2000-07-27",
       "serial": "T-20104M",
       "rating": "All ages",
+      "developer": "Creators Produce Unit Go",
       "publisher": "NEC Interchannel"
     },
     {
@@ -3080,6 +3460,7 @@
       "releaseDate": "2000-07-27",
       "serial": "610-7749",
       "rating": "",
+      "developer": "Creators Produce Unit Go",
       "publisher": "NEC Interchannel"
     },
     {
@@ -3087,6 +3468,7 @@
       "releaseDate": "2003-12-25",
       "serial": "T-20128M",
       "rating": "All ages",
+      "developer": "NEC Interchannel",
       "publisher": "NEC Interchannel"
     },
     {
@@ -3094,6 +3476,7 @@
       "releaseDate": "1998-12-23",
       "serial": "T-38802M",
       "rating": "All ages",
+      "developer": "Atypical Alchemists Associate",
       "publisher": "",
       "altTitles": [
         "Seventh Cross Evolution"
@@ -3104,6 +3487,7 @@
       "releaseDate": "1999-07",
       "serial": "",
       "rating": "",
+      "developer": "NEC Home Electronics",
       "publisher": "NEC Home Electronics"
     },
     {
@@ -3111,20 +3495,23 @@
       "releaseDate": "2000-03-16",
       "serial": "T-9902M",
       "rating": "All ages",
+      "developer": "Success",
       "publisher": "Success"
     },
     {
       "title": "Shenmue",
-      "releaseDate": "1999-12-29",
-      "serial": "HDR-0016",
+      "releaseDate": "",
+      "serial": "HDR-0016}",
       "rating": "All ages",
-      "publisher": "Sega Enterprises, Ltd."
+      "developer": "AM2 of CRI",
+      "publisher": ""
     },
     {
       "title": "Shenmue II",
       "releaseDate": "2001-09-06",
       "serial": "HDR-0164",
       "rating": "All ages",
+      "developer": "Sega-AM2",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -3132,6 +3519,7 @@
       "releaseDate": "2004-03-25",
       "serial": "T-47702M",
       "rating": "All ages",
+      "developer": "Alfa System",
       "publisher": "Alfa System"
     },
     {
@@ -3139,6 +3527,7 @@
       "releaseDate": "1999-07-22",
       "serial": "T-16601M",
       "rating": "All ages",
+      "developer": "Altron",
       "publisher": "Altron"
     },
     {
@@ -3146,6 +3535,7 @@
       "releaseDate": "1999-09-02",
       "serial": "T-28202M",
       "rating": "All ages",
+      "developer": "Yuke's",
       "publisher": "Tomy Entertainment"
     },
     {
@@ -3153,6 +3543,7 @@
       "releaseDate": "1999-01-21",
       "serial": "T-38701M",
       "rating": "All ages",
+      "developer": "IkusabuneCategory :Live link reference",
       "publisher": "",
       "altTitles": [
         "Evolution: The World of Sacred Device"
@@ -3163,6 +3554,7 @@
       "releaseDate": "1999-12-23",
       "serial": "T-38703M",
       "rating": "All ages",
+      "developer": "Sting",
       "publisher": "",
       "altTitles": [
         "Evolution 2: Far Off Promise"
@@ -3173,6 +3565,7 @@
       "releaseDate": "2002-04-18",
       "serial": "T-46303M",
       "rating": "All ages",
+      "developer": "Westone Bit EntertainmentCategory :Live link reference",
       "publisher": "Broccoli"
     },
     {
@@ -3180,6 +3573,7 @@
       "releaseDate": "2001-04-19",
       "serial": "T-35101M",
       "rating": "All ages",
+      "developer": "Gainax",
       "publisher": "Gainax"
     },
     {
@@ -3187,6 +3581,7 @@
       "releaseDate": "2001-08-30",
       "serial": "T-35102M",
       "rating": "All ages",
+      "developer": "Gainax",
       "publisher": "Gainax"
     },
     {
@@ -3194,14 +3589,16 @@
       "releaseDate": "2003-06-26",
       "serial": "T-20123M",
       "rating": "18+",
+      "developer": "HuneX",
       "publisher": "NEC Interchannel"
     },
     {
       "title": "Shutoko Battle 2",
-      "releaseDate": "2000-06-22",
-      "serial": "T-30803M",
+      "releaseDate": "",
+      "serial": "T-30803M}",
       "rating": "All ages",
-      "publisher": "Genki",
+      "developer": "Genki",
+      "publisher": "",
       "altTitles": [
         "Tokyo Xtreme Racer 2"
       ]
@@ -3211,6 +3608,7 @@
       "releaseDate": "1999-06-24",
       "serial": "T-30801M",
       "rating": "All ages",
+      "developer": "Genki",
       "publisher": "",
       "altTitles": [
         "Tokyo Xtreme Racer"
@@ -3221,6 +3619,7 @@
       "releaseDate": "2000-10-12",
       "serial": "T-9513M",
       "rating": "",
+      "developer": "Konami Computer Entertainment Studios",
       "publisher": "Konami"
     },
     {
@@ -3228,6 +3627,7 @@
       "releaseDate": "2002-08-29",
       "serial": "T-47401M",
       "rating": "All ages",
+      "developer": "HuneX",
       "publisher": "D3 Publisher"
     },
     {
@@ -3235,6 +3635,7 @@
       "releaseDate": "2002-09-26",
       "serial": "T-47404M",
       "rating": "All ages",
+      "developer": "HuneX",
       "publisher": "D3 Publisher"
     },
     {
@@ -3242,6 +3643,7 @@
       "releaseDate": "2002-09-26",
       "serial": "T-47402M",
       "rating": "All ages",
+      "developer": "HuneX",
       "publisher": "D3 Publisher"
     },
     {
@@ -3249,6 +3651,7 @@
       "releaseDate": "2002-09-26",
       "serial": "T-47403M",
       "rating": "All ages",
+      "developer": "HuneX",
       "publisher": "D3 Publisher"
     },
     {
@@ -3256,6 +3659,7 @@
       "releaseDate": "2002-03-28",
       "serial": "T-27802M",
       "rating": "All ages",
+      "developer": "Stack",
       "publisher": "MediaWorks"
     },
     {
@@ -3263,6 +3667,7 @@
       "releaseDate": "2003-09-25",
       "serial": "T-20132M",
       "rating": "All ages",
+      "developer": "Studio Mebius",
       "publisher": "NEC Interchannel"
     },
     {
@@ -3270,6 +3675,7 @@
       "releaseDate": "1998-12-23",
       "serial": "HDR-0001",
       "rating": "All ages",
+      "developer": "Sega CS3 (1996-1999)",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3277,6 +3683,7 @@
       "releaseDate": "2001-06-23",
       "serial": "HDR-0165",
       "rating": "All ages",
+      "developer": "Sonic Team (company)",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -3284,6 +3691,7 @@
       "releaseDate": "2000-12-21",
       "serial": "HDR-0125",
       "rating": "All ages",
+      "developer": "A.I",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -3291,20 +3699,15 @@
       "releaseDate": "2000-04-27",
       "serial": "T-9103M",
       "rating": "All ages",
+      "developer": "Exe-Create",
       "publisher": "Victor Interactive Software"
-    },
-    {
-      "title": "Soukou no Kihei: Space Griffon",
-      "releaseDate": "1999-11-03",
-      "serial": "T-39601M",
-      "rating": "All ages",
-      "publisher": "Panther Software"
     },
     {
       "title": "SoulCalibur",
       "releaseDate": "1999-08-05",
       "serial": "T-1401M",
       "rating": "All ages",
+      "developer": "Namco",
       "publisher": "Namco"
     },
     {
@@ -3312,6 +3715,7 @@
       "releaseDate": "1999-12-16",
       "serial": "HDR-0029",
       "rating": "All ages",
+      "developer": "Sega Digital Media",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -3319,6 +3723,7 @@
       "releaseDate": "2002-02-14",
       "serial": "HDR-0190",
       "rating": "All ages",
+      "developer": "Sega of China",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -3326,6 +3731,7 @@
       "releaseDate": "2000-08-10",
       "serial": "T-1216M",
       "rating": "Violence",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -3333,6 +3739,7 @@
       "releaseDate": "1999-11-18",
       "serial": "T-17702M",
       "rating": "All ages",
+      "developer": "Ubi Soft Montreal",
       "publisher": "Ubi Soft"
     },
     {
@@ -3340,6 +3747,7 @@
       "releaseDate": "2001-04-05",
       "serial": "T-8102M",
       "rating": "All ages",
+      "developer": "Broadsword Interactive",
       "publisher": ""
     },
     {
@@ -3347,6 +3755,7 @@
       "releaseDate": "2001-04-12",
       "serial": "HDR-0153",
       "rating": "All ages",
+      "developer": "WOW Entertainment",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -3354,6 +3763,7 @@
       "releaseDate": "1999-12-09",
       "serial": "T-1204M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom",
       "altTitles": [
         "Plasma Sword: Nightmare of Bilstein"
@@ -3361,9 +3771,10 @@
     },
     {
       "title": "Star Gladiator 2: Nightmare of Bilstein Tentou Taikenban",
-      "releaseDate": "1999",
-      "serial": "",
+      "releaseDate": "",
+      "serial": "}",
       "rating": "",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -3371,6 +3782,7 @@
       "releaseDate": "2000-06-29",
       "serial": "T-1209M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -3378,6 +3790,7 @@
       "releaseDate": "1999-12-16",
       "serial": "T-1211M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom",
       "altTitles": [
         "Street Fighter III: Double Impact"
@@ -3385,9 +3798,10 @@
     },
     {
       "title": "Street Fighter III: W Impact Tentou Taikenban",
-      "releaseDate": "1999",
-      "serial": "",
+      "releaseDate": "",
+      "serial": "}",
       "rating": "",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -3395,6 +3809,7 @@
       "releaseDate": "1999-07-08",
       "serial": "T-1203M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom",
       "altTitles": [
         "Street Fighter Alpha 3"
@@ -3405,6 +3820,7 @@
       "releaseDate": "2004-10-28",
       "serial": "T-19725M",
       "rating": "18+",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -3412,6 +3828,7 @@
       "releaseDate": "2002-07-18",
       "serial": "T-46509M",
       "rating": "All ages",
+      "developer": "PrincessSoft",
       "publisher": "PrincessSoft"
     },
     {
@@ -3419,6 +3836,7 @@
       "releaseDate": "1999-12-02",
       "serial": "T-41101M",
       "rating": "All ages",
+      "developer": "Atelier-Sai",
       "publisher": "Sunrise Interactive"
     },
     {
@@ -3426,6 +3844,7 @@
       "releaseDate": "2000-02-03",
       "serial": "T-30802M",
       "rating": "All ages",
+      "developer": "Genki",
       "publisher": "",
       "altTitles": [
         "Super Magnetic Neo"
@@ -3436,6 +3855,7 @@
       "releaseDate": "1999-11-11",
       "serial": "T-14303M",
       "rating": "All ages",
+      "developer": "Hudson Soft",
       "publisher": "Hudson Soft"
     },
     {
@@ -3443,6 +3863,7 @@
       "releaseDate": "2001-07-05",
       "serial": "T-1250M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom",
       "altTitles": [
         "Super Puzzle Fighter II Turbo"
@@ -3453,6 +3874,7 @@
       "releaseDate": "2001-08-30",
       "serial": "T-20602M",
       "rating": "All ages",
+      "developer": "Banpresto",
       "publisher": "Banpresto"
     },
     {
@@ -3460,6 +3882,7 @@
       "releaseDate": "2000-05-25",
       "serial": "T-22101M",
       "rating": "All ages",
+      "developer": "Climax Entertainment",
       "publisher": "Climax Entertainment"
     },
     {
@@ -3467,6 +3890,7 @@
       "releaseDate": "2001-06-21",
       "serial": "T-22102M",
       "rating": "All ages",
+      "developer": "Climax Entertainment",
       "publisher": ""
     },
     {
@@ -3474,6 +3898,7 @@
       "releaseDate": "1999-03-25",
       "serial": "HDR-0013",
       "rating": "All ages",
+      "developer": "Zoom",
       "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Flag to Flag"
@@ -3484,6 +3909,7 @@
       "releaseDate": "2000-12-22",
       "serial": "T-1236M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -3491,6 +3917,7 @@
       "releaseDate": "2003-10-23",
       "serial": "T-37911M",
       "rating": "18+",
+      "developer": "Takuyo",
       "publisher": "Takuyo"
     },
     {
@@ -3498,6 +3925,7 @@
       "releaseDate": "2000-10-26",
       "serial": "T-1237M",
       "rating": "All ages",
+      "developer": "Attention To Detail",
       "publisher": ""
     },
     {
@@ -3505,6 +3933,7 @@
       "releaseDate": "1999",
       "serial": "HKT-0910",
       "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3512,6 +3941,7 @@
       "releaseDate": "2001-06-28",
       "serial": "T-1248M",
       "rating": "All ages",
+      "developer": "Psikyo",
       "publisher": "Capcom"
     },
     {
@@ -3519,6 +3949,7 @@
       "releaseDate": "2002-05-16",
       "serial": "T-5204M",
       "rating": "All ages",
+      "developer": "Microcabin",
       "publisher": "Microcabin"
     },
     {
@@ -3526,6 +3957,7 @@
       "releaseDate": "2004-01-29",
       "serial": "T-20133M",
       "rating": "15+",
+      "developer": "HuneX",
       "publisher": "NEC Interchannel"
     },
     {
@@ -3533,6 +3965,7 @@
       "releaseDate": "1999-11-11",
       "serial": "T-22001M",
       "rating": "All ages",
+      "developer": "Arc System Works",
       "publisher": "Arc System Works"
     },
     {
@@ -3540,6 +3973,7 @@
       "releaseDate": "2000-12-21",
       "serial": "T-44401M",
       "rating": "All ages",
+      "developer": "Abel",
       "publisher": "Abel"
     },
     {
@@ -3547,6 +3981,7 @@
       "releaseDate": "2004-03-25",
       "serial": "T-46516M",
       "rating": "All ages",
+      "developer": "PrincessSoft",
       "publisher": "PrincessSoft"
     },
     {
@@ -3554,6 +3989,7 @@
       "releaseDate": "2001-10-25",
       "serial": "T-19710M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -3561,6 +3997,7 @@
       "releaseDate": "1998-12-23",
       "serial": "T-20801M",
       "rating": "All ages",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -3568,6 +4005,7 @@
       "releaseDate": "1999-03-25",
       "serial": "HDR-0007",
       "rating": "Violence",
+      "developer": "CRI",
       "publisher": "Empire Interactive"
     },
     {
@@ -3575,6 +4013,7 @@
       "releaseDate": "2000-03-30",
       "serial": "T-3102M",
       "rating": "All ages",
+      "developer": "SNK",
       "publisher": "",
       "altTitles": [
         "The King of Fighters: Evolution"
@@ -3585,6 +4024,7 @@
       "releaseDate": "2002-08-08",
       "serial": "T-47303M",
       "rating": "All ages",
+      "developer": "Playmore",
       "publisher": "Playmore"
     },
     {
@@ -3592,6 +4032,7 @@
       "releaseDate": "2002-12-26",
       "serial": "T-47304M",
       "rating": "All ages",
+      "developer": "Eolith",
       "publisher": "Playmore"
     },
     {
@@ -3599,6 +4040,7 @@
       "releaseDate": "2003-06-19",
       "serial": "T-47305M",
       "rating": "All ages",
+      "developer": "Eolith",
       "publisher": "Playmore"
     },
     {
@@ -3606,6 +4048,7 @@
       "releaseDate": "1999-06-24",
       "serial": "T-3101M",
       "rating": "All ages",
+      "developer": "SNK",
       "publisher": "SNK"
     },
     {
@@ -3613,6 +4056,7 @@
       "releaseDate": "2001-02-01",
       "serial": "T-43403M",
       "rating": "All ages",
+      "developer": "Visit",
       "publisher": "Visit"
     },
     {
@@ -3620,6 +4064,7 @@
       "releaseDate": "2000-03-30",
       "serial": "HDR-0067",
       "rating": "Violence",
+      "developer": "H.I.C.",
       "publisher": "Empire Interactive"
     },
     {
@@ -3627,6 +4072,7 @@
       "releaseDate": "2000-07-27",
       "serial": "T-20601M",
       "rating": "All ages",
+      "developer": "Adventure Planning ServiceCategory :Live link reference",
       "publisher": "Banpresto"
     },
     {
@@ -3634,6 +4080,7 @@
       "releaseDate": "1999-12-23",
       "serial": "T-35402M",
       "rating": "All ages",
+      "developer": "FortyFive",
       "publisher": "FortyFive"
     },
     {
@@ -3641,6 +4088,7 @@
       "releaseDate": "2000-07-19",
       "serial": "T-1233M",
       "rating": "Violence",
+      "developer": "Core Design",
       "publisher": "Capcom",
       "altTitles": [
         "Tomb Raider: The Last Revelation"
@@ -3651,6 +4099,7 @@
       "releaseDate": "2000-01-06",
       "serial": "HDR-0052",
       "rating": "All ages",
+      "developer": "No Cliché",
       "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Toy Commander"
@@ -3661,20 +4110,15 @@
       "releaseDate": "2000-02-17",
       "serial": "T-19701M",
       "rating": "All ages",
+      "developer": "h.a.n.d.",
       "publisher": "KID"
-    },
-    {
-      "title": "Tricolore Crise",
-      "releaseDate": "2000-11-09",
-      "serial": "T-9104M",
-      "rating": "All ages",
-      "publisher": "Victor Interactive Software"
     },
     {
       "title": "Tricolore Crise: Art Palette",
       "releaseDate": "2000-11-09",
       "serial": "",
       "rating": "",
+      "developer": "Victor Interactive Software",
       "publisher": "Victor Interactive Software"
     },
     {
@@ -3682,13 +4126,15 @@
       "releaseDate": "2007-02-22",
       "serial": "T-29102M",
       "rating": "CERO: A",
-      "publisher": "Sega Corporation (2000-2015)"
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Trizeal",
       "releaseDate": "2005-04-07",
       "serial": "T-47901M",
       "rating": "All ages",
+      "developer": "Triangle Service",
       "publisher": "Datam Polystar"
     },
     {
@@ -3696,6 +4142,7 @@
       "releaseDate": "2004-06-24",
       "serial": "T-47109M",
       "rating": "15+",
+      "developer": "Fupac",
       "publisher": "Alchemist"
     },
     {
@@ -3703,6 +4150,7 @@
       "releaseDate": "2000-05-11",
       "serial": "T-35403M",
       "rating": "All ages",
+      "developer": "FortyFive",
       "publisher": "FortyFive"
     },
     {
@@ -3710,6 +4158,7 @@
       "releaseDate": "2000-03-23",
       "serial": "T-3103M",
       "rating": "All ages",
+      "developer": "ADK",
       "publisher": "ADK"
     },
     {
@@ -3717,6 +4166,7 @@
       "releaseDate": "2001-09-27",
       "serial": "T-14307M",
       "rating": "All ages",
+      "developer": "Hudson Soft",
       "publisher": "Hudson Soft"
     },
     {
@@ -3724,6 +4174,7 @@
       "releaseDate": "",
       "serial": "",
       "rating": "",
+      "developer": "Rage Software",
       "publisher": "Imagineer"
     },
     {
@@ -3731,6 +4182,7 @@
       "releaseDate": "2001-01-25",
       "serial": "T-1241M",
       "rating": "All ages",
+      "developer": "Anchor",
       "publisher": ""
     },
     {
@@ -3738,13 +4190,15 @@
       "releaseDate": "2006-03-23",
       "serial": "T-46705M",
       "rating": "All ages",
-      "publisher": "G.rev"
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "UnderCover AD2025 Kei",
       "releaseDate": "2000-01-27",
       "serial": "T-39001M",
       "rating": "Violence",
+      "developer": "Pulse Interactive",
       "publisher": "Pulse Interactive"
     },
     {
@@ -3752,6 +4206,7 @@
       "releaseDate": "2001-07-05",
       "serial": "HDR-0156",
       "rating": "All ages",
+      "developer": "AM2 of CRI",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -3759,6 +4214,7 @@
       "releaseDate": "2004-06-24",
       "serial": "T-23207M",
       "rating": "18+",
+      "developer": "EMU",
       "publisher": "Ecole"
     },
     {
@@ -3766,6 +4222,7 @@
       "releaseDate": "2000-08-10",
       "serial": "T-1235M",
       "rating": "All ages",
+      "developer": "Capcom",
       "publisher": "Capcom"
     },
     {
@@ -3773,6 +4230,7 @@
       "releaseDate": "1999-12-02",
       "serial": "T-5302M",
       "rating": "All ages",
+      "developer": "Riverhillsoft",
       "publisher": "Riverhillsoft"
     },
     {
@@ -3780,6 +4238,7 @@
       "releaseDate": "2000-03-23",
       "serial": "T-36501M",
       "rating": "All ages",
+      "developer": "Luxoflux",
       "publisher": "",
       "altTitles": [
         "Vigilante 8: Second Offense"
@@ -3790,6 +4249,7 @@
       "releaseDate": "2000-07-27",
       "serial": "HDR-0081",
       "rating": "All ages",
+      "developer": "Hitmaker",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3797,6 +4257,7 @@
       "releaseDate": "2000-03-02",
       "serial": "HDR-0061",
       "rating": "All ages",
+      "developer": "Sega AM2",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3804,6 +4265,7 @@
       "releaseDate": "1998-11-27",
       "serial": "HDR-0002",
       "rating": "All ages",
+      "developer": "Genki",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3811,6 +4273,7 @@
       "releaseDate": "2001-09-06",
       "serial": "",
       "rating": "",
+      "developer": "AM2 of CRI",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -3818,6 +4281,7 @@
       "releaseDate": "1999-12-02",
       "serial": "HDR-0045",
       "rating": "All ages",
+      "developer": "Genki",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3825,6 +4289,7 @@
       "releaseDate": "2000-09-14",
       "serial": "610-7801",
       "rating": "All ages",
+      "developer": "CRI",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3832,6 +4297,7 @@
       "releaseDate": "2002-02-28",
       "serial": "T-35405M",
       "rating": "All ages",
+      "developer": "FortyFive",
       "publisher": "NEC Interchannel"
     },
     {
@@ -3839,6 +4305,7 @@
       "releaseDate": "1999-04-22",
       "serial": "T-39501M",
       "rating": "Violence",
+      "developer": "Mebius",
       "publisher": "Mebius"
     },
     {
@@ -3846,6 +4313,7 @@
       "releaseDate": "1999-08-05",
       "serial": "610-7179",
       "rating": "",
+      "developer": "Sega Software R&D Dept. 2",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3853,6 +4321,7 @@
       "releaseDate": "2003-01-30",
       "serial": "T-47104M",
       "rating": "All ages",
+      "developer": "HuneX",
       "publisher": "Alchemist"
     },
     {
@@ -3860,6 +4329,7 @@
       "releaseDate": "2000-03-30",
       "serial": "T-7606M",
       "rating": "All ages",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -3867,13 +4337,7 @@
       "releaseDate": "2000-03-30",
       "serial": "T-5303M",
       "rating": "All ages",
-      "publisher": "Riverhillsoft"
-    },
-    {
-      "title": "World Neverland Plus: Olerud Oukoku Monogatari",
-      "releaseDate": "1999-07-15",
-      "serial": "T-5301M",
-      "rating": "All ages",
+      "developer": "Riverhillsoft",
       "publisher": "Riverhillsoft"
     },
     {
@@ -3881,6 +4345,7 @@
       "releaseDate": "2001-03-22",
       "serial": "HDR-0157",
       "rating": "All ages",
+      "developer": "Visual Concepts",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3888,6 +4353,7 @@
       "releaseDate": "2002-04-18",
       "serial": "HDR-0198",
       "rating": "All ages",
+      "developer": "Blue Shift",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -3895,6 +4361,7 @@
       "releaseDate": "2001-04-26",
       "serial": "T-45101M",
       "rating": "All ages",
+      "developer": "Sega Software R&D Dept. 1",
       "publisher": "Yuke's"
     },
     {
@@ -3902,6 +4369,7 @@
       "releaseDate": "2001-12-20",
       "serial": "T-18704M",
       "rating": "All ages",
+      "developer": "Mesa",
       "publisher": "Naxat Soft"
     },
     {
@@ -3909,6 +4377,7 @@
       "releaseDate": "2001-12-01",
       "serial": "ISBN4-7572-0889-8",
       "rating": "All ages",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -3916,6 +4385,7 @@
       "releaseDate": "1999-03-20",
       "serial": "HDR-0024",
       "rating": "All ages",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3923,6 +4393,7 @@
       "releaseDate": "2002-12-26",
       "serial": "T-37909M",
       "rating": "All ages",
+      "developer": "Takuyo",
       "publisher": "Takuyo"
     },
     {
@@ -3930,6 +4401,7 @@
       "releaseDate": "1999-10-21",
       "serial": "T-40101M",
       "rating": "All ages",
+      "developer": "Shangri-La",
       "publisher": "Shangri-La"
     },
     {
@@ -3937,6 +4409,7 @@
       "releaseDate": "2001-07-26",
       "serial": "T-19706M",
       "rating": "All ages",
+      "developer": "KID",
       "publisher": "KID"
     },
     {
@@ -3944,6 +4417,7 @@
       "releaseDate": "1999-12-22",
       "serial": "T-27801M",
       "rating": "All ages",
+      "developer": "Starlight MarryCategory :Live link reference",
       "publisher": "MediaWorks"
     },
     {
@@ -3951,6 +4425,7 @@
       "releaseDate": "2001-09-06",
       "serial": "T-20401M",
       "rating": "All ages",
+      "developer": "Psikyo",
       "publisher": "Psikyo"
     },
     {
@@ -3958,6 +4433,7 @@
       "releaseDate": "1999-11-25",
       "serial": "HDR-0026",
       "rating": "Violence",
+      "developer": "Data East",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3965,6 +4441,7 @@
       "releaseDate": "1999",
       "serial": "",
       "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -3972,6 +4449,7 @@
       "releaseDate": "2000-07-27",
       "serial": "T-43301M",
       "rating": "All ages",
+      "developer": "Real Vision",
       "publisher": "Real Vision"
     }
   ]

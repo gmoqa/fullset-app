@@ -8,6 +8,7 @@
       "releaseDate": "2001-05-22",
       "serial": "51064",
       "rating": "ESRB: Everyone",
+      "developer": "Acclaim Studios Cheltenham",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -15,6 +16,7 @@
       "releaseDate": "2000-05-03",
       "serial": "T-9708N",
       "rating": "ESRB: Everyone",
+      "developer": "Kalisto Entertainment",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -22,20 +24,15 @@
       "releaseDate": "2000-10-31",
       "serial": "T-41903N",
       "rating": "ESRB: Everyone",
+      "developer": "Terminal Reality",
       "publisher": "Gathering of Developers"
-    },
-    {
-      "title": "AeroWings",
-      "releaseDate": "1999-09-13",
-      "serial": "T-40201N",
-      "rating": "ESRB: Everyone",
-      "publisher": ""
     },
     {
       "title": "AeroWings 2: Airstrike",
       "releaseDate": "2000-08-08",
       "serial": "T-40210N",
       "rating": "ESRB: Everyone",
+      "developer": "CRI",
       "publisher": ""
     },
     {
@@ -43,6 +40,7 @@
       "releaseDate": "1999-09-07",
       "serial": "T-9501N",
       "rating": "ESRB: Everyone",
+      "developer": "Konami Computer Entertainment Yokohama",
       "publisher": "Konami"
     },
     {
@@ -50,6 +48,7 @@
       "releaseDate": "1999",
       "serial": "",
       "rating": "",
+      "developer": "Konami",
       "publisher": "Konami"
     },
     {
@@ -57,20 +56,23 @@
       "releaseDate": "2001-08-07",
       "serial": "51171",
       "rating": "ESRB: Teen",
+      "developer": "WOW Entertainment",
       "publisher": "Sega of America Dreamcast"
     },
     {
       "title": "Alone in the Dark: The New Nightmare",
-      "releaseDate": "2001-09-26",
-      "serial": "T-15117N",
+      "releaseDate": "",
+      "serial": "T-15117N}",
       "rating": "ESRB: Mature",
-      "publisher": "Infogrames Inc."
+      "developer": "Darkworks",
+      "publisher": ""
     },
     {
       "title": "Armada",
       "releaseDate": "1999-11-20",
       "serial": "T-40301N",
       "rating": "ESRB: Everyone",
+      "developer": "Metro3D",
       "publisher": "Metro3D"
     },
     {
@@ -78,6 +80,7 @@
       "releaseDate": "2000-11-01",
       "serial": "T-9715N",
       "rating": "ESRB: Teen",
+      "developer": "Saffire",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -85,6 +88,7 @@
       "releaseDate": "2001-06-26",
       "serial": "T-15130N",
       "rating": "ESRB: Everyone",
+      "developer": "Digital Eclipse",
       "publisher": "Infogrames Interactive"
     },
     {
@@ -92,6 +96,7 @@
       "releaseDate": "2000-12-22",
       "serial": "T-44102N",
       "rating": "ESRB: Everyone",
+      "developer": "Rayland Interactive",
       "publisher": "Red Storm Entertainment"
     },
     {
@@ -99,13 +104,23 @@
       "releaseDate": "2001-03-22",
       "serial": "T-40217N",
       "rating": "ESRB: Everyone",
+      "developer": "Conspiracy Entertainment",
       "publisher": "Crave Entertainment"
+    },
+    {
+      "title": "Bleemcast!",
+      "releaseDate": "2001",
+      "serial": "",
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Blue Stinger",
       "releaseDate": "1999-08-31",
       "serial": "T-13001N",
       "rating": "ESRB: Mature",
+      "developer": "Climax Graphics",
       "publisher": ""
     },
     {
@@ -113,6 +128,7 @@
       "releaseDate": "2001-10-30",
       "serial": "51065",
       "rating": "ESRB: Everyone",
+      "developer": "h.a.n.d.",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -120,6 +136,7 @@
       "releaseDate": "1999-09-07",
       "serial": "T-13701N",
       "rating": "ESRB: Everyone",
+      "developer": "CRI",
       "publisher": "ASC Games",
       "altTitles": [
         "TNN Motorsports Hardcore Heat"
@@ -130,6 +147,7 @@
       "releaseDate": "2000-06-01",
       "serial": "T-8117N",
       "rating": "ESRB: Everyone",
+      "developer": "Taito",
       "publisher": ""
     },
     {
@@ -137,6 +155,7 @@
       "releaseDate": "2000-09-20",
       "serial": "T-12504N",
       "rating": "ESRB: Everyone",
+      "developer": "Runecraft",
       "publisher": "Interplay"
     },
     {
@@ -144,6 +163,7 @@
       "releaseDate": "2000-11-15",
       "serial": "T-1215N",
       "rating": "ESRB: Teen",
+      "developer": "Psikyo",
       "publisher": "Capcom"
     },
     {
@@ -151,6 +171,7 @@
       "releaseDate": "2000-11-08",
       "serial": "T-1218N",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -158,6 +179,7 @@
       "releaseDate": "2000-02-29",
       "serial": "T-5701N",
       "rating": "ESRB: Mature",
+      "developer": "Jaleco",
       "publisher": "Jaleco USA"
     },
     {
@@ -165,6 +187,7 @@
       "releaseDate": "1999-11-23",
       "serial": "T-40602N",
       "rating": "ESRB: Everyone",
+      "developer": "graphics and cutscenes",
       "publisher": "Hasbro Interactive"
     },
     {
@@ -172,6 +195,7 @@
       "releaseDate": "2000-12-04",
       "serial": "T-41403N",
       "rating": "ESRB: Everyone",
+      "developer": "Krome Studios",
       "publisher": "Mattel Interactive"
     },
     {
@@ -179,6 +203,7 @@
       "releaseDate": "2001-02-07",
       "serial": "T-15127N",
       "rating": "ESRB: Teen",
+      "developer": "AM2 of CRI",
       "publisher": "Xicat Interactive"
     },
     {
@@ -186,6 +211,7 @@
       "releaseDate": "2000",
       "serial": "",
       "rating": "",
+      "developer": "",
       "publisher": "InterAct Accessories"
     },
     {
@@ -193,6 +219,7 @@
       "releaseDate": "2000-11-17",
       "serial": "T-36811N",
       "rating": "ESRB: Everyone",
+      "developer": "Blitz Games",
       "publisher": "Eidos Interactive"
     },
     {
@@ -200,6 +227,7 @@
       "releaseDate": "2000-03-07",
       "serial": "51049",
       "rating": "ESRB: Everyone",
+      "developer": "Binary Hammer",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -207,6 +235,7 @@
       "releaseDate": "2001-05-16",
       "serial": "T-15128N",
       "rating": "ESRB: Everyone",
+      "developer": "Bimboosoft",
       "publisher": ""
     },
     {
@@ -214,6 +243,7 @@
       "releaseDate": "2001-05-15",
       "serial": "51160",
       "rating": "ESRB: Teen",
+      "developer": "Hitmaker",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -221,6 +251,7 @@
       "releaseDate": "2001-12-17",
       "serial": "T-17721N",
       "rating": "ESRB: Teen",
+      "developer": "MASA Group",
       "publisher": "Ubi Soft"
     },
     {
@@ -228,6 +259,7 @@
       "releaseDate": "2000-02-01",
       "serial": "51035",
       "rating": "ESRB: Teen",
+      "developer": "Acclaim Studios Cheltenham",
       "publisher": "Activision Value Publishing"
     },
     {
@@ -235,6 +267,7 @@
       "releaseDate": "2001-05-29",
       "serial": "51136",
       "rating": "ESRB: Teen",
+      "developer": "Hitmaker",
       "publisher": "Sega of America"
     },
     {
@@ -242,6 +275,7 @@
       "releaseDate": "2000-05-31",
       "serial": "T-13004N",
       "rating": "ESRB: Teen",
+      "developer": "CRI",
       "publisher": "Activision"
     },
     {
@@ -249,6 +283,7 @@
       "releaseDate": "2000-08-22",
       "serial": "51036",
       "rating": "ESRB: Mature",
+      "developer": "Warp",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -256,6 +291,7 @@
       "releaseDate": "2000-11-21",
       "serial": "T-8120N",
       "rating": "ESRB: Everyone",
+      "developer": "Z-Axis",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -263,6 +299,7 @@
       "releaseDate": "2001-03-13",
       "serial": "51037",
       "rating": "ESRB: Everyone",
+      "developer": "Amusement Vision",
       "publisher": "Sega of America Dreamcast",
       "altTitles": [
         "Daytona USA"
@@ -273,6 +310,7 @@
       "releaseDate": "2000-03-14",
       "serial": "T-3601N",
       "rating": "ESRB: Teen",
+      "developer": "Team Ninja",
       "publisher": "Tecmo"
     },
     {
@@ -280,6 +318,7 @@
       "releaseDate": "",
       "serial": "",
       "rating": "ESRB: Teen",
+      "developer": "Tecmo",
       "publisher": "Tecmo"
     },
     {
@@ -287,6 +326,7 @@
       "releaseDate": "2001-08-06",
       "serial": "T-2401N",
       "rating": "ESRB: Teen",
+      "developer": "Ecole",
       "publisher": "Sammy Entertainment"
     },
     {
@@ -294,6 +334,7 @@
       "releaseDate": "2000-08-23",
       "serial": "T-17705N",
       "rating": "ESRB: Teen",
+      "developer": "Criterion Software",
       "publisher": "Ubi Soft"
     },
     {
@@ -301,6 +342,7 @@
       "releaseDate": "2000-10-24",
       "serial": "T-15112N",
       "rating": "ESRB: Everyone",
+      "developer": "Pitbull Syndicate",
       "publisher": "Infogrames North America"
     },
     {
@@ -308,6 +350,7 @@
       "releaseDate": "2000-11-15",
       "serial": "T-1217N",
       "rating": "ESRB: Mature",
+      "developer": "AvantCategory :Live link reference",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -315,6 +358,7 @@
       "releaseDate": "2000-11-14",
       "serial": "T-36803N",
       "rating": "ESRB: Everyone",
+      "developer": "Crystal Dynamics",
       "publisher": "Eidos Interactive"
     },
     {
@@ -322,6 +366,7 @@
       "releaseDate": "2000-11-21",
       "serial": "T-17717N",
       "rating": "ESRB: Everyone",
+      "developer": "Ubi Soft Paris",
       "publisher": "Ubisoft"
     },
     {
@@ -329,6 +374,7 @@
       "releaseDate": "2000-12-15",
       "serial": "T-17719N",
       "rating": "ESRB: Everyone",
+      "developer": "Ubi Soft Casablanca",
       "publisher": "Ubi Soft"
     },
     {
@@ -336,6 +382,7 @@
       "releaseDate": "2000-10-04",
       "serial": "T-13007N",
       "rating": "ESRB: Everyone",
+      "developer": "Traveller's Tales",
       "publisher": "Activision"
     },
     {
@@ -343,6 +390,7 @@
       "releaseDate": "2000-06-29",
       "serial": "T-13003N",
       "rating": "ESRB: Everyone",
+      "developer": "Traveller's Tales",
       "publisher": "Activision"
     },
     {
@@ -350,6 +398,7 @@
       "releaseDate": "2000-06-20",
       "serial": "T-40203N",
       "rating": "ESRB: Teen",
+      "developer": "Treyarch",
       "publisher": "Crave Entertainment"
     },
     {
@@ -357,6 +406,7 @@
       "releaseDate": "2001-08-08",
       "serial": "T-17720N",
       "rating": "ESRB: Teen",
+      "developer": "Ubi Studios UK",
       "publisher": "Ubi Soft"
     },
     {
@@ -364,6 +414,7 @@
       "releaseDate": "2001-03-01",
       "serial": "T-8113N",
       "rating": "ESRB: Everyone",
+      "developer": "Attention To Detail",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -371,6 +422,7 @@
       "releaseDate": "1999-11-02",
       "serial": "51013",
       "rating": "ESRB: Teen",
+      "developer": "Sega AM1",
       "publisher": "Sega Enterprises USA"
     },
     {
@@ -378,6 +430,7 @@
       "releaseDate": "2000-08-15",
       "serial": "51033",
       "rating": "ESRB: Everyone",
+      "developer": "Appaloosa Interactive",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -385,6 +438,7 @@
       "releaseDate": "2000-11-30",
       "serial": "T-8114N",
       "rating": "ESRB: Teen",
+      "developer": "Acclaim Studios Salt Lake City",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -392,6 +446,7 @@
       "releaseDate": "2000-02-29",
       "serial": "T-8112N",
       "rating": "ESRB: Mature",
+      "developer": "Acclaim Studios Salt Lake City",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -399,6 +454,7 @@
       "releaseDate": "1999-12-29",
       "serial": "T-41601N",
       "rating": "ESRB: Everyone",
+      "developer": "Birthday",
       "publisher": "Vatical Entertainment"
     },
     {
@@ -406,6 +462,7 @@
       "releaseDate": "2000-09-27",
       "serial": "T-9509N",
       "rating": "ESRB: Everyone",
+      "developer": "Future Creates",
       "publisher": "Konami"
     },
     {
@@ -413,6 +470,7 @@
       "releaseDate": "2000-11-14",
       "serial": "T-9503N",
       "rating": "ESRB: Everyone",
+      "developer": "Sunset EntertainmentCategory :Live link reference",
       "publisher": "Konami"
     },
     {
@@ -420,6 +478,7 @@
       "releaseDate": "2000-12-18",
       "serial": "T-10003N",
       "rating": "ESRB: Mature",
+      "developer": "Heavy Iron Studios",
       "publisher": "THQ"
     },
     {
@@ -427,6 +486,7 @@
       "releaseDate": "2000-06-28",
       "serial": "T-17711N",
       "rating": "ESRB: Teen",
+      "developer": "Sting",
       "publisher": "Ubi Soft"
     },
     {
@@ -434,6 +494,7 @@
       "releaseDate": "1999-12-16",
       "serial": "T-17706N",
       "rating": "ESRB: Teen",
+      "developer": "IkusabuneCategory :Live link reference",
       "publisher": ""
     },
     {
@@ -441,6 +502,7 @@
       "releaseDate": "1999-09-09",
       "serial": "T-15104N",
       "rating": "ESRB: Teen",
+      "developer": "Rage Software",
       "publisher": "Infogrames North America"
     },
     {
@@ -448,6 +510,7 @@
       "releaseDate": "2000-04-25",
       "serial": "51030",
       "rating": "ESRB: Everyone",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -455,6 +518,7 @@
       "releaseDate": "2000-09-18",
       "serial": "T-8119N",
       "rating": "ESRB: Everyone",
+      "developer": "AM2 of CRI",
       "publisher": "Sega Enterprises, Inc. (U.S.A.)"
     },
     {
@@ -462,6 +526,7 @@
       "releaseDate": "2001-11-20",
       "serial": "T-44306N",
       "rating": "ESRB: Teen",
+      "developer": "SNK",
       "publisher": "Agetec"
     },
     {
@@ -469,6 +534,7 @@
       "releaseDate": "1999-12-22",
       "serial": "T-36801N",
       "rating": "ESRB: Teen",
+      "developer": "Core Design",
       "publisher": "Eidos Interactive"
     },
     {
@@ -476,6 +542,7 @@
       "releaseDate": "1999-09-09",
       "serial": "51007",
       "rating": "ESRB: Everyone",
+      "developer": "Zoom",
       "publisher": "Sega of America"
     },
     {
@@ -483,6 +550,7 @@
       "releaseDate": "2001-07-31",
       "serial": "51114",
       "rating": "ESRB: Everyone",
+      "developer": "Visual Concepts",
       "publisher": "Sega of America"
     },
     {
@@ -490,6 +558,7 @@
       "releaseDate": "2000-10-12",
       "serial": "T-40604N",
       "rating": "ESRB: Everyone",
+      "developer": "Blitz Games",
       "publisher": "Hasbro Interactive"
     },
     {
@@ -497,6 +566,7 @@
       "releaseDate": "2000-07-12",
       "serial": "T-8107N",
       "rating": "ESRB: Teen",
+      "developer": "Bizarre Creations",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -504,6 +574,7 @@
       "releaseDate": "2000-06-06",
       "serial": "T-9710N",
       "rating": "ESRB: Teen",
+      "developer": "Midway Games West",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -511,6 +582,7 @@
       "releaseDate": "2000-07-19",
       "serial": "T-1209N",
       "rating": "ESRB: Everyone",
+      "developer": "Takumi Corporation",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -518,6 +590,7 @@
       "releaseDate": "2001-05-16",
       "serial": "T-1222N",
       "rating": "ESRB: Everyone",
+      "developer": "Takumi Corporation",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -525,6 +598,7 @@
       "releaseDate": "2000-05-02",
       "serial": "T-42102N",
       "rating": "ESRB: Mature",
+      "developer": "DMA Design",
       "publisher": "Rockstar Games"
     },
     {
@@ -532,6 +606,7 @@
       "releaseDate": "2000-12-04",
       "serial": "T-17716N",
       "rating": "ESRB: Teen",
+      "developer": "Game Arts",
       "publisher": ""
     },
     {
@@ -539,6 +614,7 @@
       "releaseDate": "2000-11-15",
       "serial": "T-1214N",
       "rating": "ESRB: Teen",
+      "developer": "Psikyo",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -546,6 +622,7 @@
       "releaseDate": "2000-04-26",
       "serial": "T-13301N",
       "rating": "ESRB: Teen",
+      "developer": "BEC",
       "publisher": "Bandai America"
     },
     {
@@ -553,6 +630,7 @@
       "releaseDate": "2001-09-12",
       "serial": "T-1223N",
       "rating": "ESRB: Mature",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -560,6 +638,7 @@
       "releaseDate": "2000-07-31",
       "serial": "T-40502N",
       "rating": "ESRB: Mature",
+      "developer": "Illusion Softworks",
       "publisher": "Talonsoft"
     },
     {
@@ -567,6 +646,7 @@
       "releaseDate": "2000-09-29",
       "serial": "T-11008N",
       "rating": "ESRB: Teen",
+      "developer": "Sierra On-Line",
       "publisher": "Sierra On-Line"
     },
     {
@@ -574,6 +654,7 @@
       "releaseDate": "1999-09-09",
       "serial": "T-9702N",
       "rating": "ESRB: Everyone",
+      "developer": "Eurocom Entertainment Software",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -581,6 +662,7 @@
       "releaseDate": "2001-04-25",
       "serial": "T-46001N",
       "rating": "ESRB: Mature",
+      "developer": "Crazy Games",
       "publisher": "AIA"
     },
     {
@@ -588,6 +670,7 @@
       "releaseDate": "1999-12-01",
       "serial": "T-12503N",
       "rating": "ESRB: Teen",
+      "developer": "Rage Software",
       "publisher": "Interplay"
     },
     {
@@ -595,6 +678,7 @@
       "releaseDate": "2000-05-29",
       "serial": "T-41302N",
       "rating": "ESRB: Teen",
+      "developer": "Atypical Alchemists Associate",
       "publisher": "U.F.O. Interactive"
     },
     {
@@ -602,6 +686,7 @@
       "releaseDate": "2001",
       "serial": "T-31901N",
       "rating": "",
+      "developer": "PlanetWeb",
       "publisher": "PlanetWeb"
     },
     {
@@ -609,6 +694,7 @@
       "releaseDate": "2001-02-07",
       "serial": "T-15129N",
       "rating": "ESRB: Everyone",
+      "developer": "Marionette",
       "publisher": "Xicat Interactive"
     },
     {
@@ -616,6 +702,7 @@
       "releaseDate": "2000-08-08",
       "serial": "T-8104N",
       "rating": "ESRB: Everyone",
+      "developer": "Acclaim Studios Salt Lake City",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -623,6 +710,7 @@
       "releaseDate": "2000-10-31",
       "serial": "51058",
       "rating": "ESRB: Teen",
+      "developer": "",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -630,6 +718,7 @@
       "releaseDate": "2000-04-28",
       "serial": "T-1206N",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -637,6 +726,7 @@
       "releaseDate": "2001-02-14",
       "serial": "T-22903N",
       "rating": "ESRB: Everyone",
+      "developer": "X-Ray Interactive",
       "publisher": "Titus"
     },
     {
@@ -644,6 +734,7 @@
       "releaseDate": "2000-10-31",
       "serial": "T-41901N",
       "rating": "ESRB: Mature",
+      "developer": "Third Law Interactive",
       "publisher": "Gathering of Developers"
     },
     {
@@ -651,6 +742,7 @@
       "releaseDate": "2000-11-09",
       "serial": "T-15123N",
       "rating": "ESRB: Everyone",
+      "developer": "Infogrames Melbourne House",
       "publisher": "",
       "altTitles": [
         "Test Drive Le Mans"
@@ -661,6 +753,7 @@
       "releaseDate": "2000-01-25",
       "serial": "T-36802N",
       "rating": "ESRB: Mature",
+      "developer": "Crystal Dynamics",
       "publisher": "Eidos Interactive"
     },
     {
@@ -668,6 +761,7 @@
       "releaseDate": "2000-11-28",
       "serial": "T-15116N",
       "rating": "ESRB: Everyone",
+      "developer": "Infogrames Melbourne House",
       "publisher": "Infogrames Inc."
     },
     {
@@ -675,6 +769,7 @@
       "releaseDate": "2000-07-19",
       "serial": "T-40208N",
       "rating": "ESRB: Everyone",
+      "developer": "VCC Entertainment",
       "publisher": "Crave Entertainment"
     },
     {
@@ -682,6 +777,7 @@
       "releaseDate": "2000-04-25",
       "serial": "51050",
       "rating": "ESRB: Mature",
+      "developer": "Atlus",
       "publisher": ""
     },
     {
@@ -689,6 +785,7 @@
       "releaseDate": "2001-04-25",
       "serial": "T-1221N",
       "rating": "ESRB: Everyone",
+      "developer": "Takumi Corporation",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -696,6 +793,7 @@
       "releaseDate": "2000-06-28",
       "serial": "T-1212N",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -703,6 +801,7 @@
       "releaseDate": "1999-10-07",
       "serial": "T-1202N",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -710,6 +809,7 @@
       "releaseDate": "2001-09-10",
       "serial": "T-13005N",
       "rating": "ESRB: Everyone",
+      "developer": "Runecraft",
       "publisher": "Activision"
     },
     {
@@ -717,6 +817,7 @@
       "releaseDate": "2000-12-05",
       "serial": "T-41402N",
       "rating": "ESRB: Teen",
+      "developer": "Treyarch",
       "publisher": "Mattel Interactive"
     },
     {
@@ -724,6 +825,7 @@
       "releaseDate": "2000-11-08",
       "serial": "T-11002N",
       "rating": "ESRB: Everyone",
+      "developer": "Dynamix",
       "publisher": "Sierra On-Line"
     },
     {
@@ -731,6 +833,7 @@
       "releaseDate": "2000-03-29",
       "serial": "T-12502N",
       "rating": "ESRB: Teen",
+      "developer": "BioWare",
       "publisher": "Interplay"
     },
     {
@@ -738,6 +841,7 @@
       "releaseDate": "2001-01-16",
       "serial": "51012",
       "rating": "ESRB: Everyone",
+      "developer": "Bizarre Creations",
       "publisher": "Sega of America"
     },
     {
@@ -745,6 +849,7 @@
       "releaseDate": "2000-06-28",
       "serial": "T-9713N",
       "rating": "ESRB: Everyone",
+      "developer": "Digital Eclipse",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -752,6 +857,7 @@
       "releaseDate": "2001-11-30",
       "serial": "T-9714N",
       "rating": "US: et",
+      "developer": "Digital Eclipse",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -759,6 +865,7 @@
       "releaseDate": "1999-09-09",
       "serial": "T-17701N",
       "rating": "ESRB: Everyone",
+      "developer": "Ubisoft",
       "publisher": "Ubi Soft"
     },
     {
@@ -766,6 +873,7 @@
       "releaseDate": "1999-09-09",
       "serial": "T-9701N",
       "rating": "ESRB: Mature",
+      "developer": "Eurocom Entertainment Software",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -773,6 +881,7 @@
       "releaseDate": "2000-06-22",
       "serial": "T-1402N",
       "rating": "ESRB: Everyone",
+      "developer": "Namco",
       "publisher": "Namco Hometek"
     },
     {
@@ -780,6 +889,7 @@
       "releaseDate": "2000-11-15",
       "serial": "T-1404N",
       "rating": "ESRB: Everyone",
+      "developer": "Mass Media",
       "publisher": "Namco Hometek"
     },
     {
@@ -787,6 +897,7 @@
       "releaseDate": "2000-10-18",
       "serial": "T-10004N",
       "rating": "ESRB: Everyone",
+      "developer": "Darkblack",
       "publisher": "THQ"
     },
     {
@@ -794,6 +905,7 @@
       "releaseDate": "2000-07-25",
       "serial": "T-1403N",
       "rating": "ESRB: Everyone",
+      "developer": "Mass Media",
       "publisher": "Namco Hometek"
     },
     {
@@ -801,6 +913,7 @@
       "releaseDate": "1999-11-10",
       "serial": "51004",
       "rating": "ESRB: Everyone",
+      "developer": "Visual Concepts",
       "publisher": "Sega of America"
     },
     {
@@ -808,6 +921,7 @@
       "releaseDate": "2000-10-31",
       "serial": "51063",
       "rating": "ESRB: Everyone",
+      "developer": "Visual Concepts",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -815,6 +929,7 @@
       "releaseDate": "2001-10-23",
       "serial": "51178",
       "rating": "ESRB: Everyone",
+      "developer": "Visual Concepts",
       "publisher": "Sega of America"
     },
     {
@@ -822,6 +937,7 @@
       "releaseDate": "2001-02-15",
       "serial": "T-9709N",
       "rating": "ESRB: Everyone",
+      "developer": "Eurocom Entertainment Software",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -829,6 +945,7 @@
       "releaseDate": "1999-11-16",
       "serial": "T-9706N",
       "rating": "ESRB: Everyone",
+      "developer": "Avalanche Software",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -836,6 +953,7 @@
       "releaseDate": "2001-08-28",
       "serial": "51176",
       "rating": "ESRB: Everyone",
+      "developer": "Avalanche Software",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -843,6 +961,7 @@
       "releaseDate": "1999-09-09",
       "serial": "51003",
       "rating": "ESRB: Everyone",
+      "developer": "Visual Concepts",
       "publisher": "Sega of America"
     },
     {
@@ -850,6 +969,7 @@
       "releaseDate": "2000-09-05",
       "serial": "51062",
       "rating": "ESRB: Everyone",
+      "developer": "Visual Concepts",
       "publisher": "Sega of America"
     },
     {
@@ -857,6 +977,7 @@
       "releaseDate": "2001-09-18",
       "serial": "51168",
       "rating": "ESRB: Everyone",
+      "developer": "Visual Concepts",
       "publisher": "Sega of America"
     },
     {
@@ -864,6 +985,7 @@
       "releaseDate": "1999-09-09",
       "serial": "T-9703N",
       "rating": "ESRB: Everyone",
+      "developer": "Avalanche Software",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -871,6 +993,7 @@
       "releaseDate": "2000-09-12",
       "serial": "T-9712N",
       "rating": "ESRB: Everyone",
+      "developer": "Avalanche Software",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -878,6 +1001,7 @@
       "releaseDate": "2000-08-23",
       "serial": "T-8115N",
       "rating": "ESRB: Everyone",
+      "developer": "High Voltage Software",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -885,6 +1009,7 @@
       "releaseDate": "1999-11-30",
       "serial": "T-8101N",
       "rating": "ESRB: Everyone",
+      "developer": "Acclaim Studios Austin",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -892,6 +1017,7 @@
       "releaseDate": "2000-02-09",
       "serial": "51025",
       "rating": "ESRB: Everyone",
+      "developer": "Black Box Games",
       "publisher": "Sega of America"
     },
     {
@@ -899,6 +1025,7 @@
       "releaseDate": "2002-02-12",
       "serial": "51182",
       "rating": "ESRB: Everyone",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -906,6 +1033,7 @@
       "releaseDate": "2000-06-12",
       "serial": "T-9504N",
       "rating": "ESRB: Mature",
+      "developer": "Kalisto Entertainment",
       "publisher": "Konami"
     },
     {
@@ -913,6 +1041,7 @@
       "releaseDate": "2000-06-21",
       "serial": "T-36807N",
       "rating": "ESRB: Teen",
+      "developer": "Quantic Dream",
       "publisher": "Eidos Interactive"
     },
     {
@@ -920,6 +1049,7 @@
       "releaseDate": "2001-09-11",
       "serial": "51140",
       "rating": "ESRB: Everyone",
+      "developer": "Visual Concepts",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -927,6 +1057,7 @@
       "releaseDate": "2001-07-24",
       "serial": "51102",
       "rating": "ESRB: Teen",
+      "developer": "AM2 of CRI",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -934,6 +1065,7 @@
       "releaseDate": "1999-09-09",
       "serial": "T-15105N",
       "rating": "ESRB: Everyone",
+      "developer": "",
       "publisher": "Infogrames North America"
     },
     {
@@ -941,6 +1073,7 @@
       "releaseDate": "2001-01-30",
       "serial": "51100",
       "rating": "ESRB: Teen",
+      "developer": "Sonic Team",
       "publisher": "Sega of America"
     },
     {
@@ -948,6 +1081,7 @@
       "releaseDate": "2001-09-25",
       "serial": "51193",
       "rating": "ESRB: Teen",
+      "developer": "Sonic Team (company)",
       "publisher": "Sega PC"
     },
     {
@@ -955,6 +1089,7 @@
       "releaseDate": "2000-04-12",
       "serial": "T-1207N",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -962,6 +1097,7 @@
       "releaseDate": "2000-12-06",
       "serial": "T-17713N",
       "rating": "ESRB: Everyone",
+      "developer": "Ubi Soft",
       "publisher": "Ubi Soft",
       "altTitles": [
         "POD SpeedZone"
@@ -972,6 +1108,7 @@
       "releaseDate": "1999-09-09",
       "serial": "T-1201N",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -979,6 +1116,7 @@
       "releaseDate": "2000-08-23",
       "serial": "T-1211N",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -986,6 +1124,7 @@
       "releaseDate": "2000-12-04",
       "serial": "T-41405N",
       "rating": "ESRB: Teen",
+      "developer": "Avalanche Software",
       "publisher": "Mattel Interactive"
     },
     {
@@ -993,6 +1132,7 @@
       "releaseDate": "2001-05-16",
       "serial": "T-1219N",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1000,6 +1140,7 @@
       "releaseDate": "1999-11-10",
       "serial": "T-31101N",
       "rating": "ESRB: Teen",
+      "developer": "Taito",
       "publisher": "Taito"
     },
     {
@@ -1007,6 +1148,7 @@
       "releaseDate": "2000-12-05",
       "serial": "T-40403N",
       "rating": "ESRB: Everyone",
+      "developer": "Artech Studios",
       "publisher": "Hasbro Interactive"
     },
     {
@@ -1014,6 +1156,7 @@
       "releaseDate": "2000-10-19",
       "serial": "51061",
       "rating": "ESRB: Mature",
+      "developer": "Raster Productions",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -1021,6 +1164,7 @@
       "releaseDate": "2000-07-31",
       "serial": "T-41902N",
       "rating": "ESRB: Everyone",
+      "developer": "PopTop Software",
       "publisher": "Gathering of Developers"
     },
     {
@@ -1028,6 +1172,7 @@
       "releaseDate": "2000-03-21",
       "serial": "T-17704N",
       "rating": "ESRB: Everyone",
+      "developer": "Ubi Pictures",
       "publisher": "Ubi Soft"
     },
     {
@@ -1035,6 +1180,7 @@
       "releaseDate": "2001-08-08",
       "serial": "T-40219N",
       "rating": "ESRB: Everyone",
+      "developer": "Titanium Studios",
       "publisher": "Crave Entertainment"
     },
     {
@@ -1042,6 +1188,7 @@
       "releaseDate": "1999-12-17",
       "serial": "T-8109N",
       "rating": "ESRB: Everyone",
+      "developer": "Acclaim Studios London",
       "publisher": ""
     },
     {
@@ -1049,13 +1196,15 @@
       "releaseDate": "1999-09-09",
       "serial": "T-9704N",
       "rating": "ESRB: Teen",
+      "developer": "Midway Studios San Diego",
       "publisher": ""
     },
     {
       "title": "Ready 2 Rumble Boxing Demo Disc",
-      "releaseDate": "1999",
-      "serial": "",
+      "releaseDate": "",
+      "serial": "}",
       "rating": "ESRB: Rating Pending",
+      "developer": "Midway",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -1063,6 +1212,7 @@
       "releaseDate": "2000-10-24",
       "serial": "T-9717N",
       "rating": "ESRB: Teen",
+      "developer": "Midway Studios San Diego",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -1070,6 +1220,7 @@
       "releaseDate": "2001-03-13",
       "serial": "T-40218N",
       "rating": "ESRB: Mature",
+      "developer": "Conspiracy Entertainment",
       "publisher": "Crave Entertainment"
     },
     {
@@ -1077,6 +1228,7 @@
       "releaseDate": "2000-11-01",
       "serial": "T-40215N",
       "rating": "ESRB: Teen",
+      "developer": "Argonaut Games",
       "publisher": "Crave Entertainment"
     },
     {
@@ -1084,13 +1236,18 @@
       "releaseDate": "2001-07-24",
       "serial": "T-44303N",
       "rating": "ESRB: Everyone",
-      "publisher": "Natsume Inc."
+      "developer": "Westone Bit Entertainment",
+      "publisher": "Natsume Inc.",
+      "altTitles": [
+        ""
+      ]
     },
     {
       "title": "Resident Evil 2",
       "releaseDate": "2000-12-13",
       "serial": "T-1205N",
       "rating": "ESRB: Mature",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1098,6 +1255,7 @@
       "releaseDate": "2000-11-15",
       "serial": "T-1220N",
       "rating": "ESRB: Mature",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1105,6 +1263,7 @@
       "releaseDate": "2000-03-28",
       "serial": "T-1204N",
       "rating": "ESRB: Mature",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1112,6 +1271,7 @@
       "releaseDate": "1999-11-10",
       "serial": "51010",
       "rating": "ESRB: Everyone",
+      "developer": "UEP Systems",
       "publisher": "Sega of America"
     },
     {
@@ -1119,6 +1279,7 @@
       "releaseDate": "2000-03-16",
       "serial": "T-22901N",
       "rating": "ESRB: Everyone",
+      "developer": "Player 1",
       "publisher": "Titus"
     },
     {
@@ -1126,6 +1287,7 @@
       "releaseDate": "2000-10-17",
       "serial": "51092",
       "rating": "ESRB: Everyone",
+      "developer": "Sega Software R&D Dept. 8",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1133,6 +1295,7 @@
       "releaseDate": "2000-09-06",
       "serial": "T-9707N",
       "rating": "ESRB: Everyone",
+      "developer": "Midway Games West",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -1140,6 +1303,7 @@
       "releaseDate": "2000-08-08",
       "serial": "51048",
       "rating": "ESRB: Teen",
+      "developer": "Vivarium",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -1147,6 +1311,7 @@
       "releaseDate": "1999-10-06",
       "serial": "51006",
       "rating": "ESRB: Everyone",
+      "developer": "H.I.C.",
       "publisher": "Sega of America"
     },
     {
@@ -1154,6 +1319,7 @@
       "releaseDate": "2001-08-21",
       "serial": "51166",
       "rating": "ESRB: Everyone",
+      "developer": "WOW Entertainment",
       "publisher": "Sega of America"
     },
     {
@@ -1161,6 +1327,7 @@
       "releaseDate": "2000-11-28",
       "serial": "T-15126N",
       "rating": "ESRB: Everyone",
+      "developer": "Innerloop Studios",
       "publisher": "Infogrames, Inc.",
       "altTitles": [
         "Xtreme Sports"
@@ -1171,6 +1338,7 @@
       "releaseDate": "2000-08-29",
       "serial": "51053",
       "rating": "ESRB: Everyone",
+      "developer": "H.I.C.",
       "publisher": "Activision Value Publishing"
     },
     {
@@ -1178,6 +1346,7 @@
       "releaseDate": "2000-10-17",
       "serial": "51096",
       "rating": "ESRB: Everyone",
+      "developer": "Matrix Interactive",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1185,6 +1354,7 @@
       "releaseDate": "1999-11-24",
       "serial": "51019",
       "rating": "ESRB: Everyone",
+      "developer": "AM Annex",
       "publisher": "Mattel Interactive"
     },
     {
@@ -1192,13 +1362,23 @@
       "releaseDate": "2001-04-24",
       "serial": "51146",
       "rating": "US: et",
+      "developer": "Sega of America Dreamcast",
       "publisher": "Sega of America Dreamcast"
+    },
+    {
+      "title": "Sega Swirl",
+      "releaseDate": "2000-02-08",
+      "serial": "",
+      "rating": "",
+      "developer": "CodeFire",
+      "publisher": "OnHand Software"
     },
     {
       "title": "Seventh Cross Evolution",
       "releaseDate": "1999-12-18",
       "serial": "T-41301N",
       "rating": "ESRB: Teen",
+      "developer": "Atypical Alchemists Associate",
       "publisher": "U.F.O. Interactive"
     },
     {
@@ -1206,20 +1386,23 @@
       "releaseDate": "1999-12-01",
       "serial": "T-8106N",
       "rating": "ESRB: Mature",
+      "developer": "Acclaim Studios Teesside",
       "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Shenmue",
-      "releaseDate": "2000-11-07",
-      "serial": "51059",
+      "releaseDate": "",
+      "serial": "51059}",
       "rating": "ESRB: Teen",
-      "publisher": "Sega of America Dreamcast"
+      "developer": "AM2 of CRI",
+      "publisher": ""
     },
     {
       "title": "Silent Scope",
       "releaseDate": "2000-10-24",
       "serial": "T-9507N",
       "rating": "ESRB: Mature",
+      "developer": "Konami Computer Entertainment Studios",
       "publisher": "Konami"
     },
     {
@@ -1227,6 +1410,7 @@
       "releaseDate": "2000-06-28",
       "serial": "T-15108N",
       "rating": "ESRB: Teen",
+      "developer": "Spiral House",
       "publisher": "Sega PC"
     },
     {
@@ -1234,6 +1418,7 @@
       "releaseDate": "2000-11-14",
       "serial": "51052",
       "rating": "ESRB: Teen",
+      "developer": "Aspect Digital Entertainment",
       "publisher": "Sega of America"
     },
     {
@@ -1241,6 +1426,7 @@
       "releaseDate": "1999-11-16",
       "serial": "T-15106N",
       "rating": "ESRB: Teen",
+      "developer": "Infogrames North America",
       "publisher": "Infogrames"
     },
     {
@@ -1248,6 +1434,7 @@
       "releaseDate": "2000-11-29",
       "serial": "T-40207N",
       "rating": "ESRB: Everyone",
+      "developer": "UDS",
       "publisher": "Crave Entertainment"
     },
     {
@@ -1255,6 +1442,7 @@
       "releaseDate": "2001-07-24",
       "serial": "T-40212N",
       "rating": "ESRB: Mature",
+      "developer": "Runecraft",
       "publisher": "Crave Entertainment"
     },
     {
@@ -1262,6 +1450,7 @@
       "releaseDate": "1999-09-09",
       "serial": "51000",
       "rating": "ESRB: Everyone",
+      "developer": "Sega CS3 (1996-1999)",
       "publisher": "Sega of America"
     },
     {
@@ -1269,6 +1458,7 @@
       "releaseDate": "2001-06-19",
       "serial": "51117",
       "rating": "ESRB: Everyone",
+      "developer": "Sonic Team (company)",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -1276,6 +1466,7 @@
       "releaseDate": "2000-11-14",
       "serial": "51060",
       "rating": "ESRB: Everyone",
+      "developer": "A.I",
       "publisher": "Sega of America"
     },
     {
@@ -1283,6 +1474,7 @@
       "releaseDate": "1999-11-23",
       "serial": "T-41401N",
       "rating": "ESRB: Teen",
+      "developer": "Toka",
       "publisher": "Red Orb Entertainment"
     },
     {
@@ -1290,6 +1482,7 @@
       "releaseDate": "1999-09-09",
       "serial": "T-1401N",
       "rating": "ESRB: Teen",
+      "developer": "Namco",
       "publisher": "Namco Hometek"
     },
     {
@@ -1297,6 +1490,7 @@
       "releaseDate": "2000-06-30",
       "serial": "T-8116N",
       "rating": "ESRB: Mature",
+      "developer": "Tantalus Interactive",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -1304,6 +1498,7 @@
       "releaseDate": "1999-11-22",
       "serial": "T-8105N",
       "rating": "ESRB: Mature",
+      "developer": "Acclaim Studios Austin",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -1311,6 +1506,7 @@
       "releaseDate": "2000-06-06",
       "serial": "51051",
       "rating": "ESRB: Teen",
+      "developer": "Sega Digital Media",
       "publisher": "Sega of America"
     },
     {
@@ -1318,6 +1514,7 @@
       "releaseDate": "2000-10-18",
       "serial": "T-1216N",
       "rating": "ESRB: Mature",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1325,6 +1522,7 @@
       "releaseDate": "2000-10-25",
       "serial": "T-41704N",
       "rating": "ESRB: Teen",
+      "developer": "Runecraft",
       "publisher": "Ripcord Games"
     },
     {
@@ -1332,6 +1530,7 @@
       "releaseDate": "1999-10-29",
       "serial": "T-17702N",
       "rating": "ESRB: Everyone",
+      "developer": "Ubi Soft Montreal",
       "publisher": "Ubi Soft"
     },
     {
@@ -1339,6 +1538,7 @@
       "releaseDate": "2000-12-15",
       "serial": "T-17718N",
       "rating": "ESRB: Everyone",
+      "developer": "Ubi Soft Montreal",
       "publisher": "Ubi Soft"
     },
     {
@@ -1346,6 +1546,7 @@
       "releaseDate": "2001-04-19",
       "serial": "T-13008N",
       "rating": "ESRB: Everyone",
+      "developer": "Neversoft Entertainment",
       "publisher": "Activision"
     },
     {
@@ -1353,6 +1554,7 @@
       "releaseDate": "2000-06-28",
       "serial": "T-8118N",
       "rating": "ESRB: Everyone",
+      "developer": "Broadsword Interactive",
       "publisher": ""
     },
     {
@@ -1360,6 +1562,7 @@
       "releaseDate": "2001-07-19",
       "serial": "T-44304N",
       "rating": "ESRB: Everyone",
+      "developer": "WOW Entertainment",
       "publisher": "Sega Corporation (2000-2015)"
     },
     {
@@ -1367,6 +1570,7 @@
       "releaseDate": "2000-11-20",
       "serial": "T-23003N",
       "rating": "ESRB: Teen",
+      "developer": "Luxoflux",
       "publisher": "LucasArts"
     },
     {
@@ -1374,6 +1578,7 @@
       "releaseDate": "2000-10-10",
       "serial": "T-23002N",
       "rating": "ESRB: Teen",
+      "developer": "LucasArts",
       "publisher": "LucasArts"
     },
     {
@@ -1381,6 +1586,7 @@
       "releaseDate": "2000-04-03",
       "serial": "T-23001N",
       "rating": "ESRB: Everyone",
+      "developer": "LucasArts",
       "publisher": "LucasArts"
     },
     {
@@ -1388,6 +1594,7 @@
       "releaseDate": "2000-11-22",
       "serial": "T-40209N",
       "rating": "ESRB: Teen",
+      "developer": "Digital Anvil",
       "publisher": "Crave Entertainment"
     },
     {
@@ -1395,6 +1602,7 @@
       "releaseDate": "2000-05-07",
       "serial": "T-1203N",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1402,6 +1610,7 @@
       "releaseDate": "2000-10-04",
       "serial": "T-1213N",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1409,6 +1618,7 @@
       "releaseDate": "2000-06-21",
       "serial": "T-1210N",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1416,6 +1626,7 @@
       "releaseDate": "2001-06-20",
       "serial": "T-17708N",
       "rating": "ESRB: Teen",
+      "developer": "Titanium Studios",
       "publisher": "Ubi Soft"
     },
     {
@@ -1423,6 +1634,7 @@
       "releaseDate": "2000-06-14",
       "serial": "T-40206N",
       "rating": "ESRB: Everyone",
+      "developer": "Genki",
       "publisher": ""
     },
     {
@@ -1430,6 +1642,7 @@
       "releaseDate": "2000-10-24",
       "serial": "T-12511N",
       "rating": "ESRB: Teen",
+      "developer": "Climax Entertainment",
       "publisher": "Interplay"
     },
     {
@@ -1437,6 +1650,7 @@
       "releaseDate": "2001-02-28",
       "serial": "T-40216N",
       "rating": "ESRB: Teen",
+      "developer": "CRI",
       "publisher": "Crave Entertainment"
     },
     {
@@ -1444,6 +1658,7 @@
       "releaseDate": "1999-11-10",
       "serial": "T-17703N",
       "rating": "ESRB: Everyone",
+      "developer": "Criterion Software",
       "publisher": "Ubi Soft"
     },
     {
@@ -1451,6 +1666,7 @@
       "releaseDate": "2000-03-15",
       "serial": "T-36805N",
       "rating": "ESRB: Mature",
+      "developer": "ASCII",
       "publisher": ""
     },
     {
@@ -1458,6 +1674,7 @@
       "releaseDate": "2000-08-26",
       "serial": "T-36808N",
       "rating": "ESRB: Everyone",
+      "developer": "Attention To Detail",
       "publisher": ""
     },
     {
@@ -1465,6 +1682,7 @@
       "releaseDate": "2000-06-14",
       "serial": "T-1208N",
       "rating": "ESRB: Mature",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1472,6 +1690,7 @@
       "releaseDate": "2000-01-12",
       "serial": "T-8108N",
       "rating": "ESRB: Everyone",
+      "developer": "Bottom Up",
       "publisher": ""
     },
     {
@@ -1479,6 +1698,7 @@
       "releaseDate": "1999-12-15",
       "serial": "T-15102N",
       "rating": "ESRB: Everyone",
+      "developer": "Pitbull Syndicate",
       "publisher": "Infogrames North America"
     },
     {
@@ -1486,6 +1706,7 @@
       "releaseDate": "2000-12-06",
       "serial": "T-9512N",
       "rating": "ESRB: Everyone",
+      "developer": "Artificial Mind & Movement",
       "publisher": "Konami"
     },
     {
@@ -1493,6 +1714,7 @@
       "releaseDate": "1999-09-09",
       "serial": "51002",
       "rating": "ESRB: Mature",
+      "developer": "CRI",
       "publisher": "Empire Interactive"
     },
     {
@@ -1500,6 +1722,7 @@
       "releaseDate": "1999-10-16",
       "serial": "T-3101N",
       "rating": "ESRB: Teen",
+      "developer": "SNK",
       "publisher": "SNK"
     },
     {
@@ -1507,6 +1730,7 @@
       "releaseDate": "2000-12-13",
       "serial": "T-44302N",
       "rating": "ESRB: Teen",
+      "developer": "SNK",
       "publisher": "Agetec"
     },
     {
@@ -1514,6 +1738,7 @@
       "releaseDate": "2001-08-07",
       "serial": "T-44305N",
       "rating": "ESRB: Teen",
+      "developer": "SNK",
       "publisher": "Agetec"
     },
     {
@@ -1521,6 +1746,7 @@
       "releaseDate": "2000-12-19",
       "serial": "T-40214N",
       "rating": "ESRB: Everyone",
+      "developer": "Blue Planet Software",
       "publisher": "Crave Entertainment"
     },
     {
@@ -1528,6 +1754,7 @@
       "releaseDate": "2000-09-26",
       "serial": "T-15122N",
       "rating": "ESRB: Mature",
+      "developer": "Asmik Ace Entertainment",
       "publisher": "Infogrames North America"
     },
     {
@@ -1535,6 +1762,7 @@
       "releaseDate": "2001-01-23",
       "serial": "51144",
       "rating": "ESRB: Mature",
+      "developer": "Smilebit",
       "publisher": "Empire Interactive"
     },
     {
@@ -1542,6 +1770,7 @@
       "releaseDate": "2000-03-28",
       "serial": "51011",
       "rating": "ESRB: Teen",
+      "developer": "Climax Entertainment",
       "publisher": "Sega of America"
     },
     {
@@ -1549,20 +1778,23 @@
       "releaseDate": "1999-09-09",
       "serial": "T-40202N",
       "rating": "ESRB: Everyone",
+      "developer": "Genki",
       "publisher": ""
     },
     {
       "title": "Tokyo Xtreme Racer 2",
-      "releaseDate": "2000-09-26",
-      "serial": "T-40211N",
+      "releaseDate": "",
+      "serial": "T-40211N}",
       "rating": "ESRB: Everyone",
-      "publisher": "Crave Entertainment"
+      "developer": "Genki",
+      "publisher": ""
     },
     {
       "title": "Tom Clancy's Rainbow Six",
       "releaseDate": "2000-05-08",
       "serial": "T-40401N",
       "rating": "ESRB: Teen",
+      "developer": "Pipe Dream Interactive",
       "publisher": "Pipe Dream Interactive"
     },
     {
@@ -1570,6 +1802,7 @@
       "releaseDate": "2000-11-20",
       "serial": "T-40402N",
       "rating": "ESRB: Teen",
+      "developer": "Pipe Dream Interactive",
       "publisher": "Pipe Dream Interactive"
     },
     {
@@ -1577,6 +1810,7 @@
       "releaseDate": "2000-11-22",
       "serial": "T-36812N",
       "rating": "ESRB: Teen",
+      "developer": "Core Design",
       "publisher": "Eidos Interactive"
     },
     {
@@ -1584,6 +1818,7 @@
       "releaseDate": "2000-03-24",
       "serial": "T-36806N",
       "rating": "ESRB: Teen",
+      "developer": "Core Design",
       "publisher": "Eidos Interactive"
     },
     {
@@ -1591,6 +1826,7 @@
       "releaseDate": "2000-05-23",
       "serial": "T-40205N",
       "rating": "ESRB: Teen",
+      "developer": "Treyarch",
       "publisher": "Crave Entertainment"
     },
     {
@@ -1598,6 +1834,7 @@
       "releaseDate": "2000-11-07",
       "serial": "T-13006N",
       "rating": "ESRB: Teen",
+      "developer": "Neversoft Entertainment",
       "publisher": "Activision"
     },
     {
@@ -1605,6 +1842,7 @@
       "releaseDate": "1999-11-03",
       "serial": "51020",
       "rating": "ESRB: Everyone",
+      "developer": "No Cliché",
       "publisher": "Sega of America"
     },
     {
@@ -1612,6 +1850,7 @@
       "releaseDate": "1999-08-31",
       "serial": "T-8102N",
       "rating": "ESRB: Everyone",
+      "developer": "Criterion Studios",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -1619,6 +1858,7 @@
       "releaseDate": "",
       "serial": "",
       "rating": "",
+      "developer": "Rage Software",
       "publisher": "Infogrames North America"
     },
     {
@@ -1626,6 +1866,7 @@
       "releaseDate": "2000-08-30",
       "serial": "T-40204N",
       "rating": "ESRB: Teen",
+      "developer": "Anchor",
       "publisher": "Crave Entertainment"
     },
     {
@@ -1633,6 +1874,7 @@
       "releaseDate": "2001-03-13",
       "serial": "T-15125N",
       "rating": "ESRB: Mature",
+      "developer": "Epic Games",
       "publisher": "Infogrames Inc."
     },
     {
@@ -1640,6 +1882,7 @@
       "releaseDate": "2000-10-20",
       "serial": "T-36810N",
       "rating": "ESRB: Mature",
+      "developer": "Mucky Foot Productions",
       "publisher": "Eidos Interactive"
     },
     {
@@ -1647,6 +1890,7 @@
       "releaseDate": "2000-10-17",
       "serial": "T-15110N",
       "rating": "ESRB: Everyone",
+      "developer": "Eden Studios",
       "publisher": "Infogrames",
       "altTitles": [
         "Test Drive V-Rally"
@@ -1657,6 +1901,7 @@
       "releaseDate": "2000-12-27",
       "serial": "T-8110N",
       "rating": "ESRB: Everyone",
+      "developer": "Clockwork Games",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -1664,6 +1909,7 @@
       "releaseDate": "1999-12-22",
       "serial": "T-13002N",
       "rating": "ESRB: Teen",
+      "developer": "Luxoflux",
       "publisher": ""
     },
     {
@@ -1671,6 +1917,7 @@
       "releaseDate": "2000-09-13",
       "serial": "T-44301N",
       "rating": "ESRB: Everyone",
+      "developer": "Hitmaker",
       "publisher": "Agetec",
       "altTitles": [
         "Virtua Athlete 2000"
@@ -1681,6 +1928,7 @@
       "releaseDate": "1999-10-19",
       "serial": "51001",
       "rating": "ESRB: Teen",
+      "developer": "Genki",
       "publisher": "Sega Enterprises USA"
     },
     {
@@ -1688,6 +1936,7 @@
       "releaseDate": "2000-03-14",
       "serial": "51028",
       "rating": "ESRB: Everyone",
+      "developer": "Genki",
       "publisher": "Sega of America"
     },
     {
@@ -1695,6 +1944,7 @@
       "releaseDate": "2000-07-11",
       "serial": "51054",
       "rating": "ESRB: Everyone",
+      "developer": "Hitmaker",
       "publisher": "Activision Value Publishing"
     },
     {
@@ -1702,44 +1952,34 @@
       "releaseDate": "2001-10-23",
       "serial": "51186",
       "rating": "ESRB: Everyone",
+      "developer": "Hitmaker",
       "publisher": "Sega Corporation (2000-2015)",
       "altTitles": [
         "Tennis 2K2"
       ]
     },
     {
-      "title": "Wacky Races",
-      "releaseDate": "2000-06-28",
-      "serial": "T-15113N",
-      "rating": "ESRB: Everyone",
-      "publisher": "Infogrames North America"
-    },
-    {
       "title": "Walt Disney World Quest: Magical Racing Tour",
       "releaseDate": "2000-07-19",
       "serial": "T-36804N",
       "rating": "ESRB: Everyone",
+      "developer": "Crystal Dynamics",
       "publisher": "Eidos Interactive"
     },
     {
       "title": "Web Browser",
       "releaseDate": "1999-09-09",
-      "serial": "",
+      "serial": "}",
       "rating": "",
+      "developer": "PlanetWeb",
       "publisher": "Sega of America"
-    },
-    {
-      "title": "Web Browser 2.0",
-      "releaseDate": "2000",
-      "serial": "51128",
-      "rating": "",
-      "publisher": "Sega of America Dreamcast"
     },
     {
       "title": "Web Browser 2.62",
       "releaseDate": "2001",
       "serial": "51142",
       "rating": "",
+      "developer": "PlanetWeb",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -1747,6 +1987,7 @@
       "releaseDate": "2000-01-05",
       "serial": "T-8111N",
       "rating": "ESRB: Everyone",
+      "developer": "Imagineer",
       "publisher": "Xicat Interactive"
     },
     {
@@ -1754,6 +1995,7 @@
       "releaseDate": "2000-12-01",
       "serial": "T-11011N",
       "rating": "ESRB: Teen",
+      "developer": "Hypnotix",
       "publisher": "Simon & Schuster Interactive"
     },
     {
@@ -1761,6 +2003,7 @@
       "releaseDate": "2000-01-31",
       "serial": "T-42101N",
       "rating": "ESRB: Teen",
+      "developer": "DMA Design",
       "publisher": "Rockstar Games"
     },
     {
@@ -1768,6 +2011,7 @@
       "releaseDate": "2000-07-19",
       "serial": "51055",
       "rating": "ESRB: Everyone",
+      "developer": "Visual Concepts",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -1775,6 +2019,7 @@
       "releaseDate": "2001-08-14",
       "serial": "51152",
       "rating": "ESRB: Everyone",
+      "developer": "Blue Shift",
       "publisher": "Sega of America Dreamcast"
     },
     {
@@ -1782,6 +2027,7 @@
       "releaseDate": "1999-12-08",
       "serial": "T-40601N",
       "rating": "ESRB: Everyone",
+      "developer": "Team 17",
       "publisher": "Hasbro Interactive"
     },
     {
@@ -1789,6 +2035,7 @@
       "releaseDate": "2001-05-31",
       "serial": "T-22904N",
       "rating": "ESRB: Everyone",
+      "developer": "Team 17",
       "publisher": "Titus"
     },
     {
@@ -1796,6 +2043,7 @@
       "releaseDate": "1999-11-10",
       "serial": "T-8103N",
       "rating": "ESRB: Teen",
+      "developer": "Acclaim Studios Salt Lake City",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -1803,6 +2051,7 @@
       "releaseDate": "2000-08-14",
       "serial": "T-10005N",
       "rating": "ESRB: Teen",
+      "developer": "Sega Software R&D Dept. 1",
       "publisher": "Sega Enterprises USA"
     },
     {
@@ -1810,6 +2059,7 @@
       "releaseDate": "2000-01-25",
       "serial": "51038",
       "rating": "ESRB: Mature",
+      "developer": "Data East",
       "publisher": "Sega Enterprises, Ltd."
     }
   ]

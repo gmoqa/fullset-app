@@ -8,6 +8,7 @@
       "releaseDate": "1993",
       "serial": "4415",
       "rating": "",
+      "developer": "CRI",
       "publisher": ""
     },
     {
@@ -15,6 +16,7 @@
       "releaseDate": "1993",
       "serial": "4401",
       "rating": "OFLC: G8+",
+      "developer": "Malibu Interactive",
       "publisher": "Sega Europe"
     },
     {
@@ -22,20 +24,15 @@
       "releaseDate": "1994-08",
       "serial": "T-115045-50",
       "rating": "OFLC: G",
+      "developer": "Core Design",
       "publisher": ""
-    },
-    {
-      "title": "BC Racers",
-      "releaseDate": "1994-12",
-      "serial": "T-115075-50",
-      "rating": "ELSPA: 3+",
-      "publisher": "Core Design"
     },
     {
       "title": "Bill Walsh College Football",
       "releaseDate": "1994-03",
       "serial": "T-50025-05",
       "rating": "ClassInd: Livre",
+      "developer": "Electronic Arts",
       "publisher": "Electronic Arts"
     },
     {
@@ -43,6 +40,7 @@
       "releaseDate": "1993",
       "serial": "4405",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -50,6 +48,7 @@
       "releaseDate": "1995-06",
       "serial": "T-88045-50",
       "rating": "ELSPA: 3+",
+      "developer": "Domark",
       "publisher": "Domark",
       "altTitles": [
         "Battle Frenzy"
@@ -60,6 +59,7 @@
       "releaseDate": "1994",
       "serial": "063050",
       "rating": "",
+      "developer": "Psygnosis",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -67,41 +67,39 @@
       "releaseDate": "1994-09",
       "serial": "T-83015-50",
       "rating": "ELSPA: 3+",
+      "developer": "GameTek",
       "publisher": "GameTek"
-    },
-    {
-      "title": "Cadillacs and Dinosaurs: The Second Cataclysm",
-      "releaseDate": "",
-      "serial": "063496",
-      "rating": "ClassInd: 13",
-      "publisher": "Tec Toy"
     },
     {
       "title": "Chuck Rock",
       "releaseDate": "1993",
       "serial": "T-93045-50",
       "rating": "",
+      "developer": "Core Design",
       "publisher": "Sega Europe"
     },
     {
       "title": "Chuck Rock II: Son of Chuck",
-      "releaseDate": "1994-01",
-      "serial": "T-115025-50",
+      "releaseDate": "",
+      "serial": "T-115025-50}",
       "rating": "",
-      "publisher": "Core Design"
+      "developer": "Core Design",
+      "publisher": ""
     },
     {
       "title": "Cliffhanger",
       "releaseDate": "",
       "serial": "063130",
       "rating": "",
-      "publisher": "Sony Imagesoft"
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Corpse Killer",
       "releaseDate": "1995-03",
       "serial": "T-162055-50",
       "rating": "BBFC: 15",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
     },
     {
@@ -109,6 +107,7 @@
       "releaseDate": "",
       "serial": "062110",
       "rating": "",
+      "developer": "Sega CS2",
       "publisher": ""
     },
     {
@@ -116,6 +115,7 @@
       "releaseDate": "1994-02",
       "serial": "4419",
       "rating": "OFLC: M15+",
+      "developer": "Digital Pictures",
       "publisher": "Sega Europe"
     },
     {
@@ -123,6 +123,7 @@
       "releaseDate": "1994-05",
       "serial": "4420",
       "rating": "OFLC: MA15+",
+      "developer": "ICOM Simulations",
       "publisher": "Sega Europe"
     },
     {
@@ -130,6 +131,7 @@
       "releaseDate": "1994-03",
       "serial": "4436-50",
       "rating": "OFLC: G8+",
+      "developer": "ReadySoft",
       "publisher": ""
     },
     {
@@ -137,6 +139,7 @@
       "releaseDate": "1994-01",
       "serial": "T-70035-50",
       "rating": "OFLC: G8+",
+      "developer": "Cryo Interactive Entertainment",
       "publisher": "Virgin Interactive Entertainment"
     },
     {
@@ -144,6 +147,7 @@
       "releaseDate": "1995",
       "serial": "T-143025-50",
       "rating": "ELSPA: 3+",
+      "developer": "Hudson Soft",
       "publisher": ""
     },
     {
@@ -151,13 +155,15 @@
       "releaseDate": "1994",
       "serial": "T-60085-50",
       "rating": "ELSPA: 3+",
-      "publisher": "JVC Musical Industries Europe"
+      "developer": "FTL Games",
+      "publisher": ""
     },
     {
       "title": "Earthworm Jim: Special Edition",
       "releaseDate": "1995-06",
       "serial": "T-125045-50",
       "rating": "ELSPA: 3+",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -165,6 +171,7 @@
       "releaseDate": "1993",
       "serial": "4408",
       "rating": "",
+      "developer": "Backbone Entertainment",
       "publisher": "Sega PC"
     },
     {
@@ -172,6 +179,7 @@
       "releaseDate": "1995-06",
       "serial": "4441-50",
       "rating": "ELSPA: 3+",
+      "developer": "M2",
       "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Ecco: Les Marées du Temps"
@@ -182,6 +190,7 @@
       "releaseDate": "1994",
       "serial": "T-93115-50",
       "rating": "ELSPA: 3+",
+      "developer": "Park Place Productions",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -189,6 +198,7 @@
       "releaseDate": "1995-05",
       "serial": "4427-50",
       "rating": "ELSPA: 18+",
+      "developer": "Sega Interactive Development Division",
       "publisher": "Sega Europe"
     },
     {
@@ -196,13 +206,15 @@
       "releaseDate": "1994-12",
       "serial": "4655-50",
       "rating": "ELSPA: 3+",
+      "developer": "Opera House",
       "publisher": ""
     },
     {
       "title": "Fahrenheit",
-      "releaseDate": "1995-05",
-      "serial": "4438-50",
+      "releaseDate": "",
+      "serial": "4438-50}",
       "rating": "ELSPA: 11+",
+      "developer": "programming",
       "publisher": ""
     },
     {
@@ -210,20 +222,15 @@
       "releaseDate": "1995-07",
       "serial": "T-60165-50",
       "rating": "ELSPA: 15+",
+      "developer": "Funcom",
       "publisher": "JVC Musical Industries Europe"
-    },
-    {
-      "title": "FIFA International Soccer: Championship Edition",
-      "releaseDate": "1994-06",
-      "serial": "T-50055-50",
-      "rating": "ELSPA: 3+",
-      "publisher": ""
     },
     {
       "title": "Final Fight CD",
       "releaseDate": "1993",
       "serial": "4410",
       "rating": "",
+      "developer": "A-Wave",
       "publisher": "Sega Europe"
     },
     {
@@ -231,6 +238,7 @@
       "releaseDate": "1996-03-06",
       "serial": "T-70416-50",
       "rating": "ELSPA: 3+",
+      "developer": "EXP (developer)",
       "publisher": "Virgin Interactive Entertainment"
     },
     {
@@ -238,6 +246,7 @@
       "releaseDate": "1994-09",
       "serial": "4608-50",
       "rating": "OFLC: G",
+      "developer": "Fuji Television",
       "publisher": "Sega Europe"
     },
     {
@@ -245,6 +254,7 @@
       "releaseDate": "1994",
       "serial": "T-93145-50",
       "rating": "BBFC: 15",
+      "developer": "Digital Pictures",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -252,6 +262,7 @@
       "releaseDate": "",
       "serial": "063100",
       "rating": "ClassInd: 13",
+      "developer": "Delphine Software International",
       "publisher": "Virgin Interactive Entertainment"
     },
     {
@@ -259,6 +270,7 @@
       "releaseDate": "1993",
       "serial": "T-93055-50",
       "rating": "",
+      "developer": "Core Design",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -266,6 +278,7 @@
       "releaseDate": "1993",
       "serial": "4902",
       "rating": "OFLC: G",
+      "developer": "Digital Pictures",
       "publisher": "Sega Europe"
     },
     {
@@ -273,13 +286,15 @@
       "releaseDate": "1993",
       "serial": "4602",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
       "title": "Joe Montana's NFL Football",
       "releaseDate": "",
-      "serial": "063190",
+      "serial": "063190}",
       "rating": "",
+      "developer": "Malibu Interactive",
       "publisher": "Sega of America"
     },
     {
@@ -287,20 +302,23 @@
       "releaseDate": "1994-02",
       "serial": "4411",
       "rating": "USK: 0",
+      "developer": "Sega Multimedia Studio",
       "publisher": "Sega Europe"
     },
     {
       "title": "Keio Flying Squadron",
-      "releaseDate": "1994-10",
-      "serial": "T-60185-50",
+      "releaseDate": "",
+      "serial": "T-60185-50}",
       "rating": "ELSPA: 3+",
-      "publisher": "JVC Musical Industries Europe"
+      "developer": "Studio Pierrot",
+      "publisher": ""
     },
     {
       "title": "Kids on Site",
       "releaseDate": "1994",
       "serial": "T-162015-50",
       "rating": "ELSPA: 3+",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
     },
     {
@@ -308,6 +326,7 @@
       "releaseDate": "1993",
       "serial": "T-93025-50",
       "rating": "",
+      "developer": "Digital Pictures",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -315,6 +334,7 @@
       "releaseDate": "1993-11-19",
       "serial": "T-95015-50",
       "rating": "BBFC: PG",
+      "developer": "Konami",
       "publisher": "Konami"
     },
     {
@@ -322,20 +342,23 @@
       "releaseDate": "1994-12-23",
       "serial": "T-95025-50",
       "rating": "BBFC: PG",
+      "developer": "Konami",
       "publisher": "Konami"
     },
     {
       "title": "Loadstar: The Legend of Tully Bodine",
-      "releaseDate": "1996-12",
-      "serial": "063486",
+      "releaseDate": "",
+      "serial": "063486}",
       "rating": "ClassInd: 13",
-      "publisher": "Tec Toy"
+      "developer": "Rocket Science Games",
+      "publisher": ""
     },
     {
       "title": "Lords of Thunder",
       "releaseDate": "1995",
       "serial": "T-143035-50",
       "rating": "ELSPA: 3+",
+      "developer": "Eleven",
       "publisher": ""
     },
     {
@@ -343,6 +366,7 @@
       "releaseDate": "1993",
       "serial": "",
       "rating": "",
+      "developer": "American Laser Games",
       "publisher": "American Laser Games"
     },
     {
@@ -350,6 +374,7 @@
       "releaseDate": "1994",
       "serial": "T-88025-50",
       "rating": "ELSPA: 3+",
+      "developer": "Interactive Studios",
       "publisher": "Domark"
     },
     {
@@ -357,6 +382,7 @@
       "releaseDate": "1994-12",
       "serial": "T-93305-50",
       "rating": "ELSPA: 3+",
+      "developer": "Disney Software",
       "publisher": "",
       "altTitles": [
         "Topolino Mania"
@@ -367,6 +393,7 @@
       "releaseDate": "1994-01",
       "serial": "T-113015-50",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -374,6 +401,7 @@
       "releaseDate": "1995-03",
       "serial": "4439-50",
       "rating": "ELSPA: 11+",
+      "developer": "Stargate Films",
       "publisher": "Sega Europe"
     },
     {
@@ -381,6 +409,7 @@
       "releaseDate": "1995-03",
       "serial": "4442-50",
       "rating": "ELSPA: 3+",
+      "developer": "Orion Technologies",
       "publisher": "Sega Europe"
     },
     {
@@ -388,6 +417,7 @@
       "releaseDate": "1994-07",
       "serial": "T-81025-50",
       "rating": "OFLC: MA15+",
+      "developer": "Grey Team",
       "publisher": ""
     },
     {
@@ -395,13 +425,15 @@
       "releaseDate": "1994",
       "serial": "T-81035-50",
       "rating": "ELSPA: 3+",
+      "developer": "Iguana Entertainment",
       "publisher": ""
     },
     {
       "title": "NFL's Greatest: San Francisco vs. Dallas 1978-1993",
       "releaseDate": "",
-      "serial": "063200",
+      "serial": "063200}",
       "rating": "",
+      "developer": "Park Place Productions",
       "publisher": "Sega of America"
     },
     {
@@ -409,6 +441,7 @@
       "releaseDate": "1994-03",
       "serial": "T-50015-50",
       "rating": "",
+      "developer": "High Score Productions",
       "publisher": "Electronic Arts"
     },
     {
@@ -416,6 +449,7 @@
       "releaseDate": "1993",
       "serial": "4903",
       "rating": "BBFC: 15",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
     },
     {
@@ -423,6 +457,7 @@
       "releaseDate": "1994-11",
       "serial": "T-113065-50",
       "rating": "ELSPA: 3+",
+      "developer": "Psygnosis",
       "publisher": ""
     },
     {
@@ -430,6 +465,7 @@
       "releaseDate": "1995",
       "serial": "T-130025-50",
       "rating": "ELSPA: 3+",
+      "developer": "Big Bang Software",
       "publisher": "Activision"
     },
     {
@@ -437,6 +473,7 @@
       "releaseDate": "1993",
       "serial": "T-93035-50",
       "rating": "",
+      "developer": "Digital Pictures",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -444,6 +481,7 @@
       "releaseDate": "1994-04",
       "serial": "T-50035-50",
       "rating": "",
+      "developer": "Bullfrog Productions",
       "publisher": ""
     },
     {
@@ -451,20 +489,23 @@
       "releaseDate": "1993",
       "serial": "4652",
       "rating": "",
+      "developer": "Bits Laboratory",
       "publisher": ""
     },
     {
       "title": "Prize Fighter",
-      "releaseDate": "1994-03",
-      "serial": "4206",
+      "releaseDate": "",
+      "serial": "4206}",
       "rating": "OFLC: M15+",
-      "publisher": "Sega Europe"
+      "developer": "Digital Pictures",
+      "publisher": ""
     },
     {
       "title": "Puggsy",
       "releaseDate": "1993-11",
       "serial": "T-113035-50",
       "rating": "",
+      "developer": "Traveller's Tales",
       "publisher": "Psygnosis"
     },
     {
@@ -472,6 +513,7 @@
       "releaseDate": "",
       "serial": "063230",
       "rating": "",
+      "developer": "Hammond & Leyland",
       "publisher": "Sega of America"
     },
     {
@@ -479,20 +521,23 @@
       "releaseDate": "",
       "serial": "063440",
       "rating": "ClassInd: 13",
+      "developer": "Wolf Team",
       "publisher": "Renovation Products"
     },
     {
       "title": "Road Avenger",
-      "releaseDate": "1993",
-      "serial": "4603",
+      "releaseDate": "",
+      "serial": "4603}",
       "rating": "OFLC: MA15+",
-      "publisher": "Sega Europe"
+      "developer": "Wolf Team",
+      "publisher": "Data EastCategory :Live link reference"
     },
     {
       "title": "Road Rash (Mega-CD)",
       "releaseDate": "1995-10",
       "serial": "",
       "rating": "ClassInd: Livre",
+      "developer": "Monkey Do Productions",
       "publisher": "Electronic Arts"
     },
     {
@@ -500,6 +545,7 @@
       "releaseDate": "1993",
       "serial": "4416",
       "rating": "",
+      "developer": "Compile",
       "publisher": ""
     },
     {
@@ -507,6 +553,7 @@
       "releaseDate": "1995-06",
       "serial": "T-60175-50",
       "rating": "ELSPA: 15+",
+      "developer": "Funcom",
       "publisher": "JVC Musical Industries Europe"
     },
     {
@@ -514,6 +561,7 @@
       "releaseDate": "1993-04-02",
       "serial": "4127",
       "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": ""
     },
     {
@@ -521,6 +569,7 @@
       "releaseDate": "1994-07",
       "serial": "T-93185-50",
       "rating": "ELSPA: 3+",
+      "developer": "Psygnosis",
       "publisher": "Renegade Software"
     },
     {
@@ -528,6 +577,7 @@
       "releaseDate": "1993-06",
       "serial": "T-93015-50",
       "rating": "BBFC: PG",
+      "developer": "Digital Pictures",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -535,6 +585,7 @@
       "releaseDate": "1994-05",
       "serial": "T-113045-50",
       "rating": "ELSPA: 11+",
+      "developer": "Digital Developments",
       "publisher": "Electronic Arts"
     },
     {
@@ -542,6 +593,7 @@
       "releaseDate": "1993",
       "serial": "4650",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -549,20 +601,23 @@
       "releaseDate": "1993",
       "serial": "4653",
       "rating": "",
+      "developer": "Viacom New Media",
       "publisher": "Sega Europe"
     },
     {
       "title": "Shining Force CD",
-      "releaseDate": "1995-04",
-      "serial": "4656-50",
+      "releaseDate": "",
+      "serial": "4656-50}",
       "rating": "ELSPA: 3+",
-      "publisher": "Sega Europe"
+      "developer": "Rit'sCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Silpheed",
       "releaseDate": "1993-09",
       "serial": "4423",
       "rating": "",
+      "developer": "Game Arts",
       "publisher": ""
     },
     {
@@ -570,6 +625,7 @@
       "releaseDate": "1995-02",
       "serial": "T-162035-50",
       "rating": "ELSPA: 3+",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
     },
     {
@@ -577,6 +633,7 @@
       "releaseDate": "1995-01",
       "serial": "T-95035-05",
       "rating": "ELSPA: 18+",
+      "developer": "Konami",
       "publisher": "Konami"
     },
     {
@@ -584,6 +641,7 @@
       "releaseDate": "1993-04",
       "serial": "4130",
       "rating": "",
+      "developer": "Wolf Team",
       "publisher": ""
     },
     {
@@ -591,6 +649,7 @@
       "releaseDate": "1993-10",
       "serial": "4407",
       "rating": "OFLC: G",
+      "developer": "Sega CS3",
       "publisher": "Sega Entertainment Inc."
     },
     {
@@ -598,6 +657,7 @@
       "releaseDate": "1994-10",
       "serial": "T-115035-50",
       "rating": "USK: 6",
+      "developer": "Core Design",
       "publisher": ""
     },
     {
@@ -605,6 +665,7 @@
       "releaseDate": "",
       "serial": "063410",
       "rating": "ClassInd: Livre",
+      "developer": "ReadySoft",
       "publisher": "ReadySoft"
     },
     {
@@ -612,6 +673,7 @@
       "releaseDate": "1993-11",
       "serial": "4412",
       "rating": "",
+      "developer": "Foley Hi-Tech",
       "publisher": "Sega Europe"
     },
     {
@@ -619,6 +681,7 @@
       "releaseDate": "1994",
       "serial": "T-60075-50",
       "rating": "ClassInd: Livre",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -626,6 +689,7 @@
       "releaseDate": "1994-12",
       "serial": "4284-50",
       "rating": "ELSPA: 3+",
+      "developer": "Technosoft",
       "publisher": ""
     },
     {
@@ -633,6 +697,7 @@
       "releaseDate": "1994",
       "serial": "T-162045-50",
       "rating": "ELSPA: 11+",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
     },
     {
@@ -640,6 +705,7 @@
       "releaseDate": "1995-09",
       "serial": "4435-50",
       "rating": "ELSPA: 11+",
+      "developer": "Stargate Films",
       "publisher": "Sega Europe"
     },
     {
@@ -647,6 +713,7 @@
       "releaseDate": "1995-06",
       "serial": "T-88065-50",
       "rating": "ELSPA: 11+",
+      "developer": "Bullfrog Productions",
       "publisher": "Domark"
     },
     {
@@ -654,6 +721,7 @@
       "releaseDate": "1995-12",
       "serial": "4432-50",
       "rating": "ELSPA: 3+",
+      "developer": "Clockwork Tortoise",
       "publisher": "Sega Europe"
     },
     {
@@ -661,6 +729,7 @@
       "releaseDate": "1994-11",
       "serial": "T-160015-50",
       "rating": "ELSPA: 3+",
+      "developer": "Online Entertainment",
       "publisher": "Sales Curve Interactive"
     },
     {
@@ -668,6 +737,7 @@
       "releaseDate": "1994",
       "serial": "T-113055-50",
       "rating": "ELSPA: 3+",
+      "developer": "Psygnosis",
       "publisher": ""
     },
     {
@@ -675,6 +745,7 @@
       "releaseDate": "1994-09",
       "serial": "T-158015-50",
       "rating": "ClassInd: 13",
+      "developer": "Arnowitz Studios",
       "publisher": ""
     },
     {
@@ -682,6 +753,7 @@
       "releaseDate": "1995-06",
       "serial": "T-151015-50",
       "rating": "",
+      "developer": "Bit Managers",
       "publisher": "Infogrames",
       "altTitles": [
         "De Smurfen",
@@ -699,6 +771,7 @@
       "releaseDate": "1994",
       "serial": "T-158025-50",
       "rating": "ClassInd: 13",
+      "developer": "LucasArts",
       "publisher": ""
     },
     {
@@ -706,6 +779,7 @@
       "releaseDate": "1995-07",
       "serial": "T-143015-50",
       "rating": "ELSPA: 18+",
+      "developer": "Crosstalk",
       "publisher": "Hudson Soft"
     },
     {
@@ -713,6 +787,7 @@
       "releaseDate": "1994-02",
       "serial": "T-70015-50",
       "rating": "BBFC: PG",
+      "developer": "Virgin Games (United States)",
       "publisher": "Virgin Games (United States)"
     },
     {
@@ -720,6 +795,7 @@
       "releaseDate": "1995",
       "serial": "T-88055-50",
       "rating": "ELSPA: 3+",
+      "developer": "Bullfrog Productions",
       "publisher": "Domark"
     },
     {
@@ -727,6 +803,7 @@
       "releaseDate": "1993",
       "serial": "T-115015-50",
       "rating": "",
+      "developer": "Core Design",
       "publisher": ""
     },
     {
@@ -734,13 +811,15 @@
       "releaseDate": "1993-09",
       "serial": "4417",
       "rating": "",
+      "developer": "HighTech Lab. Japan",
       "publisher": "Sega Europe"
     },
     {
       "title": "Tomcat Alley",
-      "releaseDate": "1994-05",
-      "serial": "4429",
+      "releaseDate": "",
+      "serial": "4429}",
       "rating": "OFLC: M15+",
+      "developer": "Novotrade",
       "publisher": "Sega PC"
     },
     {
@@ -748,6 +827,7 @@
       "releaseDate": "1995-10",
       "serial": "",
       "rating": "ClassInd: Livre",
+      "developer": "Sega Multimedia Studio",
       "publisher": "Tec Toy"
     },
     {
@@ -755,6 +835,7 @@
       "releaseDate": "1993",
       "serial": "4404",
       "rating": "OFLC: G8+",
+      "developer": "Core Design",
       "publisher": "Sega Europe"
     },
     {
@@ -762,6 +843,7 @@
       "releaseDate": "",
       "serial": "4428",
       "rating": "",
+      "developer": "Core Design",
       "publisher": "Victor Musical Industries"
     },
     {
@@ -769,6 +851,7 @@
       "releaseDate": "1994",
       "serial": "T-79025-50",
       "rating": "",
+      "developer": "Tiertex",
       "publisher": "U.S. Gold"
     },
     {
@@ -776,6 +859,7 @@
       "releaseDate": "1994-01",
       "serial": "T-81015-50",
       "rating": "OFLC: PG",
+      "developer": "Sculptured Software",
       "publisher": ""
     },
     {
@@ -783,6 +867,7 @@
       "releaseDate": "1994-03",
       "serial": "4430",
       "rating": "OFLC: G8+",
+      "developer": "Production",
       "publisher": ""
     }
   ]

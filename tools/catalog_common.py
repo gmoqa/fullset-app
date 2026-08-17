@@ -255,13 +255,18 @@ def _merge(existing, new):
 
 # --- Forma canónica: mismo esquema, orden y formato en TODOS los catálogos (para versionar) -------
 
-# Orden fijo de claves. Estas 11 van SIEMPRE (aunque vacías), así todos los catálogos son idénticos
+# Orden fijo de claves. Estas 12 van SIEMPRE (aunque vacías), así todos los catálogos son idénticos
 # en estructura y el diff refleja solo cambios de contenido.
-CANON_KEYS = ["title", "platform", "region", "year", "releaseDate", "publisher", "genre", "slug", "serial", "coverUrl", "rating"]
+#
+# `developer` va **antes** de `publisher` porque son cosas distintas y ese es el orden en que se
+# leen: quién lo hizo, después quién lo vendió. No es lo mismo — *Sonic the Hedgehog* lo desarrolló
+# Sonic Team y lo publicó Sega; *Aladdin* de Mega Drive lo hizo Virgin Games y lo publicó Sega. Es
+# además el orden de las columnas en las tablas de Wikipedia de las que salen varios catálogos.
+CANON_KEYS = ["title", "platform", "region", "year", "releaseDate", "developer", "publisher", "genre", "slug", "serial", "coverUrl", "rating"]
 
 
 def canonical(entry):
-    """Entrada con las 11 claves en orden fijo. year → null si falta; el resto → "" si falta."""
+    """Entrada con las 12 claves en orden fijo. year → null si falta; el resto → "" si falta."""
     return {k: entry.get(k, None if k == "year" else "") for k in CANON_KEYS}
 
 

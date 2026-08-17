@@ -8,6 +8,7 @@
       "releaseDate": "1994",
       "serial": "T-93175",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -15,6 +16,7 @@
       "releaseDate": "1994",
       "serial": "T-86015",
       "rating": "VRC: GA",
+      "developer": "Genki",
       "publisher": "Absolute Entertainment"
     },
     {
@@ -22,6 +24,7 @@
       "releaseDate": "1993-05",
       "serial": "4415",
       "rating": "",
+      "developer": "CRI",
       "publisher": "Sega of America"
     },
     {
@@ -29,6 +32,7 @@
       "releaseDate": "1994-10",
       "serial": "4445",
       "rating": "VRC: GA",
+      "developer": "Human",
       "publisher": "Big Fun Games"
     },
     {
@@ -36,6 +40,7 @@
       "releaseDate": "1993-05-19",
       "serial": "4401",
       "rating": "",
+      "developer": "Malibu Interactive",
       "publisher": "Sega of America"
     },
     {
@@ -43,20 +48,15 @@
       "releaseDate": "1994-08",
       "serial": "T-115045",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Core Design",
       "publisher": ""
-    },
-    {
-      "title": "BC Racers",
-      "releaseDate": "1995-02",
-      "serial": "T-115075",
-      "rating": "ESRB: Kids to Adults",
-      "publisher": "Core Design"
     },
     {
       "title": "Bill Walsh College Football",
       "releaseDate": "1993-12",
       "serial": "T-50025",
       "rating": "VRC: GA",
+      "developer": "Electronic Arts",
       "publisher": "Electronic Arts"
     },
     {
@@ -64,6 +64,7 @@
       "releaseDate": "1992-11",
       "serial": "PN-6400",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -71,6 +72,7 @@
       "releaseDate": "1994-12",
       "serial": "4908",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Dynamix",
       "publisher": "Sega of America"
     },
     {
@@ -78,6 +80,7 @@
       "releaseDate": "1993-11",
       "serial": "T-93065",
       "rating": "VRC: MA-13",
+      "developer": "Psygnosis",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -85,41 +88,39 @@
       "releaseDate": "1994-11",
       "serial": "T-83015",
       "rating": "VRC: MA-13",
+      "developer": "GameTek",
       "publisher": "GameTek"
-    },
-    {
-      "title": "Cadillacs and Dinosaurs: The Second Cataclysm",
-      "releaseDate": "1994-12",
-      "serial": "T-153035",
-      "rating": "VRC: MA-13",
-      "publisher": "Rocket Science Games"
     },
     {
       "title": "Chuck Rock",
       "releaseDate": "1992-12",
       "serial": "T-6204",
       "rating": "",
+      "developer": "Core Design",
       "publisher": "Sega of America"
     },
     {
       "title": "Chuck Rock II: Son of Chuck",
-      "releaseDate": "1993",
-      "serial": "T-70045",
+      "releaseDate": "",
+      "serial": "T-70045}",
       "rating": "VRC: GA",
-      "publisher": "Tengen"
+      "developer": "Core Design",
+      "publisher": ""
     },
     {
       "title": "Cliffhanger",
       "releaseDate": "1993-11",
       "serial": "T-93075",
       "rating": "VRC: MA-13",
-      "publisher": "Sony Imagesoft"
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Cobra Command",
       "releaseDate": "1992-11",
       "serial": "4402",
       "rating": "",
+      "developer": "Wolf Team",
       "publisher": "Sega of America"
     },
     {
@@ -127,6 +128,7 @@
       "releaseDate": "1994",
       "serial": "T-118015",
       "rating": "VRC: GA",
+      "developer": "Compton's NewMedia",
       "publisher": "Compton's NewMedia"
     },
     {
@@ -134,6 +136,7 @@
       "releaseDate": "1994-11",
       "serial": "T-162055",
       "rating": "ESRB: Mature",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
     },
     {
@@ -141,6 +144,7 @@
       "releaseDate": "1994-10",
       "serial": "T-111055",
       "rating": "ESRB: Mature",
+      "developer": "American Laser Games",
       "publisher": "American Laser Games"
     },
     {
@@ -148,6 +152,7 @@
       "releaseDate": "1994-03",
       "serial": "4651",
       "rating": "VRC: MA-13",
+      "developer": "Sega CS2",
       "publisher": "Sega of America"
     },
     {
@@ -155,6 +160,7 @@
       "releaseDate": "1995-11-15",
       "serial": "T-81045",
       "rating": "ESRB: Teen",
+      "developer": "Alexandria",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -162,6 +168,7 @@
       "releaseDate": "1993-12",
       "serial": "4419",
       "rating": "VRC: MA-13",
+      "developer": "Digital Pictures",
       "publisher": "Sega of America"
     },
     {
@@ -169,6 +176,7 @@
       "releaseDate": "1993",
       "serial": "4420",
       "rating": "VRC: MA-13",
+      "developer": "ICOM Simulations",
       "publisher": "Sega of America"
     },
     {
@@ -176,6 +184,7 @@
       "releaseDate": "1993-12",
       "serial": "T-121015",
       "rating": "VRC: GA",
+      "developer": "ReadySoft",
       "publisher": "ReadySoft"
     },
     {
@@ -183,6 +192,7 @@
       "releaseDate": "1993-12",
       "serial": "T-70065",
       "rating": "VRC: GA",
+      "developer": "Cryo Interactive Entertainment",
       "publisher": "Virgin Interactive Entertainment"
     },
     {
@@ -190,6 +200,7 @@
       "releaseDate": "1995-04",
       "serial": "4657",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Hudson Soft",
       "publisher": "Sega of America"
     },
     {
@@ -197,13 +208,15 @@
       "releaseDate": "1994-09",
       "serial": "T-60085",
       "rating": "VRC: GA",
-      "publisher": "JVC Musical Industries"
+      "developer": "FTL Games",
+      "publisher": ""
     },
     {
       "title": "Earthworm Jim: Special Edition",
       "releaseDate": "1995-04",
       "serial": "T-125045",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -211,6 +224,7 @@
       "releaseDate": "1993-07",
       "serial": "4408",
       "rating": "VRC: GA",
+      "developer": "Backbone Entertainment",
       "publisher": "Sega PC"
     },
     {
@@ -218,6 +232,7 @@
       "releaseDate": "1994-11",
       "serial": "4441",
       "rating": "ESRB: Kids to Adults",
+      "developer": "M2",
       "publisher": "Sega of America"
     },
     {
@@ -225,6 +240,7 @@
       "releaseDate": "1994-10",
       "serial": "T-93115",
       "rating": "VRC: GA",
+      "developer": "Park Place Productions",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -232,6 +248,7 @@
       "releaseDate": "1994-11",
       "serial": "T-93215",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sony Imagesoft",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -239,6 +256,7 @@
       "releaseDate": "1994",
       "serial": "T-93245",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sony Imagesoft",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -246,13 +264,15 @@
       "releaseDate": "1994-11",
       "serial": "T-93105",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Sony Imagesoft"
+      "developer": "Absolute Entertainment",
+      "publisher": "Sony Electronic Publishing"
     },
     {
       "title": "Eternal Champions: Challenge From the Dark Side",
       "releaseDate": "1995-06-06",
       "serial": "4427",
       "rating": "ESRB: Mature",
+      "developer": "Sega Interactive Development Division",
       "publisher": "Sega of America"
     },
     {
@@ -260,37 +280,31 @@
       "releaseDate": "1994-08",
       "serial": "4655",
       "rating": "VRC: GA",
+      "developer": "Opera House",
       "publisher": "Sega of America"
     },
     {
       "title": "Fahrenheit",
-      "releaseDate": "1995-04",
-      "serial": "4438",
+      "releaseDate": "",
+      "serial": "4438}",
       "rating": "",
-      "publisher": "Sega of America"
+      "developer": "programming",
+      "publisher": ""
     },
     {
       "title": "Fatal Fury Special",
       "releaseDate": "1995-06",
       "serial": "T-60165",
       "rating": "ESRB: Teen",
+      "developer": "Funcom",
       "publisher": "JVC Musical Industries"
-    },
-    {
-      "title": "FIFA International Soccer: Championship Edition",
-      "releaseDate": "1994",
-      "serial": "T-50055",
-      "rating": "VRC: GA",
-      "publisher": "",
-      "altTitles": [
-        "FIFA International Soccer"
-      ]
     },
     {
       "title": "Final Fight CD",
       "releaseDate": "1993-06",
       "serial": "4410",
       "rating": "",
+      "developer": "A-Wave",
       "publisher": "Sega of America"
     },
     {
@@ -298,6 +312,7 @@
       "releaseDate": "1994-11",
       "serial": "4448",
       "rating": "VRC: MA-13",
+      "developer": "Delphine Software International",
       "publisher": "Sega of America"
     },
     {
@@ -305,6 +320,7 @@
       "releaseDate": "1994-08",
       "serial": "4608",
       "rating": "VRC: GA",
+      "developer": "Fuji Television",
       "publisher": "Sega of America"
     },
     {
@@ -312,6 +328,7 @@
       "releaseDate": "1993-11",
       "serial": "T-93145",
       "rating": "VRC: MA-13",
+      "developer": "Digital Pictures",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -319,6 +336,7 @@
       "releaseDate": "1994-07",
       "serial": "T-70025",
       "rating": "VRC: MA-13",
+      "developer": "Delphine Software International",
       "publisher": "Virgin Interactive Entertainment"
     },
     {
@@ -326,6 +344,7 @@
       "releaseDate": "1994-04",
       "serial": "T-60145",
       "rating": "VRC: GA",
+      "developer": "Core Design",
       "publisher": "JVC Musical Industries"
     },
     {
@@ -333,6 +352,7 @@
       "releaseDate": "1993-01",
       "serial": "T-6205",
       "rating": "",
+      "developer": "Core Design",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -340,6 +360,7 @@
       "releaseDate": "1993-01",
       "serial": "4902",
       "rating": "",
+      "developer": "Digital Pictures",
       "publisher": "Sega of America"
     },
     {
@@ -347,6 +368,7 @@
       "releaseDate": "1994-09",
       "serial": "T-124015",
       "rating": "VRC: MA-13",
+      "developer": "Brian A. Rice, Inc.",
       "publisher": "Spectrum HoloByte"
     },
     {
@@ -354,6 +376,7 @@
       "releaseDate": "1993-04",
       "serial": "T-6406",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -361,13 +384,15 @@
       "releaseDate": "1994-11",
       "serial": "T-93095",
       "rating": "VRC: GA",
+      "developer": "Absolute Entertainment",
       "publisher": "Sony Imagesoft"
     },
     {
       "title": "Joe Montana's NFL Football",
-      "releaseDate": "1993-10",
-      "serial": "T-4201",
+      "releaseDate": "",
+      "serial": "T-4201}",
       "rating": "VRC: GA",
+      "developer": "Malibu Interactive",
       "publisher": "Sega of America"
     },
     {
@@ -375,20 +400,23 @@
       "releaseDate": "1993-12",
       "serial": "4411",
       "rating": "VRC: GA",
+      "developer": "Sega Multimedia Studio",
       "publisher": "Sega of America"
     },
     {
       "title": "Keio Flying Squadron",
-      "releaseDate": "1995-02",
-      "serial": "T-60185",
+      "releaseDate": "",
+      "serial": "T-60185}",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "JVC Musical Industries"
+      "developer": "Studio Pierrot",
+      "publisher": ""
     },
     {
       "title": "Kids on Site",
       "releaseDate": "1994-11",
       "serial": "T-162015",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
     },
     {
@@ -396,6 +424,7 @@
       "releaseDate": "1992-12",
       "serial": "T-6202",
       "rating": "",
+      "developer": "Digital Pictures",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -403,6 +432,7 @@
       "releaseDate": "1993-11",
       "serial": "T-95015",
       "rating": "VRC: MA-17",
+      "developer": "Konami",
       "publisher": "Konami"
     },
     {
@@ -410,6 +440,7 @@
       "releaseDate": "1994-11-24",
       "serial": "T-95025",
       "rating": "VRC: MA-13",
+      "developer": "Konami",
       "publisher": "Konami"
     },
     {
@@ -417,41 +448,47 @@
       "releaseDate": "1994-09",
       "serial": "T-70095",
       "rating": "VRC: GA",
-      "publisher": ""
+      "developer": "Access Software",
+      "publisher": "Virgin Interactive Entertainment"
     },
     {
       "title": "Loadstar: The Legend of Tully Bodine",
-      "releaseDate": "1994-11",
-      "serial": "T-153015",
+      "releaseDate": "",
+      "serial": "T-153015}",
       "rating": "VRC: MA-13",
-      "publisher": "Rocket Science Games"
+      "developer": "Rocket Science Games",
+      "publisher": ""
     },
     {
       "title": "Lords of Thunder",
       "releaseDate": "1995-03-28",
       "serial": "4450",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Eleven",
       "publisher": "Sega of America"
     },
     {
       "title": "Lunar: Eternal Blue",
-      "releaseDate": "1995-09-11",
-      "serial": "T-127045",
+      "releaseDate": "",
+      "serial": "T-127045}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Game Arts",
       "publisher": ""
     },
     {
       "title": "Lunar: The Silver Star",
-      "releaseDate": "1993-12-10",
-      "serial": "T-127015",
+      "releaseDate": "",
+      "serial": "T-127015}",
       "rating": "VRC: MA-13",
-      "publisher": "Working Designs"
+      "developer": "Game Arts",
+      "publisher": ""
     },
     {
       "title": "Mad Dog II: The Lost Gold",
       "releaseDate": "1994",
       "serial": "T-111065",
       "rating": "ESRB: Teen",
+      "developer": "American Laser Games",
       "publisher": "American Laser Games"
     },
     {
@@ -459,6 +496,7 @@
       "releaseDate": "1993",
       "serial": "T-111015",
       "rating": "VRC: MA-13",
+      "developer": "American Laser Games",
       "publisher": "American Laser Games"
     },
     {
@@ -466,6 +504,7 @@
       "releaseDate": "1993-01",
       "serial": "4901",
       "rating": "",
+      "developer": "Digital Pictures",
       "publisher": "Sega of America"
     },
     {
@@ -473,6 +512,7 @@
       "releaseDate": "1994-12",
       "serial": "T-93155",
       "rating": "ESRB: Teen",
+      "developer": "Psygnosis",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -480,6 +520,7 @@
       "releaseDate": "1994-12",
       "serial": "T-87025",
       "rating": "VRC: MA-13",
+      "developer": "Cryo Interactive Entertainment",
       "publisher": "The Software Toolworks"
     },
     {
@@ -487,6 +528,7 @@
       "releaseDate": "1994-11",
       "serial": "T-93265",
       "rating": "VRC: GA",
+      "developer": "Disney Software",
       "publisher": ""
     },
     {
@@ -494,6 +536,7 @@
       "releaseDate": "1994-01",
       "serial": "T-113015",
       "rating": "VRC: MA-13",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -501,6 +544,7 @@
       "releaseDate": "1994-10",
       "serial": "4439",
       "rating": "ESRB: Teen",
+      "developer": "Stargate Films",
       "publisher": "Sega of America"
     },
     {
@@ -508,6 +552,7 @@
       "releaseDate": "1994-11",
       "serial": "4442",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Orion Technologies",
       "publisher": "Sega of America"
     },
     {
@@ -515,6 +560,7 @@
       "releaseDate": "1994-04",
       "serial": "T-81025",
       "rating": "VRC: MA-17",
+      "developer": "Grey Team",
       "publisher": ""
     },
     {
@@ -522,6 +568,7 @@
       "releaseDate": "1994",
       "serial": "T-109015",
       "rating": "VRC: GA",
+      "developer": "WayForward Technologies",
       "publisher": "Saddleback Graphics"
     },
     {
@@ -529,6 +576,7 @@
       "releaseDate": "1994-12",
       "serial": "T-81035",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
       "publisher": ""
     },
     {
@@ -536,13 +584,15 @@
       "releaseDate": "1994-11",
       "serial": "T-135015",
       "rating": "ESRB: Kids to Adults",
+      "developer": "CapDisc",
       "publisher": "CapDisc"
     },
     {
       "title": "NFL's Greatest: San Francisco vs. Dallas 1978-1993",
-      "releaseDate": "1993-10",
-      "serial": "4202",
+      "releaseDate": "",
+      "serial": "4202}",
       "rating": "VRC: GA",
+      "developer": "Park Place Productions",
       "publisher": "Sega of America"
     },
     {
@@ -550,6 +600,7 @@
       "releaseDate": "1993",
       "serial": "T-50015",
       "rating": "VRC: GA",
+      "developer": "High Score Productions",
       "publisher": "Electronic Arts"
     },
     {
@@ -557,6 +608,7 @@
       "releaseDate": "1992-11",
       "serial": "4903",
       "rating": "VRC: MA-17",
+      "developer": "Digital Pictures",
       "publisher": "Sega of America"
     },
     {
@@ -564,6 +616,7 @@
       "releaseDate": "1995-02",
       "serial": "T-113025",
       "rating": "VRC: MA-13",
+      "developer": "Psygnosis",
       "publisher": "Psygnosis"
     },
     {
@@ -571,6 +624,7 @@
       "releaseDate": "1994-10",
       "serial": "T-13015",
       "rating": "ESRB: Teen",
+      "developer": "Office I.",
       "publisher": "Data East USA"
     },
     {
@@ -578,6 +632,7 @@
       "releaseDate": "1994-12",
       "serial": "T-130025",
       "rating": "ESRB: Teen",
+      "developer": "Big Bang Software",
       "publisher": "Activision"
     },
     {
@@ -585,6 +640,7 @@
       "releaseDate": "1995-02-23",
       "serial": "T-127035",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Working Designs",
       "publisher": "Working Designs"
     },
     {
@@ -592,6 +648,7 @@
       "releaseDate": "1993-09",
       "serial": "T-93035",
       "rating": "VRC: GA",
+      "developer": "Digital Pictures",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -599,6 +656,7 @@
       "releaseDate": "1994-01",
       "serial": "T-50035",
       "rating": "VRC: MA-13",
+      "developer": "Bullfrog Productions",
       "publisher": ""
     },
     {
@@ -606,6 +664,7 @@
       "releaseDate": "1994-12",
       "serial": "T-93325",
       "rating": "ESRB: Teen",
+      "developer": "",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -613,20 +672,23 @@
       "releaseDate": "1992-11",
       "serial": "4652",
       "rating": "",
+      "developer": "Bits Laboratory",
       "publisher": ""
     },
     {
       "title": "Prize Fighter",
-      "releaseDate": "1993-12",
-      "serial": "4206",
+      "releaseDate": "",
+      "serial": "4206}",
       "rating": "VRC: MA-13",
-      "publisher": "Sega of America"
+      "developer": "Digital Pictures",
+      "publisher": ""
     },
     {
       "title": "Puggsy",
       "releaseDate": "1994-01-06",
       "serial": "T-113035",
       "rating": "VRC: GA",
+      "developer": "Traveller's Tales",
       "publisher": "Psygnosis"
     },
     {
@@ -634,6 +696,7 @@
       "releaseDate": "1993-12",
       "serial": "4607",
       "rating": "VRC: GA",
+      "developer": "Hammond & Leyland",
       "publisher": "Sega of America"
     },
     {
@@ -641,6 +704,7 @@
       "releaseDate": "1995-02",
       "serial": "T-130035",
       "rating": "VRC: GA",
+      "developer": "Beam Software",
       "publisher": "Activision"
     },
     {
@@ -648,6 +712,7 @@
       "releaseDate": "1994-11",
       "serial": "T-86025",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Imagineering",
       "publisher": "Absolute Entertainment"
     },
     {
@@ -655,28 +720,32 @@
       "releaseDate": "1994-03",
       "serial": "T-49035",
       "rating": "VRC: MA-13",
+      "developer": "Wolf Team",
       "publisher": "Renovation Products"
     },
     {
       "title": "Revengers of Vengeance",
-      "releaseDate": "1994-07",
-      "serial": "T-22035",
+      "releaseDate": "",
+      "serial": "T-22035}",
       "rating": "VRC: MA-13",
-      "publisher": "Extreme Entertainment Group"
+      "developer": "Micronet",
+      "publisher": ""
     },
     {
       "title": "Rise of the Dragon",
       "releaseDate": "1994-03",
       "serial": "4301",
       "rating": "VRC: MA-17",
+      "developer": "",
       "publisher": "Dynamix"
     },
     {
       "title": "Road Avenger",
-      "releaseDate": "1993-02",
-      "serial": "T-6207",
+      "releaseDate": "",
+      "serial": "T-6207}",
       "rating": "",
-      "publisher": "Renovation Products",
+      "developer": "Wolf Team",
+      "publisher": "Data EastCategory :Live link reference",
       "altTitles": [
         "Road Prosecutor"
       ]
@@ -686,6 +755,7 @@
       "releaseDate": "1995-04",
       "serial": "T-50085",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Monkey Do Productions",
       "publisher": "Electronic Arts"
     },
     {
@@ -693,6 +763,7 @@
       "releaseDate": "1993-08",
       "serial": "T-48015",
       "rating": "VRC: GA",
+      "developer": "Compile",
       "publisher": "Tengen"
     },
     {
@@ -700,6 +771,7 @@
       "releaseDate": "1995-02",
       "serial": "T-60175",
       "rating": "ESRB: Teen",
+      "developer": "Funcom",
       "publisher": "JVC Musical Industries"
     },
     {
@@ -707,6 +779,7 @@
       "releaseDate": "1992-11",
       "serial": "",
       "rating": "VRC: MA-13",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega of America"
     },
     {
@@ -714,6 +787,7 @@
       "releaseDate": "1994-09",
       "serial": "T-93185",
       "rating": "VRC: GA",
+      "developer": "Psygnosis",
       "publisher": "Renegade Software"
     },
     {
@@ -721,6 +795,7 @@
       "releaseDate": "1992-11",
       "serial": "T-6201",
       "rating": "",
+      "developer": "Digital Pictures",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -728,6 +803,7 @@
       "releaseDate": "1994",
       "serial": "T-113045",
       "rating": "VRC: MA-13",
+      "developer": "Digital Developments",
       "publisher": "Electronic Arts"
     },
     {
@@ -735,6 +811,7 @@
       "releaseDate": "1992-11",
       "serial": "",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -742,20 +819,23 @@
       "releaseDate": "1993-06",
       "serial": "4653",
       "rating": "",
+      "developer": "ICOM Simulations",
       "publisher": "Sega of America"
     },
     {
       "title": "Shining Force CD",
-      "releaseDate": "1995-03",
-      "serial": "4656",
+      "releaseDate": "",
+      "serial": "4656}",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Sega of America"
+      "developer": "Rit'sCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Silpheed",
       "releaseDate": "1993-10",
       "serial": "4423",
       "rating": "VRC: GA",
+      "developer": "Game Arts",
       "publisher": "Sega of America"
     },
     {
@@ -763,6 +843,7 @@
       "releaseDate": "1994-11",
       "serial": "T-162035",
       "rating": "ESRB: Teen",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
     },
     {
@@ -770,6 +851,7 @@
       "releaseDate": "1994-12",
       "serial": "T-95035",
       "rating": "ESRB: Teen",
+      "developer": "Konami",
       "publisher": "Konami"
     },
     {
@@ -777,6 +859,7 @@
       "releaseDate": "1992-11",
       "serial": "",
       "rating": "",
+      "developer": "Madhouse",
       "publisher": "Sega of America"
     },
     {
@@ -784,6 +867,7 @@
       "releaseDate": "1993-11-23",
       "serial": "4407",
       "rating": "VRC: GA",
+      "developer": "Sega CS3",
       "publisher": "Sega of America"
     },
     {
@@ -791,6 +875,7 @@
       "releaseDate": "1994-09",
       "serial": "T-115035",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Core Design",
       "publisher": ""
     },
     {
@@ -798,6 +883,7 @@
       "releaseDate": "1994-12",
       "serial": "T-121025",
       "rating": "ESRB: Kids to Adults",
+      "developer": "ReadySoft",
       "publisher": "ReadySoft"
     },
     {
@@ -805,6 +891,7 @@
       "releaseDate": "1993-09",
       "serial": "4412",
       "rating": "VRC: GA",
+      "developer": "Foley Hi-Tech",
       "publisher": "Sega of America"
     },
     {
@@ -812,6 +899,7 @@
       "releaseDate": "1994-03",
       "serial": "T-60075",
       "rating": "VRC: GA",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -819,6 +907,7 @@
       "releaseDate": "1994-09",
       "serial": "T-14025",
       "rating": "VRC: GA",
+      "developer": "Technosoft",
       "publisher": "Namco Hometek"
     },
     {
@@ -826,6 +915,7 @@
       "releaseDate": "1993-12",
       "serial": "T-110025",
       "rating": "VRC: GA",
+      "developer": "Dynamix",
       "publisher": "Dynamix"
     },
     {
@@ -833,6 +923,7 @@
       "releaseDate": "1994-11",
       "serial": "T-162045",
       "rating": "ESRB: Mature",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
     },
     {
@@ -840,6 +931,7 @@
       "releaseDate": "1995-06",
       "serial": "4435",
       "rating": "ESRB: Teen",
+      "developer": "Stargate Films",
       "publisher": "Sega of America"
     },
     {
@@ -847,6 +939,7 @@
       "releaseDate": "1995-07",
       "serial": "4432",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Clockwork Tortoise",
       "publisher": "Sega of America"
     },
     {
@@ -854,6 +947,7 @@
       "releaseDate": "1993-03",
       "serial": "T-6300",
       "rating": "",
+      "developer": "Dynamix",
       "publisher": "Sega of America"
     },
     {
@@ -861,6 +955,7 @@
       "releaseDate": "1993",
       "serial": "WCM-9302-00",
       "rating": "",
+      "developer": "Digital Pictures",
       "publisher": "Sega of America"
     },
     {
@@ -868,6 +963,7 @@
       "releaseDate": "1994",
       "serial": "T-160015",
       "rating": "VRC: MA-13",
+      "developer": "Online Entertainment",
       "publisher": "Sales Curve Interactive"
     },
     {
@@ -875,6 +971,7 @@
       "releaseDate": "1994-12",
       "serial": "4444",
       "rating": "ESRB: Teen",
+      "developer": "Wolf Team",
       "publisher": "Sega of America"
     },
     {
@@ -882,6 +979,7 @@
       "releaseDate": "1995-02",
       "serial": "T-23055",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Psygnosis",
       "publisher": "VIC Tokai Inc."
     },
     {
@@ -889,6 +987,7 @@
       "releaseDate": "1994-07",
       "serial": "T-87015",
       "rating": "VRC: GA",
+      "developer": "Arnowitz Studios",
       "publisher": "The Software Toolworks"
     },
     {
@@ -896,6 +995,7 @@
       "releaseDate": "1993-11",
       "serial": "T-60035",
       "rating": "",
+      "developer": "LucasArts",
       "publisher": "JVC Musical Industries"
     },
     {
@@ -903,6 +1003,7 @@
       "releaseDate": "1994-05",
       "serial": "T-87035",
       "rating": "VRC: MA-13",
+      "developer": "LucasArts",
       "publisher": "The Software Toolworks"
     },
     {
@@ -910,6 +1011,7 @@
       "releaseDate": "1995",
       "serial": "T-143015",
       "rating": "ESRB: Mature",
+      "developer": "Crosstalk",
       "publisher": "Hudson Soft USA"
     },
     {
@@ -917,6 +1019,7 @@
       "releaseDate": "1993-06",
       "serial": "T-70015",
       "rating": "VRC: MA-13",
+      "developer": "Virgin Games (United States)",
       "publisher": "Virgin Games (United States)"
     },
     {
@@ -924,6 +1027,7 @@
       "releaseDate": "1994-03",
       "serial": "T-22025",
       "rating": "VRC: MA-13",
+      "developer": "Micronet",
       "publisher": "Extreme Entertainment Group"
     },
     {
@@ -931,6 +1035,7 @@
       "releaseDate": "1993-11",
       "serial": "T-60055",
       "rating": "VRC: GA",
+      "developer": "Core Design",
       "publisher": "JVC Musical Industries"
     },
     {
@@ -938,13 +1043,15 @@
       "releaseDate": "1993-05",
       "serial": "T-6214",
       "rating": "",
+      "developer": "HighTech Lab. Japan",
       "publisher": "Renovation Products"
     },
     {
       "title": "Tomcat Alley",
-      "releaseDate": "1994-03",
-      "serial": "4429",
+      "releaseDate": "",
+      "serial": "4429}",
       "rating": "VRC: MA-13",
+      "developer": "Novotrade",
       "publisher": "Sega PC"
     },
     {
@@ -952,6 +1059,7 @@
       "releaseDate": "1994-12",
       "serial": "T-89015",
       "rating": "VRC: MA-13",
+      "developer": "Western Technologies",
       "publisher": "Parker Brothers"
     },
     {
@@ -959,6 +1067,7 @@
       "releaseDate": "1994-07",
       "serial": "T-127025",
       "rating": "VRC: MA-13",
+      "developer": "HertzCategory :Live link reference",
       "publisher": "Working Designs"
     },
     {
@@ -966,6 +1075,7 @@
       "releaseDate": "1994",
       "serial": "T-93085",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Absolute Entertainment",
       "publisher": "Sony Imagesoft"
     },
     {
@@ -973,6 +1083,7 @@
       "releaseDate": "1994-09",
       "serial": "T-111045",
       "rating": "VRC: MA-17",
+      "developer": "American Laser Games",
       "publisher": "American Laser Games"
     },
     {
@@ -980,6 +1091,7 @@
       "releaseDate": "1995",
       "serial": "4440",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega Multimedia Studio",
       "publisher": "Sega of America"
     },
     {
@@ -987,13 +1099,15 @@
       "releaseDate": "1994-03",
       "serial": "T-50045",
       "rating": "VRC: MA-13",
+      "developer": "Bits Laboratory",
       "publisher": "Electronic Arts"
     },
     {
       "title": "Wirehead",
-      "releaseDate": "1995-09",
-      "serial": "4437",
+      "releaseDate": "",
+      "serial": "4437}",
       "rating": "ESRB: Teen",
+      "developer": "The Code Monkeys",
       "publisher": "Sega of America"
     },
     {
@@ -1001,6 +1115,7 @@
       "releaseDate": "1992-12",
       "serial": "T-6403",
       "rating": "",
+      "developer": "Core Design",
       "publisher": "JVC Musical Industries"
     },
     {
@@ -1008,6 +1123,7 @@
       "releaseDate": "1992-12",
       "serial": "T-6402",
       "rating": "",
+      "developer": "Core Design",
       "publisher": "Victor Musical Industries"
     },
     {
@@ -1015,6 +1131,7 @@
       "releaseDate": "1994-07",
       "serial": "T-79025",
       "rating": "VRC: GA",
+      "developer": "Tiertex",
       "publisher": "U.S. Gold"
     },
     {
@@ -1022,6 +1139,7 @@
       "releaseDate": "1993-11",
       "serial": "T-81015",
       "rating": "VRC: GA",
+      "developer": "Sculptured Software",
       "publisher": ""
     },
     {
@@ -1029,6 +1147,7 @@
       "releaseDate": "1994-02",
       "serial": "T-23015",
       "rating": "VRC: GA",
+      "developer": "Production",
       "publisher": "VIC Tokai Inc.",
       "altTitles": [
         "Mansion of Hidden Souls"

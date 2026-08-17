@@ -8,135 +8,171 @@
       "releaseDate": "1995-01",
       "serial": "84507",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Rutubo Games",
+      "publisher": "Sega of America",
       "altTitles": [
         "After Burner"
       ]
     },
     {
-      "title": "BC Racers",
-      "releaseDate": "1995-06",
-      "serial": "T-7901B",
-      "rating": "ESRB: Kids to Adults"
-    },
-    {
       "title": "Blackthorne",
       "releaseDate": "1995-10",
       "serial": "84519",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Interplay",
+      "publisher": "Sega of America"
     },
     {
       "title": "Brutal Unleashed: Above the Claw",
       "releaseDate": "1995-03",
       "serial": "T-8301B",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "GameTek",
+      "publisher": "GameTek"
     },
     {
       "title": "Chaotix",
       "releaseDate": "1995-05",
       "serial": "84503",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS3",
+      "publisher": "Sega of America"
     },
     {
       "title": "Cosmic Carnage",
       "releaseDate": "1994-12",
       "serial": "84700",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Almanic",
+      "publisher": "Sega of America"
     },
     {
       "title": "Doom (32X)",
       "releaseDate": "1994-11-21",
       "serial": "84506",
-      "rating": "ESRB: Mature"
+      "rating": "ESRB: Mature",
+      "developer": "Sega of America",
+      "publisher": "Sega of America"
     },
     {
       "title": "Golf Magazine: 36 Great Holes Starring Fred Couples",
       "releaseDate": "1995-01",
       "serial": "84602",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Flashpoint Productions",
+      "publisher": "Sega of America"
     },
     {
       "title": "Kolibri",
       "releaseDate": "1995-10",
       "serial": "84518",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Novotrade International",
+      "publisher": "Sega of America"
     },
     {
       "title": "Metal Head",
       "releaseDate": "1995-02",
       "serial": "84511",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS4",
+      "publisher": "Sega of America"
     },
     {
       "title": "Mortal Kombat II",
       "releaseDate": "1995-03",
       "serial": "T-8101B",
-      "rating": "ESRB: Mature"
+      "rating": "ESRB: Mature",
+      "developer": "Probe Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Motocross Championship",
       "releaseDate": "1995-01",
       "serial": "84600",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Artech Studios",
+      "publisher": "Sega of America"
     },
     {
       "title": "NBA Jam Tournament Edition",
       "releaseDate": "1995",
       "serial": "T-8104B",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "NFL Quarterback Club (32X)",
       "releaseDate": "1995",
       "serial": "T-8102B",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Pitfall: The Mayan Adventure",
       "releaseDate": "1995-10",
       "serial": "T-13001B",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Big Bang Software",
+      "publisher": "Activision"
     },
     {
       "title": "Primal Rage",
       "releaseDate": "1995-11-14",
       "serial": "84705",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Probe Entertainment",
+      "publisher": "Sega of America"
     },
     {
       "title": "RBI Baseball '95",
       "releaseDate": "1995",
       "serial": "T-4803F",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Space Harrier",
-      "releaseDate": "",
-      "serial": "",
-      "rating": ""
+      "releaseDate": "1995-01",
+      "serial": "84505",
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Dempa Micomsoft",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "Spider-Man: Web of Fire",
       "releaseDate": "1996-03",
       "serial": "84517",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "Star Trek: Starfleet Academy Starship Bridge Simulator",
       "releaseDate": "1995",
       "serial": "84521",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "High Voltage Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "Star Wars Arcade",
       "releaseDate": "1994-11-21",
       "serial": "84508",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Sega AM3",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Stellar Assault",
-      "releaseDate": "1995-06",
-      "serial": "84509",
+      "releaseDate": "",
+      "serial": "84509}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS3",
+      "publisher": "",
       "altTitles": [
         "Shadow Squadron"
       ]
@@ -145,55 +181,73 @@
       "title": "T-MEK",
       "releaseDate": "1995",
       "serial": "84520",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Bits Corporation",
+      "publisher": "Sega of America"
     },
     {
       "title": "Tempo",
       "releaseDate": "1995",
       "serial": "84504",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Red Company",
+      "publisher": "Sega of America"
     },
     {
       "title": "Toughman Contest",
       "releaseDate": "1995-06-06",
       "serial": "T-5001B",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Virtua Fighter",
       "releaseDate": "1995-10-10",
       "serial": "84701",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Sega AM2",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Virtua Racing Deluxe",
       "releaseDate": "1994-11-21",
       "serial": "84601",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS4",
+      "publisher": "Sega of America"
     },
     {
       "title": "World Series Baseball Starring Deion Sanders",
       "releaseDate": "1996-02",
       "serial": "84605",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "WWF Raw",
       "releaseDate": "1995",
       "serial": "T-8103B",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Realtime Associates Seattle Division",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "WWF WrestleMania: The Arcade Game",
       "releaseDate": "1995-11",
       "serial": "T-8110B",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Sculptured Software",
+      "publisher": ""
     },
     {
       "title": "Zaxxon's Motherbase 2000",
       "releaseDate": "1995-06",
       "serial": "84512",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "CRI",
+      "publisher": "Sega of America"
     }
   ]
 }

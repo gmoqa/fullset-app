@@ -8,6 +8,7 @@
       "releaseDate": "1996-07-05",
       "serial": "T-11304H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Clockwork Games",
       "publisher": ""
     },
     {
@@ -15,6 +16,7 @@
       "releaseDate": "1996-09-06",
       "serial": "T-12302H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Gremlin Interactive",
       "publisher": ""
     },
     {
@@ -22,13 +24,15 @@
       "releaseDate": "1997",
       "serial": "T-12305H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Gremlin Interactive",
       "publisher": "Gremlin Interactive"
     },
     {
       "title": "Alien Trilogy",
-      "releaseDate": "1996-09-04",
-      "serial": "T-8113H-50",
+      "releaseDate": "",
+      "serial": "T-8113H-50}",
       "rating": "ELSPA: 15+",
+      "developer": "Probe Entertainment",
       "publisher": ""
     },
     {
@@ -36,13 +40,15 @@
       "releaseDate": "1996-05",
       "serial": "T-15101H-50",
       "rating": "ELSPA: 15+",
+      "developer": "In Utero",
       "publisher": ""
     },
     {
       "title": "AMOK",
-      "releaseDate": "1997-03-06",
-      "serial": "MK81064-50",
+      "releaseDate": "",
+      "serial": "MK81064-50}",
       "rating": "ELSPA: 15+",
+      "developer": "Lemon",
       "publisher": ""
     },
     {
@@ -50,6 +56,7 @@
       "releaseDate": "1997-02-07",
       "serial": "T-5020H-50",
       "rating": "ELSPA: 3+",
+      "developer": "High Score Entertainment",
       "publisher": "Electronic Arts"
     },
     {
@@ -57,6 +64,7 @@
       "releaseDate": "1997-03-14",
       "serial": "T-25408H-50",
       "rating": "BBFC: 12",
+      "developer": "Mesa Logic",
       "publisher": "GT Interactive Software"
     },
     {
@@ -64,6 +72,7 @@
       "releaseDate": "",
       "serial": "",
       "rating": "ClassInd: 6",
+      "developer": "Sega CS2 (1996-1999)",
       "publisher": ""
     },
     {
@@ -71,6 +80,7 @@
       "releaseDate": "1998-06",
       "serial": "MK81091-50",
       "rating": "ELSPA: 11+",
+      "developer": "Cryo Interactive Entertainment",
       "publisher": "Sega Europe"
     },
     {
@@ -78,13 +88,15 @@
       "releaseDate": "1996-05",
       "serial": "MK81501-50",
       "rating": "ELSPA: 3+",
+      "developer": "Minato Giken",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Batman Forever (arcade)",
-      "releaseDate": "1996-11-16",
-      "serial": "T-8140H-50",
+      "releaseDate": "",
+      "serial": "T-8140H-50}",
       "rating": "ELSPA: 11+",
+      "developer": "Iguana UK",
       "publisher": ""
     },
     {
@@ -92,6 +104,7 @@
       "releaseDate": "1996-03-29",
       "serial": "MK81029-50",
       "rating": "ELSPA: 11+",
+      "developer": "Nextech",
       "publisher": "Sega Europe"
     },
     {
@@ -99,13 +112,15 @@
       "releaseDate": "1997-02-06",
       "serial": "MK81054-50",
       "rating": "ELSPA: 15+",
+      "developer": "Nextech",
       "publisher": ""
     },
     {
       "title": "Battle Monsters",
-      "releaseDate": "1996",
-      "serial": "T-8137H-50",
+      "releaseDate": "",
+      "serial": "T-8137H-50}",
       "rating": "ELSPA: 11+",
+      "developer": "Scarab",
       "publisher": ""
     },
     {
@@ -113,6 +128,7 @@
       "releaseDate": "1997-05",
       "serial": "T-5021H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Realtime Associates",
       "publisher": "Electronic Arts"
     },
     {
@@ -120,6 +136,7 @@
       "releaseDate": "1997-05-01",
       "serial": "T-7027H-50",
       "rating": "ELSPA: 11+",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -127,6 +144,7 @@
       "releaseDate": "1996-06-28",
       "serial": "T-7011H-50",
       "rating": "ELSPA: 11+",
+      "developer": "NovaLogic",
       "publisher": ""
     },
     {
@@ -134,6 +152,7 @@
       "releaseDate": "1996-09",
       "serial": "T-11505H-50",
       "rating": "ELSPA: 11+",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -141,6 +160,7 @@
       "releaseDate": "1996-11-13",
       "serial": "T-13003H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Attention To Detail",
       "publisher": "Activision"
     },
     {
@@ -148,6 +168,7 @@
       "releaseDate": "1996-11",
       "serial": "T-15913H-50",
       "rating": "ELSPA: 3+",
+      "developer": "The Illusions Gaming Company",
       "publisher": "Crystal Dynamics"
     },
     {
@@ -155,13 +176,15 @@
       "releaseDate": "1996-12",
       "serial": "T-16408H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Ocean Software",
       "publisher": ""
     },
     {
       "title": "Bubble Bobble also featuring Rainbow Islands",
-      "releaseDate": "1996",
-      "serial": "T-8131H-50",
+      "releaseDate": "",
+      "serial": "T-8131H-50}",
       "rating": "ELSPA: 3+",
+      "developer": "Graftgold",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -169,41 +192,47 @@
       "releaseDate": "1997-04-24",
       "serial": "MK81040-50",
       "rating": "ELSPA: 3+",
+      "developer": "Realtime Associates",
       "publisher": "Sega PC"
     },
     {
       "title": "Bug!",
-      "releaseDate": "1995-10",
-      "serial": "MK81004-50",
+      "releaseDate": "",
+      "serial": "MK81004-50}",
       "rating": "ELSPA: 3+",
-      "publisher": "Sega Europe"
+      "developer": "Beam Software",
+      "publisher": "Sega PC"
     },
     {
       "title": "Burning Rangers",
       "releaseDate": "1998-06-12",
       "serial": "MK81803-50",
       "rating": "ELSPA: 11+",
+      "developer": "Sega CS3 (1996-1999)",
       "publisher": "Sega Europe"
     },
     {
       "title": "Bust-A-Move 2: Arcade Edition",
-      "releaseDate": "1996",
-      "serial": "T-8132H-50",
+      "releaseDate": "",
+      "serial": "T-8132H-50}",
       "rating": "ELSPA: 3+",
+      "developer": "Taito",
       "publisher": ""
     },
     {
       "title": "Bust-A-Move 3",
-      "releaseDate": "1997",
-      "serial": "T-8155H-50",
+      "releaseDate": "",
+      "serial": "T-8155H-50}",
       "rating": "ELSPA: 3+",
-      "publisher": "Acclaim Entertainment"
+      "developer": "Taito",
+      "publisher": ""
     },
     {
       "title": "Casper",
-      "releaseDate": "1996-09-13",
-      "serial": "T-12512H-50",
+      "releaseDate": "",
+      "serial": "T-12512H-50}",
       "rating": "ELSPA: 3+",
+      "developer": "Funcom",
       "publisher": "Interplay"
     },
     {
@@ -211,6 +240,7 @@
       "releaseDate": "1996-09",
       "serial": "T-15102H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Infogrames",
       "publisher": ""
     },
     {
@@ -218,6 +248,7 @@
       "releaseDate": "1996-12",
       "serial": "MK81067-50",
       "rating": "OFLC: G",
+      "developer": "Sega CS3 (1996-1999)",
       "publisher": "Sega Europe"
     },
     {
@@ -225,6 +256,7 @@
       "releaseDate": "1995-07-08",
       "serial": "MK81007-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega CS1",
       "publisher": "Sega"
     },
     {
@@ -232,13 +264,15 @@
       "releaseDate": "1995-10-27",
       "serial": "MK81021-50",
       "rating": "ELSPA: 3+",
+      "developer": "Team Aquila",
       "publisher": "Sega"
     },
     {
       "title": "Command & Conquer",
-      "releaseDate": "1996-12-06",
-      "serial": "T-7028H-50",
+      "releaseDate": "",
+      "serial": "T-7028H-50}",
       "rating": "ELSPA: 15+",
+      "developer": "Westwood Studios",
       "publisher": ""
     },
     {
@@ -246,6 +280,7 @@
       "releaseDate": "1998",
       "serial": "MK81099-50",
       "rating": "ELSPA: 3+",
+      "developer": "New Level Software",
       "publisher": ""
     },
     {
@@ -253,6 +288,7 @@
       "releaseDate": "1996-11-08",
       "serial": "T-8807H-50",
       "rating": "ELSPA: 3+",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -260,6 +296,7 @@
       "releaseDate": "1997-12-19",
       "serial": "T-5029H-05",
       "rating": "ELSPA: 3+",
+      "developer": "Argonaut Software",
       "publisher": ""
     },
     {
@@ -267,6 +304,7 @@
       "releaseDate": "1997-03-14",
       "serial": "T-5014H-50",
       "rating": "ELSPA: 15+",
+      "developer": "Origin Systems",
       "publisher": "Electronic Arts"
     },
     {
@@ -274,6 +312,7 @@
       "releaseDate": "1997-03-21",
       "serial": "T-9509H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Konami Computer Entertainment Tokyo",
       "publisher": "Konami"
     },
     {
@@ -281,6 +320,7 @@
       "releaseDate": "1996",
       "serial": "MK-81205-50",
       "rating": "ELSPA: 3+",
+      "developer": "Nextech",
       "publisher": "Sega Europe"
     },
     {
@@ -288,6 +328,7 @@
       "releaseDate": "1997-01",
       "serial": "MK81042-50",
       "rating": "ELSPA: 3+",
+      "developer": "CRI",
       "publisher": "Sega Europe"
     },
     {
@@ -295,13 +336,15 @@
       "releaseDate": "1996-04-19",
       "serial": "T-12508H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Xatrix Entertainment",
       "publisher": "Interplay"
     },
     {
       "title": "D",
-      "releaseDate": "1996-03-08",
-      "serial": "T-8106H-50",
+      "releaseDate": "",
+      "serial": "T-8106H-50}",
       "rating": "ELSPA: 15+",
+      "developer": "Warp",
       "publisher": ""
     },
     {
@@ -309,27 +352,31 @@
       "releaseDate": "1996-03",
       "serial": "T-8123H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Aisystem Tokyo",
       "publisher": ""
     },
     {
       "title": "Darius II",
-      "releaseDate": "1996",
-      "serial": "MK81085-50",
+      "releaseDate": "",
+      "serial": "MK81085-50}",
       "rating": "ELSPA: 3+",
+      "developer": "I.T.L",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Dark Savior",
-      "releaseDate": "1997-02-20",
-      "serial": "MK81304-50",
+      "releaseDate": "",
+      "serial": "MK81304-50}",
       "rating": "ELSPA: 11+",
-      "publisher": "Sega Europe"
+      "developer": "Climax Entertainment",
+      "publisher": ""
     },
     {
       "title": "Darklight Conflict",
       "releaseDate": "1997-07",
       "serial": "T-5022H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Rage Software",
       "publisher": "Electronic Arts"
     },
     {
@@ -337,6 +384,7 @@
       "releaseDate": "1995-07-08",
       "serial": "MK-81200-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega AM2",
       "publisher": "Sega PC"
     },
     {
@@ -344,6 +392,7 @@
       "releaseDate": "1996-11-14",
       "serial": "MK81213-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega CS2 (1996-1999)",
       "publisher": "Sega Europe"
     },
     {
@@ -351,6 +400,7 @@
       "releaseDate": "1996-09",
       "serial": "MK81115-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega AM3",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -358,6 +408,7 @@
       "releaseDate": "1998-09-18",
       "serial": "MK81804-50",
       "rating": "ELSPA: 15+",
+      "developer": "Sega CS2 (1996-1999)",
       "publisher": "Sega Europe"
     },
     {
@@ -365,6 +416,7 @@
       "releaseDate": "1996-06",
       "serial": "T-25401H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Millennium Interactive",
       "publisher": ""
     },
     {
@@ -372,20 +424,31 @@
       "releaseDate": "1996-08-15",
       "serial": "T-11303H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Perfect Entertainment",
       "publisher": ""
     },
     {
       "title": "Die Hard Arcade",
-      "releaseDate": "1997-02-24",
-      "serial": "MK81057-50",
+      "releaseDate": "",
+      "serial": "MK81057-50}",
       "rating": "ELSPA: 15+",
+      "developer": "Sega AM1",
       "publisher": ""
+    },
+    {
+      "title": "Die Hard Arcade (demo; 1996-09-23)",
+      "releaseDate": "1997",
+      "serial": "",
+      "rating": "",
+      "developer": "",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Die Hard Trilogy",
       "releaseDate": "1997-02-28",
       "serial": "T-16103H-50",
       "rating": "ELSPA: 18+",
+      "developer": "Probe Entertainment",
       "publisher": ""
     },
     {
@@ -393,6 +456,7 @@
       "releaseDate": "1995",
       "serial": "MK81680-50",
       "rating": "ELSPA: 3+",
+      "developer": "KAZe",
       "publisher": ""
     },
     {
@@ -400,6 +464,7 @@
       "releaseDate": "1996-08-15",
       "serial": "T-11302H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Perfect Entertainment",
       "publisher": ""
     },
     {
@@ -407,6 +472,7 @@
       "releaseDate": "1997-08-28",
       "serial": "MK81093-50",
       "rating": "ELSPA: 11+",
+      "developer": "Perfect Entertainment",
       "publisher": "Sega Europe"
     },
     {
@@ -414,6 +480,7 @@
       "releaseDate": "1997",
       "serial": "T-25406H-50",
       "rating": "BBFC: 15",
+      "developer": "Rage Software",
       "publisher": ""
     },
     {
@@ -421,6 +488,7 @@
       "releaseDate": "1996-12",
       "serial": "T-13301H-09",
       "rating": "ELSPA: 3+",
+      "developer": "BECCategory :Live link reference",
       "publisher": "Bandai",
       "altTitles": [
         "Dragon Ball Z: La Grande Legende Des Boules De Cristal",
@@ -432,27 +500,31 @@
       "releaseDate": "1997-08",
       "serial": "MK81382-50",
       "rating": "ELSPA: 11+",
+      "developer": "J-Force",
       "publisher": ""
     },
     {
       "title": "Dragonheart: Fire & Steel",
-      "releaseDate": "1996",
-      "serial": "T-8117H-50",
+      "releaseDate": "",
+      "serial": "T-8117H-50}",
       "rating": "ELSPA: 11+",
+      "developer": "Funcom",
       "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Duke Nukem 3D",
-      "releaseDate": "1997-10-30",
-      "serial": "MK81071-50",
+      "releaseDate": "",
+      "serial": "MK81071-50}",
       "rating": "BBFC: 18",
-      "publisher": "Sega Europe"
+      "developer": "Lobotomy Software",
+      "publisher": ""
     },
     {
       "title": "Earthworm Jim 2",
       "releaseDate": "1996-10",
       "serial": "T-7019H-50",
       "rating": "ELSPA: 3+",
+      "developer": "M2",
       "publisher": "Virgin Interactive Entertainment"
     },
     {
@@ -460,6 +532,7 @@
       "releaseDate": "1997-12",
       "serial": "MK81076-50",
       "rating": "ELSPA: 15+",
+      "developer": "Sega PC",
       "publisher": ""
     },
     {
@@ -467,6 +540,7 @@
       "releaseDate": "1996-02",
       "serial": "MK81206-50",
       "rating": "ELSPA: 3+",
+      "developer": "Bell",
       "publisher": "Sega Europe"
     },
     {
@@ -474,6 +548,7 @@
       "releaseDate": "1997-12-26",
       "serial": "T-5025H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Climax Development",
       "publisher": "Electronic Arts",
       "altTitles": [
         "FIFA: Die WM-Qualifikation 98",
@@ -486,6 +561,7 @@
       "releaseDate": "1996",
       "serial": "T-5003H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Electronic Arts Canada",
       "publisher": ""
     },
     {
@@ -493,6 +569,7 @@
       "releaseDate": "1997-04-04",
       "serial": "T-5017H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Extended Play Productions",
       "publisher": "Electronic Arts"
     },
     {
@@ -500,6 +577,7 @@
       "releaseDate": "1997-06-05",
       "serial": "MK81073-50",
       "rating": "ELSPA: 15+",
+      "developer": "Sega AM2",
       "publisher": "Sega Europe"
     },
     {
@@ -507,6 +585,7 @@
       "releaseDate": "1996-11-07",
       "serial": "MK81041-50",
       "rating": "ELSPA: 15+",
+      "developer": "Sega AM2",
       "publisher": "Sega Europe"
     },
     {
@@ -514,6 +593,7 @@
       "releaseDate": "1997-05-22",
       "serial": "MK81282-50",
       "rating": "ELSPA: 3+",
+      "developer": "Manic Media Productions",
       "publisher": "Sega PC"
     },
     {
@@ -521,6 +601,7 @@
       "releaseDate": "1996-06",
       "serial": "T-8138H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Iguana Entertainment",
       "publisher": ""
     },
     {
@@ -528,13 +609,15 @@
       "releaseDate": "1997",
       "serial": "T-12511H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Alexandria",
       "publisher": "Interplay"
     },
     {
       "title": "Galactic Attack",
-      "releaseDate": "1996-02",
-      "serial": "T-8116H-50",
+      "releaseDate": "",
+      "serial": "T-8116H-50}",
       "rating": "ELSPA: 11+",
+      "developer": "Ving",
       "publisher": ""
     },
     {
@@ -542,6 +625,7 @@
       "releaseDate": "1996-06",
       "serial": "T-1504H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Santaclaus",
       "publisher": "Sunsoft"
     },
     {
@@ -549,6 +633,7 @@
       "releaseDate": "1996-04-05",
       "serial": "T-15904H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Beam Software",
       "publisher": ""
     },
     {
@@ -556,6 +641,7 @@
       "releaseDate": "1996-06-28",
       "serial": "T-7010H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Jumpin' Jack Software",
       "publisher": "Virgin Interactive Entertainment"
     },
     {
@@ -563,6 +649,7 @@
       "releaseDate": "1995-12",
       "serial": "MK81045-50",
       "rating": "ELSPA: 11+",
+      "developer": "Sega AM1",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -570,6 +657,7 @@
       "releaseDate": "1996-11",
       "serial": "T-7017H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Radical Entertainment",
       "publisher": "",
       "altTitles": [
         "Grid Run"
@@ -580,6 +668,7 @@
       "releaseDate": "1996-06-20",
       "serial": "MK81035-50",
       "rating": "ELSPA: 11+",
+      "developer": "Treasure",
       "publisher": "Sega Europe"
     },
     {
@@ -587,20 +676,15 @@
       "releaseDate": "1996",
       "serial": "MK81046-50",
       "rating": "ELSPA: 11+",
+      "developer": "Game Arts",
       "publisher": ""
     },
     {
       "title": "Hang-On GP",
-      "releaseDate": "1996-03",
-      "serial": "MK81202-50",
+      "releaseDate": "",
+      "serial": "MK81202-50}",
       "rating": "ELSPA: 3+",
-      "publisher": "Sega Europe"
-    },
-    {
-      "title": "Hardcore 4x4",
-      "releaseDate": "1996-12",
-      "serial": "T-12303H-50",
-      "rating": "ELSPA: 3+",
+      "developer": "Genki",
       "publisher": ""
     },
     {
@@ -608,13 +692,15 @@
       "releaseDate": "1995-12",
       "serial": "T-1502H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Success",
       "publisher": "Sunsoft"
     },
     {
       "title": "Heir of Zendor: The Legend and The Land",
       "releaseDate": "",
-      "serial": "191496",
+      "serial": "191496}",
       "rating": "ClassInd: Livre",
+      "developer": "Micronet",
       "publisher": "Koei"
     },
     {
@@ -622,6 +708,7 @@
       "releaseDate": "1997-03-21",
       "serial": "T-25405H-50",
       "rating": "BBFC: 12",
+      "developer": "ATOD",
       "publisher": ""
     },
     {
@@ -629,6 +716,7 @@
       "releaseDate": "1995-12",
       "serial": "T-5002H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Bullfrog Productions",
       "publisher": ""
     },
     {
@@ -636,6 +724,7 @@
       "releaseDate": "1996-09",
       "serial": "T-6012H-50",
       "rating": "ELSPA: 11+",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -643,6 +732,7 @@
       "releaseDate": "1996-09-06",
       "serial": "T-7015H-50",
       "rating": "ELSPA: 3+",
+      "developer": "NMS Software",
       "publisher": "",
       "altTitles": [
         "Tilt!"
@@ -653,13 +743,15 @@
       "releaseDate": "1996-07-05",
       "serial": "T-6010H-50",
       "rating": "ELSPA: 11+",
-      "publisher": "JVC Musical Industries Europe"
+      "developer": "Funcom Dublin",
+      "publisher": ""
     },
     {
       "title": "In the Hunt",
       "releaseDate": "1996-06",
       "serial": "T-10001H-50",
       "rating": "USK: 16",
+      "developer": "SIMS",
       "publisher": ""
     },
     {
@@ -667,13 +759,15 @@
       "releaseDate": "1997-06-13",
       "serial": "T-16104H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Radical Entertainment",
       "publisher": "Fox Interactive"
     },
     {
       "title": "Iron Man/X-O Manowar in Heavy Metal",
-      "releaseDate": "1996-09-04",
-      "serial": "T-8119H-50",
+      "releaseDate": "",
+      "serial": "T-8119H-50}",
       "rating": "ELSPA: 11+",
+      "developer": "Realtime Associates",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -681,6 +775,7 @@
       "releaseDate": "1996-12",
       "serial": "T-1503H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Discis Knowledge Research",
       "publisher": "Sunsoft"
     },
     {
@@ -688,6 +783,7 @@
       "releaseDate": "1996-02",
       "serial": "T-7909H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Arc Developments",
       "publisher": ""
     },
     {
@@ -695,6 +791,7 @@
       "releaseDate": "1997-04-18",
       "serial": "T-12003H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Rage Software",
       "publisher": "Codemasters"
     },
     {
@@ -702,6 +799,7 @@
       "releaseDate": "1996-09",
       "serial": "T-6008H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Studio Pierrot",
       "publisher": ""
     },
     {
@@ -709,6 +807,7 @@
       "releaseDate": "1997-05-23",
       "serial": "T-11305H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Perfect Entertainment",
       "publisher": ""
     },
     {
@@ -716,6 +815,7 @@
       "releaseDate": "1997-10-23",
       "serial": "MK81078-50",
       "rating": "ELSPA: 15+",
+      "developer": "H.I.C.",
       "publisher": "Sega Europe"
     },
     {
@@ -723,6 +823,7 @@
       "releaseDate": "1996",
       "serial": "",
       "rating": "",
+      "developer": "",
       "publisher": "Ocean Software"
     },
     {
@@ -730,6 +831,7 @@
       "releaseDate": "1996-07",
       "serial": "T-12301H-50",
       "rating": "ELSPA: 15+",
+      "developer": "Gremlin Interactive",
       "publisher": ""
     },
     {
@@ -737,6 +839,7 @@
       "releaseDate": "1996",
       "serial": "T-5018H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Electronic Arts",
       "publisher": "Electronic Arts"
     },
     {
@@ -744,6 +847,7 @@
       "releaseDate": "1997",
       "serial": "T-5024H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Tiburon Entertainment",
       "publisher": "Electronic Arts"
     },
     {
@@ -751,6 +855,7 @@
       "releaseDate": "1996-03-29",
       "serial": "T-5006H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Bullfrog Productions",
       "publisher": ""
     },
     {
@@ -758,6 +863,7 @@
       "releaseDate": "1997-03-20",
       "serial": "MK81210-50",
       "rating": "ELSPA: 3+",
+      "developer": "Perfect Entertainment",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -765,6 +871,7 @@
       "releaseDate": "1997-11-14",
       "serial": "T-7032H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Capcom",
       "publisher": ""
     },
     {
@@ -772,6 +879,7 @@
       "releaseDate": "1997-03-27",
       "serial": "MK81089-50",
       "rating": "ELSPA: 15+",
+      "developer": "BMG Interactive",
       "publisher": "Sega Europe"
     },
     {
@@ -779,6 +887,7 @@
       "releaseDate": "1998-03",
       "serial": "T-25417H-50",
       "rating": "BBFC: 15",
+      "developer": "Mesa Logic",
       "publisher": "GT Interactive Software"
     },
     {
@@ -786,6 +895,7 @@
       "releaseDate": "1997-05",
       "serial": "T-13004H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Quantum Factory",
       "publisher": ""
     },
     {
@@ -793,6 +903,7 @@
       "releaseDate": "1997",
       "serial": "T-7029H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Capcom",
       "publisher": ""
     },
     {
@@ -800,6 +911,7 @@
       "releaseDate": "",
       "serial": "191396",
       "rating": "ClassInd: Livre",
+      "developer": "Capcom",
       "publisher": ""
     },
     {
@@ -807,6 +919,7 @@
       "releaseDate": "1998-03",
       "serial": "T-25413H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Digital Eclipse",
       "publisher": ""
     },
     {
@@ -814,6 +927,7 @@
       "releaseDate": "1996-12",
       "serial": "MK81087",
       "rating": "ELSPA: 3+",
+      "developer": "Altron",
       "publisher": ""
     },
     {
@@ -821,6 +935,7 @@
       "releaseDate": "1996",
       "serial": "T-8103H-50",
       "rating": "ELSPA: 15+",
+      "developer": "Probe Entertainment",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -828,6 +943,7 @@
       "releaseDate": "1997-04-11",
       "serial": "T-25414H-50",
       "rating": "BBFC: 15",
+      "developer": "Point of View",
       "publisher": ""
     },
     {
@@ -835,6 +951,7 @@
       "releaseDate": "1997-03-13",
       "serial": "MK81016-50",
       "rating": "ELSPA: 3+",
+      "developer": "Pacific SoftScape",
       "publisher": "Sega Europe"
     },
     {
@@ -842,6 +959,7 @@
       "releaseDate": "1995",
       "serial": "MK81081-50",
       "rating": "ELSPA: 3+",
+      "developer": "Cyan",
       "publisher": ""
     },
     {
@@ -849,13 +967,15 @@
       "releaseDate": "1996-01-26",
       "serial": "MK81300-50",
       "rating": "ELSPA: 3+",
-      "publisher": "Sega Europe"
+      "developer": "Microcabin",
+      "publisher": ""
     },
     {
       "title": "NASCAR 98",
       "releaseDate": "1997",
       "serial": "T-5028H-50",
       "rating": "ELSPA: 3+",
+      "developer": "High Score Entertainment",
       "publisher": "Electronic Arts"
     },
     {
@@ -863,6 +983,7 @@
       "releaseDate": "1996-09-12",
       "serial": "MK81103-50",
       "rating": "ELSPA: 3+",
+      "developer": "Gray Matter",
       "publisher": "Sega Europe"
     },
     {
@@ -870,13 +991,15 @@
       "releaseDate": "1997-11",
       "serial": "MK81124-50",
       "rating": "ELSPA: 3+",
+      "developer": "Visual Concepts",
       "publisher": "Sega PC"
     },
     {
       "title": "NBA Jam Extreme",
-      "releaseDate": "1996-12-06",
-      "serial": "T-8151H-50",
+      "releaseDate": "",
+      "serial": "T-8151H-50}",
       "rating": "ELSPA: 3+",
+      "developer": "Sculptured Software",
       "publisher": ""
     },
     {
@@ -884,20 +1007,15 @@
       "releaseDate": "1995-12",
       "serial": "T-8102H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Iguana Entertainment",
       "publisher": "Acclaim Entertainment"
-    },
-    {
-      "title": "NBA Live 97 (Saturn)",
-      "releaseDate": "1997-04-04",
-      "serial": "T-5015H-50",
-      "rating": "ELSPA: 3+",
-      "publisher": "Electronic Arts"
     },
     {
       "title": "NBA Live 98 (Saturn)",
       "releaseDate": "1997",
       "serial": "T-5027H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Electronic Arts Canada",
       "publisher": "Electronic Arts"
     },
     {
@@ -905,13 +1023,15 @@
       "releaseDate": "1997",
       "serial": "",
       "rating": "",
+      "developer": "PlanetWeb",
       "publisher": "ION Finland"
     },
     {
       "title": "NFL Quarterback Club '96 (Saturn)",
-      "releaseDate": "1996-04-19",
-      "serial": "T-8109H-50",
+      "releaseDate": "",
+      "serial": "T-8109H-50}",
       "rating": "ELSPA: 3+",
+      "developer": "Iguana Entertainment",
       "publisher": ""
     },
     {
@@ -919,6 +1039,7 @@
       "releaseDate": "1996-08",
       "serial": "T-8136H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Iguana Entertainment",
       "publisher": ""
     },
     {
@@ -926,6 +1047,7 @@
       "releaseDate": "1996-12-06",
       "serial": "T-5016H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Visual Concepts",
       "publisher": ""
     },
     {
@@ -933,6 +1055,7 @@
       "releaseDate": "1998-01",
       "serial": "T-5026H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Electronic Arts Canada",
       "publisher": "Electronic Arts"
     },
     {
@@ -940,6 +1063,7 @@
       "releaseDate": "1995-11",
       "serial": "MK81102-50",
       "rating": "ELSPA: 3+",
+      "developer": "Gray Matter",
       "publisher": "Sega Europe"
     },
     {
@@ -947,6 +1071,7 @@
       "releaseDate": "1998-01",
       "serial": "MK81122-50",
       "rating": "ELSPA: 3+",
+      "developer": "Radical Entertainment",
       "publisher": "Sega Europe"
     },
     {
@@ -954,6 +1079,7 @@
       "releaseDate": "1997-05",
       "serial": "T-7013H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Radical Entertainment",
       "publisher": "Virgin Interactive Entertainment"
     },
     {
@@ -961,6 +1087,7 @@
       "releaseDate": "1996-10-04",
       "serial": "T-7009H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Capcom",
       "publisher": ""
     },
     {
@@ -968,6 +1095,7 @@
       "releaseDate": "1996-09-19",
       "serial": "MK81020-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega CS3",
       "publisher": "Sega Europe"
     },
     {
@@ -975,6 +1103,7 @@
       "releaseDate": "1995-11",
       "serial": "T-15908H-50",
       "rating": "ELSPA: 15+",
+      "developer": "Crystal Dynamics",
       "publisher": ""
     },
     {
@@ -982,6 +1111,7 @@
       "releaseDate": "1996-08",
       "serial": "T-7904H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Silicon Dreams",
       "publisher": ""
     },
     {
@@ -989,6 +1119,7 @@
       "releaseDate": "",
       "serial": "191506",
       "rating": "ClassInd: Livre",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -996,6 +1127,7 @@
       "releaseDate": "1997-06-12",
       "serial": "MK81090-50",
       "rating": "ELSPA: 3+",
+      "developer": "Jumpin' Jack Software",
       "publisher": ""
     },
     {
@@ -1003,6 +1135,7 @@
       "releaseDate": "1995-08-30",
       "serial": "MK81009-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega CS1",
       "publisher": "Sega Europe"
     },
     {
@@ -1010,6 +1143,7 @@
       "releaseDate": "1998-04",
       "serial": "MK81307-50",
       "rating": "ELSPA: 11+",
+      "developer": "Production",
       "publisher": "Sega Europe"
     },
     {
@@ -1017,6 +1151,7 @@
       "releaseDate": "1996-05-10",
       "serial": "81022-50",
       "rating": "ELSPA: 11+",
+      "developer": "Sega CS",
       "publisher": "Sega Europe"
     },
     {
@@ -1024,6 +1159,7 @@
       "releaseDate": "1995-11",
       "serial": "T-9501H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Konami",
       "publisher": "Konami"
     },
     {
@@ -1031,6 +1167,7 @@
       "releaseDate": "1995-08",
       "serial": "MK81101-50",
       "rating": "ELSPA: 3+",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -1038,20 +1175,23 @@
       "releaseDate": "1996-12-06",
       "serial": "T-5011H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Electronic Arts",
       "publisher": ""
     },
     {
       "title": "Photo CD Operating System",
-      "releaseDate": "1995-10",
-      "serial": "MK81681-50",
+      "releaseDate": "",
+      "serial": "MK81681-50}",
       "rating": "",
-      "publisher": ""
+      "developer": "Sega",
+      "publisher": "Sega"
     },
     {
       "title": "Pinball Graffiti",
       "releaseDate": "1997",
       "serial": "T-6011H-50",
       "rating": "ELSPA: 3+",
+      "developer": "BellCategory :Live link reference",
       "publisher": ""
     },
     {
@@ -1059,6 +1199,7 @@
       "releaseDate": "1996-09-26",
       "serial": "81084-50",
       "rating": "ELSPA: 15+",
+      "developer": "BMG Interactive",
       "publisher": "Sega Europe",
       "altTitles": [
         "Exhumed"
@@ -1069,6 +1210,7 @@
       "releaseDate": "1996-08",
       "serial": "T-4802H-50",
       "rating": "ELSPA: 15+",
+      "developer": "Probe Entertainment",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1076,6 +1218,7 @@
       "releaseDate": "1996-08",
       "serial": "T-30701H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Cunning Developments",
       "publisher": ""
     },
     {
@@ -1083,20 +1226,15 @@
       "releaseDate": "1997-11",
       "serial": "MK81066-50",
       "rating": "BBFC: 15",
+      "developer": "Lobotomy Software",
       "publisher": "Sega Europe"
-    },
-    {
-      "title": "Rampage World Tour",
-      "releaseDate": "1998",
-      "serial": "T-25416H-50",
-      "rating": "ELSPA: 11+",
-      "publisher": "GT Interactive Software"
     },
     {
       "title": "Rayman",
       "releaseDate": "1995-11",
       "serial": "T-17701H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Ubi Pictures",
       "publisher": "Ubi Soft"
     },
     {
@@ -1104,6 +1242,7 @@
       "releaseDate": "1997-10",
       "serial": "MK81092-50",
       "rating": "BBFC: 15",
+      "developer": "Nextech",
       "publisher": ""
     },
     {
@@ -1111,13 +1250,15 @@
       "releaseDate": "1996-03-29",
       "serial": "T-8107H-50",
       "rating": "ELSPA: 15+",
+      "developer": "Rage Software",
       "publisher": ""
     },
     {
       "title": "Rise 2 Resurrection",
-      "releaseDate": "1996-04-19",
-      "serial": "T-8114H-50",
+      "releaseDate": "",
+      "serial": "T-8114H-50}",
       "rating": "ELSPA: 3+",
+      "developer": "Mirage Technologies",
       "publisher": ""
     },
     {
@@ -1125,6 +1266,7 @@
       "releaseDate": "1998-05-15",
       "serial": "MK81801-50",
       "rating": "ELSPA: 3+",
+      "developer": "Cyan",
       "publisher": ""
     },
     {
@@ -1132,6 +1274,7 @@
       "releaseDate": "1996-07-05",
       "serial": "T-5009H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Electronic Arts Canada",
       "publisher": "Electronic Arts"
     },
     {
@@ -1139,6 +1282,7 @@
       "releaseDate": "1996-07-26",
       "serial": "T-5008H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Buzz Puppet",
       "publisher": ""
     },
     {
@@ -1146,6 +1290,7 @@
       "releaseDate": "1996-11",
       "serial": "T-10002H-50",
       "rating": "USK: 12",
+      "developer": "Altron",
       "publisher": "Altron"
     },
     {
@@ -1153,6 +1298,7 @@
       "releaseDate": "1995-11",
       "serial": "MK81008-50",
       "rating": "ELSPA: 3+",
+      "developer": "Genki",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -1160,6 +1306,7 @@
       "releaseDate": "1997-05-01",
       "serial": "MK81070-50",
       "rating": "ELSPA: 3+",
+      "developer": "Hudson Soft",
       "publisher": "Sega Europe"
     },
     {
@@ -1167,6 +1314,7 @@
       "releaseDate": "1997-05-15",
       "serial": "MK81214-50",
       "rating": "ELSPA: 3+",
+      "developer": "Zyrinx",
       "publisher": "Sega Europe"
     },
     {
@@ -1174,6 +1322,7 @@
       "releaseDate": "1996-09",
       "serial": "T-6009H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Victor Entertainment",
       "publisher": ""
     },
     {
@@ -1181,6 +1330,7 @@
       "releaseDate": "1996-12-19",
       "serial": "MK81604-50",
       "rating": "ELSPA: 3+",
+      "developer": "Rutubo Games",
       "publisher": ""
     },
     {
@@ -1188,6 +1338,7 @@
       "releaseDate": "1995-07-08",
       "serial": "MK-81105-50",
       "rating": "ELSPA: 3+",
+      "developer": "Team Aquila",
       "publisher": "KR",
       "altTitles": [
         "Worldwide Soccer"
@@ -1198,6 +1349,7 @@
       "releaseDate": "1996-01-24",
       "serial": "MK81207-50",
       "rating": "ELSPA: 3+",
+      "developer": "M2",
       "publisher": "Sega Europe"
     },
     {
@@ -1205,27 +1357,39 @@
       "releaseDate": "1997-11",
       "serial": "MK81216-50",
       "rating": "ELSPA: 3+",
-      "publisher": "Sega Europe"
+      "developer": "AM Annex",
+      "publisher": ""
     },
     {
       "title": "Sega Worldwide Soccer 97",
       "releaseDate": "1996-10-17",
       "serial": "MK81112-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega PC",
       "publisher": ""
     },
     {
-      "title": "Sega Worldwide Soccer 98",
-      "releaseDate": "1997-10-16",
-      "serial": "MK81123-50",
-      "rating": "ELSPA: 3+",
+      "title": "Sega Worldwide Soccer 97 (demo; 1996-07-10)",
+      "releaseDate": "1996",
+      "serial": "",
+      "rating": "",
+      "developer": "",
       "publisher": "Sega Europe"
+    },
+    {
+      "title": "Sega Worldwide Soccer 98",
+      "releaseDate": "",
+      "serial": "MK81123-50}",
+      "rating": "ELSPA: 3+",
+      "developer": "Sega CS1",
+      "publisher": ""
     },
     {
       "title": "Shellshock",
       "releaseDate": "1996-04-19",
       "serial": "T-11502H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Core Design",
       "publisher": "Core Design"
     },
     {
@@ -1233,13 +1397,15 @@
       "releaseDate": "1998-06-19",
       "serial": "MK81383-50",
       "rating": "ELSPA: 11+",
-      "publisher": "Sega Europe"
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Shining the Holy Ark",
       "releaseDate": "1997-06-19",
       "serial": "MK81306-50",
       "rating": "ELSPA: 11+",
+      "developer": "Sonic! Software Planning",
       "publisher": "Sega Europe"
     },
     {
@@ -1247,13 +1413,15 @@
       "releaseDate": "1996-07-11",
       "serial": "MK81381-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sonic! Software Planning",
       "publisher": ""
     },
     {
       "title": "Shinobi Legions",
-      "releaseDate": "1995",
-      "serial": "MK81082-50",
+      "releaseDate": "",
+      "serial": "MK81082-50}",
       "rating": "ELSPA: 11+",
+      "developer": "Sega",
       "publisher": "",
       "altTitles": [
         "Shinobi X"
@@ -1264,6 +1432,7 @@
       "releaseDate": "1996-07-05",
       "serial": "T-5005H-50",
       "rating": "ELSPA: 15+",
+      "developer": "Electronic Arts",
       "publisher": "Electronic Arts"
     },
     {
@@ -1271,6 +1440,7 @@
       "releaseDate": "1995-12-08",
       "serial": "MK81580-50",
       "rating": "ELSPA: 3+",
+      "developer": "Maxis",
       "publisher": ""
     },
     {
@@ -1278,6 +1448,7 @@
       "releaseDate": "1996-09-04",
       "serial": "T-7018H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Neversoft Entertainment",
       "publisher": "Playmates Interactive Entertainment"
     },
     {
@@ -1285,6 +1456,7 @@
       "releaseDate": "1997-06-05",
       "serial": "MK81051-50",
       "rating": "ELSPA: 3+",
+      "developer": "Appaloosa Interactive",
       "publisher": "Sega PC"
     },
     {
@@ -1292,6 +1464,7 @@
       "releaseDate": "1996-07",
       "serial": "T-15902H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Left Field Productions",
       "publisher": ""
     },
     {
@@ -1299,6 +1472,15 @@
       "releaseDate": "1997-02-14",
       "serial": "MK81062-50",
       "rating": "ELSPA: 3+",
+      "developer": "M2",
+      "publisher": "Sega Europe"
+    },
+    {
+      "title": "Sonic 3D: Flickies' Island (demo; 1997-01-06)",
+      "releaseDate": "1997",
+      "serial": "",
+      "rating": "",
+      "developer": "Sonic Team",
       "publisher": "Sega Europe"
     },
     {
@@ -1306,6 +1488,15 @@
       "releaseDate": "1997-08-21",
       "serial": "MK81079-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega CS3 (1996-1999)",
+      "publisher": "Sega Europe"
+    },
+    {
+      "title": "Sonic Jam (demo; 1997-04-21)",
+      "releaseDate": "1997",
+      "serial": "",
+      "rating": "",
+      "developer": "Sega CS3 (1996-1999)",
       "publisher": "Sega Europe"
     },
     {
@@ -1313,6 +1504,7 @@
       "releaseDate": "1997-11-21",
       "serial": "MK81800-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega CS3 (1996-1999)",
       "publisher": "Sega PC"
     },
     {
@@ -1320,6 +1512,7 @@
       "releaseDate": "1997-02-21",
       "serial": "T-5013H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Electronic Arts",
       "publisher": ""
     },
     {
@@ -1327,6 +1520,7 @@
       "releaseDate": "1996-09-27",
       "serial": "T-5007H-50",
       "rating": "ELSPA: 15+",
+      "developer": "Key Game",
       "publisher": "Electronic Arts"
     },
     {
@@ -1334,6 +1528,7 @@
       "releaseDate": "1997-03-14",
       "serial": "T-8125H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sculptured Software",
       "publisher": ""
     },
     {
@@ -1341,6 +1536,7 @@
       "releaseDate": "1997",
       "serial": "T-7001H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Burst Studios",
       "publisher": ""
     },
     {
@@ -1348,6 +1544,7 @@
       "releaseDate": "1996-06-21",
       "serial": "T-29701H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Krisalis Software",
       "publisher": ""
     },
     {
@@ -1355,6 +1552,7 @@
       "releaseDate": "1998-02",
       "serial": "MK81128-50",
       "rating": "ELSPA: 3+",
+      "developer": "Cave",
       "publisher": "Sega Europe"
     },
     {
@@ -1362,6 +1560,7 @@
       "releaseDate": "1996-11-16",
       "serial": "T-7026H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Capcom",
       "publisher": ""
     },
     {
@@ -1369,6 +1568,7 @@
       "releaseDate": "1996-05-22",
       "serial": "T-7008H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Capcom",
       "publisher": ""
     },
     {
@@ -1376,6 +1576,7 @@
       "releaseDate": "1998-03",
       "serial": "T-7033H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Capcom",
       "publisher": ""
     },
     {
@@ -1383,6 +1584,7 @@
       "releaseDate": "1995",
       "serial": "T-8105H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Capcom",
       "publisher": ""
     },
     {
@@ -1390,13 +1592,15 @@
       "releaseDate": "1996-11-16",
       "serial": "T-17702H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Vivid Image",
       "publisher": "Ubi Soft"
     },
     {
       "title": "Striker '96",
-      "releaseDate": "1996-07",
-      "serial": "T-8133H-50",
+      "releaseDate": "",
+      "serial": "T-8133H-50}",
       "rating": "ELSPA: 3+",
+      "developer": "Rage Software",
       "publisher": ""
     },
     {
@@ -1404,6 +1608,7 @@
       "releaseDate": "1997-04",
       "serial": "T-7030H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Capcom",
       "publisher": ""
     },
     {
@@ -1411,6 +1616,7 @@
       "releaseDate": "1997-04",
       "serial": "T-11507H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Core Design",
       "publisher": "Eidos Interactive"
     },
     {
@@ -1418,6 +1624,7 @@
       "releaseDate": "1997-03-20",
       "serial": "T-12516H-50",
       "rating": "ELSPA: 3+",
+      "developer": "High Voltage Software",
       "publisher": "Interplay"
     },
     {
@@ -1425,13 +1632,15 @@
       "releaseDate": "1997",
       "serial": "T-5704H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Natsume Co., Ltd.",
       "publisher": ""
     },
     {
       "title": "The Crow: City of Angels",
-      "releaseDate": "1997-02-26",
-      "serial": "T-8124H-50",
+      "releaseDate": "",
+      "serial": "T-8124H-50}",
       "rating": "BBFC: 15",
+      "developer": "Gray Matter",
       "publisher": ""
     },
     {
@@ -1439,6 +1648,7 @@
       "releaseDate": "1996",
       "serial": "T-15909H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Silicon Knights",
       "publisher": ""
     },
     {
@@ -1446,6 +1656,7 @@
       "releaseDate": "1998-04-10",
       "serial": "MK81802-50",
       "rating": "ELSPA: 15+",
+      "developer": "Sega AM1",
       "publisher": "Sega PC"
     },
     {
@@ -1453,6 +1664,7 @@
       "releaseDate": "1997",
       "serial": "T-7905H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Attention To Detail",
       "publisher": "Eidos Interactive"
     },
     {
@@ -1460,6 +1672,7 @@
       "releaseDate": "1997-07-26",
       "serial": "MK81088-50",
       "rating": "ELSPA: 15+",
+      "developer": "Rutubo Games",
       "publisher": "SNK"
     },
     {
@@ -1467,6 +1680,7 @@
       "releaseDate": "1997",
       "serial": "T-12521H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Beam Software",
       "publisher": "Interplay"
     },
     {
@@ -1474,6 +1688,7 @@
       "releaseDate": "1997-11",
       "serial": "MK81065-50",
       "rating": "ELSPA: 11+",
+      "developer": "Appaloosa Interactive",
       "publisher": "Sega Europe"
     },
     {
@@ -1481,6 +1696,7 @@
       "releaseDate": "1995-11",
       "serial": "MK81012-05",
       "rating": "ELSPA: 3+",
+      "developer": "Sega CS1",
       "publisher": "Sega Europe",
       "altTitles": [
         "La Mansión de las Almas Ocultas",
@@ -1493,6 +1709,7 @@
       "releaseDate": "1996-09-19",
       "serial": "MK81302-50",
       "rating": "ELSPA: 3+",
+      "developer": "Ancient",
       "publisher": "Sega Europe"
     },
     {
@@ -1500,6 +1717,7 @@
       "releaseDate": "1995-11",
       "serial": "T-5001H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Bullfrog Productions",
       "publisher": "Domark"
     },
     {
@@ -1507,13 +1725,15 @@
       "releaseDate": "1997-04-03",
       "serial": "MK81033-50",
       "rating": "ELSPA: 11+",
-      "publisher": "Sega Europe"
+      "developer": "Appaloosa Interactive",
+      "publisher": "SegaSoft"
     },
     {
       "title": "Thunderhawk II",
       "releaseDate": "1995-12",
       "serial": "T-11501H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Core Design",
       "publisher": "",
       "altTitles": [
         "Firestorm: Thunderhawk 2",
@@ -1522,9 +1742,10 @@
     },
     {
       "title": "Time Warner Interactive's VR Virtua Racing",
-      "releaseDate": "1995",
-      "serial": "T-4801H-50",
+      "releaseDate": "",
+      "serial": "T-4801H-50}",
       "rating": "ELSPA: 3+",
+      "developer": "Time Warner Interactive",
       "publisher": "Time Warner Interactive"
     },
     {
@@ -1532,6 +1753,7 @@
       "releaseDate": "1996-04-12",
       "serial": "T-15911H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Crystal Dynamics",
       "publisher": ""
     },
     {
@@ -1539,20 +1761,23 @@
       "releaseDate": "1996-10-24",
       "serial": "MK81086-50",
       "rating": "ELSPA: 15+",
-      "publisher": "Sega Europe"
+      "developer": "Core Design",
+      "publisher": ""
     },
     {
       "title": "Torico",
       "releaseDate": "1997-03-27",
       "serial": "MK81053-50",
       "rating": "ELSPA: 3+",
-      "publisher": "Sega Europe"
+      "developer": "System Sacom",
+      "publisher": ""
     },
     {
       "title": "Trash It",
       "releaseDate": "1997",
       "serial": "T-25411H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Rage Software",
       "publisher": "GT Interactive Software"
     },
     {
@@ -1560,6 +1785,7 @@
       "releaseDate": "1996-04-05",
       "serial": "T-16406H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Digital Illusions",
       "publisher": ""
     },
     {
@@ -1567,6 +1793,7 @@
       "releaseDate": "1996-10-16",
       "serial": "T-16414H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Microcabin",
       "publisher": ""
     },
     {
@@ -1574,6 +1801,7 @@
       "releaseDate": "1996-05-30",
       "serial": "MK81180-50",
       "rating": "ELSPA: 3+",
+      "developer": "Gremlin Interactive",
       "publisher": "Sega Europe"
     },
     {
@@ -1581,6 +1809,7 @@
       "releaseDate": "1996-06",
       "serial": "T-25403H-50",
       "rating": "BBFC: 15",
+      "developer": "Eurocom Entertainment Software",
       "publisher": "GT Interactive Software"
     },
     {
@@ -1588,6 +1817,7 @@
       "releaseDate": "1996",
       "serial": "T-2303H-50",
       "rating": "ELSPA: 3+",
+      "developer": "T&E Soft",
       "publisher": "VIC Tokai Europe"
     },
     {
@@ -1595,6 +1825,7 @@
       "releaseDate": "1995-11",
       "serial": "T-6005H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Electronic Arts",
       "publisher": "JVC Musical Industries Europe"
     },
     {
@@ -1602,6 +1833,7 @@
       "releaseDate": "1995-12-08",
       "serial": "MK81015-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega AM2",
       "publisher": ""
     },
     {
@@ -1609,6 +1841,7 @@
       "releaseDate": "1996-11-28",
       "serial": "MK81043-50",
       "rating": "ELSPA: 15+",
+      "developer": "Sega AM2",
       "publisher": "Sega Europe"
     },
     {
@@ -1616,6 +1849,7 @@
       "releaseDate": "1995-07-08",
       "serial": "MK81005-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega AM2",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1623,13 +1857,15 @@
       "releaseDate": "1996-01-26",
       "serial": "MK81014-50",
       "rating": "ELSPA: 3+",
-      "publisher": "Sega Europe"
+      "developer": "Sega AM2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Virtua Fighter Kids",
       "releaseDate": "1996-10-03",
       "serial": "MK81049-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega AM2",
       "publisher": "KR"
     },
     {
@@ -1637,6 +1873,7 @@
       "releaseDate": "1995-10-06",
       "serial": "MK81083-50",
       "rating": "ELSPA: 3+",
+      "developer": "Sega AM1",
       "publisher": "KR"
     },
     {
@@ -1644,6 +1881,7 @@
       "releaseDate": "1996-02",
       "serial": "T-11506H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Core Design",
       "publisher": "Core Design"
     },
     {
@@ -1651,6 +1889,7 @@
       "releaseDate": "1995",
       "serial": "MK81380-50",
       "rating": "ELSPA: 3+",
+      "developer": "T&E Soft",
       "publisher": ""
     },
     {
@@ -1658,6 +1897,7 @@
       "releaseDate": "1996-06-06",
       "serial": "T-8129H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Imagineer",
       "publisher": ""
     },
     {
@@ -1665,6 +1905,7 @@
       "releaseDate": "1997-07",
       "serial": "T-5023H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Climax Development",
       "publisher": ""
     },
     {
@@ -1672,6 +1913,7 @@
       "releaseDate": "1997",
       "serial": "T-9514H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Flair Software",
       "publisher": ""
     },
     {
@@ -1679,6 +1921,7 @@
       "releaseDate": "1996-02",
       "serial": "MK81024-50",
       "rating": "ELSPA: 3+",
+      "developer": "Bell",
       "publisher": "Sega Europe"
     },
     {
@@ -1686,6 +1929,7 @@
       "releaseDate": "1998-02-13",
       "serial": "MK81129-50",
       "rating": "ELSPA: 3+",
+      "developer": "Data East",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1693,6 +1937,7 @@
       "releaseDate": "1996-03-29",
       "serial": "T-11301H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Perfect Entertainment",
       "publisher": ""
     },
     {
@@ -1700,6 +1945,7 @@
       "releaseDate": "1997-09",
       "serial": "T-11308H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Perfect Entertainment",
       "publisher": ""
     },
     {
@@ -1707,6 +1953,7 @@
       "releaseDate": "1996-02",
       "serial": "T-7903H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Arc Developments",
       "publisher": "U.S. Gold"
     },
     {
@@ -1714,6 +1961,7 @@
       "releaseDate": "1998-06-05",
       "serial": "MK81181-50",
       "rating": "ELSPA: 3+",
+      "developer": "Silicon Dreams",
       "publisher": "Sega Europe"
     },
     {
@@ -1721,13 +1969,15 @@
       "releaseDate": "1995-11-17",
       "serial": "MK81109-50",
       "rating": "ELSPA: 3+",
-      "publisher": ""
+      "developer": "Sega",
+      "publisher": "Sega"
     },
     {
       "title": "World Series Baseball II",
       "releaseDate": "1996-11",
       "serial": "MK81113-50",
       "rating": "ELSPA: 3+",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -1735,6 +1985,7 @@
       "releaseDate": "1996",
       "serial": "T-16403H-50",
       "rating": "ELSPA: 3+",
+      "developer": "East Point Software",
       "publisher": "Ocean Software"
     },
     {
@@ -1742,6 +1993,7 @@
       "releaseDate": "1996-11-08",
       "serial": "T-8126H-50",
       "rating": "ELSPA: 3+",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -1749,6 +2001,7 @@
       "releaseDate": "1996-06",
       "serial": "T-8112H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Sculptured Software",
       "publisher": ""
     },
     {
@@ -1756,6 +2009,7 @@
       "releaseDate": "1996-04-12",
       "serial": "T-8108H-50",
       "rating": "ELSPA: 3+",
+      "developer": "Rutubo Games",
       "publisher": ""
     },
     {
@@ -1763,6 +2017,7 @@
       "releaseDate": "1998-04",
       "serial": "T-25412H-50",
       "rating": "ELSPA: 11+",
+      "developer": "Krisalis Software",
       "publisher": "GT Interactive Software"
     }
   ]

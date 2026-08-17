@@ -697,6 +697,36 @@ claves nuevas no rompe nada.
   fuentes publican**. Llenarlo requeriría una fuente nueva (MobyGames, IGDB) con su licencia y su
   clave, que es una decisión de proyecto y no una tarea.
 
+- **J. `developer` y `publisher` separados** — hecho el **2026-08-16** para todo Sega. El esquema
+  pasa de 11 a **12 claves**, con `developer` **antes** de `publisher`: quién lo hizo, después quién
+  lo vendió. No son lo mismo — a *Blackthorne* de 32X lo **hizo** Interplay y lo **publicó** Sega of
+  America; *Chaotix* lo hizo Sega CS3.
+
+  La fuente es la tabla `companies` de Sega Retro, que etiqueta el **rol**. El recolector ya la
+  consultaba pero filtraba `role LIKE 'Publisher%'`; ahora está parametrizado por rol. La asimetría
+  entre los dos confirma que son datos distintos: Sega Retro tiene **14.704 filas `Developer`
+  genéricas** contra unas pocas regionales, porque quién hizo el juego no cambia de mercado —
+  quién lo vendió, sí.
+
+  | | antes | ahora |
+  |---|---|---|
+  | Sega (6.226 juegos) · developer | — | **93%** |
+  | Sega · publisher | 46% | **90%** |
+
+  **El lint cazó dos fechas de lanzamiento nuestras que estaban mal**, no las de Sega Retro. Al
+  aplicar las fuentes nuevas aparecieron 4 juegos anteriores al lanzamiento de su consola, y la
+  evidencia dio vuelta la sospecha:
+
+  - **Sega 32X en PAL**: teníamos 1995. Sega Retro da `EU 1994-11-30` con catalog `MK-84201-50` —el
+    sufijo `-50` es PAL— y tres juegos con fecha `1994-12-04` y sus propios números `-50`. Es 1994.
+  - **Master System en PAL**: teníamos 1987, que es el **Reino Unido**. Europa lo tuvo antes:
+    Alemania `1986-10-07`, Italia y Países Bajos `1986-11`. Es 1986. Por eso *Great Soccer* de 1986
+    parecía imposible y no lo era.
+
+  Los otros catálogos siguen sin `developer`: la clave existe vacía. libretro `metadat/developer/`
+  cubre otro 40% del dataset (PSX 76%, GBA 93%, SNES 82%…) y las tablas de Wikipedia de PS3, Saturn,
+  3DS y DS traen la columna, que hoy se parsea y se descarta.
+
 - **G. Vocabularios controlados** — **pendiente, medido el 2026-08-10.** El lint garantiza la
   **forma** (11 claves, orden, tipos, slug único, ordenado) y cuatro invariantes de significado,
   pero **no mira el vocabulario**: atrapa un serial japonés en un catálogo americano y no atrapa

@@ -8,6 +8,7 @@
       "releaseDate": "1993-06-25",
       "serial": "T-49064",
       "rating": "",
+      "developer": "Nihon Telenet",
       "publisher": "Riot"
     },
     {
@@ -15,6 +16,7 @@
       "releaseDate": "1994-03-25",
       "serial": "G-6031",
       "rating": "",
+      "developer": "Genki",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -22,6 +24,7 @@
       "releaseDate": "1994-11-11",
       "serial": "G-6026",
       "rating": "",
+      "developer": "Micro Design",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -29,6 +32,7 @@
       "releaseDate": "1992-12-18",
       "serial": "T-68014",
       "rating": "",
+      "developer": "CRI",
       "publisher": ""
     },
     {
@@ -36,6 +40,7 @@
       "releaseDate": "1992-05-29",
       "serial": "T-32044",
       "rating": "",
+      "developer": "Wolf Team",
       "publisher": "Telenet Japan"
     },
     {
@@ -43,6 +48,7 @@
       "releaseDate": "1993-11-26",
       "serial": "T-92014",
       "rating": "",
+      "developer": "CRC Research InstituteCategory :Live link reference",
       "publisher": "SandstormCategory :Live link reference"
     },
     {
@@ -50,6 +56,7 @@
       "releaseDate": "1993-03-30",
       "serial": "T-32104",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -57,6 +64,7 @@
       "releaseDate": "1993-09-24",
       "serial": "T-76054",
       "rating": "",
+      "developer": "Koei",
       "publisher": "Koei",
       "altTitles": [
         "Genghis Khan II: Clan of the Gray Wolf"
@@ -64,9 +72,10 @@
     },
     {
       "title": "Arcus I-II-III",
-      "releaseDate": "1993-07-23",
-      "serial": "T-32094",
+      "releaseDate": "",
+      "serial": "T-32094}",
       "rating": "",
+      "developer": "Wolf Team",
       "publisher": "Nihon Telenet"
     },
     {
@@ -74,6 +83,7 @@
       "releaseDate": "1993-11-19",
       "serial": "G-6028",
       "rating": "",
+      "developer": "BEC",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -81,6 +91,7 @@
       "releaseDate": "1994-04-22",
       "serial": "T-145014",
       "rating": "",
+      "developer": "Kogado Software Products",
       "publisher": "Sony Music Entertainment Japan"
     },
     {
@@ -88,6 +99,7 @@
       "releaseDate": "1993-07-30",
       "serial": "T-43024",
       "rating": "",
+      "developer": "Human",
       "publisher": "",
       "altTitles": [
         "Android Assault: The Revenge of Bari-Arm"
@@ -95,9 +107,10 @@
     },
     {
       "title": "Battle Fantasy",
-      "releaseDate": "1994-04-15",
-      "serial": "T-22044",
+      "releaseDate": "",
+      "serial": "T-22044}",
       "rating": "",
+      "developer": "Micronet",
       "publisher": "",
       "altTitles": [
         "Revengers of Vengeance"
@@ -108,6 +121,7 @@
       "releaseDate": "1994-09-30",
       "serial": "T-60194",
       "rating": "",
+      "developer": "Core Design",
       "publisher": ""
     },
     {
@@ -115,6 +129,7 @@
       "releaseDate": "1992-10-23",
       "serial": "T-22024",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -122,6 +137,7 @@
       "releaseDate": "1992-09-11",
       "serial": "G-6004",
       "rating": "",
+      "developer": "Pandora Box",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -129,6 +145,7 @@
       "releaseDate": "1992-12-25",
       "serial": "T-44024",
       "rating": "",
+      "developer": "SIMS",
       "publisher": "SIMS"
     },
     {
@@ -136,6 +153,7 @@
       "releaseDate": "1994-09-30",
       "serial": "T-36014",
       "rating": "",
+      "developer": "Tecmo",
       "publisher": "Tecmo"
     },
     {
@@ -143,6 +161,7 @@
       "releaseDate": "",
       "serial": "",
       "rating": "",
+      "developer": "CSK Research Institute",
       "publisher": "Linguaphone Japan"
     },
     {
@@ -150,13 +169,15 @@
       "releaseDate": "1992-03-27",
       "serial": "T-49014",
       "rating": "",
-      "publisher": ""
+      "developer": "Nihon Telenet",
+      "publisher": "Riot"
     },
     {
       "title": "Cyborg 009",
       "releaseDate": "1993-07-30",
       "serial": "T-49054",
       "rating": "",
+      "developer": "Nihon Telenet",
       "publisher": "Riot"
     },
     {
@@ -164,6 +185,7 @@
       "releaseDate": "1995-02-24",
       "serial": "T-60024",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -171,6 +193,7 @@
       "releaseDate": "1993-11-12",
       "serial": "G-6005",
       "rating": "",
+      "developer": "Sega CS2",
       "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Dark Wizard"
@@ -181,6 +204,7 @@
       "releaseDate": "1992-04-17",
       "serial": "T-49034",
       "rating": "",
+      "developer": "Nihon Telenet",
       "publisher": "Riot"
     },
     {
@@ -188,6 +212,7 @@
       "releaseDate": "1992-11-27",
       "serial": "T-66014",
       "rating": "",
+      "developer": "Compile",
       "publisher": "",
       "altTitles": [
         "Robo Aleste"
@@ -198,6 +223,7 @@
       "releaseDate": "1992-07-31",
       "serial": "T-28014",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -205,6 +231,7 @@
       "releaseDate": "1993-05-28",
       "serial": "T-32074",
       "rating": "",
+      "developer": "Telenet Japan",
       "publisher": "Wolf Team"
     },
     {
@@ -212,6 +239,7 @@
       "releaseDate": "1995-03-24",
       "serial": "G-6040",
       "rating": "All ages",
+      "developer": "Digital Pictures",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -219,6 +247,7 @@
       "releaseDate": "1994-06-03",
       "serial": "G-6035",
       "rating": "",
+      "developer": "ReadySoft",
       "publisher": ""
     },
     {
@@ -226,13 +255,15 @@
       "releaseDate": "1994-03-25",
       "serial": "T-60144",
       "rating": "",
-      "publisher": "Victor Entertainment"
+      "developer": "FTL Games",
+      "publisher": ""
     },
     {
       "title": "Dynamic Country Club",
       "releaseDate": "1993-07-16",
       "serial": "G-6017",
       "rating": "",
+      "developer": "Sega AM3",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -240,6 +271,7 @@
       "releaseDate": "1991-12-20",
       "serial": "T-32014",
       "rating": "",
+      "developer": "Wolf Team",
       "publisher": "Renovation Products"
     },
     {
@@ -247,6 +279,7 @@
       "releaseDate": "1995-02-24",
       "serial": "G-6041",
       "rating": "All ages",
+      "developer": "Novotrade",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -254,6 +287,7 @@
       "releaseDate": "1993-08-06",
       "serial": "G-6019",
       "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -261,6 +295,7 @@
       "releaseDate": "1994-04-22",
       "serial": "T-75014",
       "rating": "",
+      "developer": "Opera House",
       "publisher": ""
     },
     {
@@ -268,13 +303,15 @@
       "releaseDate": "1994-03-18",
       "serial": "T-71014",
       "rating": "",
+      "developer": "CreamCategory :Live link reference",
       "publisher": "Nihon Bussan"
     },
     {
       "title": "Fahrenheit",
-      "releaseDate": "1995-09-01",
-      "serial": "G-6043",
+      "releaseDate": "",
+      "serial": "G-6043}",
       "rating": "All ages",
+      "developer": "programming",
       "publisher": ""
     },
     {
@@ -282,6 +319,7 @@
       "releaseDate": "1993-04-02",
       "serial": "G-6013",
       "rating": "",
+      "developer": "A-Wave",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -289,6 +327,7 @@
       "releaseDate": "1992-12-18",
       "serial": "T-45044",
       "rating": "",
+      "developer": "Yellow Horn",
       "publisher": "Game Arts"
     },
     {
@@ -296,6 +335,7 @@
       "releaseDate": "1994-03-18",
       "serial": "G-6032",
       "rating": "",
+      "developer": "Sega CS",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -303,6 +343,7 @@
       "releaseDate": "1994-03-18",
       "serial": "G-6033",
       "rating": "",
+      "developer": "Sega CS",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -310,6 +351,7 @@
       "releaseDate": "1995-03-31",
       "serial": "T-60214",
       "rating": "",
+      "developer": "Funcom",
       "publisher": "Victor Entertainment",
       "altTitles": [
         "Fatal Fury Special"
@@ -320,6 +362,7 @@
       "releaseDate": "1993-05-28",
       "serial": "T-51014",
       "rating": "",
+      "developer": "Aisystem Tokyo",
       "publisher": "Microcabin"
     },
     {
@@ -327,6 +370,7 @@
       "releaseDate": "1994-04-23",
       "serial": "G-6034",
       "rating": "",
+      "developer": "Fuji Television",
       "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Formula One World Championship: Beyond the Limit"
@@ -337,6 +381,7 @@
       "releaseDate": "1991-12-12",
       "serial": "T-22014",
       "rating": "",
+      "developer": "Micronet",
       "publisher": "Micronet"
     },
     {
@@ -344,6 +389,7 @@
       "releaseDate": "1994-03-18",
       "serial": "T-60054",
       "rating": "",
+      "developer": "Core Design",
       "publisher": "Victor Entertainment"
     },
     {
@@ -351,6 +397,7 @@
       "releaseDate": "1994-01-28",
       "serial": "G-6016",
       "rating": "",
+      "developer": "G-Sat",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -358,6 +405,7 @@
       "releaseDate": "1993-03-26",
       "serial": "T-60094",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -365,6 +413,7 @@
       "releaseDate": "1993-08-27",
       "serial": "T-60124",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -372,6 +421,7 @@
       "releaseDate": "1994-09-30",
       "serial": "G-6038",
       "rating": "",
+      "developer": "Sega Multimedia Studio",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -379,6 +429,7 @@
       "releaseDate": "1994-05-13",
       "serial": "T-141014",
       "rating": "",
+      "developer": "Wolf Team",
       "publisher": "",
       "altTitles": [
         "The Masked Rider: Kamen Rider ZO"
@@ -386,10 +437,11 @@
     },
     {
       "title": "Keiou Yuugekitai",
-      "releaseDate": "1993-08-06",
-      "serial": "T-60114",
+      "releaseDate": "",
+      "serial": "T-60114}",
       "rating": "",
-      "publisher": "Victor Entertainment",
+      "developer": "Studio Pierrot",
+      "publisher": "",
       "altTitles": [
         "Keio Flying Squadron"
       ]
@@ -399,6 +451,7 @@
       "releaseDate": "1993-10-29",
       "serial": "T-95014",
       "rating": "",
+      "developer": "Konami",
       "publisher": "Konami"
     },
     {
@@ -406,6 +459,7 @@
       "releaseDate": "1994-11-25",
       "serial": "T-95034",
       "rating": "",
+      "developer": "Konami",
       "publisher": "Konami",
       "altTitles": [
         "Lethal Enforcers II: Gun Fighters"
@@ -416,27 +470,31 @@
       "releaseDate": "1994-05-20",
       "serial": "G-6024",
       "rating": "",
+      "developer": "Kogado Studio",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Lunar: Eternal Blue",
-      "releaseDate": "1994-12-22",
-      "serial": "T-45074",
+      "releaseDate": "",
+      "serial": "T-45074}",
       "rating": "",
+      "developer": "Game Arts",
       "publisher": ""
     },
     {
       "title": "Lunar: The Silver Star",
-      "releaseDate": "1992-06-26",
-      "serial": "T-45014",
+      "releaseDate": "",
+      "serial": "T-45014}",
       "rating": "",
-      "publisher": "Game Arts"
+      "developer": "Game Arts",
+      "publisher": ""
     },
     {
       "title": "Mahou no Shoujo: Silky Lip",
       "releaseDate": "1992-06-19",
       "serial": "T-49024",
       "rating": "",
+      "developer": "Nihon Telenet",
       "publisher": "Riot"
     },
     {
@@ -444,6 +502,7 @@
       "releaseDate": "1993-06-25",
       "serial": "G-6020",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -451,13 +510,15 @@
       "releaseDate": "1994-02-25",
       "serial": "T-60164",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
       "title": "Might and Magic III: Isles of Terra",
-      "releaseDate": "1993-11-26",
-      "serial": "T-68024",
+      "releaseDate": "",
+      "serial": "T-68024}",
       "rating": "",
+      "developer": "CRI",
       "publisher": "CRI"
     },
     {
@@ -465,6 +526,7 @@
       "releaseDate": "1993-09-23",
       "serial": "T-60044",
       "rating": "",
+      "developer": "LucasArts",
       "publisher": "Victor Entertainment",
       "altTitles": [
         "The Secret of Monkey Island"
@@ -475,13 +537,15 @@
       "releaseDate": "1994-06-03",
       "serial": "T-81014",
       "rating": "",
-      "publisher": "Acclaim Japan"
+      "developer": "Grey Team",
+      "publisher": ""
     },
     {
       "title": "NBA Jam",
       "releaseDate": "1994-12-20",
       "serial": "T-81034",
       "rating": "",
+      "developer": "Iguana Entertainment",
       "publisher": "Acclaim Japan"
     },
     {
@@ -489,6 +553,7 @@
       "releaseDate": "1993-05-28",
       "serial": "T-11014",
       "rating": "",
+      "developer": "Aisystem Tokyo",
       "publisher": "Taito"
     },
     {
@@ -496,6 +561,7 @@
       "releaseDate": "1993-11-19",
       "serial": "G-6025",
       "rating": "",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
     },
     {
@@ -503,6 +569,7 @@
       "releaseDate": "1994-03-25",
       "serial": "T-76024",
       "rating": "",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -510,6 +577,7 @@
       "releaseDate": "1991-12-14",
       "serial": "T-77014",
       "rating": "",
+      "developer": "Takeru",
       "publisher": "Sur Dé Wave"
     },
     {
@@ -517,6 +585,7 @@
       "releaseDate": "1994-04-01",
       "serial": "G-6029",
       "rating": "",
+      "developer": "Sega Falcom",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -524,20 +593,23 @@
       "releaseDate": "1992-08-07",
       "serial": "T-60014",
       "rating": "",
+      "developer": "Bits Laboratory",
       "publisher": ""
     },
     {
       "title": "Prize Fighter",
-      "releaseDate": "1995-03-24",
-      "serial": "G-6037",
+      "releaseDate": "",
+      "serial": "G-6037}",
       "rating": "All ages",
-      "publisher": "Sega Enterprises, Ltd."
+      "developer": "Digital Pictures",
+      "publisher": ""
     },
     {
       "title": "Pro Yakyuu Super League CD",
       "releaseDate": "1992-10-30",
       "serial": "G-6010",
       "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -545,6 +617,7 @@
       "releaseDate": "1993-01-03",
       "serial": "T-84024",
       "rating": "",
+      "developer": "Data West",
       "publisher": "Data West"
     },
     {
@@ -552,6 +625,7 @@
       "releaseDate": "1993-12-10",
       "serial": "T-84034",
       "rating": "",
+      "developer": "Data West",
       "publisher": "Data West"
     },
     {
@@ -559,6 +633,7 @@
       "releaseDate": "1992-05-29",
       "serial": "G-6003",
       "rating": "",
+      "developer": "Sega CS1",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -566,6 +641,7 @@
       "releaseDate": "1993-04-23",
       "serial": "T-25014",
       "rating": "",
+      "developer": "NCS",
       "publisher": "Masaya"
     },
     {
@@ -573,6 +649,7 @@
       "releaseDate": "1992-09-25",
       "serial": "G-6002",
       "rating": "",
+      "developer": "",
       "publisher": "",
       "altTitles": [
         "Rise of the Dragon"
@@ -580,10 +657,11 @@
     },
     {
       "title": "Road Blaster",
-      "releaseDate": "1992-12-18",
-      "serial": "T-32124",
+      "releaseDate": "",
+      "serial": "T-32124}",
       "rating": "",
-      "publisher": "Wolf Team",
+      "developer": "Wolf Team",
+      "publisher": "Data EastCategory :Live link reference",
       "altTitles": [
         "Road Avenger",
         "Road Blaster FX"
@@ -594,6 +672,7 @@
       "releaseDate": "1993-04-23",
       "serial": "T-76014",
       "rating": "",
+      "developer": "Koei",
       "publisher": "Koei",
       "altTitles": [
         "Romance of the Three Kingdoms III: Dragon of Destiny"
@@ -604,6 +683,7 @@
       "releaseDate": "1993-04-23",
       "serial": "G-6012",
       "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
       "publisher": ""
     },
     {
@@ -611,6 +691,7 @@
       "releaseDate": "1993-07-23",
       "serial": "G-6007",
       "rating": "",
+      "developer": "Arc System Works",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -618,6 +699,7 @@
       "releaseDate": "1992-02-18",
       "serial": "T-32034",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -625,6 +707,7 @@
       "releaseDate": "1993-12-28",
       "serial": "T-24034",
       "rating": "",
+      "developer": "Dragnet",
       "publisher": "Sammy"
     },
     {
@@ -632,7 +715,8 @@
       "releaseDate": "1994-07-29",
       "serial": "T-60034",
       "rating": "",
-      "publisher": "Victor Entertainment",
+      "developer": "Digital Developments",
+      "publisher": "Electronic Arts",
       "altTitles": [
         "Shadow of the Beast II"
       ]
@@ -642,6 +726,7 @@
       "releaseDate": "1996-02-23",
       "serial": "T-66024",
       "rating": "",
+      "developer": "Compile",
       "publisher": "Compile"
     },
     {
@@ -649,20 +734,23 @@
       "releaseDate": "1994-02-25",
       "serial": "T-44044",
       "rating": "",
+      "developer": "SIMS",
       "publisher": "SIMS"
     },
     {
       "title": "Shining Force CD",
-      "releaseDate": "1994-07-22",
-      "serial": "G-6036",
+      "releaseDate": "",
+      "serial": "G-6036}",
       "rating": "",
-      "publisher": "Sega Enterprises, Ltd.Category :Live link reference"
+      "developer": "Rit'sCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Silpheed",
       "releaseDate": "1993-07-30",
       "serial": "T-45054",
       "rating": "",
+      "developer": "Game Arts",
       "publisher": ""
     },
     {
@@ -670,6 +758,7 @@
       "releaseDate": "1993-03-12",
       "serial": "G-6008",
       "rating": "",
+      "developer": "Game Arts",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -677,6 +766,7 @@
       "releaseDate": "1991-12-12",
       "serial": "T-32024",
       "rating": "",
+      "developer": "Madhouse",
       "publisher": "Wolf Team"
     },
     {
@@ -684,6 +774,7 @@
       "releaseDate": "1993-09-23",
       "serial": "G-6021",
       "rating": "",
+      "developer": "Sega CS3",
       "publisher": "Sega Entertainment Inc."
     },
     {
@@ -691,6 +782,7 @@
       "releaseDate": "1994-12-22",
       "serial": "T-60184",
       "rating": "",
+      "developer": "Core Design",
       "publisher": ""
     },
     {
@@ -698,6 +790,7 @@
       "releaseDate": "1994-09-22",
       "serial": "T-60174",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -705,6 +798,7 @@
       "releaseDate": "1994-10-28",
       "serial": "T-14014",
       "rating": "",
+      "developer": "Technosoft",
       "publisher": ""
     },
     {
@@ -712,6 +806,7 @@
       "releaseDate": "1995-12-22",
       "serial": "G-6044",
       "rating": "18+",
+      "developer": "Stargate Films",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -719,6 +814,7 @@
       "releaseDate": "1993-04-23",
       "serial": "G-6009",
       "rating": "",
+      "developer": "Office I.",
       "publisher": "Sega Corporation (2000-2015)",
       "altTitles": [
         "Panic!"
@@ -729,6 +825,7 @@
       "releaseDate": "1992-12-25",
       "serial": "T-32084",
       "rating": "",
+      "developer": "Wolf Team",
       "publisher": "Wolf Team"
     },
     {
@@ -736,6 +833,7 @@
       "releaseDate": "1991-12-28",
       "serial": "T-45024",
       "rating": "",
+      "developer": "Game Arts",
       "publisher": "Game Arts"
     },
     {
@@ -743,6 +841,7 @@
       "releaseDate": "1993-11-26",
       "serial": "T-22034",
       "rating": "",
+      "developer": "Micronet",
       "publisher": "",
       "altTitles": [
         "The Third World War"
@@ -753,6 +852,7 @@
       "releaseDate": "1993-03-12",
       "serial": "T-11024",
       "rating": "",
+      "developer": "Aisystem Tokyo",
       "publisher": "Taito"
     },
     {
@@ -760,6 +860,7 @@
       "releaseDate": "1992-08-28",
       "serial": "T-32064",
       "rating": "",
+      "developer": "Wolf Team",
       "publisher": "Wolf Team",
       "altTitles": [
         "Cobra Command"
@@ -770,6 +871,7 @@
       "releaseDate": "1993-09-17",
       "serial": "T-60134",
       "rating": "",
+      "developer": "Core Design",
       "publisher": ""
     },
     {
@@ -777,13 +879,15 @@
       "releaseDate": "1992-11-13",
       "serial": "T-32114",
       "rating": "",
+      "developer": "HighTech Lab. Japan",
       "publisher": "Wolf Team"
     },
     {
       "title": "Tomcat Alley",
-      "releaseDate": "1994-12-22",
-      "serial": "G-6039",
+      "releaseDate": "",
+      "serial": "G-6039}",
       "rating": "All ages",
+      "developer": "Novotrade",
       "publisher": "Sega PC"
     },
     {
@@ -791,6 +895,7 @@
       "releaseDate": "1994-04-15",
       "serial": "T-45064",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -798,6 +903,7 @@
       "releaseDate": "1993-10-22",
       "serial": "T-44014",
       "rating": "",
+      "developer": "HertzCategory :Live link reference",
       "publisher": "",
       "altTitles": [
         "Vay"
@@ -808,6 +914,7 @@
       "releaseDate": "1991-12-20",
       "serial": "G-6001",
       "rating": "",
+      "developer": "Advance Communication",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -815,6 +922,7 @@
       "releaseDate": "1993-09-17",
       "serial": "G-6006",
       "rating": "",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -822,6 +930,7 @@
       "releaseDate": "1994-03-25",
       "serial": "G-6011",
       "rating": "",
+      "developer": "Bits Laboratory",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -829,6 +938,7 @@
       "releaseDate": "1993-09-17",
       "serial": "T-76044",
       "rating": "",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -836,6 +946,7 @@
       "releaseDate": "1993-03-19",
       "serial": "T-60104",
       "rating": "",
+      "developer": "Core Design",
       "publisher": "Victor Musical Industries"
     },
     {
@@ -843,6 +954,7 @@
       "releaseDate": "1992-09-25",
       "serial": "T-60074",
       "rating": "",
+      "developer": "Core Design",
       "publisher": "Victor Musical Industries"
     },
     {
@@ -850,6 +962,7 @@
       "releaseDate": "1992-04-01",
       "serial": "CDS-135",
       "rating": "",
+      "developer": "JVC",
       "publisher": "Victor Musical Industries"
     },
     {
@@ -857,6 +970,7 @@
       "releaseDate": "1994-06-24",
       "serial": "T-81024",
       "rating": "",
+      "developer": "Sculptured Software",
       "publisher": "",
       "altTitles": [
         "WWF Rage in the Cage"
@@ -867,6 +981,7 @@
       "releaseDate": "1993-12-10",
       "serial": "G-6027",
       "rating": "",
+      "developer": "Production",
       "publisher": "",
       "altTitles": [
         "Yumemi Mystery Mansion"
@@ -877,6 +992,7 @@
       "releaseDate": "1993-01-29",
       "serial": "T-45034",
       "rating": "",
+      "developer": "Mecano Associates",
       "publisher": "Game Arts"
     }
   ]

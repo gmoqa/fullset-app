@@ -8,6 +8,7 @@
       "releaseDate": "1996-11-18",
       "serial": "81606",
       "rating": "ESRB: Teen",
+      "developer": "Sega of America",
       "publisher": "Sega of America"
     },
     {
@@ -15,6 +16,7 @@
       "releaseDate": "1996-12-14",
       "serial": "T-15906H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Crystal Dynamics",
       "publisher": "Crystal Dynamics"
     },
     {
@@ -22,6 +24,7 @@
       "releaseDate": "1996-12-20",
       "serial": "T-12518H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Gremlin Interactive",
       "publisher": "Interplay"
     },
     {
@@ -29,13 +32,15 @@
       "releaseDate": "1997-07-24",
       "serial": "T-12705H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sunsoft",
       "publisher": "Working Designs"
     },
     {
       "title": "Alien Trilogy",
-      "releaseDate": "1996-08-23",
-      "serial": "T-8113H",
+      "releaseDate": "",
+      "serial": "T-8113H}",
       "rating": "ESRB: Mature",
+      "developer": "Probe Entertainment",
       "publisher": ""
     },
     {
@@ -43,6 +48,7 @@
       "releaseDate": "1997-05-29",
       "serial": "T-8150H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -50,6 +56,7 @@
       "releaseDate": "1996-08-06",
       "serial": "T-29401H",
       "rating": "ESRB: Teen",
+      "developer": "In Utero",
       "publisher": "I-Motion",
       "altTitles": [
         "Alone in the Dark: One-Eyed Jack's Revenge"
@@ -57,16 +64,18 @@
     },
     {
       "title": "AMOK",
-      "releaseDate": "1997-01-17",
-      "serial": "81064",
+      "releaseDate": "",
+      "serial": "81064}",
       "rating": "ESRB: Teen",
-      "publisher": "Sega of America"
+      "developer": "Lemon",
+      "publisher": ""
     },
     {
       "title": "Andretti Racing",
       "releaseDate": "1996-12-20",
       "serial": "T-5020H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "High Score Entertainment",
       "publisher": "Electronic Arts"
     },
     {
@@ -74,6 +83,7 @@
       "releaseDate": "1996-11-20",
       "serial": "T-9705H",
       "rating": "ESRB: Mature",
+      "developer": "Mesa Logic",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -81,6 +91,7 @@
       "releaseDate": "1995-08-15",
       "serial": "81019",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS2 (1996-1999)",
       "publisher": "Sega of America"
     },
     {
@@ -88,20 +99,23 @@
       "releaseDate": "1996-06-19",
       "serial": "81501",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Sega Entertainment Inc."
+      "developer": "Minato Giken",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Bases Loaded '96: Double Header",
       "releaseDate": "1996-03",
       "serial": "T-5703H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": ""
     },
     {
       "title": "Batman Forever (arcade)",
-      "releaseDate": "1996-11-21",
-      "serial": "T-8140H",
+      "releaseDate": "",
+      "serial": "T-8140H}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana UK",
       "publisher": ""
     },
     {
@@ -109,6 +123,7 @@
       "releaseDate": "1996-03-27",
       "serial": "81029",
       "rating": "ESRB: Teen",
+      "developer": "Nextech",
       "publisher": "Sega of America"
     },
     {
@@ -116,13 +131,15 @@
       "releaseDate": "1996-11-14",
       "serial": "81054",
       "rating": "ESRB: Teen",
+      "developer": "Nextech",
       "publisher": "Sega of America"
     },
     {
       "title": "Battle Monsters",
-      "releaseDate": "1996-08-28",
-      "serial": "T-8137H",
+      "releaseDate": "",
+      "serial": "T-8137H}",
       "rating": "ESRB: Teen",
+      "developer": "Scarab",
       "publisher": ""
     },
     {
@@ -130,6 +147,7 @@
       "releaseDate": "1997-05-21",
       "serial": "T-5021H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Realtime Associates",
       "publisher": "Electronic Arts"
     },
     {
@@ -137,6 +155,7 @@
       "releaseDate": "1997-12-31",
       "serial": "T-8149H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Cyclone Studios",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -144,6 +163,7 @@
       "releaseDate": "1997-01-07",
       "serial": "T-7027H",
       "rating": "ESRB: Teen",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -151,6 +171,7 @@
       "releaseDate": "1995-10-17",
       "serial": "81003",
       "rating": "ESRB: Kids to Adults",
+      "developer": "NovaLogic",
       "publisher": "Sega of America"
     },
     {
@@ -158,6 +179,7 @@
       "releaseDate": "1996-11-25",
       "serial": "T-7914H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -165,6 +187,7 @@
       "releaseDate": "1996-12-20",
       "serial": "T-13003H",
       "rating": "ESRB: Teen",
+      "developer": "Attention To Detail",
       "publisher": "Activision"
     },
     {
@@ -172,6 +195,7 @@
       "releaseDate": "1996-11",
       "serial": "T-15907H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "The Illusions Gaming Company",
       "publisher": "Crystal Dynamics"
     },
     {
@@ -179,6 +203,7 @@
       "releaseDate": "1996-10-18",
       "serial": "T-9505H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -186,6 +211,7 @@
       "releaseDate": "1996-09-23",
       "serial": "T-12103H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "ReadySoft",
       "publisher": "ReadySoft"
     },
     {
@@ -193,13 +219,15 @@
       "releaseDate": "1996-11-21",
       "serial": "T-8145H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Ocean Software",
       "publisher": ""
     },
     {
       "title": "Bubble Bobble also featuring Rainbow Islands",
-      "releaseDate": "1996-08-30",
-      "serial": "T-8131H",
+      "releaseDate": "",
+      "serial": "T-8131H}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Graftgold",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -207,41 +235,47 @@
       "releaseDate": "1996-12-06",
       "serial": "81040",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Realtime Associates",
       "publisher": "SegaSoft"
     },
     {
       "title": "Bug!",
-      "releaseDate": "1995-07-28",
-      "serial": "81004",
+      "releaseDate": "",
+      "serial": "81004}",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Sega of America"
+      "developer": "Beam Software",
+      "publisher": "Sega PC"
     },
     {
       "title": "Burning Rangers",
       "releaseDate": "1998-06-03",
       "serial": "81803",
       "rating": "ESRB: Everyone",
+      "developer": "Sega CS3 (1996-1999)",
       "publisher": "Sega of America"
     },
     {
       "title": "Bust-A-Move 2: Arcade Edition",
-      "releaseDate": "1996-08-26",
-      "serial": "T-8132H",
+      "releaseDate": "",
+      "serial": "T-8132H}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Taito",
       "publisher": ""
     },
     {
       "title": "Bust-A-Move 3",
-      "releaseDate": "1997-12-09",
-      "serial": "T-31103H",
+      "releaseDate": "",
+      "serial": "T-31103H}",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Natsume Inc."
+      "developer": "Taito",
+      "publisher": ""
     },
     {
       "title": "Casper",
-      "releaseDate": "1996-09-26",
-      "serial": "T-12512H",
+      "releaseDate": "",
+      "serial": "T-12512H}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Funcom",
       "publisher": "Interplay"
     },
     {
@@ -249,6 +283,7 @@
       "releaseDate": "1996-12-12",
       "serial": "81067",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS3 (1996-1999)",
       "publisher": "Sega of America"
     },
     {
@@ -256,6 +291,7 @@
       "releaseDate": "",
       "serial": "T-25901H",
       "rating": "",
+      "developer": "C-Seven",
       "publisher": "C-Seven"
     },
     {
@@ -263,6 +299,7 @@
       "releaseDate": "1995-05-11",
       "serial": "81007",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS1",
       "publisher": "Sega"
     },
     {
@@ -270,6 +307,7 @@
       "releaseDate": "1996-02-17",
       "serial": "81036",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Team Aquila",
       "publisher": "Sega"
     },
     {
@@ -277,13 +315,15 @@
       "releaseDate": "1996-02-26",
       "serial": "T-8111H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
       "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Command & Conquer",
-      "releaseDate": "1996-12-17",
-      "serial": "T-7028H",
+      "releaseDate": "",
+      "serial": "T-7028H}",
       "rating": "ESRB: Teen",
+      "developer": "Westwood Studios",
       "publisher": ""
     },
     {
@@ -291,6 +331,7 @@
       "releaseDate": "1996-03-31",
       "serial": "81010",
       "rating": "ESRB: Teen",
+      "developer": "Jumpin' Jack Software",
       "publisher": "Sega of America"
     },
     {
@@ -298,6 +339,7 @@
       "releaseDate": "1997-05-16",
       "serial": "T-9507H",
       "rating": "ESRB: Teen",
+      "developer": "Appaloosa Interactive",
       "publisher": "Konami"
     },
     {
@@ -305,6 +347,7 @@
       "releaseDate": "1995-11-02",
       "serial": "T-16201H",
       "rating": "ESRB: Mature",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
     },
     {
@@ -312,6 +355,7 @@
       "releaseDate": "1997-12-22",
       "serial": "T-25415H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "New Level Software",
       "publisher": "GT Interactive Software"
     },
     {
@@ -319,6 +363,7 @@
       "releaseDate": "1996-06-24",
       "serial": "T-1304H",
       "rating": "ESRB: Teen",
+      "developer": "Argonaut Software",
       "publisher": "Data East USA"
     },
     {
@@ -326,6 +371,7 @@
       "releaseDate": "1997-03-10",
       "serial": "T-8807H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -333,6 +379,7 @@
       "releaseDate": "1996-03-26",
       "serial": "T-2302H",
       "rating": "ESRB: Teen",
+      "developer": "Kronos Digital Entertainment",
       "publisher": "VIC Tokai Inc."
     },
     {
@@ -340,6 +387,7 @@
       "releaseDate": "1997-11-25",
       "serial": "T-16105H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Argonaut Software",
       "publisher": ""
     },
     {
@@ -347,6 +395,7 @@
       "releaseDate": "1996-12-24",
       "serial": "T-5014H",
       "rating": "ESRB: Mature",
+      "developer": "Origin Systems",
       "publisher": "Electronic Arts"
     },
     {
@@ -354,6 +403,7 @@
       "releaseDate": "1997-04-24",
       "serial": "T-9509H",
       "rating": "ESRB: Teen",
+      "developer": "Konami Computer Entertainment Tokyo",
       "publisher": "Konami"
     },
     {
@@ -361,6 +411,7 @@
       "releaseDate": "1995-09-22",
       "serial": "81205",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Nextech",
       "publisher": "Sega of America"
     },
     {
@@ -368,6 +419,7 @@
       "releaseDate": "1996-11-08",
       "serial": "81042",
       "rating": "ESRB: Kids to Adults",
+      "developer": "CRI",
       "publisher": "Sega of America"
     },
     {
@@ -375,6 +427,7 @@
       "releaseDate": "1997-08-05",
       "serial": "81072",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": "Sega of America"
     },
     {
@@ -382,13 +435,15 @@
       "releaseDate": "1996-02-08",
       "serial": "T-12508H",
       "rating": "ESRB: Teen",
+      "developer": "Xatrix Entertainment",
       "publisher": "Interplay"
     },
     {
       "title": "D",
-      "releaseDate": "1996-03-05",
-      "serial": "T-8106H",
+      "releaseDate": "",
+      "serial": "T-8106H}",
       "rating": "ESRB: Teen",
+      "developer": "Warp",
       "publisher": ""
     },
     {
@@ -396,20 +451,23 @@
       "releaseDate": "1996-01-29",
       "serial": "T-8123H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Aisystem Tokyo",
       "publisher": ""
     },
     {
       "title": "Dark Savior",
-      "releaseDate": "1996-12-12",
-      "serial": "81304",
+      "releaseDate": "",
+      "serial": "81304}",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Sega of America"
+      "developer": "Climax Entertainment",
+      "publisher": ""
     },
     {
       "title": "Darklight Conflict",
       "releaseDate": "1997-07-01",
       "serial": "T-5022H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Rage Software",
       "publisher": "Electronic Arts"
     },
     {
@@ -417,6 +475,7 @@
       "releaseDate": "1995-05-11",
       "serial": "81200",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega AM2",
       "publisher": "Sega Entertainment Inc."
     },
     {
@@ -424,6 +483,7 @@
       "releaseDate": "1998-02-16",
       "serial": "81218",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": "Sega of America"
     },
     {
@@ -431,6 +491,7 @@
       "releaseDate": "1996-11-21",
       "serial": "81213",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS2 (1996-1999)",
       "publisher": "Sega of America"
     },
     {
@@ -438,6 +499,7 @@
       "releaseDate": "1996-07-17",
       "serial": "81115",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega AM3",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -445,20 +507,23 @@
       "releaseDate": "1996-02-18",
       "serial": "T-1301H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Millennium Interactive",
       "publisher": "Data East USA"
     },
     {
       "title": "Die Hard Arcade",
-      "releaseDate": "1997-03-18",
-      "serial": "81057",
+      "releaseDate": "",
+      "serial": "81057}",
       "rating": "ESRB: Teen",
-      "publisher": "Sega GameWorks"
+      "developer": "Sega AM1",
+      "publisher": ""
     },
     {
       "title": "Die Hard Trilogy",
       "releaseDate": "1997-01-21",
       "serial": "T-16103H",
       "rating": "ESRB: Mature",
+      "developer": "Probe Entertainment",
       "publisher": ""
     },
     {
@@ -466,6 +531,7 @@
       "releaseDate": "1995-12-06",
       "serial": "T-4804H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "KAZe",
       "publisher": "Time Warner Interactive",
       "altTitles": [
         "Last Gladiators"
@@ -476,6 +542,7 @@
       "releaseDate": "1997-03-26",
       "serial": "T-25405H",
       "rating": "ESRB: Mature",
+      "developer": "Rage Software",
       "publisher": ""
     },
     {
@@ -483,6 +550,7 @@
       "releaseDate": "1995-11-22",
       "serial": "T-16207H",
       "rating": "ESRB: Teen",
+      "developer": "Digital Pictures",
       "publisher": "Sega of America"
     },
     {
@@ -490,27 +558,31 @@
       "releaseDate": "1996-12-12",
       "serial": "T-12703H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "J-Force",
       "publisher": "Working Designs"
     },
     {
       "title": "Dragonheart: Fire & Steel",
-      "releaseDate": "1996-12-23",
-      "serial": "T-8117H",
+      "releaseDate": "",
+      "serial": "T-8117H}",
       "rating": "ESRB: Teen",
+      "developer": "Funcom",
       "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Duke Nukem 3D",
-      "releaseDate": "1997-10-29",
-      "serial": "81071",
+      "releaseDate": "",
+      "serial": "81071}",
       "rating": "ESRB: Mature",
-      "publisher": "Sega of America"
+      "developer": "Lobotomy Software",
+      "publisher": ""
     },
     {
       "title": "Earthworm Jim 2",
       "releaseDate": "1996-05-16",
       "serial": "T-13203H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "M2",
       "publisher": "Playmates Interactive Entertainment"
     },
     {
@@ -518,6 +590,7 @@
       "releaseDate": "1997-11-24",
       "serial": "81076",
       "rating": "ESRB: Teen",
+      "developer": "Sega PC",
       "publisher": "Sega of America"
     },
     {
@@ -525,6 +598,7 @@
       "releaseDate": "1996-09-19",
       "serial": "MK-81206",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Bell",
       "publisher": "Sega of America"
     },
     {
@@ -532,6 +606,7 @@
       "releaseDate": "1997-12-18",
       "serial": "T-5025H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Climax Development",
       "publisher": "Electronic Arts",
       "altTitles": [
         "FIFA Road to World Cup 98"
@@ -542,6 +617,7 @@
       "releaseDate": "1995-12-23",
       "serial": "T-5003H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts Canada",
       "publisher": ""
     },
     {
@@ -549,6 +625,7 @@
       "releaseDate": "1997-03-20",
       "serial": "T-5017H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Extended Play Productions",
       "publisher": "Electronic Arts"
     },
     {
@@ -556,6 +633,7 @@
       "releaseDate": "1997-05-13",
       "serial": "81073",
       "rating": "ESRB: Teen",
+      "developer": "Sega AM2",
       "publisher": "Sega of America"
     },
     {
@@ -563,6 +641,7 @@
       "releaseDate": "1996-10-29",
       "serial": "81041",
       "rating": "ESRB: Teen",
+      "developer": "Sega AM2",
       "publisher": "Sega of America"
     },
     {
@@ -570,13 +649,15 @@
       "releaseDate": "1996-06-07",
       "serial": "T-8138H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
       "publisher": ""
     },
     {
       "title": "Galactic Attack",
-      "releaseDate": "1995-11-29",
-      "serial": "T-8116H",
+      "releaseDate": "",
+      "serial": "T-8116H}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Ving",
       "publisher": ""
     },
     {
@@ -584,6 +665,7 @@
       "releaseDate": "1996-07-03",
       "serial": "T-1504H",
       "rating": "ESRB: Teen",
+      "developer": "Santaclaus",
       "publisher": "Sunsoft"
     },
     {
@@ -591,6 +673,7 @@
       "releaseDate": "1995-12-15",
       "serial": "T-15904H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Beam Software",
       "publisher": ""
     },
     {
@@ -598,6 +681,7 @@
       "releaseDate": "1995-11-22",
       "serial": "81001",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Jumpin' Jack Software",
       "publisher": "Sega of America"
     },
     {
@@ -605,6 +689,7 @@
       "releaseDate": "1996-06-27",
       "serial": "81045",
       "rating": "ESRB: Teen",
+      "developer": "Sega AM1",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -612,6 +697,7 @@
       "releaseDate": "1997-07-22",
       "serial": "T-7004H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Burst Studios",
       "publisher": "Virgin Interactive Entertainment"
     },
     {
@@ -619,6 +705,7 @@
       "releaseDate": "1996-11-20",
       "serial": "T-7025H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Radical Entertainment",
       "publisher": ""
     },
     {
@@ -626,6 +713,7 @@
       "releaseDate": "1996-04-24",
       "serial": "81035",
       "rating": "ESRB: Teen",
+      "developer": "Treasure",
       "publisher": "Sega of America"
     },
     {
@@ -633,30 +721,23 @@
       "releaseDate": "1996-06-19",
       "serial": "81046",
       "rating": "ESRB: Teen",
+      "developer": "Game Arts",
       "publisher": "Sega of America"
     },
     {
       "title": "Hang-On GP",
-      "releaseDate": "1996-01-30",
-      "serial": "81202",
+      "releaseDate": "",
+      "serial": "81202}",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Sega of America"
-    },
-    {
-      "title": "Hardcore 4x4",
-      "releaseDate": "1996-12-20",
-      "serial": "T-13703H",
-      "rating": "ESRB: Kids to Adults",
-      "publisher": "ASC Games",
-      "altTitles": [
-        "TNN Motor Sports HardCore 4x4"
-      ]
+      "developer": "Genki",
+      "publisher": ""
     },
     {
       "title": "Heir of Zendor: The Legend and The Land",
-      "releaseDate": "1996-12-12",
-      "serial": "T-7605H",
+      "releaseDate": "",
+      "serial": "T-7605H}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Micronet",
       "publisher": "Koei"
     },
     {
@@ -664,6 +745,7 @@
       "releaseDate": "1997-07-17",
       "serial": "T-23001H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Big Ape Productions",
       "publisher": "LucasArts"
     },
     {
@@ -671,6 +753,7 @@
       "releaseDate": "1997-03-31",
       "serial": "T-25406H",
       "rating": "ESRB: Mature",
+      "developer": "ATOD",
       "publisher": ""
     },
     {
@@ -678,6 +761,7 @@
       "releaseDate": "1995-12-22",
       "serial": "T-5002H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Bullfrog Productions",
       "publisher": ""
     },
     {
@@ -685,6 +769,7 @@
       "releaseDate": "1995-11-24",
       "serial": "T-14402H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Atlus",
       "publisher": "Atlus Software"
     },
     {
@@ -692,6 +777,7 @@
       "releaseDate": "1996-11-21",
       "serial": "T-31101H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -699,6 +785,7 @@
       "releaseDate": "1996-11-20",
       "serial": "T-7015H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "NMS Software",
       "publisher": ""
     },
     {
@@ -706,13 +793,15 @@
       "releaseDate": "1996-08-30",
       "serial": "T-8139H",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Acclaim Entertainment"
+      "developer": "Funcom Dublin",
+      "publisher": ""
     },
     {
       "title": "In the Hunt",
       "releaseDate": "1996-06-04",
       "serial": "T-10001H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "SIMS",
       "publisher": ""
     },
     {
@@ -720,13 +809,15 @@
       "releaseDate": "1997-03-20",
       "serial": "T-16104H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Radical Entertainment",
       "publisher": "Fox Interactive"
     },
     {
       "title": "Iron Man/X-O Manowar in Heavy Metal",
-      "releaseDate": "1996-11-14",
-      "serial": "T-8119H",
+      "releaseDate": "",
+      "serial": "T-8119H}",
       "rating": "ESRB: Teen",
+      "developer": "Realtime Associates",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -734,6 +825,7 @@
       "releaseDate": "1996-05-08",
       "serial": "T-12701H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS2",
       "publisher": "Working Designs"
     },
     {
@@ -741,6 +833,7 @@
       "releaseDate": "1996-02-28",
       "serial": "T-7909H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Arc Developments",
       "publisher": ""
     },
     {
@@ -748,6 +841,7 @@
       "releaseDate": "1997-10-17",
       "serial": "81078",
       "rating": "ESRB: Teen",
+      "developer": "H.I.C.",
       "publisher": "Sega Enterprises USA"
     },
     {
@@ -755,6 +849,7 @@
       "releaseDate": "1996-10-25",
       "serial": "T-12519H",
       "rating": "ESRB: Mature",
+      "developer": "Gremlin Interactive",
       "publisher": "Interplay"
     },
     {
@@ -762,6 +857,7 @@
       "releaseDate": "1996-09-23",
       "serial": "T-5010H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts",
       "publisher": "Electronic Arts"
     },
     {
@@ -769,6 +865,7 @@
       "releaseDate": "1997-08-26",
       "serial": "T-5024H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Tiburon Entertainment",
       "publisher": "Electronic Arts"
     },
     {
@@ -776,6 +873,7 @@
       "releaseDate": "1996-03-28",
       "serial": "T-5006H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Bullfrog Productions",
       "publisher": ""
     },
     {
@@ -783,6 +881,7 @@
       "releaseDate": "1998-12-12",
       "serial": "T-12706H",
       "rating": "ESRB: Teen",
+      "developer": "Sega RPG ProductionCategory :Live link reference",
       "publisher": "Working Designs"
     },
     {
@@ -790,6 +889,7 @@
       "releaseDate": "1997-07-29",
       "serial": "81210",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Perfect Entertainment",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -797,6 +897,7 @@
       "releaseDate": "1997-10-08",
       "serial": "T-1214H",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -804,6 +905,7 @@
       "releaseDate": "1997-11-14",
       "serial": "T-18007H",
       "rating": "ESRB: Teen",
+      "developer": "BMG Interactive",
       "publisher": "ASC Games"
     },
     {
@@ -811,6 +913,7 @@
       "releaseDate": "1997-10-13",
       "serial": "T-9707H",
       "rating": "ESRB: Mature",
+      "developer": "Mesa Logic",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -818,6 +921,7 @@
       "releaseDate": "1997-04-01",
       "serial": "T-13004H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Quantum Factory",
       "publisher": ""
     },
     {
@@ -825,6 +929,7 @@
       "releaseDate": "1997-03-25",
       "serial": "T-1216H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment",
       "altTitles": [
         "Mega Man 8: Anniversary Collector's Edition"
@@ -835,6 +940,7 @@
       "releaseDate": "1997-10-01",
       "serial": "T-1219H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -842,6 +948,7 @@
       "releaseDate": "1996-12-23",
       "serial": "T-9703H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Digital Eclipse",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -849,6 +956,7 @@
       "releaseDate": "1997-06-11",
       "serial": "T-9706H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Digital Eclipse",
       "publisher": "Midway Home Entertainment"
     },
     {
@@ -856,7 +964,8 @@
       "releaseDate": "1995-09-14",
       "serial": "T-1302H",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Data East USA",
+      "developer": "",
+      "publisher": "",
       "altTitles": [
         "Minnesota Fats: Pool Legend"
       ]
@@ -866,6 +975,7 @@
       "releaseDate": "1996-01-23",
       "serial": "T-8103H",
       "rating": "ESRB: Mature",
+      "developer": "Probe Entertainment",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -873,13 +983,15 @@
       "releaseDate": "1997-08-08",
       "serial": "T-9704H",
       "rating": "ESRB: Mature",
-      "publisher": ""
+      "developer": "Point of View",
+      "publisher": "Midway Home Entertainment"
     },
     {
       "title": "Mr. Bones",
       "releaseDate": "1996-10-18",
       "serial": "81016",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Pacific SoftScape",
       "publisher": "Sega of America"
     },
     {
@@ -887,6 +999,7 @@
       "releaseDate": "1995-08-09",
       "serial": "T-8101H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Cyan",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -894,7 +1007,8 @@
       "releaseDate": "1995-12-27",
       "serial": "81300",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Sega of America",
+      "developer": "Microcabin",
+      "publisher": "",
       "altTitles": [
         "Blazing Heroes"
       ]
@@ -904,6 +1018,7 @@
       "releaseDate": "1997-11-13",
       "serial": "T-5028H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "High Score Entertainment",
       "publisher": "Electronic Arts"
     },
     {
@@ -911,6 +1026,7 @@
       "releaseDate": "1996-06-05",
       "serial": "81103",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Gray Matter",
       "publisher": "Sega of America"
     },
     {
@@ -918,13 +1034,15 @@
       "releaseDate": "1997-10-28",
       "serial": "81124",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Visual Concepts",
       "publisher": "Sega Entertainment Inc."
     },
     {
       "title": "NBA Jam Extreme",
-      "releaseDate": "1996-11-26",
-      "serial": "T-8120H",
+      "releaseDate": "",
+      "serial": "T-8120H}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sculptured Software",
       "publisher": ""
     },
     {
@@ -932,20 +1050,15 @@
       "releaseDate": "1995-11-10",
       "serial": "T-8102H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
       "publisher": "Acclaim Entertainment"
-    },
-    {
-      "title": "NBA Live 97 (Saturn)",
-      "releaseDate": "1997-03-28",
-      "serial": "T-5015H",
-      "rating": "ESRB: Kids to Adults",
-      "publisher": "Electronic Arts"
     },
     {
       "title": "NBA Live 98 (Saturn)",
       "releaseDate": "1997-12-18",
       "serial": "T-5027H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts Canada",
       "publisher": "Electronic Arts"
     },
     {
@@ -953,6 +1066,7 @@
       "releaseDate": "1996-10-31",
       "serial": "80118B",
       "rating": "",
+      "developer": "PlanetWeb",
       "publisher": "Sega of America"
     },
     {
@@ -960,6 +1074,7 @@
       "releaseDate": "1997-08-15",
       "serial": "81608",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega of America",
       "publisher": "Sega of America"
     },
     {
@@ -967,13 +1082,15 @@
       "releaseDate": "1996-11-20",
       "serial": "81111",
       "rating": "ESRB: Kids to Adults",
+      "developer": "GameTek",
       "publisher": "Sega of America"
     },
     {
       "title": "NFL Quarterback Club '96 (Saturn)",
-      "releaseDate": "1996-01-18",
-      "serial": "T-8109H",
+      "releaseDate": "",
+      "serial": "T-8109H}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
       "publisher": ""
     },
     {
@@ -981,6 +1098,7 @@
       "releaseDate": "1996-08-29",
       "serial": "T-8136H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
       "publisher": ""
     },
     {
@@ -988,6 +1106,7 @@
       "releaseDate": "1996-12-04",
       "serial": "T-5016H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Visual Concepts",
       "publisher": ""
     },
     {
@@ -995,6 +1114,7 @@
       "releaseDate": "1998-01-15",
       "serial": "T-5026H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts Canada",
       "publisher": "Electronic Arts"
     },
     {
@@ -1002,6 +1122,7 @@
       "releaseDate": "1995-10-02",
       "serial": "81102",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Gray Matter",
       "publisher": "Sega of America"
     },
     {
@@ -1009,6 +1130,7 @@
       "releaseDate": "1997-11-07",
       "serial": "81122",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Radical Entertainment",
       "publisher": "Sega of America"
     },
     {
@@ -1016,6 +1138,7 @@
       "releaseDate": "1996-07-02",
       "serial": "T-7013H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Radical Entertainment",
       "publisher": "Virgin Interactive Entertainment"
     },
     {
@@ -1023,13 +1146,15 @@
       "releaseDate": "1996-03-29",
       "serial": "T-1208H",
       "rating": "ESRB: Teen",
-      "publisher": "Capcom Entertainment"
+      "developer": "Capcom",
+      "publisher": ""
     },
     {
       "title": "NiGHTS into Dreams",
       "releaseDate": "1996-08-21",
       "serial": "81020",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS3",
       "publisher": "Sega of America"
     },
     {
@@ -1037,6 +1162,7 @@
       "releaseDate": "1995-10-03",
       "serial": "T-15908H",
       "rating": "ESRB: Mature",
+      "developer": "Crystal Dynamics",
       "publisher": "Crystal Dynamics"
     },
     {
@@ -1044,6 +1170,7 @@
       "releaseDate": "1996-08-06",
       "serial": "T-7904H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Silicon Dreams",
       "publisher": ""
     },
     {
@@ -1051,6 +1178,7 @@
       "releaseDate": "1995-11-17",
       "serial": "T-1305H",
       "rating": "ESRB: Teen",
+      "developer": "Data East",
       "publisher": "Data East USA"
     },
     {
@@ -1058,6 +1186,7 @@
       "releaseDate": "1996-11-20",
       "serial": "T-7604H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -1065,6 +1194,7 @@
       "releaseDate": "1997-04-24",
       "serial": "T-15914H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Jumpin' Jack Software",
       "publisher": ""
     },
     {
@@ -1072,6 +1202,7 @@
       "releaseDate": "1995-05-11",
       "serial": "81009",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS1",
       "publisher": "Sega of America"
     },
     {
@@ -1079,6 +1210,7 @@
       "releaseDate": "1998-05-06",
       "serial": "81307",
       "rating": "ESRB: Teen",
+      "developer": "Production",
       "publisher": "Sega of America"
     },
     {
@@ -1086,6 +1218,7 @@
       "releaseDate": "1996-04-17",
       "serial": "81022",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS",
       "publisher": "Sega of America"
     },
     {
@@ -1093,6 +1226,7 @@
       "releaseDate": "1995-05-11",
       "serial": "81101",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -1100,6 +1234,7 @@
       "releaseDate": "1996-11-25",
       "serial": "T-5011H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts",
       "publisher": ""
     },
     {
@@ -1107,6 +1242,7 @@
       "releaseDate": "1996-12-31",
       "serial": "T-13205H",
       "rating": "ESRB: Mature",
+      "developer": "BMG Interactive",
       "publisher": "Playmates Interactive Entertainment"
     },
     {
@@ -1114,6 +1250,7 @@
       "releaseDate": "1996-06-14",
       "serial": "T-4802H",
       "rating": "ESRB: Teen",
+      "developer": "Probe Entertainment",
       "publisher": "Sega of America"
     },
     {
@@ -1121,6 +1258,7 @@
       "releaseDate": "1996-10-31",
       "serial": "T-12520H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Cunning Developments",
       "publisher": "Interplay"
     },
     {
@@ -1128,6 +1266,7 @@
       "releaseDate": "1997-12-03",
       "serial": "81066",
       "rating": "ESRB: Teen",
+      "developer": "Lobotomy Software",
       "publisher": "Sega of America"
     },
     {
@@ -1135,20 +1274,15 @@
       "releaseDate": "1995-11-17",
       "serial": "T-16213H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Digital Pictures",
       "publisher": "Digital Pictures"
-    },
-    {
-      "title": "Rampage World Tour",
-      "releaseDate": "1997-11-26",
-      "serial": "T-9708H",
-      "rating": "ESRB: Teen",
-      "publisher": "Midway Home Entertainment"
     },
     {
       "title": "Rayman",
       "releaseDate": "1995-11-03",
       "serial": "T-17701H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Ubi Pictures",
       "publisher": "Ubi Soft"
     },
     {
@@ -1156,6 +1290,7 @@
       "releaseDate": "1997-10-01",
       "serial": "T-1221H",
       "rating": "ESRB: Mature",
+      "developer": "Nextech",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1163,13 +1298,15 @@
       "releaseDate": "1996-03-04",
       "serial": "T-8107H",
       "rating": "ESRB: Mature",
+      "developer": "Rage Software",
       "publisher": ""
     },
     {
       "title": "Rise 2 Resurrection",
-      "releaseDate": "1996-05-24",
-      "serial": "T-8114H",
+      "releaseDate": "",
+      "serial": "T-8114H}",
       "rating": "ESRB: Teen",
+      "developer": "Mirage Technologies",
       "publisher": ""
     },
     {
@@ -1177,6 +1314,7 @@
       "releaseDate": "1996-06-25",
       "serial": "T-5009H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts Canada",
       "publisher": "Electronic Arts"
     },
     {
@@ -1184,6 +1322,7 @@
       "releaseDate": "1996-06-25",
       "serial": "T-5008H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Buzz Puppet",
       "publisher": ""
     },
     {
@@ -1191,6 +1330,7 @@
       "releaseDate": "1996-09-24",
       "serial": "T-10002H",
       "rating": "ESRB: Teen",
+      "developer": "Altron",
       "publisher": "Altron"
     },
     {
@@ -1198,6 +1338,7 @@
       "releaseDate": "1995-08-16",
       "serial": "T-8104H",
       "rating": "ESRB: Teen",
+      "developer": "Genki",
       "publisher": "Acclaim Entertainment",
       "altTitles": [
         "Robotica"
@@ -1208,6 +1349,7 @@
       "releaseDate": "1995-10-07",
       "serial": "T-7601H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Koei",
       "publisher": "Koei",
       "altTitles": [
         "Romance of the Three Kingdoms IV: Wall of Fire"
@@ -1218,6 +1360,7 @@
       "releaseDate": "1997-08-22",
       "serial": "81070",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Hudson Soft",
       "publisher": "Sega of America"
     },
     {
@@ -1225,6 +1368,7 @@
       "releaseDate": "1997-03-05",
       "serial": "81214",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Zyrinx",
       "publisher": "Sega of America"
     },
     {
@@ -1232,6 +1376,7 @@
       "releaseDate": "1997-03-20",
       "serial": "14003",
       "rating": "ESRB: Teen",
+      "developer": "Syrox Developments",
       "publisher": "SegaSoft"
     },
     {
@@ -1239,6 +1384,7 @@
       "releaseDate": "1997-11-07",
       "serial": "T-12707H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Rutubo Games",
       "publisher": "Spaz",
       "altTitles": [
         "Sega Ages"
@@ -1249,6 +1395,7 @@
       "releaseDate": "1995-05-11",
       "serial": "81105",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Team Aquila",
       "publisher": "KR",
       "altTitles": [
         "Worldwide Soccer: Sega International Victory Goal Edition"
@@ -1259,6 +1406,7 @@
       "releaseDate": "1995-11-18",
       "serial": "81207",
       "rating": "ESRB: Kids to Adults",
+      "developer": "M2",
       "publisher": "Sega Enterprises, Inc. (U.S.A.)"
     },
     {
@@ -1266,6 +1414,7 @@
       "releaseDate": "1997-08-15",
       "serial": "81215",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega AM3",
       "publisher": "Sega of America"
     },
     {
@@ -1273,27 +1422,31 @@
       "releaseDate": "1997-11-24",
       "serial": "81216",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Sega Enterprises USA"
+      "developer": "AM Annex",
+      "publisher": ""
     },
     {
       "title": "Sega Worldwide Soccer 97",
       "releaseDate": "1996-10-18",
       "serial": "81112",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega PC",
       "publisher": "Sega Entertainment Inc."
     },
     {
       "title": "Sega Worldwide Soccer 98",
-      "releaseDate": "1997-11-18",
-      "serial": "81123",
+      "releaseDate": "",
+      "serial": "81123}",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Sega of America"
+      "developer": "Sega CS1",
+      "publisher": ""
     },
     {
       "title": "Shanghai: Triple-Threat",
       "releaseDate": "1995-09-25",
       "serial": "T-13001H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Activision",
       "publisher": "Activision"
     },
     {
@@ -1301,6 +1454,7 @@
       "releaseDate": "1996-06-14",
       "serial": "T-7901H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Core Design",
       "publisher": "U.S. Gold"
     },
     {
@@ -1308,13 +1462,15 @@
       "releaseDate": "1998-07-31",
       "serial": "81383",
       "rating": "ESRB: Teen",
-      "publisher": "Sega of America"
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Shining the Holy Ark",
       "releaseDate": "1997-07-02",
       "serial": "81306",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sonic! Software Planning",
       "publisher": "Sega of America"
     },
     {
@@ -1322,13 +1478,15 @@
       "releaseDate": "1996-06-26",
       "serial": "T-12702H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sonic! Software Planning",
       "publisher": "Working Designs"
     },
     {
       "title": "Shinobi Legions",
-      "releaseDate": "1995-09-21",
-      "serial": "T-2301H",
+      "releaseDate": "",
+      "serial": "T-2301H}",
       "rating": "ESRB: Teen",
+      "developer": "Sega",
       "publisher": ""
     },
     {
@@ -1336,6 +1494,7 @@
       "releaseDate": "1996-06-25",
       "serial": "T-5005H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts",
       "publisher": "Electronic Arts"
     },
     {
@@ -1343,6 +1502,7 @@
       "releaseDate": "1995-10-10",
       "serial": "T-12601H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Maxis",
       "publisher": ""
     },
     {
@@ -1350,6 +1510,7 @@
       "releaseDate": "1996-06-05",
       "serial": "T-13204H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Neversoft Entertainment",
       "publisher": "Playmates Interactive Entertainment"
     },
     {
@@ -1357,6 +1518,7 @@
       "releaseDate": "1997-08-22",
       "serial": "81051",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Appaloosa Interactive",
       "publisher": "Sega PC"
     },
     {
@@ -1364,6 +1526,7 @@
       "releaseDate": "1996-05-22",
       "serial": "T-15902H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Left Field Productions",
       "publisher": ""
     },
     {
@@ -1371,6 +1534,7 @@
       "releaseDate": "1996-11-20",
       "serial": "81062",
       "rating": "ESRB: Kids to Adults",
+      "developer": "M2",
       "publisher": "Sega Entertainment Inc.",
       "altTitles": [
         "Sonic 3D Blast"
@@ -1381,6 +1545,7 @@
       "releaseDate": "1997-08-22",
       "serial": "81079",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS3 (1996-1999)",
       "publisher": "Sega of America"
     },
     {
@@ -1388,6 +1553,7 @@
       "releaseDate": "1997-11-18",
       "serial": "81800",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS3 (1996-1999)",
       "publisher": "Sega PC"
     },
     {
@@ -1395,6 +1561,7 @@
       "releaseDate": "1997-02-12",
       "serial": "T-5013H",
       "rating": "ESRB: Teen",
+      "developer": "Electronic Arts",
       "publisher": ""
     },
     {
@@ -1402,6 +1569,7 @@
       "releaseDate": "1996-09-18",
       "serial": "T-5007H",
       "rating": "ESRB: Teen",
+      "developer": "Key Game",
       "publisher": "Electronic Arts"
     },
     {
@@ -1409,6 +1577,7 @@
       "releaseDate": "1996-11-26",
       "serial": "T-8125H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sculptured Software",
       "publisher": ""
     },
     {
@@ -1416,6 +1585,7 @@
       "releaseDate": "1997-01-22",
       "serial": "T-7001H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Burst Studios",
       "publisher": ""
     },
     {
@@ -1423,6 +1593,7 @@
       "releaseDate": "1996-09-03",
       "serial": "T-8135H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Krisalis Software",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -1430,6 +1601,7 @@
       "releaseDate": "1997-12-18",
       "serial": "81128",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Cave",
       "publisher": "Sega of America"
     },
     {
@@ -1437,6 +1609,7 @@
       "releaseDate": "1996-11-01",
       "serial": "T-1213H",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1444,6 +1617,7 @@
       "releaseDate": "1996-02-06",
       "serial": "T-1206H",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1451,6 +1625,7 @@
       "releaseDate": "1997-12-12",
       "serial": "T-1222H",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1458,13 +1633,15 @@
       "releaseDate": "1995-08-23",
       "serial": "T-8105H",
       "rating": "ESRB: Teen",
+      "developer": "Capcom",
       "publisher": ""
     },
     {
       "title": "Striker '96",
-      "releaseDate": "1996-05-31",
-      "serial": "T-8133H",
+      "releaseDate": "",
+      "serial": "T-8133H}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Rage Software",
       "publisher": ""
     },
     {
@@ -1472,6 +1649,7 @@
       "releaseDate": "1997-01-24",
       "serial": "T-1215H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Capcom",
       "publisher": "Capcom Entertainment"
     },
     {
@@ -1479,6 +1657,7 @@
       "releaseDate": "1996-12-20",
       "serial": "T-12516H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "High Voltage Software",
       "publisher": "Interplay"
     },
     {
@@ -1486,6 +1665,7 @@
       "releaseDate": "1997-11-05",
       "serial": "T-13705H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Adrenalin Entertainment",
       "publisher": "ASC Games"
     },
     {
@@ -1493,13 +1673,15 @@
       "releaseDate": "1996-10-18",
       "serial": "T-5704H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Natsume Co., Ltd.",
       "publisher": "Jaleco USA"
     },
     {
       "title": "The Crow: City of Angels",
-      "releaseDate": "1997-03-12",
-      "serial": "T-8124H",
+      "releaseDate": "",
+      "serial": "T-8124H}",
       "rating": "ESRB: Mature",
+      "developer": "Gray Matter",
       "publisher": ""
     },
     {
@@ -1507,6 +1689,7 @@
       "releaseDate": "1996-02-13",
       "serial": "T-15909H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Silicon Knights",
       "publisher": "Crystal Dynamics"
     },
     {
@@ -1514,6 +1697,7 @@
       "releaseDate": "1998-05-06",
       "serial": "81802",
       "rating": "ESRB: Mature",
+      "developer": "Sega AM1",
       "publisher": "Sega PC"
     },
     {
@@ -1521,6 +1705,7 @@
       "releaseDate": "1997-01-20",
       "serial": "T-7905H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Attention To Detail",
       "publisher": "Eidos Interactive"
     },
     {
@@ -1528,6 +1713,7 @@
       "releaseDate": "1997-04-14",
       "serial": "T-12522H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Beam Software",
       "publisher": "Interplay",
       "altTitles": [
         "Norse by Norsewest: The return of The Lost Vikings"
@@ -1538,6 +1724,7 @@
       "releaseDate": "1997-10-01",
       "serial": "81065",
       "rating": "ESRB: Teen",
+      "developer": "Appaloosa Interactive",
       "publisher": "Sega of America"
     },
     {
@@ -1545,6 +1732,7 @@
       "releaseDate": "1995-11-02",
       "serial": "81012",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sega CS1",
       "publisher": "Sega of America"
     },
     {
@@ -1552,6 +1740,7 @@
       "releaseDate": "1996-07-31",
       "serial": "81302",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Ancient",
       "publisher": "Sega of America",
       "altTitles": [
         "The Legend of Oasis"
@@ -1562,6 +1751,7 @@
       "releaseDate": "1995-11-08",
       "serial": "T-5001H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Bullfrog Productions",
       "publisher": "Domark"
     },
     {
@@ -1569,13 +1759,15 @@
       "releaseDate": "1996-09-27",
       "serial": "14002",
       "rating": "ESRB: Teen",
-      "publisher": "Sega of America"
+      "developer": "Appaloosa Interactive",
+      "publisher": "SegaSoft"
     },
     {
       "title": "Thunderhawk II",
       "releaseDate": "1995-12-27",
       "serial": "T-7902H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Core Design",
       "publisher": "U.S. Gold",
       "altTitles": [
         "Thunderstrike 2"
@@ -1583,9 +1775,10 @@
     },
     {
       "title": "Time Warner Interactive's VR Virtua Racing",
-      "releaseDate": "1995-11-06",
-      "serial": "T-4801H",
+      "releaseDate": "",
+      "serial": "T-4801H}",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Time Warner Interactive",
       "publisher": "Time Warner Interactive"
     },
     {
@@ -1593,6 +1786,7 @@
       "releaseDate": "1995-11-27",
       "serial": "T-15911H",
       "rating": "ESRB: Teen",
+      "developer": "Crystal Dynamics",
       "publisher": ""
     },
     {
@@ -1600,14 +1794,16 @@
       "releaseDate": "1996-11-18",
       "serial": "T-7910H",
       "rating": "ESRB: Teen",
-      "publisher": "Eidos Interactive"
+      "developer": "Core Design",
+      "publisher": ""
     },
     {
       "title": "Torico",
       "releaseDate": "1997-03-26",
       "serial": "T-14403H",
       "rating": "ESRB: Kids to Adults",
-      "publisher": "Atlus Software",
+      "developer": "System Sacom",
+      "publisher": "",
       "altTitles": [
         "Lunacy"
       ]
@@ -1617,6 +1813,7 @@
       "releaseDate": "1996-10-31",
       "serial": "T-16406H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Digital Illusions",
       "publisher": ""
     },
     {
@@ -1624,6 +1821,7 @@
       "releaseDate": "1997-01-15",
       "serial": "T-8144H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Microcabin",
       "publisher": "Acclaim Entertainment"
     },
     {
@@ -1631,6 +1829,7 @@
       "releaseDate": "1996-06-27",
       "serial": "T-9701H",
       "rating": "ESRB: Mature",
+      "developer": "Eurocom Entertainment Software",
       "publisher": "Williams Entertainment"
     },
     {
@@ -1638,6 +1837,7 @@
       "releaseDate": "1995-12",
       "serial": "T-2303H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "T&E Soft",
       "publisher": "VIC Tokai Inc."
     },
     {
@@ -1645,6 +1845,7 @@
       "releaseDate": "1995-12-08",
       "serial": "T-6005H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts",
       "publisher": "JVC Musical Industries",
       "altTitles": [
         "Center Ring Boxing"
@@ -1655,6 +1856,7 @@
       "releaseDate": "1995-11-14",
       "serial": "81015",
       "rating": "ESRB: Teen",
+      "developer": "Sega AM2",
       "publisher": "Sega Entertainment Inc."
     },
     {
@@ -1662,6 +1864,7 @@
       "releaseDate": "1996-11-22",
       "serial": "81043",
       "rating": "ESRB: Teen",
+      "developer": "Sega AM2",
       "publisher": "Sega Entertainment Inc."
     },
     {
@@ -1669,6 +1872,7 @@
       "releaseDate": "1995-05-11",
       "serial": "81005",
       "rating": "ESRB: Teen",
+      "developer": "Sega AM2",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1676,13 +1880,15 @@
       "releaseDate": "1995-11-30",
       "serial": "81014",
       "rating": "ESRB: Teen",
-      "publisher": "Sega Entertainment Inc."
+      "developer": "Sega AM2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Virtua Fighter Kids",
       "releaseDate": "1996-08-28",
       "serial": "81049",
       "rating": "ESRB: Teen",
+      "developer": "Sega AM2",
       "publisher": "KR"
     },
     {
@@ -1690,6 +1896,7 @@
       "releaseDate": "1995-09-28",
       "serial": "81023",
       "rating": "ESRB: Teen",
+      "developer": "Sega AM1",
       "publisher": "KR"
     },
     {
@@ -1697,6 +1904,7 @@
       "releaseDate": "1996-12-12",
       "serial": "T-31102H",
       "rating": "ESRB: Teen",
+      "developer": "Digital Factory",
       "publisher": "Natsume Inc."
     },
     {
@@ -1704,13 +1912,15 @@
       "releaseDate": "1995-09-14",
       "serial": "T-14401H",
       "rating": "ESRB: Kids to Adults",
-      "publisher": ""
+      "developer": "T&E Soft",
+      "publisher": "Atlus Software"
     },
     {
       "title": "Virtual Open Tennis",
       "releaseDate": "1996-05-31",
       "serial": "T-8129H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Imagineer",
       "publisher": ""
     },
     {
@@ -1718,6 +1928,7 @@
       "releaseDate": "1996-12-20",
       "serial": "T-12517H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Gremlin Interactive",
       "publisher": "Interplay"
     },
     {
@@ -1725,6 +1936,7 @@
       "releaseDate": "1997-08-20",
       "serial": "T-5023H",
       "rating": "ESRB: Teen",
+      "developer": "Climax Development",
       "publisher": ""
     },
     {
@@ -1732,6 +1944,7 @@
       "releaseDate": "1996-01-05",
       "serial": "81024",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Bell",
       "publisher": "Sega of America"
     },
     {
@@ -1739,6 +1952,7 @@
       "releaseDate": "1996-03",
       "serial": "T-7602H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Koei",
       "publisher": "Koei"
     },
     {
@@ -1746,6 +1960,7 @@
       "releaseDate": "1998-02-18",
       "serial": "81129",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Data East",
       "publisher": "Sega Enterprises, Ltd."
     },
     {
@@ -1753,6 +1968,7 @@
       "releaseDate": "1996-05-03",
       "serial": "81211",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Perfect Entertainment",
       "publisher": "Sega of America"
     },
     {
@@ -1760,6 +1976,7 @@
       "releaseDate": "1996-01-24",
       "serial": "T-7903H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Arc Developments",
       "publisher": "U.S. Gold"
     },
     {
@@ -1767,13 +1984,15 @@
       "releaseDate": "1995-10-02",
       "serial": "81109",
       "rating": "ESRB: Kids to Adults",
-      "publisher": ""
+      "developer": "Sega",
+      "publisher": "Sega"
     },
     {
       "title": "World Series Baseball 98 (Saturn)",
       "releaseDate": "1997-07-16",
       "serial": "81127",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": "",
       "altTitles": [
         "World Series Baseball 98"
@@ -1784,6 +2003,7 @@
       "releaseDate": "1996-08-24",
       "serial": "81113",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -1791,6 +2011,7 @@
       "releaseDate": "1996-06-27",
       "serial": "T-16403H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "East Point Software",
       "publisher": "Ocean of America"
     },
     {
@@ -1798,6 +2019,7 @@
       "releaseDate": "1996-11-23",
       "serial": "T-8126H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "",
       "publisher": ""
     },
     {
@@ -1805,6 +2027,7 @@
       "releaseDate": "1996-05-30",
       "serial": "T-8112H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Sculptured Software",
       "publisher": ""
     },
     {
@@ -1812,6 +2035,7 @@
       "releaseDate": "1996-04-03",
       "serial": "T-8108H",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Rutubo Games",
       "publisher": ""
     }
   ]

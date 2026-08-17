@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Aplica una fuente de Sega Retro a un catálogo: rellena `releaseDate` (precisión de mes/día),
-`serial` (catalog number) y `rating`, y alinea `year` con la fecha. Reproducible: re-correr cuando
+`serial` (catalog number), `rating`, `developer` y `publisher`, y alinea `year` con la fecha. Reproducible: re-correr cuando
 la fuente se actualice.
 
 Match por título normalizado (`core`), aceptando también los **títulos alternativos** que traiga la
@@ -9,7 +9,7 @@ fuente (`altTitles`): un mismo juego se llama distinto según la región — "Ai
 "Air Buster: Trouble Specialty Raid Unit" y "Warsong" es "Langrisser" — y el catálogo usa el nombre
 con el que se vendió acá.
 
-No toca título/slug/carátula/editora/género. Sega Retro es la fuente autoritativa de fechas, seriales
+No toca título/slug/carátula/género. Sega Retro es la fuente autoritativa de fechas, seriales
 y ratings para las consolas Sega (ver docs/CATALOGS.md).
 
 Uso:  python3 tools/enrich_from_segaretro.py <catalogo.json> <fuente.json>
@@ -48,7 +48,7 @@ def main():
         by[core(g["title"])] = g
 
     keys = list(by)
-    matched = date = month = serial = rating = publisher = 0
+    matched = date = month = serial = rating = publisher = developer = 0
     unmatched, by_subtitle = [], []
     for e in cat:
         k = core(e["title"])
@@ -73,11 +73,20 @@ def main():
         if s["rating"]:
             e["rating"] = s["rating"]
             rating += 1
-        # La editora **solo si falta**: a diferencia de fecha/serial/rating, donde Sega Retro es la
-        # autoridad, acá puede haber un dato mejor de otra fuente o cargado a mano.
+        # Editora y desarrolladora **solo si faltan**: a diferencia de fecha/serial/rating, donde
+        # Sega Retro es la autoridad, acá puede haber un dato mejor de otra fuente o cargado a mano.
+        #
+        # Son campos distintos y no intercambiables: a *Blackthorne* de 32X lo **hizo** Interplay y
+        # lo **publicó** Sega of America. Sega Retro lo sabe porque su tabla `companies` etiqueta el
+        # rol, y encima muestra la asimetría entre los dos: hay 14.704 filas `Developer` genéricas
+        # contra unas pocas regionales, porque quién hizo el juego no cambia de mercado — quién lo
+        # vendió, sí.
         if s.get("publisher") and not e["publisher"].strip():
             e["publisher"] = s["publisher"]
             publisher += 1
+        if s.get("developer") and not e["developer"].strip():
+            e["developer"] = s["developer"]
+            developer += 1
 
     rows = sorted((canonical(e) for e in cat), key=lambda x: x["slug"])
     body = ",\n".join(json.dumps(x, ensure_ascii=False) for x in rows)
@@ -85,7 +94,8 @@ def main():
 
     print(f"{os.path.basename(cat_path)}: {len(cat)} juegos · match {matched}")
     print(f"  releaseDate {date} (a mes {month}) · serial {serial} · rating {rating}"
-          + (f" · editora +{publisher}" if publisher else ""))
+          + (f" · editora +{publisher}" if publisher else "")
+          + (f" · desarrolladora +{developer}" if developer else ""))
     if by_subtitle:
         print(f"  por subtítulo ({len(by_subtitle)}): {by_subtitle}")
     print(f"  sin match ({len(unmatched)}): {unmatched}")

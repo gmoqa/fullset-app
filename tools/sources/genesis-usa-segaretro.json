@@ -7,85 +7,113 @@
       "title": "3 Ninjas Kick Back",
       "releaseDate": "1994-12",
       "serial": "T-113076",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Malibu Interactive",
+      "publisher": "Psygnosis"
     },
     {
       "title": "40 Bonus Games in 1",
       "releaseDate": "",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": "AtGames"
     },
     {
       "title": "6-Pak",
       "releaseDate": "1995",
       "serial": "1717",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Sega of America",
+      "publisher": ""
     },
     {
       "title": "688 Attack Sub",
       "releaseDate": "1991-07",
       "serial": "1401",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "MicroProse",
+      "publisher": "Sega of America"
     },
     {
       "title": "A Dinosaur's Tale",
       "releaseDate": "1994",
       "serial": "T-112036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Funcom",
+      "publisher": "Hi-Tech Entertainment"
     },
     {
       "title": "Aaahh!!! Real Monsters",
       "releaseDate": "1995",
       "serial": "T-139066",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Realtime Associates",
+      "publisher": "Viacom New Media"
     },
     {
       "title": "Action 52",
       "releaseDate": "1992-05",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "FarSight Technologies",
+      "publisher": "Active Enterprises"
     },
     {
       "title": "Addams Family Values",
       "releaseDate": "1996-01-01",
       "serial": "",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Ocean Software",
+      "publisher": "Ocean Software"
     },
     {
       "title": "Aero the Acro-Bat",
       "releaseDate": "1993-10",
       "serial": "T-15056",
-      "rating": ""
+      "rating": "",
+      "developer": "Iguana Entertainment",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Aero the Acro-Bat 2",
       "releaseDate": "1995-01",
       "serial": "T-15166",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Iguana Entertainment",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Aerobiz",
       "releaseDate": "1993",
       "serial": "T-76046",
-      "rating": ""
+      "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Aerobiz Supersonic",
       "releaseDate": "1995-01",
       "serial": "T-76136",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "After Burner II",
       "releaseDate": "1990-09",
       "serial": "1104",
-      "rating": ""
+      "rating": "",
+      "developer": "Bits Laboratory",
+      "publisher": "CRI"
     },
     {
       "title": "Air Buster: Trouble Specialty Raid Unit",
       "releaseDate": "1991-02",
       "serial": "33026",
       "rating": "",
+      "developer": "Inter State",
+      "publisher": "Kaneko USA",
       "altTitles": [
         "Air Buster"
       ]
@@ -94,541 +122,713 @@
       "title": "Air Diver",
       "releaseDate": "1990-04",
       "serial": "T-35026",
-      "rating": ""
+      "rating": "",
+      "developer": "Copya System",
+      "publisher": "Seismic Software"
     },
     {
       "title": "Al Michaels Announces HardBall III",
       "releaseDate": "1993",
       "serial": "ACLD012",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "MindSpan",
+      "publisher": "Accolade"
     },
     {
       "title": "Alex Kidd in the Enchanted Castle",
       "releaseDate": "1990-01",
       "serial": "1005",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Alien 3",
       "releaseDate": "1992-10",
       "serial": "T-81096",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": "Arena Entertainment"
     },
     {
       "title": "Alien Soldier",
       "releaseDate": "1996-08-01",
       "serial": "",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Alien Storm (Mega Drive)",
       "releaseDate": "1991-07",
       "serial": "1121",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Alisia Dragoon",
       "releaseDate": "1992-02",
       "serial": "1039",
-      "rating": ""
+      "rating": "",
+      "developer": "&lt;span class=\"company-data-processor\" style=\"display :none ;\"&gt;&lt;/span&gt;&lt;span class=\"\"&gt;&lt;span class=\"company-system-icons\"&gt;&lt;/span&gt;&lt;span class=\"company-system-text\"&gt;Mecano Associates&lt;/span&gt;&lt;/span&gt;",
+      "publisher": "Game Arts"
     },
     {
       "title": "Altered Beast",
       "releaseDate": "1989-08-14",
       "serial": "1100",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Bits Laboratory",
+      "publisher": "Asmik"
     },
     {
       "title": "American Gladiators",
       "releaseDate": "1993-02",
       "serial": "T-83056",
-      "rating": ""
+      "rating": "",
+      "developer": "Imagitec Design",
+      "publisher": "GameTek"
     },
     {
       "title": "Andre Agassi Tennis",
       "releaseDate": "1992-12",
       "serial": "T-101016",
-      "rating": ""
+      "rating": "",
+      "developer": "Epyx",
+      "publisher": "Spidersoft"
     },
     {
       "title": "Animaniacs",
       "releaseDate": "1994-11",
       "serial": "T-95176",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Aniversário",
       "releaseDate": "2008",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
     },
     {
       "title": "Another World",
       "releaseDate": "1993-03",
       "serial": "T-70106",
-      "rating": ""
+      "rating": "",
+      "developer": "Interplay",
+      "publisher": "Virgin Games"
     },
     {
       "title": "Arcade Classics",
       "releaseDate": "1996-07",
       "serial": "1715",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Al Baker & Associates",
+      "publisher": "Sega of America"
     },
     {
       "title": "Arch Rivals",
       "releaseDate": "1992-05",
       "serial": "T-81056",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc Developments",
+      "publisher": "Flying Edge"
     },
     {
       "title": "Arcus Odyssey",
       "releaseDate": "1991-10",
       "serial": "49096",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Wolf Team",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Ariel the Little Mermaid",
       "releaseDate": "1992-12",
       "serial": "1041",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "Arnold Palmer Tournament Golf",
       "releaseDate": "1989-10",
       "serial": "1203",
-      "rating": ""
+      "rating": "",
+      "developer": "Motivetime",
+      "publisher": "Elite Systems"
     },
     {
       "title": "Arrow Flash",
       "releaseDate": "1991-02",
       "serial": "49046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "I.T.L",
+      "publisher": ""
     },
     {
       "title": "Art Alive!",
       "releaseDate": "1991",
       "serial": "1703",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "FarSight Technologies",
+      "publisher": "Sega of America"
     },
     {
       "title": "Art of Fighting",
       "releaseDate": "1994-10",
       "serial": "1146",
-      "rating": "VRC: MA-13"
-    },
-    {
-      "title": "ASCII Wars",
-      "releaseDate": "",
-      "serial": "",
-      "rating": ""
+      "rating": "VRC: MA-13",
+      "developer": "SNK",
+      "publisher": "Sega of America"
     },
     {
       "title": "Astérix and the Great Rescue (Mega Drive)",
       "releaseDate": "1994-06",
       "serial": "1532",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Core Design",
+      "publisher": "Sega of America"
     },
     {
       "title": "Atomic Robo-Kid",
       "releaseDate": "1991-02",
       "serial": "T-24016",
-      "rating": ""
+      "rating": "",
+      "developer": "KhaosCategory :Live link reference",
+      "publisher": "Treco"
     },
     {
       "title": "Atomic Runner",
       "releaseDate": "1992-07",
       "serial": "T-13036",
-      "rating": ""
+      "rating": "",
+      "developer": "Data East",
+      "publisher": "Paon"
     },
     {
       "title": "ATP Tour Championship Tennis",
       "releaseDate": "1995-03",
       "serial": "1234",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "SIMSCategory :Live link reference",
+      "publisher": "Sega of America"
     },
     {
       "title": "Awesome Possum Kicks Dr. Machino's Butt!",
       "releaseDate": "1993-11",
       "serial": "T-48226",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Tengen",
+      "publisher": "Tengen"
     },
     {
       "title": "AWS Pro Moves Soccer",
-      "releaseDate": "1993-11",
-      "serial": "T-21016",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "T-21016}",
+      "rating": "VRC: GA",
+      "developer": "ASCII Entertainment Software",
+      "publisher": "ASCII Entertainment Software"
     },
     {
       "title": "Ayrton Senna's Super Monaco GP II",
       "releaseDate": "1992-09",
       "serial": "1135",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega CS3",
+      "publisher": ""
     },
     {
       "title": "B.O.B.",
       "releaseDate": "1993-09",
       "serial": "719201",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Chris Gray Enterprises",
+      "publisher": ""
     },
     {
       "title": "Back to the Future Part III",
       "releaseDate": "1991",
       "serial": "T-69046",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": "Arena Entertainment"
     },
     {
       "title": "Ballz 3D",
       "releaseDate": "1994-10",
       "serial": "T-119126",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "PF Magic",
+      "publisher": "Accolade"
     },
     {
       "title": "Barbie Super Model",
       "releaseDate": "1993",
       "serial": "T-112026",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Tahoe Software Productions",
+      "publisher": "Hi Tech Expressions"
     },
     {
       "title": "Barkley Shut Up and Jam 2",
       "releaseDate": "1995",
       "serial": "T-119186",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Accolade",
+      "publisher": "Accolade"
     },
     {
       "title": "Barkley Shut Up and Jam!",
       "releaseDate": "1994-02",
       "serial": "T-119066-00",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Accolade",
+      "publisher": "Accolade"
     },
     {
       "title": "Barney's Hide & Seek Game",
-      "releaseDate": "1993-06-01",
-      "serial": "1534",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "1534}",
+      "rating": "VRC: GA",
+      "developer": "Realtime Associates",
+      "publisher": ""
     },
     {
       "title": "Bass Masters Classic",
       "releaseDate": "1995-07",
       "serial": "T-100096",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Black Pearl Software",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "Bass Masters Classic: Pro Edition",
       "releaseDate": "1996-10",
       "serial": "T-100116",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Black Pearl Software",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "Batalha Naval",
       "releaseDate": "2008",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
     },
     {
       "title": "Batman",
       "releaseDate": "1991-06",
       "serial": "15016",
-      "rating": ""
+      "rating": "",
+      "developer": "Sunsoft",
+      "publisher": ""
     },
     {
       "title": "Batman Forever (Mega Drive)",
       "releaseDate": "1995-09-07",
       "serial": "T-81336",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Black Team",
+      "publisher": ""
     },
     {
       "title": "Batman Returns (Mega Drive)",
       "releaseDate": "1992-10",
       "serial": "1045",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Malibu Interactive",
+      "publisher": ""
     },
     {
       "title": "Batman: Revenge of The Joker",
       "releaseDate": "1992-11",
       "serial": "T-15046",
-      "rating": ""
+      "rating": "",
+      "developer": "Ringler Studios",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Battle Squadron",
-      "releaseDate": "1990-12",
-      "serial": "702701",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "702701}",
+      "rating": "",
+      "developer": "Innerprise Software",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Battlemaster",
       "releaseDate": "1991-11",
       "serial": "T-69066",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Battletech: A Game of Armored Combat",
       "releaseDate": "1994-09",
       "serial": "T-22066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Malibu Interactive",
+      "publisher": "Extreme Entertainment Group"
     },
     {
       "title": "Battletoads",
       "releaseDate": "1993-03",
       "serial": "T-97026",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Arc System Works",
+      "publisher": "Tradewest"
     },
     {
       "title": "Battletoads/Double Dragon: The Ultimate Team",
       "releaseDate": "1993-12",
       "serial": "T-97066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Rare",
+      "publisher": "Tradewest"
     },
     {
       "title": "Beast Wrestler",
       "releaseDate": "1992-03",
       "serial": "T-49116",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Nihon Telenet",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Beauty and the Beast: Belle's Quest",
       "releaseDate": "1993",
       "serial": "T-15106",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Disney Software",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Beauty and the Beast: Roar of the Beast",
       "releaseDate": "1993",
       "serial": "T-15116",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Disney Software",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Beavis and Butt-Head (Mega Drive)",
       "releaseDate": "1994-10",
       "serial": "T-139016",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Radical Entertainment",
+      "publisher": "Viacom New Media"
     },
     {
       "title": "Best of the Best: Championship Karate",
       "releaseDate": "1993-07",
       "serial": "T-107016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Loriciel",
+      "publisher": ""
     },
     {
       "title": "Bible Adventures",
       "releaseDate": "1995-06-30",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Wisdom Tree",
+      "publisher": "Wisdom Tree"
     },
     {
       "title": "Bil Bolha",
       "releaseDate": "2008",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Devworks Game Technology",
+      "publisher": "AtGames"
     },
     {
       "title": "Bill Walsh College Football",
       "releaseDate": "1993-08",
       "serial": "714501",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Bill Walsh College Football '95",
       "releaseDate": "1994-09",
       "serial": "734801",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Bimini Run",
       "releaseDate": "1991-05",
       "serial": "55016",
-      "rating": ""
+      "rating": "",
+      "developer": "Microsmiths",
+      "publisher": "Nuvision Entertainment"
     },
     {
       "title": "Bio-Hazard Battle",
       "releaseDate": "1992-12",
       "serial": "1060",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Blades of Vengeance",
       "releaseDate": "1993-12",
       "serial": "708401",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Beam Software",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Blaster Master 2",
       "releaseDate": "1993-06",
       "serial": "T-15076",
-      "rating": ""
+      "rating": "",
+      "developer": "Software Creations",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Blockbuster World Video Game Championship II",
       "releaseDate": "1995-06-14",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Blockout",
       "releaseDate": "1991-06",
       "serial": "705501",
-      "rating": ""
+      "rating": "",
+      "developer": "California Dreams",
+      "publisher": ""
     },
     {
       "title": "Bloodshot",
       "releaseDate": "1994-11",
       "serial": "",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Domark",
+      "publisher": "Domark"
     },
     {
       "title": "Body Count",
       "releaseDate": "1995-03-01",
       "serial": "",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Probe Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "Bonanza Bros.",
       "releaseDate": "1991-10",
       "serial": "1124",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "I.T.L",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "Bonkers",
       "releaseDate": "1994-10",
       "serial": "1055",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Sega Interactive Development Division",
+      "publisher": ""
     },
     {
       "title": "Boogerman: A Pick and Flick Adventure",
       "releaseDate": "1994-11-18",
       "serial": "T-125066",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Interplay",
+      "publisher": "Interplay"
     },
     {
       "title": "Boxing Legends of The Ring",
       "releaseDate": "1993-10",
       "serial": "T-107026",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Sculptured Software",
+      "publisher": ""
     },
     {
       "title": "Bram Stoker's Dracula (Mega Drive)",
       "releaseDate": "1993-07",
       "serial": "T-93016",
-      "rating": ""
+      "rating": "",
+      "developer": "Traveller's Tales",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Brett Hull Hockey '95",
       "releaseDate": "1994-12",
       "serial": "T-119076",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Radical Entertainment",
+      "publisher": "Accolade"
     },
     {
       "title": "Brutal: Paws of Fury",
       "releaseDate": "1994-11",
       "serial": "T-83136",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "GameTek",
+      "publisher": "GameTek"
     },
     {
       "title": "Bubba 'N' Stix",
       "releaseDate": "1994-08",
       "serial": "T-115026",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Core Design",
+      "publisher": "Core Design"
     },
     {
       "title": "Bubble and Squeak",
       "releaseDate": "1994-07",
       "serial": "T-15096",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Fox Williams",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Bubsy II",
       "releaseDate": "1994-10-15",
       "serial": "T-119136",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Accolade",
+      "publisher": "Accolade"
     },
     {
       "title": "Bubsy in Claws Encounters of the Furred Kind",
       "releaseDate": "1993-07",
       "serial": "T-119026",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Al Baker & Associates",
+      "publisher": "Accolade"
     },
     {
       "title": "Buck Rogers: Countdown to Doomsday",
       "releaseDate": "1991-12",
       "serial": "709601",
-      "rating": ""
+      "rating": "",
+      "developer": "Strategic Simulations, Inc.",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Budokan: The Martial Spirit",
       "releaseDate": "1990-07",
       "serial": "701801",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Bugs Bunny in Double Trouble",
       "releaseDate": "1996-07",
       "serial": "1840",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Atod",
+      "publisher": ""
     },
     {
       "title": "Bulls versus Blazers and the NBA Playoffs",
       "releaseDate": "1993-02-28",
       "serial": "720201",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "Bulls vs Lakers and the NBA Playoffs",
       "releaseDate": "1992-06",
       "serial": "709901",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "Burning Force",
       "releaseDate": "1990-11",
       "serial": "T-14026",
-      "rating": ""
+      "rating": "",
+      "developer": "Nova",
+      "publisher": "Namco Hometek"
     },
     {
       "title": "Cadash",
       "releaseDate": "1992-04",
       "serial": "11086",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Cyclone System",
+      "publisher": "Taito America"
     },
     {
       "title": "Caesars Palace",
       "releaseDate": "1994-02",
       "serial": "T-70146",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Teeny Weeny Games",
+      "publisher": ""
     },
     {
       "title": "Cal Ripken Jr. Baseball",
       "releaseDate": "1992",
       "serial": "T-87046",
-      "rating": ""
+      "rating": "",
+      "developer": "Acme Interactive",
+      "publisher": "Mindscape"
     },
     {
       "title": "Caliber.50",
       "releaseDate": "1991-12",
       "serial": "T-58026",
-      "rating": ""
+      "rating": "",
+      "developer": "Dragnet",
+      "publisher": "Mentrix Software"
     },
     {
       "title": "California Games",
       "releaseDate": "1992-02",
       "serial": "1207",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Epyx",
+      "publisher": ""
     },
     {
       "title": "Canhão",
       "releaseDate": "2016",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Devworks Game Technology",
+      "publisher": "AtGames"
     },
     {
       "title": "Captain America and the Avengers",
       "releaseDate": "1992-12",
       "serial": "T-13056",
-      "rating": ""
+      "rating": "",
+      "developer": "Data East",
+      "publisher": "Data East USA"
     },
     {
       "title": "Castle of Illusion Starring Mickey Mouse (Mega Drive)",
       "releaseDate": "1990-11-26",
       "serial": "1015",
       "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Castle of Illusion Starring Mickey Mouse"
       ]
@@ -637,886 +837,1180 @@
       "title": "Castlevania: Bloodlines",
       "releaseDate": "1993-12",
       "serial": "T-95076",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Cavalos & Peões",
       "releaseDate": "",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Devworks Game Technology",
+      "publisher": "AtGames"
     },
     {
       "title": "Centurion: Defender of Rome",
       "releaseDate": "1991-07",
       "serial": "702501",
-      "rating": ""
+      "rating": "",
+      "developer": "Bits of Magic",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Chakan (Mega Drive)",
-      "releaseDate": "1992-11",
-      "serial": "1047",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "1047}",
+      "rating": "VRC: GA",
+      "developer": "Extended Play",
+      "publisher": ""
     },
     {
       "title": "Champions World Class Soccer",
       "releaseDate": "1994-06",
       "serial": "T-81296",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Acclaim Entertainment",
+      "publisher": ""
     },
     {
       "title": "Championship Bowling",
       "releaseDate": "1993-06",
       "serial": "T-58056",
-      "rating": ""
+      "rating": "",
+      "developer": "Soft MachineCategory :Live link reference",
+      "publisher": "Mentrix Software"
     },
     {
       "title": "Championship Pool",
       "releaseDate": "1994-04",
       "serial": "T-87076",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Bitmasters",
+      "publisher": "Mindscape"
     },
     {
       "title": "Championship Pro-Am",
       "releaseDate": "1992",
       "serial": "T-97046",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Rare",
+      "publisher": "Midway Home Entertainment"
     },
     {
       "title": "Chase H.Q. II",
       "releaseDate": "1993-02",
       "serial": "T-11106",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "I.T.L",
+      "publisher": "Taito America"
     },
     {
       "title": "Chester Cheetah: Too Cool to Fool",
       "releaseDate": "1993-02",
       "serial": "T-33056",
-      "rating": ""
+      "rating": "",
+      "developer": "Inter State",
+      "publisher": "Kaneko USA"
     },
     {
       "title": "Chester Cheetah: Wild Wild Quest",
       "releaseDate": "1994-01",
       "serial": "T-33066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "KID",
+      "publisher": "Kaneko USA"
     },
     {
       "title": "Chi Chi's Pro Challenge Golf",
       "releaseDate": "1993-07",
       "serial": "T-70186",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Chiki Chiki Boys",
       "releaseDate": "1993",
       "serial": "1075",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
     },
     {
       "title": "Chuck Rock",
       "releaseDate": "1991-12",
       "serial": "70036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Core Design",
+      "publisher": "Sega of America"
     },
     {
       "title": "Chuck Rock II: Son of Chuck",
-      "releaseDate": "1993-09",
-      "serial": "T-70156",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "T-70156}",
+      "rating": "VRC: GA",
+      "developer": "Core Design",
+      "publisher": ""
     },
     {
       "title": "ClayFighter",
       "releaseDate": "1994-12",
       "serial": "T-125036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Ballistic"
     },
     {
       "title": "Cliffhanger",
       "releaseDate": "1993-11",
       "serial": "T-93036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Clue",
-      "releaseDate": "1992-12",
-      "serial": "T-89016",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "T-89016}",
+      "rating": "VRC: GA",
+      "developer": "Sculptured Software",
+      "publisher": "Parker Brothers"
     },
     {
       "title": "Coach K College Basketball",
       "releaseDate": "1995-03",
       "serial": "752101",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Hitmen Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "College Football USA 96",
       "releaseDate": "1995-07-15",
       "serial": "7491",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "College Football USA 97",
       "releaseDate": "1996-09",
       "serial": "7716",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "College Football's National Championship",
       "releaseDate": "1994-08",
       "serial": "1227",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "College Football's National Championship II",
       "releaseDate": "1995-11",
       "serial": "1241",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "College Slam",
       "releaseDate": "1996-02-29",
       "serial": "T-81576",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Columns",
       "releaseDate": "1990-09",
       "serial": "1701",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Compile",
+      "publisher": "Laser Soft"
     },
     {
       "title": "Columns III: Revenge of Columns",
       "releaseDate": "1994-03",
       "serial": "T-23056",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "VIC Tokai Inc."
     },
     {
       "title": "Combat Cars",
       "releaseDate": "1994-06",
       "serial": "T-119106",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Accolade",
+      "publisher": "Accolade"
     },
     {
       "title": "Comix Zone",
       "releaseDate": "1995-07",
       "serial": "1569",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Contra: Hard Corps",
       "releaseDate": "1994-09",
       "serial": "T-95106",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Cool Spot",
       "releaseDate": "1993-04",
       "serial": "T-70196",
-      "rating": ""
+      "rating": "",
+      "developer": "Virgin Games",
+      "publisher": "Virgin Games"
     },
     {
       "title": "Corporation",
       "releaseDate": "1992-09",
       "serial": "70016",
-      "rating": ""
+      "rating": "",
+      "developer": "Core Design",
+      "publisher": "Virgin Games"
     },
     {
       "title": "Corrida de Tampinhas",
       "releaseDate": "2011",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Devworks Game Technology",
+      "publisher": ""
     },
     {
       "title": "Cosmic Spacehead",
       "releaseDate": "1993-11-02",
       "serial": "T-15013",
-      "rating": ""
+      "rating": "",
+      "developer": "SuperSonic Software",
+      "publisher": "Codemasters"
     },
     {
       "title": "Crack Down",
       "releaseDate": "1991-03",
       "serial": "47046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Arc Developments",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Cross Fire",
       "releaseDate": "1991",
       "serial": "29016",
-      "rating": ""
+      "rating": "",
+      "developer": "A.I",
+      "publisher": "Kyugo Trading"
     },
     {
       "title": "Crusader of Centy",
       "releaseDate": "1995-03",
       "serial": "T-144026",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Nextech",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Crystal's Pony Tale",
       "releaseDate": "1994-10",
       "serial": "1544",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Artech Studios",
+      "publisher": "Sega of America"
     },
     {
       "title": "Crüe Ball",
       "releaseDate": "1992-11",
       "serial": "707201",
-      "rating": ""
+      "rating": "",
+      "developer": "NuFX",
+      "publisher": ""
     },
     {
       "title": "Cutthroat Island",
       "releaseDate": "1995",
       "serial": "T-81516",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Software Creations",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "CyberBall",
       "releaseDate": "1990-09",
       "serial": "1109",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": ""
     },
     {
       "title": "Cyborg Justice",
       "releaseDate": "1993-04",
       "serial": "1024",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Novotrade",
+      "publisher": ""
     },
     {
       "title": "Daikoukai Jidai II",
       "releaseDate": "1994-11",
       "serial": "T-76126",
       "rating": "VRC: GA",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "New Horizons"
       ]
     },
     {
       "title": "Darius II",
-      "releaseDate": "1991-04",
-      "serial": "T-11016",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-11016}",
+      "rating": "",
+      "developer": "I.T.L",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Dark Castle",
       "releaseDate": "1991-10-16",
       "serial": "703401",
-      "rating": ""
+      "rating": "",
+      "developer": "Artech Studios",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Dashin' Desperadoes",
       "releaseDate": "1993-09",
       "serial": "T-13066",
-      "rating": ""
+      "rating": "",
+      "developer": "Data East",
+      "publisher": "Data East USA"
     },
     {
       "title": "David Crane's Amazing Tennis",
       "releaseDate": "1993-03",
       "serial": "T-86036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "FarSight Technologies",
+      "publisher": "Absolute Entertainment"
     },
     {
       "title": "David Robinson's Supreme Court",
       "releaseDate": "1992-06",
       "serial": "1214",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Acme Interactive",
+      "publisher": ""
     },
     {
       "title": "Davis Cup Tennis",
       "releaseDate": "1993-07",
       "serial": "T-48206",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Loriciel",
+      "publisher": "Tengen"
     },
     {
       "title": "Deadly Moves",
       "releaseDate": "1992",
       "serial": "T-33046",
-      "rating": ""
+      "rating": "",
+      "developer": "Inter State",
+      "publisher": ""
     },
     {
       "title": "Death Duel",
-      "releaseDate": "1992-10",
-      "serial": "T-56036",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-56036}",
+      "rating": "",
+      "developer": "Punk Development",
+      "publisher": "RazorSoft"
     },
     {
       "title": "Decap Attack",
       "releaseDate": "1991-09",
       "serial": "1027",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "VIC Tokai",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Demolition Man",
       "releaseDate": "1995-01",
       "serial": "T-81486",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Alexandria",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Desert Demolition Starring Road Runner and Wile E. Coyote",
       "releaseDate": "1995-02",
       "serial": "1062",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "Desert Strike: Return to the Gulf",
       "releaseDate": "1992-03",
       "serial": "702201",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Electronic Arts",
+      "publisher": "Domark"
     },
     {
       "title": "Devilish: The Next Possession",
       "releaseDate": "1992-04",
       "serial": "T-47066",
-      "rating": ""
+      "rating": "",
+      "developer": "Aisystem Tokyo",
+      "publisher": ""
     },
     {
       "title": "Dick Tracy",
       "releaseDate": "1991-02",
       "serial": "1014",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "Dick Vitale's \"Awesome, Baby!\" College Hoops",
       "releaseDate": "1994-09",
       "serial": "T-48236",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Time Warner Interactive",
+      "publisher": "Time Warner Interactive"
     },
     {
       "title": "Dino Land",
-      "releaseDate": "1991-11",
-      "serial": "T-49076",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "T-49076}",
+      "rating": "VRC: GA",
+      "developer": "Wolf Team",
+      "publisher": ""
     },
     {
       "title": "Dinosaurs for Hire",
       "releaseDate": "1993-05",
       "serial": "1050",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sega Interactive Development Division",
+      "publisher": ""
     },
     {
       "title": "Disney's Aladdin",
       "releaseDate": "1993-11",
       "serial": "1058",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Virgin Games",
+      "publisher": "Sega"
     },
     {
       "title": "DJ Boy",
       "releaseDate": "1990-11",
       "serial": "33016",
-      "rating": ""
+      "rating": "",
+      "developer": "Inter StateCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Domine o Território",
       "releaseDate": "",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Tec Toy",
+      "publisher": ""
     },
     {
       "title": "Donald in Maui Mallard",
       "releaseDate": "1997-04-25",
       "serial": "T-239016",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Disney Interactive",
+      "publisher": ""
     },
     {
       "title": "Doom Troopers",
       "releaseDate": "1995-11",
       "serial": "T-132066",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Adrenalin Entertainment",
+      "publisher": "Playmates Interactive Entertainment"
     },
     {
       "title": "Double Dragon",
       "releaseDate": "1992-04",
       "serial": "ACLD009",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc System Works",
+      "publisher": "Ballistic"
     },
     {
       "title": "Double Dragon 3: The Rosetta Stone",
-      "releaseDate": "1993-02",
-      "serial": "T-81166",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81166}",
+      "rating": "",
+      "developer": "Software Creations",
+      "publisher": "Flying Edge"
     },
     {
       "title": "Double Dragon V: The Shadow Falls",
       "releaseDate": "1994-08-05",
       "serial": "T-97106",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Leland Interactive Media",
+      "publisher": "Tradewest"
     },
     {
       "title": "Dr. Robotnik's Mean Bean Machine",
-      "releaseDate": "1993-12",
-      "serial": "1706",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "1706}",
+      "rating": "VRC: GA",
+      "developer": "Compile",
+      "publisher": ""
     },
     {
       "title": "Dragon's Fury",
       "releaseDate": "1992-07",
       "serial": "301034-0150",
-      "rating": ""
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": ""
     },
     {
       "title": "Dragon's Revenge",
       "releaseDate": "1993-11",
       "serial": "T-48266",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Tengen",
+      "publisher": "Tengen"
     },
     {
       "title": "Dragon: The Bruce Lee Story",
       "releaseDate": "1995",
       "serial": "T-81496",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Acclaim Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Dune II: Battle for Arrakis",
       "releaseDate": "1994-05-01",
       "serial": "T-70246",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Westwood Studios",
+      "publisher": "Virgin Interactive Entertainment"
     },
     {
       "title": "Dungeons & Dragons: Warriors of the Eternal Sun",
       "releaseDate": "1992-08",
       "serial": "1304",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sega of America",
+      "publisher": ""
     },
     {
       "title": "Dynamite Duke",
       "releaseDate": "1990-12",
       "serial": "1113",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "HertzCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Dynamite Headdy",
       "releaseDate": "1994-09",
       "serial": "1543",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Earnest Evans",
       "releaseDate": "1992-03",
       "serial": "49176",
-      "rating": ""
+      "rating": "",
+      "developer": "Wolf Team",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Earth Defense",
       "releaseDate": "1995",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "AV artisan",
+      "publisher": "Realtec"
     },
     {
       "title": "Earthworm Jim",
       "releaseDate": "1994-10",
       "serial": "T-132036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Eurocom Entertainment Software",
+      "publisher": "Playmates Interactive Entertainment"
     },
     {
       "title": "Earthworm Jim 2",
       "releaseDate": "1995-11-15",
       "serial": "T-132056",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "M2",
+      "publisher": "Playmates Interactive Entertainment"
     },
     {
       "title": "Ecco Jr.",
       "releaseDate": "1995-04",
       "serial": "1554",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Ecco the Dolphin",
       "releaseDate": "1992-12",
       "serial": "1042",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Backbone Entertainment",
+      "publisher": "Sega PC"
     },
     {
       "title": "Ecco: The Tides of Time",
       "releaseDate": "1994-11",
       "serial": "1553",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "El Viento",
-      "releaseDate": "1991-11",
-      "serial": "49136",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "49136}",
+      "rating": "VRC: GA",
+      "developer": "Wolf Team",
+      "publisher": ""
     },
     {
       "title": "Elemental Master",
       "releaseDate": "1993-03",
       "serial": "T-49236",
-      "rating": ""
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": "Renovation Products"
     },
     {
       "title": "ESPN Baseball Tonight",
       "releaseDate": "1994-05",
       "serial": "T-93056",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Park Place Productions",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "ESPN National Hockey Night",
       "releaseDate": "1994-12",
       "serial": "T-93176",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sony Imagesoft",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "ESPN Speedworld",
       "releaseDate": "1994-12",
       "serial": "T-93166",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sony Imagesoft",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "ESPN Sunday Night NFL",
       "releaseDate": "1994-12",
       "serial": "T-93046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Absolute Entertainment",
+      "publisher": "Sony Electronic Publishing"
     },
     {
       "title": "ESWAT: City Under Siege",
       "releaseDate": "1990-11",
       "serial": "1110",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Eternal Champions",
       "releaseDate": "1993-12",
       "serial": "1145",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Evander Holyfield's \"Real Deal\" Boxing",
       "releaseDate": "1992-08",
       "serial": "1215",
-      "rating": ""
+      "rating": "",
+      "developer": "Acme Interactive",
+      "publisher": ""
     },
     {
       "title": "Ex-Mutants",
       "releaseDate": "1992-12",
       "serial": "1074",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Malibu Interactive",
+      "publisher": "Sega of America"
     },
     {
       "title": "Exile",
       "releaseDate": "1992-03",
       "serial": "49186",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Micro Factory",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Exodus: Journey to the Promised Land",
       "releaseDate": "1993",
       "serial": "ESG-1",
-      "rating": ""
+      "rating": "",
+      "developer": "Wisdom Tree",
+      "publisher": "Wisdom Tree"
     },
     {
       "title": "ExoSquad",
       "releaseDate": "1995-07-01",
       "serial": "T-132026",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Novotrade International",
+      "publisher": "Playmates Interactive Entertainment"
     },
     {
       "title": "F-117 Night Storm",
       "releaseDate": "1993-12",
       "serial": "720801",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "F-15 Strike Eagle II",
       "releaseDate": "1993-06",
       "serial": "T-104036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "MicroProse",
+      "publisher": "MicroProse Software"
     },
     {
       "title": "F-22 Interceptor: Advanced Tactical Fighter",
       "releaseDate": "1991-09",
       "serial": "701501",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "F1",
       "releaseDate": "1993-11",
       "serial": "T-88066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Lankhor",
+      "publisher": "Domark"
     },
     {
       "title": "Family Feud",
       "releaseDate": "1994-02",
       "serial": "T-83076",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Eurocom Entertainment Software",
+      "publisher": "GameTek"
     },
     {
       "title": "Fantasia",
       "releaseDate": "1991-08",
       "serial": "1021",
-      "rating": ""
+      "rating": "",
+      "developer": "Infogrames",
+      "publisher": ""
     },
     {
       "title": "Fantastic Dizzy",
       "releaseDate": "1993-09-21",
       "serial": "T-15002",
-      "rating": ""
+      "rating": "",
+      "developer": "Chameleon",
+      "publisher": "Codemasters"
     },
     {
       "title": "Fatal Fury",
       "releaseDate": "1993-02",
       "serial": "T-103016",
-      "rating": ""
+      "rating": "",
+      "developer": "Aspect",
+      "publisher": ""
     },
     {
       "title": "Fatal Fury 2",
       "releaseDate": "1994-06",
       "serial": "T-103046",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Gai BrainCategory :Live link reference",
+      "publisher": "Takara"
     },
     {
       "title": "Fatal Labyrinth",
       "releaseDate": "1991-04",
       "serial": "1309",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Sega R&D 9",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Fatal Rewind",
       "releaseDate": "1991-10",
       "serial": "709201",
-      "rating": ""
+      "rating": "",
+      "developer": "Raising Hell Software",
+      "publisher": ""
     },
     {
       "title": "Ferrari Grand Prix Challenge",
       "releaseDate": "1992-06",
       "serial": "T-81016",
-      "rating": ""
+      "rating": "",
+      "developer": "Aisystem TokyoCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Fever Pitch Soccer",
       "releaseDate": "1995",
       "serial": "T-79196",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Silicon Dreams",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Fica 1",
       "releaseDate": "",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Devworks Game Technology",
+      "publisher": "AtGames"
     },
     {
       "title": "FIFA 97: Gold Edition",
       "releaseDate": "1996-11-20",
       "serial": "7748",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Extended Play Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "FIFA International Soccer",
       "releaseDate": "1993-12",
       "serial": "725501",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "EA Canada",
+      "publisher": ""
     },
     {
       "title": "FIFA Soccer 95",
       "releaseDate": "1994-10",
       "serial": "738401",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Extended Play Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "FIFA Soccer 96 (Mega Drive)",
       "releaseDate": "1995-11",
       "serial": "757901",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts Canada",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Fighting Masters",
       "releaseDate": "1992-04",
       "serial": "T-24056",
-      "rating": ""
+      "rating": "",
+      "developer": "Aicom",
+      "publisher": "Treco"
     },
     {
       "title": "Final Zone",
       "releaseDate": "1990-11",
       "serial": "T-49026",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Wolf Team",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Fire Shark",
       "releaseDate": "1990-11",
       "serial": "34016",
-      "rating": ""
+      "rating": "",
+      "developer": "Toaplan",
+      "publisher": ""
     },
     {
       "title": "Flashback",
       "releaseDate": "1993-02-20",
       "serial": "T-79066",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Delphine Software International",
+      "publisher": "Sega of America"
     },
     {
       "title": "Flicky",
       "releaseDate": "1991-04",
       "serial": "1022",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Micronet",
+      "publisher": "Micronet"
     },
     {
       "title": "Foreman for Real",
-      "releaseDate": "1995",
-      "serial": "T-81506",
-      "rating": "ESRB: Kids to Adults"
+      "releaseDate": "",
+      "serial": "T-81506}",
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Software Creations of America",
+      "publisher": ""
     },
     {
       "title": "Forgotten Worlds (Mega Drive)",
       "releaseDate": "1989-12",
       "serial": "1008",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "M2",
+      "publisher": "Capcom"
     },
     {
       "title": "Frank Thomas Big Hurt Baseball",
       "releaseDate": "1995-10",
       "serial": "T-81476",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Frogger",
       "releaseDate": "1998-10",
       "serial": "T-50901",
-      "rating": "ESRB: Everyone"
+      "rating": "ESRB: Everyone",
+      "developer": "Cornsoft",
+      "publisher": "Games To Learn By"
     },
     {
       "title": "Fun 'n' Games",
       "releaseDate": "1993-12",
       "serial": "T-97056",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Leland Interactive Media",
+      "publisher": "Tradewest"
     },
     {
       "title": "Funny World & Balloon Boy",
       "releaseDate": "1993",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "AV artisan",
+      "publisher": "Realtec"
     },
     {
       "title": "G-LOC: Air Battle",
       "releaseDate": "1993-02",
       "serial": "1120",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Gaiares",
       "releaseDate": "1991-03",
       "serial": "49066",
-      "rating": ""
+      "rating": "",
+      "developer": "D4 Enterprise",
+      "publisher": "Edia"
     },
     {
       "title": "Gain Ground",
       "releaseDate": "1991-05",
       "serial": "49056",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Bits Laboratory",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "Galahad",
       "releaseDate": "1992-09",
       "serial": "711401",
-      "rating": ""
+      "rating": "",
+      "developer": "Traveller's Tales",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Galaxy Force II",
       "releaseDate": "1992-02",
       "serial": "1133",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "CRI",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Garfield: Caught in the Act",
       "releaseDate": "1995-11",
       "serial": "1556",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Point of View",
+      "publisher": "Sega of America"
     },
     {
       "title": "Gargoyles",
       "releaseDate": "1995-11",
       "serial": "T-239056",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Disney Interactive",
+      "publisher": "Buena Vista Interactive"
     },
     {
       "title": "Garry Kitchen's Super Battletank: War in the Gulf",
       "releaseDate": "1992-12",
       "serial": "T-86016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Absolute Entertainment",
+      "publisher": "Absolute Entertainment"
     },
     {
       "title": "Gauntlet IV",
       "releaseDate": "1993-10",
       "serial": "T-48216",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Tengen"
     },
     {
       "title": "Gemfire",
       "releaseDate": "1992-11",
       "serial": "T-76036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "General Chaos",
       "releaseDate": "1993-08",
       "serial": "714301",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Game Refuge",
+      "publisher": ""
     },
     {
       "title": "Generations Lost",
       "releaseDate": "1994-12",
       "serial": "T-48326",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Pacific SoftScape",
+      "publisher": ""
     },
     {
       "title": "Genghis Khan II: Clan of the Gray Wolf",
       "releaseDate": "1993",
       "serial": "T-76066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "George Foreman's KO Boxing",
-      "releaseDate": "1993-01",
-      "serial": "T-81116",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81116}",
+      "rating": "",
+      "developer": "Beam Software",
+      "publisher": "Flying Edge"
     },
     {
       "title": "Ghostbusters (Mega Drive)",
       "releaseDate": "1990-08",
       "serial": "1007",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Ghouls'n Ghosts",
       "releaseDate": "1989-10",
       "serial": "1002",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Arc System Works",
+      "publisher": "Capcom"
     },
     {
       "title": "Gods",
       "releaseDate": "1992-11",
       "serial": "T-87016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Graftgold",
+      "publisher": "Mindscape"
     },
     {
       "title": "Golden Axe",
       "releaseDate": "1990-01",
       "serial": "1106",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Bandai"
     },
     {
       "title": "Golden Axe II",
       "releaseDate": "1992-01",
       "serial": "1122",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Golden Axe III",
       "releaseDate": "1996-05-01",
       "serial": "",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Goofy's Hysterical History Tour",
       "releaseDate": "1994-01",
       "serial": "T-86066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Disney Software",
+      "publisher": "Absolute Entertainment"
     },
     {
       "title": "Granada",
-      "releaseDate": "1990-12",
-      "serial": "49036",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "49036}",
+      "rating": "VRC: GA",
+      "developer": "D4 Enterprise",
+      "publisher": "Edia"
     },
     {
       "title": "GrandSlam: The Tennis Tournament '92",
       "releaseDate": "1992-09",
       "serial": "49226",
       "rating": "",
+      "developer": "Nihon Telenet",
+      "publisher": "",
       "altTitles": [
         "Jennifer Capriati Tennis"
       ]
@@ -1525,136 +2019,172 @@
       "title": "Greatest Heavyweights",
       "releaseDate": "1993-12",
       "serial": "1228",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Sega of America",
+      "publisher": ""
     },
     {
       "title": "Greendog: The Beached Surfer Dude!",
       "releaseDate": "1992-09",
       "serial": "1035",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Interactive Designs",
+      "publisher": ""
     },
     {
       "title": "Grind Stormer",
       "releaseDate": "1994-03",
       "serial": "T-48256",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Tengen",
+      "publisher": "Tengen"
     },
     {
       "title": "Growl",
       "releaseDate": "1991",
       "serial": "11076",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "I.T.L",
+      "publisher": "Taito America"
     },
     {
       "title": "Gunstar Heroes",
       "releaseDate": "1993-09-09",
       "serial": "1077",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Sega of America"
     },
     {
       "title": "Gynoug",
-      "releaseDate": "1991-06",
-      "serial": "25076",
+      "releaseDate": "",
+      "serial": "25076}",
       "rating": "",
+      "developer": "M2",
+      "publisher": "NCS",
       "altTitles": [
         "Wings of Wor"
       ]
     },
     {
-      "title": "Handy Harvy",
-      "releaseDate": "2018-04-09",
-      "serial": "",
-      "rating": ""
-    },
-    {
       "title": "Hard Drivin'",
       "releaseDate": "1990-12",
       "serial": "301017-0150",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sterling Silver Software",
+      "publisher": "Tengen"
     },
     {
       "title": "HardBall '94",
       "releaseDate": "1994-07",
       "serial": "T-119086",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "HardBall '95",
       "releaseDate": "1995-06",
       "serial": "T-119176",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Cygnus Multimedia Productions",
+      "publisher": "Accolade"
     },
     {
       "title": "HardBall!",
       "releaseDate": "1991-06",
       "serial": "ACLD003",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Haunting Starring Polterguy",
       "releaseDate": "1993-10",
       "serial": "714901",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "EA Creative Developments",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Heavy Nova",
       "releaseDate": "1991-12",
       "serial": "22046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Micronet",
+      "publisher": "Micronet"
     },
     {
       "title": "Hellfire",
       "releaseDate": "1990-11",
       "serial": "35036",
-      "rating": ""
+      "rating": "",
+      "developer": "NCS",
+      "publisher": ""
     },
     {
       "title": "Herzog Zwei",
       "releaseDate": "1990-04",
       "serial": "1400",
-      "rating": ""
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": ""
     },
     {
       "title": "High Seas Havoc",
       "releaseDate": "1994-01",
       "serial": "T-13076",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Data East",
+      "publisher": "Data East USA"
     },
     {
       "title": "Hit the Ice",
       "releaseDate": "1993-02",
       "serial": "11096",
-      "rating": ""
+      "rating": "",
+      "developer": "Aisystem Tokyo",
+      "publisher": "Taito America"
     },
     {
       "title": "Home Alone",
       "releaseDate": "1992-12",
       "serial": "1046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Brian A. Rice, Inc.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Home Alone 2: Lost in New York",
       "releaseDate": "1993-12",
       "serial": "1536",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sega Interactive Development Division",
+      "publisher": ""
     },
     {
       "title": "Hook",
       "releaseDate": "1993-08",
       "serial": "T-93026",
-      "rating": ""
+      "rating": "",
+      "developer": "Core Design",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Hurricanes",
       "releaseDate": "",
       "serial": "",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Arc Developments",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Hyper Dunk: The Playoff Edition",
       "releaseDate": "1994-04-27",
       "serial": "T-95126",
       "rating": "VRC: GA",
+      "developer": "Konami",
+      "publisher": "Konami",
       "altTitles": [
         "Double Dribble: The Playoff Edition"
       ]
@@ -1663,55 +2193,73 @@
       "title": "IMG International Tour Tennis",
       "releaseDate": "1994-10",
       "serial": "721801",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Indiana Jones and the Last Crusade",
       "releaseDate": "1992-11",
       "serial": "T-79046",
-      "rating": ""
+      "rating": "",
+      "developer": "LucasArts",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Insector X",
       "releaseDate": "1990-11",
       "serial": "47036",
-      "rating": ""
+      "rating": "",
+      "developer": "Genki",
+      "publisher": "Sage's Creation"
     },
     {
       "title": "Instruments of Chaos Starring Young Indiana Jones",
       "releaseDate": "1994-03",
       "serial": "1048",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Brian A. Rice, Inc.",
+      "publisher": "Sega of America"
     },
     {
       "title": "International Rugby",
       "releaseDate": "",
       "serial": "",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Tiertex",
+      "publisher": "Domark"
     },
     {
       "title": "Ishido: The Way of Stones",
       "releaseDate": "1990-12",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Accolade",
+      "publisher": "Accolade"
     },
     {
       "title": "Izzy's Quest for the Olympic Rings",
       "releaseDate": "1995-04",
       "serial": "T-79156",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Alexandria",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Jack Nicklaus' Power Challenge Golf",
       "releaseDate": "1993-03",
       "serial": "T-119016",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "James \"Buster\" Douglas Knockout Boxing (Mega Drive)",
       "releaseDate": "1990-12",
       "serial": "1204",
       "rating": "VRC: MA-13",
+      "developer": "Whiteboard",
+      "publisher": "Sega of America",
       "altTitles": [
         "James \"Buster\" Douglas Knockout Boxing"
       ]
@@ -1720,133 +2268,177 @@
       "title": "James Bond 007: The Duel",
       "releaseDate": "1993-03",
       "serial": "T-48156",
-      "rating": ""
+      "rating": "",
+      "developer": "Domark",
+      "publisher": ""
     },
     {
       "title": "James Pond 3: Operation Starfish",
       "releaseDate": "1993-12",
       "serial": "716601",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Millennium Interactive",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "James Pond II: Codename RoboCod",
       "releaseDate": "1991-08-18",
       "serial": "708701",
-      "rating": ""
+      "rating": "",
+      "developer": "Millennium Interactive",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "James Pond: Underwater Agent",
-      "releaseDate": "1991-04",
-      "serial": "705301",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "705301}",
+      "rating": "",
+      "developer": "Millennium Interactive",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Jammit",
       "releaseDate": "1994-05",
       "serial": "T-70296",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "GTE ImagiTrek",
+      "publisher": "Virgin Interactive Entertainment"
     },
     {
       "title": "Jeopardy! (GameTek)",
-      "releaseDate": "1993-02",
-      "serial": "T-83026",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "T-83026}",
+      "rating": "VRC: GA",
+      "developer": "Park Place Productions",
+      "publisher": "GameTek"
     },
     {
       "title": "Jeopardy! Deluxe Edition",
       "releaseDate": "1994-04",
       "serial": "T-83116",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Park Place Productions",
+      "publisher": "GameTek"
     },
     {
       "title": "Jeopardy! Sports Edition",
       "releaseDate": "1994-05",
       "serial": "T-83126",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Park Place Productions",
+      "publisher": "GameTek"
     },
     {
       "title": "Jerry Glanville's Pigskin Footbrawl",
-      "releaseDate": "1992-12-18",
-      "serial": "T-56056",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-56056}",
+      "rating": "",
+      "developer": "Developer ResourcesCategory :Live link reference",
+      "publisher": "RazorSoftCategory :Live link reference"
     },
     {
       "title": "Jewel Master",
       "releaseDate": "1991-12",
       "serial": "1025",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "AmusementCategory :External JPEG referenceCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Joe & Mac",
       "releaseDate": "1994-01",
       "serial": "T-103036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Eden Entertainment Software",
+      "publisher": "Takara"
     },
     {
       "title": "Joe Montana Football (Mega Drive)",
       "releaseDate": "1991-01",
       "serial": "1205",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "Joe Montana II Sports Talk Football",
       "releaseDate": "1991-11",
       "serial": "1209",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "BlueSky Software",
+      "publisher": ""
     },
     {
       "title": "John Madden Football",
       "releaseDate": "1990-11",
       "serial": "700001",
-      "rating": ""
+      "rating": "",
+      "developer": "Park Place Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "John Madden Football '92",
       "releaseDate": "1991-12",
       "serial": "705801",
-      "rating": ""
+      "rating": "",
+      "developer": "Park Place Productions",
+      "publisher": ""
     },
     {
       "title": "John Madden Football '93",
       "releaseDate": "1992-12",
       "serial": "715401",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Looking Glass Studios",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "John Madden Football: Championship Edition",
       "releaseDate": "1992-12",
       "serial": "718801",
-      "rating": ""
+      "rating": "",
+      "developer": "Looking Glass Studios",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Jordan vs Bird",
       "releaseDate": "1992-04",
       "serial": "705101",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Joshua & The Battle of Jericho",
       "releaseDate": "1994",
       "serial": "JSG-1",
-      "rating": ""
+      "rating": "",
+      "developer": "Wisdom Tree",
+      "publisher": "Wisdom Tree"
     },
     {
       "title": "Judge Dredd",
       "releaseDate": "1995-06-16",
       "serial": "T-81306",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Interactive Studios",
+      "publisher": ""
     },
     {
       "title": "Junction",
       "releaseDate": "1991-04",
       "serial": "22016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Micronet",
+      "publisher": "Micronet"
     },
     {
       "title": "Jungle Strike",
       "releaseDate": "1993-08",
       "serial": "716201",
       "rating": "VRC: MA-13",
+      "developer": "Granite Bay Software",
+      "publisher": "Black Pearl Software",
       "altTitles": [
         "Jungle Strike: The Sequel to Desert Strike"
       ]
@@ -1855,97 +2447,129 @@
       "title": "Jurassic Park (Mega Drive)",
       "releaseDate": "1993-08-10",
       "serial": "1056",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "Jurassic Park: Rampage Edition",
       "releaseDate": "1994-10",
       "serial": "1557",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "BlueSky Software",
+      "publisher": ""
     },
     {
       "title": "Justice League Task Force",
-      "releaseDate": "1995",
-      "serial": "T-81456",
-      "rating": "ESRB: Kids to Adults"
+      "releaseDate": "",
+      "serial": "T-81456}",
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Condor",
+      "publisher": ""
     },
     {
       "title": "Ka-Ge-Ki",
       "releaseDate": "1991-06",
       "serial": "T-47026",
-      "rating": ""
+      "rating": "",
+      "developer": "Mecano Associates",
+      "publisher": "Sage's Creation"
     },
     {
       "title": "Kawasaki Superbike Challenge",
       "releaseDate": "1994-12",
       "serial": "T-48356",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Lankhor",
+      "publisher": "Time Warner Interactive"
     },
     {
       "title": "Kid Chameleon",
       "releaseDate": "1992-03",
       "serial": "1010",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "King of the Monsters",
-      "releaseDate": "1993-03",
-      "serial": "T-103026",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-103026}",
+      "rating": "",
+      "developer": "SPS",
+      "publisher": ""
     },
     {
       "title": "King of the Monsters 2",
-      "releaseDate": "1994-10",
-      "serial": "T-103056",
-      "rating": "VRC: MA-13"
+      "releaseDate": "",
+      "serial": "T-103056}",
+      "rating": "VRC: MA-13",
+      "developer": "BetopCategory :Live link reference",
+      "publisher": "Takara"
     },
     {
       "title": "King Salmon",
       "releaseDate": "1992-07",
       "serial": "T-23026",
-      "rating": ""
+      "rating": "",
+      "developer": "HOT-B",
+      "publisher": "VIC Tokai Inc."
     },
     {
       "title": "King's Bounty: The Conqueror's Quest",
       "releaseDate": "1991-07",
       "serial": "703301",
-      "rating": ""
+      "rating": "",
+      "developer": "New World Computing",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Klax",
       "releaseDate": "1990-10",
       "serial": "301040-0150",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Tengen",
+      "publisher": "Tengen"
     },
     {
       "title": "Krusty's Fun House",
       "releaseDate": "1992-06",
       "serial": "T-81036",
-      "rating": ""
+      "rating": "",
+      "developer": "Audiogenic Software",
+      "publisher": "Flying Edge"
     },
     {
       "title": "La Russa Baseball 95",
       "releaseDate": "1994-09",
       "serial": "729901",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Lakers versus Celtics and the NBA Playoffs",
       "releaseDate": "1990-11",
       "serial": "700401",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Landstalker: The Treasures of King Nole",
       "releaseDate": "1993-10",
       "serial": "1353",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Climax Entertainment",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Langrisser",
       "releaseDate": "1992-03",
       "serial": "T-24046",
       "rating": "VRC: MA-13",
+      "developer": "M2",
+      "publisher": "NCS",
       "altTitles": [
         "Warsong"
       ]
@@ -1954,145 +2578,193 @@
       "title": "Last Action Hero",
       "releaseDate": "1993-11",
       "serial": "T-93066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "B.I.T.S.",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Last Battle",
       "releaseDate": "1989-09",
       "serial": "1001",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Creative Materials",
+      "publisher": "Elite Systems"
     },
     {
       "title": "Lemmings",
-      "releaseDate": "1992-11",
-      "serial": "T-15026",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-15026}",
+      "rating": "",
+      "developer": "DMA Design",
+      "publisher": ""
     },
     {
       "title": "Lemmings 2: The Tribes",
       "releaseDate": "1994",
       "serial": "T-113036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Digital Developments",
+      "publisher": "Psygnosis"
     },
     {
       "title": "Lethal Enforcers",
       "releaseDate": "1993-06-25",
       "serial": "T-95096",
-      "rating": "VRC: MA-17"
+      "rating": "VRC: MA-17",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Lethal Enforcers II: Gun Fighters",
       "releaseDate": "1994-10",
       "serial": "T-95136",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "LHX Attack Chopper",
       "releaseDate": "1992-11",
       "serial": "707701",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "Liberty or Death",
       "releaseDate": "1994-08",
       "serial": "T-76106",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Light Crusader",
       "releaseDate": "1995-10-25",
       "serial": "1187",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Lotus II: RECS",
       "releaseDate": "1993-12",
       "serial": "726801",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Magnetic Fields",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Lotus Turbo Challenge",
-      "releaseDate": "1992-12",
-      "serial": "716301",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "716301}",
+      "rating": "",
+      "developer": "Gremlin Graphics Software",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "M-1 Abrams Battle Tank",
       "releaseDate": "1991",
       "serial": "1402",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Realtime Games Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "M.U.S.H.A.",
       "releaseDate": "1991-02",
       "serial": "35046",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Seismic Software"
     },
     {
       "title": "Madden NFL '94",
       "releaseDate": "1993-11-19",
       "serial": "714401",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "High Score Productions",
+      "publisher": ""
     },
     {
       "title": "Madden NFL '95",
       "releaseDate": "1994-11-17",
       "serial": "737601",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Madden NFL 96",
       "releaseDate": "1995-11-10",
       "serial": "749301",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "High Score Entertainment",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "Madden NFL 97 (Mega Drive)",
       "releaseDate": "1996-10-24",
       "serial": "768901",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Madden NFL 98 (Mega Drive)",
       "releaseDate": "1997-10-01",
       "serial": "781601",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Tiertex",
+      "publisher": "THQ"
     },
     {
       "title": "Mahjong Solitaire",
       "releaseDate": "2008",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "AtGames",
+      "publisher": "AtGames"
     },
     {
       "title": "Mallet Legend",
       "releaseDate": "1993",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "AV artisan",
+      "publisher": "Realtec"
     },
     {
       "title": "Marble Madness",
       "releaseDate": "1991-11",
       "serial": "708901",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": "Tengen"
     },
     {
       "title": "Mario Andretti Racing",
       "releaseDate": "1994-06",
       "serial": "725901",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Mario Lemieux Hockey",
       "releaseDate": "1991-12",
       "serial": "1210",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Alpine Software",
+      "publisher": "Sega"
     },
     {
       "title": "Marko's Magic Football",
       "releaseDate": "1994-09",
       "serial": "T-88086",
       "rating": "VRC: GA",
+      "developer": "Interactive Studios",
+      "publisher": "Domark",
       "altTitles": [
         "Marko"
       ]
@@ -2101,61 +2773,81 @@
       "title": "Marsupilami",
       "releaseDate": "1996-05",
       "serial": "1841",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Apache Software",
+      "publisher": "Sega"
     },
     {
       "title": "Marvel Land",
       "releaseDate": "1991-10",
       "serial": "T-14046",
-      "rating": ""
+      "rating": "",
+      "developer": "Namco",
+      "publisher": "Namco Hometek"
     },
     {
       "title": "Mary Shelley's Frankenstein",
       "releaseDate": "1994-12",
       "serial": "T-93086",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Bits Corporation",
+      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Master of Monsters",
       "releaseDate": "1991-11",
       "serial": "49156",
-      "rating": ""
+      "rating": "",
+      "developer": "ISCO",
+      "publisher": ""
     },
     {
       "title": "Math Blaster: Episode 1",
       "releaseDate": "1994-09-14",
       "serial": "T-152016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "SpidersoftCategory :Live link reference",
+      "publisher": "Davidson & Associates"
     },
     {
       "title": "Mazin Saga: Mutant Fighter",
       "releaseDate": "1993",
       "serial": "T-23036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Almanic",
+      "publisher": "VIC Tokai Inc."
     },
     {
       "title": "McDonald's Treasure Land Adventure",
       "releaseDate": "1993-12",
       "serial": "1067",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Treasure",
+      "publisher": "Sega of America"
     },
     {
       "title": "Mega Bomberman",
       "releaseDate": "1995-03",
       "serial": "1573",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Westone",
+      "publisher": "Sega of America"
     },
     {
       "title": "Mega Games I",
       "releaseDate": "1993-08-16",
       "serial": "1702",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sega Europe",
+      "publisher": "Sega Europe"
     },
     {
       "title": "Mega Lo Mania",
       "releaseDate": "1993-02",
       "serial": "T-70056",
       "rating": "",
+      "developer": "Sensible Software",
+      "publisher": "",
       "altTitles": [
         "Tyrants: Fight Through Time"
       ]
@@ -2164,1051 +2856,1401 @@
       "title": "Mega Man: The Wily Wars",
       "releaseDate": "1994-10-15",
       "serial": "",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Minakuchi Engineering",
+      "publisher": "Capcom"
     },
     {
       "title": "Mega Turrican",
       "releaseDate": "1994-03",
       "serial": "T-13086",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Factor 5",
+      "publisher": "Data East USA"
     },
     {
       "title": "Memory",
       "releaseDate": "2008",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "AtGames",
+      "publisher": "AtGames"
     },
     {
       "title": "Menacer 6-Game Cartridge",
       "releaseDate": "1992-10",
       "serial": "1658",
-      "rating": ""
+      "rating": "",
+      "developer": "Johnson Voorsanger Productions",
+      "publisher": ""
     },
     {
       "title": "Mercs",
       "releaseDate": "1991-10",
       "serial": "1119",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "M2",
+      "publisher": "Capcom"
     },
     {
       "title": "Michael Jackson's Moonwalker",
       "releaseDate": "1990-09",
       "serial": "1013",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc",
+      "publisher": ""
     },
     {
       "title": "Mick & Mack as the Global Gladiators",
       "releaseDate": "1992-11",
       "serial": "T-70066",
-      "rating": ""
+      "rating": "",
+      "developer": "Graftgold",
+      "publisher": "Virgin Games"
     },
     {
       "title": "Mickey Mania: The Timeless Adventures of Mickey Mouse",
       "releaseDate": "1994-11",
       "serial": "T-93156",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Disney Software",
+      "publisher": ""
     },
     {
       "title": "Mickey's Ultimate Challenge",
       "releaseDate": "1994-03",
       "serial": "T-112046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "WayForward Technologies",
+      "publisher": "Hi-Tech Expressions"
     },
     {
       "title": "Micro Machines",
       "releaseDate": "1993-09-14",
       "serial": "15001",
-      "rating": ""
+      "rating": "",
+      "developer": "Codemasters",
+      "publisher": "Codemasters"
     },
     {
       "title": "Midnight Resistance",
       "releaseDate": "1991-06",
       "serial": "T-13016",
-      "rating": ""
+      "rating": "",
+      "developer": "ISCO",
+      "publisher": "Sega of America"
     },
     {
       "title": "MiG-29 Fighter Pilot",
       "releaseDate": "1993-08",
       "serial": "T-48166",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Domark",
+      "publisher": ""
     },
     {
       "title": "Might and Magic: Gates to Another World",
-      "releaseDate": "1991-07",
-      "serial": "703101",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "703101}",
+      "rating": "",
+      "developer": "New World Computing",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Mighty Morphin Power Rangers (Mega Drive)",
       "releaseDate": "1994-10",
       "serial": "1570",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Nova",
+      "publisher": "Sega"
     },
     {
       "title": "Mighty Morphin Power Rangers: The Movie (Mega Drive)",
       "releaseDate": "1995-06-15",
       "serial": "1578",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Banpresto",
+      "publisher": "Sega of America"
     },
     {
       "title": "Mike Ditka Power Football",
       "releaseDate": "1991-10",
       "serial": "ACLD005",
-      "rating": ""
+      "rating": "",
+      "developer": "Accolade",
+      "publisher": "Ballistic"
     },
     {
       "title": "Minnesota Fats: Pool Legend (Mega Drive)",
       "releaseDate": "1995",
       "serial": "T-13106",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Data East",
+      "publisher": "Data East USA"
     },
     {
       "title": "MLBPA Baseball",
       "releaseDate": "1994-06",
       "serial": "717401",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Beam Software",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Monopoly (Mega Drive)",
-      "releaseDate": "1992-09",
-      "serial": "T-89026",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "T-89026}",
+      "rating": "VRC: GA",
+      "developer": "Sculptured Software",
+      "publisher": "Parker Brothers"
     },
     {
       "title": "Mortal Kombat",
       "releaseDate": "1993-09-13",
       "serial": "T-81186",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Grey Team",
+      "publisher": ""
     },
     {
       "title": "Mortal Kombat 3",
       "releaseDate": "1995-10-13",
       "serial": "T-97116",
-      "rating": "ESRB: Mature"
+      "rating": "ESRB: Mature",
+      "developer": "Midway Manufacturing",
+      "publisher": "Williams Entertainment"
     },
     {
       "title": "Mortal Kombat II",
       "releaseDate": "1994-09-09",
       "serial": "T-81346",
-      "rating": "VRC: MA-17"
+      "rating": "VRC: MA-17",
+      "developer": "Probe Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Mr. Nutz",
       "releaseDate": "1996-07-01",
       "serial": "",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Ocean Software",
+      "publisher": "Ocean Software"
     },
     {
       "title": "Ms. Pac-Man",
       "releaseDate": "1991-07",
       "serial": "301030-0150",
-      "rating": ""
+      "rating": "",
+      "developer": "Innerprise Software",
+      "publisher": "Tengen"
     },
     {
       "title": "Muhammad Ali Heavyweight Boxing",
       "releaseDate": "1992-12",
       "serial": "T-70096",
-      "rating": ""
+      "rating": "",
+      "developer": "Park Place Productions",
+      "publisher": "Virgin Games"
     },
     {
       "title": "Mutant League Football",
       "releaseDate": "1993-06",
       "serial": "708101",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Mutant Productions",
+      "publisher": ""
     },
     {
       "title": "Mutant League Hockey",
       "releaseDate": "1994-05",
       "serial": "722501",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Abalone",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Mystic Defender",
       "releaseDate": "1989-12",
       "serial": "1011",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sega R&D 2",
+      "publisher": ""
     },
     {
       "title": "Mystical Fighter",
       "releaseDate": "1992-03",
       "serial": "T-80016",
-      "rating": ""
+      "rating": "",
+      "developer": "KID",
+      "publisher": "DreamWorks"
     },
     {
       "title": "NBA Action '94",
-      "releaseDate": "1994-03",
-      "serial": "1221",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "1221}",
+      "rating": "VRC: GA",
+      "developer": "Malibu Interactive",
+      "publisher": "Sega of America"
     },
     {
       "title": "NBA Action '95 Starring David Robinson",
       "releaseDate": "1995-03-23",
       "serial": "1236",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Double Diamond SportsCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "NBA All-Star Challenge",
-      "releaseDate": "1993-02",
-      "serial": "T-81126",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81126}",
+      "rating": "",
+      "developer": "Beam Software",
+      "publisher": "Flying Edge"
     },
     {
       "title": "NBA Hang Time",
       "releaseDate": "1996-11-06",
       "serial": "T-97136",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Funcom",
+      "publisher": "Midway Home Entertainment"
     },
     {
       "title": "NBA Jam",
       "releaseDate": "1994-03-04",
       "serial": "T-81326",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Iguana Entertainment",
+      "publisher": ""
     },
     {
       "title": "NBA Jam Tournament Edition",
       "releaseDate": "1995-02-23",
       "serial": "T-81406",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "NBA Live 95",
       "releaseDate": "1994-10-28",
       "serial": "738101",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Hitmen Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "NBA Live 96",
       "releaseDate": "1995",
       "serial": "758601",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Hitmen Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "NBA Live 97 (Mega Drive)",
       "releaseDate": "1996-11-20",
       "serial": "772801",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "NuFX",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "NBA Live 98 (Mega Drive)",
       "releaseDate": "1997-12-02",
       "serial": "781801",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "NBA Showdown '94",
       "releaseDate": "1994-03",
       "serial": "721401",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "EA Creative Development",
+      "publisher": ""
     },
     {
       "title": "NCAA Final Four Basketball",
       "releaseDate": "1994",
       "serial": "T-158016",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Bitmasters",
+      "publisher": "Mindscape"
     },
     {
       "title": "NCAA Football",
       "releaseDate": "1994-12",
       "serial": "T-87106",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Mindscape",
+      "publisher": "Mindscape"
     },
     {
       "title": "Newman-Haas IndyCar Featuring Nigel Mansell",
       "releaseDate": "1994-12",
       "serial": "T-81366",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Gremlin Graphics Software",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "NFL '95",
       "releaseDate": "1994-11-15",
       "serial": "1237",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "NFL 98",
       "releaseDate": "1997-10-21",
       "serial": "1243",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "FarSight Technologies",
+      "publisher": "Sega of America"
     },
     {
       "title": "NFL Football '94 Starring Joe Montana",
-      "releaseDate": "1993-11",
-      "serial": "1225",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "1225}",
+      "rating": "VRC: GA",
+      "developer": "BlueSky Software",
+      "publisher": ""
     },
     {
       "title": "NFL Quarterback Club '96 (Mega Drive)",
       "releaseDate": "1995-10-27",
       "serial": "T-81586",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "NFL Quarterback Club (Mega Drive)",
       "releaseDate": "1994-12",
       "serial": "T-81276",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "NFL Sports Talk Football '93 Starring Joe Montana",
       "releaseDate": "1992-11",
       "serial": "1216",
-      "rating": ""
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "NHL 95",
       "releaseDate": "1994-09-26",
       "serial": "719401",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "InPlay Sports",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "NHL 96",
       "releaseDate": "1995-10-06",
       "serial": "748001",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "High Score Entertainment",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "NHL 97 (Mega Drive)",
       "releaseDate": "1996-09-24",
       "serial": "760301",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "NHL 98 (Mega Drive)",
       "releaseDate": "1997-10-31",
       "serial": "782001",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "NHL All-Star Hockey '95",
-      "releaseDate": "1995-02",
-      "serial": "1230",
-      "rating": "ESRB: Kids to Adults"
+      "releaseDate": "",
+      "serial": "1230}",
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Blue Line Productions",
+      "publisher": "Sega of America"
     },
     {
       "title": "NHL Hockey '94",
       "releaseDate": "1993-09",
       "serial": "722801",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "NHL Hockey (Mega Drive)",
       "releaseDate": "1991-08",
       "serial": "704001",
-      "rating": ""
+      "rating": "",
+      "developer": "Park Place Production Team",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "NHLPA Hockey",
       "releaseDate": "1994",
       "serial": "",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "HeartBeat CorporationCategory :Live link reference",
+      "publisher": "HeartBeat Corporation"
     },
     {
       "title": "NHLPA Hockey '93",
       "releaseDate": "1992-09",
       "serial": "714101",
-      "rating": ""
+      "rating": "",
+      "developer": "Park Place Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Nigel Mansell's World Championship Racing",
       "releaseDate": "1993-11",
       "serial": "T-83066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Gremlin Graphics Software",
+      "publisher": "GameTek"
     },
     {
       "title": "Nightmare Circus",
       "releaseDate": "1996-03-01",
       "serial": "1575",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Funcom",
+      "publisher": "Sega of America"
     },
     {
       "title": "No Escape",
       "releaseDate": "1994",
       "serial": "T-113086",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "BITS Corporation",
+      "publisher": "Psygnosis"
     },
     {
       "title": "Nobunaga's Ambition",
       "releaseDate": "1994-01",
       "serial": "T-76076",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Normy's Beach Babe-O-Rama",
       "releaseDate": "1994-03",
       "serial": "720401",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Realtime AssociatesCategory :Live link reference",
+      "publisher": "Electronic ArtsCategory :Live link reference"
     },
     {
       "title": "Olympic Gold",
       "releaseDate": "1992-06",
       "serial": "T-79016",
-      "rating": ""
+      "rating": "",
+      "developer": "Tiertex",
+      "publisher": ""
     },
     {
       "title": "Olympic Summer Games",
       "releaseDate": "1996-05-30",
       "serial": "T-100116",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Tiertex",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "Onslaught",
-      "releaseDate": "1991-06",
-      "serial": "ACLD004",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Nextgrand",
+      "publisher": "Ballistic"
     },
     {
       "title": "Operation Europe: Path to Victory 1939-45",
       "releaseDate": "1994-06",
       "serial": "T-76096",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Outback Joey",
       "releaseDate": "1993-11-24",
       "serial": "T-122026",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Western Technologies",
+      "publisher": "HeartBeat Corporation"
     },
     {
       "title": "Outlander",
       "releaseDate": "1993-03",
       "serial": "T-87036",
-      "rating": ""
+      "rating": "",
+      "developer": "Mindscape",
+      "publisher": "Mindscape"
     },
     {
       "title": "OutRun",
       "releaseDate": "1991",
       "serial": "1125",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Hertz",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "OutRun 2019",
       "releaseDate": "1993-03",
       "serial": "1118",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Hertz",
+      "publisher": ""
     },
     {
       "title": "OutRunners",
       "releaseDate": "1994-07",
       "serial": "T-13096",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sega AM1",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Outworld 2375 AD",
       "releaseDate": "1994",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Western Technologies",
+      "publisher": "HeartBeat Corporation"
     },
     {
       "title": "P.T.O.: Pacific Theater of Operations",
       "releaseDate": "1993-08",
       "serial": "T-76056",
-      "rating": ""
+      "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Pac-Attack",
       "releaseDate": "1994-12",
       "serial": "T-14116",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Namco",
+      "publisher": "Namco Hometek"
     },
     {
       "title": "Pac-Man 2: The New Adventures",
       "releaseDate": "1994-11",
       "serial": "T-14126",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Namco",
+      "publisher": "Namco Hometek"
     },
     {
       "title": "Pac-Mania",
-      "releaseDate": "1991-09",
-      "serial": "301018-0150",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "301018-0150}",
+      "rating": "",
+      "developer": "Sculptured Software",
+      "publisher": "TecMagik"
     },
     {
       "title": "Paperboy",
       "releaseDate": "1992-02",
       "serial": "301029-0150",
-      "rating": ""
+      "rating": "",
+      "developer": "Motivetime",
+      "publisher": "Sega of America"
     },
     {
       "title": "Paperboy 2",
       "releaseDate": "1993-02",
       "serial": "301037-0150",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Manley & Associates",
+      "publisher": "Tengen"
     },
     {
       "title": "Pebble Beach Golf Links (Mega Drive)",
       "releaseDate": "1994-01",
       "serial": "1231",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "T&E Soft",
+      "publisher": "Sega"
     },
     {
       "title": "Pelé II: World Tournament Soccer",
       "releaseDate": "1994-06",
       "serial": "T-119096",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Radical Entertainment",
+      "publisher": "Accolade"
     },
     {
       "title": "Pelé!",
       "releaseDate": "1993-12",
       "serial": "T-119046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Radical Entertainment",
+      "publisher": "Accolade"
     },
     {
       "title": "Pete Sampras Tennis",
       "releaseDate": "1994-04",
       "serial": "T-120066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Big Red Software",
+      "publisher": "Spectrum HoloByte"
     },
     {
       "title": "PGA European Tour",
       "releaseDate": "1994-03",
       "serial": "735301",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Polygames",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "PGA Tour 96",
       "releaseDate": "1995-11",
       "serial": "750901",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Ceris Software",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "PGA Tour Golf",
       "releaseDate": "1991-04",
       "serial": "7002",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Polygames",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "PGA Tour Golf II",
       "releaseDate": "1993-03",
       "serial": "715501",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "PolygamesCategory :Live link reference",
+      "publisher": "Time Warner Interactive"
     },
     {
       "title": "PGA Tour Golf II (Catalyst)",
       "releaseDate": "1995",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "HeartBeat CorporationCategory :Live link reference",
+      "publisher": "HeartBeat Corporation"
     },
     {
       "title": "PGA Tour Golf III",
       "releaseDate": "1994-12",
       "serial": "742701",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Phantasy Star II",
       "releaseDate": "1990-03",
       "serial": "1301",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Phantasy Star III: Generations of Doom",
       "releaseDate": "1991-07-13",
       "serial": "1303",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Phantasy Star IV: The End of the Millennium",
       "releaseDate": "1995-02",
       "serial": "1307",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Phantom 2040 (Mega Drive)",
       "releaseDate": "1995-06",
       "serial": "T-139036",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Viacom New MediaCategory :Live link reference",
+      "publisher": "Viacom New Media"
     },
     {
       "title": "Phelios",
       "releaseDate": "1990-10",
       "serial": "14016",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Bandai Namco Games"
     },
     {
       "title": "Pink Goes to Hollywood",
       "releaseDate": "1993-11",
       "serial": "T-101046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "HeadGames",
+      "publisher": "TecMagik"
     },
     {
       "title": "Pinocchio",
       "releaseDate": "1996-11-12",
       "serial": "T-239026",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Virgin Interactive Entertainment",
+      "publisher": ""
     },
     {
       "title": "Pirates! Gold",
       "releaseDate": "1993-07",
       "serial": "T-104026",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "MicroProse",
+      "publisher": "MicroProse Software"
     },
     {
       "title": "Pit-Fighter",
       "releaseDate": "1991-11",
       "serial": "301027-0150",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Sterling Silver Software",
+      "publisher": "Domark"
     },
     {
       "title": "Pitfall: The Mayan Adventure",
       "releaseDate": "1994-11",
       "serial": "T-130036",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Big Bang Software",
+      "publisher": "Activision"
     },
     {
       "title": "Pocahontas",
       "releaseDate": "1996-03",
       "serial": "T-239036",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Funcom",
+      "publisher": "Sega of America"
     },
     {
       "title": "Populous",
       "releaseDate": "1990-07",
       "serial": "701601",
-      "rating": ""
+      "rating": "",
+      "developer": "Bullfrog Productions",
+      "publisher": "TecMagik"
     },
     {
       "title": "Power Drive",
       "releaseDate": "1994",
       "serial": "",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Rage Software",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Power Monger",
       "releaseDate": "1993",
       "serial": "710501",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Bullfrog Productions",
+      "publisher": ""
     },
     {
       "title": "Powerball",
       "releaseDate": "1991-07",
       "serial": "T-14036",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": ""
     },
     {
       "title": "Predator 2",
-      "releaseDate": "1992",
-      "serial": "T-81076",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81076}",
+      "rating": "",
+      "developer": "Grey Team",
+      "publisher": "Arena Entertainment"
     },
     {
       "title": "Primal Rage",
       "releaseDate": "1995-08-25",
       "serial": "T-48426",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Probe Entertainment",
+      "publisher": "Sega of America"
     },
     {
       "title": "Prime Time NFL Football Starring Deion Sanders",
-      "releaseDate": "1995-11-07",
-      "serial": "1240",
-      "rating": "ESRB: Kids to Adults"
+      "releaseDate": "",
+      "serial": "1240}",
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Spectacular GamesCategory :Live link reference",
+      "publisher": "Sega of America"
     },
     {
       "title": "Prince of Persia",
       "releaseDate": "1994-01",
       "serial": "T-48286",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Domark",
+      "publisher": "Tengen"
     },
     {
       "title": "Pro Quarterback",
       "releaseDate": "1992",
       "serial": "T-97036",
-      "rating": ""
+      "rating": "",
+      "developer": "Tradewest",
+      "publisher": "Tradewest"
     },
     {
       "title": "Puggsy",
       "releaseDate": "1994-01-06",
       "serial": "T-113016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Traveller's Tales",
+      "publisher": "Psygnosis"
     },
     {
       "title": "Pulseman",
       "releaseDate": "1996-05-01",
       "serial": "",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Game Freak",
+      "publisher": "Sega of America"
     },
     {
       "title": "QuackShot Starring Donald Duck",
       "releaseDate": "1991-12-19",
       "serial": "1023",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sega CS2",
+      "publisher": ""
     },
     {
       "title": "Quad Challenge",
       "releaseDate": "1991-11",
       "serial": "T-14056",
-      "rating": ""
+      "rating": "",
+      "developer": "Now Production",
+      "publisher": "Namco Hometek"
     },
     {
       "title": "R.B.I. Baseball '93",
       "releaseDate": "1993-06",
       "serial": "301039-0150",
-      "rating": ""
+      "rating": "",
+      "developer": "Tengen",
+      "publisher": "Tengen"
     },
     {
       "title": "R.B.I. Baseball '94",
       "releaseDate": "1994-04",
       "serial": "T-48296",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Al Baker & Associates",
+      "publisher": "Tengen"
     },
     {
       "title": "R.B.I. Baseball 3",
       "releaseDate": "1991-07",
       "serial": "301025-0150",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "R.B.I. Baseball 4",
       "releaseDate": "1992-09",
       "serial": "301036-0150",
-      "rating": ""
+      "rating": "",
+      "developer": "Tengen",
+      "publisher": "Tengen"
     },
     {
       "title": "Race Drivin'",
       "releaseDate": "1993-11",
       "serial": "T-48246",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Polygames",
+      "publisher": "Tengen"
     },
     {
       "title": "Radical Rex",
       "releaseDate": "1994-11",
       "serial": "T-130026",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Beam Software",
+      "publisher": "Activision"
     },
     {
       "title": "Raiden Trad",
       "releaseDate": "1991-09",
       "serial": "22036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Beyond Interactive",
+      "publisher": ""
     },
     {
       "title": "Rambo III (Mega Drive)",
       "releaseDate": "1989-11",
       "serial": "1006",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega of America"
     },
     {
       "title": "Rampart",
       "releaseDate": "1992-08",
       "serial": "301026-0150",
-      "rating": ""
+      "rating": "",
+      "developer": "Developer ResourcesCategory :Live link reference",
+      "publisher": "TengenCategory :Live link reference"
     },
     {
       "title": "Ranger-X",
       "releaseDate": "1993",
       "serial": "1076",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Gau Entertainment",
+      "publisher": "Sega of America"
     },
     {
       "title": "Rastan Saga II",
       "releaseDate": "1991-05",
       "serial": "11026",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Opera House",
+      "publisher": "Taito America"
     },
     {
       "title": "Red Zone",
       "releaseDate": "1994-11",
       "serial": "T-48376",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Zyrinx",
+      "publisher": "Time Warner Interactive"
     },
     {
       "title": "Revolution X",
       "releaseDate": "1995-11",
       "serial": "T-81566",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Rage Software",
+      "publisher": ""
     },
     {
       "title": "Richard Scarry's Busytown",
       "releaseDate": "1994-11",
       "serial": "1552",
-      "rating": "ESRB: Early Childhood"
+      "rating": "ESRB: Early Childhood",
+      "developer": "Novotrade",
+      "publisher": "Sega of America"
     },
     {
       "title": "Rings of Power",
       "releaseDate": "1992-01",
       "serial": "702401",
-      "rating": "VRC: MA-17"
+      "rating": "VRC: MA-17",
+      "developer": "Naughty Dog",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Risk",
       "releaseDate": "1994-09",
       "serial": "T-89036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sculptured Software",
+      "publisher": "Parker Brothers"
     },
     {
       "title": "Risky Woods",
       "releaseDate": "1992-12",
       "serial": "715601",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "Ristar",
       "releaseDate": "1995-01",
       "serial": "1555",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega of America"
     },
     {
       "title": "Road Rash",
       "releaseDate": "1991-09",
       "serial": "702001",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Electronic Arts",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Road Rash 3: Tour De Force",
       "releaseDate": "1995-03",
       "serial": "734701",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Monkey Do Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Road Rash II",
       "releaseDate": "1992-12",
       "serial": "714601",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "RoadBlasters",
       "releaseDate": "1991-08",
       "serial": "301032-0150",
-      "rating": ""
+      "rating": "",
+      "developer": "Sterling Silver Software",
+      "publisher": "Tengen"
     },
     {
       "title": "RoboCop 3",
       "releaseDate": "1993-11",
       "serial": "T-81226",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Eden Entertainment Software",
+      "publisher": ""
     },
     {
       "title": "RoboCop Versus The Terminator",
-      "releaseDate": "1994-03",
-      "serial": "T-70166",
-      "rating": "VRC: MA-13"
+      "releaseDate": "",
+      "serial": "T-70166}",
+      "rating": "VRC: MA-13",
+      "developer": "NMS Software",
+      "publisher": ""
     },
     {
       "title": "Rock n' Roll Racing",
       "releaseDate": "1994-11",
       "serial": "T-125056",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Blizzard Entertainment",
+      "publisher": "Interplay"
     },
     {
       "title": "Rocket Knight Adventures",
       "releaseDate": "1993-08",
       "serial": "T-95046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Roger Clemens' MVP Baseball",
-      "releaseDate": "1993-02",
-      "serial": "T-81106",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81106}",
+      "rating": "",
+      "developer": "Sculptured Software",
+      "publisher": "Flying Edge"
     },
     {
       "title": "Rolling Thunder 2",
       "releaseDate": "1992-01",
       "serial": "T-14066",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Bandai Namco Games"
     },
     {
       "title": "Rolling Thunder 3",
       "releaseDate": "1993-07",
       "serial": "T-14096",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Now Production",
+      "publisher": "Namco Hometek"
     },
     {
       "title": "Rolo to the Rescue",
       "releaseDate": "1993-03",
       "serial": "713201",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "Romance of the Three Kingdoms II",
       "releaseDate": "1992-07",
       "serial": "T-76016",
-      "rating": ""
+      "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Romance of the Three Kingdoms III: Dragon of Destiny",
       "releaseDate": "1994-02",
       "serial": "T-76086",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Rugby World Cup 1995",
       "releaseDate": "1994-12",
       "serial": "7413",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Electronic Arts UK",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Saint Sword",
       "releaseDate": "1991-10",
       "serial": "11056",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Cyclone System",
+      "publisher": ""
     },
     {
       "title": "Samurai Shodown",
       "releaseDate": "1994-12",
       "serial": "T-103066",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Funcom",
+      "publisher": "JVC Musical Industries"
     },
     {
       "title": "Saturday Night Slam Masters",
       "releaseDate": "1994-12",
       "serial": "T-12066",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Capcom",
+      "publisher": "Capcom USA"
     },
     {
       "title": "Scholastic's The Magic School Bus: Space Exploration Game",
       "releaseDate": "1995",
       "serial": "1558",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Novotrade Interactive",
+      "publisher": "Sega of America"
     },
     {
       "title": "Scooby-Doo Mystery",
       "releaseDate": "1995-09",
       "serial": "T-81526",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "The Illusions Gaming Company",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "SeaQuest DSV",
       "releaseDate": "1995-02",
       "serial": "T-100076",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Sculptured Software",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "Sesame Street Counting Cafe",
       "releaseDate": "1994",
       "serial": "T-50896",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Riedel Software Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Shadow Blasters",
       "releaseDate": "1990-12",
       "serial": "47016",
-      "rating": ""
+      "rating": "",
+      "developer": "Sigma Pro-Tech",
+      "publisher": "Sage's Creation"
     },
     {
       "title": "Shadow Dancer: The Secret of Shinobi",
       "releaseDate": "1990-12",
       "serial": "1114",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Shadow of the Beast",
       "releaseDate": "1991-11",
       "serial": "709101",
-      "rating": ""
+      "rating": "",
+      "developer": "Psygnosis",
+      "publisher": "TecMagik"
     },
     {
       "title": "Shadow of the Beast II",
       "releaseDate": "1992-11",
       "serial": "716401",
-      "rating": ""
+      "rating": "",
+      "developer": "Digital Developments",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Shadowrun (Mega Drive)",
       "releaseDate": "1994-03",
       "serial": "1352",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "BlueSky Software",
+      "publisher": ""
     },
     {
       "title": "Shanghai II: Dragon's Eye",
       "releaseDate": "1994-03",
       "serial": "T-130016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Activision",
+      "publisher": "Activision"
     },
     {
       "title": "Shaq Fu",
       "releaseDate": "1994-10-28",
       "serial": "728301",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Delphine Software International",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Shining Force",
       "releaseDate": "1993-07",
       "serial": "1312",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Climax Entertainment",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Shining Force II",
       "releaseDate": "1994-10",
       "serial": "1315",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Shining in the Darkness",
       "releaseDate": "1991-09",
       "serial": "1310",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Climax Entertainment",
+      "publisher": "Sega of America"
     },
     {
       "title": "Shinobi III: Return of the Ninja Master",
       "releaseDate": "1993-09",
       "serial": "1136",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Shove It! ...The Warehouse Game",
       "releaseDate": "1990-05",
       "serial": "T-25036",
-      "rating": ""
+      "rating": "",
+      "developer": "NCS",
+      "publisher": "DreamWorks"
     },
     {
       "title": "Side Pocket",
       "releaseDate": "1992-06",
       "serial": "T-13046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Data East",
+      "publisher": ""
     },
     {
       "title": "Skeleton Krew",
       "releaseDate": "1995-05",
       "serial": "T-115036",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Core Design",
+      "publisher": "Core Design"
     },
     {
       "title": "Skitchin'",
       "releaseDate": "1994-04",
       "serial": "720501",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Slaughter Sport",
       "releaseDate": "1991-12-20",
       "serial": "T-56046",
-      "rating": ""
+      "rating": "",
+      "developer": "Brian A. Rice, Inc.",
+      "publisher": "RazorSoft"
     },
     {
       "title": "Smash T.V.",
       "releaseDate": "1992-08",
       "serial": "T-81066",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": ""
     },
     {
       "title": "Snake",
       "releaseDate": "2008",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "AtGames",
+      "publisher": "AtGames"
     },
     {
       "title": "Socket",
       "releaseDate": "1993",
       "serial": "T-23046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "VIC Tokai",
+      "publisher": "VIC Tokai Inc."
     },
     {
       "title": "Sol-Feace",
       "releaseDate": "1992-04",
       "serial": "49206",
-      "rating": ""
+      "rating": "",
+      "developer": "Madhouse",
+      "publisher": "Sega of America"
     },
     {
       "title": "Sonic & Knuckles",
       "releaseDate": "1994-10-18",
       "serial": "1563",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Sonic 3D: Flickies' Island",
       "releaseDate": "1996-11-08",
       "serial": "1844",
       "rating": "ESRB: Kids to Adults",
+      "developer": "M2",
+      "publisher": "Sega Entertainment Inc.",
       "altTitles": [
         "Sonic 3D Blast"
       ]
@@ -3217,49 +4259,65 @@
       "title": "Sonic Classics",
       "releaseDate": "1997-04-24",
       "serial": "1190",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Sega of America",
+      "publisher": "Sega of America"
     },
     {
       "title": "Sonic the Hedgehog (Mega Drive)",
       "releaseDate": "1991-06-11",
       "serial": "1009",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Backbone Entertainment",
+      "publisher": "Sega of America"
     },
     {
       "title": "Sonic the Hedgehog 2 (Mega Drive)",
       "releaseDate": "1992-11-24",
       "serial": "1051",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Sonic the Hedgehog 3",
       "releaseDate": "1994-02-02",
       "serial": "1079",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Sonic the Hedgehog Spinball",
       "releaseDate": "1993-11-23",
       "serial": "1537",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Sorcerer's Kingdom",
       "releaseDate": "1993-08",
       "serial": "T-24076",
-      "rating": ""
+      "rating": "",
+      "developer": "Technical WaveCategory :Live link reference",
+      "publisher": "Treco, USA"
     },
     {
       "title": "Space Harrier II",
       "releaseDate": "1989-08-14",
       "serial": "1102",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Space Invaders 90",
-      "releaseDate": "1991-05",
-      "serial": "11036",
+      "releaseDate": "",
+      "serial": "11036}",
       "rating": "VRC: GA",
+      "developer": "Taito",
+      "publisher": "",
       "altTitles": [
         "Space Invaders '91"
       ]
@@ -3268,247 +4326,329 @@
       "title": "Sparkster: Rocket Knight Adventures 2",
       "releaseDate": "1994-10",
       "serial": "T-95166",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Speedball 2: Brutal Deluxe",
       "releaseDate": "1991-12",
       "serial": "T-69026",
-      "rating": ""
+      "rating": "",
+      "developer": "The Bitmap Brothers",
+      "publisher": ""
     },
     {
       "title": "Spider-Man (Acclaim)",
-      "releaseDate": "1995",
-      "serial": "T-81436",
-      "rating": "ESRB: Kids to Adults"
+      "releaseDate": "",
+      "serial": "T-81436}",
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Western Technologies",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Spider-Man and the X-Men in Arcade's Revenge",
-      "releaseDate": "1993",
-      "serial": "T-81136",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "T-81136}",
+      "rating": "VRC: GA",
+      "developer": "Software Creations",
+      "publisher": "Flying Edge"
     },
     {
       "title": "Spider-Man and Venom: Maximum Carnage",
       "releaseDate": "1994-09-16",
       "serial": "T-81256",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Software Creations",
+      "publisher": ""
     },
     {
       "title": "Spider-Man vs. The Kingpin",
       "releaseDate": "1991-08",
       "serial": "1016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Recreational Brainware",
+      "publisher": ""
     },
     {
       "title": "Spiritual Warfare",
       "releaseDate": "1994",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Wisdom Tree",
+      "publisher": "Wisdom Tree"
     },
     {
       "title": "Splatterhouse 2",
       "releaseDate": "1992-07",
       "serial": "T-14076",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Namco Hometek"
     },
     {
       "title": "Splatterhouse 3",
       "releaseDate": "1993-08",
       "serial": "T-14086",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Now Production",
+      "publisher": "Namco Hometek"
     },
     {
       "title": "Sports Talk Baseball",
       "releaseDate": "1992-05",
       "serial": "1211",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega CS2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Spot Goes to Hollywood",
       "releaseDate": "1995",
       "serial": "T-81616",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Eurocom Entertainment Software",
+      "publisher": ""
     },
     {
       "title": "Star Control",
       "releaseDate": "1991-06",
       "serial": "ACLD002",
-      "rating": ""
+      "rating": "",
+      "developer": "Accolade",
+      "publisher": "Ballistic"
     },
     {
       "title": "Star Trek: Deep Space Nine: Crossroads of Time",
       "releaseDate": "1995-06",
       "serial": "T-132016",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Novotrade International",
+      "publisher": "Playmates Interactive Entertainment"
     },
     {
       "title": "Star Trek: The Next Generation: Echoes from the Past",
       "releaseDate": "1994-03",
       "serial": "1313",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "MicroProse",
+      "publisher": "Sega of America"
     },
     {
       "title": "Starflight",
       "releaseDate": "1991-10-07",
       "serial": "701401",
-      "rating": ""
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": ""
     },
     {
       "title": "Stargate (Mega Drive)",
       "releaseDate": "1995-03",
       "serial": "T-81396",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Grey Team",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Steel Talons",
       "releaseDate": "1992",
       "serial": "301043-0150",
-      "rating": ""
+      "rating": "",
+      "developer": "Polygames",
+      "publisher": "Tengen"
     },
     {
       "title": "Stormlord",
       "releaseDate": "1991-07",
       "serial": "56026",
-      "rating": ""
+      "rating": "",
+      "developer": "Punk Development",
+      "publisher": "RazorSoft"
     },
     {
       "title": "Street Fighter II': Special Champion Edition",
       "releaseDate": "1993-09-18",
       "serial": "T-12016",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Capcom",
+      "publisher": "Capcom USA"
     },
     {
       "title": "Street Smart",
       "releaseDate": "1991-06",
       "serial": "T-24026",
-      "rating": ""
+      "rating": "",
+      "developer": "SNK",
+      "publisher": "Treco"
     },
     {
       "title": "Streets of Rage",
       "releaseDate": "1991-09-12",
       "serial": "1019",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Japan System HouseCategory :Live link reference",
+      "publisher": "Sega"
     },
     {
       "title": "Streets of Rage 2",
       "releaseDate": "1992-12-15",
       "serial": "1054",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Ancient",
+      "publisher": "Sega of America"
     },
     {
       "title": "Streets of Rage 3",
       "releaseDate": "1994-07-01",
       "serial": "1539",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "M2",
+      "publisher": "Sega"
     },
     {
       "title": "Strider",
       "releaseDate": "1990-11",
       "serial": "1112",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "M2",
+      "publisher": "Capcom"
     },
     {
       "title": "Strider II",
-      "releaseDate": "1993-08",
-      "serial": "T-79036",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "T-79036}",
+      "rating": "VRC: GA",
+      "developer": "Tiertex",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Sub-Terrania",
-      "releaseDate": "1994-04",
-      "serial": "1551",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "1551}",
+      "rating": "VRC: GA",
+      "developer": "Zyrinx",
+      "publisher": ""
     },
     {
       "title": "Summer Challenge",
       "releaseDate": "1993-05",
       "serial": "ACLD013",
-      "rating": ""
+      "rating": "",
+      "developer": "MindSpan",
+      "publisher": "Accolade"
     },
     {
       "title": "Sunset Riders",
       "releaseDate": "1992-12",
       "serial": "T-95026",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Super Baseball 2020",
       "releaseDate": "1993-10",
       "serial": "715801",
-      "rating": ""
+      "rating": "",
+      "developer": "NuFX",
+      "publisher": ""
     },
     {
       "title": "Super Battleship: The Classic Naval Combat Game",
       "releaseDate": "1994-03",
       "serial": "T-87066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Synergistic Software",
+      "publisher": ""
     },
     {
       "title": "Super Hang-On",
       "releaseDate": "1989-11",
       "serial": "1103",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Super High Impact",
       "releaseDate": "1992-09",
       "serial": "T-81146",
-      "rating": ""
+      "rating": "",
+      "developer": "Iguana Entertainment",
+      "publisher": "Arena Entertainment"
     },
     {
       "title": "Super Hydlide",
       "releaseDate": "1990-04",
       "serial": "T-35016",
-      "rating": ""
+      "rating": "",
+      "developer": "Asmik",
+      "publisher": "D4 Enterprise"
     },
     {
       "title": "Super League (Mega Drive)",
       "releaseDate": "1989-09",
       "serial": "1200",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega"
     },
     {
       "title": "Super Monaco GP",
       "releaseDate": "1990-09",
       "serial": "1107",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Probe Software",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Super Off Road",
       "releaseDate": "1993-01",
       "serial": "ACLD010",
-      "rating": ""
+      "rating": "",
+      "developer": "Graftgold Creative Software",
+      "publisher": "Ballistic"
     },
     {
       "title": "Super Real Basketball",
       "releaseDate": "1990-11",
       "serial": "1201",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
     },
     {
       "title": "Super Street Fighter II: The New Challengers",
       "releaseDate": "1994-07",
       "serial": "T-12056",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Capcom",
+      "publisher": "Capcom"
     },
     {
       "title": "Super Thunder Blade",
       "releaseDate": "1989-09-01",
       "serial": "1101",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Super Volley Ball",
       "releaseDate": "1991-08",
       "serial": "T-30016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Khaos",
+      "publisher": ""
     },
     {
       "title": "Superman: The Man of Steel",
       "releaseDate": "1992-12",
       "serial": "T-15036",
       "rating": "",
+      "developer": "Graftgold Creative Software",
+      "publisher": "",
       "altTitles": [
         "Superman"
       ]
@@ -3517,187 +4657,249 @@
       "title": "Sword of Sodan",
       "releaseDate": "1990-12",
       "serial": "702601",
-      "rating": ""
+      "rating": "",
+      "developer": "Innerprise Software",
+      "publisher": ""
     },
     {
       "title": "Sword of Vermilion",
       "releaseDate": "1990-11",
       "serial": "1302",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "M2",
+      "publisher": "Sega of America"
     },
     {
       "title": "Syd of Valis",
       "releaseDate": "1992-04",
       "serial": "49126",
-      "rating": ""
+      "rating": "",
+      "developer": "D4 Enterprise",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Sylvester and Tweety in Cagey Capers",
       "releaseDate": "1994-07",
       "serial": "T-48346",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Alexandria",
+      "publisher": "TecMagik"
     },
     {
       "title": "Syndicate",
       "releaseDate": "1994",
       "serial": "736801",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Bullfrog Productions",
+      "publisher": "Domark"
     },
     {
       "title": "T2: The Arcade Game",
       "releaseDate": "1992",
       "serial": "T-81156",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": ""
     },
     {
       "title": "TaleSpin",
       "releaseDate": "1992-11",
       "serial": "1034",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Disney Software",
+      "publisher": "Sega"
     },
     {
       "title": "Target Earth",
       "releaseDate": "1990-06",
       "serial": "T-25046",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "DreamWorks"
     },
     {
       "title": "Task Force Harrier EX",
       "releaseDate": "1992-05",
       "serial": "T-24036",
-      "rating": ""
+      "rating": "",
+      "developer": "JorudanCategory :Live link reference",
+      "publisher": "Treco"
     },
     {
       "title": "Taz in Escape from Mars",
       "releaseDate": "1994-08",
       "serial": "1546",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Al Baker & Associates",
+      "publisher": "Tec Toy"
     },
     {
       "title": "Taz-Mania",
       "releaseDate": "1992-07",
       "serial": "1032",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Recreational Brainware",
+      "publisher": "Sega of America"
     },
     {
       "title": "Team USA Basketball",
       "releaseDate": "1992-08",
       "serial": "714801",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "TechnoClash",
       "releaseDate": "1993-08",
       "serial": "712701",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "BlueSky Software",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Technocop",
       "releaseDate": "1990-12",
       "serial": "56016",
-      "rating": ""
+      "rating": "",
+      "developer": "Punk Development",
+      "publisher": "RazorSoft"
     },
     {
       "title": "Tecmo Super Baseball",
       "releaseDate": "1994-10",
       "serial": "T-36046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sculptured Software",
+      "publisher": "Tecmo"
     },
     {
       "title": "Tecmo Super Bowl",
       "releaseDate": "1993",
       "serial": "T-36016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Tecmo",
+      "publisher": "Tecmo"
     },
     {
       "title": "Tecmo Super Bowl II: Special Edition",
       "releaseDate": "1995-01",
       "serial": "T-36056",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Tecmo",
+      "publisher": "Tecmo"
     },
     {
       "title": "Tecmo Super Bowl III: Final Edition",
       "releaseDate": "1995-10",
       "serial": "T-36066",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Tecmo",
+      "publisher": "Tecmo"
     },
     {
       "title": "Tecmo Super Hockey",
       "releaseDate": "1995-02",
       "serial": "T-36036",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Malibu Interactive",
+      "publisher": "Tecmo"
     },
     {
       "title": "Tecmo Super NBA Basketball",
       "releaseDate": "1993-12",
       "serial": "T-36026",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sculptured Software",
+      "publisher": "Tecmo"
     },
     {
       "title": "Tecmo World Cup '92",
       "releaseDate": "1992-12",
       "serial": "T-44016",
-      "rating": ""
+      "rating": "",
+      "developer": "HertzCategory :Live link reference",
+      "publisher": "SIMS"
     },
     {
       "title": "Teenage Mutant Ninja Turtles: The Hyperstone Heist",
       "releaseDate": "1992-12",
       "serial": "T-95016",
-      "rating": ""
+      "rating": "",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Teenage Mutant Ninja Turtles: Tournament Fighters",
       "releaseDate": "1993-12-02",
       "serial": "T-95066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Terminator 2: Judgment Day",
       "releaseDate": "1993-12",
       "serial": "T-81176",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "B.I.T.S.",
+      "publisher": "Flying Edge"
     },
     {
       "title": "The Addams Family (Mega Drive)",
       "releaseDate": "1993-10",
       "serial": "T-81236",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Ocean Software",
+      "publisher": "Flying Edge"
     },
     {
       "title": "The Adventures of Batman & Robin (Mega Drive)",
       "releaseDate": "1995-06",
       "serial": "1535",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Clockwork Tortoise",
+      "publisher": "Sega of America"
     },
     {
       "title": "The Adventures of Mighty Max",
       "releaseDate": "1995-02",
       "serial": "T-164056",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "WJS Design",
+      "publisher": "Ballistic"
     },
     {
       "title": "The Adventures of Rocky and Bullwinkle and Friends",
       "releaseDate": "1994",
       "serial": "T-86056",
-      "rating": ""
+      "rating": "",
+      "developer": "Imagineering",
+      "publisher": "Absolute Entertainment"
     },
     {
       "title": "The Aquatic Games Starring James Pond and The Aquabats",
       "releaseDate": "1992-09",
       "serial": "716901",
-      "rating": ""
+      "rating": "",
+      "developer": "Millennium Interactive",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "The Berenstain Bears' Camping Adventure",
       "releaseDate": "1994-11",
       "serial": "1548",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Realtime Associates",
+      "publisher": "Sega of America"
     },
     {
       "title": "The Chaos Engine",
       "releaseDate": "1993-11",
       "serial": "T-124016",
       "rating": "VRC: GA",
+      "developer": "The Bitmap Brothers",
+      "publisher": "Spectrum HoloByte",
       "altTitles": [
         "Soldiers of Fortune"
       ]
@@ -3706,157 +4908,209 @@
       "title": "The Death and Return of Superman",
       "releaseDate": "1995-01",
       "serial": "T-15186",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Blizzard Entertainment",
+      "publisher": "Sunsoft"
     },
     {
       "title": "The Duel: Test Drive II",
       "releaseDate": "1992-03",
       "serial": "ACLD008",
-      "rating": ""
+      "rating": "",
+      "developer": "Accolade",
+      "publisher": "Ballistic"
     },
     {
       "title": "The Faery Tale Adventure",
       "releaseDate": "1991-07",
       "serial": "705601",
-      "rating": ""
+      "rating": "",
+      "developer": "New World Computing",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "The Flintstones (Taito)",
       "releaseDate": "1993-04",
       "serial": "T-11116",
-      "rating": ""
+      "rating": "",
+      "developer": "SantosCategory :Live link reference",
+      "publisher": "Taito America"
     },
     {
       "title": "The Gadget Twins",
       "releaseDate": "1992-08",
       "serial": "T-83036",
-      "rating": ""
+      "rating": "",
+      "developer": "Imagitec Design",
+      "publisher": "GameTek"
     },
     {
       "title": "The Great Circus Mystery Starring Mickey & Minnie",
       "releaseDate": "1994-12",
       "serial": "T-12076",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Capcom",
+      "publisher": "Capcom USA"
     },
     {
       "title": "The Great Waldo Search",
       "releaseDate": "1992-12",
       "serial": "T-100016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Radiance Software",
+      "publisher": "T-HQ Software"
     },
     {
       "title": "The Humans",
       "releaseDate": "1992-09",
       "serial": "T-83046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Imagitec Design",
+      "publisher": "GameTek"
     },
     {
       "title": "The Incredible Crash Dummies (Mega Drive)",
       "releaseDate": "1994-01",
       "serial": "T-81246",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Gray Matter",
+      "publisher": "Flying Edge"
     },
     {
       "title": "The Incredible Hulk",
       "releaseDate": "1994-07",
       "serial": "T-79106",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Probe Software",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "The Jungle Book",
       "releaseDate": "1994-07",
       "serial": "T-70176",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Disney Software",
+      "publisher": ""
     },
     {
       "title": "The Lawnmower Man (Mega Drive)",
       "releaseDate": "1994-11",
       "serial": "T-48336",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "AtodCategory :Live link reference",
+      "publisher": "Time Warner InteractiveCategory :Live link reference"
     },
     {
       "title": "The Lion King",
       "releaseDate": "1994-11",
       "serial": "T-70316",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Disney Software",
+      "publisher": "Virgin Interactive Entertainment"
     },
     {
       "title": "The Lost Vikings",
       "releaseDate": "1994-01",
       "serial": "T-125016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Silicon & Synapse",
+      "publisher": ""
     },
     {
       "title": "The Lost World: Jurassic Park (Mega Drive)",
       "releaseDate": "1997-09-16",
       "serial": "1846",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Appaloosa Interactive",
+      "publisher": ""
     },
     {
       "title": "The Miracle Piano Teaching System (software)",
       "releaseDate": "1992-11",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Sculptured Software",
+      "publisher": "The Software Toolworks"
     },
     {
       "title": "The Ooze",
       "releaseDate": "1995-09",
       "serial": "1512",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Sega of America",
+      "publisher": "Sega of America"
     },
     {
       "title": "The Pagemaster",
       "releaseDate": "1994-11",
       "serial": "T-161016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "AtodCategory :Live link reference",
+      "publisher": "Fox Interactive"
     },
     {
       "title": "The Pirates of Dark Water",
       "releaseDate": "1994-06",
       "serial": "T-15086",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Iguana Entertainment",
+      "publisher": "Sunsoft"
     },
     {
       "title": "The Punisher",
       "releaseDate": "1995-02",
       "serial": "T-12026",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Capcom",
+      "publisher": "Capcom USA"
     },
     {
       "title": "The Ren & Stimpy Show Presents: Stimpy's Invention",
       "releaseDate": "1993-12",
       "serial": "1068",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "BlueSky Software",
+      "publisher": ""
     },
     {
       "title": "The Revenge of Shinobi",
       "releaseDate": "1989-12",
       "serial": "1105",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "The Simpsons: Bart vs. the Space Mutants",
-      "releaseDate": "1992-06",
-      "serial": "T-81026",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81026}",
+      "rating": "",
+      "developer": "Arc Developments",
+      "publisher": "Flying Edge"
     },
     {
       "title": "The Simpsons: Bart's Nightmare",
       "releaseDate": "1993-08",
       "serial": "T-81216",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sculptured Software",
+      "publisher": "Flying Edge"
     },
     {
       "title": "The Steel Empire",
-      "releaseDate": "1992-06",
-      "serial": "T-81046",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-81046}",
+      "rating": "",
+      "developer": "HOT-B",
+      "publisher": ""
     },
     {
       "title": "The Story of Thor: A Successor of the Light",
       "releaseDate": "1995-03",
       "serial": "1354",
       "rating": "ESRB: Kids to Adults",
+      "developer": "Ancient",
+      "publisher": "Sega of America",
       "altTitles": [
         "Beyond Oasis"
       ]
@@ -3865,43 +5119,57 @@
       "title": "The Terminator",
       "releaseDate": "1992-05",
       "serial": "70026",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": "Virgin Games"
     },
     {
       "title": "The Tick",
       "releaseDate": "1994-12",
       "serial": "T-161026",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Software Creations of AmericaCategory :Live link reference",
+      "publisher": "Fox Interactive"
     },
     {
       "title": "Theme Park",
       "releaseDate": "1995-05-02",
       "serial": "736701",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Bullfrog Productions",
+      "publisher": "Domark"
     },
     {
       "title": "Thomas the Tank Engine & Friends",
       "releaseDate": "1993-11",
       "serial": "T-100036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Malibu Interactive",
+      "publisher": "T-HQ Software"
     },
     {
       "title": "Thunder Force II",
       "releaseDate": "1989-08-14",
       "serial": "1000",
-      "rating": ""
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Thunder Force III",
       "releaseDate": "1990-11-07",
       "serial": "18036",
-      "rating": ""
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": "Technosoft"
     },
     {
       "title": "Thunder Force IV",
       "releaseDate": "1992",
       "serial": "1143",
       "rating": "",
+      "developer": "Technosoft",
+      "publisher": "Sega of America",
       "altTitles": [
         "Lightening Force: Quest for the Darkstar"
       ]
@@ -3910,439 +5178,585 @@
       "title": "Thunder Fox",
       "releaseDate": "1991",
       "serial": "11066",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Aisystem Tokyo",
+      "publisher": "Taito America"
     },
     {
       "title": "Time Killers",
       "releaseDate": "1996-07",
       "serial": "T-100046",
-      "rating": "ESRB: Mature"
+      "rating": "ESRB: Mature",
+      "developer": "Black Pearl Software",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "Tinhead",
       "releaseDate": "1993",
       "serial": "T-119236",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "MicroProse UK",
+      "publisher": "Ballistic"
     },
     {
       "title": "Tiny Toon Adventures: ACME All-Stars",
       "releaseDate": "1994-10",
       "serial": "T-95146",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Tiny Toon Adventures: Buster's Hidden Treasure",
       "releaseDate": "1993-03",
       "serial": "T-95036",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "TNN Bass Tournament of Champions",
       "releaseDate": "1994-12",
       "serial": "T-137056",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Imagitec Design",
+      "publisher": "American Softworks"
     },
     {
       "title": "TNN Outdoors Bass Tournament '96",
       "releaseDate": "1996-02",
       "serial": "T-137066",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Imagitec Design",
+      "publisher": "Ballistic"
     },
     {
       "title": "Todd's Adventures in Slime World",
       "releaseDate": "1992-06",
       "serial": "T-49216",
-      "rating": ""
+      "rating": "",
+      "developer": "Micro World",
+      "publisher": "Renovation Products"
     },
     {
       "title": "ToeJam & Earl",
       "releaseDate": "1991-10",
       "serial": "1020",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Johnson Voorsanger Productions",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "ToeJam & Earl in Panic on Funkotron",
       "releaseDate": "1993-12",
       "serial": "1043",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Johnson Voorsanger Productions",
+      "publisher": "Sega of America"
     },
     {
       "title": "Toki: Going Ape Spit",
       "releaseDate": "",
-      "serial": "1127",
-      "rating": ""
+      "serial": "1127}",
+      "rating": "",
+      "developer": "Santos",
+      "publisher": "Sega"
     },
     {
       "title": "Tom and Jerry: Frantic Antics",
       "releaseDate": "1993-12",
       "serial": "T-112016",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Beam Software",
+      "publisher": "Hi-Tech Expressions"
     },
     {
       "title": "Tony La Russa Baseball",
       "releaseDate": "1993-03",
       "serial": "713701",
-      "rating": ""
+      "rating": "",
+      "developer": "Stormfront Studios",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Top Gear 2",
       "releaseDate": "1994-09",
       "serial": "T-23066",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Gremlin Graphics Software",
+      "publisher": "VIC Tokai Inc."
     },
     {
       "title": "Toughman Contest",
       "releaseDate": "1995-07-15",
       "serial": "741101",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Toxic Crusaders",
       "releaseDate": "1992-12",
       "serial": "1037",
-      "rating": ""
+      "rating": "",
+      "developer": "Infogrames",
+      "publisher": "Sega of America"
     },
     {
       "title": "Toy Story",
       "releaseDate": "1995-11-21",
       "serial": "T-239046",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Psygnosis",
+      "publisher": "Disney Interactive"
     },
     {
       "title": "Toys",
       "releaseDate": "1993-06",
       "serial": "T-86046",
-      "rating": ""
+      "rating": "",
+      "developer": "Imagineering",
+      "publisher": "Absolute Entertainment"
     },
     {
       "title": "Trampoline Terror!",
       "releaseDate": "1990-12",
       "serial": "34026",
-      "rating": ""
+      "rating": "",
+      "developer": "NCS",
+      "publisher": "DreamWorks"
     },
     {
       "title": "Traysia",
       "releaseDate": "1992-04",
       "serial": "49166",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Nihon Telenet",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Triple Play 96",
       "releaseDate": "1995-06",
       "serial": "738601",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Extended Play Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Triple Play: Gold Edition",
       "releaseDate": "1996-06-20",
       "serial": "773501",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Extended Play Productions",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Trouble Shooter",
       "releaseDate": "1991-11",
       "serial": "23016",
-      "rating": ""
+      "rating": "",
+      "developer": "VIC Tokai",
+      "publisher": "VIC Tokai Inc."
     },
     {
       "title": "Troy Aikman NFL Football",
       "releaseDate": "1994-10",
       "serial": "T-97096",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Leland Interactive Media",
+      "publisher": "Williams Entertainment"
     },
     {
       "title": "True Lies",
       "releaseDate": "1995",
       "serial": "T-81386",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Beam Software",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Truxton",
       "releaseDate": "1989-12",
       "serial": "1012",
-      "rating": ""
+      "rating": "",
+      "developer": "Toaplan",
+      "publisher": "Sega of America"
     },
     {
       "title": "Turrican",
       "releaseDate": "1991-07",
       "serial": "ACLD004",
-      "rating": ""
+      "rating": "",
+      "developer": "The Code Monkeys",
+      "publisher": "Ballistic"
     },
     {
       "title": "Twin Cobra",
       "releaseDate": "1991-06",
       "serial": "1128",
-      "rating": ""
+      "rating": "",
+      "developer": "GRC",
+      "publisher": "Sega of America"
     },
     {
       "title": "Two Crude Dudes",
       "releaseDate": "1992-03",
       "serial": "T-13026",
-      "rating": ""
+      "rating": "",
+      "developer": "ISCO",
+      "publisher": "Data East USA"
     },
     {
       "title": "Ultimate Mortal Kombat 3 (Mega Drive)",
       "releaseDate": "1996-10-11",
       "serial": "T-97146",
-      "rating": "ESRB: Mature"
+      "rating": "ESRB: Mature",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Ultimate Qix",
       "releaseDate": "1991-07",
       "serial": "11046",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "I.T.L",
+      "publisher": "Taito America"
     },
     {
       "title": "Uncharted Waters",
       "releaseDate": "1992-11",
       "serial": "T-76026",
-      "rating": ""
+      "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Universal Soldier",
       "releaseDate": "1992",
       "serial": "ACLD011",
-      "rating": ""
+      "rating": "",
+      "developer": "The Code Monkeys",
+      "publisher": "Ballistic"
     },
     {
       "title": "Unnecessary Roughness '95",
       "releaseDate": "1994-11",
       "serial": "T-119156",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Accolade",
+      "publisher": "Accolade"
     },
     {
       "title": "Urban Strike",
       "releaseDate": "1994-09",
       "serial": "735001",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Foley Hi-Tech",
+      "publisher": "Black Pearl Software"
     },
     {
       "title": "Valis III",
       "releaseDate": "1991-06",
       "serial": "T-49086",
-      "rating": ""
+      "rating": "",
+      "developer": "D4 Enterprise",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Valis: The Fantasm Soldier",
       "releaseDate": "1991-12",
       "serial": "49196",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "D4 Enterprise",
+      "publisher": "Renovation Products"
     },
     {
       "title": "Vapor Trail: Hyper Offence Formation",
-      "releaseDate": "1991-10",
-      "serial": "49106",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "49106}",
+      "rating": "",
+      "developer": "Data East",
+      "publisher": ""
     },
     {
       "title": "Vectorman",
       "releaseDate": "1995-10-25",
       "serial": "1577",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "BlueSky Software",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Vectorman 2",
       "releaseDate": "1996-11-08",
       "serial": "1843",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "Venom - Spider-Man: Separation Anxiety",
       "releaseDate": "1995-11",
       "serial": "T-81596",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Software Creations",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Viewpoint",
       "releaseDate": "1994-11",
       "serial": "T-24096",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Nexus InteractCategory :Live link reference",
+      "publisher": "American SammyCategory :Live link reference"
     },
     {
       "title": "Virtua Fighter 2 (Mega Drive)",
       "releaseDate": "1996-11-21",
       "serial": "1845",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Cube",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Virtua Racing",
       "releaseDate": "1994-06",
       "serial": "1229",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Grand Products",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Virtual Bart",
       "releaseDate": "1994-10",
       "serial": "T-81206",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sculptured Software",
+      "publisher": ""
     },
     {
       "title": "Virtual Pinball",
       "releaseDate": "1993-11",
       "serial": "720601",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "BudgeCo",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "VR Troopers",
       "releaseDate": "1995",
       "serial": "1576",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Syrox Developments",
+      "publisher": "Sega of America"
     },
     {
       "title": "Wacky Worlds",
       "releaseDate": "1994-11",
       "serial": "1713",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "HeadGames",
+      "publisher": "Sega of America"
     },
     {
       "title": "Wardner",
       "releaseDate": "1991-05",
       "serial": "58016",
-      "rating": ""
+      "rating": "",
+      "developer": "Dragnet",
+      "publisher": ""
     },
     {
       "title": "Warehouse Keeper",
       "releaseDate": "2008",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "AtGames",
+      "publisher": "AtGames"
     },
     {
       "title": "Warlock",
       "releaseDate": "1995-09",
       "serial": "T-81446",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Realtime Associates",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "WarpSpeed",
       "releaseDate": "1993",
       "serial": "ACLD014",
-      "rating": ""
+      "rating": "",
+      "developer": "Accolade",
+      "publisher": "Accolade"
     },
     {
       "title": "Warrior of Rome",
       "releaseDate": "1991-05",
       "serial": "22026",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Micronet",
+      "publisher": "Micronet"
     },
     {
       "title": "Warrior of Rome II",
       "releaseDate": "1992-05",
       "serial": "22056",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Micronet",
+      "publisher": "Micronet"
     },
     {
       "title": "Wayne Gretzky and the NHLPA All-Stars",
       "releaseDate": "1995-04",
       "serial": "T-48416",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Time Warner Interactive",
+      "publisher": "Time Warner Interactive"
     },
     {
       "title": "Wayne's World",
       "releaseDate": "1993-08",
       "serial": "T-100026",
-      "rating": ""
+      "rating": "",
+      "developer": "Gray Matter",
+      "publisher": "T-HQ Software"
     },
     {
       "title": "Weaponlord",
       "releaseDate": "1995-09",
       "serial": "T-14136",
-      "rating": "ESRB: Teen"
+      "rating": "ESRB: Teen",
+      "developer": "Visual Concepts",
+      "publisher": "Namco Hometek"
     },
     {
       "title": "Wheel of Fortune (GameTek)",
       "releaseDate": "1992-07",
       "serial": "T-83016",
-      "rating": ""
+      "rating": "",
+      "developer": "Imagitec Design",
+      "publisher": "GameTek"
     },
     {
       "title": "Where in the World is Carmen Sandiego?",
       "releaseDate": "1992-09",
       "serial": "716101",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Electronic Arts Canada",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Where in Time is Carmen Sandiego?",
-      "releaseDate": "1992-04",
-      "serial": "712901",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "712901}",
+      "rating": "",
+      "developer": "Distinctive Software",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Whip Rush",
-      "releaseDate": "1990-10",
-      "serial": "T-49016",
-      "rating": "VRC: GA"
+      "releaseDate": "",
+      "serial": "T-49016}",
+      "rating": "VRC: GA",
+      "developer": "VIC Tokai",
+      "publisher": ""
     },
     {
       "title": "Will Harvey Presents The Immortal",
       "releaseDate": "1991-11",
       "serial": "708001",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "Williams Arcade's Greatest Hits (Mega Drive)",
       "releaseDate": "1996-09-15",
       "serial": "T-97126",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Digital Eclipse",
+      "publisher": "Williams Entertainment"
     },
     {
       "title": "Wimbledon Championship Tennis",
       "releaseDate": "1993-10",
       "serial": "1224",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "SIMSCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Winter Challenge",
       "releaseDate": "1992",
       "serial": "ACLD007",
-      "rating": ""
+      "rating": "",
+      "developer": "MindSpan",
+      "publisher": "Accolade"
     },
     {
       "title": "Winter Olympics",
       "releaseDate": "1993-12",
       "serial": "T-79096",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Tiertex",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Wiz 'n' Liz",
       "releaseDate": "1994-01-06",
       "serial": "T-113026",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Raising Hell",
+      "publisher": "Psygnosis"
     },
     {
       "title": "Wolfchild",
       "releaseDate": "1993-03",
       "serial": "T-60016",
-      "rating": ""
+      "rating": "",
+      "developer": "Core Design",
+      "publisher": "JVC Musical Industries"
     },
     {
       "title": "Wolverine: Adamantium Rage",
       "releaseDate": "1994-11",
       "serial": "T-81416",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Marvel Software",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "Wonder Boy in Monster World",
       "releaseDate": "1992-02",
       "serial": "1026",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Wonder Library",
       "releaseDate": "1995",
       "serial": "RG-ED10",
-      "rating": ""
+      "rating": "",
+      "developer": "JVC",
+      "publisher": "JVC"
     },
     {
       "title": "World Championship Soccer II",
       "releaseDate": "1994-06",
       "serial": "1233",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sensible Software",
+      "publisher": ""
     },
     {
       "title": "World Class Leader Board",
       "releaseDate": "1992-08",
       "serial": "T-79026",
       "rating": "",
+      "developer": "Access Software",
+      "publisher": "U.S. Gold",
       "altTitles": [
         "World Class Leaderboard Golf"
       ]
@@ -4352,6 +5766,8 @@
       "releaseDate": "1989-09",
       "serial": "1202",
       "rating": "VRC: GA",
+      "developer": "Animated Pixels",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "World Championship Soccer"
       ]
@@ -4360,127 +5776,169 @@
       "title": "World Cup USA 94",
       "releaseDate": "1994-06",
       "serial": "T-79126",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Tiertex",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "World Heroes",
       "releaseDate": "1994-07",
       "serial": "1547",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Sega Midwest Studio",
+      "publisher": "Sega"
     },
     {
       "title": "World of Illusion Starring Mickey Mouse and Donald Duck",
       "releaseDate": "1993-03",
       "serial": "1070",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Disney Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "World Series Baseball '95 (Mega Drive)",
-      "releaseDate": "1995-04",
-      "serial": "1239",
-      "rating": "ESRB: Kids to Adults"
+      "releaseDate": "",
+      "serial": "1239}",
+      "rating": "ESRB: Kids to Adults",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "World Series Baseball '96 (Mega Drive)",
       "releaseDate": "1996-07-17",
       "serial": "1242",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "World Series Baseball (Mega Drive)",
       "releaseDate": "1994-03",
       "serial": "1222",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
     },
     {
       "title": "World Series Baseball 98 (Mega Drive)",
       "releaseDate": "1997-07-18",
       "serial": "1244",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "World Trophy Soccer",
       "releaseDate": "1992-09",
       "serial": "T-70116",
-      "rating": ""
+      "rating": "",
+      "developer": "Krisalis Software",
+      "publisher": "Virgin Games"
     },
     {
       "title": "WWF Raw",
       "releaseDate": "1994-11",
       "serial": "T-81316",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Realtime Associates Seattle Division",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "WWF Royal Rumble (Acclaim)",
       "releaseDate": "1993-11",
       "serial": "T-81196",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Sculptured Software",
+      "publisher": ""
     },
     {
       "title": "WWF Super WrestleMania",
       "releaseDate": "1992-11",
       "serial": "T-81086",
-      "rating": ""
+      "rating": "",
+      "developer": "Sculptured Software",
+      "publisher": "Flying Edge"
     },
     {
       "title": "WWF WrestleMania: The Arcade Game",
       "releaseDate": "1995-11",
       "serial": "T-81546",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Sculptured Software",
+      "publisher": ""
     },
     {
       "title": "X-Men",
       "releaseDate": "1993-04",
       "serial": "1057",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Western Technologies",
+      "publisher": "Sega of America"
     },
     {
       "title": "X-Men 2: Clone Wars",
       "releaseDate": "1995-02",
       "serial": "1550",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "HeadGames",
+      "publisher": ""
     },
     {
       "title": "X-Perts",
-      "releaseDate": "1996-06",
-      "serial": "1574",
-      "rating": "ESRB: Teen"
+      "releaseDate": "",
+      "serial": "1574}",
+      "rating": "ESRB: Teen",
+      "developer": "Abalone Entertainment",
+      "publisher": "Sega of America"
     },
     {
       "title": "Ys III: Wanderers from Ys",
       "releaseDate": "1991-12",
       "serial": "49146",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "Nihon Telenet",
+      "publisher": ""
     },
     {
       "title": "Zany Golf",
       "releaseDate": "1990-10",
       "serial": "701101",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
     },
     {
       "title": "Zero the Kamikaze Squirrel",
       "releaseDate": "1994-11",
       "serial": "T-15176",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Iguana Entertainment",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Zero Tolerance",
       "releaseDate": "1994-11",
       "serial": "T-119146",
-      "rating": "VRC: MA-13"
+      "rating": "VRC: MA-13",
+      "developer": "Accolade",
+      "publisher": "Accolade"
     },
     {
       "title": "Zombies Ate My Neighbors",
       "releaseDate": "1993-11",
       "serial": "T-95056",
-      "rating": "VRC: GA"
+      "rating": "VRC: GA",
+      "developer": "LucasArts",
+      "publisher": "Konami"
     },
     {
       "title": "Zool",
       "releaseDate": "1994-02",
       "serial": "T-83096",
       "rating": "VRC: GA",
+      "developer": "Gremlin Graphics Software",
+      "publisher": "",
       "altTitles": [
         "Zool: Ninja of the Nth Dimension"
       ]
@@ -4489,13 +5947,17 @@
       "title": "Zoom!",
       "releaseDate": "1990-01",
       "serial": "1004",
-      "rating": ""
+      "rating": "",
+      "developer": "Sigma Pro-TechCategory :Live link reference",
+      "publisher": "Sega of America"
     },
     {
       "title": "Zoop",
       "releaseDate": "1995-06-01",
       "serial": "T-139086",
-      "rating": "ESRB: Kids to Adults"
+      "rating": "ESRB: Kids to Adults",
+      "developer": "Hookstone",
+      "publisher": "Media Quest"
     }
   ]
 }

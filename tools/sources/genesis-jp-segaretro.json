@@ -8,6 +8,8 @@
       "releaseDate": "1993-05-14",
       "serial": "T-48073",
       "rating": "",
+      "developer": "Domark",
+      "publisher": "",
       "altTitles": [
         "James Bond 007: The Duel"
       ]
@@ -16,31 +18,33 @@
       "title": "A Ressha de Ikou MD",
       "releaseDate": "1992-04-10",
       "serial": "G-4532",
-      "rating": ""
+      "rating": "",
+      "developer": "M.N.M Software",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Aa Harimanada",
       "releaseDate": "1993-09-03",
       "serial": "G-4086",
-      "rating": ""
-    },
-    {
-      "title": "Advanced Busterhawk Gley Lancer",
-      "releaseDate": "1992-07-17",
-      "serial": "T-25123",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Advanced Daisenryaku: Deutsch Dengeki Sakusen",
-      "releaseDate": "1991-06-17",
-      "serial": "G-5505",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "G-5505}",
+      "rating": "",
+      "developer": "Sega R&D 9",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Aero Blasters",
       "releaseDate": "1991-01-31",
       "serial": "T-33013",
       "rating": "",
+      "developer": "Inter State",
+      "publisher": "Kaneko",
       "altTitles": [
         "Air Buster: Trouble Specialty Raid Unit"
       ]
@@ -49,19 +53,25 @@
       "title": "After Burner II",
       "releaseDate": "1990-03-23",
       "serial": "T-17013",
-      "rating": ""
+      "rating": "",
+      "developer": "Bits Laboratory",
+      "publisher": "Dempa Micomsoft"
     },
     {
       "title": "Air Diver",
       "releaseDate": "1990-03-09",
       "serial": "T-20023",
-      "rating": ""
+      "rating": "",
+      "developer": "Copya System",
+      "publisher": ""
     },
     {
       "title": "Air Management II: Koukuuou o Mezase",
       "releaseDate": "1994-02-18",
       "serial": "T-76143",
       "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "Aerobiz Supersonic"
       ]
@@ -71,6 +81,8 @@
       "releaseDate": "1992-11-01",
       "serial": "T-76083",
       "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "Aerobiz"
       ]
@@ -80,6 +92,8 @@
       "releaseDate": "1989-02-10",
       "serial": "G-4004",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Alex Kidd in the Enchanted Castle"
       ]
@@ -88,25 +102,33 @@
       "title": "Alien Soldier",
       "releaseDate": "1995-02-24",
       "serial": "G-4130",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Alien Storm (Mega Drive)",
       "releaseDate": "1991-06-28",
       "serial": "G-4048",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Alisia Dragoon",
       "releaseDate": "1992-04-24",
       "serial": "T-45033",
-      "rating": ""
+      "rating": "",
+      "developer": "&lt;span class=\"company-data-processor\" style=\"display :none ;\"&gt;&lt;/span&gt;&lt;span class=\"\"&gt;&lt;span class=\"company-system-icons\"&gt;&lt;/span&gt;&lt;span class=\"company-system-text\"&gt;Mecano Associates&lt;/span&gt;&lt;/span&gt;",
+      "publisher": "Game Arts"
     },
     {
       "title": "Aoki Ookami to Shiroki Meshika: Genchou Hishi",
       "releaseDate": "1993-03-25",
       "serial": "T-76103",
       "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "Genghis Khan II: Clan of the Gray Wolf"
       ]
@@ -115,43 +137,57 @@
       "title": "Arcus Odyssey",
       "releaseDate": "1991-06-14",
       "serial": "T-32053",
-      "rating": ""
+      "rating": "",
+      "developer": "Wolf Team",
+      "publisher": ""
     },
     {
       "title": "Arrow Flash",
       "releaseDate": "1990-10-20",
       "serial": "G-4039",
-      "rating": ""
+      "rating": "",
+      "developer": "I.T.L",
+      "publisher": ""
     },
     {
       "title": "Art Alive!",
       "releaseDate": "1992-03-27",
       "serial": "G-4069",
-      "rating": ""
+      "rating": "",
+      "developer": "FarSight Technologies",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Atomic Robo-Kid",
       "releaseDate": "1990-12-14",
       "serial": "T-24013",
-      "rating": ""
+      "rating": "",
+      "developer": "KhaosCategory :Live link reference",
+      "publisher": "Treco"
     },
     {
       "title": "Awesome Possum Kicks Dr. Machino's Butt!",
       "releaseDate": "1993-12-25",
       "serial": "T-48153",
-      "rating": ""
+      "rating": "",
+      "developer": "Tengen",
+      "publisher": "Tengen"
     },
     {
       "title": "Ayrton Senna's Super Monaco GP II",
       "releaseDate": "1992-07-17",
       "serial": "G-5514",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega CS3",
+      "publisher": ""
     },
     {
       "title": "Bad Omen",
       "releaseDate": "1992-04-24",
       "serial": "T-28043",
       "rating": "",
+      "developer": "Aisystem Tokyo",
+      "publisher": "",
       "altTitles": [
         "Devilish: The Next Possession"
       ]
@@ -160,19 +196,25 @@
       "title": "Bahamut Senki",
       "releaseDate": "1991-03-08",
       "serial": "G-4520",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Ball Jacks",
       "releaseDate": "1993-04-23",
       "serial": "T-14163",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Bare Knuckle II: Shitou e no Requiem",
       "releaseDate": "1993-01-14",
       "serial": "G-4091",
       "rating": "",
+      "developer": "Ancient",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Streets of Rage 2"
       ]
@@ -182,6 +224,8 @@
       "releaseDate": "1994-03-18",
       "serial": "G-4116",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega",
       "altTitles": [
         "Streets of Rage 3"
       ]
@@ -191,6 +235,8 @@
       "releaseDate": "1991-08-02",
       "serial": "G-4050",
       "rating": "",
+      "developer": "Japan System HouseCategory :Live link reference",
+      "publisher": "Sega",
       "altTitles": [
         "Streets of Rage"
       ]
@@ -199,31 +245,41 @@
       "title": "Batman",
       "releaseDate": "1990-07-27",
       "serial": "T-15043",
-      "rating": ""
+      "rating": "",
+      "developer": "Sunsoft",
+      "publisher": ""
     },
     {
       "title": "Batman Forever (Mega Drive)",
       "releaseDate": "1995-10-27",
       "serial": "T-81223",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Black Team",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "Batman Returns (Mega Drive)",
       "releaseDate": "1993-02-19",
       "serial": "G-4092",
-      "rating": ""
+      "rating": "",
+      "developer": "Malibu Interactive",
+      "publisher": ""
     },
     {
       "title": "Battle Golfer Yui",
       "releaseDate": "1991-02-15",
       "serial": "G-4040",
-      "rating": ""
+      "rating": "",
+      "developer": "Santos",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Battle Mania",
       "releaseDate": "1992-03-06",
       "serial": "T-23013",
       "rating": "",
+      "developer": "VIC Tokai",
+      "publisher": "VIC Tokai",
       "altTitles": [
         "Trouble Shooter"
       ]
@@ -232,19 +288,25 @@
       "title": "Battle Mania Daiginjou",
       "releaseDate": "1993-12-24",
       "serial": "T-23043",
-      "rating": ""
+      "rating": "",
+      "developer": "VIC Tokai",
+      "publisher": "VIC Tokai"
     },
     {
       "title": "Battletoads",
       "releaseDate": "1993-03-26",
       "serial": "G-4074",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc System Works",
+      "publisher": ""
     },
     {
       "title": "Beast Warriors",
       "releaseDate": "1991-11-29",
       "serial": "T-49053",
       "rating": "",
+      "developer": "Nihon Telenet",
+      "publisher": "Riot",
       "altTitles": [
         "Beast Wrestler"
       ]
@@ -253,31 +315,41 @@
       "title": "Bishoujo Senshi Sailor Moon",
       "releaseDate": "1994-07-08",
       "serial": "T-16043",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc System Works",
+      "publisher": "Ma-Ba"
     },
     {
       "title": "Blockout",
       "releaseDate": "1991-11-01",
       "serial": "G-4059",
-      "rating": ""
+      "rating": "",
+      "developer": "California Dreams",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Blue Almanac",
       "releaseDate": "1991-06-22",
       "serial": "T-46013",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Bonanza Bros.",
       "releaseDate": "1991-05-17",
       "serial": "G-4046",
-      "rating": ""
+      "rating": "",
+      "developer": "I.T.L",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "Boogie Woogie Bowling",
       "releaseDate": "1993-12-17",
       "serial": "T-58033",
       "rating": "",
+      "developer": "Soft MachineCategory :Live link reference",
+      "publisher": "",
       "altTitles": [
         "Championship Bowling"
       ]
@@ -286,13 +358,17 @@
       "title": "Burning Force",
       "releaseDate": "1990-10-19",
       "serial": "T-14023",
-      "rating": ""
+      "rating": "",
+      "developer": "Nova",
+      "publisher": "Namco"
     },
     {
       "title": "Caesar no Yabou",
       "releaseDate": "1991-02-24",
       "serial": "T-22033",
       "rating": "",
+      "developer": "Micronet",
+      "publisher": "Micronet",
       "altTitles": [
         "Warrior of Rome"
       ]
@@ -302,6 +378,8 @@
       "releaseDate": "1992-05-28",
       "serial": "T-22063",
       "rating": "",
+      "developer": "Micronet",
+      "publisher": "Micronet",
       "altTitles": [
         "Warrior of Rome II"
       ]
@@ -311,6 +389,8 @@
       "releaseDate": "1994-04-22",
       "serial": "T-13103",
       "rating": "",
+      "developer": "Data East",
+      "publisher": "Data East",
       "altTitles": [
         "High Seas Havoc"
       ]
@@ -319,13 +399,17 @@
       "title": "CD-ROM Multi Seminar Onsei Kaiseki Hakei Hyouji Cartridge",
       "releaseDate": "",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "CSK Research Institute",
+      "publisher": "Linguaphone Japan"
     },
     {
       "title": "Chameleon Kid",
       "releaseDate": "1992-05-29",
       "serial": "G-4070",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Kid Chameleon"
       ]
@@ -334,13 +418,17 @@
       "title": "Champions World Class Soccer",
       "releaseDate": "1994-06-24",
       "serial": "T-81063",
-      "rating": ""
+      "rating": "",
+      "developer": "Acclaim Entertainment",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "Chelnov",
       "releaseDate": "1992-10-16",
       "serial": "T-13073",
       "rating": "",
+      "developer": "Data East",
+      "publisher": "Paon",
       "altTitles": [
         "Atomic Runner"
       ]
@@ -349,34 +437,44 @@
       "title": "Chibi Maruko-chan: Waku Waku Shopping",
       "releaseDate": "1992-01-14",
       "serial": "T-14123",
-      "rating": ""
+      "rating": "",
+      "developer": "Namco",
+      "publisher": "Namco"
     },
     {
       "title": "Chiki Chiki Boys",
       "releaseDate": "1992-10-16",
       "serial": "G-4083",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
     },
     {
       "title": "Chou Kyuukai Miracle Nine",
       "releaseDate": "1995-07-21",
       "serial": "G-5546",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Sega CS3",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Chou Touryuu Retsuden Dino Land",
-      "releaseDate": "1991-08-02",
-      "serial": "T-32043",
+      "releaseDate": "",
+      "serial": "T-32043}",
       "rating": "",
+      "developer": "Wolf Team",
+      "publisher": "",
       "altTitles": [
         "Dino Land"
       ]
     },
     {
       "title": "Chuck Rock II",
-      "releaseDate": "1994-06-24",
-      "serial": "T-70063",
+      "releaseDate": "",
+      "serial": "T-70063}",
       "rating": "",
+      "developer": "Core Design",
+      "publisher": "",
       "altTitles": [
         "Chuck Rock II: Son of Chuck"
       ]
@@ -385,13 +483,17 @@
       "title": "Columns",
       "releaseDate": "1990-06-30",
       "serial": "G-4035",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Laser Soft"
     },
     {
       "title": "Columns III: Taiketsu! Columns World",
       "releaseDate": "1993-10-15",
       "serial": "G-4108",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Columns III: Revenge of Columns"
       ]
@@ -400,13 +502,17 @@
       "title": "Comix Zone",
       "releaseDate": "1995-09-01",
       "serial": "G-4132",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Contra: The Hard Corps",
       "releaseDate": "1994-09-15",
       "serial": "T-95093",
       "rating": "",
+      "developer": "Konami",
+      "publisher": "Konami",
       "altTitles": [
         "Contra: Hard Corps"
       ]
@@ -415,25 +521,33 @@
       "title": "Cool Spot",
       "releaseDate": "1994-02-18",
       "serial": "T-70013",
-      "rating": ""
+      "rating": "",
+      "developer": "Virgin Games",
+      "publisher": "Virgin Games"
     },
     {
       "title": "Crack Down",
       "releaseDate": "1990-12-20",
       "serial": "G-4024",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc Developments",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Crayon Shin-chan: Arashi o Yobu Enji",
       "releaseDate": "1994-03-11",
       "serial": "T-16033",
-      "rating": ""
+      "rating": "",
+      "developer": "SIMS",
+      "publisher": "Ma-Ba"
     },
     {
       "title": "Crude Buster",
       "releaseDate": "1992-02-28",
       "serial": "T-13063",
       "rating": "",
+      "developer": "ISCO",
+      "publisher": "Data East",
       "altTitles": [
         "Two Crude Dudes"
       ]
@@ -443,6 +557,8 @@
       "releaseDate": "1992-10-30",
       "serial": "G-4087",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Bio-Hazard Battle"
       ]
@@ -451,37 +567,49 @@
       "title": "Crüe Ball",
       "releaseDate": "1993-12-26",
       "serial": "EM20005",
-      "rating": ""
+      "rating": "",
+      "developer": "NuFX",
+      "publisher": ""
     },
     {
       "title": "Curse",
-      "releaseDate": "1989-12-23",
-      "serial": "T-22013",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-22013}",
+      "rating": "",
+      "developer": "Micronet",
+      "publisher": "Micronet"
     },
     {
       "title": "Cutie Suzuki no Ringside Angel",
       "releaseDate": "1990-12-12",
       "serial": "T-20033",
-      "rating": ""
+      "rating": "",
+      "developer": "Copya System",
+      "publisher": "Asmik"
     },
     {
       "title": "CyberBall",
       "releaseDate": "1990-07-28",
       "serial": "G-4027",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": ""
     },
     {
       "title": "Dahna Megami Tanjou",
       "releaseDate": "1991-12-20",
       "serial": "T-64013",
-      "rating": ""
+      "rating": "",
+      "developer": "IGS",
+      "publisher": "IGS"
     },
     {
       "title": "Daikoukai Jidai",
       "releaseDate": "1992-04-29",
       "serial": "T-76053",
       "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "Uncharted Waters"
       ]
@@ -490,13 +618,17 @@
       "title": "Daikoukai Jidai II",
       "releaseDate": "1994-06-24",
       "serial": "T-76163",
-      "rating": ""
+      "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Daimakaimura",
       "releaseDate": "1989-08-03",
       "serial": "G-4013",
       "rating": "",
+      "developer": "Arc System Works",
+      "publisher": "Capcom",
       "altTitles": [
         "Ghouls'n Ghosts"
       ]
@@ -506,6 +638,8 @@
       "releaseDate": "1990-06-23",
       "serial": "G-4034",
       "rating": "",
+      "developer": "Toaplan",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Twin Hawk"
       ]
@@ -514,25 +648,33 @@
       "title": "Dangerous Seed",
       "releaseDate": "1990-12-18",
       "serial": "T-14033",
-      "rating": ""
+      "rating": "",
+      "developer": "Namco",
+      "publisher": "Namco"
     },
     {
       "title": "Darius II",
-      "releaseDate": "1990-12-20",
-      "serial": "T-11083",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-11083}",
+      "rating": "",
+      "developer": "I.T.L",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Darwin 4081",
       "releaseDate": "1990-04-07",
       "serial": "G-4033",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "David Robinson Basketball",
       "releaseDate": "1992-07-10",
       "serial": "G-4071",
       "rating": "",
+      "developer": "Acme Interactive",
+      "publisher": "",
       "altTitles": [
         "David Robinson's Supreme Court"
       ]
@@ -541,13 +683,17 @@
       "title": "Davis Cup Tennis",
       "releaseDate": "1994-02-25",
       "serial": "T-48163",
-      "rating": ""
+      "rating": "",
+      "developer": "Loriciel",
+      "publisher": "Tengen"
     },
     {
       "title": "Desert Strike: Wangan Sakusen",
       "releaseDate": "1993-04-23",
       "serial": "EM20010",
       "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts Victor",
       "altTitles": [
         "Desert Strike: Return to the Gulf"
       ]
@@ -557,45 +703,59 @@
       "releaseDate": "1991-10-10",
       "serial": "T-18053",
       "rating": "",
+      "developer": "Technosoft",
+      "publisher": "",
       "altTitles": [
         "Dragon's Fury"
       ]
     },
     {
       "title": "Dial Q o Mawase!",
-      "releaseDate": "1992",
-      "serial": "AMMDR-01",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "AMMDR-01}",
+      "rating": "",
+      "developer": "Studio Fazzy",
+      "publisher": ""
     },
     {
       "title": "Dick Tracy",
       "releaseDate": "1991-03-01",
       "serial": "G-4044",
-      "rating": ""
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": ""
     },
     {
       "title": "Disney's Aladdin",
       "releaseDate": "1993-11-12",
       "serial": "G-4111",
-      "rating": ""
+      "rating": "",
+      "developer": "Virgin Games",
+      "publisher": "Sega"
     },
     {
       "title": "Divine Sealing",
       "releaseDate": "1992-05",
-      "serial": "",
-      "rating": ""
+      "serial": "}",
+      "rating": "",
+      "developer": "Studio Fazzy",
+      "publisher": "CYX"
     },
     {
       "title": "DJ Boy",
       "releaseDate": "1990-05-19",
       "serial": "G-4032",
-      "rating": ""
+      "rating": "",
+      "developer": "Inter StateCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Doraemon Yume Dorobou to 7 Nin no Gozans",
       "releaseDate": "1993-03-26",
       "serial": "G-4094",
       "rating": "",
+      "developer": "G-Sat",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Doraemon: Yume Dorobou to 7 Nin no Gozans"
       ]
@@ -604,13 +764,17 @@
       "title": "Double Dragon II: The Revenge",
       "releaseDate": "1991-12-20",
       "serial": "T-74023",
-      "rating": ""
+      "rating": "",
+      "developer": "Quest",
+      "publisher": "PALSOFT"
     },
     {
       "title": "Dragon Ball Z: Buyū Retsuden",
       "releaseDate": "1994-04-01",
       "serial": "T-133013",
       "rating": "",
+      "developer": "Bandai",
+      "publisher": "",
       "altTitles": [
         "Dragon Ball Z: Buyuu Retsuden"
       ]
@@ -619,31 +783,41 @@
       "title": "Dragon Slayer: The Legend of Heroes",
       "releaseDate": "1994-09-16",
       "serial": "G-5542",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Nihon Falcom"
     },
     {
       "title": "Dragon Slayer: The Legend of Heroes II",
       "releaseDate": "1995-01-20",
       "serial": "G-5544",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "M2",
+      "publisher": "Nihon Falcom"
     },
     {
       "title": "Dragon's Eye Plus: Shanghai III",
       "releaseDate": "1991-11-02",
       "serial": "T-67023",
-      "rating": ""
+      "rating": "",
+      "developer": "Home Data",
+      "publisher": "Home Data"
     },
     {
       "title": "Dragon's Revenge",
       "releaseDate": "1993-12-10",
       "serial": "T-48143",
-      "rating": ""
+      "rating": "",
+      "developer": "Tengen",
+      "publisher": "Tengen"
     },
     {
       "title": "Dream Team USA",
       "releaseDate": "1992-12-26",
       "serial": "EM20004",
       "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "",
       "altTitles": [
         "Team USA Basketball"
       ]
@@ -652,94 +826,124 @@
       "title": "Dyna Brothers",
       "releaseDate": "1992-07-24",
       "serial": "T-68033",
-      "rating": ""
+      "rating": "",
+      "developer": "CRI",
+      "publisher": "CRI"
     },
     {
       "title": "Dyna Brothers 2",
       "releaseDate": "1993-12-03",
       "serial": "T-68063",
-      "rating": ""
+      "rating": "",
+      "developer": "CRI",
+      "publisher": "CRI"
     },
     {
       "title": "Dynamite Duke",
       "releaseDate": "1990-10-27",
       "serial": "G-4038",
-      "rating": ""
+      "rating": "",
+      "developer": "HertzCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Dynamite Headdy",
       "releaseDate": "1994-08-05",
       "serial": "G-4117",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Earthworm Jim",
       "releaseDate": "1995-12-01",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Eurocom Entertainment Software",
+      "publisher": "Interplay"
     },
     {
       "title": "Earthworm Jim 2",
       "releaseDate": "1996-09",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Takara"
     },
     {
       "title": "Ecco Jr.",
       "releaseDate": "1995-08-16",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Ecco the Dolphin",
       "releaseDate": "1993-07-30",
       "serial": "G-4106",
-      "rating": ""
+      "rating": "",
+      "developer": "Backbone Entertainment",
+      "publisher": "Sega PC"
     },
     {
       "title": "Ecco the Dolphin II",
       "releaseDate": "1994-08-26",
       "serial": "G-4123",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Ecco: The Tides of Time"
       ]
     },
     {
       "title": "El Viento",
-      "releaseDate": "1991-09-20",
-      "serial": "T-32063",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-32063}",
+      "rating": "",
+      "developer": "Wolf Team",
+      "publisher": ""
     },
     {
       "title": "Elemental Master",
       "releaseDate": "1990-12-14",
       "serial": "T-18043",
-      "rating": ""
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": ""
     },
     {
       "title": "Eliminate Down",
       "releaseDate": "1993-06-25",
       "serial": "T-73033",
-      "rating": ""
+      "rating": "",
+      "developer": "Aprinet",
+      "publisher": ""
     },
     {
       "title": "ESWAT: City Under Siege",
       "releaseDate": "1990-07-14",
       "serial": "G-4029",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Eternal Champions",
       "releaseDate": "1994-02-18",
       "serial": "G-4114",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Europa Sensen",
       "releaseDate": "1993-01-16",
       "serial": "T-76113",
       "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "Operation Europe: Path to Victory 1939-45"
       ]
@@ -749,6 +953,8 @@
       "releaseDate": "1992-10-30",
       "serial": "G-4084",
       "rating": "",
+      "developer": "Acme Interactive",
+      "publisher": "",
       "altTitles": [
         "Evander Holyfield's \"Real Deal\" Boxing"
       ]
@@ -758,6 +964,8 @@
       "releaseDate": "1993-05-28",
       "serial": "G-4097",
       "rating": "",
+      "developer": "Gau Entertainment",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Ranger-X"
       ]
@@ -767,6 +975,8 @@
       "releaseDate": "1991-12-06",
       "serial": "T-49093",
       "rating": "",
+      "developer": "Micro Factory",
+      "publisher": "Riot",
       "altTitles": [
         "Exile"
       ]
@@ -776,6 +986,8 @@
       "releaseDate": "1994-05-27",
       "serial": "EM20029",
       "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "",
       "altTitles": [
         "F-117 Night Storm"
       ]
@@ -784,19 +996,25 @@
       "title": "F-22 Interceptor: Advanced Tactical Fighter",
       "releaseDate": "1993-02-12",
       "serial": "EM20007",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "F1 Circus MD",
       "releaseDate": "1991-12-20",
       "serial": "T-71013",
-      "rating": ""
+      "rating": "",
+      "developer": "KhaosCategory :Live link reference",
+      "publisher": "Nihon Bussan"
     },
     {
       "title": "Fantasia: Mickey Mouse Magic",
       "releaseDate": "1991-11-22",
       "serial": "G-4061",
       "rating": "",
+      "developer": "Infogrames",
+      "publisher": "",
       "altTitles": [
         "Fantasia"
       ]
@@ -805,13 +1023,17 @@
       "title": "Fastest 1",
       "releaseDate": "1991-06-28",
       "serial": "T-43023",
-      "rating": ""
+      "rating": "",
+      "developer": "Human",
+      "publisher": "Human"
     },
     {
       "title": "Fatman",
       "releaseDate": "1990-10-12",
       "serial": "T-44013",
       "rating": "",
+      "developer": "Brian A. Rice, Inc.",
+      "publisher": "Sanritsu",
       "altTitles": [
         "Slaughter Sport"
       ]
@@ -820,19 +1042,25 @@
       "title": "FIFA International Soccer",
       "releaseDate": "1994-06-10",
       "serial": "EM20030",
-      "rating": ""
+      "rating": "",
+      "developer": "EA Canada",
+      "publisher": ""
     },
     {
       "title": "Fighting Masters",
       "releaseDate": "1991-12-06",
       "serial": "T-24063",
-      "rating": ""
+      "rating": "",
+      "developer": "Aicom",
+      "publisher": "Treco"
     },
     {
       "title": "Final Blow",
       "releaseDate": "1990-03-23",
       "serial": "T-11033",
       "rating": "",
+      "developer": "Whiteboard",
+      "publisher": "",
       "altTitles": [
         "James \"Buster\" Douglas Knockout Boxing (Mega Drive)"
       ]
@@ -841,49 +1069,65 @@
       "title": "Fire Mustang",
       "releaseDate": "1991-05-31",
       "serial": "T-11123",
-      "rating": ""
+      "rating": "",
+      "developer": "NMK",
+      "publisher": "Taito"
     },
     {
       "title": "Flashback",
       "releaseDate": "1993-12-29",
       "serial": "T-15083",
-      "rating": ""
+      "rating": "",
+      "developer": "Delphine Software International",
+      "publisher": "Sega of America"
     },
     {
       "title": "Flicky",
       "releaseDate": "1991-01",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Micronet",
+      "publisher": "Micronet"
     },
     {
       "title": "Foreman for Real",
-      "releaseDate": "1995-10-27",
-      "serial": "T-81233",
-      "rating": "All ages"
+      "releaseDate": "",
+      "serial": "T-81233}",
+      "rating": "All ages",
+      "developer": "Software Creations of America",
+      "publisher": ""
     },
     {
       "title": "Forgotten Worlds (Mega Drive)",
       "releaseDate": "1989-11-18",
       "serial": "G-4016",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Capcom"
     },
     {
       "title": "From TV Animation Slam Dunk: Kyougou Makkou Taiketsu!",
       "releaseDate": "1995-04-28",
       "serial": "T-133023",
-      "rating": ""
+      "rating": "",
+      "developer": "SIMS",
+      "publisher": "Bandai"
     },
     {
       "title": "Fushigi no Umi no Nadia",
       "releaseDate": "1991-03-19",
       "serial": "T-14083",
-      "rating": ""
+      "rating": "",
+      "developer": "Namco",
+      "publisher": "Namco"
     },
     {
       "title": "FZ Senki Axis",
       "releaseDate": "1990-10-12",
       "serial": "T-32013",
       "rating": "",
+      "developer": "Wolf Team",
+      "publisher": "",
       "altTitles": [
         "Final Zone"
       ]
@@ -892,37 +1136,49 @@
       "title": "G-LOC: Air Battle",
       "releaseDate": "1993-02-26",
       "serial": "G-4079",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Gaiares",
       "releaseDate": "1990-12-26",
       "serial": "T-49013",
-      "rating": ""
+      "rating": "",
+      "developer": "D4 Enterprise",
+      "publisher": "Edia"
     },
     {
       "title": "Gain Ground",
       "releaseDate": "1991-01-03",
       "serial": "G-4036",
-      "rating": ""
+      "rating": "",
+      "developer": "Bits Laboratory",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "Galaxy Force II",
       "releaseDate": "1991-09-13",
       "serial": "T-68013",
-      "rating": ""
+      "rating": "",
+      "developer": "CRI",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Gambler Jiko Chuushinha: Katayama Masayuki no Mahjong Doujou",
       "releaseDate": "1990-12-14",
       "serial": "T-45013",
-      "rating": ""
+      "rating": "",
+      "developer": "Yellow Horn",
+      "publisher": "Game Arts"
     },
     {
       "title": "Garou Densetsu 2: Aratanaru Tatakai",
       "releaseDate": "1994-06-24",
       "serial": "T-146023",
       "rating": "",
+      "developer": "Gai BrainCategory :Live link reference",
+      "publisher": "Takara",
       "altTitles": [
         "Fatal Fury 2"
       ]
@@ -932,6 +1188,8 @@
       "releaseDate": "1993-04-23",
       "serial": "G-4100",
       "rating": "",
+      "developer": "Aspect",
+      "publisher": "",
       "altTitles": [
         "Fatal Fury"
       ]
@@ -941,6 +1199,8 @@
       "releaseDate": "1993-09-17",
       "serial": "T-48123",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Tengen",
       "altTitles": [
         "Gauntlet IV"
       ]
@@ -950,6 +1210,8 @@
       "releaseDate": "1994-01-14",
       "serial": "EM20025",
       "rating": "",
+      "developer": "Game Refuge",
+      "publisher": "",
       "altTitles": [
         "General Chaos"
       ]
@@ -958,127 +1220,169 @@
       "title": "Ghostbusters (Mega Drive)",
       "releaseDate": "1990-06-30",
       "serial": "G-4030",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": ""
     },
     {
       "title": "Go Net",
       "releaseDate": "1992",
       "serial": "G-4533",
-      "rating": ""
+      "rating": "",
+      "developer": "Aisystem Tokyo",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Gods",
       "releaseDate": "1993-03-26",
       "serial": "T-85013",
-      "rating": ""
+      "rating": "",
+      "developer": "Graftgold",
+      "publisher": ""
     },
     {
       "title": "Golden Axe",
       "releaseDate": "1989-12-23",
       "serial": "G-4018",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Bandai"
     },
     {
       "title": "Golden Axe II",
       "releaseDate": "1991-12-27",
       "serial": "G-4062",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Golden Axe III",
       "releaseDate": "1993-06-25",
       "serial": "G-4093",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Gouketsuji Ichizoku",
       "releaseDate": "1994-11-18",
       "serial": "T-144013",
-      "rating": ""
+      "rating": "",
+      "developer": "Atlus",
+      "publisher": "Atlus"
     },
     {
       "title": "Granada",
-      "releaseDate": "1990-11-16",
-      "serial": "T-32023",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-32023}",
+      "rating": "",
+      "developer": "D4 Enterprise",
+      "publisher": "Edia"
     },
     {
       "title": "GrandSlam: The Tennis Tournament '92",
       "releaseDate": "1992-06-12",
       "serial": "T-49133",
-      "rating": ""
+      "rating": "",
+      "developer": "Nihon Telenet",
+      "publisher": ""
     },
     {
       "title": "Greatest Heavyweights",
       "releaseDate": "1994-05-27",
       "serial": "G-5539",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega of America",
+      "publisher": ""
     },
     {
       "title": "Gunstar Heroes",
       "releaseDate": "1993-09-10",
       "serial": "G-4103",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Gynoug",
-      "releaseDate": "1991-01-25",
-      "serial": "T-25093",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-25093}",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "NCS"
     },
     {
       "title": "Hard Drivin'",
       "releaseDate": "1990-12-21",
       "serial": "T-48013",
-      "rating": ""
+      "rating": "",
+      "developer": "Sterling Silver Software",
+      "publisher": "Tengen"
     },
     {
       "title": "Heavy Unit: Mega Drive Special",
       "releaseDate": "1990-12-26",
       "serial": "T-27013",
-      "rating": ""
+      "rating": "",
+      "developer": "Funari",
+      "publisher": "Toho"
     },
     {
       "title": "Hellfire",
       "releaseDate": "1990-09-28",
       "serial": "T-25073",
-      "rating": ""
+      "rating": "",
+      "developer": "NCS",
+      "publisher": ""
     },
     {
       "title": "Herzog Zwei",
       "releaseDate": "1989-12-15",
       "serial": "T-18023",
-      "rating": ""
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": ""
     },
     {
       "title": "Hokuto no Ken: Shin Seikimatsu Kyuuseishu Densetsu",
       "releaseDate": "1989-07-01",
       "serial": "G-4012",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Honoo no Toukyuuji Dodge Danpei (Mega Drive)",
       "releaseDate": "1992-07-10",
       "serial": "G-4076",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega CS1Category :Live link reference",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Hyokkori Hyoutanjima: Daitouryou o Mezase!",
       "releaseDate": "1992-08-07",
       "serial": "G-4075",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Hyper Dunk: The Playoff Edition",
       "releaseDate": "1994-03-04",
       "serial": "T-95083",
-      "rating": ""
+      "rating": "",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "I Love Donald Duck: Gurujia Ou no Hihou",
       "releaseDate": "1991-12-20",
       "serial": "G-4054",
       "rating": "",
+      "developer": "Sega CS2",
+      "publisher": "",
       "altTitles": [
         "QuackShot Starring Donald Duck"
       ]
@@ -1088,6 +1392,8 @@
       "releaseDate": "1992-12-18",
       "serial": "G-4080",
       "rating": "",
+      "developer": "Disney Software",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "World of Illusion Starring Mickey Mouse and Donald Duck"
       ]
@@ -1097,6 +1403,8 @@
       "releaseDate": "1990-11-21",
       "serial": "G-4042",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Castle of Illusion Starring Mickey Mouse (Mega Drive)"
       ]
@@ -1105,55 +1413,73 @@
       "title": "Insector X",
       "releaseDate": "1990-09-07",
       "serial": "T-28023",
-      "rating": ""
+      "rating": "",
+      "developer": "Genki",
+      "publisher": ""
     },
     {
       "title": "J.League Champion Soccer",
       "releaseDate": "1993-02-26",
       "serial": "T-105013",
-      "rating": ""
+      "rating": "",
+      "developer": "Krisalis Software",
+      "publisher": "Game Arts"
     },
     {
       "title": "J.League Pro Striker",
       "releaseDate": "1993-04-23",
       "serial": "G-5518",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega CS1",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "J.League Pro Striker 2",
       "releaseDate": "1994-07-15",
       "serial": "G-5540",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega CS3",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "J.League Pro Striker Kanzenban",
       "releaseDate": "1993-12-17",
       "serial": "G-5532",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega CS1",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "James Pond II: Codename RoboCod",
       "releaseDate": "1993-06-09",
       "serial": "EM20015",
-      "rating": ""
+      "rating": "",
+      "developer": "Millennium Interactive",
+      "publisher": "Electronic Arts Victor"
     },
     {
       "title": "Janou Touryuumon",
       "releaseDate": "1993-11-05",
       "serial": "G-4096",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Jantei Monogatari",
       "releaseDate": "1991-03-29",
       "serial": "T-49033",
-      "rating": ""
+      "rating": "",
+      "developer": "Atlus",
+      "publisher": "Renovation Game"
     },
     {
       "title": "Jashin Draxos",
       "releaseDate": "1993-02-19",
       "serial": "EM20006",
       "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "",
       "altTitles": [
         "Risky Woods"
       ]
@@ -1162,37 +1488,49 @@
       "title": "Jewel Master",
       "releaseDate": "1991-08-30",
       "serial": "G-4047",
-      "rating": ""
+      "rating": "",
+      "developer": "AmusementCategory :External JPEG referenceCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Joe Montana Football (Mega Drive)",
       "releaseDate": "1991-03-01",
       "serial": "G-4045",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "Joe Montana II Sports Talk Football",
       "releaseDate": "1992-01-24",
       "serial": "G-4065",
-      "rating": ""
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": ""
     },
     {
       "title": "Jordan vs Bird",
       "releaseDate": "1993-09-24",
       "serial": "EM20022",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Judge Dredd",
       "releaseDate": "1995-09-01",
       "serial": "T-81203",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Interactive Studios",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "JuJu Densetsu",
-      "releaseDate": "1992-01-31",
-      "serial": "G-4064",
+      "releaseDate": "",
+      "serial": "G-4064}",
       "rating": "",
+      "developer": "Santos",
+      "publisher": "Sega",
       "altTitles": [
         "Toki: Going Ape Spit"
       ]
@@ -1201,13 +1539,17 @@
       "title": "Junction",
       "releaseDate": "1990-11-25",
       "serial": "T-22023",
-      "rating": ""
+      "rating": "",
+      "developer": "Micronet",
+      "publisher": "Micronet"
     },
     {
       "title": "Jungle Strike: Uketsugareta Kyouki",
       "releaseDate": "1993-12-17",
       "serial": "EM20020",
       "rating": "",
+      "developer": "Granite Bay Software",
+      "publisher": "Electronic Arts Victor",
       "altTitles": [
         "Jungle Strike"
       ]
@@ -1216,28 +1558,36 @@
       "title": "Jurassic Park (Mega Drive)",
       "releaseDate": "1993-08-27",
       "serial": "G-4109",
-      "rating": ""
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Jusou Kihei Leynos",
       "releaseDate": "1990-03-16",
       "serial": "T-25013",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Extreme",
       "altTitles": [
         "Target Earth"
       ]
     },
     {
       "title": "Justice League Task Force",
-      "releaseDate": "1995-09-01",
-      "serial": "T-81213",
-      "rating": "All ages"
+      "releaseDate": "",
+      "serial": "T-81213}",
+      "rating": "All ages",
+      "developer": "Condor",
+      "publisher": ""
     },
     {
       "title": "Juuouki",
       "releaseDate": "1988-11-27",
       "serial": "G-4001",
       "rating": "",
+      "developer": "Bits Laboratory",
+      "publisher": "Asmik",
       "altTitles": [
         "Altered Beast"
       ]
@@ -1246,43 +1596,57 @@
       "title": "Ka-Ge-Ki",
       "releaseDate": "1991-04-26",
       "serial": "T-28013",
-      "rating": ""
+      "rating": "",
+      "developer": "Mecano Associates",
+      "publisher": ""
     },
     {
       "title": "Kidou Keisatsu Patlabor: 98-Shiki Kidou Seyo!",
       "releaseDate": "1992-10-23",
       "serial": "T-16013",
-      "rating": ""
+      "rating": "",
+      "developer": "Advance Communication",
+      "publisher": "Ma-Ba"
     },
     {
       "title": "King of the Monsters",
-      "releaseDate": "1993-11-26",
-      "serial": "G-4104",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "G-4104}",
+      "rating": "",
+      "developer": "SPS",
+      "publisher": ""
     },
     {
       "title": "King Salmon",
       "releaseDate": "1992-09-26",
       "serial": "T-28053",
-      "rating": ""
+      "rating": "",
+      "developer": "HOT-B",
+      "publisher": ""
     },
     {
       "title": "Kishi Densetsu",
-      "releaseDate": "1993-07-30",
-      "serial": "T-46033",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-46033}",
+      "rating": "",
+      "developer": "Geo Factory",
+      "publisher": "Kodansha Souken"
     },
     {
       "title": "Klax (Namco)",
       "releaseDate": "1990-09-07",
       "serial": "T-14063",
-      "rating": ""
+      "rating": "",
+      "developer": "Namco",
+      "publisher": "Namco"
     },
     {
       "title": "Koutetsu Teikoku",
-      "releaseDate": "1992-03-13",
-      "serial": "T-28033",
+      "releaseDate": "",
+      "serial": "T-28033}",
       "rating": "",
+      "developer": "HOT-B",
+      "publisher": "",
       "altTitles": [
         "The Steel Empire"
       ]
@@ -1291,13 +1655,17 @@
       "title": "Kujaku Ou 2: Geneijou",
       "releaseDate": "1989-11-25",
       "serial": "G-4017",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Kuuga: Operation Code \"Vapor Trail\"",
-      "releaseDate": "1991-08-02",
-      "serial": "T-49043",
+      "releaseDate": "",
+      "serial": "T-49043}",
       "rating": "",
+      "developer": "Data East",
+      "publisher": "",
       "altTitles": [
         "Vapor Trail: Hyper Offence Formation"
       ]
@@ -1306,13 +1674,17 @@
       "title": "Kyuukai Douchuuki",
       "releaseDate": "1991-07-12",
       "serial": "T-14103",
-      "rating": ""
+      "rating": "",
+      "developer": "Namco",
+      "publisher": "Namco"
     },
     {
       "title": "Kyuukyoku Tiger",
       "releaseDate": "1991-02-22",
       "serial": "T-24033",
       "rating": "",
+      "developer": "GRC",
+      "publisher": "Treco",
       "altTitles": [
         "Twin Cobra"
       ]
@@ -1322,6 +1694,8 @@
       "releaseDate": "1992-10-30",
       "serial": "G-5517",
       "rating": "",
+      "developer": "Climax Entertainment",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Landstalker: The Treasures of King Nole"
       ]
@@ -1330,52 +1704,68 @@
       "title": "Langrisser",
       "releaseDate": "1991-04-26",
       "serial": "T-25103",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "NCS"
     },
     {
       "title": "Langrisser II",
-      "releaseDate": "1994-08-26",
-      "serial": "T-25143",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-25143}",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Masaya"
     },
     {
       "title": "Lemmings",
-      "releaseDate": "1992-11-20",
-      "serial": "T-15063",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-15063}",
+      "rating": "",
+      "developer": "DMA Design",
+      "publisher": ""
     },
     {
       "title": "Lethal Enforcers",
       "releaseDate": "1993-12-10",
       "serial": "T-95073",
-      "rating": ""
+      "rating": "",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "LHX Attack Chopper",
       "releaseDate": "1993-06-04",
       "serial": "EM20016",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "Light Crusader",
       "releaseDate": "1995-05-26",
       "serial": "G-5545",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Lion King",
       "releaseDate": "1994-12-09",
       "serial": "T-70083",
       "rating": "",
+      "developer": "Disney Software",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "The Lion King"
       ]
     },
     {
       "title": "Lord Monarch",
-      "releaseDate": "1994-06-24",
-      "serial": "G-5534",
+      "releaseDate": "",
+      "serial": "G-5534}",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Nihon Falcom",
       "altTitles": [
         "Lord Monarch: Tokoton Sentou Densetsu"
       ]
@@ -1384,13 +1774,17 @@
       "title": "Magical Hat no Buttobi Turbo! Daibouken",
       "releaseDate": "1990-12-15",
       "serial": "G-4041",
-      "rating": ""
+      "rating": "",
+      "developer": "VIC Tokai",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Magical Kid Taruruto",
       "releaseDate": "1992-04-24",
       "serial": "G-4068",
       "rating": "",
+      "developer": "",
+      "publisher": "",
       "altTitles": [
         "Magical Taruruto-kun (Mega Drive)"
       ]
@@ -1399,19 +1793,25 @@
       "title": "Mahjong Cop Ryuu: Hakurou no Yabou",
       "releaseDate": "1989-12-14",
       "serial": "G-4015",
-      "rating": ""
+      "rating": "",
+      "developer": "Whiteboard",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Mamono Hunter Youko: Dai 7 no Keishou",
       "releaseDate": "1991-03-22",
       "serial": "T-25053",
-      "rating": ""
+      "rating": "",
+      "developer": "KLON",
+      "publisher": "Masaya"
     },
     {
       "title": "Maou Renjishi",
       "releaseDate": "1991-10-25",
       "serial": "T-11143",
       "rating": "",
+      "developer": "KID",
+      "publisher": "Taito",
       "altTitles": [
         "Mystical Fighter"
       ]
@@ -1420,37 +1820,49 @@
       "title": "Marble Madness",
       "releaseDate": "1993-08-13",
       "serial": "T-48113",
-      "rating": ""
+      "rating": "",
+      "developer": "Tengen",
+      "publisher": "Tengen"
     },
     {
       "title": "Marvel Land",
       "releaseDate": "1991-06-28",
       "serial": "T-14093",
-      "rating": ""
+      "rating": "",
+      "developer": "Namco",
+      "publisher": "Namco"
     },
     {
       "title": "Master of Monsters",
       "releaseDate": "1991-07-26",
       "serial": "T-63013",
-      "rating": ""
+      "rating": "",
+      "developer": "ISCO",
+      "publisher": ""
     },
     {
       "title": "Master of Weapon",
       "releaseDate": "1991-09-27",
       "serial": "T-11063",
-      "rating": ""
+      "rating": "",
+      "developer": "KID",
+      "publisher": "Taito"
     },
     {
       "title": "Maten no Soumetsu",
-      "releaseDate": "1993-12-29",
-      "serial": "T-46023",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-46023}",
+      "rating": "",
+      "developer": "Geo FactoryCategory :Live link reference",
+      "publisher": "Kodansha Souken"
     },
     {
       "title": "MazinSaga",
       "releaseDate": "1993-02-26",
       "serial": "G-4078",
       "rating": "",
+      "developer": "Almanic",
+      "publisher": "",
       "altTitles": [
         "Mazin Saga: Mutant Fighter"
       ]
@@ -1459,31 +1871,41 @@
       "title": "McDonald's Treasure Land Adventure",
       "releaseDate": "1993-09-23",
       "serial": "G-4102",
-      "rating": ""
+      "rating": "",
+      "developer": "Treasure",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Mega Anser (software)",
       "releaseDate": "1990",
       "serial": "G-4502",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Mega Lo Mania",
       "releaseDate": "1993-04-23",
       "serial": "T-68053",
-      "rating": ""
+      "rating": "",
+      "developer": "Sensible Software",
+      "publisher": ""
     },
     {
       "title": "Megapanel",
       "releaseDate": "1990-11-22",
       "serial": "T-14073",
-      "rating": ""
+      "rating": "",
+      "developer": "Namco",
+      "publisher": "Namco"
     },
     {
       "title": "MegaTrax",
       "releaseDate": "1991-08-06",
       "serial": "T-14113",
       "rating": "",
+      "developer": "Now Production",
+      "publisher": "",
       "altTitles": [
         "Quad Challenge"
       ]
@@ -1492,19 +1914,25 @@
       "title": "Metal Fangs",
       "releaseDate": "1993-12-17",
       "serial": "T-60033",
-      "rating": ""
+      "rating": "",
+      "developer": "Genki",
+      "publisher": "Victor Entertainment"
     },
     {
       "title": "Michael Jackson's Moonwalker",
       "releaseDate": "1990-08-25",
       "serial": "G-4028",
-      "rating": ""
+      "rating": "",
+      "developer": "Arc",
+      "publisher": ""
     },
     {
       "title": "Mickey Mania",
       "releaseDate": "1995-03-31",
       "serial": "G-4131",
       "rating": "All ages",
+      "developer": "Disney Software",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Mickey Mania: The Timeless Adventures of Mickey Mouse"
       ]
@@ -1514,6 +1942,8 @@
       "releaseDate": "1994-12-16",
       "serial": "T-12063",
       "rating": "",
+      "developer": "Capcom",
+      "publisher": "Capcom",
       "altTitles": [
         "The Great Circus Mystery Starring Mickey & Minnie"
       ]
@@ -1522,19 +1952,25 @@
       "title": "Midnight Resistance",
       "releaseDate": "1991-03-29",
       "serial": "T-13043",
-      "rating": ""
+      "rating": "",
+      "developer": "ISCO",
+      "publisher": "Data East"
     },
     {
       "title": "MiG-29 Fighter Pilot",
       "releaseDate": "1993-11-26",
       "serial": "T-48133",
-      "rating": ""
+      "rating": "",
+      "developer": "Domark",
+      "publisher": ""
     },
     {
       "title": "Minato no Traysia",
       "releaseDate": "1992-02-14",
       "serial": "T-49073",
       "rating": "",
+      "developer": "Nihon Telenet",
+      "publisher": "Riot",
       "altTitles": [
         "Traysia"
       ]
@@ -1543,19 +1979,25 @@
       "title": "Monster World IV",
       "releaseDate": "1994-04-01",
       "serial": "G-5519",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "ININ Games"
     },
     {
       "title": "Mortal Kombat",
       "releaseDate": "1994-05-27",
       "serial": "T-81013",
-      "rating": ""
+      "rating": "",
+      "developer": "Grey Team",
+      "publisher": ""
     },
     {
       "title": "Mortal Kombat II: Ultimate Godly Fist",
       "releaseDate": "1994-09-09",
       "serial": "T-81093",
       "rating": "",
+      "developer": "Probe Entertainment",
+      "publisher": "Acclaim Japan",
       "altTitles": [
         "Mortal Kombat II"
       ]
@@ -1565,6 +2007,8 @@
       "releaseDate": "1991-12-27",
       "serial": "T-49083",
       "rating": "",
+      "developer": "D4 Enterprise",
+      "publisher": "Riot",
       "altTitles": [
         "Valis: The Fantasm Soldier"
       ]
@@ -1574,6 +2018,8 @@
       "releaseDate": "1990-12-21",
       "serial": "T-35013",
       "rating": "",
+      "developer": "Compile",
+      "publisher": "Naxat Soft",
       "altTitles": [
         "M.U.S.H.A."
       ]
@@ -1582,25 +2028,33 @@
       "title": "Mutant League Football",
       "releaseDate": "1993-09-10",
       "serial": "EM20018",
-      "rating": ""
+      "rating": "",
+      "developer": "Mutant Productions",
+      "publisher": ""
     },
     {
       "title": "Naisu-kun Mini",
       "releaseDate": "1990",
       "serial": "G-4519",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": "Nagoya Bank"
     },
     {
       "title": "Nakajima Satoru Kanshuu F1 Grand Prix",
       "releaseDate": "1991-12-20",
       "serial": "T-72013",
-      "rating": ""
+      "rating": "",
+      "developer": "Varie",
+      "publisher": "Varie"
     },
     {
       "title": "Nakajima Satoru Kanshuu F1 Hero MD",
       "releaseDate": "1992-05-15",
       "serial": "T-72023",
       "rating": "",
+      "developer": "Aisystem TokyoCategory :Live link reference",
+      "publisher": "",
       "altTitles": [
         "Ferrari Grand Prix Challenge"
       ]
@@ -1609,25 +2063,33 @@
       "title": "Nakajima Satoru Kanshuu F1 Super License",
       "releaseDate": "1992-12-11",
       "serial": "T-72033",
-      "rating": ""
+      "rating": "",
+      "developer": "AprinetCategory :Live link reference",
+      "publisher": "Varie"
     },
     {
       "title": "NBA Jam",
       "releaseDate": "1994-04-29",
       "serial": "T-81033",
-      "rating": ""
+      "rating": "",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "NBA Jam Tournament Edition",
       "releaseDate": "1995-02-24",
       "serial": "T-81143",
-      "rating": ""
+      "rating": "",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "NBA Playoffs: Bulls vs Blazers",
       "releaseDate": "1993-07-30",
       "serial": "EM20017",
       "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "",
       "altTitles": [
         "Bulls versus Blazers and the NBA Playoffs"
       ]
@@ -1637,6 +2099,8 @@
       "releaseDate": "1994-07-01",
       "serial": "EM20028",
       "rating": "",
+      "developer": "EA Creative Development",
+      "publisher": "",
       "altTitles": [
         "NBA Showdown '94"
       ]
@@ -1646,6 +2110,8 @@
       "releaseDate": "1993-04-02",
       "serial": "EM20012",
       "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "",
       "altTitles": [
         "Bulls vs Lakers and the NBA Playoffs"
       ]
@@ -1654,25 +2120,33 @@
       "title": "Nekketsu Kouko Dodgeball Bu: Soccer Hen MD",
       "releaseDate": "1992-08-07",
       "serial": "T-74033",
-      "rating": ""
+      "rating": "",
+      "developer": "Aspect",
+      "publisher": "PALSOFT"
     },
     {
       "title": "New 3D Golf Simulation: Devil's Course",
       "releaseDate": "1994-01-28",
       "serial": "G-5527",
-      "rating": ""
+      "rating": "",
+      "developer": "T&E Soft",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "New 3D Golf Simulation: Harukanaru Augusta",
       "releaseDate": "1993-12-17",
       "serial": "T-114033",
-      "rating": ""
+      "rating": "",
+      "developer": "T&E Soft",
+      "publisher": "T&E Soft"
     },
     {
       "title": "New 3D Golf Simulation: Pebble Beach no Hatou",
       "releaseDate": "1993-10-29",
       "serial": "G-5525",
       "rating": "",
+      "developer": "T&E Soft",
+      "publisher": "Sega",
       "altTitles": [
         "Pebble Beach Golf Links (Mega Drive)"
       ]
@@ -1681,13 +2155,17 @@
       "title": "New 3D Golf Simulation: Waialae no Kiseki",
       "releaseDate": "1994-02-25",
       "serial": "G-5529",
-      "rating": ""
+      "rating": "",
+      "developer": "T&E Soft",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "NFL Football '94",
-      "releaseDate": "1994-02-04",
-      "serial": "G-5535",
+      "releaseDate": "",
+      "serial": "G-5535}",
       "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": "",
       "altTitles": [
         "NFL Football '94 Starring Joe Montana"
       ]
@@ -1697,6 +2175,8 @@
       "releaseDate": "1994-02-18",
       "serial": "EM20026",
       "rating": "",
+      "developer": "High Score Productions",
+      "publisher": "",
       "altTitles": [
         "Madden NFL '94"
       ]
@@ -1705,19 +2185,25 @@
       "title": "NFL Quarterback Club (Mega Drive)",
       "releaseDate": "1995-02-24",
       "serial": "T-81153",
-      "rating": ""
+      "rating": "",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
     },
     {
       "title": "NHK Taiga Drama: Taiheiki",
       "releaseDate": "1991-12-13",
       "serial": "G-5511",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Nigel Mansell IndyCar",
       "releaseDate": "1994-12-16",
       "serial": "T-81123",
       "rating": "",
+      "developer": "Gremlin Graphics Software",
+      "publisher": "Acclaim Entertainment",
       "altTitles": [
         "Newman-Haas IndyCar Featuring Nigel Mansell"
       ]
@@ -1726,31 +2212,41 @@
       "title": "Nikkan Sports Pro Yakyuu VAN",
       "releaseDate": "1991-04-06",
       "serial": "G-4522",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega CS",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Ninja Burai Densetsu",
       "releaseDate": "1991-12-05",
       "serial": "G-4524",
-      "rating": ""
+      "rating": "",
+      "developer": "SIMS",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Nobunaga no Yabou: Bushou Fuuunroku",
       "releaseDate": "1991-12-20",
       "serial": "T-76013",
-      "rating": ""
+      "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Nobunaga no Yabou: Haouden",
       "releaseDate": "1994-02-25",
       "serial": "T-76153",
-      "rating": ""
+      "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Nobunaga no Yabou: Zenkoku Ban",
       "releaseDate": "1993-09-15",
       "serial": "T-76133",
       "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "Nobunaga's Ambition"
       ]
@@ -1759,43 +2255,57 @@
       "title": "Olympic Gold",
       "releaseDate": "1992-07-24",
       "serial": "G-4081",
-      "rating": ""
+      "rating": "",
+      "developer": "Tiertex",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Osaka Ginkou no Home Banking Service My Line",
       "releaseDate": "1990",
       "serial": "G-4517",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Osomatsu-kun Hachamecha Gekijou",
-      "releaseDate": "1988-12-24",
-      "serial": "G-4005",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "G-4005}",
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "OutRun",
       "releaseDate": "1991-08-09",
       "serial": "G-4052",
-      "rating": ""
+      "rating": "",
+      "developer": "Hertz",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "OutRun 2019",
       "releaseDate": "1993-03-26",
       "serial": "T-44033",
-      "rating": ""
+      "rating": "",
+      "developer": "Hertz",
+      "publisher": ""
     },
     {
       "title": "OutRunners",
       "releaseDate": "1994-05-13",
       "serial": "G-4119",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega AM1",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Ozaki Naomichi no Super Masters",
       "releaseDate": "1989-09-09",
       "serial": "G-4014",
       "rating": "",
+      "developer": "Motivetime",
+      "publisher": "Elite Systems",
       "altTitles": [
         "Arnold Palmer Tournament Golf"
       ]
@@ -1804,49 +2314,65 @@
       "title": "Pachinko Kuunyan",
       "releaseDate": "1992-12-18",
       "serial": "T-73013",
-      "rating": ""
+      "rating": "",
+      "developer": "I.S.C.",
+      "publisher": "Soft Vision"
     },
     {
       "title": "Panorama Cotton",
       "releaseDate": "1994-08-12",
       "serial": "T-15103",
-      "rating": ""
+      "rating": "",
+      "developer": "Success",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Paperboy",
       "releaseDate": "1992-06-26",
       "serial": "T-48043",
-      "rating": ""
+      "rating": "",
+      "developer": "Motivetime",
+      "publisher": "Tengen"
     },
     {
       "title": "Party Quiz Mega Q",
       "releaseDate": "1993-11-05",
       "serial": "G-4107",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Pepenga Pengo",
       "releaseDate": "1995-12-22",
       "serial": "G-4133",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "JSH",
+      "publisher": "Sega Enterprises"
     },
     {
       "title": "PGA Tour Golf II",
       "releaseDate": "1993-04-16",
       "serial": "EM20009",
-      "rating": ""
+      "rating": "",
+      "developer": "PolygamesCategory :Live link reference",
+      "publisher": "Electronic Arts Victor"
     },
     {
       "title": "Phantasy Star",
       "releaseDate": "1994-04-02",
       "serial": "G-4534",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Phantasy Star II: Kaerazaru Toki no Owari ni",
       "releaseDate": "1989-03-21",
       "serial": "G-5501",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Phantasy Star II"
       ]
@@ -1856,6 +2382,8 @@
       "releaseDate": "1993-12-17",
       "serial": "G-5524",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Phantasy Star IV: The End of the Millennium"
       ]
@@ -1864,31 +2392,41 @@
       "title": "Phelios",
       "releaseDate": "1990-07-20",
       "serial": "T-14013",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Bandai Namco Games"
     },
     {
       "title": "Pit-Fighter",
       "releaseDate": "1992-03-27",
       "serial": "T-48033",
-      "rating": ""
+      "rating": "",
+      "developer": "Sterling Silver Software",
+      "publisher": "Domark"
     },
     {
       "title": "Pitfall: The Mayan Adventure",
       "releaseDate": "",
       "serial": "",
-      "rating": ""
+      "rating": "",
+      "developer": "Big Bang Software",
+      "publisher": "Activision"
     },
     {
       "title": "Populous",
       "releaseDate": "1991-08-09",
       "serial": "G-4057",
-      "rating": ""
+      "rating": "",
+      "developer": "Bullfrog Productions",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Power Athlete",
       "releaseDate": "1992-12-11",
       "serial": "T-33033",
       "rating": "",
+      "developer": "Inter State",
+      "publisher": "",
       "altTitles": [
         "Deadly Moves"
       ]
@@ -1897,13 +2435,17 @@
       "title": "Power Monger",
       "releaseDate": "1993-06-18",
       "serial": "EM20011",
-      "rating": ""
+      "rating": "",
+      "developer": "Bullfrog Productions",
+      "publisher": "Electronic Arts Victor"
     },
     {
       "title": "Pro Football",
       "releaseDate": "1992-11-20",
       "serial": "EM20001",
       "rating": "",
+      "developer": "Park Place Productions",
+      "publisher": "",
       "altTitles": [
         "John Madden Football '92"
       ]
@@ -1913,6 +2455,8 @@
       "releaseDate": "1992-11-20",
       "serial": "EM20002",
       "rating": "",
+      "developer": "Park Place Production Team",
+      "publisher": "",
       "altTitles": [
         "EA Hockey"
       ]
@@ -1921,61 +2465,81 @@
       "title": "Pro Striker Final Stage",
       "releaseDate": "1995-08-04",
       "serial": "G-5547",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Sega CS3",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Pro Yakyuu Super League '91",
       "releaseDate": "1991-08-30",
       "serial": "G-4529",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 6",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Psy-O-Blade",
       "releaseDate": "1990-04-27",
       "serial": "T-26013",
-      "rating": ""
+      "rating": "",
+      "developer": "GRC",
+      "publisher": "Sigma Enterprises"
     },
     {
       "title": "Pulseman",
       "releaseDate": "1994-07-22",
       "serial": "G-4098",
-      "rating": ""
+      "rating": "",
+      "developer": "Game Freak",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Puyo Puyo",
       "releaseDate": "1992-12-18",
       "serial": "G-4082",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "D4 Enterprise"
     },
     {
       "title": "Puyo Puyo Tsuu",
       "releaseDate": "1994-12-02",
       "serial": "T-66013",
-      "rating": ""
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Bandai"
     },
     {
       "title": "Puzzle & Action: Ichidant-R",
       "releaseDate": "1995-01-13",
       "serial": "G-4128",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "CRI",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Puzzle & Action: Tant-R",
       "releaseDate": "1994-04-01",
       "serial": "G-4118",
-      "rating": ""
+      "rating": "",
+      "developer": "CRI",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "R.B.I. Baseball 4",
       "releaseDate": "1992-12-18",
       "serial": "T-48063",
-      "rating": ""
+      "rating": "",
+      "developer": "Tengen",
+      "publisher": "Tengen"
     },
     {
       "title": "Raiden Densetsu",
       "releaseDate": "1991-07-06",
       "serial": "T-22043",
       "rating": "",
+      "developer": "Beyond Interactive",
+      "publisher": "",
       "altTitles": [
         "Raiden Trad"
       ]
@@ -1984,43 +2548,57 @@
       "title": "Rainbow Islands Extra",
       "releaseDate": "1990-10-05",
       "serial": "T-11073",
-      "rating": ""
+      "rating": "",
+      "developer": "Aisystem Tokyo",
+      "publisher": "Taito"
     },
     {
       "title": "Rambo III (Mega Drive)",
       "releaseDate": "1989-10-21",
       "serial": "G-4010",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
     },
     {
       "title": "Rampart",
       "releaseDate": "1992-12-11",
       "serial": "T-48053",
-      "rating": ""
+      "rating": "",
+      "developer": "Developer ResourcesCategory :Live link reference",
+      "publisher": "TengenCategory :Live link reference"
     },
     {
       "title": "Ransei no Hasha",
       "releaseDate": "1991-11-29",
       "serial": "T-20053",
-      "rating": ""
+      "rating": "",
+      "developer": "SPS",
+      "publisher": "Asmik"
     },
     {
       "title": "Rastan Saga II",
       "releaseDate": "1990-08-10",
       "serial": "T-11043",
-      "rating": ""
+      "rating": "",
+      "developer": "Opera House",
+      "publisher": "Taito"
     },
     {
       "title": "Rent A Hero",
       "releaseDate": "1991-09-20",
       "serial": "G-5508",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 8",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Ristar The Shooting Star",
       "releaseDate": "1995-02-17",
       "serial": "G-4126",
       "rating": "All ages",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Ristar"
       ]
@@ -2029,37 +2607,49 @@
       "title": "Road Rash",
       "releaseDate": "1992-11-20",
       "serial": "EM20003",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "U.S. Gold"
     },
     {
       "title": "Road Rash II",
       "releaseDate": "1993-07-23",
       "serial": "EM20014",
-      "rating": ""
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
     },
     {
       "title": "RoadBlasters",
       "releaseDate": "1992-02-28",
       "serial": "T-48023",
-      "rating": ""
+      "rating": "",
+      "developer": "Sterling Silver Software",
+      "publisher": "Tengen"
     },
     {
       "title": "RoboCop Versus The Terminator",
-      "releaseDate": "1994-05-28",
-      "serial": "T-70043",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-70043}",
+      "rating": "",
+      "developer": "NMS Software",
+      "publisher": ""
     },
     {
       "title": "Rocket Knight Adventures",
       "releaseDate": "1993-08-06",
       "serial": "T-95063",
-      "rating": ""
+      "rating": "",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Rockman Mega World",
       "releaseDate": "1994-10-21",
       "serial": "T-12053",
       "rating": "",
+      "developer": "Minakuchi Engineering",
+      "publisher": "Capcom",
       "altTitles": [
         "Mega Man: The Wily Wars"
       ]
@@ -2068,13 +2658,17 @@
       "title": "Rolling Thunder 2",
       "releaseDate": "1991-11-19",
       "serial": "T-14133",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Bandai Namco Games"
     },
     {
       "title": "Royal Blood",
       "releaseDate": "1992-06-25",
       "serial": "T-76063",
       "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "Gemfire"
       ]
@@ -2084,6 +2678,8 @@
       "releaseDate": "1991-11-15",
       "serial": "T-11153",
       "rating": "",
+      "developer": "I.T.L",
+      "publisher": "",
       "altTitles": [
         "Growl"
       ]
@@ -2093,6 +2689,8 @@
       "releaseDate": "1994-01-14",
       "serial": "G-4113",
       "rating": "",
+      "developer": "SNK",
+      "publisher": "",
       "altTitles": [
         "Art of Fighting"
       ]
@@ -2101,13 +2699,17 @@
       "title": "Saint Sword",
       "releaseDate": "1991-06-28",
       "serial": "T-11133",
-      "rating": ""
+      "rating": "",
+      "developer": "Cyclone System",
+      "publisher": ""
     },
     {
       "title": "Same! Same! Same!",
       "releaseDate": "1990-11-02",
       "serial": "T-40013",
       "rating": "",
+      "developer": "Toaplan",
+      "publisher": "",
       "altTitles": [
         "Fire Shark"
       ]
@@ -2117,6 +2719,8 @@
       "releaseDate": "1994-11-19",
       "serial": "G-4127",
       "rating": "",
+      "developer": "Funcom",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Samurai Shodown"
       ]
@@ -2126,6 +2730,8 @@
       "releaseDate": "1991-12-26",
       "serial": "T-76023",
       "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "Romance of the Three Kingdoms II"
       ]
@@ -2135,6 +2741,8 @@
       "releaseDate": "1992-11-08",
       "serial": "T-76093",
       "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "Romance of the Three Kingdoms III: Dragon of Destiny"
       ]
@@ -2143,19 +2751,25 @@
       "title": "Sangokushi Retsuden: Ransei no Eiyuutachi",
       "releaseDate": "1991-04-29",
       "serial": "G-5504",
-      "rating": ""
+      "rating": "",
+      "developer": "Tose",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Sansan",
       "releaseDate": "1994-09",
       "serial": "T-147013",
-      "rating": ""
+      "rating": "",
+      "developer": "White Box",
+      "publisher": "Sansan (company)"
     },
     {
       "title": "SD Valis",
       "releaseDate": "1992-02-14",
       "serial": "T-49103",
       "rating": "",
+      "developer": "D4 Enterprise",
+      "publisher": "Edia",
       "altTitles": [
         "Syd of Valis"
       ]
@@ -2164,13 +2778,17 @@
       "title": "Sega Game Toshokan",
       "releaseDate": "1990-11-03",
       "serial": "G-4503",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Senjou no Ookami II",
       "releaseDate": "1991-09-27",
       "serial": "G-4051",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Capcom",
       "altTitles": [
         "Mercs"
       ]
@@ -2179,13 +2797,17 @@
       "title": "Shadow Dancer: The Secret of Shinobi",
       "releaseDate": "1990-12-01",
       "serial": "G-4043",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Shadow of the Beast: Mashou no Okite",
       "releaseDate": "1992-03-27",
       "serial": "T-60023",
       "rating": "",
+      "developer": "Psygnosis",
+      "publisher": "TecMagik",
       "altTitles": [
         "Shadow of the Beast"
       ]
@@ -2195,6 +2817,8 @@
       "releaseDate": "1990-11-21",
       "serial": "",
       "rating": "",
+      "developer": "Sega R&D 9",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Fatal Labyrinth"
       ]
@@ -2204,6 +2828,8 @@
       "releaseDate": "1990-01-30",
       "serial": "T-25023",
       "rating": "",
+      "developer": "NCS",
+      "publisher": "",
       "altTitles": [
         "Shove It! ...The Warehouse Game"
       ]
@@ -2212,13 +2838,17 @@
       "title": "Shikinjoh",
       "releaseDate": "1991-04-27",
       "serial": "T-15053",
-      "rating": ""
+      "rating": "",
+      "developer": "Sunsoft",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Shin Souseiki Ragnacenty",
       "releaseDate": "1994-06-17",
       "serial": "G-5536",
       "rating": "",
+      "developer": "Nextech",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Crusader of Centy"
       ]
@@ -2228,6 +2858,8 @@
       "releaseDate": "1991-03-29",
       "serial": "G-5506",
       "rating": "",
+      "developer": "Climax Entertainment",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Shining in the Darkness"
       ]
@@ -2237,6 +2869,8 @@
       "releaseDate": "1993-10-01",
       "serial": "G-5521",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Shining Force II"
       ]
@@ -2246,6 +2880,8 @@
       "releaseDate": "1992-03-20",
       "serial": "G-5512",
       "rating": "",
+      "developer": "Climax Entertainment",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Shining Force"
       ]
@@ -2255,6 +2891,8 @@
       "releaseDate": "1990-08-10",
       "serial": "T-26023",
       "rating": "",
+      "developer": "Sigma Pro-Tech",
+      "publisher": "",
       "altTitles": [
         "Shadow Blasters"
       ]
@@ -2263,76 +2901,100 @@
       "title": "Shougi no Hoshi",
       "releaseDate": "1991-10-31",
       "serial": "T-67013",
-      "rating": ""
+      "rating": "",
+      "developer": "Home Data",
+      "publisher": "Home Data"
     },
     {
       "title": "Shura no Mon",
       "releaseDate": "1992-08-07",
       "serial": "G-4073",
-      "rating": ""
+      "rating": "",
+      "developer": "SIMS",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Side Pocket",
       "releaseDate": "1992-12-11",
       "serial": "T-13083",
-      "rating": ""
+      "rating": "",
+      "developer": "Data East",
+      "publisher": ""
     },
     {
       "title": "Slap Fight MD",
       "releaseDate": "1993-06-11",
       "serial": "T-48093",
-      "rating": ""
+      "rating": "",
+      "developer": "M.N.M Software",
+      "publisher": "Tengen"
     },
     {
       "title": "Slime World",
       "releaseDate": "1992-04-30",
       "serial": "T-49123",
       "rating": "",
+      "developer": "Micro World",
+      "publisher": "",
       "altTitles": [
         "Todd's Adventures in Slime World"
       ]
     },
     {
       "title": "Snow Bros.",
-      "releaseDate": "1993-05-28",
-      "serial": "T-48083",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-48083}",
+      "rating": "",
+      "developer": "Toaplan",
+      "publisher": "Tengen"
     },
     {
       "title": "Sonic & Knuckles",
       "releaseDate": "1994-10-28",
       "serial": "G-4124",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Sonic the Hedgehog (Mega Drive)",
       "releaseDate": "1991-07-26",
       "serial": "G-4049",
-      "rating": ""
+      "rating": "",
+      "developer": "Backbone Entertainment",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Sonic the Hedgehog 2 (Mega Drive)",
       "releaseDate": "1992-11-21",
       "serial": "G-4088",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Sonic the Hedgehog 3",
       "releaseDate": "1994-05-27",
       "serial": "G-5531",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Sonic the Hedgehog Spinball",
       "releaseDate": "1993-12-10",
       "serial": "G-4112",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
     },
     {
       "title": "Sorcer Kingdom",
       "releaseDate": "1992-02-07",
       "serial": "T-25113",
       "rating": "",
+      "developer": "Technical WaveCategory :Live link reference",
+      "publisher": "",
       "altTitles": [
         "Sorcerer's Kingdom"
       ]
@@ -2341,13 +3003,17 @@
       "title": "Sorcerian",
       "releaseDate": "1990-02-24",
       "serial": "G-4504",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Nihon Falcom"
     },
     {
       "title": "Sorcery Saga I",
       "releaseDate": "1996-03-22",
       "serial": "T-66023",
       "rating": "",
+      "developer": "Compile",
+      "publisher": "Compile",
       "altTitles": [
         "Madou Monogatari I"
       ]
@@ -2357,6 +3023,8 @@
       "releaseDate": "1993-11-19",
       "serial": "EM20019",
       "rating": "",
+      "developer": "Chris Gray Enterprises",
+      "publisher": "",
       "altTitles": [
         "B.O.B."
       ]
@@ -2365,25 +3033,33 @@
       "title": "Space Harrier II",
       "releaseDate": "1988-10-29",
       "serial": "G-4002",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Space Invaders 90",
-      "releaseDate": "1990-09-07",
-      "serial": "T-11053",
-      "rating": ""
+      "releaseDate": "",
+      "serial": "T-11053}",
+      "rating": "",
+      "developer": "Taito",
+      "publisher": ""
     },
     {
       "title": "Sparkster: Rocket Knight Adventures 2",
       "releaseDate": "1994-09-23",
       "serial": "T-95103",
-      "rating": ""
+      "rating": "",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Speedball 2",
       "releaseDate": "1992-06-19",
       "serial": "T-68023",
       "rating": "",
+      "developer": "The Bitmap Brothers",
+      "publisher": "",
       "altTitles": [
         "Speedball 2: Brutal Deluxe"
       ]
@@ -2392,19 +3068,25 @@
       "title": "Spider-Man and Venom: Maximum Carnage",
       "releaseDate": "1995-05-26",
       "serial": "T-81256-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Software Creations",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "Spider-Man vs. The Kingpin",
       "releaseDate": "1991-10-18",
       "serial": "G-4058",
-      "rating": ""
+      "rating": "",
+      "developer": "Recreational Brainware",
+      "publisher": ""
     },
     {
       "title": "Splatterhouse Part 2",
       "releaseDate": "1992-08-04",
       "serial": "T-14143",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Bandai Namco Games",
       "altTitles": [
         "Splatterhouse 2"
       ]
@@ -2414,6 +3096,8 @@
       "releaseDate": "1993-03-19",
       "serial": "T-14153",
       "rating": "",
+      "developer": "Now Production",
+      "publisher": "Namco",
       "altTitles": [
         "Splatterhouse 3"
       ]
@@ -2422,25 +3106,33 @@
       "title": "Star Cruiser",
       "releaseDate": "1990-12-21",
       "serial": "T-25063",
-      "rating": ""
+      "rating": "",
+      "developer": "Arsys Software",
+      "publisher": "Masaya"
     },
     {
       "title": "Steel Talons",
       "releaseDate": "1993-06-25",
       "serial": "T-48103",
-      "rating": ""
+      "rating": "",
+      "developer": "Polygames",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Stormlord",
       "releaseDate": "1992-03-27",
       "serial": "T-49113",
-      "rating": ""
+      "rating": "",
+      "developer": "Punk Development",
+      "publisher": ""
     },
     {
       "title": "Street Fighter II' Plus",
       "releaseDate": "1993-09-28",
       "serial": "T-12033",
       "rating": "",
+      "developer": "Capcom",
+      "publisher": "Capcom",
       "altTitles": [
         "Street Fighter II': Special Champion Edition"
       ]
@@ -2449,13 +3141,17 @@
       "title": "Street Smart",
       "releaseDate": "1991-07-19",
       "serial": "T-24083",
-      "rating": ""
+      "rating": "",
+      "developer": "SNK",
+      "publisher": "Treco"
     },
     {
       "title": "Strider Hiryuu",
       "releaseDate": "1990-09-29",
       "serial": "G-4037",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Capcom",
       "altTitles": [
         "Strider"
       ]
@@ -2464,13 +3160,17 @@
       "title": "Sumisei Home Tanmatsu",
       "releaseDate": "1991",
       "serial": "G-5507",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Super Airwolf",
       "releaseDate": "1991-03-29",
       "serial": "T-29023",
       "rating": "",
+      "developer": "A.I",
+      "publisher": "Kyugo Trading",
       "altTitles": [
         "Cross Fire"
       ]
@@ -2479,25 +3179,33 @@
       "title": "Super Baseball 2020",
       "releaseDate": "1994-03-04",
       "serial": "EM20027",
-      "rating": ""
+      "rating": "",
+      "developer": "NuFX",
+      "publisher": ""
     },
     {
       "title": "Super Daisenryaku",
       "releaseDate": "1989-04-29",
       "serial": "G-4501",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2Category :Live link reference",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Super Fantasy Zone",
       "releaseDate": "1992-01-14",
       "serial": "T-15023",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Super H.Q.",
       "releaseDate": "1992-10-23",
       "serial": "T-11163",
       "rating": "",
+      "developer": "I.T.L",
+      "publisher": "Taito",
       "altTitles": [
         "Chase H.Q. II"
       ]
@@ -2506,85 +3214,113 @@
       "title": "Super Hang-On",
       "releaseDate": "1989-10-06",
       "serial": "G-4011",
-      "rating": ""
+      "rating": "",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Super Hydlide",
       "releaseDate": "1989-10-06",
       "serial": "T-20013",
-      "rating": ""
+      "rating": "",
+      "developer": "Asmik",
+      "publisher": "D4 Enterprise"
     },
     {
       "title": "Super League (Mega Drive)",
       "releaseDate": "1989-04-22",
       "serial": "G-4006",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega"
     },
     {
       "title": "Super Monaco GP",
       "releaseDate": "1990-08-09",
       "serial": "G-4026",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Super Real Basketball",
       "releaseDate": "1990-03-02",
       "serial": "G-4021",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
     },
     {
       "title": "Super Street Fighter II: The New Challengers",
       "releaseDate": "1994-06-25",
       "serial": "T-12043",
-      "rating": ""
+      "rating": "",
+      "developer": "Capcom",
+      "publisher": "Capcom"
     },
     {
       "title": "Super Thunder Blade",
       "releaseDate": "1988-10-29",
       "serial": "G-4003",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Super Volley Ball",
       "releaseDate": "1991-02-01",
       "serial": "T-30013",
-      "rating": ""
+      "rating": "",
+      "developer": "Khaos",
+      "publisher": ""
     },
     {
       "title": "Surging Aura",
       "releaseDate": "1995-03-17",
       "serial": "G-5522",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Japan Media Programming",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Sword of Sodan",
       "releaseDate": "1991-10-11",
       "serial": "G-4056",
-      "rating": ""
+      "rating": "",
+      "developer": "Innerprise Software",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "T2: The Arcade Game",
       "releaseDate": "1994-02-25",
       "serial": "T-81023",
-      "rating": ""
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": ""
     },
     {
       "title": "Taikou Risshiden",
       "releaseDate": "1993-05-28",
       "serial": "T-76123",
-      "rating": ""
+      "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei"
     },
     {
       "title": "Task Force Harrier EX",
       "releaseDate": "1991-12-20",
       "serial": "T-24053",
-      "rating": ""
+      "rating": "",
+      "developer": "JorudanCategory :Live link reference",
+      "publisher": "Treco"
     },
     {
       "title": "Tatsujin",
       "releaseDate": "1989-12-09",
       "serial": "G-4020",
       "rating": "",
+      "developer": "Toaplan",
+      "publisher": "",
       "altTitles": [
         "Truxton"
       ]
@@ -2593,37 +3329,49 @@
       "title": "Taz-Mania",
       "releaseDate": "1992-12-25",
       "serial": "G-4089",
-      "rating": ""
+      "rating": "",
+      "developer": "Recreational Brainware",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Tecmo Super Bowl",
       "releaseDate": "1993-11-26",
       "serial": "T-36023",
-      "rating": ""
+      "rating": "",
+      "developer": "Tecmo",
+      "publisher": "Tecmo"
     },
     {
       "title": "Tecmo Super Bowl II: Special Edition",
       "releaseDate": "1994-12-20",
       "serial": "T-36043",
-      "rating": ""
+      "rating": "",
+      "developer": "Tecmo",
+      "publisher": "Tecmo"
     },
     {
       "title": "Tecmo Super NBA Basketball",
       "releaseDate": "1994-03-04",
       "serial": "T-36033",
-      "rating": ""
+      "rating": "",
+      "developer": "Sculptured Software",
+      "publisher": "Tecmo"
     },
     {
       "title": "Tecmo World Cup '92",
       "releaseDate": "1992-01-31",
       "serial": "T-44023",
-      "rating": ""
+      "rating": "",
+      "developer": "HertzCategory :Live link reference",
+      "publisher": "SIMS"
     },
     {
       "title": "Teenage Mutant Ninja Turtles: Return of the Shredder",
       "releaseDate": "1992-12-22",
       "serial": "T-95013",
       "rating": "",
+      "developer": "Konami",
+      "publisher": "Konami",
       "altTitles": [
         "Teenage Mutant Ninja Turtles: The Hyperstone Heist"
       ]
@@ -2632,13 +3380,17 @@
       "title": "Teenage Mutant Ninja Turtles: Tournament Fighters",
       "releaseDate": "1993-12-03",
       "serial": "T-95053",
-      "rating": ""
+      "rating": "",
+      "developer": "Konami",
+      "publisher": "Konami"
     },
     {
       "title": "Teitoku no Ketsudan",
       "releaseDate": "1992-09-24",
       "serial": "T-76073",
       "rating": "",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "P.T.O.: Pacific Theater of Operations"
       ]
@@ -2647,37 +3399,49 @@
       "title": "Tel-Tel Mahjong",
       "releaseDate": "1990-06-08",
       "serial": "T-15033",
-      "rating": ""
+      "rating": "",
+      "developer": "Chatnoir",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Tel-Tel Stadium",
       "releaseDate": "1990-10-21",
       "serial": "T-15013",
-      "rating": ""
+      "rating": "",
+      "developer": "Sunsoft",
+      "publisher": "Sunsoft"
     },
     {
       "title": "Tetris",
       "releaseDate": "1989",
       "serial": "G-4007",
-      "rating": ""
+      "rating": "",
+      "developer": "Esco Boueki",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "The Flintstones (Taito)",
       "releaseDate": "1993-11-19",
       "serial": "T-11173",
-      "rating": ""
+      "rating": "",
+      "developer": "SantosCategory :Live link reference",
+      "publisher": "Taito"
     },
     {
       "title": "The Hybrid Front",
       "releaseDate": "1994-07-22",
       "serial": "G-5541",
-      "rating": ""
+      "rating": "",
+      "developer": "H.I.C.",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "The Kick Boxing",
       "releaseDate": "1993-01-29",
       "serial": "T-49143",
       "rating": "",
+      "developer": "Loriciel",
+      "publisher": "",
       "altTitles": [
         "Best of the Best: Championship Karate"
       ]
@@ -2687,6 +3451,8 @@
       "releaseDate": "1993-08-20",
       "serial": "EM20021",
       "rating": "",
+      "developer": "Raising Hell Software",
+      "publisher": "Electronic Arts Victor",
       "altTitles": [
         "Fatal Rewind"
       ]
@@ -2695,19 +3461,25 @@
       "title": "The NewZealand Story",
       "releaseDate": "1990-03-03",
       "serial": "T-11013",
-      "rating": ""
+      "rating": "",
+      "developer": "Taito",
+      "publisher": "Taito"
     },
     {
       "title": "The Ooze",
       "releaseDate": "1995-09-22",
       "serial": "G-4134",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega of America",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "The Story of Thor: Hikari o Tsugumono",
       "releaseDate": "1994-12-09",
       "serial": "G-5543",
       "rating": "All ages",
+      "developer": "Ancient",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "The Story of Thor: A Successor of the Light"
       ]
@@ -2717,6 +3489,8 @@
       "releaseDate": "1989-12-02",
       "serial": "G-4019",
       "rating": "",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "The Revenge of Shinobi"
       ]
@@ -2726,6 +3500,8 @@
       "releaseDate": "1993-07-23",
       "serial": "G-4085",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Shinobi III: Return of the Ninja Master"
       ]
@@ -2734,37 +3510,49 @@
       "title": "Thunder Force II",
       "releaseDate": "1989-06-15",
       "serial": "T-18013",
-      "rating": ""
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Thunder Force III",
       "releaseDate": "1990-06-08",
       "serial": "T-18033",
-      "rating": ""
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": "Technosoft"
     },
     {
       "title": "Thunder Force IV",
       "releaseDate": "1992-07-24",
       "serial": "T-18063",
-      "rating": ""
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": ""
     },
     {
       "title": "Thunder Fox",
       "releaseDate": "1991-06-26",
       "serial": "T-11113",
-      "rating": ""
+      "rating": "",
+      "developer": "Aisystem Tokyo",
+      "publisher": "Taito"
     },
     {
       "title": "Thunder Pro Wrestling Retsuden",
       "releaseDate": "1992-03-27",
       "serial": "T-43013",
-      "rating": ""
+      "rating": "",
+      "developer": "Human",
+      "publisher": "Human"
     },
     {
       "title": "Time Dominator 1st",
       "releaseDate": "1994-03-25",
       "serial": "T-23033",
       "rating": "",
+      "developer": "VIC Tokai",
+      "publisher": "VIC Tokai",
       "altTitles": [
         "Socket"
       ]
@@ -2773,13 +3561,17 @@
       "title": "ToeJam & Earl",
       "releaseDate": "1992-03-13",
       "serial": "G-4066",
-      "rating": ""
+      "rating": "",
+      "developer": "Johnson Voorsanger Productions",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Toki no Keishousha: Phantasy Star III",
       "releaseDate": "1990-04-21",
       "serial": "G-5503",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Enterprises, Ltd.",
       "altTitles": [
         "Phantasy Star III: Generations of Doom"
       ]
@@ -2789,6 +3581,8 @@
       "releaseDate": "1994-12-16",
       "serial": "T-166013",
       "rating": "",
+      "developer": "Beam Software",
+      "publisher": "",
       "altTitles": [
         "Tom and Jerry: Frantic Antics"
       ]
@@ -2797,13 +3591,17 @@
       "title": "Top Pro Golf",
       "releaseDate": "1992-06-19",
       "serial": "T-73023",
-      "rating": ""
+      "rating": "",
+      "developer": "",
+      "publisher": ""
     },
     {
       "title": "Top Pro Golf 2",
       "releaseDate": "1993-06-25",
       "serial": "T-73043",
       "rating": "",
+      "developer": "",
+      "publisher": "",
       "altTitles": [
         "Chi Chi's Pro Challenge Golf"
       ]
@@ -2812,49 +3610,65 @@
       "title": "Tougi Ou King Colossus",
       "releaseDate": "1992-06-26",
       "serial": "G-5513",
-      "rating": ""
+      "rating": "",
+      "developer": "Brainbusters",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "True Lies",
       "releaseDate": "1995-04-28",
       "serial": "T-81163",
-      "rating": "18+"
+      "rating": "18+",
+      "developer": "Beam Software",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "Turbo OutRun",
       "releaseDate": "1992-03-27",
       "serial": "G-4053",
-      "rating": ""
+      "rating": "",
+      "developer": "CRI",
+      "publisher": "CRI"
     },
     {
       "title": "Twinkle Tale",
       "releaseDate": "1992-07-24",
       "serial": "T-61013",
-      "rating": ""
+      "rating": "",
+      "developer": "Studio DucksCategory :Live link reference",
+      "publisher": "Wonder Amusement Studio"
     },
     {
       "title": "Uchuu Senkan Gomora",
       "releaseDate": "1991-09-30",
       "serial": "T-42023",
-      "rating": ""
+      "rating": "",
+      "developer": "Aisystem Tokyo",
+      "publisher": "UPL"
     },
     {
       "title": "Ultraman",
       "releaseDate": "1993-04-09",
       "serial": "T-16023",
-      "rating": ""
+      "rating": "",
+      "developer": "Human",
+      "publisher": ""
     },
     {
       "title": "Undeadline",
       "releaseDate": "1991-12-20",
       "serial": "T-74013",
-      "rating": ""
+      "rating": "",
+      "developer": "PALSOFT",
+      "publisher": "D4 Enterprise"
     },
     {
       "title": "V-Five / V-V",
       "releaseDate": "1994-03-25",
       "serial": "T-48173",
       "rating": "",
+      "developer": "Tengen",
+      "publisher": "Tengen",
       "altTitles": [
         "Grind Stormer"
       ]
@@ -2863,13 +3677,17 @@
       "title": "Valis III",
       "releaseDate": "1991-03-22",
       "serial": "T-49023",
-      "rating": ""
+      "rating": "",
+      "developer": "D4 Enterprise",
+      "publisher": "Edia"
     },
     {
       "title": "Vampire Killer",
       "releaseDate": "1994-03-18",
       "serial": "T-95043",
       "rating": "",
+      "developer": "Konami",
+      "publisher": "Konami",
       "altTitles": [
         "Castlevania: Bloodlines"
       ]
@@ -2879,6 +3697,8 @@
       "releaseDate": "1989-12-16",
       "serial": "G-5502",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Sword of Vermilion"
       ]
@@ -2887,31 +3707,41 @@
       "title": "Verytex",
       "releaseDate": "1991-04-05",
       "serial": "T-20043",
-      "rating": ""
+      "rating": "",
+      "developer": "Asmik",
+      "publisher": "Asmik"
     },
     {
       "title": "Virtua Racing",
       "releaseDate": "1994-03-18",
       "serial": "G-7001",
-      "rating": ""
+      "rating": "",
+      "developer": "Sega AM2",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Virtual Bart",
       "releaseDate": "1995-12-31",
       "serial": "T-81103",
-      "rating": ""
+      "rating": "",
+      "developer": "Sculptured Software",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "Vixen 357",
       "releaseDate": "1992-10-23",
       "serial": "T-25133",
-      "rating": ""
+      "rating": "",
+      "developer": "NCS",
+      "publisher": "Masaya"
     },
     {
       "title": "Volfied",
       "releaseDate": "1991-01-25",
       "serial": "T-11103",
       "rating": "",
+      "developer": "I.T.L",
+      "publisher": "Taito",
       "altTitles": [
         "Ultimate Qix"
       ]
@@ -2920,22 +3750,28 @@
       "title": "Wani Wani World",
       "releaseDate": "1992-01-31",
       "serial": "T-33023",
-      "rating": ""
+      "rating": "",
+      "developer": "Inter State",
+      "publisher": "Kaneko"
     },
     {
       "title": "Wardner no Mori Special",
       "releaseDate": "1991-04-26",
       "serial": "T-58013",
       "rating": "",
+      "developer": "Dragnet",
+      "publisher": "",
       "altTitles": [
         "Wardner"
       ]
     },
     {
       "title": "Whip Rush: Wakusei Voltegas no Nazo",
-      "releaseDate": "1990-05-26",
-      "serial": "G-4031",
+      "releaseDate": "",
+      "serial": "G-4031}",
       "rating": "",
+      "developer": "VIC Tokai",
+      "publisher": "",
       "altTitles": [
         "Whip Rush"
       ]
@@ -2944,19 +3780,25 @@
       "title": "Wimbledon Championship Tennis",
       "releaseDate": "1994-05-20",
       "serial": "G-4110",
-      "rating": ""
+      "rating": "",
+      "developer": "SIMSCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Winter Olympics",
       "releaseDate": "1994-02-11",
       "serial": "G-4115",
-      "rating": ""
+      "rating": "",
+      "developer": "Tiertex",
+      "publisher": ""
     },
     {
       "title": "Wizard of the Immortal",
       "releaseDate": "1993-08-10",
       "serial": "EM20023",
       "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "",
       "altTitles": [
         "Will Harvey Presents The Immortal"
       ]
@@ -2965,13 +3807,17 @@
       "title": "Wonder Boy III: Monster Lair",
       "releaseDate": "1990-12-22",
       "serial": "G-4025",
-      "rating": ""
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
     },
     {
       "title": "Wonder Boy V: Monster World III",
       "releaseDate": "1991-10-25",
       "serial": "G-5509",
       "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation",
       "altTitles": [
         "Wonder Boy in Monster World"
       ]
@@ -2980,31 +3826,41 @@
       "title": "Wonder Library",
       "releaseDate": "1993-10-08",
       "serial": "RG-ED1",
-      "rating": ""
+      "rating": "",
+      "developer": "JVC",
+      "publisher": "JVC"
     },
     {
       "title": "Wonder MIDI",
       "releaseDate": "1992-12-25",
       "serial": "RG-MD1",
-      "rating": ""
+      "rating": "",
+      "developer": "Game Arts",
+      "publisher": "JVC"
     },
     {
       "title": "World Cup Soccer",
       "releaseDate": "1989-07-29",
       "serial": "G-4009",
-      "rating": ""
+      "rating": "",
+      "developer": "Animated Pixels",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Wrestle War",
       "releaseDate": "1991-06-28",
       "serial": "G-4055",
-      "rating": ""
+      "rating": "",
+      "developer": "Esco Boueki",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Wrestleball",
       "releaseDate": "1991-02-08",
       "serial": "T-14043",
       "rating": "",
+      "developer": "M2",
+      "publisher": "",
       "altTitles": [
         "Powerball"
       ]
@@ -3013,61 +3869,81 @@
       "title": "WWF Raw",
       "releaseDate": "1995-12-31",
       "serial": "T-81316-50",
-      "rating": ""
+      "rating": "",
+      "developer": "Realtime Associates Seattle Division",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "WWF Royal Rumble (Acclaim)",
       "releaseDate": "1994-03-25",
       "serial": "T-81043",
-      "rating": ""
+      "rating": "",
+      "developer": "Sculptured Software",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "XDR",
       "releaseDate": "1990-08-26",
       "serial": "T-41013",
-      "rating": ""
+      "rating": "",
+      "developer": "Affect",
+      "publisher": "UNIPACC"
     },
     {
       "title": "Ys III: Wanderers from Ys",
       "releaseDate": "1991-11-01",
       "serial": "T-49063",
-      "rating": ""
+      "rating": "",
+      "developer": "Nihon Telenet",
+      "publisher": ""
     },
     {
       "title": "Yuu Yuu Hakusho Gaiden",
       "releaseDate": "1994-01-28",
       "serial": "G-5523",
-      "rating": ""
+      "rating": "",
+      "developer": "Nextech",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Yuu Yuu Hakusho: Makyou Toitsusen",
       "releaseDate": "1994-09-30",
       "serial": "G-4122",
-      "rating": ""
+      "rating": "",
+      "developer": "Treasure",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Zan Yasha Enbukyoku",
       "releaseDate": "1991-03-29",
       "serial": "T-32033",
-      "rating": ""
+      "rating": "",
+      "developer": "Wolf Team",
+      "publisher": "Wolf Team"
     },
     {
       "title": "Zero Wing",
       "releaseDate": "1991-05-31",
       "serial": "T-40023",
-      "rating": ""
+      "rating": "",
+      "developer": "Toaplan",
+      "publisher": "Tatsujin"
     },
     {
       "title": "Zoom!",
       "releaseDate": "1990-01-13",
       "serial": "G-4023",
-      "rating": ""
+      "rating": "",
+      "developer": "Sigma Pro-TechCategory :Live link reference",
+      "publisher": ""
     },
     {
       "title": "Zou! Zou! Zou! Rescue Daisakusen",
       "releaseDate": "1993-04-29",
       "serial": "EM20008",
       "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "",
       "altTitles": [
         "Rolo to the Rescue"
       ]

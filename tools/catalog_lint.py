@@ -31,11 +31,13 @@ Uso:  python3 tools/catalog_lint.py
 import json, os, re, sys, urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from catalog_common import NO_SON_CATALOGOS, region_de_serial, slug as slugify  # noqa: E402
+from catalog_common import CANON_KEYS, NO_SON_CATALOGOS, region_de_serial, slug as slugify  # noqa: E402
 
 CAT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "catalogs")
 
-CANON_KEYS = ["title", "platform", "region", "year", "releaseDate", "publisher", "genre", "slug", "serial", "coverUrl", "rating"]
+# El esquema es uno solo y vive en `catalog_common`. Estaba duplicado acá y agregar una clave
+# obligaba a acordarse de los dos lados — el mismo defecto que ya tuvimos con la región del
+# serial, donde cada copia sabía una mitad.
 REQUIRED = {"title", "platform", "region", "slug"}          # identidad, nunca vacíos
 REGIONS = {"NTSC-U", "NTSC-J", "PAL"}
 SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")

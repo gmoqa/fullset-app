@@ -7,19 +7,25 @@
       "title": "After Burner Complete",
       "releaseDate": "1995-01-13",
       "serial": "GM-4006",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Rutubo Games",
+      "publisher": ""
     },
     {
       "title": "Chaotix",
       "releaseDate": "1995-04-21",
       "serial": "GM-5003",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Sega CS3",
+      "publisher": ""
     },
     {
       "title": "Cyber Brawl",
       "releaseDate": "1995-01-27",
       "serial": "GM-4004",
       "rating": "18+",
+      "developer": "Almanic",
+      "publisher": "",
       "altTitles": [
         "Cosmic Carnage"
       ]
@@ -28,25 +34,33 @@
       "title": "Doom (32X)",
       "releaseDate": "1994-12-03",
       "serial": "GM-4003",
-      "rating": "18+"
+      "rating": "18+",
+      "developer": "Sega of America",
+      "publisher": ""
     },
     {
       "title": "Golf Magazine: 36 Great Holes Starring Fred Couples",
       "releaseDate": "1995-02-24",
       "serial": "GM-5002",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Flashpoint Productions",
+      "publisher": ""
     },
     {
       "title": "Metal Head",
       "releaseDate": "1995-02-24",
       "serial": "GM-4008",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Sega CS4",
+      "publisher": ""
     },
     {
       "title": "Mortal Kombat II: Ultimate Godly Fist",
       "releaseDate": "1995-05-19",
       "serial": "T-8104A",
       "rating": "18+",
+      "developer": "Probe Entertainment",
+      "publisher": "Acclaim Japan",
       "altTitles": [
         "Mortal Kombat II"
       ]
@@ -55,19 +69,25 @@
       "title": "NBA Jam Tournament Edition",
       "releaseDate": "1995-09-01",
       "serial": "T-8102A",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "NFL Quarterback Club (32X)",
       "releaseDate": "1995-07-14",
       "serial": "T-8103A",
-      "rating": ""
+      "rating": "",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Japan"
     },
     {
       "title": "Parasquad",
       "releaseDate": "1995-07-14",
       "serial": "GM-4012",
       "rating": "All ages",
+      "developer": "CRI",
+      "publisher": "",
       "altTitles": [
         "Zaxxon's Motherbase 2000"
       ]
@@ -77,51 +97,67 @@
       "releaseDate": "1995-07-07",
       "serial": "T-7601A",
       "rating": "All ages",
+      "developer": "Koei",
+      "publisher": "Koei",
       "altTitles": [
         "Sangokushi IV"
       ]
     },
     {
       "title": "Space Harrier",
-      "releaseDate": "",
-      "serial": "",
-      "rating": ""
+      "releaseDate": "1994-12-03",
+      "serial": "GM-4005",
+      "rating": "All ages",
+      "developer": "Dempa Micomsoft",
+      "publisher": "NEC Avenue"
     },
     {
       "title": "Star Wars Arcade",
       "releaseDate": "1994-12-03",
       "serial": "GM-4002",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Sega AM3",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Stellar Assault",
-      "releaseDate": "1995-04-26",
-      "serial": "GM-4010",
-      "rating": "All ages"
+      "releaseDate": "",
+      "serial": "GM-4010}",
+      "rating": "All ages",
+      "developer": "Sega CS3",
+      "publisher": ""
     },
     {
       "title": "Tempo",
       "releaseDate": "1995-03-24",
       "serial": "GM-4009",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Red Company",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Virtua Fighter",
       "releaseDate": "1995-10-20",
       "serial": "GM-4013",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Sega AM2",
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Virtua Racing Deluxe",
       "releaseDate": "1994-12-16",
       "serial": "GM-5001",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Sega CS4",
+      "publisher": ""
     },
     {
       "title": "WWF Raw",
       "releaseDate": "1995-09-01",
       "serial": "T-8101A",
-      "rating": "All ages"
+      "rating": "All ages",
+      "developer": "Realtime Associates Seattle Division",
+      "publisher": "Acclaim Japan"
     }
   ]
 }
