@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "df199d036f7d",
+  "version": "7fde0c64534b",
   "files": [
     {
       "path": "catalogs/platforms.json",
@@ -50,11 +50,11 @@
       "path": "catalogs/3ds-eu.json",
       "platform": "Nintendo 3DS",
       "games": 547,
-      "bytes": 243129,
-      "sha256": "40388feda6e06b1fd04b4f28f58e7efa1c690f2433c608b64607216d9c36e678",
+      "bytes": 244035,
+      "sha256": "8836f3e85cef2e12ec776685ea14b95d8387cb50752ec9c2d3004a3e56f74ca4",
       "coverage": {
         "year": 43,
-        "publisher": 33,
+        "publisher": 36,
         "serial": 100,
         "coverUrl": 93
       }
@@ -141,11 +141,11 @@
       "path": "catalogs/ds-eu.json",
       "platform": "Nintendo DS",
       "games": 2435,
-      "bytes": 1041254,
-      "sha256": "5cf8735dbea47334bcdbfbcdc4547761e2ee64ce9f255c6d5996f5d5f39123b3",
+      "bytes": 1045449,
+      "sha256": "0baa322afc6b1dd96dbac8c65e6b01486a886e40b906a44a01ac1cc410460d2f",
       "coverage": {
         "year": 24,
-        "publisher": 57,
+        "publisher": 63,
         "serial": 100,
         "coverUrl": 91
       }
@@ -154,11 +154,11 @@
       "path": "catalogs/ds-jp.json",
       "platform": "Nintendo DS",
       "games": 1875,
-      "bytes": 845320,
-      "sha256": "6a895b739cada6358fe7d2fdb11871029135cc958fa83fd0c8d7182d3fea3a11",
+      "bytes": 845932,
+      "sha256": "5d07b98a5106acfe2d261723601a5f888b4c262e43ca380c783fc9971961827d",
       "coverage": {
         "year": 45,
-        "publisher": 48,
+        "publisher": 49,
         "serial": 100,
         "coverUrl": 95
       }
@@ -167,11 +167,11 @@
       "path": "catalogs/ds-usa.json",
       "platform": "Nintendo DS",
       "games": 1782,
-      "bytes": 756951,
-      "sha256": "2410abbcbd5070e0808ba6188c322eef88be8ac9349a5cc19d8fe9b05e4a1039",
+      "bytes": 758696,
+      "sha256": "7078025e0323e52ddc1123c9aa38623bb319d1c190b064b8531469c9e7b19903",
       "coverage": {
         "year": 54,
-        "publisher": 82,
+        "publisher": 85,
         "serial": 100,
         "coverUrl": 93
       }

@@ -748,6 +748,35 @@ claves nuevas no rompe nada.
   de No-Intro (títulos de volcado) y Wikipedia usa el título comercial, así que el cruce falla en la
   mitad; **TurboGrafx-CD 0%** porque su lista no trae la columna y libretro no publica el DAT.
 
+- **K. Revisión de DS y 3DS** — hecha el **2026-08-16**. Son los dos catálogos con peor cobertura de
+  metadatos y valía entender por qué. **Los datos están bien; el hueco es de emparejamiento.**
+
+  Ambos se arman del **DAT de No-Intro** (nombres de volcado) y sus metadatos salen de **Wikipedia**
+  (título comercial en inglés). Eso da serial 100% y carátula 91–96%, pero deja el resto flojo.
+
+  **Hallazgo: en DS el serial son cuatro caracteres y el último es el idioma.** `1 vs 100` es
+  `YJYP` (Europa), `1 gegen 100` es `YJYD` (Alemania) y `1 contre 100` es `YJYF` (Francia). En 3DS
+  es igual con otro prefijo: `CTR-P-BMFP`. Son cartuchos distintos —por eso están las tres
+  entradas— pero **el mismo juego**, así que la edición alemana no cruza nunca con Wikipedia aunque
+  su hermana inglesa sí.
+
+  De ahí sale `enrich_ediciones_hermanas.py`: propaga dentro del grupo. **+521 campos.**
+
+  | | developer | editora |
+  |---|---|---|
+  | `ds-usa` | 83 → **86%** | 82 → **85%** |
+  | `ds-eu` | 57 → **64%** | 57 → **63%** |
+  | `3ds-eu` | 39 → **43%** | 33 → **36%** |
+
+  **Solo se propagan desarrolladora, editora y género** — la fecha **no**, a propósito: la edición
+  alemana suele salir semanas después que la inglesa y copiarla inventaría un lanzamiento.
+
+  **Lo que queda es techo de la fuente.** En `ds-eu` sobran 632 entradas sin developer que **no**
+  tienen hermana de idioma: exclusivos europeos, localizados y recopilatorios —*1000 Bornes*,
+  *Bibi & Tina*, *2 Games in 1: …*— que la lista **inglesa** de Wikipedia no incluye. Por eso
+  `ds-eu` tiene 2.435 entradas contra 1.782 de `ds-usa`: Europa recibió mucho más shovelware
+  localizado, y cada idioma es un cartucho.
+
 - **G. Vocabularios controlados** — **pendiente, medido el 2026-08-10.** El lint garantiza la
   **forma** (11 claves, orden, tipos, slug único, ordenado) y cuatro invariantes de significado,
   pero **no mira el vocabulario**: atrapa un serial japonés en un catálogo americano y no atrapa
