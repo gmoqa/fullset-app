@@ -21,6 +21,10 @@ data class Game(
     /** Identificador del juego en el catálogo oficial de su plataforma (vacío si no está). */
     val slug: String = "",
     val publisher: String = "",
+    /** Quién lo desarrolló. Distinto de [publisher]: coinciden solo en el 29% de los casos. */
+    val developer: String = "",
+    /** Clasificación por edad (ESRB, CERO…), tal como la publica la fuente. Vacío = sin dato. */
+    val rating: String = "",
     /** Código de producto de la copia física (SCUS-94163…); vacío si la base no lo tiene. */
     val serial: String = "",
     /** true = juego digital (no lo poseés): no aparece en Collection. Ver migración 10.sqm. */

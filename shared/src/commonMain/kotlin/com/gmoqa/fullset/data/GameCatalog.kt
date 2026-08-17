@@ -17,6 +17,7 @@ private data class CatalogEntryDto(
     val genre: String = "",
     val slug: String = "",
     val serial: String = "",
+    val rating: String = "",
     val coverUrl: String = "",
 )
 
@@ -54,6 +55,7 @@ class GameCatalog(private val readAsset: (String) -> String? = ::readTextAsset) 
                         publisher = dto.publisher.trim(),
                         genre = dto.genre.trim(),
                         serial = dto.serial.trim(),
+                        rating = dto.rating.trim(),
                         coverUrl = dto.coverUrl.trim(),
                     )
                 }

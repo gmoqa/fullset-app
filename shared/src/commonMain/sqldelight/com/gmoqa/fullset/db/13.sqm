@@ -1,0 +1,7 @@
+-- Migración v13 -> v14. Desarrolladora y clasificación por edad, dos datos que el catálogo ya trae
+-- y que la ficha del juego no podía mostrar porque no había dónde guardarlos.
+--
+-- `developer` es distinto de `publisher` y por eso va aparte: a *Blackthorne* de 32X lo **hizo**
+-- Interplay y lo **publicó** Sega. Coinciden solo en el 29% de los casos.
+ALTER TABLE games ADD COLUMN developer TEXT NOT NULL DEFAULT '';
+ALTER TABLE games ADD COLUMN rating TEXT NOT NULL DEFAULT '';

@@ -48,6 +48,10 @@ interface Coleccion {
         genre: String = "",
         slug: String = "",
         publisher: String = "",
+        /** Quién lo desarrolló. Distinto de [publisher]: coinciden solo en el 29% de los casos. */
+        developer: String = "",
+        /** Clasificación por edad (ESRB, CERO…) tal como la publica la fuente. */
+        rating: String = "",
         /** Catalog number impreso en el cartucho o disco: identifica **esta** edición. */
         serial: String = "",
         /** Alta desde Playing: el juego arranca marcado como que lo estás jugando. */

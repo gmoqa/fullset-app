@@ -442,9 +442,13 @@ private fun HeroHeader(
                         // La región es **identidad**: el mismo juego es otro producto en cada
                         // mercado, con otro título, otra fecha y otro catalog number.
                         game?.region?.takeIf { it.isNotBlank() }?.let { FichaFila("Region", it) }
+                        // Developer va **antes** que Publisher: quién lo hizo, después quién lo
+                        // vendió. Solo coinciden en el 29% de los casos, así que son dos filas.
+                        game?.developer?.takeIf { it.isNotBlank() }?.let { FichaFila("Developer", it) }
                         game?.publisher?.takeIf { it.isNotBlank() }?.let { FichaFila("Publisher", it) }
                         game?.genre?.takeIf { it.isNotBlank() }?.let { FichaFila("Genre", it) }
                         game?.serial?.takeIf { it.isNotBlank() }?.let { FichaFila("Catalog no.", it) }
+                        game?.rating?.takeIf { it.isNotBlank() }?.let { FichaFila("Rating", it) }
                         // Los dos editables van al final y **con flecha**: es lo único que los
                         // distingue de un dato, y ahora se distinguen.
                         EditableConditionChip(game?.conditionState, onSetCondition)

@@ -106,6 +106,29 @@ class CompletitudTest {
         assertEquals(2, r.filas.count { it.ownedId == 3L }, "y se marca en las dos")
     }
 
+    // ------------------------------------------------------------------ subtítulo
+
+    @Test
+    fun elSubtituloMuestraDesarrolladoraYEditoraCuandoSonDistintas() {
+        // Es el caso que justifica tener dos campos: a *Blackthorne* lo hizo Interplay y lo
+        // publicó Sega.
+        assertEquals("Platform · Interplay · Sega", subtitulo("Platform", "Interplay", "Sega"))
+    }
+
+    @Test
+    fun siLaMismaEmpresaHizoYPublicoSeMuestraUnaSolaVez() {
+        // Pasa en el 29% de los catálogos; repetirla sería ruido.
+        assertEquals("Action · Nintendo", subtitulo("Action", "Nintendo", "Nintendo"))
+        assertEquals("Action · Nintendo", subtitulo("Action", "nintendo", "Nintendo"))
+    }
+
+    @Test
+    fun elSubtituloSaltaLoQueFalta() {
+        assertEquals("Sega", subtitulo("", "", "Sega"))
+        assertEquals("Interplay", subtitulo("", "Interplay", ""))
+        assertEquals("", subtitulo("", "", ""))
+    }
+
     @Test
     fun laEntradaDelCatalogoViajaParaPoderAgregarla() {
         val r = completitudDe(

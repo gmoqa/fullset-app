@@ -111,6 +111,8 @@ class DiaryViewModel(
         genre: String,
         slug: String,
         publisher: String,
+        developer: String,
+        rating: String,
         serial: String,
         playing: Boolean,
         digital: Boolean,
@@ -118,7 +120,8 @@ class DiaryViewModel(
         val id = repo.addGame(
             title, platform, coverUrl,
             region = region, releaseYear = releaseYear, releaseDate = releaseDate, genre = genre,
-            slug = slug, publisher = publisher, serial = serial, digital = digital,
+            slug = slug, publisher = publisher, developer = developer, rating = rating,
+            serial = serial, digital = digital,
         )
         if (playing) repo.setPlaying(id, true)
         _lastAdded.value = id

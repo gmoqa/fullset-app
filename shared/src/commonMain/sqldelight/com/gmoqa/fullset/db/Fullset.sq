@@ -25,7 +25,12 @@ CREATE TABLE games (
     first_played TEXT NOT NULL DEFAULT '',
     -- Lanzamiento con la precisión que tenga el catálogo, mismo formato ISO variable. Permite
     -- ordenar bien dentro de un mismo año y mostrar "Nov 1992" en vez de solo "1992". Ver 12.sqm.
-    release_date TEXT NOT NULL DEFAULT ''
+    release_date TEXT NOT NULL DEFAULT '',
+    -- Quién lo desarrolló. Distinto de `publisher` —coinciden solo en el 29% de los casos— y por eso
+    -- va en su propia columna. Ver 13.sqm.
+    developer TEXT NOT NULL DEFAULT '',
+    -- Clasificación por edad (ESRB, CERO…) tal como la publica la fuente. Ver 13.sqm.
+    rating TEXT NOT NULL DEFAULT ''
 );
 
 CREATE TABLE notes (
@@ -66,7 +71,7 @@ CREATE INDEX idx_photos_game ON photos(game_id);
 
 selectAllGames:
 SELECT g.id, g.name, g.platform, g.cover_url, g.cover_path, g.playing, g.backlog, g.created_at,
-    g.region, g.release_year, g.genre, g.condition, g.slug, g.publisher, g.serial, g.digital,
+    g.region, g.release_year, g.genre, g.condition, g.slug, g.publisher, g.developer, g.rating, g.serial, g.digital,
     g.first_played, g.release_date,
     (SELECT COUNT(*) FROM notes n WHERE n.game_id = g.id) AS note_count,
     (SELECT COUNT(*) FROM photos p WHERE p.game_id = g.id) AS photo_count
@@ -75,7 +80,7 @@ ORDER BY g.created_at DESC;
 
 selectGameById:
 SELECT g.id, g.name, g.platform, g.cover_url, g.cover_path, g.playing, g.backlog, g.created_at,
-    g.region, g.release_year, g.genre, g.condition, g.slug, g.publisher, g.serial, g.digital,
+    g.region, g.release_year, g.genre, g.condition, g.slug, g.publisher, g.developer, g.rating, g.serial, g.digital,
     g.first_played, g.release_date,
     (SELECT COUNT(*) FROM notes n WHERE n.game_id = g.id) AS note_count,
     (SELECT COUNT(*) FROM photos p WHERE p.game_id = g.id) AS photo_count
@@ -86,8 +91,8 @@ WHERE g.id = ?;
 -- su fecha precisa, y hasta que corriera un refresh el juego mostraba el año a secas.
 insertGame:
 INSERT INTO games(name, platform, cover_url, created_at, region, release_year, release_date, genre,
-    condition, slug, publisher, serial, digital)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    condition, slug, publisher, developer, rating, serial, digital)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
 -- Asocia un juego ya cargado con su entrada del catálogo. El año solo se completa si falta,
 -- para no pisar lo que hayas anotado a mano.
@@ -141,6 +146,8 @@ fillFromCatalog:
 UPDATE games SET
     serial = CASE WHEN trim(serial) = '' THEN :serial ELSE serial END,
     publisher = CASE WHEN trim(publisher) = '' THEN :publisher ELSE publisher END,
+    developer = CASE WHEN trim(developer) = '' THEN :developer ELSE developer END,
+    rating = CASE WHEN trim(rating) = '' THEN :rating ELSE rating END,
     genre = CASE WHEN trim(genre) = '' THEN :genre ELSE genre END,
     release_date = CASE WHEN trim(release_date) = '' THEN :releaseDate ELSE release_date END,
     release_year = COALESCE(release_year, :year)

@@ -31,6 +31,18 @@ data class PlatformRow(
     val entry: CatalogEntry? = null,
 )
 
+/**
+ * La línea de abajo del título: `género · desarrolladora · editora`.
+ *
+ * **Si desarrolladora y editora son la misma empresa se muestra una sola vez**, que pasa en el 29%
+ * de los casos —Nintendo hizo y publicó *Zelda*— y repetirla sería ruido. Cuando difieren, ver las
+ * dos es justamente el dato: a *Blackthorne* lo hizo Interplay y lo publicó Sega.
+ */
+internal fun subtitulo(genero: String, dev: String, pub: String): String {
+    val empresas = if (dev.equals(pub, ignoreCase = true)) listOf(pub) else listOf(dev, pub)
+    return (listOf(genero) + empresas).filter { it.isNotBlank() }.joinToString(" · ")
+}
+
 /** El catálogo de una consola cruzado con tu colección, más cuánto de él tenés. */
 data class Completitud(
     val filas: List<PlatformRow>,
@@ -66,8 +78,7 @@ fun completitudDe(catalogo: List<CatalogEntry>, coleccion: List<Game>): Completi
             title = mio?.name ?: e.title,
             year = e.year ?: mio?.releaseYear,
             releaseDate = e.releaseDate,
-            subtitle = listOfNotNull(e.genre.ifBlank { null }, e.publisher.ifBlank { null })
-                .joinToString(" · "),
+            subtitle = subtitulo(e.genre, e.developer, e.publisher),
             coverModel = mio?.coverModel ?: e.coverUrl.ifBlank { null },
             ownedId = mio?.id,
             entry = e,
@@ -82,8 +93,7 @@ fun completitudDe(catalogo: List<CatalogEntry>, coleccion: List<Game>): Completi
                 key = "own:${g.id}",
                 title = g.name,
                 year = g.releaseYear,
-                subtitle = listOfNotNull(g.genre.ifBlank { null }, g.publisher.ifBlank { null })
-                    .joinToString(" · "),
+                subtitle = subtitulo(g.genre, g.developer, g.publisher),
                 coverModel = g.coverModel,
                 ownedId = g.id,
             )

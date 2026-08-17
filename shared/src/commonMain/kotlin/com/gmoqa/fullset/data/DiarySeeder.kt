@@ -151,6 +151,8 @@ class DiarySeeder(
                     game.id,
                     serial = entry.serial,
                     publisher = entry.publisher,
+                    developer = entry.developer,
+                    rating = entry.rating,
                     genre = entry.genre,
                     releaseDate = entry.releaseDate,
                     year = entry.year,

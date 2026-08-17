@@ -261,6 +261,7 @@ private fun AppRoot(
                                     releaseDate = entry.releaseDate, serial = entry.serial,
                                     genre = entry.genre,
                                     slug = entry.slug, publisher = entry.publisher,
+                                    developer = entry.developer, rating = entry.rating,
                                     playing = current.target == AddTarget.PLAYING,
                                     // Sin colección no se afirma posesión: ver `addGame(digital=)`.
                                     digital = prefs.trackingMode == TrackingMode.DIARY_ONLY,
@@ -321,6 +322,7 @@ private fun AppRoot(
                             entry.title, current.platform, entry.coverUrl,
                             region = entry.region, releaseYear = entry.year,
                             genre = entry.genre, slug = entry.slug, publisher = entry.publisher,
+                            developer = entry.developer, rating = entry.rating,
                         )
                     },
                 )

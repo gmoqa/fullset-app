@@ -16,6 +16,8 @@ data class CatalogEntry(
     val genre: String = "",
     /** Catalog number impreso en el cartucho/disco (SCUS-94163, MK-01077-00…). */
     val serial: String = "",
+    /** Clasificación por edad (ESRB, CERO…) tal como la publica la fuente. Vacío = sin dato. */
+    val rating: String = "",
     /** URL de carátula horneada en el catálogo (Libretro). Vacío → se deriva del título. */
     val coverUrl: String = "",
 )

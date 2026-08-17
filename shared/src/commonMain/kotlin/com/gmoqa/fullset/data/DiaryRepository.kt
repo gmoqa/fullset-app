@@ -90,6 +90,8 @@ class DiaryRepository(
         condition: String,
         slug: String,
         publisher: String,
+        developer: String,
+        rating: String,
         serial: String,
         digital: Long,
         firstPlayed: String,
@@ -108,6 +110,8 @@ class DiaryRepository(
         region = region,
         releaseYear = releaseYear?.toInt(),
         genre = genre,
+        developer = developer,
+        rating = rating,
         condition = condition,
         slug = slug,
         publisher = publisher,
@@ -131,13 +135,16 @@ class DiaryRepository(
         condition: String = "",
         slug: String = "",
         publisher: String = "",
+        developer: String = "",
+        rating: String = "",
         serial: String = "",
         digital: Boolean = false,
     ): Long = database.transactionWithResult {
         q.insertGame(
             name.trim(), platform.trim(), coverUrl.trim(), createdAt,
             region.trim(), releaseYear?.toLong(), releaseDate.trim(), genre.trim(), condition.trim(),
-            slug.trim(), publisher.trim(), serial.trim(), if (digital) 1L else 0L,
+            slug.trim(), publisher.trim(), developer.trim(), rating.trim(), serial.trim(),
+            if (digital) 1L else 0L,
         )
         q.lastInsertRowId().executeAsOne()
     }
@@ -189,9 +196,11 @@ class DiaryRepository(
     /** Completa desde el catálogo lo que el juego tenga vacío; nunca pisa lo cargado a mano. */
     fun fillFromCatalog(
         gameId: Long, serial: String, publisher: String, genre: String,
+        developer: String = "", rating: String = "",
         releaseDate: String, year: Int?,
     ) = q.fillFromCatalog(
-        serial.trim(), publisher.trim(), genre.trim(), releaseDate.trim(), year?.toLong(), gameId,
+        serial.trim(), publisher.trim(), developer.trim(), rating.trim(), genre.trim(),
+        releaseDate.trim(), year?.toLong(), gameId,
     )
 
     /** Borra el juego, sus notas y sus fotos (filas por CASCADE + archivos en disco). */
