@@ -62,7 +62,10 @@ def conteos(plataformas: list[dict]) -> dict[str, dict[str, int]]:
     salida: dict[str, dict[str, int]] = {}
     for p in plataformas:
         por_region = {}
-        for region in REGIONES:
+        # Las tres regiones, más los **territorios** que declare cada una (`PAL/BR`): bajo PAL
+        # conviven Europa, Brasil y Australia, y cada lista tiene su propio tamaño.
+        claves = list(REGIONES) + sorted(k for k in (p.get("catalogs") or {}) if "/" in k)
+        for region in claves:
             archivo = archivo_de(p, region)
             if archivo:
                 por_region[region] = contar(archivo, cache)

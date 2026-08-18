@@ -15,7 +15,7 @@
       "title": "Batman Returns (Mega-CD)",
       "releaseDate": "1993",
       "serial": "4401",
-      "rating": "OFLC: G8+",
+      "rating": "",
       "developer": "Malibu Interactive",
       "publisher": "Sega Europe"
     },
@@ -23,7 +23,7 @@
       "title": "Battlecorps",
       "releaseDate": "1994-08",
       "serial": "T-115045-50",
-      "rating": "OFLC: G",
+      "rating": "",
       "developer": "Core Design",
       "publisher": ""
     },
@@ -31,7 +31,7 @@
       "title": "Bill Walsh College Football",
       "releaseDate": "1994-03",
       "serial": "T-50025-05",
-      "rating": "ClassInd: Livre",
+      "rating": "",
       "developer": "Electronic Arts",
       "publisher": "Electronic Arts"
     },
@@ -53,14 +53,6 @@
       "altTitles": [
         "Battle Frenzy"
       ]
-    },
-    {
-      "title": "Bram Stoker's Dracula (Mega-CD)",
-      "releaseDate": "1994",
-      "serial": "063050",
-      "rating": "",
-      "developer": "Psygnosis",
-      "publisher": "Sony Imagesoft"
     },
     {
       "title": "Brutal: Paws of Fury",
@@ -87,14 +79,6 @@
       "publisher": ""
     },
     {
-      "title": "Cliffhanger",
-      "releaseDate": "",
-      "serial": "063130",
-      "rating": "",
-      "developer": "",
-      "publisher": ""
-    },
-    {
       "title": "Corpse Killer",
       "releaseDate": "1995-03",
       "serial": "T-162055-50",
@@ -103,18 +87,10 @@
       "publisher": "Digital Pictures"
     },
     {
-      "title": "Dark Wizard",
-      "releaseDate": "",
-      "serial": "062110",
-      "rating": "",
-      "developer": "Sega CS2",
-      "publisher": ""
-    },
-    {
       "title": "Double Switch",
       "releaseDate": "1994-02",
       "serial": "4419",
-      "rating": "OFLC: M15+",
+      "rating": "BBFC: PG",
       "developer": "Digital Pictures",
       "publisher": "Sega Europe"
     },
@@ -122,7 +98,7 @@
       "title": "Dracula Unleashed",
       "releaseDate": "1994-05",
       "serial": "4420",
-      "rating": "OFLC: MA15+",
+      "rating": "BBFC: 15",
       "developer": "ICOM Simulations",
       "publisher": "Sega Europe"
     },
@@ -130,7 +106,7 @@
       "title": "Dragon's Lair",
       "releaseDate": "1994-03",
       "serial": "4436-50",
-      "rating": "OFLC: G8+",
+      "rating": "",
       "developer": "ReadySoft",
       "publisher": ""
     },
@@ -138,7 +114,7 @@
       "title": "Dune",
       "releaseDate": "1994-01",
       "serial": "T-70035-50",
-      "rating": "OFLC: G8+",
+      "rating": "",
       "developer": "Cryo Interactive Entertainment",
       "publisher": "Virgin Interactive Entertainment"
     },
@@ -245,7 +221,7 @@
       "title": "Formula One World Championship: Beyond the Limit",
       "releaseDate": "1994-09",
       "serial": "4608-50",
-      "rating": "OFLC: G",
+      "rating": "",
       "developer": "Fuji Television",
       "publisher": "Sega Europe"
     },
@@ -256,14 +232,6 @@
       "rating": "BBFC: 15",
       "developer": "Digital Pictures",
       "publisher": "Sony Imagesoft"
-    },
-    {
-      "title": "Heart of the Alien: Out of this World Parts I and II",
-      "releaseDate": "",
-      "serial": "063100",
-      "rating": "ClassInd: 13",
-      "developer": "Delphine Software International",
-      "publisher": "Virgin Interactive Entertainment"
     },
     {
       "title": "Hook",
@@ -277,7 +245,7 @@
       "title": "INXS",
       "releaseDate": "1993",
       "serial": "4902",
-      "rating": "OFLC: G",
+      "rating": "",
       "developer": "Digital Pictures",
       "publisher": "Sega Europe"
     },
@@ -288,14 +256,6 @@
       "rating": "",
       "developer": "",
       "publisher": ""
-    },
-    {
-      "title": "Joe Montana's NFL Football",
-      "releaseDate": "",
-      "serial": "063190}",
-      "rating": "",
-      "developer": "Malibu Interactive",
-      "publisher": "Sega of America"
     },
     {
       "title": "Jurassic Park (Mega-CD)",
@@ -346,28 +306,12 @@
       "publisher": "Konami"
     },
     {
-      "title": "Loadstar: The Legend of Tully Bodine",
-      "releaseDate": "",
-      "serial": "063486}",
-      "rating": "ClassInd: 13",
-      "developer": "Rocket Science Games",
-      "publisher": ""
-    },
-    {
       "title": "Lords of Thunder",
       "releaseDate": "1995",
       "serial": "T-143035-50",
       "rating": "ELSPA: 3+",
       "developer": "Eleven",
       "publisher": ""
-    },
-    {
-      "title": "Mad Dog McCree",
-      "releaseDate": "1993",
-      "serial": "",
-      "rating": "",
-      "developer": "American Laser Games",
-      "publisher": "American Laser Games"
     },
     {
       "title": "Marko's Magic Football",
@@ -416,7 +360,7 @@
       "title": "Mortal Kombat",
       "releaseDate": "1994-07",
       "serial": "T-81025-50",
-      "rating": "OFLC: MA15+",
+      "rating": "",
       "developer": "Grey Team",
       "publisher": ""
     },
@@ -427,14 +371,6 @@
       "rating": "ELSPA: 3+",
       "developer": "Iguana Entertainment",
       "publisher": ""
-    },
-    {
-      "title": "NFL's Greatest: San Francisco vs. Dallas 1978-1993",
-      "releaseDate": "",
-      "serial": "063200}",
-      "rating": "",
-      "developer": "Park Place Productions",
-      "publisher": "Sega of America"
     },
     {
       "title": "NHL Hockey '94",
@@ -496,7 +432,7 @@
       "title": "Prize Fighter",
       "releaseDate": "",
       "serial": "4206}",
-      "rating": "OFLC: M15+",
+      "rating": "BBFC: 15",
       "developer": "Digital Pictures",
       "publisher": ""
     },
@@ -509,36 +445,12 @@
       "publisher": "Psygnosis"
     },
     {
-      "title": "Racing Aces",
-      "releaseDate": "",
-      "serial": "063230",
-      "rating": "",
-      "developer": "Hammond & Leyland",
-      "publisher": "Sega of America"
-    },
-    {
-      "title": "Revenge of the Ninja",
-      "releaseDate": "",
-      "serial": "063440",
-      "rating": "ClassInd: 13",
-      "developer": "Wolf Team",
-      "publisher": "Renovation Products"
-    },
-    {
       "title": "Road Avenger",
       "releaseDate": "",
       "serial": "4603}",
-      "rating": "OFLC: MA15+",
+      "rating": "",
       "developer": "Wolf Team",
       "publisher": "Data EastCategory :Live link reference"
-    },
-    {
-      "title": "Road Rash (Mega-CD)",
-      "releaseDate": "1995-10",
-      "serial": "",
-      "rating": "ClassInd: Livre",
-      "developer": "Monkey Do Productions",
-      "publisher": "Electronic Arts"
     },
     {
       "title": "Robo Aleste",
@@ -648,7 +560,7 @@
       "title": "Sonic the Hedgehog CD",
       "releaseDate": "1993-10",
       "serial": "4407",
-      "rating": "OFLC: G",
+      "rating": "BBFC: U",
       "developer": "Sega CS3",
       "publisher": "Sega Entertainment Inc."
     },
@@ -659,14 +571,6 @@
       "rating": "USK: 6",
       "developer": "Core Design",
       "publisher": ""
-    },
-    {
-      "title": "Space Ace (Mega-CD)",
-      "releaseDate": "",
-      "serial": "063410",
-      "rating": "ClassInd: Livre",
-      "developer": "ReadySoft",
-      "publisher": "ReadySoft"
     },
     {
       "title": "Spider-Man vs. The Kingpin (Mega-CD)",
@@ -680,7 +584,7 @@
       "title": "Star Wars: Rebel Assault",
       "releaseDate": "1994",
       "serial": "T-60075-50",
-      "rating": "ClassInd: Livre",
+      "rating": "BBFC: 15",
       "developer": "",
       "publisher": ""
     },
@@ -744,7 +648,7 @@
       "title": "The San Diego Zoo Presents... The Animals!",
       "releaseDate": "1994-09",
       "serial": "T-158015-50",
-      "rating": "ClassInd: 13",
+      "rating": "",
       "developer": "Arnowitz Studios",
       "publisher": ""
     },
@@ -762,7 +666,6 @@
         "Les Schtroumpfs",
         "Los Pitufos",
         "Os Estrumfes",
-        "Os Smurfs",
         "Smurfarna"
       ]
     },
@@ -770,7 +673,7 @@
       "title": "The Software Toolworks' Star Wars Chess",
       "releaseDate": "1994",
       "serial": "T-158025-50",
-      "rating": "ClassInd: 13",
+      "rating": "",
       "developer": "LucasArts",
       "publisher": ""
     },
@@ -818,23 +721,15 @@
       "title": "Tomcat Alley",
       "releaseDate": "",
       "serial": "4429}",
-      "rating": "OFLC: M15+",
+      "rating": "ELSPA: 11+",
       "developer": "Novotrade",
       "publisher": "Sega PC"
-    },
-    {
-      "title": "Wild Woody",
-      "releaseDate": "1995-10",
-      "serial": "",
-      "rating": "ClassInd: Livre",
-      "developer": "Sega Multimedia Studio",
-      "publisher": "Tec Toy"
     },
     {
       "title": "Wolfchild",
       "releaseDate": "1993",
       "serial": "4404",
-      "rating": "OFLC: G8+",
+      "rating": "",
       "developer": "Core Design",
       "publisher": "Sega Europe"
     },
@@ -858,7 +753,7 @@
       "title": "WWF Rage in the Cage",
       "releaseDate": "1994-01",
       "serial": "T-81015-50",
-      "rating": "OFLC: PG",
+      "rating": "",
       "developer": "Sculptured Software",
       "publisher": ""
     },
@@ -866,7 +761,7 @@
       "title": "Yumemi Mystery Mansion",
       "releaseDate": "1994-03",
       "serial": "4430",
-      "rating": "OFLC: G8+",
+      "rating": "",
       "developer": "Production",
       "publisher": ""
     }

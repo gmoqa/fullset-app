@@ -178,7 +178,9 @@
     "catalogs": {
       "NTSC-U": "catalogs/master-system-usa.json",
       "NTSC-J": "catalogs/master-system-jp.json",
-      "PAL": "catalogs/master-system-eu.json"
+      "PAL": "catalogs/master-system-eu.json",
+      "PAL/BR": "catalogs/master-system-br.json",
+      "PAL/AU": "catalogs/master-system-au.json"
     },
     "libretroRepo": "Sega_-_Master_System_-_Mark_III",
     "enabled": true,
@@ -199,7 +201,9 @@
     "counts": {
       "NTSC-U": 114,
       "NTSC-J": 84,
-      "PAL": 363
+      "PAL": 276,
+      "PAL/AU": 233,
+      "PAL/BR": 279
     }
   },
   {
@@ -208,7 +212,9 @@
     "catalogs": {
       "NTSC-U": "catalogs/genesis-usa.json",
       "NTSC-J": "catalogs/genesis-jp.json",
-      "PAL": "catalogs/genesis-eu.json"
+      "PAL": "catalogs/genesis-eu.json",
+      "PAL/BR": "catalogs/genesis-br.json",
+      "PAL/AU": "catalogs/genesis-au.json"
     },
     "libretroRepo": "Sega_-_Mega_Drive_-_Genesis",
     "enabled": true,
@@ -229,7 +235,9 @@
     "counts": {
       "NTSC-U": 711,
       "NTSC-J": 435,
-      "PAL": 747
+      "PAL": 619,
+      "PAL/AU": 516,
+      "PAL/BR": 354
     }
   },
   {
@@ -238,7 +246,9 @@
     "catalogs": {
       "NTSC-U": "catalogs/game-gear-usa.json",
       "NTSC-J": "catalogs/game-gear-jp.json",
-      "PAL": "catalogs/game-gear-eu.json"
+      "PAL": "catalogs/game-gear-eu.json",
+      "PAL/BR": "catalogs/game-gear-br.json",
+      "PAL/AU": "catalogs/game-gear-au.json"
     },
     "libretroRepo": "Sega_-_Game_Gear",
     "enabled": true,
@@ -260,7 +270,9 @@
     "counts": {
       "NTSC-U": 234,
       "NTSC-J": 199,
-      "PAL": 208
+      "PAL": 203,
+      "PAL/AU": 21,
+      "PAL/BR": 69
     }
   },
   {
@@ -269,7 +281,9 @@
     "catalogs": {
       "NTSC-U": "catalogs/sega-cd-usa.json",
       "NTSC-J": "catalogs/sega-cd-jp.json",
-      "PAL": "catalogs/sega-cd-eu.json"
+      "PAL": "catalogs/sega-cd-eu.json",
+      "PAL/BR": "catalogs/sega-cd-br.json",
+      "PAL/AU": "catalogs/sega-cd-au.json"
     },
     "libretroRepo": "Sega_-_Mega-CD_-_Sega_CD",
     "enabled": true,
@@ -290,7 +304,9 @@
     "counts": {
       "NTSC-U": 146,
       "NTSC-J": 116,
-      "PAL": 109
+      "PAL": 93,
+      "PAL/AU": 43,
+      "PAL/BR": 58
     }
   },
   {
@@ -299,7 +315,9 @@
     "catalogs": {
       "NTSC-U": "catalogs/32x-usa.json",
       "NTSC-J": "catalogs/32x-jp.json",
-      "PAL": "catalogs/32x-eu.json"
+      "PAL": "catalogs/32x-eu.json",
+      "PAL/BR": "catalogs/32x-br.json",
+      "PAL/AU": "catalogs/32x-au.json"
     },
     "libretroRepo": "Sega_-_32X",
     "enabled": true,
@@ -320,7 +338,9 @@
     "counts": {
       "NTSC-U": 31,
       "NTSC-J": 18,
-      "PAL": 26
+      "PAL": 23,
+      "PAL/AU": 17,
+      "PAL/BR": 14
     }
   },
   {
@@ -329,7 +349,9 @@
     "catalogs": {
       "NTSC-U": "catalogs/saturn-usa.json",
       "NTSC-J": "catalogs/saturn-jp.json",
-      "PAL": "catalogs/saturn-eu.json"
+      "PAL": "catalogs/saturn-eu.json",
+      "PAL/BR": "catalogs/saturn-br.json",
+      "PAL/AU": "catalogs/saturn-au.json"
     },
     "libretroRepo": "Sega_-_Saturn",
     "enabled": true,
@@ -350,7 +372,9 @@
     "counts": {
       "NTSC-U": 251,
       "NTSC-J": 1091,
-      "PAL": 247
+      "PAL": 240,
+      "PAL/AU": 187,
+      "PAL/BR": 103
     }
   },
   {
@@ -359,7 +383,9 @@
     "catalogs": {
       "NTSC-U": "catalogs/dreamcast-usa.json",
       "NTSC-J": "catalogs/dreamcast-jp.json",
-      "PAL": "catalogs/dreamcast-eu.json"
+      "PAL": "catalogs/dreamcast-eu.json",
+      "PAL/BR": "catalogs/dreamcast-br.json",
+      "PAL/AU": "catalogs/dreamcast-au.json"
     },
     "libretroRepo": "Sega_-_Dreamcast",
     "enabled": true,
@@ -380,7 +406,9 @@
     "counts": {
       "NTSC-U": 248,
       "NTSC-J": 545,
-      "PAL": 224
+      "PAL": 220,
+      "PAL/AU": 155,
+      "PAL/BR": 30
     }
   },
   {

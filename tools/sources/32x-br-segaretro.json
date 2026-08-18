@@ -1,0 +1,119 @@
+{
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_32X_games_in_Brazil",
+  "region": "BR",
+  "games": [
+    {
+      "title": "Blackthorne",
+      "releaseDate": "1996-01",
+      "serial": "152130",
+      "rating": "ClassInd: Livre",
+      "developer": "Interplay",
+      "publisher": "Sega of America"
+    },
+    {
+      "title": "Chaotix",
+      "releaseDate": "1995",
+      "serial": "152090",
+      "rating": "ClassInd: Livre",
+      "developer": "Sega CS3",
+      "publisher": ""
+    },
+    {
+      "title": "Cosmic Carnage",
+      "releaseDate": "1995",
+      "serial": "151020",
+      "rating": "ClassInd: 13",
+      "developer": "Almanic",
+      "publisher": ""
+    },
+    {
+      "title": "Doom (32X)",
+      "releaseDate": "",
+      "serial": "152010",
+      "rating": "ClassInd: 18",
+      "developer": "Sega of America",
+      "publisher": ""
+    },
+    {
+      "title": "Golf Magazine: 36 Great Holes Starring Fred Couples",
+      "releaseDate": "1995-05",
+      "serial": "152100",
+      "rating": "ClassInd: Livre",
+      "developer": "Flashpoint Productions",
+      "publisher": ""
+    },
+    {
+      "title": "Kolibri",
+      "releaseDate": "1996-01",
+      "serial": "152150",
+      "rating": "ClassInd: Livre",
+      "developer": "Novotrade International",
+      "publisher": ""
+    },
+    {
+      "title": "Metal Head",
+      "releaseDate": "1995",
+      "serial": "152060",
+      "rating": "ClassInd: Livre",
+      "developer": "Sega CS4",
+      "publisher": ""
+    },
+    {
+      "title": "Mortal Kombat II",
+      "releaseDate": "1995",
+      "serial": "153010",
+      "rating": "ClassInd: 18",
+      "developer": "Probe Entertainment",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "Motocross Championship",
+      "releaseDate": "",
+      "serial": "151010",
+      "rating": "ClassInd: Livre",
+      "developer": "Artech Studios",
+      "publisher": ""
+    },
+    {
+      "title": "Star Trek: Starfleet Academy Starship Bridge Simulator",
+      "releaseDate": "1995",
+      "serial": "152140",
+      "rating": "ClassInd: Livre",
+      "developer": "High Voltage Software",
+      "publisher": "Sega of America"
+    },
+    {
+      "title": "Star Wars Arcade",
+      "releaseDate": "1995",
+      "serial": "152080",
+      "rating": "ClassInd: Livre",
+      "developer": "Sega AM3",
+      "publisher": "Sega Enterprises, Ltd."
+    },
+    {
+      "title": "Tempo",
+      "releaseDate": "1995-05",
+      "serial": "152070",
+      "rating": "ClassInd: Livre",
+      "developer": "Red Company",
+      "publisher": ""
+    },
+    {
+      "title": "Virtua Fighter",
+      "releaseDate": "1995",
+      "serial": "153020",
+      "rating": "ClassInd: Livre",
+      "developer": "Sega AM2",
+      "publisher": "Sega Enterprises, Ltd."
+    },
+    {
+      "title": "Virtua Racing Deluxe",
+      "releaseDate": "1994",
+      "serial": "152020",
+      "rating": "ClassInd: Livre",
+      "developer": "Sega CS4",
+      "publisher": ""
+    }
+  ]
+}

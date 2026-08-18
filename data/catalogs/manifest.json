@@ -1,23 +1,49 @@
 {
   "schema": 1,
-  "version": "7fde0c64534b",
+  "version": "9a3184a8a3a0",
   "files": [
     {
       "path": "catalogs/platforms.json",
-      "bytes": 17613,
-      "sha256": "e0e6e45b1db12dd93f1d8cc4fa01b84260e350f4ba4f6128883c620c1b05c935"
+      "bytes": 18525,
+      "sha256": "0ff23a690d3983dc5e99441830ff3183263dad161d3c912e39cc5eca36210ef3"
+    },
+    {
+      "path": "catalogs/32x-au.json",
+      "platform": "Sega 32X",
+      "games": 17,
+      "bytes": 6387,
+      "sha256": "2c898d423edc9554cc7eb11505df4a3bbdc962f58a7614582a365b9a687179fe",
+      "coverage": {
+        "year": 35,
+        "publisher": 35,
+        "serial": 94,
+        "coverUrl": 88
+      }
+    },
+    {
+      "path": "catalogs/32x-br.json",
+      "platform": "Sega 32X",
+      "games": 14,
+      "bytes": 5352,
+      "sha256": "04708eb0d01e3943ae7e8bda8b51ce7d9a65843ee8221e3a28e42de887ad1045",
+      "coverage": {
+        "year": 85,
+        "publisher": 35,
+        "serial": 100,
+        "coverUrl": 85
+      }
     },
     {
       "path": "catalogs/32x-eu.json",
       "platform": "Sega 32X",
-      "games": 26,
-      "bytes": 10368,
-      "sha256": "45961cded7a30dd930c5d883e39054a04be4c62cc710d89fe2308dc3d9041e44",
+      "games": 23,
+      "bytes": 9080,
+      "sha256": "b0cf8c113ae64b4402f0e314f21e5d4a9a1737940323f889d173f94ab69e64ec",
       "coverage": {
         "year": 100,
-        "publisher": 92,
+        "publisher": 91,
         "serial": 100,
-        "coverUrl": 92
+        "coverUrl": 91
       }
     },
     {
@@ -99,14 +125,40 @@
       }
     },
     {
+      "path": "catalogs/dreamcast-au.json",
+      "platform": "Dreamcast",
+      "games": 155,
+      "bytes": 64163,
+      "sha256": "b5e1da2146428b70fddb239ebac52b1f7a3366dd6217c6c205fbb4c7a8da0a69",
+      "coverage": {
+        "year": 98,
+        "publisher": 48,
+        "serial": 19,
+        "coverUrl": 96
+      }
+    },
+    {
+      "path": "catalogs/dreamcast-br.json",
+      "platform": "Dreamcast",
+      "games": 30,
+      "bytes": 12357,
+      "sha256": "8d208835e7f8aa73f5080f22838b765afc4c092af33435e60747c1ff78477dd1",
+      "coverage": {
+        "year": 43,
+        "publisher": 46,
+        "serial": 96,
+        "coverUrl": 93
+      }
+    },
+    {
       "path": "catalogs/dreamcast-eu.json",
       "platform": "Dreamcast",
-      "games": 224,
-      "bytes": 95896,
-      "sha256": "486c5d4b592f78ea72068484a3e00e5df772afe3e5471aae8d1e1afac36ec99f",
+      "games": 220,
+      "bytes": 94279,
+      "sha256": "e9c438bc264995717705ec745296b16e83773b8be9b1d8009539daceebd4fc18",
       "coverage": {
-        "year": 97,
-        "publisher": 70,
+        "year": 98,
+        "publisher": 71,
         "serial": 97,
         "coverUrl": 95
       }
@@ -177,13 +229,39 @@
       }
     },
     {
+      "path": "catalogs/game-gear-au.json",
+      "platform": "Sega Game Gear",
+      "games": 21,
+      "bytes": 8167,
+      "sha256": "7b05490941310a647eedac8bbcf076abc2210f33217e28714922b8ed18b84a33",
+      "coverage": {
+        "year": 33,
+        "publisher": 76,
+        "serial": 28,
+        "coverUrl": 85
+      }
+    },
+    {
+      "path": "catalogs/game-gear-br.json",
+      "platform": "Sega Game Gear",
+      "games": 69,
+      "bytes": 29171,
+      "sha256": "b0c4bb98d34df0c918f7765206033a46bcec7ea034a7521d0e7e32c6ba217fde",
+      "coverage": {
+        "year": 17,
+        "publisher": 49,
+        "serial": 98,
+        "coverUrl": 94
+      }
+    },
+    {
       "path": "catalogs/game-gear-eu.json",
       "platform": "Sega Game Gear",
-      "games": 208,
-      "bytes": 86909,
-      "sha256": "7231dfc2b73345c013b9470687b315dda1ecd164deee80555ad0a46451bfe69f",
+      "games": 203,
+      "bytes": 84690,
+      "sha256": "65da7dd882f5953db124c42e326e21bc304e834f539d82d92490755e900bf375",
       "coverage": {
-        "year": 96,
+        "year": 98,
         "publisher": 98,
         "serial": 98,
         "coverUrl": 88
@@ -294,16 +372,42 @@
       }
     },
     {
+      "path": "catalogs/genesis-au.json",
+      "platform": "Sega Genesis",
+      "games": 516,
+      "bytes": 208286,
+      "sha256": "6f883d8f46f4005f9e23d59a10943257adfc564bf43aba00cbeb7d8f0ff7c953",
+      "coverage": {
+        "year": 33,
+        "publisher": 69,
+        "serial": 49,
+        "coverUrl": 89
+      }
+    },
+    {
+      "path": "catalogs/genesis-br.json",
+      "platform": "Sega Genesis",
+      "games": 354,
+      "bytes": 138414,
+      "sha256": "7473bfb04f1b411244a4bd3008b2f2cd948f3875a5a4cd725b3c55b6d65bd15d",
+      "coverage": {
+        "year": 51,
+        "publisher": 68,
+        "serial": 56,
+        "coverUrl": 79
+      }
+    },
+    {
       "path": "catalogs/genesis-eu.json",
       "platform": "Sega Genesis",
-      "games": 747,
-      "bytes": 302120,
-      "sha256": "a62a2d64142994a04fdb51ad4acc9fe25b65351b624513d21ca557bcefcfed6e",
+      "games": 619,
+      "bytes": 259852,
+      "sha256": "98365b1a960d49b65556dcc1ba5d76faf86ac56695ccc570303a8866b29d57f5",
       "coverage": {
-        "year": 88,
+        "year": 94,
         "publisher": 97,
-        "serial": 85,
-        "coverUrl": 80
+        "serial": 92,
+        "coverUrl": 89
       }
     },
     {
@@ -333,16 +437,42 @@
       }
     },
     {
+      "path": "catalogs/master-system-au.json",
+      "platform": "Sega Master System",
+      "games": 233,
+      "bytes": 95589,
+      "sha256": "4160f65ea4b86eeebf95bc869d34cd468fbe8a82feefbf1e1ea40c7237d596cf",
+      "coverage": {
+        "year": 20,
+        "publisher": 61,
+        "serial": 57,
+        "coverUrl": 86
+      }
+    },
+    {
+      "path": "catalogs/master-system-br.json",
+      "platform": "Sega Master System",
+      "games": 279,
+      "bytes": 111731,
+      "sha256": "5eaa27891ee76e4dd7e0ac40dfeee0c96019afdd879f5e60308136bcaa43eaa9",
+      "coverage": {
+        "year": 43,
+        "publisher": 66,
+        "serial": 58,
+        "coverUrl": 77
+      }
+    },
+    {
       "path": "catalogs/master-system-eu.json",
       "platform": "Sega Master System",
-      "games": 363,
-      "bytes": 147469,
-      "sha256": "66991a9db3dcdccbe1ee2dded6cebe2cb7302c074b6cbc3587afc398168315b3",
+      "games": 276,
+      "bytes": 118097,
+      "sha256": "08799b9b01d64c3e82d3ca7e9621e5997cb43c68c3e8bbc6931f69e4a49beb6c",
       "coverage": {
-        "year": 93,
-        "publisher": 97,
-        "serial": 84,
-        "coverUrl": 75
+        "year": 98,
+        "publisher": 96,
+        "serial": 97,
+        "coverUrl": 88
       }
     },
     {
@@ -567,16 +697,42 @@
       }
     },
     {
+      "path": "catalogs/saturn-au.json",
+      "platform": "Sega Saturn",
+      "games": 187,
+      "bytes": 72758,
+      "sha256": "490d6dd41bde4da3f147c5209740dc1bb553f3e79b55268bcf59e2e91cbd09c7",
+      "coverage": {
+        "year": 5,
+        "publisher": 33,
+        "serial": 67,
+        "coverUrl": 95
+      }
+    },
+    {
+      "path": "catalogs/saturn-br.json",
+      "platform": "Sega Saturn",
+      "games": 103,
+      "bytes": 40700,
+      "sha256": "196eabf54445d5b4a9a37a0a12542674ebff2f654109c80fae03649b7d83356a",
+      "coverage": {
+        "year": 34,
+        "publisher": 37,
+        "serial": 95,
+        "coverUrl": 93
+      }
+    },
+    {
       "path": "catalogs/saturn-eu.json",
       "platform": "Sega Saturn",
-      "games": 247,
-      "bytes": 100288,
-      "sha256": "ab744bdc5ad1e94846dafdb0b28e129371323abcb9e552403570bdae33022a99",
+      "games": 240,
+      "bytes": 97624,
+      "sha256": "60074e9d490fa25536f6803feb1e9ef5f5355a61a1af96b155751a43339a8c8e",
       "coverage": {
-        "year": 98,
+        "year": 100,
         "publisher": 57,
-        "serial": 98,
-        "coverUrl": 94
+        "serial": 99,
+        "coverUrl": 95
       }
     },
     {
@@ -606,16 +762,42 @@
       }
     },
     {
+      "path": "catalogs/sega-cd-au.json",
+      "platform": "Sega CD",
+      "games": 43,
+      "bytes": 16899,
+      "sha256": "bd8bf2066c2ade49df5cb4fdd2df3b539d67a310b54db78691d730c4f355e5c4",
+      "coverage": {
+        "year": 34,
+        "publisher": 44,
+        "serial": 58,
+        "coverUrl": 95
+      }
+    },
+    {
+      "path": "catalogs/sega-cd-br.json",
+      "platform": "Sega CD",
+      "games": 58,
+      "bytes": 23505,
+      "sha256": "84d58d82947c264787e081114c268c68ce627873ead0fefa26fbe8cb5b452dd2",
+      "coverage": {
+        "year": 32,
+        "publisher": 50,
+        "serial": 84,
+        "coverUrl": 96
+      }
+    },
+    {
       "path": "catalogs/sega-cd-eu.json",
       "platform": "Sega CD",
-      "games": 109,
-      "bytes": 44519,
-      "sha256": "0c69788f055f0f0b7d96405cfc8ae47701c0cefea2611633b28a344708b84071",
+      "games": 93,
+      "bytes": 37601,
+      "sha256": "8a00f27e409305ea0dd0017f10ca8659518ff373efbc494e40764531d0d7a542",
       "coverage": {
-        "year": 90,
-        "publisher": 69,
-        "serial": 97,
-        "coverUrl": 93
+        "year": 98,
+        "publisher": 66,
+        "serial": 100,
+        "coverUrl": 92
       }
     },
     {

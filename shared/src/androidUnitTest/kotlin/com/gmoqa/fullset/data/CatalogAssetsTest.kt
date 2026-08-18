@@ -43,19 +43,28 @@ class CatalogAssetsTest {
         }
     }
 
+    /**
+     * Una clave de `catalogs` es `"PAL"` o `"PAL/BR"`: región y, opcionalmente, territorio. Bajo PAL
+     * conviven Europa, Brasil y Australia, que no son la misma lista.
+     */
+    private fun partes(label: String): Pair<RegionFilter, String?> {
+        val region = RegionFilter.entries.first { it.label == label.substringBefore("/") }
+        return region to label.substringAfter("/", "").ifBlank { null }
+    }
+
     @Test
     fun cadaCatalogoDeclaraLaPlataformaYRegionQueLeCorresponde() {
         for (platform in platforms()) {
             for ((label, file) in platform.catalogs) {
                 val text = readAsset(file)
                 assertTrue(text != null, "${platform.name}: falta el archivo '$file'")
-                val entries = catalog.entries(
-                    platform,
-                    RegionFilter.entries.first { it.label == label },
-                )
+                val (region, territory) = partes(label)
+                val entries = catalog.entries(platform, region, territory)
                 // `region` sale del propio catálogo; si no coincide, el archivo está mal mapeado.
+                // El territorio **no** viaja en la entrada: un cartucho brasileño sigue siendo PAL,
+                // y de qué territorio es lo dice la lista en la que está.
                 val regions = entries.map { it.region }.toSet()
-                assertEquals(setOf(label), regions, "$file está mapeado como $label")
+                assertEquals(setOf(region.label), regions, "$file está mapeado como $label")
             }
         }
     }
@@ -66,8 +75,9 @@ class CatalogAssetsTest {
         // apuntarían al juego equivocado.
         for (platform in platforms()) {
             for ((label, _) in platform.catalogs) {
-                val region = RegionFilter.entries.first { it.label == label }
-                val slugs = catalog.entries(platform, region).map { it.slug }.filter { it.isNotBlank() }
+                val (region, territory) = partes(label)
+                val slugs = catalog.entries(platform, region, territory)
+                    .map { it.slug }.filter { it.isNotBlank() }
                 val dupes = slugs.groupingBy { it }.eachCount().filter { it.value > 1 }
                 assertTrue(dupes.isEmpty(), "${platform.name}/$label: slugs repetidos ${dupes.keys}")
             }
@@ -82,9 +92,15 @@ class CatalogAssetsTest {
         assertEquals(8, sega.size, "se esperaban 8 consolas Sega, hay ${sega.map { it.name }}")
         for (platform in sega) {
             assertTrue(platform.enabled, "${platform.name} debería estar habilitada")
+            // Se comparan las **regiones**, no las claves crudas: siete consolas Sega declaran
+            // además territorios (`PAL/BR`, `PAL/AU`) porque Brasil y Australia no son Europa.
             val expected =
                 if (platform.id == "sg-1000") setOf("NTSC-J") else setOf("NTSC-U", "NTSC-J", "PAL")
-            assertEquals(expected, platform.catalogs.keys, "regiones de ${platform.name}")
+            assertEquals(
+                expected,
+                platform.catalogs.keys.map { it.substringBefore("/") }.toSet(),
+                "regiones de ${platform.name}",
+            )
         }
     }
 

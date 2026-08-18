@@ -777,6 +777,38 @@ claves nuevas no rompe nada.
   `ds-eu` tiene 2.435 entradas contra 1.782 de `ds-usa`: Europa recibió mucho más shovelware
   localizado, y cada idioma es un cartucho.
 
+- **L. «PAL» no era una sola cosa** — resuelto el **2026-08-17**. Bajo esa etiqueta convivían
+  Europa, **Brasil** y **Australia**, y no son lo mismo:
+
+  - **Brasil usaba PAL-M a 60 Hz**, otro estándar de video, y **Tec Toy** publicaba cartuchos
+    propios. La **Master System tuvo más juegos en Brasil (279) que en Europa (276)**, con 71 que
+    nunca existieron acá: *Asa Delta*, *Academia do Saber*, *A Ponte*.
+  - **Australia** recibía lanzamientos con **catalog number propio**: *American Gladiators* es
+    `FAME02GMC` allá y `T-83056` en EE.UU.
+
+  Eran **250 juegos** mezclados en las listas europeas de siete consolas Sega.
+
+  **El modelo**: la clave de `catalogs` admite territorio con barra —`"PAL/BR"`, `"PAL/AU"`— y la
+  clave sin barra sigue siendo el territorio principal. Una consola que no declara territorios
+  funciona exactamente igual que antes, así que el cambio es aditivo.
+
+  | | Europa | Brasil | Australia |
+  |---|---|---|---|
+  | Mega Drive | 747 → **619** | **354** | **516** |
+  | Master System | 363 → **276** | **279** | **233** |
+  | Saturn | 247 → **240** | 103 | 187 |
+  | Dreamcast | 224 → **220** | 30 | 155 |
+  | Sega CD | 109 → **93** | 58 | 43 |
+  | Game Gear | 208 → **203** | 69 | 21 |
+  | 32X | 26 → **23** | 14 | 17 |
+
+  Las listas europeas se **podaron**, no se reconstruyeron: rehacerlas habría perdido el
+  enriquecimiento acumulado (carátulas al 88–95%, género, editora). Los 14 catálogos nuevos salen
+  del recolector con `--region BR|AU` y se enriquecieron aparte (**+1.818 carátulas**).
+
+  De paso quedó corregido el recolector: `REGION_GROUPS["PAL"]` incluía `AU` y `BR`, que es de donde
+  venía la mezcla.
+
 - **G. Vocabularios controlados** — **pendiente, medido el 2026-08-10.** El lint garantiza la
   **forma** (11 claves, orden, tipos, slug único, ordenado) y cuatro invariantes de significado,
   pero **no mira el vocabulario**: atrapa un serial japonés en un catálogo americano y no atrapa

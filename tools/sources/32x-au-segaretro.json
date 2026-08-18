@@ -1,0 +1,143 @@
+{
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_32X_games_in_Australia",
+  "region": "AU",
+  "games": [
+    {
+      "title": "After Burner Complete",
+      "releaseDate": "1995",
+      "serial": "",
+      "rating": "",
+      "developer": "Rutubo Games",
+      "publisher": ""
+    },
+    {
+      "title": "Chaotix",
+      "releaseDate": "",
+      "serial": "FCHA05SXC",
+      "rating": "",
+      "developer": "Sega CS3",
+      "publisher": ""
+    },
+    {
+      "title": "Cosmic Carnage",
+      "releaseDate": "",
+      "serial": "FCOS01SXC",
+      "rating": "OFLC: M15+",
+      "developer": "Almanic",
+      "publisher": ""
+    },
+    {
+      "title": "Doom (32X)",
+      "releaseDate": "",
+      "serial": "FDOO02SXC",
+      "rating": "OFLC: MA15+",
+      "developer": "Sega of America",
+      "publisher": ""
+    },
+    {
+      "title": "Golf Magazine: 36 Great Holes Starring Fred Couples",
+      "releaseDate": "1995-04",
+      "serial": "FGOL05SXC",
+      "rating": "OFLC: G",
+      "developer": "Flashpoint Productions",
+      "publisher": ""
+    },
+    {
+      "title": "Kolibri",
+      "releaseDate": "",
+      "serial": "FKOL00SXC",
+      "rating": "OFLC: G",
+      "developer": "Novotrade International",
+      "publisher": ""
+    },
+    {
+      "title": "Metal Head",
+      "releaseDate": "1995-04",
+      "serial": "FMET01SXC",
+      "rating": "OFLC: G8+",
+      "developer": "Sega CS4",
+      "publisher": ""
+    },
+    {
+      "title": "Mortal Kombat II",
+      "releaseDate": "",
+      "serial": "FMOR01SXC",
+      "rating": "OFLC: MA15+",
+      "developer": "Probe Entertainment",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "Motocross Championship",
+      "releaseDate": "",
+      "serial": "FMOT04SXC",
+      "rating": "OFLC: G8+",
+      "developer": "Artech Studios",
+      "publisher": ""
+    },
+    {
+      "title": "NBA Jam Tournament Edition",
+      "releaseDate": "1995-05",
+      "serial": "FNBA02SXC",
+      "rating": "",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "Space Harrier",
+      "releaseDate": "",
+      "serial": "FSUP29SXC",
+      "rating": "OFLC: G",
+      "developer": "Dempa Micomsoft",
+      "publisher": "NEC Avenue"
+    },
+    {
+      "title": "Star Wars Arcade",
+      "releaseDate": "",
+      "serial": "FSTA06SXC",
+      "rating": "OFLC: G",
+      "developer": "Sega AM3",
+      "publisher": "Sega Enterprises, Ltd."
+    },
+    {
+      "title": "Stellar Assault",
+      "releaseDate": "",
+      "serial": "FSTE01SXC}",
+      "rating": "OFLC: G",
+      "developer": "Sega CS3",
+      "publisher": ""
+    },
+    {
+      "title": "Virtua Fighter",
+      "releaseDate": "1995",
+      "serial": "FVIR07SXC",
+      "rating": "",
+      "developer": "Sega AM2",
+      "publisher": "Sega Enterprises, Ltd."
+    },
+    {
+      "title": "Virtua Racing Deluxe",
+      "releaseDate": "",
+      "serial": "FVIR02SXC",
+      "rating": "OFLC: G",
+      "developer": "Sega CS4",
+      "publisher": ""
+    },
+    {
+      "title": "WWF Raw",
+      "releaseDate": "",
+      "serial": "FWWF03SXC",
+      "rating": "OFLC: G8+",
+      "developer": "Realtime Associates Seattle Division",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "Zaxxon's Motherbase 2000",
+      "releaseDate": "1995",
+      "serial": "FMOT03SXC",
+      "rating": "OFLC: G",
+      "developer": "CRI",
+      "publisher": ""
+    }
+  ]
+}

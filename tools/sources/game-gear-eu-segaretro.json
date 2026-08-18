@@ -73,10 +73,7 @@
       "serial": "2405",
       "rating": "",
       "developer": "Aspect",
-      "publisher": "Sega Europe",
-      "altTitles": [
-        "Golden Axe"
-      ]
+      "publisher": "Sega Europe"
     },
     {
       "title": "Ayrton Senna's Super Monaco GP II (8-bit)",
@@ -178,17 +175,9 @@
       "title": "Cheese Cat-Astrophe Starring Speedy Gonzales",
       "releaseDate": "",
       "serial": "2523-50}",
-      "rating": "ClassInd: Livre",
+      "rating": "",
       "developer": "Cryo Interactive Entertainment",
       "publisher": ""
-    },
-    {
-      "title": "Chicago Syndicate",
-      "releaseDate": "",
-      "serial": "077260",
-      "rating": "ClassInd: Livre",
-      "developer": "Climax Enterprises",
-      "publisher": "Sega of America"
     },
     {
       "title": "Chuck Rock",
@@ -202,7 +191,7 @@
       "title": "Chuck Rock II: Son of Chuck",
       "releaseDate": "",
       "serial": "T-115018-50}",
-      "rating": "ClassInd: Livre",
+      "rating": "",
       "developer": "Core Design",
       "publisher": ""
     },
@@ -250,7 +239,7 @@
       "title": "Daffy Duck in Hollywood",
       "releaseDate": "1994",
       "serial": "2550",
-      "rating": "ClassInd: Livre",
+      "rating": "",
       "developer": "Probe Software",
       "publisher": "Sega Europe"
     },
@@ -276,10 +265,7 @@
       "serial": "2442}",
       "rating": "",
       "developer": "Probe Software",
-      "publisher": "",
-      "altTitles": [
-        "Desert Speedtrap Estrelado Road Runner e Wile E. Coyote"
-      ]
+      "publisher": ""
     },
     {
       "title": "Desert Strike: Return to the Gulf",
@@ -351,10 +337,7 @@
       "serial": "2544-50",
       "rating": "",
       "developer": "Minato Giken",
-      "publisher": "Tec Toy",
-      "altTitles": [
-        "Dynamite Headdy"
-      ]
+      "publisher": "Tec Toy"
     },
     {
       "title": "Earthworm Jim",
@@ -429,10 +412,7 @@
       "serial": "2308",
       "rating": "",
       "developer": "Japan System HouseCategory :Live link reference",
-      "publisher": "Sega Enterprises, Ltd.",
-      "altTitles": [
-        "Crazy Company"
-      ]
+      "publisher": "Sega Enterprises, Ltd."
     },
     {
       "title": "Fantastic Dizzy",
@@ -475,14 +455,6 @@
       "publisher": "Black Pearl Software"
     },
     {
-      "title": "Frank Thomas Big Hurt Baseball",
-      "releaseDate": "",
-      "serial": "",
-      "rating": "OFLC: G",
-      "developer": "Iguana Entertainment",
-      "publisher": "Acclaim Entertainment"
-    },
-    {
       "title": "G-LOC: Air Battle",
       "releaseDate": "1991-06-29",
       "serial": "2301",
@@ -512,14 +484,6 @@
       "serial": "2528}",
       "rating": "",
       "developer": "",
-      "publisher": ""
-    },
-    {
-      "title": "Greendog: The Beached Surfer Dude!",
-      "releaseDate": "",
-      "serial": "075270",
-      "rating": "",
-      "developer": "Interactive Designs",
       "publisher": ""
     },
     {
@@ -736,10 +700,7 @@
       "serial": "T-70058-50",
       "rating": "",
       "developer": "Graftgold",
-      "publisher": "Virgin Games",
-      "altTitles": [
-        "Global Gladiators"
-      ]
+      "publisher": "Virgin Games"
     },
     {
       "title": "Micro Machines",
@@ -769,7 +730,7 @@
       "title": "Mighty Morphin Power Rangers: The Movie (Game Gear)",
       "releaseDate": "1995",
       "serial": "2564-50",
-      "rating": "ClassInd: Livre",
+      "rating": "",
       "developer": "Banpresto",
       "publisher": "Sega Europe"
     },
@@ -804,14 +765,6 @@
       "rating": "ELSPA: 15+",
       "developer": "Probe Software",
       "publisher": ""
-    },
-    {
-      "title": "NBA Action Starring David Robinson",
-      "releaseDate": "",
-      "serial": "075390",
-      "rating": "ClassInd: Livre",
-      "developer": "Sega Interactive Development Division",
-      "publisher": "Sega of America"
     },
     {
       "title": "NBA Jam",
@@ -979,7 +932,7 @@
       "serial": "2306",
       "rating": "",
       "developer": "SanritsuCategory :Live link reference",
-      "publisher": "Tec Toy"
+      "publisher": ""
     },
     {
       "title": "Putt & Putter (Game Gear)",
@@ -987,10 +940,7 @@
       "serial": "2307",
       "rating": "",
       "developer": "SIMS",
-      "publisher": "",
-      "altTitles": [
-        "Minigolf"
-      ]
+      "publisher": ""
     },
     {
       "title": "Quest for the Shaven Yak Starring Ren Hoëk & Stimpy",
@@ -1148,7 +1098,7 @@
       "title": "Sonic Spinball (8-bit)",
       "releaseDate": "1994-09",
       "serial": "2526",
-      "rating": "ClassInd: Livre",
+      "rating": "",
       "developer": "Sega Interactive Development Division",
       "publisher": "Sega"
     },
@@ -1172,7 +1122,7 @@
       "title": "Sonic the Hedgehog Triple Trouble",
       "releaseDate": "1994-11",
       "serial": "2530-50",
-      "rating": "ClassInd: Livre",
+      "rating": "",
       "developer": "Aspect",
       "publisher": "Sega Europe"
     },
@@ -1305,14 +1255,6 @@
       "publisher": ""
     },
     {
-      "title": "Surf Ninjas",
-      "releaseDate": "",
-      "serial": "077090",
-      "rating": "",
-      "developer": "NuFX",
-      "publisher": "Sega of America"
-    },
-    {
       "title": "T2: The Arcade Game",
       "releaseDate": "1994-01",
       "serial": "T-81088-50",
@@ -1422,10 +1364,7 @@
       "serial": "2317",
       "rating": "",
       "developer": "NovaLogic",
-      "publisher": "Sega Europe",
-      "altTitles": [
-        "Sega Chess"
-      ]
+      "publisher": "Sega Europe"
     },
     {
       "title": "The Excellent Dizzy Collection",
@@ -1478,8 +1417,7 @@
         "Das Dschungelbuch",
         "El Libro de la Selva",
         "Il Libro Della Giungla",
-        "Le Livre de la Jungle",
-        "O livro da Selva"
+        "Le Livre de la Jungle"
       ]
     },
     {
@@ -1493,8 +1431,7 @@
         "Der König der Löwen",
         "El Rey León",
         "Il Re Leone",
-        "Le Roi Lion",
-        "O Rei Leão"
+        "Le Roi Lion"
       ]
     },
     {
@@ -1543,7 +1480,6 @@
         "Les Schtroumpfs",
         "Los Pitufos",
         "Os Estrumfes",
-        "Os Smurfs",
         "Smurfarna"
       ]
     },

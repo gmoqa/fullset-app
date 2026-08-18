@@ -29,8 +29,12 @@ class GameCatalog(private val readAsset: (String) -> String? = ::readTextAsset) 
 
     private val cache = mutableMapOf<String, List<CatalogEntry>>()
 
-    fun entries(platform: Platform, region: RegionFilter = RegionFilter.NTSC_U): List<CatalogEntry> {
-        val file = platform.catalogFor(region)
+    fun entries(
+        platform: Platform,
+        region: RegionFilter = RegionFilter.NTSC_U,
+        territory: String? = null,
+    ): List<CatalogEntry> {
+        val file = platform.catalogFor(region, territory)
         // Cache por archivo (no por plataforma): cada región carga y cachea su propio catálogo.
         return cache.getOrPut("${platform.id}:$file") {
             // Plataformas modernas (PS5…) no traen catálogo: se cargan a mano, sin lista que buscar.

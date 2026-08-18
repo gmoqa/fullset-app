@@ -68,14 +68,6 @@
       "publisher": "GT Interactive Software"
     },
     {
-      "title": "Astal",
-      "releaseDate": "",
-      "serial": "",
-      "rating": "ClassInd: 6",
-      "developer": "Sega CS2 (1996-1999)",
-      "publisher": ""
-    },
-    {
       "title": "Atlantis: The Lost Tales",
       "releaseDate": "1998-06",
       "serial": "MK81091-50",
@@ -247,7 +239,7 @@
       "title": "Christmas NiGHTS into Dreams",
       "releaseDate": "1996-12",
       "serial": "MK81067-50",
-      "rating": "OFLC: G",
+      "rating": "",
       "developer": "Sega CS3 (1996-1999)",
       "publisher": "Sega Europe"
     },
@@ -696,14 +688,6 @@
       "publisher": "Sunsoft"
     },
     {
-      "title": "Heir of Zendor: The Legend and The Land",
-      "releaseDate": "",
-      "serial": "191496}",
-      "rating": "ClassInd: Livre",
-      "developer": "Micronet",
-      "publisher": "Koei"
-    },
-    {
       "title": "Hexen",
       "releaseDate": "1997-03-21",
       "serial": "T-25405H-50",
@@ -907,14 +891,6 @@
       "publisher": ""
     },
     {
-      "title": "Mega Man X4",
-      "releaseDate": "",
-      "serial": "191396",
-      "rating": "ClassInd: Livre",
-      "developer": "Capcom",
-      "publisher": ""
-    },
-    {
       "title": "Midway Presents Arcade's Greatest Hits: The Atari Collection 1",
       "releaseDate": "1998-03",
       "serial": "T-25413H-50",
@@ -1113,14 +1089,6 @@
       "rating": "ELSPA: 3+",
       "developer": "Silicon Dreams",
       "publisher": ""
-    },
-    {
-      "title": "Pacific Theater of Operations II",
-      "releaseDate": "",
-      "serial": "191506",
-      "rating": "ClassInd: Livre",
-      "developer": "Koei",
-      "publisher": "Koei"
     },
     {
       "title": "Pandemonium!",
@@ -1339,10 +1307,7 @@
       "serial": "MK-81105-50",
       "rating": "ELSPA: 3+",
       "developer": "Team Aquila",
-      "publisher": "KR",
-      "altTitles": [
-        "Worldwide Soccer"
-      ]
+      "publisher": "KR"
     },
     {
       "title": "Sega Rally Championship",

@@ -1,0 +1,351 @@
+{
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_Mega-CD_games_in_Australia",
+  "region": "AU",
+  "games": [
+    {
+      "title": "Batman Returns (Mega-CD)",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "OFLC: G8+",
+      "developer": "Malibu Interactive",
+      "publisher": ""
+    },
+    {
+      "title": "Battlecorps",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "OFLC: G",
+      "developer": "Core Design",
+      "publisher": ""
+    },
+    {
+      "title": "Bloodshot",
+      "releaseDate": "",
+      "serial": "FBLO24SMR",
+      "rating": "OFLC: G8+",
+      "developer": "Domark",
+      "publisher": "Domark"
+    },
+    {
+      "title": "Corpse Killer",
+      "releaseDate": "",
+      "serial": "FCOR02SMR",
+      "rating": "OFLC: MA15+",
+      "developer": "Digital Pictures",
+      "publisher": "Digital Pictures"
+    },
+    {
+      "title": "Double Switch",
+      "releaseDate": "",
+      "serial": "FDOU06SMR",
+      "rating": "OFLC: M15+",
+      "developer": "Digital Pictures",
+      "publisher": "Digital Pictures"
+    },
+    {
+      "title": "Dracula Unleashed",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "OFLC: MA15+",
+      "developer": "ICOM Simulations",
+      "publisher": ""
+    },
+    {
+      "title": "Dragon's Lair",
+      "releaseDate": "1994",
+      "serial": "FDRA06SMR",
+      "rating": "OFLC: G8+",
+      "developer": "ReadySoft",
+      "publisher": ""
+    },
+    {
+      "title": "Dune",
+      "releaseDate": "",
+      "serial": "FDUN01SMR",
+      "rating": "OFLC: G8+",
+      "developer": "Cryo Interactive Entertainment",
+      "publisher": "Virgin Interactive Entertainment"
+    },
+    {
+      "title": "Dungeon Master II: Skullkeep",
+      "releaseDate": "1994",
+      "serial": "",
+      "rating": "OFLC: G8+",
+      "developer": "FTL Games",
+      "publisher": ""
+    },
+    {
+      "title": "Earthworm Jim: Special Edition",
+      "releaseDate": "",
+      "serial": "FEAR04SMR",
+      "rating": "OFLC: G8+",
+      "developer": "",
+      "publisher": ""
+    },
+    {
+      "title": "Ecco the Dolphin",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Backbone Entertainment",
+      "publisher": "Sega PC"
+    },
+    {
+      "title": "Ecco: The Tides of Time",
+      "releaseDate": "1995-04",
+      "serial": "FECC01SMR",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Fatal Fury Special",
+      "releaseDate": "",
+      "serial": "FFAT02SMR",
+      "rating": "",
+      "developer": "Funcom",
+      "publisher": "Takara"
+    },
+    {
+      "title": "Final Fight CD",
+      "releaseDate": "1993",
+      "serial": "",
+      "rating": "",
+      "developer": "A-Wave",
+      "publisher": ""
+    },
+    {
+      "title": "Formula One World Championship: Beyond the Limit",
+      "releaseDate": "1994",
+      "serial": "FFOR01SMR",
+      "rating": "OFLC: G",
+      "developer": "Fuji Television",
+      "publisher": ""
+    },
+    {
+      "title": "Ground Zero Texas",
+      "releaseDate": "1994",
+      "serial": "",
+      "rating": "",
+      "developer": "Digital Pictures",
+      "publisher": "Sony Imagesoft"
+    },
+    {
+      "title": "INXS",
+      "releaseDate": "1993",
+      "serial": "",
+      "rating": "OFLC: G",
+      "developer": "Digital Pictures",
+      "publisher": ""
+    },
+    {
+      "title": "Jurassic Park (Mega-CD)",
+      "releaseDate": "",
+      "serial": "FJUR00SMR",
+      "rating": "OFLC: G8+",
+      "developer": "Sega Multimedia Studio",
+      "publisher": ""
+    },
+    {
+      "title": "Kids on Site",
+      "releaseDate": "",
+      "serial": "FKID01SMR",
+      "rating": "",
+      "developer": "Digital Pictures",
+      "publisher": "Digital Pictures"
+    },
+    {
+      "title": "Marko's Magic Football",
+      "releaseDate": "",
+      "serial": "FMAR04SMR",
+      "rating": "OFLC: G8+",
+      "developer": "Interactive Studios",
+      "publisher": "Domark"
+    },
+    {
+      "title": "Microcosm",
+      "releaseDate": "1994",
+      "serial": "",
+      "rating": "",
+      "developer": "",
+      "publisher": ""
+    },
+    {
+      "title": "Midnight Raiders",
+      "releaseDate": "1995-04",
+      "serial": "FMID04SMR",
+      "rating": "",
+      "developer": "Stargate Films",
+      "publisher": ""
+    },
+    {
+      "title": "Mortal Kombat",
+      "releaseDate": "",
+      "serial": "FMOR00SMR",
+      "rating": "OFLC: MA15+",
+      "developer": "Grey Team",
+      "publisher": ""
+    },
+    {
+      "title": "NBA Jam",
+      "releaseDate": "",
+      "serial": "FNBA01SMR",
+      "rating": "",
+      "developer": "Iguana Entertainment",
+      "publisher": ""
+    },
+    {
+      "title": "Prince of Persia (Mega-CD)",
+      "releaseDate": "1993",
+      "serial": "FPR102SMR",
+      "rating": "",
+      "developer": "Bits Laboratory",
+      "publisher": ""
+    },
+    {
+      "title": "Prize Fighter",
+      "releaseDate": "",
+      "serial": "FPRI00SMR}",
+      "rating": "OFLC: M15+",
+      "developer": "Digital Pictures",
+      "publisher": ""
+    },
+    {
+      "title": "Road Avenger",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "OFLC: MA15+",
+      "developer": "Wolf Team",
+      "publisher": "Data EastCategory :Live link reference"
+    },
+    {
+      "title": "Robo Aleste",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Compile",
+      "publisher": ""
+    },
+    {
+      "title": "Samurai Shodown",
+      "releaseDate": "",
+      "serial": "FSAM01SMR",
+      "rating": "OFLC: M15+",
+      "developer": "Funcom",
+      "publisher": "Sega Enterprises, Ltd."
+    },
+    {
+      "title": "Sherlock Holmes: Consulting Detective Vol. II",
+      "releaseDate": "1993",
+      "serial": "",
+      "rating": "",
+      "developer": "",
+      "publisher": ""
+    },
+    {
+      "title": "Silpheed",
+      "releaseDate": "1993",
+      "serial": "",
+      "rating": "",
+      "developer": "Game Arts",
+      "publisher": ""
+    },
+    {
+      "title": "Slam City with Scottie Pippen",
+      "releaseDate": "",
+      "serial": "FSLA02SMR",
+      "rating": "OFLC: G",
+      "developer": "Digital Pictures",
+      "publisher": "Digital Pictures"
+    },
+    {
+      "title": "Snatcher",
+      "releaseDate": "",
+      "serial": "FSNA00SMR",
+      "rating": "OFLC: M15+",
+      "developer": "Konami",
+      "publisher": "Konami"
+    },
+    {
+      "title": "Sonic the Hedgehog CD",
+      "releaseDate": "1993",
+      "serial": "",
+      "rating": "OFLC: G",
+      "developer": "Sega CS3",
+      "publisher": "Sega Entertainment Inc."
+    },
+    {
+      "title": "Soul Star",
+      "releaseDate": "",
+      "serial": "FSOU00SMR",
+      "rating": "OFLC: G",
+      "developer": "Core Design",
+      "publisher": ""
+    },
+    {
+      "title": "Spider-Man vs. The Kingpin (Mega-CD)",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Foley Hi-Tech",
+      "publisher": ""
+    },
+    {
+      "title": "Supreme Warrior",
+      "releaseDate": "1995-04",
+      "serial": "FSUP06SMR",
+      "rating": "OFLC: M15+",
+      "developer": "Digital Pictures",
+      "publisher": "Digital Pictures"
+    },
+    {
+      "title": "The Terminator (Mega-CD)",
+      "releaseDate": "",
+      "serial": "FTER03SMR",
+      "rating": "OFLC: G8+",
+      "developer": "Virgin Games (United States)",
+      "publisher": "Virgin Games (United States)"
+    },
+    {
+      "title": "Thunderhawk",
+      "releaseDate": "1993",
+      "serial": "",
+      "rating": "",
+      "developer": "Core Design",
+      "publisher": ""
+    },
+    {
+      "title": "Tomcat Alley",
+      "releaseDate": "",
+      "serial": "FMEG57SMR}",
+      "rating": "OFLC: M15+",
+      "developer": "Novotrade",
+      "publisher": "Sega PC"
+    },
+    {
+      "title": "Wolfchild",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "OFLC: G8+",
+      "developer": "Core Design",
+      "publisher": "Virgin Games"
+    },
+    {
+      "title": "WWF Rage in the Cage",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "OFLC: PG",
+      "developer": "Sculptured Software",
+      "publisher": ""
+    },
+    {
+      "title": "Yumemi Mystery Mansion",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "OFLC: G8+",
+      "developer": "Production",
+      "publisher": ""
+    }
+  ]
+}

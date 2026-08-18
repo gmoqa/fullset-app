@@ -2,7 +2,7 @@
 """
 Construye un catálogo canónico **nuevo** desde una fuente de Sega Retro (`segaretro_source.py`).
 Para catálogos regionales (JP/EU/país) donde NO partimos de una lista de Wikipedia: la fuente ya trae
-título, fecha (a día), serial (catalog number) y rating. `publisher`/`genre`/`coverUrl` quedan vacíos
+título, fecha (a día), serial (catalog number) y rating. `genre`/`coverUrl` quedan vacíos
 (segunda pasada: Wikipedia para editora/género, libretro para carátulas de esa región).
 
 Uso:  python3 tools/build_catalog_from_segaretro.py <fuente.json> <salida.json> --platform "Sega Genesis" --region NTSC-J
@@ -35,7 +35,8 @@ def main():
         entries.append({
             "title": title, "platform": a.platform, "region": a.region,
             "year": int(rd[:4]) if rd[:4].isdigit() else None,
-            "releaseDate": rd, "publisher": "", "genre": "",
+            "releaseDate": rd, "developer": g.get("developer", ""),
+            "publisher": g.get("publisher", ""), "genre": "",
             "slug": s, "serial": g.get("serial", ""), "coverUrl": "", "rating": g.get("rating", ""),
         })
     write_catalog(a.out, entries)

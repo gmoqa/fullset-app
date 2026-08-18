@@ -435,14 +435,19 @@ private fun TitleStep(
     var region by remember(platform) {
         mutableStateOf(if (defaultRegion in regiones) defaultRegion else regiones.firstOrNull() ?: defaultRegion)
     }
+    // Dentro de una región puede haber territorios: bajo PAL conviven Europa, Brasil y Australia,
+    // que no son lo mismo —Brasil era PAL-M a 60 Hz, con cartuchos de Tec Toy que no existieron en
+    // Europa—. Se resetea al cambiar de región porque los territorios de una no valen en la otra.
+    val territorios = remember(platform, region) { platform.territoriesFor(region) }
+    var territorio by remember(platform, region) { mutableStateOf<String?>(null) }
     var query by remember { mutableStateOf("") }
     var saving by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
     // Navegando sale la lista de la región elegida; buscando, la misma lista ordenada por
     // relevancia. La búsqueda **no** cruza a las otras regiones: si estás en NTSC-U es porque querés
     // la copia americana.
-    val results = remember(platform, region, query) {
-        val lista = catalog.entries(platform, region)
+    val results = remember(platform, region, territorio, query) {
+        val lista = catalog.entries(platform, region, territorio)
         if (query.isBlank()) lista else GameSearch.rank(lista, query, limit = 60) { it.title }
     }
     // Lo ya registrado de esta plataforma, indexado por slug y por título (los juegos viejos del
@@ -465,6 +470,22 @@ private fun TitleStep(
                         index = index, count = regiones.size, baseShape = Tokens.Shape.control,
                     ),
                 ) { Text(r.label) }
+            }
+        }
+    }
+
+    if (territorios.size > 1) {
+        SingleChoiceSegmentedButtonRow(
+            modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 8.dp),
+        ) {
+            territorios.forEachIndexed { index, terr ->
+                SegmentedButton(
+                    selected = territorio == terr,
+                    onClick = { territorio = terr },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index, count = territorios.size, baseShape = Tokens.Shape.control,
+                    ),
+                ) { Text(territoryLabel(terr)) }
             }
         }
     }
@@ -743,4 +764,15 @@ private fun CoverBox(model: Any?, aspect: Float) {
             )
         }
     }
+}
+
+/**
+ * Nombre visible de un territorio. `null` es el principal de su región —bajo PAL, Europa— y los
+ * demás llegan como el sufijo de la clave del catálogo (`PAL/BR`).
+ */
+private fun territoryLabel(territory: String?): String = when (territory) {
+    null -> "Europe"
+    "BR" -> "Brazil"
+    "AU" -> "Australia"
+    else -> territory
 }

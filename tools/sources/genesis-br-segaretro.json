@@ -1,0 +1,2860 @@
+{
+  "source": "Sega Retro",
+  "url": "https://segaretro.org/List_of_Mega_Drive_games_in_Brazil",
+  "region": "BR",
+  "games": [
+    {
+      "title": "6-Pak",
+      "releaseDate": "1997-04",
+      "serial": "052020",
+      "rating": "ClassInd: Livre",
+      "developer": "Sega of America",
+      "publisher": ""
+    },
+    {
+      "title": "A Ponte",
+      "releaseDate": "2004",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Academia do Saber",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Overplay",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Acerte o Alvo",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "After Burner II",
+      "releaseDate": "1991-06",
+      "serial": "",
+      "rating": "",
+      "developer": "Bits Laboratory",
+      "publisher": "CRI"
+    },
+    {
+      "title": "Air Hockey",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Alex Kidd in the Enchanted Castle",
+      "releaseDate": "1991",
+      "serial": "",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Alien 3",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": "Arena Entertainment"
+    },
+    {
+      "title": "Alien Storm (Mega Drive)",
+      "releaseDate": "1992-02",
+      "serial": "",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Alisia Dragoon",
+      "releaseDate": "1992-06",
+      "serial": "",
+      "rating": "",
+      "developer": "&lt;span class=\"company-data-processor\" style=\"display :none ;\"&gt;&lt;/span&gt;&lt;span class=\"\"&gt;&lt;span class=\"company-system-icons\"&gt;&lt;/span&gt;&lt;span class=\"company-system-text\"&gt;Mecano Associates&lt;/span&gt;&lt;/span&gt;",
+      "publisher": "Game Arts"
+    },
+    {
+      "title": "Altered Beast",
+      "releaseDate": "1990",
+      "serial": "042520",
+      "rating": "",
+      "developer": "Bits Laboratory",
+      "publisher": "Asmik"
+    },
+    {
+      "title": "Anaconda",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Andre Agassi Tennis",
+      "releaseDate": "",
+      "serial": "043300",
+      "rating": "",
+      "developer": "Epyx",
+      "publisher": "Spidersoft"
+    },
+    {
+      "title": "Animaniacs",
+      "releaseDate": "1997-12",
+      "serial": "048350",
+      "rating": "ClassInd: Livre",
+      "developer": "Konami",
+      "publisher": "Konami"
+    },
+    {
+      "title": "Aniversário",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Aquaduto",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Ariel the Little Mermaid",
+      "releaseDate": "",
+      "serial": "043030",
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Arnold Palmer Tournament Golf",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Motivetime",
+      "publisher": "Elite Systems"
+    },
+    {
+      "title": "Arrow Flash",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "I.T.L",
+      "publisher": ""
+    },
+    {
+      "title": "Art Alive!",
+      "releaseDate": "1992-05",
+      "serial": "",
+      "rating": "",
+      "developer": "FarSight Technologies",
+      "publisher": ""
+    },
+    {
+      "title": "Asa Delta",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Astérix and the Great Rescue (Mega Drive)",
+      "releaseDate": "1994",
+      "serial": "046180",
+      "rating": "",
+      "developer": "Core Design",
+      "publisher": ""
+    },
+    {
+      "title": "Ayrton Senna's Super Monaco GP II",
+      "releaseDate": "1992",
+      "serial": "045010",
+      "rating": "",
+      "developer": "Sega CS3",
+      "publisher": ""
+    },
+    {
+      "title": "B.O.B.",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Chris Gray Enterprises",
+      "publisher": ""
+    },
+    {
+      "title": "Back to the Future Part III",
+      "releaseDate": "1992",
+      "serial": "043040",
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": ""
+    },
+    {
+      "title": "Ballz 3D",
+      "releaseDate": "1994",
+      "serial": "046650",
+      "rating": "ClassInd: 13",
+      "developer": "PF Magic",
+      "publisher": "Accolade"
+    },
+    {
+      "title": "Barkley Shut Up and Jam!",
+      "releaseDate": "",
+      "serial": "044920",
+      "rating": "",
+      "developer": "Accolade",
+      "publisher": "Accolade"
+    },
+    {
+      "title": "Barney's Hide & Seek Game",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "",
+      "developer": "Realtime Associates",
+      "publisher": ""
+    },
+    {
+      "title": "Batalha Naval",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Batman Forever (Mega Drive)",
+      "releaseDate": "",
+      "serial": "047150",
+      "rating": "ClassInd: Livre",
+      "developer": "Black Team",
+      "publisher": ""
+    },
+    {
+      "title": "Batman Returns (Mega Drive)",
+      "releaseDate": "1993",
+      "serial": "",
+      "rating": "",
+      "developer": "Malibu Interactive",
+      "publisher": ""
+    },
+    {
+      "title": "Battle Squadron",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "",
+      "developer": "Innerprise Software",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Battletoads",
+      "releaseDate": "1993",
+      "serial": "043260",
+      "rating": "",
+      "developer": "Arc System Works",
+      "publisher": ""
+    },
+    {
+      "title": "Battletoads/Double Dragon: The Ultimate Team",
+      "releaseDate": "",
+      "serial": "044950",
+      "rating": "ClassInd: Livre",
+      "developer": "Rare",
+      "publisher": "Tradewest"
+    },
+    {
+      "title": "Beavis and Butt-Head (Mega Drive)",
+      "releaseDate": "",
+      "serial": "046670",
+      "rating": "ClassInd: 13",
+      "developer": "Radical Entertainment",
+      "publisher": "Viacom New Media"
+    },
+    {
+      "title": "Bil Bolha",
+      "releaseDate": "2004",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Blockout",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "California Dreams",
+      "publisher": ""
+    },
+    {
+      "title": "Blocos Mágicos",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Body Count",
+      "releaseDate": "",
+      "serial": "044800",
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": ""
+    },
+    {
+      "title": "Bolas e Cores",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Bolhas",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Bombeiros",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Bonanza Bros.",
+      "releaseDate": "1991",
+      "serial": "",
+      "rating": "",
+      "developer": "I.T.L",
+      "publisher": "NEC Avenue"
+    },
+    {
+      "title": "Bonkers",
+      "releaseDate": "",
+      "serial": "048050",
+      "rating": "ClassInd: Livre",
+      "developer": "Sega Interactive Development Division",
+      "publisher": ""
+    },
+    {
+      "title": "Boogerman: A Pick and Flick Adventure",
+      "releaseDate": "1995",
+      "serial": "047110",
+      "rating": "ClassInd: 13",
+      "developer": "Interplay",
+      "publisher": "Interplay"
+    },
+    {
+      "title": "Bubsy II",
+      "releaseDate": "1994",
+      "serial": "046610",
+      "rating": "ClassInd: Livre",
+      "developer": "Accolade",
+      "publisher": "Accolade"
+    },
+    {
+      "title": "Buck Rogers: Countdown to Doomsday",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Strategic Simulations, Inc.",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Budokan: The Martial Spirit",
+      "releaseDate": "1990",
+      "serial": "",
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Bugs Bunny in Double Trouble",
+      "releaseDate": "1996-10",
+      "serial": "051050",
+      "rating": "ClassInd: Livre",
+      "developer": "Atod",
+      "publisher": ""
+    },
+    {
+      "title": "Burning Force",
+      "releaseDate": "1991-10",
+      "serial": "",
+      "rating": "",
+      "developer": "Nova",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Caiaque",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "California Games",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Epyx",
+      "publisher": ""
+    },
+    {
+      "title": "Canhão",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Captain America and the Avengers",
+      "releaseDate": "",
+      "serial": "044560",
+      "rating": "",
+      "developer": "Data East",
+      "publisher": ""
+    },
+    {
+      "title": "Captain Planet and the Planeteers",
+      "releaseDate": "",
+      "serial": "042550",
+      "rating": "",
+      "developer": "NovaLogic",
+      "publisher": "Sega Europe"
+    },
+    {
+      "title": "Castle of Illusion Starring Mickey Mouse (Mega Drive)",
+      "releaseDate": "1991-06",
+      "serial": "043060",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Cava-Cava",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Cavalos & Peões",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Caça Palavras",
+      "releaseDate": "2006",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Chakan (Mega Drive)",
+      "releaseDate": "",
+      "serial": "044030}",
+      "rating": "",
+      "developer": "Extended Play",
+      "publisher": ""
+    },
+    {
+      "title": "Champions World Class Soccer",
+      "releaseDate": "1996-08",
+      "serial": "048260",
+      "rating": "ClassInd: Livre",
+      "developer": "Acclaim Entertainment",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Chiki Chiki Boys",
+      "releaseDate": "",
+      "serial": "044250",
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
+    },
+    {
+      "title": "Chuck Rock",
+      "releaseDate": "",
+      "serial": "044190",
+      "rating": "",
+      "developer": "Core Design",
+      "publisher": "Sony Imagesoft"
+    },
+    {
+      "title": "ClayFighter",
+      "releaseDate": "1995",
+      "serial": "046700",
+      "rating": "ClassInd: Livre",
+      "developer": "M2",
+      "publisher": "Ballistic"
+    },
+    {
+      "title": "Columns",
+      "releaseDate": "1991-11",
+      "serial": "",
+      "rating": "",
+      "developer": "Compile",
+      "publisher": "Laser Soft"
+    },
+    {
+      "title": "Comix Zone",
+      "releaseDate": "1995-08",
+      "serial": "046780",
+      "rating": "ClassInd: Livre",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Corrida da Pesada",
+      "releaseDate": "2004",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Corrida de Tampinhas",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Crack Down",
+      "releaseDate": "1992-01",
+      "serial": "",
+      "rating": "",
+      "developer": "Arc Developments",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Creature Capture",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Overplay",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Cross Fire",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "A.I",
+      "publisher": "Kyugo Trading"
+    },
+    {
+      "title": "Crystal's Pony Tale",
+      "releaseDate": "1995",
+      "serial": "048070",
+      "rating": "",
+      "developer": "Artech Studios",
+      "publisher": "Sega of America"
+    },
+    {
+      "title": "Crüe Ball",
+      "releaseDate": "",
+      "serial": "042500",
+      "rating": "",
+      "developer": "NuFX",
+      "publisher": ""
+    },
+    {
+      "title": "Cutthroat Island",
+      "releaseDate": "1996-03",
+      "serial": "051010",
+      "rating": "ClassInd: Livre",
+      "developer": "Software Creations",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "CyberBall",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": ""
+    },
+    {
+      "title": "Cyborg Justice",
+      "releaseDate": "",
+      "serial": "044400",
+      "rating": "",
+      "developer": "Novotrade",
+      "publisher": ""
+    },
+    {
+      "title": "Darius II",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "",
+      "developer": "I.T.L",
+      "publisher": "Sega Enterprises, Ltd."
+    },
+    {
+      "title": "Dark Castle",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Artech Studios",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "David Robinson's Supreme Court",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Acme Interactive",
+      "publisher": ""
+    },
+    {
+      "title": "Decap Attack",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "VIC Tokai",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Demolition Man",
+      "releaseDate": "1995",
+      "serial": "046970",
+      "rating": "ClassInd: Livre",
+      "developer": "Alexandria",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "Desert Demolition Starring Road Runner and Wile E. Coyote",
+      "releaseDate": "1995-05",
+      "serial": "048100",
+      "rating": "ClassInd: Livre",
+      "developer": "BlueSky Software",
+      "publisher": ""
+    },
+    {
+      "title": "Desert Strike: Return to the Gulf",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "Domark"
+    },
+    {
+      "title": "Dick Tracy",
+      "releaseDate": "1991-12",
+      "serial": "",
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": ""
+    },
+    {
+      "title": "Dinosaurs for Hire",
+      "releaseDate": "",
+      "serial": "044580",
+      "rating": "",
+      "developer": "Sega Interactive Development Division",
+      "publisher": ""
+    },
+    {
+      "title": "Disney's Aladdin",
+      "releaseDate": "",
+      "serial": "046170",
+      "rating": "",
+      "developer": "Virgin Games",
+      "publisher": "Sega"
+    },
+    {
+      "title": "Domine o Território",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Dominó",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Donald in Maui Mallard",
+      "releaseDate": "1997",
+      "serial": "047230",
+      "rating": "ClassInd: Livre",
+      "developer": "Disney Interactive",
+      "publisher": ""
+    },
+    {
+      "title": "Double Dragon 3: The Rosetta Stone",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "",
+      "developer": "Software Creations",
+      "publisher": "Flying Edge"
+    },
+    {
+      "title": "Dr. Robotnik's Mean Bean Machine",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "",
+      "developer": "Compile",
+      "publisher": ""
+    },
+    {
+      "title": "Dragon: The Bruce Lee Story",
+      "releaseDate": "",
+      "serial": "046980",
+      "rating": "ClassInd: 13",
+      "developer": "Acclaim Entertainment",
+      "publisher": ""
+    },
+    {
+      "title": "Duke Nukem 3D (Mega Drive)",
+      "releaseDate": "1998-09",
+      "serial": "052050",
+      "rating": "ClassInd: 18",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Dynamite Duke",
+      "releaseDate": "1991-10",
+      "serial": "",
+      "rating": "",
+      "developer": "HertzCategory :Live link reference",
+      "publisher": ""
+    },
+    {
+      "title": "Dynamite Headdy",
+      "releaseDate": "",
+      "serial": "046520",
+      "rating": "ClassInd: Livre",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Earthworm Jim",
+      "releaseDate": "1994",
+      "serial": "047080",
+      "rating": "ClassInd: Livre",
+      "developer": "Eurocom Entertainment Software",
+      "publisher": "Interplay"
+    },
+    {
+      "title": "Earthworm Jim 2",
+      "releaseDate": "1996-03",
+      "serial": "047170",
+      "rating": "ClassInd: Livre",
+      "developer": "M2",
+      "publisher": "Interplay"
+    },
+    {
+      "title": "Ecco the Dolphin",
+      "releaseDate": "",
+      "serial": "044360",
+      "rating": "",
+      "developer": "Backbone Entertainment",
+      "publisher": "Sega PC"
+    },
+    {
+      "title": "Ecco: The Tides of Time",
+      "releaseDate": "",
+      "serial": "046470",
+      "rating": "ClassInd: Livre",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Encanamento",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "ESWAT: City Under Siege",
+      "releaseDate": "1991-06",
+      "serial": "",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
+    },
+    {
+      "title": "Eternal Champions",
+      "releaseDate": "1994",
+      "serial": "047010",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Evander Holyfield's \"Real Deal\" Boxing",
+      "releaseDate": "",
+      "serial": "046710",
+      "rating": "ClassInd: Livre",
+      "developer": "Acme Interactive",
+      "publisher": ""
+    },
+    {
+      "title": "Ex-Mutants",
+      "releaseDate": "",
+      "serial": "044240",
+      "rating": "",
+      "developer": "Malibu Interactive",
+      "publisher": ""
+    },
+    {
+      "title": "ExoSquad",
+      "releaseDate": "",
+      "serial": "048180",
+      "rating": "ClassInd: Livre",
+      "developer": "Novotrade International",
+      "publisher": ""
+    },
+    {
+      "title": "F-117 Night Storm",
+      "releaseDate": "",
+      "serial": "046290",
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
+    },
+    {
+      "title": "F-15 Strike Eagle II",
+      "releaseDate": "",
+      "serial": "048090",
+      "rating": "ClassInd: Livre",
+      "developer": "MicroProse",
+      "publisher": ""
+    },
+    {
+      "title": "F-22 Interceptor: Advanced Tactical Fighter",
+      "releaseDate": "1991",
+      "serial": "",
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
+    },
+    {
+      "title": "Fantasia",
+      "releaseDate": "1991",
+      "serial": "",
+      "rating": "",
+      "developer": "Infogrames",
+      "publisher": ""
+    },
+    {
+      "title": "Fantasy Pinball (Mega Drive)",
+      "releaseDate": "2008",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Faroeste",
+      "releaseDate": "2004",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Fatal Fury",
+      "releaseDate": "",
+      "serial": "045110",
+      "rating": "ClassInd: 13",
+      "developer": "Aspect",
+      "publisher": ""
+    },
+    {
+      "title": "Fatal Rewind",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Raising Hell Software",
+      "publisher": ""
+    },
+    {
+      "title": "Fever Pitch Soccer",
+      "releaseDate": "1995",
+      "serial": "046860",
+      "rating": "ClassInd: Livre",
+      "developer": "Silicon Dreams",
+      "publisher": "U.S. Gold"
+    },
+    {
+      "title": "Fica 1",
+      "releaseDate": "2003",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "FIFA 97: Gold Edition",
+      "releaseDate": "1997-02",
+      "serial": "051130",
+      "rating": "ClassInd: Livre",
+      "developer": "Extended Play Productions",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "FIFA International Soccer",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "EA Canada",
+      "publisher": ""
+    },
+    {
+      "title": "FIFA Soccer 95",
+      "releaseDate": "",
+      "serial": "046460",
+      "rating": "ClassInd: Livre",
+      "developer": "Extended Play Productions",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "FIFA Soccer 96 (Mega Drive)",
+      "releaseDate": "1995",
+      "serial": "046940",
+      "rating": "ClassInd: Livre",
+      "developer": "Electronic Arts Canada",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Final Zone",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Wolf Team",
+      "publisher": ""
+    },
+    {
+      "title": "Flashback",
+      "releaseDate": "",
+      "serial": "045070",
+      "rating": "",
+      "developer": "Delphine Software International",
+      "publisher": "Sega of America"
+    },
+    {
+      "title": "Flicky",
+      "releaseDate": "1991",
+      "serial": "",
+      "rating": "",
+      "developer": "Micronet",
+      "publisher": "Micronet"
+    },
+    {
+      "title": "Forgotten Worlds (Mega Drive)",
+      "releaseDate": "1991-06",
+      "serial": "",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Capcom"
+    },
+    {
+      "title": "Força Alienígena",
+      "releaseDate": "2002",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Fábrica de Chocolate",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Férias Frustradas do Pica-Pau",
+      "releaseDate": "1996-10",
+      "serial": "048160",
+      "rating": "ClassInd: Livre",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Galahad",
+      "releaseDate": "",
+      "serial": "044340",
+      "rating": "",
+      "developer": "Traveller's Tales",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Galaxy Force II",
+      "releaseDate": "1992-07",
+      "serial": "",
+      "rating": "",
+      "developer": "CRI",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Garfield: Caught in the Act",
+      "releaseDate": "",
+      "serial": "046990",
+      "rating": "ClassInd: Livre",
+      "developer": "Point of View",
+      "publisher": "Sega Entertainment Inc."
+    },
+    {
+      "title": "Gargoyles",
+      "releaseDate": "1996-12",
+      "serial": "047200",
+      "rating": "ClassInd: Livre",
+      "developer": "Disney Interactive",
+      "publisher": "Buena Vista Interactive"
+    },
+    {
+      "title": "General Chaos",
+      "releaseDate": "",
+      "serial": "044660",
+      "rating": "",
+      "developer": "Game Refuge",
+      "publisher": ""
+    },
+    {
+      "title": "Ghostbusters (Mega Drive)",
+      "releaseDate": "1991-06",
+      "serial": "",
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": ""
+    },
+    {
+      "title": "Ghouls'n Ghosts",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Arc System Works",
+      "publisher": "Capcom"
+    },
+    {
+      "title": "Golden Axe",
+      "releaseDate": "1990",
+      "serial": "",
+      "rating": "",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Bandai"
+    },
+    {
+      "title": "Golden Axe II",
+      "releaseDate": "1992-02",
+      "serial": "",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Granada",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "",
+      "developer": "D4 Enterprise",
+      "publisher": "Edia"
+    },
+    {
+      "title": "Greatest Heavyweights",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Sega of America",
+      "publisher": ""
+    },
+    {
+      "title": "Greendog: The Beached Surfer Dude!",
+      "releaseDate": "1992-11",
+      "serial": "",
+      "rating": "",
+      "developer": "Interactive Designs",
+      "publisher": ""
+    },
+    {
+      "title": "Guerra dos Monstros",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Guitar Idol",
+      "releaseDate": "2009-02-19",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Interama Games",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Gunstar Heroes",
+      "releaseDate": "",
+      "serial": "044780",
+      "rating": "",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Sega Corporation (2000-2015)"
+    },
+    {
+      "title": "Gynoug",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "NCS"
+    },
+    {
+      "title": "Hard Drivin'",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Sterling Silver Software",
+      "publisher": "Tengen"
+    },
+    {
+      "title": "Haunting Starring Polterguy",
+      "releaseDate": "",
+      "serial": "046060",
+      "rating": "",
+      "developer": "EA Creative Developments",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Hellfire",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "NCS",
+      "publisher": ""
+    },
+    {
+      "title": "Hexágonos",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Home Alone",
+      "releaseDate": "1992",
+      "serial": "",
+      "rating": "",
+      "developer": "Brian A. Rice, Inc.",
+      "publisher": ""
+    },
+    {
+      "title": "Home Alone 2: Lost in New York",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Sega Interactive Development Division",
+      "publisher": ""
+    },
+    {
+      "title": "IMG International Tour Tennis",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "ClassInd: Livre",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Indiana Jones and the Last Crusade",
+      "releaseDate": "",
+      "serial": "044230",
+      "rating": "",
+      "developer": "LucasArts",
+      "publisher": "U.S. Gold"
+    },
+    {
+      "title": "Insector X",
+      "releaseDate": "1991",
+      "serial": "",
+      "rating": "",
+      "developer": "Genki",
+      "publisher": ""
+    },
+    {
+      "title": "Instruments of Chaos Starring Young Indiana Jones",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Brian A. Rice, Inc.",
+      "publisher": "Sega of America"
+    },
+    {
+      "title": "International Superstar Soccer Deluxe",
+      "releaseDate": "1997-12",
+      "serial": "",
+      "rating": "ClassInd: Livre",
+      "developer": "Factor 5",
+      "publisher": "Konami"
+    },
+    {
+      "title": "James Bond 007: The Duel",
+      "releaseDate": "",
+      "serial": "043320",
+      "rating": "",
+      "developer": "Domark",
+      "publisher": ""
+    },
+    {
+      "title": "James Pond 3: Operation Starfish",
+      "releaseDate": "",
+      "serial": "046300",
+      "rating": "",
+      "developer": "Millennium Interactive",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "James Pond II: Codename RoboCod",
+      "releaseDate": "1992-06",
+      "serial": "",
+      "rating": "",
+      "developer": "Millennium Interactive",
+      "publisher": "U.S. Gold"
+    },
+    {
+      "title": "James Pond: Underwater Agent",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "",
+      "developer": "Millennium Interactive",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Joe & Mac",
+      "releaseDate": "1994",
+      "serial": "044960",
+      "rating": "ClassInd: Livre",
+      "developer": "Eden Entertainment Software",
+      "publisher": "Takara"
+    },
+    {
+      "title": "Joe Montana II Sports Talk Football",
+      "releaseDate": "1992-03",
+      "serial": "",
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": ""
+    },
+    {
+      "title": "John Madden Football",
+      "releaseDate": "1992-05",
+      "serial": "",
+      "rating": "",
+      "developer": "Park Place Productions",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Jordan vs Bird",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "",
+      "publisher": ""
+    },
+    {
+      "title": "Judge Dredd",
+      "releaseDate": "1995-10",
+      "serial": "",
+      "rating": "ClassInd: 13",
+      "developer": "Interactive Studios",
+      "publisher": ""
+    },
+    {
+      "title": "Jungle Strike",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Granite Bay Software",
+      "publisher": "Black Pearl Software"
+    },
+    {
+      "title": "Junte 4",
+      "releaseDate": "2003",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Jurassic Park (Mega Drive)",
+      "releaseDate": "",
+      "serial": "046040",
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": ""
+    },
+    {
+      "title": "Jurassic Park: Rampage Edition",
+      "releaseDate": "1994",
+      "serial": "046570",
+      "rating": "ClassInd: 13",
+      "developer": "BlueSky Software",
+      "publisher": ""
+    },
+    {
+      "title": "Justice League Task Force",
+      "releaseDate": "",
+      "serial": "048240}",
+      "rating": "ClassInd: Livre",
+      "developer": "Condor",
+      "publisher": ""
+    },
+    {
+      "title": "Kid Chameleon",
+      "releaseDate": "1992-06",
+      "serial": "",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Klax",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Tengen",
+      "publisher": "Tengen"
+    },
+    {
+      "title": "Krusty's Fun House",
+      "releaseDate": "1992",
+      "serial": "",
+      "rating": "",
+      "developer": "Audiogenic Software",
+      "publisher": "Flying Edge"
+    },
+    {
+      "title": "Lance Livre",
+      "releaseDate": "2006",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Landstalker: The Treasures of King Nole",
+      "releaseDate": "",
+      "serial": "046140",
+      "rating": "",
+      "developer": "Climax Entertainment",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Last Battle",
+      "releaseDate": "1991-06",
+      "serial": "",
+      "rating": "",
+      "developer": "Creative Materials",
+      "publisher": "Elite Systems"
+    },
+    {
+      "title": "Madden NFL '95",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "ClassInd: Livre",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Mario Andretti Racing",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "ClassInd: Livre",
+      "developer": "High Score Productions",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Marko's Magic Football",
+      "releaseDate": "",
+      "serial": "046630",
+      "rating": "ClassInd: Livre",
+      "developer": "Interactive Studios",
+      "publisher": "Domark"
+    },
+    {
+      "title": "Marsupilami",
+      "releaseDate": "1996-06",
+      "serial": "051060",
+      "rating": "ClassInd: Livre",
+      "developer": "Apache Software",
+      "publisher": "Sega"
+    },
+    {
+      "title": "McDonald's Treasure Land Adventure",
+      "releaseDate": "1994",
+      "serial": "044810",
+      "rating": "",
+      "developer": "Treasure",
+      "publisher": ""
+    },
+    {
+      "title": "MD Card Game 1",
+      "releaseDate": "2009-10",
+      "serial": "",
+      "rating": "",
+      "developer": "",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "MD Card Game 2",
+      "releaseDate": "2009-10",
+      "serial": "",
+      "rating": "",
+      "developer": "",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Mega Bomberman",
+      "releaseDate": "1995-05",
+      "serial": "048130",
+      "rating": "ClassInd: Livre",
+      "developer": "Westone",
+      "publisher": ""
+    },
+    {
+      "title": "Mega Games 10",
+      "releaseDate": "1997",
+      "serial": "052040",
+      "rating": "ClassInd: Livre",
+      "developer": "",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Memória Master",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Menacer 6-Game Cartridge",
+      "releaseDate": "",
+      "serial": "044380",
+      "rating": "",
+      "developer": "Johnson Voorsanger Productions",
+      "publisher": ""
+    },
+    {
+      "title": "Mercs",
+      "releaseDate": "1992-02",
+      "serial": "",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Capcom"
+    },
+    {
+      "title": "Mexe Mexe Tupi",
+      "releaseDate": "2004",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Michael Jackson's Moonwalker",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Arc",
+      "publisher": ""
+    },
+    {
+      "title": "Mick & Mack as the Global Gladiators",
+      "releaseDate": "",
+      "serial": "044370",
+      "rating": "",
+      "developer": "Graftgold",
+      "publisher": "Virgin Games",
+      "altTitles": [
+        "Global Gladiators"
+      ]
+    },
+    {
+      "title": "MiG-29 Fighter Pilot",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Domark",
+      "publisher": ""
+    },
+    {
+      "title": "Mighty Morphin Power Rangers (Mega Drive)",
+      "releaseDate": "",
+      "serial": "046660",
+      "rating": "ClassInd: Livre",
+      "developer": "Nova",
+      "publisher": "Sega"
+    },
+    {
+      "title": "Mighty Morphin Power Rangers: The Movie (Mega Drive)",
+      "releaseDate": "1996-03",
+      "serial": "046880",
+      "rating": "ClassInd: Livre",
+      "developer": "Banpresto",
+      "publisher": ""
+    },
+    {
+      "title": "Mina Terrestre",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Minerador",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Mortal Kombat",
+      "releaseDate": "1994-07",
+      "serial": "047030",
+      "rating": "",
+      "developer": "Grey Team",
+      "publisher": ""
+    },
+    {
+      "title": "Mortal Kombat 3",
+      "releaseDate": "1995",
+      "serial": "050010",
+      "rating": "ClassInd: 18",
+      "developer": "Midway Manufacturing",
+      "publisher": ""
+    },
+    {
+      "title": "Mortal Kombat II",
+      "releaseDate": "1994-09",
+      "serial": "047070",
+      "rating": "ClassInd: 18",
+      "developer": "Probe Entertainment",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "Mosaico",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Mutant League Football",
+      "releaseDate": "1993",
+      "serial": "044530",
+      "rating": "",
+      "developer": "Mutant Productions",
+      "publisher": ""
+    },
+    {
+      "title": "Mutant League Hockey",
+      "releaseDate": "",
+      "serial": "046320",
+      "rating": "",
+      "developer": "Abalone",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Mystic Defender",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "",
+      "altTitles": [
+        "Mystic Defense"
+      ]
+    },
+    {
+      "title": "Natação",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "NBA Action '94",
+      "releaseDate": "",
+      "serial": "046090}",
+      "rating": "",
+      "developer": "Malibu Interactive",
+      "publisher": "Sega of America"
+    },
+    {
+      "title": "NBA Hang Time",
+      "releaseDate": "1997-07",
+      "serial": "051160",
+      "rating": "ClassInd: Livre",
+      "developer": "Funcom",
+      "publisher": "Midway Home Entertainment"
+    },
+    {
+      "title": "NBA Jam",
+      "releaseDate": "",
+      "serial": "046330",
+      "rating": "ClassInd: Livre",
+      "developer": "Iguana Entertainment",
+      "publisher": ""
+    },
+    {
+      "title": "NBA Jam Tournament Edition",
+      "releaseDate": "1995",
+      "serial": "047120",
+      "rating": "ClassInd: Livre",
+      "developer": "Iguana Entertainment",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "NBA Live 95",
+      "releaseDate": "",
+      "serial": "046900",
+      "rating": "ClassInd: Livre",
+      "developer": "Hitmen Productions",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "NBA Live 96",
+      "releaseDate": "1996-06",
+      "serial": "051030",
+      "rating": "ClassInd: Livre",
+      "developer": "Hitmen Productions",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "NBA Live 97 (Mega Drive)",
+      "releaseDate": "",
+      "serial": "051150",
+      "rating": "ClassInd: Livre",
+      "developer": "NuFX",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Newman-Haas IndyCar Featuring Nigel Mansell",
+      "releaseDate": "1996-08",
+      "serial": "048250",
+      "rating": "ClassInd: Livre",
+      "developer": "Gremlin Graphics Software",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "NFL '95",
+      "releaseDate": "1994",
+      "serial": "046530",
+      "rating": "ClassInd: Livre",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
+    },
+    {
+      "title": "NFL Football '94 Starring Joe Montana",
+      "releaseDate": "",
+      "serial": "046150}",
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": ""
+    },
+    {
+      "title": "Nightmare Circus",
+      "releaseDate": "1996-06",
+      "serial": "051070",
+      "rating": "ClassInd: 13",
+      "developer": "Funcom",
+      "publisher": ""
+    },
+    {
+      "title": "Nim",
+      "releaseDate": "2004",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Olympic Gold",
+      "releaseDate": "",
+      "serial": "043160",
+      "rating": "",
+      "developer": "Tiertex",
+      "publisher": ""
+    },
+    {
+      "title": "Olympic Summer Games",
+      "releaseDate": "1996-08",
+      "serial": "051080",
+      "rating": "ClassInd: Livre",
+      "developer": "Tiertex",
+      "publisher": "Black Pearl Software"
+    },
+    {
+      "title": "Os doze trabalhos de Jongo",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "OutRun",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Hertz",
+      "publisher": "NEC Avenue"
+    },
+    {
+      "title": "Palhaços",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Paperboy 2",
+      "releaseDate": "1993",
+      "serial": "044470",
+      "rating": "",
+      "developer": "Manley & Associates",
+      "publisher": "Tengen"
+    },
+    {
+      "title": "Pebble Beach Golf Links (Mega Drive)",
+      "releaseDate": "",
+      "serial": "046200",
+      "rating": "",
+      "developer": "T&E Soft",
+      "publisher": "Sega"
+    },
+    {
+      "title": "Pedreiro Polar",
+      "releaseDate": "2004",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Pense Bem",
+      "releaseDate": "2003",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Phantasy Star II",
+      "releaseDate": "1996-03",
+      "serial": "048170",
+      "rating": "ClassInd: Livre",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Phantasy Star III: Generations of Doom",
+      "releaseDate": "1998-08",
+      "serial": "048220",
+      "rating": "",
+      "developer": "M2",
+      "publisher": ""
+    },
+    {
+      "title": "Phantom 2040 (Mega Drive)",
+      "releaseDate": "",
+      "serial": "046870",
+      "rating": "ClassInd: Livre",
+      "developer": "Viacom New MediaCategory :Live link reference",
+      "publisher": "Viacom New Media"
+    },
+    {
+      "title": "Phelios",
+      "releaseDate": "1991-10",
+      "serial": "",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Bandai Namco Games"
+    },
+    {
+      "title": "Pink Goes to Hollywood",
+      "releaseDate": "",
+      "serial": "044830",
+      "rating": "",
+      "developer": "HeadGames",
+      "publisher": "TecMagik"
+    },
+    {
+      "title": "Pinocchio",
+      "releaseDate": "",
+      "serial": "051100",
+      "rating": "ClassInd: Livre",
+      "developer": "Virgin Interactive Entertainment",
+      "publisher": ""
+    },
+    {
+      "title": "Pitfall: The Mayan Adventure",
+      "releaseDate": "1997-07",
+      "serial": "048310",
+      "rating": "ClassInd: Livre",
+      "developer": "Big Bang Software",
+      "publisher": "Activision"
+    },
+    {
+      "title": "Pocahontas",
+      "releaseDate": "",
+      "serial": "051090",
+      "rating": "ClassInd: Livre",
+      "developer": "Funcom",
+      "publisher": ""
+    },
+    {
+      "title": "Populous",
+      "releaseDate": "1992-05",
+      "serial": "",
+      "rating": "",
+      "developer": "Bullfrog Productions",
+      "publisher": "TecMagik"
+    },
+    {
+      "title": "Power Drive",
+      "releaseDate": "1997-07",
+      "serial": "048200",
+      "rating": "ClassInd: Livre",
+      "developer": "Rage Software",
+      "publisher": "U.S. Gold"
+    },
+    {
+      "title": "Power Monger",
+      "releaseDate": "",
+      "serial": "044390",
+      "rating": "",
+      "developer": "Bullfrog Productions",
+      "publisher": ""
+    },
+    {
+      "title": "Primal Rage",
+      "releaseDate": "",
+      "serial": "047130",
+      "rating": "ClassInd: 18",
+      "developer": "Probe Entertainment",
+      "publisher": ""
+    },
+    {
+      "title": "QuackShot Starring Donald Duck",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Sega CS2",
+      "publisher": ""
+    },
+    {
+      "title": "Raiden Trad",
+      "releaseDate": "1992-07",
+      "serial": "}",
+      "rating": "",
+      "developer": "Beyond Interactive",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Rambo III (Mega Drive)",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
+    },
+    {
+      "title": "Ranger-X",
+      "releaseDate": "",
+      "serial": "044510",
+      "rating": "",
+      "developer": "Gau Entertainment",
+      "publisher": ""
+    },
+    {
+      "title": "Risky Woods",
+      "releaseDate": "",
+      "serial": "044430",
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
+    },
+    {
+      "title": "Ristar",
+      "releaseDate": "1995",
+      "serial": "046550",
+      "rating": "ClassInd: Livre",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Road Rash",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "U.S. Gold"
+    },
+    {
+      "title": "Road Rash 3: Tour De Force",
+      "releaseDate": "",
+      "serial": "046850",
+      "rating": "ClassInd: 13",
+      "developer": "Monkey Do Productions",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Road Rash II",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
+    },
+    {
+      "title": "Rolo to the Rescue",
+      "releaseDate": "",
+      "serial": "042770",
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
+    },
+    {
+      "title": "Scooby-Doo Mystery",
+      "releaseDate": "1996-06",
+      "serial": "051040",
+      "rating": "ClassInd: Livre",
+      "developer": "The Illusions Gaming Company",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "Sega Top Five",
+      "releaseDate": "1997-09",
+      "serial": "048320",
+      "rating": "ClassInd: Livre",
+      "developer": "",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Senha",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Shadow Dancer: The Secret of Shinobi",
+      "releaseDate": "1991-06",
+      "serial": "",
+      "rating": "",
+      "developer": "M2Category :Live link reference",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Shadow of the Beast",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Psygnosis",
+      "publisher": "TecMagik"
+    },
+    {
+      "title": "Shadow of the Beast II",
+      "releaseDate": "",
+      "serial": "044330",
+      "rating": "",
+      "developer": "Digital Developments",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Shining Force II",
+      "releaseDate": "1994",
+      "serial": "046510",
+      "rating": "ClassInd: Livre",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Shining in the Darkness",
+      "releaseDate": "1997-09",
+      "serial": "041260",
+      "rating": "ClassInd: Livre",
+      "developer": "Climax Entertainment",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Shinobi III: Return of the Ninja Master",
+      "releaseDate": "",
+      "serial": "044440",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Show do Milhão",
+      "releaseDate": "2001",
+      "serial": "053010",
+      "rating": "ClassInd: Livre",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Show do Milhão Volume 2",
+      "releaseDate": "2002",
+      "serial": "053020",
+      "rating": "ClassInd: Livre",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Skeleton Krew",
+      "releaseDate": "1996-12",
+      "serial": "051120",
+      "rating": "ClassInd: Livre",
+      "developer": "Core Design",
+      "publisher": "Core Design"
+    },
+    {
+      "title": "Skitchin'",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Sonic & Knuckles",
+      "releaseDate": "",
+      "serial": "047090",
+      "rating": "ClassInd: Livre",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
+    },
+    {
+      "title": "Sonic 3D: Flickies' Island",
+      "releaseDate": "1996-12",
+      "serial": "048300",
+      "rating": "ClassInd: Livre",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Sonic Classics",
+      "releaseDate": "1997-06",
+      "serial": "042780",
+      "rating": "ClassInd: Livre",
+      "developer": "Sega of America",
+      "publisher": ""
+    },
+    {
+      "title": "Sonic the Hedgehog (Mega Drive)",
+      "releaseDate": "1991-09",
+      "serial": "",
+      "rating": "ClassInd: Livre",
+      "developer": "Backbone Entertainment",
+      "publisher": "Sega Corporation (2000-2015)"
+    },
+    {
+      "title": "Sonic the Hedgehog 2 (Mega Drive)",
+      "releaseDate": "1992",
+      "serial": "044130",
+      "rating": "ClassInd: Livre",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
+    },
+    {
+      "title": "Sonic the Hedgehog 3",
+      "releaseDate": "1994",
+      "serial": "046190",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
+    },
+    {
+      "title": "Sonic the Hedgehog Spinball",
+      "releaseDate": "1993",
+      "serial": "044600",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation (2000-2015)"
+    },
+    {
+      "title": "Space Invaders 90",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "",
+      "developer": "Taito",
+      "publisher": "",
+      "altTitles": [
+        "Space Invaders"
+      ]
+    },
+    {
+      "title": "Spider-Man (Acclaim)",
+      "releaseDate": "",
+      "serial": "046740}",
+      "rating": "ClassInd: Livre",
+      "developer": "Western Technologies",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "Spider-Man vs. The Kingpin",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "ClassInd: Livre",
+      "developer": "Recreational Brainware",
+      "publisher": ""
+    },
+    {
+      "title": "Sport Games",
+      "releaseDate": "1998-05",
+      "serial": "042800",
+      "rating": "ClassInd: Livre",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Spot Goes to Hollywood",
+      "releaseDate": "1996-08",
+      "serial": "048270",
+      "rating": "ClassInd: Livre",
+      "developer": "Eurocom Entertainment Software",
+      "publisher": ""
+    },
+    {
+      "title": "Star Trek: Deep Space Nine: Crossroads of Time",
+      "releaseDate": "",
+      "serial": "048210",
+      "rating": "ClassInd: Livre",
+      "developer": "Novotrade International",
+      "publisher": ""
+    },
+    {
+      "title": "Star Trek: The Next Generation: Echoes from the Past",
+      "releaseDate": "",
+      "serial": "046220",
+      "rating": "",
+      "developer": "MicroProse",
+      "publisher": "Sega of America"
+    },
+    {
+      "title": "Starflight",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Stargate (Mega Drive)",
+      "releaseDate": "",
+      "serial": "046750",
+      "rating": "ClassInd: Livre",
+      "developer": "Grey Team",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "Street Fighter II': Special Champion Edition",
+      "releaseDate": "",
+      "serial": "047020",
+      "rating": "",
+      "developer": "Capcom",
+      "publisher": "Capcom"
+    },
+    {
+      "title": "Street Racer",
+      "releaseDate": "1997-05",
+      "serial": "041240",
+      "rating": "ClassInd: Livre",
+      "developer": "Vivid Image",
+      "publisher": "Ubi Soft"
+    },
+    {
+      "title": "Streets of Rage",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "ClassInd: Livre",
+      "developer": "Japan System HouseCategory :Live link reference",
+      "publisher": "Sega"
+    },
+    {
+      "title": "Streets of Rage 2",
+      "releaseDate": "",
+      "serial": "046010",
+      "rating": "",
+      "developer": "Ancient",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Streets of Rage 3",
+      "releaseDate": "1994-09",
+      "serial": "047060",
+      "rating": "ClassInd: 13",
+      "developer": "M2",
+      "publisher": "Sega"
+    },
+    {
+      "title": "Strider",
+      "releaseDate": "1991-12",
+      "serial": "",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Capcom"
+    },
+    {
+      "title": "Sub-Terrania",
+      "releaseDate": "",
+      "serial": "046560}",
+      "rating": "ClassInd: Livre",
+      "developer": "Zyrinx",
+      "publisher": ""
+    },
+    {
+      "title": "Sudoku",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Overplay",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Super Hang-On",
+      "releaseDate": "",
+      "serial": "042360",
+      "rating": "ClassInd: Livre",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Super Kick Off",
+      "releaseDate": "",
+      "serial": "043330",
+      "rating": "ClassInd: Livre",
+      "developer": "Anco Games",
+      "publisher": "U.S. Gold"
+    },
+    {
+      "title": "Super League (Mega Drive)",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Sega R&D 2",
+      "publisher": "Sega"
+    },
+    {
+      "title": "Super Monaco GP",
+      "releaseDate": "",
+      "serial": "043210",
+      "rating": "ClassInd: Livre",
+      "developer": "Probe Software",
+      "publisher": "Sega Enterprises, Ltd."
+    },
+    {
+      "title": "Super Real Basketball",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Sega Enterprises, Ltd.",
+      "publisher": ""
+    },
+    {
+      "title": "Super Street Fighter II: The New Challengers",
+      "releaseDate": "",
+      "serial": "049010",
+      "rating": "ClassInd: 13",
+      "developer": "Capcom",
+      "publisher": "Capcom"
+    },
+    {
+      "title": "Super Thunder Blade",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "M2",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Super Volley Ball",
+      "releaseDate": "",
+      "serial": "041160",
+      "rating": "ClassInd: Livre",
+      "developer": "Khaos",
+      "publisher": ""
+    },
+    {
+      "title": "Sword of Sodan",
+      "releaseDate": "1992-04",
+      "serial": "",
+      "rating": "",
+      "developer": "Innerprise Software",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Sylvester and Tweety in Cagey Capers",
+      "releaseDate": "",
+      "serial": "046250",
+      "rating": "ClassInd: Livre",
+      "developer": "Alexandria",
+      "publisher": "TecMagik"
+    },
+    {
+      "title": "T2: The Arcade Game",
+      "releaseDate": "",
+      "serial": "044220",
+      "rating": "",
+      "developer": "Probe Software",
+      "publisher": ""
+    },
+    {
+      "title": "TaleSpin",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Disney Software",
+      "publisher": "Sega"
+    },
+    {
+      "title": "Tangram",
+      "releaseDate": "2007",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Taz in Escape from Mars",
+      "releaseDate": "1994",
+      "serial": "46370",
+      "rating": "ClassInd: Livre",
+      "developer": "Al Baker & Associates",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Taz-Mania",
+      "releaseDate": "",
+      "serial": "043180",
+      "rating": "",
+      "developer": "Recreational Brainware",
+      "publisher": ""
+    },
+    {
+      "title": "TechnoClash",
+      "releaseDate": "",
+      "serial": "044750",
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Teenage Mutant Ninja Turtles: The Hyperstone Heist",
+      "releaseDate": "",
+      "serial": "045060",
+      "rating": "",
+      "developer": "Konami",
+      "publisher": "Konami"
+    },
+    {
+      "title": "The Adventures of Batman & Robin (Mega Drive)",
+      "releaseDate": "1995",
+      "serial": "046390",
+      "rating": "ClassInd: Livre",
+      "developer": "Clockwork Tortoise",
+      "publisher": ""
+    },
+    {
+      "title": "The Aquatic Games Starring James Pond and The Aquabats",
+      "releaseDate": "",
+      "serial": "042730",
+      "rating": "",
+      "developer": "Millennium Interactive",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "The Berenstain Bears' Camping Adventure",
+      "releaseDate": "",
+      "serial": "048060",
+      "rating": "ClassInd: Livre",
+      "developer": "Realtime Associates",
+      "publisher": "Sega of America"
+    },
+    {
+      "title": "The Great Circus Mystery Starring Mickey & Minnie",
+      "releaseDate": "",
+      "serial": "046810",
+      "rating": "ClassInd: Livre",
+      "developer": "Capcom",
+      "publisher": ""
+    },
+    {
+      "title": "The Incredible Hulk",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "ClassInd: Livre",
+      "developer": "Probe Software",
+      "publisher": "U.S. Gold"
+    },
+    {
+      "title": "The Jungle Book",
+      "releaseDate": "",
+      "serial": "046580",
+      "rating": "ClassInd: Livre",
+      "developer": "Disney Software",
+      "publisher": "",
+      "altTitles": [
+        "O livro da Selva"
+      ]
+    },
+    {
+      "title": "The Lost World: Jurassic Park (Mega Drive)",
+      "releaseDate": "1997-09",
+      "serial": "",
+      "rating": "ClassInd: Livre",
+      "developer": "Appaloosa Interactive",
+      "publisher": ""
+    },
+    {
+      "title": "The Ooze",
+      "releaseDate": "1995-10",
+      "serial": "",
+      "rating": "ClassInd: Livre",
+      "developer": "Sega of America",
+      "publisher": ""
+    },
+    {
+      "title": "The Ren & Stimpy Show Presents: Stimpy's Invention",
+      "releaseDate": "",
+      "serial": "044790",
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": ""
+    },
+    {
+      "title": "The Revenge of Shinobi",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "M2Category :Live link referenceCategory :Live link reference",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "The Simpsons: Bart vs. the Space Mutants",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "",
+      "developer": "Arc Developments",
+      "publisher": "Flying Edge"
+    },
+    {
+      "title": "The Simpsons: Bart's Nightmare",
+      "releaseDate": "",
+      "serial": "044570",
+      "rating": "",
+      "developer": "Sculptured Software",
+      "publisher": "Flying Edge"
+    },
+    {
+      "title": "The Smurfs",
+      "releaseDate": "1996-06",
+      "serial": "048190",
+      "rating": "ClassInd: Livre",
+      "developer": "Bit Managers",
+      "publisher": "Infogrames",
+      "altTitles": [
+        "Os Smurfs"
+      ]
+    },
+    {
+      "title": "Thunder Force II",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Thunder Force III",
+      "releaseDate": "1992-07",
+      "serial": "",
+      "rating": "",
+      "developer": "Technosoft",
+      "publisher": "Technosoft"
+    },
+    {
+      "title": "Tiny Toon Adventures: ACME All-Stars",
+      "releaseDate": "1997-12",
+      "serial": "048340",
+      "rating": "ClassInd: Livre",
+      "developer": "Konami",
+      "publisher": "Konami"
+    },
+    {
+      "title": "Tiny Toon Adventures: Buster's Hidden Treasure",
+      "releaseDate": "",
+      "serial": "044540",
+      "rating": "",
+      "developer": "Konami",
+      "publisher": "Konami"
+    },
+    {
+      "title": "ToeJam & Earl",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Johnson Voorsanger Productions",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "ToeJam & Earl in Panic on Funkotron",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Johnson Voorsanger Productions",
+      "publisher": "Sega Corporation (2000-2015)"
+    },
+    {
+      "title": "Toki: Going Ape Spit",
+      "releaseDate": "",
+      "serial": "}",
+      "rating": "",
+      "developer": "Santos",
+      "publisher": "Sega"
+    },
+    {
+      "title": "Toy Story",
+      "releaseDate": "1996-10",
+      "serial": "050020",
+      "rating": "ClassInd: Livre",
+      "developer": "Psygnosis",
+      "publisher": "Disney Interactive"
+    },
+    {
+      "title": "Truxton",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Toaplan",
+      "publisher": ""
+    },
+    {
+      "title": "Turma da Mônica na Terra dos Monstros",
+      "releaseDate": "1994",
+      "serial": "044870",
+      "rating": "ClassInd: Livre",
+      "developer": "Tec Toy",
+      "publisher": "Tec Toy"
+    },
+    {
+      "title": "Twin Cobra",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "GRC",
+      "publisher": "Tec Toy",
+      "altTitles": [
+        "Desert Attack Helicopter"
+      ]
+    },
+    {
+      "title": "Ultimate Mortal Kombat 3 (Mega Drive)",
+      "releaseDate": "1996-10",
+      "serial": "047240",
+      "rating": "ClassInd: 18",
+      "developer": "",
+      "publisher": ""
+    },
+    {
+      "title": "Ultimate Qix",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "I.T.L",
+      "publisher": ""
+    },
+    {
+      "title": "Vectorman",
+      "releaseDate": "",
+      "serial": "046930",
+      "rating": "ClassInd: Livre",
+      "developer": "BlueSky Software",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Vectorman 2",
+      "releaseDate": "1996-12",
+      "serial": "048280",
+      "rating": "ClassInd: Livre",
+      "developer": "BlueSky Software",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Venom - Spider-Man: Separation Anxiety",
+      "releaseDate": "",
+      "serial": "047180",
+      "rating": "ClassInd: Livre",
+      "developer": "Software Creations",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "Virtua Fighter 2 (Mega Drive)",
+      "releaseDate": "1996-12",
+      "serial": "052010",
+      "rating": "ClassInd: 13",
+      "developer": "Cube",
+      "publisher": "Sega Corporation"
+    },
+    {
+      "title": "Virtua Racing",
+      "releaseDate": "1994-05",
+      "serial": "047040",
+      "rating": "",
+      "developer": "Sega AM2",
+      "publisher": "Sega Enterprises, Ltd."
+    },
+    {
+      "title": "VR Troopers",
+      "releaseDate": "",
+      "serial": "046950",
+      "rating": "ClassInd: Livre",
+      "developer": "Syrox Developments",
+      "publisher": ""
+    },
+    {
+      "title": "Wacky Worlds",
+      "releaseDate": "",
+      "serial": "048080",
+      "rating": "ClassInd: Livre",
+      "developer": "HeadGames",
+      "publisher": "Sega of America"
+    },
+    {
+      "title": "Warlock",
+      "releaseDate": "",
+      "serial": "046760",
+      "rating": "ClassInd: Livre",
+      "developer": "Realtime Associates",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "Wayne Gretzky and the NHLPA All-Stars",
+      "releaseDate": "1995-10",
+      "serial": "046960",
+      "rating": "ClassInd: Livre",
+      "developer": "Time Warner Interactive",
+      "publisher": "Time Warner Interactive"
+    },
+    {
+      "title": "Where in the World is Carmen Sandiego?",
+      "releaseDate": "",
+      "serial": "046690",
+      "rating": "ClassInd: Livre",
+      "developer": "Electronic Arts Canada",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Where in Time is Carmen Sandiego?",
+      "releaseDate": "",
+      "serial": "046820}",
+      "rating": "ClassInd: Livre",
+      "developer": "Distinctive Software",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Will Harvey Presents The Immortal",
+      "releaseDate": "1991",
+      "serial": "",
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": ""
+    },
+    {
+      "title": "Williams Arcade's Greatest Hits (Mega Drive)",
+      "releaseDate": "1997-07",
+      "serial": "042790",
+      "rating": "ClassInd: Livre",
+      "developer": "Digital Eclipse",
+      "publisher": ""
+    },
+    {
+      "title": "Wimbledon Championship Tennis",
+      "releaseDate": "",
+      "serial": "044670",
+      "rating": "",
+      "developer": "SIMSCategory :Live link reference",
+      "publisher": ""
+    },
+    {
+      "title": "Winter Olympics",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Tiertex",
+      "publisher": ""
+    },
+    {
+      "title": "Wolverine: Adamantium Rage",
+      "releaseDate": "",
+      "serial": "046730",
+      "rating": "ClassInd: Livre",
+      "developer": "Marvel Software",
+      "publisher": "Acclaim Entertainment"
+    },
+    {
+      "title": "World Class Leader Board",
+      "releaseDate": "",
+      "serial": "043460",
+      "rating": "ClassInd: 13",
+      "developer": "Access Software",
+      "publisher": "U.S. Gold"
+    },
+    {
+      "title": "World Cup Soccer",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Animated Pixels",
+      "publisher": "Sega Enterprises, Ltd.",
+      "altTitles": [
+        "Super Futebol"
+      ]
+    },
+    {
+      "title": "World Cup USA 94",
+      "releaseDate": "",
+      "serial": "045080",
+      "rating": "",
+      "developer": "Tiertex",
+      "publisher": "U.S. Gold"
+    },
+    {
+      "title": "World Heroes",
+      "releaseDate": "",
+      "serial": "046420",
+      "rating": "ClassInd: 13",
+      "developer": "Sega Midwest Studio",
+      "publisher": "Sega"
+    },
+    {
+      "title": "World of Illusion Starring Mickey Mouse and Donald Duck",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Disney Software",
+      "publisher": ""
+    },
+    {
+      "title": "World Series Baseball (Mega Drive)",
+      "releaseDate": "",
+      "serial": "046120",
+      "rating": "",
+      "developer": "BlueSky Software",
+      "publisher": "Sega of America"
+    },
+    {
+      "title": "WWF WrestleMania: The Arcade Game",
+      "releaseDate": "",
+      "serial": "047190",
+      "rating": "ClassInd: Livre",
+      "developer": "Sculptured Software",
+      "publisher": ""
+    },
+    {
+      "title": "X-Men",
+      "releaseDate": "",
+      "serial": "044210",
+      "rating": "",
+      "developer": "Western Technologies",
+      "publisher": ""
+    },
+    {
+      "title": "X-Men 2: Clone Wars",
+      "releaseDate": "",
+      "serial": "046770",
+      "rating": "ClassInd: Livre",
+      "developer": "HeadGames",
+      "publisher": ""
+    },
+    {
+      "title": "Yuu Yuu Hakusho: Makyou Toitsusen",
+      "releaseDate": "1999-12",
+      "serial": "048380",
+      "rating": "ClassInd: Livre",
+      "developer": "Treasure",
+      "publisher": ""
+    },
+    {
+      "title": "Zany Golf",
+      "releaseDate": "1990",
+      "serial": "",
+      "rating": "",
+      "developer": "Electronic Arts",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "title": "Zero Tolerance",
+      "releaseDate": "1994",
+      "serial": "046640",
+      "rating": "ClassInd: 13",
+      "developer": "Accolade",
+      "publisher": "Accolade"
+    },
+    {
+      "title": "Zoom!",
+      "releaseDate": "",
+      "serial": "",
+      "rating": "",
+      "developer": "Sigma Pro-TechCategory :Live link reference",
+      "publisher": ""
+    },
+    {
+      "title": "Zôo",
+      "releaseDate": "2005",
+      "serial": "",
+      "rating": "ClassInd: 12",
+      "developer": "Devworks Game Technology",
+      "publisher": "Tec Toy"
+    }
+  ]
+}

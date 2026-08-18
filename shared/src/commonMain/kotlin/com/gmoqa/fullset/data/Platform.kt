@@ -14,7 +14,19 @@ data class Platform(
     val enabled: Boolean,
     /** Ficha técnica (año por región, specs). Null si la entrada no la trae. */
     val info: PlatformInfo? = null,
-    /** Catálogos por región (label de [RegionFilter] → archivo): `{"NTSC-U": "...", "PAL": "..."}`. */
+    /**
+     * Catálogos por región: `{"NTSC-U": "...", "PAL": "..."}`, con el label de [RegionFilter].
+     *
+     * Una región puede además declarar **territorios**, con la clave compuesta `"PAL/BR"`. No es
+     * un capricho: bajo "PAL" hoy conviven cosas que no son lo mismo. Brasil usaba **PAL-M a
+     * 60 Hz** —otro estándar— y Tec Toy publicaba cartuchos propios: la Master System tiene **más
+     * juegos brasileños que europeos**, con 71 que no existieron en Europa. Australia también tuvo
+     * lanzamientos con catalog number propio (*American Gladiators* es `FAME02GMC` allá y
+     * `T-83056` en EE.UU.).
+     *
+     * La clave sin barra es el territorio principal de esa región —"PAL" = Europa— así que una
+     * consola que no declara territorios sigue funcionando igual que antes.
+     */
     val catalogs: Map<String, String> = emptyMap(),
     /**
      * Cuántos juegos tiene cada región, **precalculado**.
@@ -32,11 +44,29 @@ data class Platform(
      * usa cualquiera que exista: pasa con las consolas de una sola región (la SG-1000 solo salió en
      * Japón), donde mostrar su catálogo japonés es mejor que mostrar una consola vacía.
      */
-    fun catalogFor(region: RegionFilter): String =
-        catalogs[region.label]?.takeIf { it.isNotBlank() }
+    fun catalogFor(region: RegionFilter, territory: String? = null): String {
+        val clave = if (territory.isNullOrBlank()) region.label else "${region.label}/$territory"
+        return catalogs[clave]?.takeIf { it.isNotBlank() }
+            ?: catalogs[region.label]?.takeIf { it.isNotBlank() }
             ?: catalogFile.takeIf { it.isNotBlank() }
             ?: catalogs.values.firstOrNull { it.isNotBlank() }
             ?: ""
+    }
+
+    /**
+     * Territorios declarados dentro de [region], en orden: primero el principal (`null`, que es la
+     * clave sin barra) y después los sufijos, alfabéticos.
+     *
+     * Devuelve **lista vacía si no hay más de uno**: mostrar un selector de una sola opción es ruido
+     * y hace creer que faltan las otras.
+     */
+    fun territoriesFor(region: RegionFilter): List<String?> {
+        val extra = catalogs.keys
+            .filter { it.startsWith("${region.label}/") }
+            .map { it.substringAfter("/") }
+            .sorted()
+        return if (extra.isEmpty()) emptyList() else listOf(null) + extra
+    }
 
     /**
      * Si tiene lista de dónde elegir, en la región que sea.
