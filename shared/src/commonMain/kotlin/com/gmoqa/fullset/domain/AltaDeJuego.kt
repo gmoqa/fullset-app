@@ -36,16 +36,3 @@ fun indiceDeMarcas(marcas: List<CatalogMark>, plataforma: String): Map<String, C
     }
     return indice
 }
-
-/**
- * Dónde arranca cada región dentro de la lista unida, para poner su encabezado justo ahí:
- * `{índice -> (región, cuántos)}`.
- *
- * Solo tiene sentido **navegando**. Buscando, el orden es el del ranking de relevancia y las
- * regiones quedan entremezcladas, así que cortar ahí dibujaría encabezados en medio de la nada.
- */
-fun cortesPorRegion(entradas: List<CatalogEntry>): Map<Int, Pair<String, Int>> =
-    entradas.withIndex()
-        .groupBy { it.value.region }
-        .map { (region, items) -> items.first().index to (region to items.size) }
-        .toMap()

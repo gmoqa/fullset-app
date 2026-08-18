@@ -1,6 +1,7 @@
 package com.gmoqa.fullset.data
 
 import java.io.File
+import com.gmoqa.fullset.domain.GameSearch
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -163,17 +164,26 @@ class CatalogAssetsTest {
      * tiene que aparecer sin que haga falta cambiar de región primero.
      */
     @Test
-    fun `la busqueda encuentra exclusivos de cualquier region`() {
+    fun `cada region trae sus exclusivos y la busqueda se queda en la elegida`() {
+        // Al agregar un juego elegís **una** región y ves solo esa lista: estás eligiendo una pieza
+        // concreta, no explorando la consola. Antes se buscaba sobre las tres juntas, y eso hacía
+        // aparecer la edición japonesa mientras estabas en la americana.
         val catalog = GameCatalog(readAsset)
         val saturn = registry.all().first { it.id == "sega-saturn" }
 
-        val soloJp = catalog.entries(saturn, RegionFilter.NTSC_J).map { it.slug }.toSet() -
-            catalog.entries(saturn, RegionFilter.NTSC_U).map { it.slug }.toSet()
+        val jp = catalog.entries(saturn, RegionFilter.NTSC_J)
+        val usa = catalog.entries(saturn, RegionFilter.NTSC_U)
+        val soloJp = jp.map { it.slug }.toSet() - usa.map { it.slug }.toSet()
         assertTrue(soloJp.isNotEmpty(), "Saturn tiene exclusivos japoneses")
-        val titulo = catalog.entries(saturn, RegionFilter.NTSC_J).first { it.slug in soloJp }.title
+
+        val exclusivo = jp.first { it.slug in soloJp }
         assertTrue(
-            catalog.searchAllRegions(saturn, titulo).any { it.title == titulo },
-            "buscar '$titulo' tiene que encontrarlo aunque tu región sea otra",
+            GameSearch.rank(jp, exclusivo.title, limit = 60) { it.title }.any { it.slug == exclusivo.slug },
+            "'${exclusivo.title}' tiene que aparecer buscando en su propia región",
+        )
+        assertTrue(
+            usa.none { it.slug == exclusivo.slug },
+            "y no en la americana, que es una lista distinta",
         )
     }
 

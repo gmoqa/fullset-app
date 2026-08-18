@@ -75,7 +75,7 @@ import androidx.compose.ui.unit.takeOrElse
 import coil3.compose.AsyncImage
 import com.gmoqa.fullset.data.CatalogEntry
 import com.gmoqa.fullset.domain.CatalogMark
-import com.gmoqa.fullset.domain.cortesPorRegion
+import com.gmoqa.fullset.domain.GameSearch
 import com.gmoqa.fullset.domain.indiceDeMarcas
 import com.gmoqa.fullset.data.CoverArt
 import com.gmoqa.fullset.data.Game
@@ -152,7 +152,8 @@ fun AddGameScreen(
             if (platform == null) {
                 PlatformStep(platforms = platforms, region = region, onSelect = { selected = it })
             } else {
-                TitleStep(platform = platform, catalog = catalog, marks = marks, onPicked = onPicked)
+                TitleStep(platform = platform, catalog = catalog, marks = marks,
+                    defaultRegion = region, onPicked = onPicked)
             }
         }
 
@@ -282,25 +283,6 @@ private const val GLIFO_ALPHA = 0.68f
  * Marca dónde termina una lista y empieza la otra. Sin él la transición sería invisible —el título
  * 93 es americano y el 94 japonés— y se leería como que la lista se desordenó sola.
  */
-@Composable
-private fun RegionSectionHeader(region: String, count: Int) {
-    Row(
-        modifier = Modifier.fillMaxWidth().padding(top = 14.dp, bottom = 2.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        Text(
-            region.ifBlank { "Sin región" },
-            style = MaterialTheme.typography.titleSmall,
-            color = MaterialTheme.colorScheme.primary,
-        )
-        Text(
-            "$count games",
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-    }
-}
 
 /** Encabezado de generación: el mismo idioma que las secciones de Settings (ámbar + apoyo apagado). */
 @Composable
@@ -437,29 +419,55 @@ private fun TitleStep(
     platform: Platform,
     catalog: GameCatalog,
     marks: List<CatalogMark>,
+    defaultRegion: RegionFilter,
     onPicked: (platform: Platform, entry: CatalogEntry, coverUrl: String) -> Unit,
 ) {
+    // Se elige **una** región y se ve solo esa lista.
+    //
+    // Estuvo un tiempo unificado —las tres regiones de corrido, con encabezados— y en Collection eso
+    // sigue siendo lo correcto: la consola es una sola máquina. Pero acá estás eligiendo **una pieza
+    // concreta** para agregar, y ahí la lista única confunde: en DS son 6.092 entradas en vez de
+    // 1.782, con el mismo juego repetido tres veces y una marca "Have NTSC-U" que hay que
+    // interpretar. Son dos problemas distintos y solo uno lo resolvía la unificación.
+    val regiones = remember(platform) { platform.declaredRegions() }
+    // La preferencia de Settings manda, pero no todas las consolas tienen las tres: la TurboGrafx no
+    // salió en Europa, y abrir en una región que no existe mostraría una lista vacía.
+    var region by remember(platform) {
+        mutableStateOf(if (defaultRegion in regiones) defaultRegion else regiones.firstOrNull() ?: defaultRegion)
+    }
     var query by remember { mutableStateOf("") }
     var saving by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
-    // Sin texto tipeado se recorre **la consola entera**, región por región y en orden (NTSC-U,
-    // NTSC-J, PAL), con un encabezado por bloque. Con texto se busca sobre todas juntas y el
-    // resultado sale por relevancia, sin separar: quien escribe "castlevania" quiere ver los
-    // Castlevania, no recorrer tres bloques para encontrarlos.
-    val buscando = query.isNotBlank()
-    val results = remember(platform, query) {
-        if (buscando) catalog.searchAllRegions(platform, query) else catalog.entriesAllRegions(platform)
-    }
-    // Dónde arranca cada región dentro de la lista, para poner el encabezado justo ahí. Solo tiene
-    // sentido navegando: buscando, el orden es el del ranking y las regiones quedan entremezcladas.
-    val cortes = remember(results, buscando) {
-        if (buscando) emptyMap() else cortesPorRegion(results)
+    // Navegando sale la lista de la región elegida; buscando, la misma lista ordenada por
+    // relevancia. La búsqueda **no** cruza a las otras regiones: si estás en NTSC-U es porque querés
+    // la copia americana.
+    val results = remember(platform, region, query) {
+        val lista = catalog.entries(platform, region)
+        if (query.isBlank()) lista else GameSearch.rank(lista, query, limit = 60) { it.title }
     }
     // Lo ya registrado de esta plataforma, indexado por slug y por título (los juegos viejos del
     // Excel pueden no tener slug). Como `marks` es reactivo, al agregar uno la etiqueta sale sola.
     // Las que bloquean se indexan últimas: si un juego está en la colección y en la wishlist, manda
     // la marca del destino en el que estás.
     val markIndex = remember(marks, platform) { indiceDeMarcas(marks, platform.name) }
+
+    // Solo si hay de dónde elegir: la Atari 2600 tiene una sola lista y un selector de una opción
+    // es ruido que además hace creer que faltan las otras dos.
+    if (regiones.size > 1) {
+        SingleChoiceSegmentedButtonRow(
+            modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 12.dp),
+        ) {
+            regiones.forEachIndexed { index, r ->
+                SegmentedButton(
+                    selected = region == r,
+                    onClick = { region = r },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index, count = regiones.size, baseShape = Tokens.Shape.control,
+                    ),
+                ) { Text(r.label) }
+            }
+        }
+    }
 
     OutlinedTextField(
         value = query,
@@ -479,10 +487,7 @@ private fun TitleStep(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        itemsIndexed(results) { indice, entry ->
-            cortes[indice]?.let { (region, cuantos) ->
-                RegionSectionHeader(region = region, count = cuantos)
-            }
+        items(results, key = { it.slug.ifBlank { it.title } }) { entry ->
             val owned = markIndex[entry.slug] ?: markIndex[entry.title.lowercase()]
             // Tener la edición americana no impide querer la japonesa: son piezas distintas. Solo
             // bloquea la copia de la MISMA región; la de otra se muestra como dato, sin trabar.

@@ -1,7 +1,5 @@
 package com.gmoqa.fullset.data
 
-import com.gmoqa.fullset.domain.GameSearch
-
 import kotlinx.serialization.Serializable
 
 /** DTO del catálogo JSON. Esquema estándar: title/platform/region/year/publisher/genre/slug/serial/coverUrl. */
@@ -85,13 +83,4 @@ class GameCatalog(private val readAsset: (String) -> String? = ::readTextAsset) 
     fun countAllRegions(platform: Platform): Int =
         platform.totalCount().takeIf { it > 0 } ?: entriesAllRegions(platform).size
 
-    /**
-     * Mismo buscador difuso que la colección: tolera acentos, orden de palabras y typos.
-     *
-     * Busca sobre las listas juntas. Con texto tipeado el resultado sale **ordenado por relevancia
-     * y sin separar por región**: quien escribe "castlevania" quiere ver los Castlevania, no
-     * recorrer tres bloques para encontrarlos.
-     */
-    fun searchAllRegions(platform: Platform, query: String, limit: Int = 60): List<CatalogEntry> =
-        GameSearch.rank(entriesAllRegions(platform), query, limit) { it.title }
 }

@@ -1,6 +1,5 @@
 package com.gmoqa.fullset.domain
 
-import com.gmoqa.fullset.data.CatalogEntry
 import com.gmoqa.fullset.data.Game
 import com.gmoqa.fullset.data.SortOrder
 import com.gmoqa.fullset.data.TrackingMode
@@ -122,13 +121,4 @@ class ReglasDeListaTest {
         assertTrue(i.isEmpty())
     }
 
-    @Test
-    fun elCorteMarcaDondeArrancaCadaRegion() {
-        val entradas = listOf(
-            CatalogEntry("A", "", "a", region = "NTSC-U"),
-            CatalogEntry("B", "", "b", region = "NTSC-U"),
-            CatalogEntry("C", "", "c", region = "NTSC-J"),
-        )
-        assertEquals(mapOf(0 to ("NTSC-U" to 2), 2 to ("NTSC-J" to 1)), cortesPorRegion(entradas))
-    }
 }
