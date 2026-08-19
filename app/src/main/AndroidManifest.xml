@@ -3,6 +3,10 @@
 
     <!-- Para descargar las carátulas (Libretro Thumbnails) con Coil. -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Solo para que el SDK de errores sepa si hay conexión y **encole** el reporte en vez de
+         intentar mandarlo y perderlo. Es un permiso normal: no se le pide nada al usuario, y no da
+         acceso a ningún dato. Sin él, un crash sin red se reintenta a ciegas. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- Notas de voz: se graba PCM 16 kHz mono (lo que consume Whisper) desde Playing. -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
@@ -29,6 +33,7 @@
         <meta-data android:name="io.sentry.breadcrumbs.user-interaction" android:value="false" />
         <meta-data android:name="io.sentry.traces.user-interaction.enable" android:value="false" />
         <meta-data android:name="io.sentry.environment" android:value="${glitchtipEnv}" />
+        <meta-data android:name="io.sentry.debug" android:value="${glitchtipDebug}" />
         <!-- Muchas transacciones por sesión en móvil: se muestrea bajo, como recomienda GlitchTip. -->
         <meta-data android:name="io.sentry.traces.sample-rate" android:value="0.01" />
 

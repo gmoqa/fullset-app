@@ -64,6 +64,10 @@ android {
         // El SDK de Sentry se auto-inicializa leyendo estos `meta-data` del manifest, así que el
         // valor se inyecta acá en vez de quedar escrito en el XML.
         manifestPlaceholders["glitchtipDsn"] = glitchtipDsn
+        // `-PglitchtipDebug=true` hace que el SDK cuente por logcat qué envía y qué responde el
+        // servidor. Hace falta para verificar la cadena en una build **release**, que es la que se
+        // reparte: sin esto no hay forma de saber desde acá si el evento llegó o se perdió.
+        manifestPlaceholders["glitchtipDebug"] = (findProperty("glitchtipDebug") as String?) ?: "false"
     }
 
     // Compila whisper.cpp + ggml (backend CPU) como libwhisper_jni.so.
