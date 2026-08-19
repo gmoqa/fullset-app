@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -16,7 +15,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
@@ -112,6 +110,10 @@ fun PlatformInfoContent(
  * Va **arriba de todo** porque es el único dato de esta pantalla que es tuyo: el resto —cuándo
  * salió, qué formato usa— es igual para cualquiera. Antes vivía abajo, en letra chica al lado de
  * "Games", detrás de media pantalla de specs.
+ *
+ * **Sin barra de progreso**: completar la biblioteca de una consola no es una meta realista —son
+ * cientos o miles de cartuchos— así que dibujar una barra casi vacía convierte una colección en un
+ * fracaso. El número solo informa; la barra juzgaba.
  */
 @Composable
 private fun Progreso(owned: Int, total: Int) {
@@ -143,11 +145,6 @@ private fun Progreso(owned: Int, total: Int) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
-        LinearProgressIndicator(
-            progress = { owned.toFloat() / total },
-            modifier = Modifier.fillMaxWidth().height(6.dp).clip(Tokens.Shape.control),
-            drawStopIndicator = {},
-        )
     }
 }
 
