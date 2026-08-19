@@ -79,14 +79,22 @@ fun PlatformInfoContent(
     /** Cuántos tenés y de cuántos, para mostrar tu avance. Null en el modal, que no sabe de eso. */
     owned: Int? = null,
     total: Int? = null,
+    /**
+     * Si se muestra lo explicativo: el subtítulo del encabezado y la descripción.
+     *
+     * En el modal ⓘ de Add game **es el motivo de abrirlo**, así que va. Como encabezado de la vista
+     * de consola no: ahí entraste a ver **tus juegos**, y tres líneas sobre qué fue la N64 son algo
+     * que ya sabés y que hay que scrollear cada vez.
+     */
+    showAbout: Boolean = true,
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(22.dp),
     ) {
-        Header(platform, info)
+        Header(platform, info, showAbout)
 
-        if (info.description.isNotBlank()) {
+        if (showAbout && info.description.isNotBlank()) {
             Text(
                 info.description,
                 style = MaterialTheme.typography.bodyLarge,
@@ -111,47 +119,31 @@ fun PlatformInfoContent(
  * salió, qué formato usa— es igual para cualquiera. Antes vivía abajo, en letra chica al lado de
  * "Games", detrás de media pantalla de specs.
  *
- * **Sin barra de progreso**: completar la biblioteca de una consola no es una meta realista —son
- * cientos o miles de cartuchos— así que dibujar una barra casi vacía convierte una colección en un
- * fracaso. El número solo informa; la barra juzgaba.
+ * **Sin barra ni porcentaje**: completar la biblioteca de una consola no es una meta realista —son
+ * cientos o miles de cartuchos— y tanto la barra casi vacía como el "4.9%" convertían una colección
+ * en un fracaso. El número solo informa; los otros dos juzgaban.
  */
 @Composable
 private fun Progreso(owned: Int, total: Int) {
-    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.Bottom,
-        ) {
-            Row(verticalAlignment = Alignment.Bottom) {
-                Text(
-                    owned.toString(),
-                    style = MaterialTheme.typography.headlineMedium,
-                    fontWeight = FontWeight.Bold,
-                )
-                Text(
-                    " of $total",
-                    style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(bottom = 2.dp),
-                )
-            }
-            // Con catálogos de miles, el entero es casi siempre 0: se muestra un decimal para que
-            // agregar un juego se note.
-            val pct = owned * 1000 / total
-            Text(
-                if (pct == 0 && owned > 0) "<0.1%" else "${pct / 10}.${pct % 10}%",
-                style = MaterialTheme.typography.titleMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
+    Row(verticalAlignment = Alignment.Bottom) {
+        Text(
+            owned.toString(),
+            style = MaterialTheme.typography.headlineMedium,
+            fontWeight = FontWeight.Bold,
+        )
+        Text(
+            " of $total",
+            style = MaterialTheme.typography.titleMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(bottom = 2.dp),
+        )
     }
 }
 
 // ---------------------------------------------------------------- cabecera
 
 @Composable
-private fun Header(platform: String, info: PlatformInfo) {
+private fun Header(platform: String, info: PlatformInfo, showAbout: Boolean) {
     val band = platformBandColor(platform) ?: MaterialTheme.colorScheme.surfaceVariant
     Box(
         modifier = Modifier
@@ -176,7 +168,7 @@ private fun Header(platform: String, info: PlatformInfo) {
                 info.generation?.let { "${it}${ordinal(it)} generation" },
                 info.media.ifBlank { null },
             ).joinToString(" · ")
-            if (subtitle.isNotBlank()) {
+            if (showAbout && subtitle.isNotBlank()) {
                 Text(
                     subtitle,
                     style = MaterialTheme.typography.bodyMedium,

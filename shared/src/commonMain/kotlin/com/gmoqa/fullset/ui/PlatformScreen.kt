@@ -87,6 +87,8 @@ fun PlatformScreen(
                         // Tu avance en esta consola, arriba de todo: es el único dato de la ficha
                         // que es tuyo. Sin catálogo (la PS5) no hay contra qué medirse y no se
                         // muestra la barra.
+                        // Como encabezado no va lo explicativo: entraste a ver tus juegos.
+                        showAbout = false,
                         owned = completitud.poseidos,
                         total = rows.size.takeIf { catalog.isNotEmpty() },
                         platform = platform,
