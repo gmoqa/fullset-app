@@ -73,7 +73,11 @@ fun completitudDe(catalogo: List<CatalogEntry>, coleccion: List<Game>): Completi
     val delCatalogo = catalogo.map { e ->
         val mio = porSlug[e.slug]
         PlatformRow(
-            key = "cat:${e.slug.ifBlank { e.title }}",
+            // La región va en la clave porque el mismo juego está en varias listas: *Pilotwings
+            // 64* aparece en NTSC-U, NTSC-J y PAL con el mismo slug. Sin ella, `LazyColumn` recibía
+            // dos filas con la misma clave y tiraba `IllegalArgumentException` al componerlas
+            // juntas — un crash latente que solo saltaba según dónde quedara el scroll.
+            key = "cat:${e.region}:${e.slug.ifBlank { e.title }}",
             // Si lo tenés, manda **tu** título: pudiste haberlo renombrado.
             title = mio?.name ?: e.title,
             year = e.year ?: mio?.releaseYear,

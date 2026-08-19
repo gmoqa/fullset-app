@@ -64,9 +64,9 @@ fun PlatformScreen(
     // ordena por lanzamiento y cuenta los poseídos **distintos**.
     val completitud = remember(games, catalog) { completitudDe(catalog, games) }
     val rows = completitud.filas
-    // Con catálogo: "X de Y" (completitud). Sin catálogo (PS5…): solo el conteo de los que tenés.
-    val countLabel = if (catalog.isEmpty()) "${rows.size} · by release"
-    else "${completitud.poseidos} of ${rows.size} · by release"
+    // El "X de Y" vive arriba, con su barra. Repetirlo acá era decir dos veces lo mismo a diez
+    // píxeles de distancia; sin catálogo (PS5…) no hay avance que mostrar y sí el conteo.
+    val countLabel = if (catalog.isEmpty()) "${rows.size} games" else "by release"
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -84,6 +84,11 @@ fun PlatformScreen(
                 }
                 if (info != null) {
                     PlatformInfoContent(
+                        // Tu avance en esta consola, arriba de todo: es el único dato de la ficha
+                        // que es tuyo. Sin catálogo (la PS5) no hay contra qué medirse y no se
+                        // muestra la barra.
+                        owned = completitud.poseidos,
+                        total = rows.size.takeIf { catalog.isNotEmpty() },
                         platform = platform,
                         info = info,
                         region = region,

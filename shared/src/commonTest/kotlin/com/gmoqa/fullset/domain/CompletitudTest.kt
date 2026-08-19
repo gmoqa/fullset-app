@@ -106,6 +106,22 @@ class CompletitudTest {
         assertEquals(2, r.filas.count { it.ownedId == 3L }, "y se marca en las dos")
     }
 
+    @Test
+    fun lasFilasNuncaRepitenClave() {
+        // `LazyColumn` **tira una excepción** si dos ítems comparten clave, así que esto es un
+        // crash, no un detalle: *Pilotwings 64* está en las tres regiones con el mismo slug.
+        val r = completitudDe(
+            catalogo = listOf(
+                entrada("Pilotwings 64", "pilotwings-64", 1996).copy(region = "NTSC-U"),
+                entrada("Pilotwings 64", "pilotwings-64", 1996).copy(region = "NTSC-J"),
+                entrada("Pilotwings 64", "pilotwings-64", 1997).copy(region = "PAL"),
+            ),
+            coleccion = listOf(juego(1, "Pilotwings 64", "pilotwings-64")),
+        )
+        val claves = r.filas.map { it.key }
+        assertEquals(claves.size, claves.distinct().size, "claves repetidas: $claves")
+    }
+
     // ------------------------------------------------------------------ subtítulo
 
     @Test

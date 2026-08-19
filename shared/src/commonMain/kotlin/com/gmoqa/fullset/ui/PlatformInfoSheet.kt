@@ -7,18 +7,16 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Album
-import androidx.compose.material.icons.outlined.EventBusy
-import androidx.compose.material.icons.outlined.Memory
-import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
@@ -80,6 +78,9 @@ fun PlatformInfoContent(
     info: PlatformInfo,
     region: RegionFilter,
     modifier: Modifier = Modifier,
+    /** Cuántos tenés y de cuántos, para mostrar tu avance. Null en el modal, que no sabe de eso. */
+    owned: Int? = null,
+    total: Int? = null,
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
@@ -96,9 +97,57 @@ fun PlatformInfoContent(
             )
         }
 
+        if (owned != null && total != null && total > 0) Progreso(owned, total)
+
         if (info.released.isNotEmpty()) ReleaseRow(info, region)
 
-        HardwareGrid(info)
+    }
+}
+
+// ---------------------------------------------------------------- tu avance
+
+/**
+ * Cuánto de esta consola tenés.
+ *
+ * Va **arriba de todo** porque es el único dato de esta pantalla que es tuyo: el resto —cuándo
+ * salió, qué formato usa— es igual para cualquiera. Antes vivía abajo, en letra chica al lado de
+ * "Games", detrás de media pantalla de specs.
+ */
+@Composable
+private fun Progreso(owned: Int, total: Int) {
+    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.Bottom,
+        ) {
+            Row(verticalAlignment = Alignment.Bottom) {
+                Text(
+                    owned.toString(),
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold,
+                )
+                Text(
+                    " of $total",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(bottom = 2.dp),
+                )
+            }
+            // Con catálogos de miles, el entero es casi siempre 0: se muestra un decimal para que
+            // agregar un juego se note.
+            val pct = owned * 1000 / total
+            Text(
+                if (pct == 0 && owned > 0) "<0.1%" else "${pct / 10}.${pct % 10}%",
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        LinearProgressIndicator(
+            progress = { owned.toFloat() / total },
+            modifier = Modifier.fillMaxWidth().height(6.dp).clip(Tokens.Shape.control),
+            drawStopIndicator = {},
+        )
     }
 }
 
@@ -123,9 +172,12 @@ private fun Header(platform: String, info: PlatformInfo) {
                 nameStyle = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold),
                 nameColor = Color.White,
             )
+            // El formato va acá y no en un azulejo aparte: es una propiedad de la consola igual
+            // que la generación, y una sección "Hardware" con un solo dato adentro se veía huérfana.
             val subtitle = listOfNotNull(
                 info.manufacturer.ifBlank { null },
                 info.generation?.let { "${it}${ordinal(it)} generation" },
+                info.media.ifBlank { null },
             ).joinToString(" · ")
             if (subtitle.isNotBlank()) {
                 Text(
@@ -190,64 +242,6 @@ private fun ReleaseCard(label: String, year: Int?, mine: Boolean, modifier: Modi
 }
 
 // -------------------------------------------------------- specs hardware
-
-@Composable
-private fun HardwareGrid(info: PlatformInfo) {
-    val specs = buildList {
-        if (info.media.isNotBlank()) add(Triple(Icons.Outlined.Album, "Media", info.media))
-        if (info.cpu.isNotBlank()) add(Triple(Icons.Outlined.Memory, "CPU", info.cpu))
-        if (info.unitsSold.isNotBlank()) add(Triple(Icons.Outlined.ShoppingCart, "Units sold", info.unitsSold))
-        info.discontinued?.let { add(Triple(Icons.Outlined.EventBusy, "Discontinued", it.toString())) }
-    }
-    if (specs.isEmpty()) return
-    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        SectionTitle("Hardware")
-        // Grid de 2 columnas; si sobra un tile impar, se rellena con espacio para no estirarlo.
-        specs.chunked(2).forEach { pair ->
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                pair.forEach { (icon, label, value) ->
-                    SpecTile(icon, label, value, Modifier.weight(1f))
-                }
-                if (pair.size == 1) Spacer(Modifier.weight(1f))
-            }
-        }
-    }
-}
-
-@Composable
-private fun SpecTile(icon: ImageVector, label: String, value: String, modifier: Modifier) {
-    Column(
-        modifier = modifier
-            .clip(Tokens.Shape.medium)
-            .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
-            .padding(14.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp),
-    ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Icon(
-                icon,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.size(16.dp),
-            )
-            Spacer(Modifier.width(6.dp))
-            Text(
-                label.uppercase(),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-        Text(
-            value,
-            style = MaterialTheme.typography.bodyMedium,
-            fontWeight = FontWeight.SemiBold,
-            color = MaterialTheme.colorScheme.onSurface,
-            overflow = TextOverflow.Ellipsis,
-        )
-    }
-}
-
-// ------------------------------------------------------------- utilidades
 
 @Composable
 private fun SectionTitle(text: String) {
