@@ -8,3 +8,9 @@ sdk.dir=/path/to/Android/Sdk
 # modernas (PlayStation 5). Sin ella la app funciona igual; ese buscador queda inactivo.
 # Sacá una gratis en https://www.steamgriddb.com/profile/preferences/api
 STEAMGRIDDB_API_KEY=
+
+# DSN de GlitchTip (seguimiento de errores), opcional. Vacío = el SDK no se inicializa y la app no
+# manda nada a ningún servidor, que es lo que querés si clonaste este repo: el DSN de otro no te
+# sirve, y usarlo le ensucia su instancia.
+# Sacá el tuyo creando un proyecto en tu GlitchTip (o en sentry.io, habla el mismo protocolo).
+GLITCHTIP_DSN=

@@ -19,6 +19,20 @@ val steamGridDbKey: String = (findProperty("steamGridDbKey") as String?)
         if (f.exists()) f.inputStream().use { load(it) }
     }.getProperty("STEAMGRIDDB_API_KEY", "")
 
+// El DSN de GlitchTip (seguimiento de errores), también fuera del control de versiones.
+//
+// No es una credencial de lectura —un DSN solo permite **enviar** eventos, y por eso los clientes web
+// lo exponen— pero igual no va al repo por dos motivos: revela el host del servidor, y cualquiera que
+// lo copie puede llenar la instancia de basura.
+//
+// Vacío = el SDK no se inicializa. Así una build de otro no manda nada a un servidor que no es suyo,
+// que es lo que corresponde ahora que el repositorio es público.
+val glitchtipDsn: String = (findProperty("glitchtipDsn") as String?)
+    ?: Properties().apply {
+        val f = rootProject.file("local.properties")
+        if (f.exists()) f.inputStream().use { load(it) }
+    }.getProperty("GLITCHTIP_DSN", "")
+
 // El esquema SQLDelight y el driver viven en :shared (multiplataforma). Acá solo se consumen.
 
 android {
@@ -46,6 +60,10 @@ android {
         ndk { abiFilters += "arm64-v8a" }
 
         buildConfigField("String", "STEAMGRIDDB_API_KEY", "\"$steamGridDbKey\"")
+
+        // El SDK de Sentry se auto-inicializa leyendo estos `meta-data` del manifest, así que el
+        // valor se inyecta acá en vez de quedar escrito en el XML.
+        manifestPlaceholders["glitchtipDsn"] = glitchtipDsn
     }
 
     // Compila whisper.cpp + ggml (backend CPU) como libwhisper_jni.so.
@@ -95,6 +113,13 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            // Los errores de las builds que se usan de verdad.
+            manifestPlaceholders["glitchtipEnv"] = "production"
+        }
+        debug {
+            // Separado a propósito: durante el desarrollo se provocan errores a mano y se prueban
+            // cosas a medio hacer. Mezclarlos con el uso real haría inservible el tablero.
+            manifestPlaceholders["glitchtipEnv"] = "debug"
         }
     }
 
@@ -119,6 +144,10 @@ dependencies {
 
     val composeBom = platform("androidx.compose:compose-bom:2024.09.03")
     implementation(composeBom)
+
+    // Seguimiento de errores (GlitchTip, que habla el protocolo de Sentry). Se activa solo si hay
+    // DSN: sin él el SDK arranca deshabilitado y no abre ninguna conexión.
+    implementation("io.sentry:sentry-android:8.9.0")
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.activity:activity-compose:1.9.3")
