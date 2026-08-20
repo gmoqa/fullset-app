@@ -671,9 +671,9 @@
       "NTSC-U": "catalogs/ps5-usa.json"
     },
     "counts": {
-      "NTSC-U": 0,
-      "NTSC-J": 0,
-      "PAL": 0
+      "NTSC-U": 691,
+      "NTSC-J": 691,
+      "PAL": 691
     }
   }
 ]

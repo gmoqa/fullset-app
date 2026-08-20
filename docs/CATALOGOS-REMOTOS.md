@@ -111,8 +111,43 @@ desactualizado, justamente para que no se olvide.
 
 ## Consolas modernas: la lista incompleta
 
-`ps5-usa.json` arranca **vacío** y es válido — el lint lo acepta y los tests lo afirman
-explícitamente. La consola aparece con 0 juegos y va creciendo PR a PR.
+`ps5-usa.json` arranca con **691 juegos físicos** desde Wikidata y crece PR a PR. Un catálogo vacío
+también sería válido —el lint lo acepta y los tests lo afirman— pero había con qué empezar.
+
+**Por qué Wikidata y no las fuentes de siempre:** libretro no cubre PS4 ni PS5, y **Redump tampoco**
+—su catálogo llega hasta PS3, porque los discos de PS4/PS5 están cifrados y no se preservan—. La
+lista de Wikipedia trae 1.125 títulos pero **no distingue físico de digital**: la palabra "retail" no
+aparece ni una vez. Wikidata tiene `distribution format` (P437), que separa `Ultra HD Blu-ray` y
+`Blu-ray Disc` de `digital distribution`. Ese corte no lo hace ninguna otra fuente.
+
+Es CC0, tiene endpoint SPARQL y llegó con **género al 99%**, mejor que cualquier catálogo retro
+nuestro.
+
+### Las cuatro trampas que tuvo ese dato
+
+Ninguna era evidente, y cada una habría dejado un catálogo malo con buena pinta:
+
+1. **`Q1441459` es "ohm metre"**, una unidad de resistividad eléctrica. Estaba en mi primera lista de
+   "formatos de disco" por copiarla sin verificar. Ahora los formatos salen de **enumerar los que
+   declaran los juegos**, no de adivinarlos.
+
+2. **`P437` es del juego, no de la plataforma.** Entre los formatos de los juegos de PS5 aparecen
+   `ROM cartridge` (157) y `Nintendo Game Card` (28): son de su versión de Switch. Solo entran los
+   formatos que **una PS5 puede leer**.
+
+3. **Wikidata migró las etiquetas latinas a `mul`.** *Elden Ring* tiene `[mul] Elden Ring` y **ningún
+   `en`**: filtrando por inglés desaparecían Elden Ring, Skyrim, Gran Turismo 7, God of War y
+   Overwatch 2 — los físicos más obvios que existen. Con `SERVICE wikibase:label` el síntoma era aún
+   más engañoso: devolvía el nombre **japonés**, así que parecía un problema de preferencia de idioma
+   y no de dónde vive el dato.
+
+4. **Una consulta grande con `GROUP BY` y seis `OPTIONAL` perdía 220 juegos en silencio.** Partida en
+   dos —una pide IDs, otra los datos de esos IDs— cada una hace una cosa y se verifica sola.
+
+Además, `platform = PS5` incluye retrocompatibles (*Sly 3* de 2005), así que se exige que el juego
+sea de la era de la consola; y **la fecha solo se escribe si está calificada como de PS5**, porque la
+simple es la del lanzamiento original en otra máquina —*The Witcher 3* figuraba con 2015—. Por eso el
+año está al 24% y no al 99%: es el precio de no inventar.
 
 Es a propósito: en las modernas la frontera entre físico y digital es borrosa, y las listas
 automáticas traen cientos de títulos que nunca existieron en disco. Es el mismo problema que ya nos

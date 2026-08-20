@@ -58,6 +58,12 @@ Los títulos de los juegos son marcas de sus respectivos dueños. La procedencia
 está en [`docs/CATALOGS.md`](docs/CATALOGS.md); las correcciones puntuales anotan su fuente en
 `tools/overrides/`.
 
+- **[Wikidata](https://www.wikidata.org)** — la lista de **PlayStation 5**, solo formato físico
+  (691 juegos), con género, desarrolladora y editora. Contenido bajo **CC0** (dominio público): no
+  exige atribución, y se cita igual porque corresponde. Es la única fuente que separa disco de
+  digital en las consolas modernas —Wikipedia no lo hace y Redump no llega a la PS5— vía la
+  propiedad `distribution format` (P437). Ver `tools/build_ps5_catalog.py`.
+
 - **[Sega Retro](https://segaretro.org)** — fechas de lanzamiento, catalog numbers y
   clasificaciones de **las 8 consolas Sega en sus 3 regiones** (6226 juegos), más las editoras de
   Saturn, Sega CD y Dreamcast. Contenido bajo **GNU Free Documentation License 1.2**, que declara
