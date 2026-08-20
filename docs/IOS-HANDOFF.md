@@ -20,7 +20,7 @@ ab90e15  iOS: import de ZIP stored — restore iOS<->iOS (tarea 2)
 | Tarea | Estado | Verificado |
 |---|---|---|
 | 1 · Cámara | ✅ `UIImagePickerController(.camera)` | compila/linkea/corre; captura real **falta en dispositivo** |
-| 2 · Restore backup | ✅ JSON + ZIP *stored* | round-trip iOS↔iOS; **DEFLATE de Android: pendiente** (ver abajo) |
+| 2 · Restore backup | ✅ JSON + ZIP *stored* + DEFLATE | round-trip iOS↔iOS y lectura de ZIP de Android (DEFLATE) verificada en simulador |
 | 3 · Export ZIP | ✅ ZIP *stored* real (JSON + fotos) | writer validado byte-a-byte vs `zipfile`/`unzip` |
 | 4 · SteamGridDB key | ✅ generada desde `local.properties` | una sola fuente para las dos plataformas |
 | 5 · Whisper | ✅ whisper.cpp real (cinterop) | compila/linkea/corre; transcripción real **falta en dispositivo** (modelo + audio) |
@@ -40,13 +40,13 @@ ab90e15  iOS: import de ZIP stored — restore iOS<->iOS (tarea 2)
 - **Foreign keys de la DB** (`onConfiguration`): el path corre al arrancar sin crashear, pero no probé
   la restricción con una violación deliberada. Menor.
 
-## Límite conocido que sí es código pendiente
+## Import de ZIP con DEFLATE — cerrado
 
-- **Import de ZIP con DEFLATE** (los que exporta Android). iOS lee ZIP *stored* (los que exporta iOS)
-  pero no DEFLATE: descomprimir necesita cinterop y el intento con `libcompression` dio bindings
-  vacíos. Hoy muestra un alert que sugiere restaurar desde el `.json`. Para cerrarlo: depurar el
-  cinterop de `libcompression`/`zlib`, o inflar del lado de Swift y pasar el resultado a Kotlin.
-  El patrón de cinterop con header propio (el de whisper) funcionó — puede servir de guía.
+- iOS ahora lee ZIP *stored* (los de iOS) **y DEFLATE** (los de Android). El inflate usa
+  `platform.zlib` —el zlib del sistema, que Kotlin/Native expone en targets Apple sin cinterop
+  extra— con `windowBits = -MAX_WBITS` (deflate crudo, sin cabecera zlib). No hizo falta
+  `libcompression` ni pasar por Swift. Verificado con un ZIP real hecho por `zipfile.ZIP_DEFLATED`
+  (método 8): `readZip` restaura el `backup.json` y las fotos, corriendo en el simulador.
 
 ## Antes de correr en un iPhone real
 

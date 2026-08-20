@@ -64,7 +64,7 @@ Sospechas concretas, por orden de probabilidad:
 | `BackHandler` | ⚪ no-op **a propósito** | iOS no tiene botón atrás global |
 | `rememberMicPermission` | ⚠️ pasa directo | AVAudioSession pide el permiso al grabar |
 | `rememberCameraCapture` | ✅ UIImagePickerController (.camera) | tarea 1 hecha — probar en dispositivo real (simulador no tiene cámara) |
-| `rememberBackupImporter` | ✅ JSON + ZIP *stored* (DEFLATE de Android: pendiente) | tarea 2 |
+| `rememberBackupImporter` | ✅ JSON + ZIP *stored* + DEFLATE (Android) | tarea 2 |
 | `rememberArchiveExporter` | ✅ ZIP real (stored, JSON + fotos) | tarea 3 hecha |
 | `IosWhisperModelStore` / `IosTranscriber` | ✅ whisper.cpp real (cinterop) | tarea 5 hecha — falta probar transcripción con modelo+audio en dispositivo |
 | clave de SteamGridDB | ✅ generada desde `local.properties` | tarea 4 hecha |
@@ -86,7 +86,7 @@ Compila, linkea y la app arranca. **Falta probar en un dispositivo real:** el si
 cámara, así que ahí `available` da false y la UI no ofrece la opción (comportamiento correcto). No
 hace falta redimensionar acá: la foto pasa por `FileStore.copyImage`, que ya lo hace.
 
-## Tarea 2 — Restaurar respaldo ⚠️ JSON + ZIP stored hechos, falta DEFLATE
+## Tarea 2 — Restaurar respaldo ✅ JSON + ZIP stored + DEFLATE
 
 `rememberBackupImporter` (`FileBackup.ios.kt`): `UIDocumentPickerViewController(asCopy = true)` deja una
 copia temporal en el sandbox (sin el baile de `startAccessingSecurityScopedResource`), y se detecta el
@@ -97,13 +97,12 @@ formato por los primeros bytes (`PK` = ZIP).
   data descriptors no importan— y se extraen `backup.json` + `photos/<nombre>` (con protección
   anti *zip slip*). Round-trip iOS↔iOS de respaldo completo. ✅ *(lógica del parser validada contra
   `zipfile`)*.
-- **`.zip` DEFLATE** (los que exporta Android): ❌ **pendiente**. Descomprimir DEFLATE en iOS necesita
-  cinterop, y el intento con `libcompression` (`compression_decode_buffer`/`COMPRESSION_ZLIB`) generó
-  **bindings vacíos** (el paquete `libcompression` queda sin símbolos, incluso con `headerFilter`).
-  Por ahora muestra un alert que sugiere restaurar desde el respaldo de solo datos (`.json`). Para
-  cerrarlo: depurar la config del cinterop de `libcompression`/`zlib`, o hacer la descompresión del
-  lado de Swift y pasar el resultado a Kotlin. **Falta probar el restore a mano** (Settings → *Restore
-  from a file*).
+- **`.zip` DEFLATE** (los que exporta Android): ✅. El inflate usa `platform.zlib` —el zlib del
+  sistema, que Kotlin/Native expone en targets Apple sin cinterop propio— con `windowBits = -MAX_WBITS`
+  (deflate crudo, sin cabecera zlib) y el tamaño de salida que ya trae el central directory. No hizo
+  falta `libcompression` (que daba bindings vacíos) ni pasar por Swift. Verificado en el simulador con
+  un ZIP real de `zipfile.ZIP_DEFLATED`: `readZip` restaura `backup.json` y las fotos. *(Falta la
+  prueba a mano en la UI: Settings → Restore from a file, con un respaldo hecho en Android.)*
 
 <details><summary>Notas originales de la tarea</summary>
 
