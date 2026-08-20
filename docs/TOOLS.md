@@ -53,6 +53,23 @@ consola es un argumento, y la receta vive en `docs/CATALOGS.md`.
 `build_3ds_catalog.py`. Es la generación **más nueva y la mejor documentada** — cada builder explica
 en su docstring por qué esa consola no puede salir de Wikipedia.
 
+### Publicar una versión
+
+`release.py` hace todo lo de un release en un comando: verifica, compila, audita, escribe el
+changelog, etiqueta y publica.
+
+    python3 tools/release.py 0.2 --dry-run   # arma todo sin publicar
+    python3 tools/release.py 0.2             # pregunta antes de publicar
+
+Los pasos manuales de la v0.1 quedaron codificados, incluidas las dos trampas que aparecieron
+haciéndola: el APK se compila con **`-PsteamGridDbKey=` vacío** —esa clave se hornea en `BuildConfig`
+y termina legible en el dex— y la firma se verifica con **`apksigner`**, no mirando el zip: desde el
+esquema v2 la firma vive en el *APK Signing Block*, fuera de las entradas del archivo, así que buscar
+`META-INF/*.RSA` da "sin firmar" en un APK perfectamente firmado.
+
+Si algo falla después de haber tocado archivos, **restaura el árbol**. Un intento fallido que deja la
+versión a medio subir hace que el siguiente arranque desde un número que nunca se publicó.
+
 ### 4. Casos propios
 
 `build_psx_catalog.py`, `build_snes_catalog.py`, `build_atari2600_catalog.py`,
