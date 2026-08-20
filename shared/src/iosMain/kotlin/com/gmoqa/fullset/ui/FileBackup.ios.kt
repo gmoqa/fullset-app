@@ -9,8 +9,14 @@ import kotlinx.cinterop.ByteVar
 import kotlinx.cinterop.CPointer
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.addressOf
+import kotlinx.cinterop.alloc
 import kotlinx.cinterop.get
+import kotlinx.cinterop.memScoped
+import kotlinx.cinterop.plus
+import kotlinx.cinterop.ptr
 import kotlinx.cinterop.reinterpret
+import kotlinx.cinterop.sizeOf
+import kotlinx.cinterop.toKString
 import kotlinx.cinterop.usePinned
 import platform.Foundation.NSData
 import platform.Foundation.NSMakeRange
@@ -39,6 +45,15 @@ import platform.UniformTypeIdentifiers.UTTypeData
 import platform.UniformTypeIdentifiers.UTTypeJSON
 import platform.UniformTypeIdentifiers.UTTypeZIP
 import platform.darwin.NSObject
+import platform.zlib.MAX_WBITS
+import platform.zlib.Z_FINISH
+import platform.zlib.Z_OK
+import platform.zlib.Z_STREAM_END
+import platform.zlib.inflate
+import platform.zlib.inflateEnd
+import platform.zlib.inflateInit2_
+import platform.zlib.z_stream
+import platform.zlib.zlibVersion
 
 // Un backup real pesa unos KB; este tope corta un archivo enorme antes de leerlo entero a memoria.
 private const val MAX_IMPORT_BYTES = 10 * 1024 * 1024
@@ -90,8 +105,8 @@ private val activeImporters = mutableListOf<NSObject>()
 /**
  * Restaurar en iOS: el usuario elige un archivo con UIDocumentPickerViewController. Se detecta el
  * formato por los **primeros bytes** (`PK` = ZIP), no por la extensión. El `.json` de solo datos se
- * restaura entero; el `.zip` (con fotos) todavía no —necesita descompresión, que llega con la lib de
- * ZIP de la tarea 3— y avisa con un alert en vez de fallar en silencio.
+ * restaura entero; el `.zip` (con fotos) se lee tanto en formato *stored* (los de iOS) como DEFLATE
+ * (los de Android). Si algo sale mal, avisa con un alert en vez de fallar en silencio.
  */
 @Composable
 actual fun rememberBackupImporter(onBackup: (RestoredBackup) -> Unit): () -> Unit = remember(onBackup) {
@@ -141,7 +156,7 @@ private class BackupImporterDelegate(
         if (isZip(data)) {
             val restored = readZip(data)
             if (restored != null) onBackup(restored)
-            else presentAlert("No se pudo leer el .zip. Si es un respaldo completo de Android, restaurá desde su respaldo de solo datos (.json).")
+            else presentAlert("No se pudo leer el .zip.")
             return
         }
         val text = NSString.create(data, NSUTF8StringEncoding) as String?
@@ -319,6 +334,7 @@ private fun readZip(data: NSData): RestoredBackup? {
         if (p < 0 || p + 46 > len || base.u32(p) != 0x02014b50) return@repeat
         val method = base.u16(p + 10)
         val compSize = base.u32(p + 20)
+        val uncompSize = base.u32(p + 24)
         val nameLen = base.u16(p + 28)
         val extraLen = base.u16(p + 30)
         val commentLen = base.u16(p + 32)
@@ -329,13 +345,13 @@ private fun readZip(data: NSData): RestoredBackup? {
         val dataStart = localOffset + 30 + base.u16(localOffset + 26) + base.u16(localOffset + 28)
         if (dataStart < 0 || dataStart + compSize > len) return@repeat
 
-        // Solo *stored* (método 0): descomprimir DEFLATE en iOS necesitaría cinterop con
-        // libcompression, que no se logró exponer. Los ZIP de iOS son stored; los de Android son
-        // DEFLATE → se restauran desde su respaldo de solo datos (.json).
-        val entry: NSData? = if (method == 0) {
-            data.subdataWithRange(NSMakeRange(dataStart.toULong(), compSize.toULong()))
-        } else {
-            null
+        // stored (método 0) e inflate crudo de DEFLATE (método 8, el que escribe Android) vía
+        // platform.zlib, que Kotlin/Native trae de fábrica en targets Apple. Cualquier otro método
+        // se ignora.
+        val entry: NSData? = when (method) {
+            0 -> data.subdataWithRange(NSMakeRange(dataStart.toULong(), compSize.toULong()))
+            8 -> inflateRaw(base, dataStart, compSize, uncompSize)
+            else -> null
         }
         if (entry != null) {
             when {
@@ -356,6 +372,39 @@ private fun readZip(data: NSData): RestoredBackup? {
         p += 46 + nameLen + extraLen + commentLen
     }
     return json?.let { RestoredBackup(it, photos) }
+}
+
+/**
+ * Inflate de un stream DEFLATE **crudo** (sin cabecera zlib): así lo guarda el formato ZIP. Se usa
+ * `platform.zlib` —el zlib del sistema, que Kotlin/Native expone sin cinterop extra en Apple— con
+ * `windowBits = -MAX_WBITS` para el modo raw. El tamaño de salida ya viene en el central directory
+ * (`uncompSize`), así que se descomprime de una sola pasada a un buffer exacto.
+ */
+@OptIn(ExperimentalForeignApi::class)
+private fun inflateRaw(base: CPointer<ByteVar>, dataStart: Int, compSize: Int, uncompSize: Int): NSData? {
+    if (compSize <= 0 || uncompSize < 0) return null
+    if (uncompSize == 0) return NSData()
+    val output = ByteArray(uncompSize)
+    memScoped {
+        val stream = alloc<z_stream>()
+        stream.next_in = (base + dataStart)!!.reinterpret()
+        stream.avail_in = compSize.toUInt()
+        if (inflateInit2_(stream.ptr, -MAX_WBITS, zlibVersion()?.toKString(), sizeOf<z_stream>().toInt()) != Z_OK) {
+            return null
+        }
+        try {
+            val ok = output.usePinned { pinned ->
+                stream.next_out = pinned.addressOf(0).reinterpret()
+                stream.avail_out = uncompSize.toUInt()
+                val r = inflate(stream.ptr, Z_FINISH)
+                (r == Z_STREAM_END || r == Z_OK) && stream.total_out.toInt() == uncompSize
+            }
+            if (!ok) return null
+        } finally {
+            inflateEnd(stream.ptr)
+        }
+    }
+    return output.usePinned { NSData.create(bytes = it.addressOf(0), length = uncompSize.toULong()) }
 }
 
 @OptIn(ExperimentalForeignApi::class)
