@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "9a3184a8a3a0",
+  "version": "49b23bfce1ed",
   "files": [
     {
       "path": "catalogs/platforms.json",
-      "bytes": 18525,
-      "sha256": "0ff23a690d3983dc5e99441830ff3183263dad161d3c912e39cc5eca36210ef3"
+      "bytes": 18004,
+      "sha256": "09d69a8f5cdb75ed7e69bc15525220e8109e8bb78e4038001f7e4435d97c4304"
     },
     {
       "path": "catalogs/32x-au.json",

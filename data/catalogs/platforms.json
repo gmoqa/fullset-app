@@ -502,25 +502,6 @@
     }
   },
   {
-    "id": "playstation-5",
-    "name": "PlayStation 5",
-    "catalog": "",
-    "libretroRepo": "",
-    "enabled": true,
-    "info": {
-      "manufacturer": "Sony",
-      "generation": 9,
-      "media": "Ultra HD Blu-ray / digital",
-      "released": {
-        "ntsc-j": 2020,
-        "ntsc": 2020,
-        "pal": 2020
-      },
-      "cpu": "AMD Zen 2 8-core @ 3.5 GHz + RDNA 2 GPU",
-      "description": "Sony's ninth-generation console, built around a custom AMD CPU and an SSD for near-instant loading."
-    }
-  },
-  {
     "id": "turbografx-16",
     "name": "TurboGrafx-16",
     "catalogs": {
