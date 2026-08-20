@@ -9,6 +9,8 @@ vez**. Todo local, sin cuentas ni backend.
 UI en **inglés**. Licencia **MIT**.
 
 > **[ARQUITECTURA.md](ARQUITECTURA.md)** — por dónde entrar al código: los paquetes, qué hace cada
+> **[CATALOGOS-REMOTOS.md](CATALOGOS-REMOTOS.md)** — cómo llegan listas nuevas a los
+> teléfonos sin publicar un APK: el repo público como backend.
 > uno y la regla de dependencias.
 
 ## Stack (KMP-ready)

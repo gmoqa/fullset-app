@@ -25,7 +25,16 @@ private data class CatalogEntryDto(
  * catálogo. Multiplataforma: los assets se leen con [readTextAsset] (expect/actual), inyectable para
  * poder testear el parseo real contra los catálogos del repo.
  */
-class GameCatalog(private val readAsset: (String) -> String? = ::readTextAsset) {
+class GameCatalog(
+    /**
+     * De dónde sale el JSON de un catálogo.
+     *
+     * Por defecto **lo descargado le gana a lo horneado** ([CatalogSync.leerCatalogo]): así una lista
+     * mejorada llega sin publicar un APK. Se puede inyectar otra cosa para testear el parseo contra
+     * los catálogos del repo.
+     */
+    private val readAsset: (String) -> String? = { CatalogSync.leerCatalogo(it.removePrefix("catalogs/")) },
+) {
 
     private val cache = mutableMapOf<String, List<CatalogEntry>>()
 

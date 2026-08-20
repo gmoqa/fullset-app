@@ -43,6 +43,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.gmoqa.fullset.data.CatalogSync
 import com.gmoqa.fullset.data.GameCatalog
 import com.gmoqa.fullset.navigation.AddTarget
 import com.gmoqa.fullset.navigation.NavHost
@@ -108,7 +109,10 @@ fun App(
     sharedImage: PlatformImage? = null,
     onSharedImageHandled: () -> Unit = {},
 ) {
-    val catalog = remember { GameCatalog() }
+    // Se rehace cuando `CatalogSync` aplica una actualización: `GameCatalog` cachea por archivo, y
+    // sin esto los catálogos nuevos no se verían hasta reiniciar la app.
+    val revisionCatalogos by CatalogSync.revision.collectAsStateWithLifecycle()
+    val catalog = remember(revisionCatalogos) { GameCatalog() }
     val registry = remember { PlatformRegistry() }
 
     // `remember` (no saveable): en recreación se re-lee el valor persistido en prefs.

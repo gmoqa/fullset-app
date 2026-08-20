@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "49b23bfce1ed",
+  "version": "943af95b268a",
   "files": [
     {
       "path": "catalogs/platforms.json",
-      "bytes": 18004,
-      "sha256": "09d69a8f5cdb75ed7e69bc15525220e8109e8bb78e4038001f7e4435d97c4304"
+      "bytes": 18687,
+      "sha256": "6d25c5f807124b391be4871daba85f1665f9e5ddc60a7451a2fea0263932a4a4"
     },
     {
       "path": "catalogs/32x-au.json",
@@ -655,6 +655,19 @@
         "publisher": 80,
         "serial": 50,
         "coverUrl": 78
+      }
+    },
+    {
+      "path": "catalogs/ps5-usa.json",
+      "platform": "",
+      "games": 0,
+      "bytes": 4,
+      "sha256": "3fbbd4c6d76130399b0c79cdf41758669224a91e05b7b216953f0c9728750865",
+      "coverage": {
+        "year": 0,
+        "publisher": 0,
+        "serial": 0,
+        "coverUrl": 0
       }
     },
     {

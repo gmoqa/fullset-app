@@ -59,6 +59,22 @@ expect object FileStore {
     fun delete(path: String)
     fun listFilePaths(dir: String): List<String>
 
+    /** Donde se guardan los catálogos **descargados**, que pisan a los horneados en el APK. */
+    val catalogsDir: String
+
+    /** Contenido de un archivo de texto, o null si no está o no se pudo leer. */
+    fun readText(path: String): String?
+
+    /**
+     * Escribe [text] en [path] de forma **atómica**: primero a un temporal y después renombra.
+     *
+     * No es ceremonia. Sin esto, una escritura cortada a la mitad —sin batería, sin espacio, la app
+     * muerta— deja un catálogo truncado en su lugar definitivo, y la app arrancaría leyendo JSON
+     * roto en vez del que trae horneado. Devuelve false si algo falló, y en ese caso el archivo
+     * anterior queda intacto.
+     */
+    fun writeTextAtomic(path: String, text: String): Boolean
+
     /**
      * Copia la imagen elegida a [destPath], **redimensionándola** a [maxEdge] de lado largo y
      * normalizando su orientación. Devuelve false si no se pudo leer o decodificar.

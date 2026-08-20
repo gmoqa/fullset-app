@@ -57,96 +57,6 @@
     }
   },
   {
-    "id": "super-nintendo",
-    "name": "Super Nintendo",
-    "catalogs": {
-      "NTSC-U": "catalogs/snes-usa.json",
-      "NTSC-J": "catalogs/snes-jp.json",
-      "PAL": "catalogs/snes-eu.json"
-    },
-    "libretroRepo": "Nintendo_-_Super_Nintendo_Entertainment_System",
-    "enabled": true,
-    "info": {
-      "manufacturer": "Nintendo",
-      "generation": 4,
-      "media": "Cartridge",
-      "released": {
-        "ntsc-j": 1990,
-        "ntsc": 1991,
-        "pal": 1992
-      },
-      "discontinued": 2003,
-      "unitsSold": "49.1M",
-      "cpu": "Ricoh 5A22 (65C816) @ 3.58 MHz — 16-bit",
-      "description": "Nintendo's 16-bit successor to the NES, with Mode 7 scaling and a deep RPG and platformer library."
-    },
-    "counts": {
-      "NTSC-U": 744,
-      "NTSC-J": 1284,
-      "PAL": 394
-    }
-  },
-  {
-    "id": "nintendo-64",
-    "name": "Nintendo 64",
-    "catalogs": {
-      "NTSC-U": "catalogs/n64-usa.json",
-      "NTSC-J": "catalogs/n64-jp.json",
-      "PAL": "catalogs/n64-eu.json"
-    },
-    "libretroRepo": "Nintendo_-_Nintendo_64",
-    "enabled": true,
-    "info": {
-      "manufacturer": "Nintendo",
-      "generation": 5,
-      "media": "Cartridge",
-      "released": {
-        "ntsc-j": 1996,
-        "ntsc": 1996,
-        "pal": 1997
-      },
-      "discontinued": 2002,
-      "unitsSold": "32.9M",
-      "cpu": "NEC VR4300 (MIPS) @ 93.75 MHz — 64-bit",
-      "description": "Nintendo's 64-bit console and its last home system on cartridges. Super Mario 64 pioneered analog-stick 3D control."
-    },
-    "counts": {
-      "NTSC-U": 296,
-      "NTSC-J": 194,
-      "PAL": 237
-    }
-  },
-  {
-    "id": "gamecube",
-    "name": "GameCube",
-    "catalogs": {
-      "NTSC-U": "catalogs/gamecube-usa.json",
-      "NTSC-J": "catalogs/gamecube-jp.json",
-      "PAL": "catalogs/gamecube-eu.json"
-    },
-    "libretroRepo": "Nintendo_-_GameCube",
-    "enabled": true,
-    "info": {
-      "manufacturer": "Nintendo",
-      "generation": 6,
-      "media": "miniDVD (GOD)",
-      "released": {
-        "ntsc": 2001,
-        "ntsc-j": 2001,
-        "pal": 2002
-      },
-      "discontinued": 2007,
-      "unitsSold": "21.7M",
-      "cpu": "IBM PowerPC Gekko @ 485 MHz + ATI Flipper",
-      "description": "Nintendo's compact sixth-generation console, the first to drop cartridges for optical discs."
-    },
-    "counts": {
-      "NTSC-U": 537,
-      "NTSC-J": 274,
-      "PAL": 433
-    }
-  },
-  {
     "id": "sg-1000",
     "name": "SG-1000",
     "catalogs": {
@@ -207,37 +117,71 @@
     }
   },
   {
-    "id": "sega-genesis",
-    "name": "Sega Genesis",
+    "id": "sega-32x",
+    "name": "Sega 32X",
     "catalogs": {
-      "NTSC-U": "catalogs/genesis-usa.json",
-      "NTSC-J": "catalogs/genesis-jp.json",
-      "PAL": "catalogs/genesis-eu.json",
-      "PAL/BR": "catalogs/genesis-br.json",
-      "PAL/AU": "catalogs/genesis-au.json"
+      "NTSC-U": "catalogs/32x-usa.json",
+      "NTSC-J": "catalogs/32x-jp.json",
+      "PAL": "catalogs/32x-eu.json",
+      "PAL/BR": "catalogs/32x-br.json",
+      "PAL/AU": "catalogs/32x-au.json"
     },
-    "libretroRepo": "Sega_-_Mega_Drive_-_Genesis",
+    "libretroRepo": "Sega_-_32X",
     "enabled": true,
     "info": {
       "manufacturer": "Sega",
       "generation": 4,
       "media": "Cartridge",
       "released": {
-        "ntsc-j": 1988,
-        "ntsc": 1989,
-        "pal": 1990
+        "ntsc": 1994,
+        "ntsc-j": 1994,
+        "pal": 1994
       },
-      "discontinued": 1997,
-      "unitsSold": "~30.8M",
-      "cpu": "Motorola 68000 @ 7.6 MHz + Z80 — 16-bit",
-      "description": "Sega's 16-bit console, sold as 'Genesis' in North America. Sonic and its Blast Processing drove the 16-bit console war."
+      "discontinued": 1996,
+      "unitsSold": "0.8M",
+      "cpu": "2× Hitachi SH-2 @ 23 MHz — 32-bit (add-on)",
+      "description": "Short-lived 32-bit add-on for the Genesis, released months before the Saturn."
     },
     "counts": {
-      "NTSC-U": 711,
-      "NTSC-J": 435,
-      "PAL": 619,
-      "PAL/AU": 516,
-      "PAL/BR": 354
+      "NTSC-U": 31,
+      "NTSC-J": 18,
+      "PAL": 23,
+      "PAL/AU": 17,
+      "PAL/BR": 14
+    }
+  },
+  {
+    "id": "sega-cd",
+    "name": "Sega CD",
+    "catalogs": {
+      "NTSC-U": "catalogs/sega-cd-usa.json",
+      "NTSC-J": "catalogs/sega-cd-jp.json",
+      "PAL": "catalogs/sega-cd-eu.json",
+      "PAL/BR": "catalogs/sega-cd-br.json",
+      "PAL/AU": "catalogs/sega-cd-au.json"
+    },
+    "libretroRepo": "Sega_-_Mega-CD_-_Sega_CD",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sega",
+      "generation": 4,
+      "media": "CD-ROM",
+      "released": {
+        "ntsc-j": 1991,
+        "ntsc": 1992,
+        "pal": 1993
+      },
+      "discontinued": 1996,
+      "unitsSold": "2.24M",
+      "cpu": "Motorola 68000 @ 12.5 MHz — 16-bit (add-on)",
+      "description": "CD add-on for the Mega Drive/Genesis: full-motion video, CD audio and bigger games."
+    },
+    "counts": {
+      "NTSC-U": 146,
+      "NTSC-J": 116,
+      "PAL": 93,
+      "PAL/AU": 43,
+      "PAL/BR": 58
     }
   },
   {
@@ -276,71 +220,182 @@
     }
   },
   {
-    "id": "sega-cd",
-    "name": "Sega CD",
+    "id": "sega-genesis",
+    "name": "Sega Genesis",
     "catalogs": {
-      "NTSC-U": "catalogs/sega-cd-usa.json",
-      "NTSC-J": "catalogs/sega-cd-jp.json",
-      "PAL": "catalogs/sega-cd-eu.json",
-      "PAL/BR": "catalogs/sega-cd-br.json",
-      "PAL/AU": "catalogs/sega-cd-au.json"
+      "NTSC-U": "catalogs/genesis-usa.json",
+      "NTSC-J": "catalogs/genesis-jp.json",
+      "PAL": "catalogs/genesis-eu.json",
+      "PAL/BR": "catalogs/genesis-br.json",
+      "PAL/AU": "catalogs/genesis-au.json"
     },
-    "libretroRepo": "Sega_-_Mega-CD_-_Sega_CD",
-    "enabled": true,
-    "info": {
-      "manufacturer": "Sega",
-      "generation": 4,
-      "media": "CD-ROM",
-      "released": {
-        "ntsc-j": 1991,
-        "ntsc": 1992,
-        "pal": 1993
-      },
-      "discontinued": 1996,
-      "unitsSold": "2.24M",
-      "cpu": "Motorola 68000 @ 12.5 MHz — 16-bit (add-on)",
-      "description": "CD add-on for the Mega Drive/Genesis: full-motion video, CD audio and bigger games."
-    },
-    "counts": {
-      "NTSC-U": 146,
-      "NTSC-J": 116,
-      "PAL": 93,
-      "PAL/AU": 43,
-      "PAL/BR": 58
-    }
-  },
-  {
-    "id": "sega-32x",
-    "name": "Sega 32X",
-    "catalogs": {
-      "NTSC-U": "catalogs/32x-usa.json",
-      "NTSC-J": "catalogs/32x-jp.json",
-      "PAL": "catalogs/32x-eu.json",
-      "PAL/BR": "catalogs/32x-br.json",
-      "PAL/AU": "catalogs/32x-au.json"
-    },
-    "libretroRepo": "Sega_-_32X",
+    "libretroRepo": "Sega_-_Mega_Drive_-_Genesis",
     "enabled": true,
     "info": {
       "manufacturer": "Sega",
       "generation": 4,
       "media": "Cartridge",
       "released": {
-        "ntsc": 1994,
-        "ntsc-j": 1994,
-        "pal": 1994
+        "ntsc-j": 1988,
+        "ntsc": 1989,
+        "pal": 1990
       },
-      "discontinued": 1996,
-      "unitsSold": "0.8M",
-      "cpu": "2× Hitachi SH-2 @ 23 MHz — 32-bit (add-on)",
-      "description": "Short-lived 32-bit add-on for the Genesis, released months before the Saturn."
+      "discontinued": 1997,
+      "unitsSold": "~30.8M",
+      "cpu": "Motorola 68000 @ 7.6 MHz + Z80 — 16-bit",
+      "description": "Sega's 16-bit console, sold as 'Genesis' in North America. Sonic and its Blast Processing drove the 16-bit console war."
     },
     "counts": {
-      "NTSC-U": 31,
-      "NTSC-J": 18,
-      "PAL": 23,
-      "PAL/AU": 17,
-      "PAL/BR": 14
+      "NTSC-U": 711,
+      "NTSC-J": 435,
+      "PAL": 619,
+      "PAL/AU": 516,
+      "PAL/BR": 354
+    }
+  },
+  {
+    "id": "super-nintendo",
+    "name": "Super Nintendo",
+    "catalogs": {
+      "NTSC-U": "catalogs/snes-usa.json",
+      "NTSC-J": "catalogs/snes-jp.json",
+      "PAL": "catalogs/snes-eu.json"
+    },
+    "libretroRepo": "Nintendo_-_Super_Nintendo_Entertainment_System",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Nintendo",
+      "generation": 4,
+      "media": "Cartridge",
+      "released": {
+        "ntsc-j": 1990,
+        "ntsc": 1991,
+        "pal": 1992
+      },
+      "discontinued": 2003,
+      "unitsSold": "49.1M",
+      "cpu": "Ricoh 5A22 (65C816) @ 3.58 MHz — 16-bit",
+      "description": "Nintendo's 16-bit successor to the NES, with Mode 7 scaling and a deep RPG and platformer library."
+    },
+    "counts": {
+      "NTSC-U": 744,
+      "NTSC-J": 1284,
+      "PAL": 394
+    }
+  },
+  {
+    "id": "turbografx-16",
+    "name": "TurboGrafx-16",
+    "catalogs": {
+      "NTSC-U": "catalogs/turbografx-16-usa.json",
+      "NTSC-J": "catalogs/turbografx-16-jp.json"
+    },
+    "libretroRepo": "NEC_-_PC_Engine_-_TurboGrafx_16",
+    "enabled": true,
+    "info": {
+      "manufacturer": "NEC",
+      "generation": 4,
+      "media": "HuCard",
+      "released": {
+        "ntsc-j": 1987,
+        "ntsc": 1989
+      },
+      "discontinued": 1994,
+      "unitsSold": "10M",
+      "cpu": "Hudson HuC6280 @ 7.16 MHz",
+      "description": "NEC's 8-bit console with a 16-bit graphics chip, sold as PC Engine in Japan. Europe never got an official release: the machines sold there were grey-market Japanese imports."
+    },
+    "counts": {
+      "NTSC-U": 93,
+      "NTSC-J": 288,
+      "PAL": 93
+    }
+  },
+  {
+    "id": "turbografx-cd",
+    "name": "TurboGrafx-CD",
+    "catalogs": {
+      "NTSC-U": "catalogs/turbografx-cd-usa.json",
+      "NTSC-J": "catalogs/turbografx-cd-jp.json"
+    },
+    "libretroRepo": "NEC_-_PC_Engine_CD_-_TurboGrafx-CD",
+    "enabled": true,
+    "info": {
+      "manufacturer": "NEC",
+      "generation": 4,
+      "media": "CD-ROM",
+      "released": {
+        "ntsc-j": 1988,
+        "ntsc": 1989
+      },
+      "discontinued": 1994,
+      "cpu": "Hudson HuC6280 @ 7.16 MHz + CD-ROM² unit",
+      "description": "The CD add-on for the PC Engine, and the first CD-based console anywhere. Its library is bigger than the HuCard one and almost entirely Japanese."
+    },
+    "counts": {
+      "NTSC-U": 43,
+      "NTSC-J": 395,
+      "PAL": 43
+    }
+  },
+  {
+    "id": "nintendo-64",
+    "name": "Nintendo 64",
+    "catalogs": {
+      "NTSC-U": "catalogs/n64-usa.json",
+      "NTSC-J": "catalogs/n64-jp.json",
+      "PAL": "catalogs/n64-eu.json"
+    },
+    "libretroRepo": "Nintendo_-_Nintendo_64",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Nintendo",
+      "generation": 5,
+      "media": "Cartridge",
+      "released": {
+        "ntsc-j": 1996,
+        "ntsc": 1996,
+        "pal": 1997
+      },
+      "discontinued": 2002,
+      "unitsSold": "32.9M",
+      "cpu": "NEC VR4300 (MIPS) @ 93.75 MHz — 64-bit",
+      "description": "Nintendo's 64-bit console and its last home system on cartridges. Super Mario 64 pioneered analog-stick 3D control."
+    },
+    "counts": {
+      "NTSC-U": 296,
+      "NTSC-J": 194,
+      "PAL": 237
+    }
+  },
+  {
+    "id": "playstation",
+    "name": "PlayStation",
+    "catalogs": {
+      "NTSC-U": "catalogs/psx-usa.json",
+      "NTSC-J": "catalogs/psx-jp.json",
+      "PAL": "catalogs/psx-eu.json"
+    },
+    "libretroRepo": "Sony_-_PlayStation",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sony",
+      "generation": 5,
+      "media": "CD-ROM",
+      "released": {
+        "ntsc-j": 1994,
+        "ntsc": 1995,
+        "pal": 1995
+      },
+      "discontinued": 2006,
+      "unitsSold": "102.5M",
+      "cpu": "MIPS R3000A @ 33.9 MHz — 32-bit",
+      "description": "Sony's debut console and the first to ship over 100 million units, moving the industry from cartridges to CD-ROM."
+    },
+    "counts": {
+      "NTSC-U": 1344,
+      "NTSC-J": 3148,
+      "PAL": 1286
     }
   },
   {
@@ -412,33 +467,64 @@
     }
   },
   {
-    "id": "playstation",
-    "name": "PlayStation",
+    "id": "game-boy-advance",
+    "name": "Game Boy Advance",
     "catalogs": {
-      "NTSC-U": "catalogs/psx-usa.json",
-      "NTSC-J": "catalogs/psx-jp.json",
-      "PAL": "catalogs/psx-eu.json"
+      "NTSC-U": "catalogs/gba-usa.json",
+      "NTSC-J": "catalogs/gba-jp.json",
+      "PAL": "catalogs/gba-eu.json"
     },
-    "libretroRepo": "Sony_-_PlayStation",
+    "libretroRepo": "Nintendo_-_Game_Boy_Advance",
     "enabled": true,
     "info": {
-      "manufacturer": "Sony",
-      "generation": 5,
-      "media": "CD-ROM",
+      "manufacturer": "Nintendo",
+      "generation": 6,
+      "handheld": true,
+      "media": "Cartridge",
       "released": {
-        "ntsc-j": 1994,
-        "ntsc": 1995,
-        "pal": 1995
+        "ntsc-j": 2001,
+        "ntsc": 2001,
+        "pal": 2001
       },
-      "discontinued": 2006,
-      "unitsSold": "102.5M",
-      "cpu": "MIPS R3000A @ 33.9 MHz — 32-bit",
-      "description": "Sony's debut console and the first to ship over 100 million units, moving the industry from cartridges to CD-ROM."
+      "discontinued": 2010,
+      "unitsSold": "81.5M",
+      "cpu": "ARM7TDMI @ 16.8 MHz",
+      "description": "The 32-bit Game Boy, and the last Nintendo handheld with no screen to fold. It plays Game Boy and Game Boy Color cartridges too. The Japanese box is a wide cardboard sleeve; the American and European ones are almost square."
     },
     "counts": {
-      "NTSC-U": 1344,
-      "NTSC-J": 3148,
-      "PAL": 1286
+      "NTSC-U": 982,
+      "NTSC-J": 797,
+      "PAL": 845
+    }
+  },
+  {
+    "id": "gamecube",
+    "name": "GameCube",
+    "catalogs": {
+      "NTSC-U": "catalogs/gamecube-usa.json",
+      "NTSC-J": "catalogs/gamecube-jp.json",
+      "PAL": "catalogs/gamecube-eu.json"
+    },
+    "libretroRepo": "Nintendo_-_GameCube",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Nintendo",
+      "generation": 6,
+      "media": "miniDVD (GOD)",
+      "released": {
+        "ntsc": 2001,
+        "ntsc-j": 2001,
+        "pal": 2002
+      },
+      "discontinued": 2007,
+      "unitsSold": "21.7M",
+      "cpu": "IBM PowerPC Gekko @ 485 MHz + ATI Flipper",
+      "description": "Nintendo's compact sixth-generation console, the first to drop cartridges for optical discs."
+    },
+    "counts": {
+      "NTSC-U": 537,
+      "NTSC-J": 274,
+      "PAL": 433
     }
   },
   {
@@ -469,122 +555,6 @@
       "NTSC-U": 1815,
       "NTSC-J": 2975,
       "PAL": 2226
-    }
-  },
-  {
-    "id": "playstation-3",
-    "name": "PlayStation 3",
-    "catalogs": {
-      "NTSC-U": "catalogs/ps3-usa.json",
-      "NTSC-J": "catalogs/ps3-jp.json",
-      "PAL": "catalogs/ps3-eu.json"
-    },
-    "libretroRepo": "Sony_-_PlayStation_3",
-    "enabled": true,
-    "info": {
-      "manufacturer": "Sony",
-      "generation": 7,
-      "media": "Blu-ray Disc",
-      "released": {
-        "ntsc-j": 2006,
-        "ntsc": 2006,
-        "pal": 2007
-      },
-      "discontinued": 2017,
-      "unitsSold": "87.4M",
-      "cpu": "Cell Broadband Engine @ 3.2 GHz — 1 PPE + 7 SPE",
-      "description": "Sony's seventh-generation console, the first to standardise on Blu-ray and to ship with free online play."
-    },
-    "counts": {
-      "NTSC-U": 1894,
-      "NTSC-J": 1182,
-      "PAL": 1836
-    }
-  },
-  {
-    "id": "turbografx-16",
-    "name": "TurboGrafx-16",
-    "catalogs": {
-      "NTSC-U": "catalogs/turbografx-16-usa.json",
-      "NTSC-J": "catalogs/turbografx-16-jp.json"
-    },
-    "libretroRepo": "NEC_-_PC_Engine_-_TurboGrafx_16",
-    "enabled": true,
-    "info": {
-      "manufacturer": "NEC",
-      "generation": 4,
-      "media": "HuCard",
-      "released": {
-        "ntsc-j": 1987,
-        "ntsc": 1989
-      },
-      "discontinued": 1994,
-      "unitsSold": "10M",
-      "cpu": "Hudson HuC6280 @ 7.16 MHz",
-      "description": "NEC's 8-bit console with a 16-bit graphics chip, sold as PC Engine in Japan. Europe never got an official release: the machines sold there were grey-market Japanese imports."
-    },
-    "counts": {
-      "NTSC-U": 93,
-      "NTSC-J": 288,
-      "PAL": 93
-    }
-  },
-  {
-    "id": "turbografx-cd",
-    "name": "TurboGrafx-CD",
-    "catalogs": {
-      "NTSC-U": "catalogs/turbografx-cd-usa.json",
-      "NTSC-J": "catalogs/turbografx-cd-jp.json"
-    },
-    "libretroRepo": "NEC_-_PC_Engine_CD_-_TurboGrafx-CD",
-    "enabled": true,
-    "info": {
-      "manufacturer": "NEC",
-      "generation": 4,
-      "media": "CD-ROM",
-      "released": {
-        "ntsc-j": 1988,
-        "ntsc": 1989
-      },
-      "discontinued": 1994,
-      "cpu": "Hudson HuC6280 @ 7.16 MHz + CD-ROM² unit",
-      "description": "The CD add-on for the PC Engine, and the first CD-based console anywhere. Its library is bigger than the HuCard one and almost entirely Japanese."
-    },
-    "counts": {
-      "NTSC-U": 43,
-      "NTSC-J": 395,
-      "PAL": 43
-    }
-  },
-  {
-    "id": "game-boy-advance",
-    "name": "Game Boy Advance",
-    "catalogs": {
-      "NTSC-U": "catalogs/gba-usa.json",
-      "NTSC-J": "catalogs/gba-jp.json",
-      "PAL": "catalogs/gba-eu.json"
-    },
-    "libretroRepo": "Nintendo_-_Game_Boy_Advance",
-    "enabled": true,
-    "info": {
-      "manufacturer": "Nintendo",
-      "generation": 6,
-      "handheld": true,
-      "media": "Cartridge",
-      "released": {
-        "ntsc-j": 2001,
-        "ntsc": 2001,
-        "pal": 2001
-      },
-      "discontinued": 2010,
-      "unitsSold": "81.5M",
-      "cpu": "ARM7TDMI @ 16.8 MHz",
-      "description": "The 32-bit Game Boy, and the last Nintendo handheld with no screen to fold. It plays Game Boy and Game Boy Color cartridges too. The Japanese box is a wide cardboard sleeve; the American and European ones are almost square."
-    },
-    "counts": {
-      "NTSC-U": 982,
-      "NTSC-J": 797,
-      "PAL": 845
     }
   },
   {
@@ -619,6 +589,36 @@
     }
   },
   {
+    "id": "playstation-3",
+    "name": "PlayStation 3",
+    "catalogs": {
+      "NTSC-U": "catalogs/ps3-usa.json",
+      "NTSC-J": "catalogs/ps3-jp.json",
+      "PAL": "catalogs/ps3-eu.json"
+    },
+    "libretroRepo": "Sony_-_PlayStation_3",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sony",
+      "generation": 7,
+      "media": "Blu-ray Disc",
+      "released": {
+        "ntsc-j": 2006,
+        "ntsc": 2006,
+        "pal": 2007
+      },
+      "discontinued": 2017,
+      "unitsSold": "87.4M",
+      "cpu": "Cell Broadband Engine @ 3.2 GHz — 1 PPE + 7 SPE",
+      "description": "Sony's seventh-generation console, the first to standardise on Blu-ray and to ship with free online play."
+    },
+    "counts": {
+      "NTSC-U": 1894,
+      "NTSC-J": 1182,
+      "PAL": 1836
+    }
+  },
+  {
     "id": "nintendo-3ds",
     "name": "Nintendo 3DS",
     "catalogs": {
@@ -647,6 +647,33 @@
       "NTSC-U": 419,
       "NTSC-J": 661,
       "PAL": 547
+    }
+  },
+  {
+    "id": "playstation-5",
+    "name": "PlayStation 5",
+    "catalog": "catalogs/ps5-usa.json",
+    "libretroRepo": "",
+    "enabled": true,
+    "info": {
+      "manufacturer": "Sony",
+      "generation": 9,
+      "media": "Ultra HD Blu-ray / digital",
+      "released": {
+        "ntsc-j": 2020,
+        "ntsc": 2020,
+        "pal": 2020
+      },
+      "cpu": "AMD Zen 2 8-core @ 3.5 GHz + RDNA 2 GPU",
+      "description": "Sony's ninth-generation console, built around a custom AMD CPU and an SSD for near-instant loading."
+    },
+    "catalogs": {
+      "NTSC-U": "catalogs/ps5-usa.json"
+    },
+    "counts": {
+      "NTSC-U": 0,
+      "NTSC-J": 0,
+      "PAL": 0
     }
   }
 ]

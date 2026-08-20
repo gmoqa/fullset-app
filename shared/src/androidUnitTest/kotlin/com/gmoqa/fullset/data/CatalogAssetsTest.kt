@@ -32,13 +32,16 @@ class CatalogAssetsTest {
         for (platform in platforms().filter { it.enabled }) {
             for (region in RegionFilter.entries.filter { it.supported }) {
                 val file = platform.catalogFor(region)
-                // Las modernas (PS5) no tienen lista: se cargan a mano.
                 if (file.isBlank()) continue
-                val entries = catalog.entries(platform, region)
+                // **Puede estar vacío y estar bien.** Las consolas modernas arrancan con una lista
+                // incompleta que se completa de a poco, y llega a los teléfonos por
+                // `CatalogSync` sin publicar un APK. Lo que no se tolera es que el archivo
+                // declarado no exista o no parsee: eso sí es una consola rota.
                 assertTrue(
-                    entries.isNotEmpty(),
-                    "${platform.name} / ${region.label}: '$file' no cargó ninguna entrada",
+                    readAsset(file) != null,
+                    "${platform.name} / ${region.label}: falta el archivo '$file'",
                 )
+                catalog.entries(platform, region)
             }
         }
     }
@@ -60,6 +63,8 @@ class CatalogAssetsTest {
                 assertTrue(text != null, "${platform.name}: falta el archivo '$file'")
                 val (region, territory) = partes(label)
                 val entries = catalog.entries(platform, region, territory)
+                // Un catálogo aún sin llenar no tiene de qué declarar región.
+                if (entries.isEmpty()) continue
                 // `region` sale del propio catálogo; si no coincide, el archivo está mal mapeado.
                 // El territorio **no** viaja en la entrada: un cartucho brasileño sigue siendo PAL,
                 // y de qué territorio es lo dice la lista en la que está.

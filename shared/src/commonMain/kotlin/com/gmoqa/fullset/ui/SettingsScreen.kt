@@ -103,6 +103,8 @@ data class SettingsActions(
     val onDeleteModel: (WhisperModel) -> Unit,
     val onDismissModelError: () -> Unit,
     val onLanguageChange: (TranscriptionLanguage) -> Unit,
+    /** Buscar catálogos nuevos ahora, salteando el límite diario. */
+    val onCheckCatalogs: () -> Unit,
     /** Solo en builds debug: si es null, la sección Developer no se muestra. */
     val onPreviewEmptyChange: ((Boolean) -> Unit)? = null,
 )
@@ -195,6 +197,13 @@ fun SettingsScreen(state: SettingsUiState, actions: SettingsActions) {
                 selected = state.regionFilter,
                 onSelect = actions.onRegionChange,
                 isEnabled = { it.supported },
+            )
+            SettingsRow(
+                icon = Icons.Filled.CloudDownload,
+                title = "Check for catalog updates",
+                subtitle = "Game lists come from the public repo and improve over time. " +
+                    "Checked once a day; nothing about your collection is sent.",
+                onClick = { actions.onCheckCatalogs() },
             )
 
             SectionDivider()

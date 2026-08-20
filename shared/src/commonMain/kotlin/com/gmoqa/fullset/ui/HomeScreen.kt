@@ -276,6 +276,7 @@ internal fun HomeContent(
                         onDeleteModel = { vm.deleteModel(it) },
                         onDismissModelError = { vm.dismissModelError() },
                         onLanguageChange = { vm.setTranscriptionLanguage(it) },
+                        onCheckCatalogs = { vm.buscarCatalogosNuevos(forzar = true) },
                         // La sección Developer solo aparece en builds debug (callback null → oculta).
                         onPreviewEmptyChange = if (isDebug) ({ vm.setPreviewEmpty(it) }) else null,
                     ),

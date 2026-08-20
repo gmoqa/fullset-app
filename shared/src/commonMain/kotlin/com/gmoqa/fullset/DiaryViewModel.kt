@@ -2,11 +2,13 @@ package com.gmoqa.fullset
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.gmoqa.fullset.data.CatalogSync
 import com.gmoqa.fullset.data.DiaryRepository
 import com.gmoqa.fullset.data.FileStore
 import com.gmoqa.fullset.data.exportSnapshot
 import com.gmoqa.fullset.data.gameNotesJson
 import com.gmoqa.fullset.data.gameNotesText
+import com.gmoqa.fullset.data.nowMillis
 import com.gmoqa.fullset.data.importSnapshot
 import com.gmoqa.fullset.data.syncSnapshotFromJson
 import com.gmoqa.fullset.data.toJson
@@ -79,6 +81,33 @@ class DiaryViewModel(
         viewModelScope.launch {
             repo.seed()
             _ready.value = true
+            // Después de sembrar, no antes: la app tiene que estar usable aunque no haya red. Si
+            // falla —sin conexión, servidor caído— no pasa nada: quedan los catálogos horneados.
+            buscarCatalogosNuevos()
+        }
+    }
+
+    /**
+     * Busca catálogos nuevos en el repositorio público.
+     *
+     * Silencioso a propósito cuando no hay nada: avisar "todo al día" en cada arranque sería ruido.
+     * Solo habla cuando **algo cambió** o cuando el usuario lo pidió a mano.
+     */
+    override fun buscarCatalogosNuevos(forzar: Boolean) {
+        viewModelScope.launch(ioDispatcher) {
+            when (val r = CatalogSync.sincronizar(ahora = nowMillis(), forzar = forzar)) {
+                // `CatalogSync.revision` sube sola al aplicar cambios y la UI reconstruye el
+                // catálogo al verla: sin eso se seguiría mostrando lo viejo hasta reiniciar.
+                is CatalogSync.Resultado.Actualizado ->
+                    _syncStatus.value = "Catalogs updated (${r.archivos} files)"
+                is CatalogSync.Resultado.EsquemaNuevo ->
+                    _syncStatus.value = "Catalog format is newer than this app — update to get new lists"
+                // Fallar sin red es lo normal y no merece un cartel; si lo pidió una persona, sí.
+                is CatalogSync.Resultado.Falló ->
+                    if (forzar) _syncStatus.value = "Couldn't reach the catalog server"
+                CatalogSync.Resultado.SinCambios ->
+                    if (forzar) _syncStatus.value = "Catalogs are up to date"
+            }
         }
     }
 

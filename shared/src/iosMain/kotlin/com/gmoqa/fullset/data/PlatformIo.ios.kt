@@ -9,7 +9,10 @@ import platform.CoreGraphics.CGSizeMake
 import platform.Foundation.NSDocumentDirectory
 import platform.Foundation.NSFileManager
 import platform.Foundation.NSSearchPathForDirectoriesInDomains
+import platform.Foundation.NSString
+import platform.Foundation.NSUTF8StringEncoding
 import platform.Foundation.NSUserDomainMask
+import platform.Foundation.stringWithContentsOfFile
 import platform.Foundation.writeToFile
 import platform.UIKit.UIGraphicsBeginImageContextWithOptions
 import platform.UIKit.UIGraphicsEndImageContext
@@ -52,6 +55,17 @@ actual object FileStore {
     actual fun listFilePaths(dir: String): List<String> {
         val names = NSFileManager.defaultManager.contentsOfDirectoryAtPath(dir, null) ?: return emptyList()
         return names.filterIsInstance<String>().map { "$dir/$it" }
+    }
+
+    actual val catalogsDir: String get() = dir("catalogs")
+
+    actual fun readText(path: String): String? =
+        NSString.stringWithContentsOfFile(path, NSUTF8StringEncoding, null)
+
+    actual fun writeTextAtomic(path: String, text: String): Boolean {
+        // `atomically = true` es exactamente lo que se busca: Foundation escribe a un temporal y
+        // renombra, así que una escritura cortada nunca deja el archivo definitivo a medias.
+        return (text as NSString).writeToFile(path, true, NSUTF8StringEncoding, null)
     }
 
     /**

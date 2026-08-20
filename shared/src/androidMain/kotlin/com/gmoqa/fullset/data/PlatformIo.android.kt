@@ -33,6 +33,24 @@ actual object FileStore {
     actual fun listFilePaths(dir: String): List<String> =
         File(dir).listFiles()?.map { it.absolutePath } ?: emptyList()
 
+    actual val catalogsDir: String get() = dir("catalogs").absolutePath
+
+    actual fun readText(path: String): String? =
+        runCatching { File(path).takeIf { it.exists() }?.readText() }.getOrNull()
+
+    actual fun writeTextAtomic(path: String, text: String): Boolean = runCatching {
+        val destino = File(path)
+        val temporal = File("$path.tmp")
+        temporal.writeText(text)
+        // `renameTo` dentro del mismo directorio es atómico: o está el archivo viejo, o el nuevo
+        // entero. Nunca uno a medias.
+        if (!temporal.renameTo(destino)) {
+            temporal.delete()
+            return false
+        }
+        true
+    }.getOrDefault(false)
+
     /**
      * Decodifica la imagen elegida, la achica a [maxEdge] de lado largo, endereza según su EXIF y la
      * guarda como JPEG. Antes se copiaba byte a byte, así que una foto de cámara entraba con sus

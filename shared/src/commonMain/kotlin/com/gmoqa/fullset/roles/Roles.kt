@@ -92,6 +92,15 @@ interface Ajustes {
     val transcriptionLanguage: StateFlow<TranscriptionLanguage>
     fun setTranscriptionLanguage(language: TranscriptionLanguage)
 
+    /**
+     * Busca catálogos nuevos en el repositorio público y los aplica.
+     *
+     * Vive acá porque se dispara desde Settings, pero no es una preferencia: es una acción sobre los
+     * datos. Con [forzar] salta el límite de una consulta por día — que es lo que corresponde cuando
+     * lo pidió una persona y no el arranque.
+     */
+    fun buscarCatalogosNuevos(forzar: Boolean = false)
+
     /** Solo en builds debug: previsualizar los estados vacíos sin borrar nada. */
     val previewEmpty: StateFlow<Boolean>
     fun setPreviewEmpty(on: Boolean)
