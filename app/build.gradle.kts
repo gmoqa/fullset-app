@@ -52,8 +52,8 @@ android {
         targetSdk = 35
         // `versionCode` tiene que subir en cada APK que se reparta: Android rechaza instalar encima
         // uno con un número igual o menor, y como estos van a mano no hay quien lo lleve por vos.
-        versionCode = 3
-        versionName = "1.0"
+        versionCode = 4
+        versionName = "0.1"
 
         // whisper.cpp (transcripción local). Solo arm64-v8a: cubre los dispositivos reales y
         // evita multiplicar el peso del .so por ABIs que no vamos a usar.
