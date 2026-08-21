@@ -44,6 +44,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -119,22 +120,15 @@ fun PlayingScreen(
             // una segunda columna, porque a 668dp más de la mitad del ancho quedaba vacío.
             BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
             val conColumnas = maxWidth >= 600.dp
+            // Sin filetes: ahora cada juego es una tarjeta y el aire entre ellas ya las separa.
+            // Un filete **más** el borde de la tarjeta sería decir dos veces lo mismo — y encima el
+            // sangrado del filete seguía a una ranura que ya no tiene ancho fijo.
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(bottom = 24.dp),
+                contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 24.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
                 itemsIndexed(games, key = { _, g -> g.id }) { i, game ->
-                    if (i > 0) {
-                        HorizontalDivider(
-                            // Sangrado hasta donde empieza el texto: el filete acompaña a la
-                            // columna, no corta la página al medio. Sigue a la ranura, que cambia
-                            // de tamaño con el ancho.
-                            modifier = Modifier.padding(
-                                start = 20.dp + (if (conColumnas) COVER_ANCHO_AMPLIO else COVER_ANCHO) + 16.dp,
-                            ),
-                            color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f),
-                        )
-                    }
                     PlayingCard(
                         game = game,
                         conColumnas = conColumnas,
@@ -213,49 +207,62 @@ private fun PlayingCard(
     onClick: () -> Unit,
     onOpenCover: () -> Unit,
 ) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(horizontal = 20.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
+    // Cada juego en su tarjeta. Antes eran filas sueltas sobre el fondo, y con carátulas de formas
+    // tan distintas la lista se leía como una pila de recortes: la tarjeta le da a cada uno un
+    // borde propio, y la variación de las tapas pasa a ocurrir **adentro** de algo, no contra el
+    // vacío.
+    Surface(
+        modifier = Modifier.fillMaxWidth().clickable(onClick = onClick),
+        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f),
+        shape = Tokens.Shape.medium,
     ) {
-        // La carátula, a la izquierda y en una ranura de tamaño **fijo**. Antes estaba pegada al
-        // borde opuesto al título, con el ancho del juego entre medio: el ojo tenía que cruzar un
-        // vacío para relacionar un nombre con su tapa. Acá se leen juntos.
-        //
-        // La ranura es fija y la imagen se ajusta dentro: las tapas van de la caja vertical de NES
-        // a la apaisada de Genesis, y sin ranura fija cada fila arrancaría a una altura distinta y
-        // el borde izquierdo de la lista zigzaguearía.
-        Box(
-            modifier = Modifier
-                .size(
-                    width = if (conColumnas) COVER_ANCHO_AMPLIO else COVER_ANCHO,
-                    height = if (conColumnas) COVER_ALTO_AMPLIO else COVER_ALTO,
-                )
-                // La ranura se pinta aunque no haya tapa. Sin fondo, una fila sin carátula deja un
-                // hueco invisible y se lee como desalineada, no como "todavía sin tapa" — y el
-                // ícono de reserva a media opacidad sobre un fondo casi negro no se ve.
-                .background(MaterialTheme.colorScheme.surfaceVariant),
-            contentAlignment = Alignment.Center,
+        Row(
+            modifier = Modifier.padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
-            val model = game.coverModel
-            // `SubcomposeAsyncImage` y no `AsyncImage`: hay que distinguir "sin carátula" de
-            // "la carátula no cargó". Con `AsyncImage`, una URL que falla no dibuja nada y la
-            // ranura queda en gris liso para siempre, sin decir por qué.
-            SubcomposeAsyncImage(
-                model = model,
-                contentDescription = game.name,
-                contentScale = ContentScale.Fit,
-                // Sin redondear: es el escaneo de un objeto con esquinas rectas. Redondearlo
-                // decora contradiciendo al dato.
-                modifier = Modifier.fillMaxSize().clickable(onClick = onOpenCover),
+            val alto = if (conColumnas) COVER_ALTO_AMPLIO else COVER_ALTO
+            // **Alto fijo, ancho según la forma real de la tapa.**
+            //
+            // Antes la ranura era fija en las dos medidas y la imagen se ajustaba adentro. Con
+            // aspectos que van de 0,60 en Saturn a 1,41 en SNES —más del doble— eso dejaba barras
+            // grises enormes a los costados o arriba y abajo, según la consola. Una caja de SNES es
+            // apaisada y una de Saturn es alta: esa forma **es** información sobre el objeto, y
+            // recortarla a un molde común la borraba.
+            //
+            // Fijando solo el alto, todas las filas siguen midiendo lo mismo —la lista conserva su
+            // pulso— y cada tapa ocupa exactamente su rectángulo, sin relleno.
+            // Un juego **digital** no tiene caja: su tapa sale de SteamGridDB, que sirve pósters
+            // de 2:3. Usar ahí el aspecto de la caja de la consola recortaba el arte — se veía en
+            // *Vampire Survivors*, cortado arriba y abajo.
+            val aspecto =
+                if (game.digital) ASPECTO_POSTER else coverAspectRatio(game.platform, game.region)
+            val ancho = alto * aspecto
+            Box(
+                modifier = Modifier
+                    .size(width = ancho, height = alto)
+                    .clip(Tokens.Shape.small)
+                    // El fondo se pinta igual: una fila sin tapa tiene que verse como "todavía sin
+                    // carátula" y no como un hueco.
+                    .background(MaterialTheme.colorScheme.surfaceVariant),
+                contentAlignment = Alignment.Center,
             ) {
-                val estado by painter.state.collectAsState()
-                if (estado is AsyncImagePainter.State.Success) {
-                    SubcomposeAsyncImageContent()
-                } else {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                // `SubcomposeAsyncImage` y no `AsyncImage`: hay que distinguir "sin carátula" de
+                // "la carátula no cargó". Con `AsyncImage`, una URL que falla no dibuja nada y la
+                // ranura queda en gris liso para siempre, sin decir por qué.
+                SubcomposeAsyncImage(
+                    model = game.coverModel,
+                    contentDescription = game.name,
+                    // `Fit` y no `Crop`. La ranura ya viene con la proporción esperada, así que en
+                    // el caso normal no sobra nada; pero cuando la tapa real no coincide —una
+                    // reedición con otra caja, una imagen de otra fuente— `Crop` **recorta el arte**
+                    // y `Fit` deja un filo del fondo. Perder un borde de la tapa es peor que un filo.
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier.fillMaxSize().clickable(onClick = onOpenCover),
+                ) {
+                    val estado by painter.state.collectAsState()
+                    if (estado is AsyncImagePainter.State.Success) {
+                        SubcomposeAsyncImageContent()
+                    } else {
                         Icon(
                             Icons.Filled.SportsEsports,
                             contentDescription = null,
@@ -265,67 +272,89 @@ private fun PlayingCard(
                     }
                 }
             }
-        }
 
-        Spacer(Modifier.width(16.dp))
+            Spacer(Modifier.width(14.dp))
 
-        Column(modifier = Modifier.weight(1f)) {
-            // Toda la jerarquía la hace el tipo: el nombre a plena intensidad, lo demás un escalón
-            // abajo y apagado. Sin cajas, sin color, sin badges compitiendo.
-            Text(
-                game.name,
-                style = MaterialTheme.typography.titleMedium,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis,
-            )
-            // Una sola línea para todo lo secundario, separada por puntos medios. "DIGITAL" entra
-            // como una palabra más y no como una etiqueta: es un adjetivo del juego, no una alarma.
-            val secundario = buildList {
-                if (game.platform.isNotBlank()) add(game.platform)
-                if (game.digital) add("Digital")
-                // Con columna aparte, el año y la región salen de acá: repetirlos sería ruido.
-                if (!conColumnas) {
-                    game.releaseYear?.takeIf { it > 0 }?.let { add(it.toString()) }
-                }
-                if (game.noteCount > 0) add(plural(game.noteCount, "note"))
-                if (game.photoCount > 0) add(plural(game.photoCount, "photo"))
-            }.joinToString("  ·  ")
-            if (secundario.isNotEmpty()) {
+            Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    secundario,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
+                    game.name,
+                    style = MaterialTheme.typography.titleMedium,
+                    maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.padding(top = 3.dp),
                 )
+                // **Quién lo hizo y quién lo publicó**, que hasta ahora no se mostraba en esta
+                // pantalla. Si coinciden va una sola vez: repetir "Nintendo · Nintendo" es ruido.
+                val empresas = listOfNotNull(
+                    game.developer.ifBlank { null },
+                    game.publisher.ifBlank { null }.takeIf { !it.equals(game.developer, true) },
+                ).joinToString("  ·  ")
+                if (empresas.isNotEmpty()) {
+                    Text(
+                        empresas,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.padding(top = 2.dp),
+                    )
+                }
+                // La procedencia: consola, si es digital, y en pantalla angosta también el año.
+                val procedencia = buildList {
+                    if (game.platform.isNotBlank()) add(game.platform)
+                    if (game.digital) add("Digital")
+                    if (!conColumnas) game.releaseYear?.takeIf { it > 0 }?.let { add(it.toString()) }
+                }.joinToString("  ·  ")
+                if (procedencia.isNotEmpty()) {
+                    Text(
+                        procedencia,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.75f),
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.padding(top = 2.dp),
+                    )
+                }
+                // Lo que escribiste, en su propia línea: es lo único de la fila que hiciste vos, y
+                // mezclado entre la consola y el año se perdía.
+                val diario = buildList {
+                    if (game.noteCount > 0) add(plural(game.noteCount, "note"))
+                    if (game.photoCount > 0) add(plural(game.photoCount, "photo"))
+                }.joinToString("  ·  ")
+                if (diario.isNotEmpty()) {
+                    Text(
+                        diario,
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.85f),
+                        modifier = Modifier.padding(top = 4.dp),
+                    )
+                }
             }
-        }
 
-        // Columna de identidad, alineada a la derecha: el año arriba y la región debajo. Va a la
-        // derecha y no pegada al título para que se pueda **recorrer en vertical** —es lo que hace
-        // una discografía con el año— y para que el nombre del juego siga siendo lo único que
-        // manda el borde izquierdo del bloque de texto.
-        if (conColumnas) {
-            val anio = game.releaseYear?.takeIf { it > 0 }?.toString()
-            val region = game.region.takeIf { it.isNotBlank() }
-            if (anio != null || region != null) {
-                Spacer(Modifier.width(16.dp))
-                Column(horizontalAlignment = Alignment.End) {
-                    if (anio != null) {
-                        Text(
-                            anio,
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                    }
-                    if (region != null) {
-                        Text(
-                            region,
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
-                            modifier = Modifier.padding(top = 2.dp),
-                        )
+            // Columna de identidad, alineada a la derecha: el año arriba y la región debajo. Va a la
+            // derecha y no pegada al título para que se pueda **recorrer en vertical** —es lo que
+            // hace una discografía con el año— y para que el nombre del juego siga siendo lo único
+            // que manda el borde izquierdo del bloque de texto.
+            if (conColumnas) {
+                val anio = game.releaseYear?.takeIf { it > 0 }?.toString()
+                val region = game.region.takeIf { it.isNotBlank() }
+                if (anio != null || region != null) {
+                    Spacer(Modifier.width(16.dp))
+                    Column(horizontalAlignment = Alignment.End) {
+                        if (anio != null) {
+                            Text(
+                                anio,
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                        if (region != null) {
+                            Text(
+                                region,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
+                                modifier = Modifier.padding(top = 2.dp),
+                            )
+                        }
                     }
                 }
             }
@@ -341,6 +370,9 @@ private fun PlayingCard(
  * ancho en un teléfono al 7,8% en la tablet y al 4,9% en horizontal: se achicaba justo cuando había
  * más lugar. En una lista donde la carátula es el ancla, eso la degrada a viñeta.
  */
+/** Póster 2:3, el formato que sirve SteamGridDB para los juegos sin caja física. */
+private const val ASPECTO_POSTER = 0.667f
+
 private val COVER_ANCHO = 52.dp
 private val COVER_ALTO = 68.dp
 private val COVER_ANCHO_AMPLIO = 76.dp
