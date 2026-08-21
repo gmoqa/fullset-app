@@ -52,13 +52,15 @@ APK = os.path.join(RAIZ, "app", "build", "outputs", "apk", "release", "app-relea
 
 # Prefijo de commit -> título en el changelog. Los que no están acá no se listan: `chore`, `ci`,
 # `build` y `test` son ruido para quien lee qué cambió en la app.
+# Los títulos van en **inglés** porque se publican: son los encabezados del release en GitHub y de
+# CHANGELOG.md. Los comentarios de este archivo siguen en español, que es su idioma.
 SECCIONES = {
-    "feat": "Novedades",
-    "fix": "Arreglos",
-    "style": "Interfaz",
-    "perf": "Rendimiento",
-    "refactor": "Por dentro",
-    "docs": "Documentación",
+    "feat": "What's new",
+    "fix": "Fixes",
+    "style": "Interface",
+    "perf": "Performance",
+    "refactor": "Under the hood",
+    "docs": "Documentation",
 }
 
 
@@ -197,7 +199,7 @@ def changelog(desde: str, version: str) -> str:
         if titulo:
             grupos.setdefault(titulo, []).append(m.group(2).strip())
     if not grupos:
-        return "Sin cambios listados.\n"
+        return "No listed changes.\n"
     partes = [f"## v{version} — {date.today().isoformat()}\n"]
     for titulo in SECCIONES.values():
         if titulo in grupos:
